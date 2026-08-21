@@ -1,0 +1,625 @@
+{
+  "run_metadata": {
+    "feature": "18C",
+    "generated_at": "2026-06-18T13:39:28Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "holdout_false_positive_count": 23,
+    "holdout_not_evaluable_count": 0
+  },
+  "false_positives": [
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Add : Other income",
+      "pdf_value": "8430",
+      "predicted_qname": "ifrs-smes:OtherIncome",
+      "matched_xbrl_qname": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Total current assets",
+      "pdf_value": "154021",
+      "predicted_qname": "ifrs-smes:CurrentAssets",
+      "matched_xbrl_qname": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "TOTAL OPERATING EXPENSES",
+      "pdf_value": "35186",
+      "predicted_qname": "ifrs-smes:OtherExpenseByFunction",
+      "matched_xbrl_qname": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Increase in other payables and accruals",
+      "pdf_value": "61983",
+      "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "matched_xbrl_qname": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Increase in other payables and accruals",
+      "pdf_value": "1398",
+      "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "matched_xbrl_qname": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Decrease in property, plant and equipment",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "matched_xbrl_qname": "ifrs-smes:Revenue",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Decrease in property, plant and equipment",
+      "pdf_value": "161320",
+      "predicted_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "matched_xbrl_qname": "ifrs-smes:OtherAdjustmentsToReconcileProfitLoss",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Total current liabilities",
+      "pdf_value": "800",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "matched_xbrl_qname": "ssmt-mpers:CurrentNontradeAccruals",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Total current liabilities",
+      "pdf_value": "11900",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "matched_xbrl_qname": "ssmt-mpers:CurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Total liabilities",
+      "pdf_value": "12800",
+      "predicted_qname": "ifrs-smes:Liabilities",
+      "matched_xbrl_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Total liabilities",
+      "pdf_value": "11900",
+      "predicted_qname": "ifrs-smes:Liabilities",
+      "matched_xbrl_qname": "ssmt-mpers:CurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "63381",
+      "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "matched_xbrl_qname": "ssmt-mpers:CurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "1398",
+      "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "matched_xbrl_qname": "ssmt-mpers:CurrentNontradeAccruals",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Other payables",
+      "pdf_value": "75621",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Other payables",
+      "pdf_value": "66390",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Other payables",
+      "pdf_value": "0",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ifrs-smes:InvestmentProperty",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_label": "Other payables",
+      "pdf_value": "7100",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "44300",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "33900",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Other payables and accruals clean",
+      "pdf_value": "146856",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:NoncurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Other payables and accruals clean",
+      "pdf_value": "135966",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:NoncurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Other payables",
+      "pdf_value": "140156",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Other payables",
+      "pdf_value": "129266",
+      "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+      "matched_xbrl_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    }
+  ],
+  "not_evaluable": [
+    {
+      "sample_id": "case_002",
+      "pdf_label": "1 1",
+      "pdf_value": "7055",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "1 1",
+      "pdf_value": "1165615",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "1 1",
+      "pdf_value": "6225",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "1 1",
+      "pdf_value": "1138242",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "1 1",
+      "pdf_value": "2",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Accounting fee",
+      "pdf_value": "12000",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Accounting fee",
+      "pdf_value": "0",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accounting fee",
+      "pdf_value": "1200",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accounting fee",
+      "pdf_value": "600",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Accruals",
+      "pdf_value": "700",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Accruals",
+      "pdf_value": "1398",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Accruals",
+      "pdf_value": "6700",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Accruals",
+      "pdf_value": "6700",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accuals",
+      "pdf_value": "33686",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accuals",
+      "pdf_value": "33686",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accumulated losses",
+      "pdf_value": "-392608",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accumulated losses",
+      "pdf_value": "-367321",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Accumulated losses",
+      "pdf_value": "-403233",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Accumulated losses",
+      "pdf_value": "-393318",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Accumulated Losses",
+      "pdf_value": "-1156406",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Accumulated Losses",
+      "pdf_value": "-1018209",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_label": "Accumulated losses brought forward",
+      "pdf_value": "-3097",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Accumulated losses brought forward",
+      "pdf_value": "-393318",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Accumulated losses brought forward",
+      "pdf_value": "-1018209",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accumulated losses carried forward",
+      "pdf_value": "-367321",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_label": "Accumulated losses carried forward",
+      "pdf_value": "-392608",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Accumulated losses carried forward",
+      "pdf_value": "-403233",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Accumulated losses carried forward",
+      "pdf_value": "-1156406",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_label": "Add : Other income :- .FROS",
+      "pdf_value": "0",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_label": "Add : Purchases",
+      "pdf_value": "47589",
+      "predicted_qname": null,
+      "matched_xbrl_qname": null,
+      "evaluation_status": "not_evaluable",
+      "error_reason": null
+    }
+  ],
+  "missed_labels": [
+    {
+      "normalized_label": "tax expense",
+      "count": 70
+    },
+    {
+      "normalized_label": "trade and other receivables",
+      "count": 18
+    },
+    {
+      "normalized_label": "bank balances",
+      "count": 16
+    },
+    {
+      "normalized_label": "revenue",
+      "count": 14
+    },
+    {
+      "normalized_label": "property plant and equipment",
+      "count": 14
+    },
+    {
+      "normalized_label": "loss for the financial year",
+      "count": 14
+    },
+    {
+      "normalized_label": "cash flows from investing activities",
+      "count": 10
+    },
+    {
+      "normalized_label": "expenses not deductible for tax purposes",
+      "count": 10
+    },
+    {
+      "normalized_label": "trade and other payables",
+      "count": 9
+    },
+    {
+      "normalized_label": "bank charges",
+      "count": 8
+    },
+    {
+      "normalized_label": "commissioner for oaths",
+      "count": 8
+    },
+    {
+      "normalized_label": "ooi boon beng",
+      "count": 8
+    },
+    {
+      "normalized_label": "total non current assets",
+      "count": 8
+    },
+    {
+      "normalized_label": "total equity",
+      "count": 8
+    },
+    {
+      "normalized_label": "total equity and liabilities",
+      "count": 8
+    },
+    {
+      "normalized_label": "addition",
+      "count": 8
+    },
+    {
+      "normalized_label": "loss from operating activities",
+      "count": 7
+    },
+    {
+      "normalized_label": "share capital",
+      "count": 6
+    },
+    {
+      "normalized_label": "total current liabilities",
+      "count": 6
+    },
+    {
+      "normalized_label": "net cash from operating activities",
+      "count": 6
+    },
+    {
+      "normalized_label": "audit fee",
+      "count": 6
+    },
+    {
+      "normalized_label": "secretarial fee",
+      "count": 6
+    },
+    {
+      "normalized_label": "total assets",
+      "count": 6
+    },
+    {
+      "normalized_label": "accumulated losses",
+      "count": 6
+    },
+    {
+      "normalized_label": "other operating expenses",
+      "count": 6
+    },
+    {
+      "normalized_label": "disposal",
+      "count": 6
+    },
+    {
+      "normalized_label": "at beginning and end of the year",
+      "count": 6
+    },
+    {
+      "normalized_label": "term loan interests",
+      "count": 6
+    },
+    {
+      "normalized_label": "amount due to directors",
+      "count": 6
+    },
+    {
+      "normalized_label": "loss for the year",
+      "count": 6
+    }
+  ]
+}

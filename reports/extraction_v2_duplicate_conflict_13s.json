@@ -1,0 +1,3575 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-12T16:00:18.314731+00:00",
+    "feature": "13S",
+    "script": "scripts/resolve_extraction_v2_duplicates.py",
+    "report_type": "duplicate_conflict",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_duplicate_conflict_13s.json"
+  },
+  "input_reports": {
+    "v2_report": "reports\\extraction_v2_report_20260512T144014Z.json",
+    "quality_report": "reports\\extraction_v2_candidate_quality_13r.json",
+    "readiness_report": "reports\\extraction_v2_mapping_readiness_13r.json",
+    "comparison_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\v2_reference_comparison_20260512T145407Z.json",
+    "reference_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\reference_xbrl_report_20260511T082343Z.json"
+  },
+  "final_13q_benchmark_still_successful": true,
+  "pre_cleanup_13r_readiness": {
+    "high": 337,
+    "low": 146,
+    "medium": 318,
+    "not_ready": 139
+  },
+  "aggregate": {
+    "total_candidates_analyzed": 940,
+    "exact_duplicate_groups": 3,
+    "same_label_value_duplicate_groups": 35,
+    "conflicting_duplicate_groups": 45,
+    "heading_like_duplicate_groups": 0,
+    "date_year_label_groups": 9,
+    "text_block_duplicate_groups": 0,
+    "safe_suppression_count": 3,
+    "downgrade_count": 47,
+    "converted_row_type_count": 238,
+    "conflict_review_count": 95,
+    "manual_review_required_count": 12,
+    "kept_count": 545
+  },
+  "per_case_duplicate_conflict_summary": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "original_candidate_count": 122,
+      "cleaned_candidate_count": 119,
+      "suppressed_candidates": 3,
+      "downgraded_candidates": 1,
+      "converted_comparative_candidates": 0,
+      "conflict_groups": 0,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "original_candidate_count": 115,
+      "cleaned_candidate_count": 115,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 52,
+      "conflict_groups": 3,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    },
+    {
+      "case_id": "003-fine-batik",
+      "original_candidate_count": 189,
+      "cleaned_candidate_count": 189,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 68,
+      "conflict_groups": 11,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    },
+    {
+      "case_id": "004-info-house",
+      "original_candidate_count": 150,
+      "cleaned_candidate_count": 150,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 4,
+      "converted_comparative_candidates": 36,
+      "conflict_groups": 11,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    },
+    {
+      "case_id": "005-jconnector",
+      "original_candidate_count": 134,
+      "cleaned_candidate_count": 134,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 15,
+      "converted_comparative_candidates": 35,
+      "conflict_groups": 4,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "original_candidate_count": 146,
+      "cleaned_candidate_count": 146,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 27,
+      "converted_comparative_candidates": 37,
+      "conflict_groups": 8,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "original_candidate_count": 84,
+      "cleaned_candidate_count": 84,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 10,
+      "conflict_groups": 8,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    }
+  ],
+  "top_20_risky_duplicate_labels": [
+    {
+      "label": "as at 31 12 2023",
+      "count": 21
+    },
+    {
+      "label": "as at 31 12 2024",
+      "count": 16
+    },
+    {
+      "label": "loss for the financial year",
+      "count": 14
+    },
+    {
+      "label": "loss before taxation",
+      "count": 9
+    },
+    {
+      "label": "charges for the year",
+      "count": 5
+    },
+    {
+      "label": "term loan",
+      "count": 4
+    },
+    {
+      "label": "as at 31st december 2022",
+      "count": 3
+    },
+    {
+      "label": "as at 31st december 2023",
+      "count": 3
+    },
+    {
+      "label": "as at 31st december 2024",
+      "count": 3
+    },
+    {
+      "label": "as at 31 december 2022",
+      "count": 3
+    },
+    {
+      "label": "as at 31 december 2023",
+      "count": 3
+    },
+    {
+      "label": "as at 31 december 2024",
+      "count": 3
+    },
+    {
+      "label": "total",
+      "count": 3
+    },
+    {
+      "label": "as at 31 12 2022",
+      "count": 3
+    },
+    {
+      "label": "accumulated loss rm",
+      "count": 3
+    },
+    {
+      "label": "total rm",
+      "count": 3
+    },
+    {
+      "label": "epf contribution",
+      "count": 2
+    },
+    {
+      "label": "director s fee",
+      "count": 2
+    },
+    {
+      "label": "rental of office",
+      "count": 2
+    },
+    {
+      "label": "accumulated losses carried forward",
+      "count": 2
+    }
+  ],
+  "top_20_suppressed_exact_duplicates": [
+    {
+      "candidate_id": "001-bizaid-synthetic:candidate:4:4",
+      "case_id": "001-bizaid-synthetic",
+      "label": "FIXED ASSETS",
+      "value": null,
+      "page_number": 1,
+      "duplicate_group_ids": [
+        "exact-0001",
+        "same-label-value-0007"
+      ]
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:candidate:99:99",
+      "case_id": "001-bizaid-synthetic",
+      "label": "CURRENT LIABILITIES",
+      "value": null,
+      "page_number": 2,
+      "duplicate_group_ids": [
+        "exact-0002",
+        "same-label-value-0008"
+      ]
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:candidate:108:108",
+      "case_id": "001-bizaid-synthetic",
+      "label": "CAPITAL",
+      "value": null,
+      "page_number": 2,
+      "duplicate_group_ids": [
+        "exact-0003",
+        "same-label-value-0009"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "exact-0001",
+      "group_type": "exact_duplicate",
+      "classification": "safe_exact_duplicate",
+      "action": "suppress_duplicate_copies",
+      "safe_to_suppress": true,
+      "candidate_count": 2,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        1
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "FIXED ASSETS",
+      "normalized_label": "fixed assets",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:3:3",
+        "001-bizaid-synthetic:candidate:4:4"
+      ]
+    },
+    {
+      "group_id": "exact-0002",
+      "group_type": "exact_duplicate",
+      "classification": "safe_exact_duplicate",
+      "action": "suppress_duplicate_copies",
+      "safe_to_suppress": true,
+      "candidate_count": 2,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        2
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "CURRENT LIABILITIES",
+      "normalized_label": "current liabilities",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:98:98",
+        "001-bizaid-synthetic:candidate:99:99"
+      ]
+    },
+    {
+      "group_id": "exact-0003",
+      "group_type": "exact_duplicate",
+      "classification": "safe_exact_duplicate",
+      "action": "suppress_duplicate_copies",
+      "safe_to_suppress": true,
+      "candidate_count": 2,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        2
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "CAPITAL",
+      "normalized_label": "capital",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:107:107",
+        "001-bizaid-synthetic:candidate:108:108"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0004",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "BIZAID FY2025",
+      "normalized_label": "bizaid fy2025",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:0:0",
+        "001-bizaid-synthetic:candidate:80:80",
+        "001-bizaid-synthetic:candidate:115:115"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0005",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "Statement of Financial Position As At 31/12/2025",
+      "normalized_label": "statement of financial position as at 31 12 2025",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:1:1",
+        "001-bizaid-synthetic:candidate:81:81",
+        "001-bizaid-synthetic:candidate:116:116"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0006",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "This Year",
+      "normalized_label": "this year",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:2:2",
+        "001-bizaid-synthetic:candidate:82:82",
+        "001-bizaid-synthetic:candidate:117:117"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0007",
+      "group_type": "same_label_value_duplicate",
+      "classification": "possibly_safe_same_context",
+      "action": "suppress_only_if_exact_duplicate",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        1
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "FIXED ASSETS",
+      "normalized_label": "fixed assets",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:3:3",
+        "001-bizaid-synthetic:candidate:4:4"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0008",
+      "group_type": "same_label_value_duplicate",
+      "classification": "possibly_safe_same_context",
+      "action": "suppress_only_if_exact_duplicate",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        2
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "CURRENT LIABILITIES",
+      "normalized_label": "current liabilities",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:98:98",
+        "001-bizaid-synthetic:candidate:99:99"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0009",
+      "group_type": "same_label_value_duplicate",
+      "classification": "possibly_safe_same_context",
+      "action": "suppress_only_if_exact_duplicate",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        2
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "CAPITAL",
+      "normalized_label": "capital",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:107:107",
+        "001-bizaid-synthetic:candidate:108:108"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0010",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 8,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        3,
+        5
+      ],
+      "statement_sections": [
+        "DIRECTORS",
+        "DIRECTORS' REPORT",
+        "DIVIDEND",
+        "FINANCIAL RESULTS",
+        "NUMBER OF EMPLOYEES AND REGISTERED OFFICE",
+        "PRINCIPAL ACTIVITIES",
+        "SHARE CAPITAL"
+      ],
+      "label": "",
+      "normalized_label": "",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:3:125",
+        "002-bezlife-marketing:candidate:4:126",
+        "002-bezlife-marketing:candidate:5:127",
+        "002-bezlife-marketing:candidate:6:128",
+        "002-bezlife-marketing:candidate:7:129",
+        "002-bezlife-marketing:candidate:8:130",
+        "002-bezlife-marketing:candidate:9:131",
+        "002-bezlife-marketing:candidate:17:139"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0011",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        14,
+        25
+      ],
+      "statement_sections": [
+        "Gross Profit",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Gross profit",
+      "normalized_label": "gross profit",
+      "values": [
+        {
+          "value": "545,950",
+          "previous_value": "-"
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:33:155",
+        "002-bezlife-marketing:candidate:78:200"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0012",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        14,
+        25
+      ],
+      "statement_sections": [
+        "Profit / (Loss) from Operating Activities",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Profit / (Loss) from operating activities",
+      "normalized_label": "profit loss from operating activities",
+      "values": [
+        {
+          "value": "128,102",
+          "previous_value": "(3,097)"
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:36:158",
+        "002-bezlife-marketing:candidate:80:202"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0013",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        14,
+        23
+      ],
+      "statement_sections": [
+        "Reconciliations of income tax expense",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Profit / (Loss) before taxation",
+      "normalized_label": "profit loss before taxation",
+      "values": [
+        {
+          "value": "128,242",
+          "previous_value": "(3,097)"
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:38:160",
+        "002-bezlife-marketing:candidate:59:181"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0014",
+      "group_type": "same_label_value_duplicate",
+      "classification": "possibly_safe_same_context",
+      "action": "suppress_only_if_exact_duplicate",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        22
+      ],
+      "statement_sections": [
+        "NOTES TO THE FINANCIAL STATEMENTS \u2013 31 DECEMBER 2024 (Continued)"
+      ],
+      "label": "3. USE OF ESTIMATES AND ACCOUNTING JUDGEMENTS",
+      "normalized_label": "3 use of estimates and accounting judgements",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:56:178",
+        "002-bezlife-marketing:candidate:57:179"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0015",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 9,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        3,
+        21,
+        23
+      ],
+      "statement_sections": [
+        "AMOUNT DUE TO DIRECTOR",
+        "AUTHORISATION TO ISSUE FINANCIAL STATEMENTS",
+        "DIRECTORS",
+        "DIRECTORS' REPORT",
+        "DIVIDEND",
+        "FINANCIAL RESULTS",
+        "PRINCIPAL ACTIVITY",
+        "SHARE CAPITAL",
+        "TERM LOAN"
+      ],
+      "label": "",
+      "normalized_label": "",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:3:240",
+        "003-fine-batik:candidate:4:241",
+        "003-fine-batik:candidate:5:242",
+        "003-fine-batik:candidate:6:243",
+        "003-fine-batik:candidate:7:244",
+        "003-fine-batik:candidate:8:245",
+        "003-fine-batik:candidate:129:366",
+        "003-fine-batik:candidate:130:367",
+        "003-fine-batik:candidate:147:384"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0016",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        14,
+        24
+      ],
+      "statement_sections": [
+        "Gross Profit",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Gross profit",
+      "normalized_label": "gross profit",
+      "values": [
+        {
+          "value": "2,765",
+          "previous_value": "25,352"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:47:284",
+        "003-fine-batik:candidate:150:387"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0017",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        14,
+        24
+      ],
+      "statement_sections": [
+        "Loss from Operating Activities",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "values": [
+        {
+          "value": "(137,622)",
+          "previous_value": "(124,615)"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:50:287",
+        "003-fine-batik:candidate:152:389"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0018",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        14,
+        23
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income",
+        "TAXATION - Continued"
+      ],
+      "label": "Loss before taxation",
+      "normalized_label": "loss before taxation",
+      "values": [
+        {
+          "value": "(23,562)",
+          "previous_value": "(77,641)"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:52:289",
+        "003-fine-batik:candidate:141:378"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0019",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        22,
+        25
+      ],
+      "statement_sections": [
+        "DETAILED STATEMENT OF COMPREHENSIVE INCOME",
+        "LOSS BEFORE TAXATION"
+      ],
+      "label": "Auditors' remuneration",
+      "normalized_label": "auditors remuneration",
+      "values": [
+        {
+          "value": "600",
+          "previous_value": "600"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:134:371",
+        "003-fine-batik:candidate:163:400"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0020",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        22,
+        25
+      ],
+      "statement_sections": [
+        "DETAILED STATEMENT OF COMPREHENSIVE INCOME",
+        "LOSS BEFORE TAXATION"
+      ],
+      "label": "Term loan interests",
+      "normalized_label": "term loan interests",
+      "values": [
+        {
+          "value": "33,168",
+          "previous_value": "35,186"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:137:374",
+        "003-fine-batik:candidate:183:420"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0021",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        22,
+        24
+      ],
+      "statement_sections": [
+        "LOSS BEFORE TAXATION",
+        "Other Income"
+      ],
+      "label": "Rental received",
+      "normalized_label": "rental received",
+      "values": [
+        {
+          "value": "114,000",
+          "previous_value": "46,614"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:138:375",
+        "003-fine-batik:candidate:155:392"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0022",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Corporate Information",
+        "DIRECTORS' REPORT"
+      ],
+      "label": "Company No",
+      "normalized_label": "company no",
+      "values": [
+        {
+          "value": "199201022159 (253663 - x)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:0:426",
+        "004-info-house:candidate:8:434"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0023",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Corporate Information",
+        "DIRECTORS' REPORT"
+      ],
+      "label": "Company Name",
+      "normalized_label": "company name",
+      "values": [
+        {
+          "value": "agensi pekerjaan info-house (m) sdn. bhd.",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:1:427",
+        "004-info-house:candidate:9:435"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0024",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Corporate Information",
+        "DIRECTORS' REPORT"
+      ],
+      "label": "Incorporation",
+      "normalized_label": "incorporation",
+      "values": [
+        {
+          "value": "(incorporated in malaysia)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:2:428",
+        "004-info-house:candidate:10:436"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0025",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 11,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        4,
+        5,
+        17,
+        21
+      ],
+      "statement_sections": [
+        "AMOUNT DUE FROM / TO DIRECTORS",
+        "AUDITORS' REMUNERATION",
+        "DIRECTORS' BENEFITS",
+        "DIRECTORS' INTERESTS",
+        "FINANCIAL RISK MANAGEMENT OBJECTIVES AND POLICIES",
+        "NUMBER OF EMPLOYEES AND REGISTERED OFFICE",
+        "OTHER STATUTORY INFORMATION ON THE FINANCIAL STATEMENTS",
+        "TURNOVER"
+      ],
+      "label": "",
+      "normalized_label": "",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:21:447",
+        "004-info-house:candidate:22:448",
+        "004-info-house:candidate:23:449",
+        "004-info-house:candidate:24:450",
+        "004-info-house:candidate:25:451",
+        "004-info-house:candidate:28:454",
+        "004-info-house:candidate:35:461",
+        "004-info-house:candidate:36:462",
+        "004-info-house:candidate:82:508",
+        "004-info-house:candidate:111:537",
+        "004-info-house:candidate:117:543"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0026",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        14,
+        23
+      ],
+      "statement_sections": [
+        "Operating expenses",
+        "TOTAL OPERATING EXPENSES"
+      ],
+      "label": "Total Operating Expenses",
+      "normalized_label": "total operating expenses",
+      "values": [
+        {
+          "value": "35,186",
+          "previous_value": "34,593"
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:61:487",
+        "004-info-house:candidate:148:574"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0027",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Retained Profits",
+        "Total"
+      ],
+      "label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "values": [
+        {
+          "value": "(7,086)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:71:497",
+        "004-info-house:candidate:72:498"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0028",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Retained Profits",
+        "Total"
+      ],
+      "label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "values": [
+        {
+          "value": "(2,686)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:76:502",
+        "004-info-house:candidate:77:503"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0029",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 13,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        3,
+        5,
+        20,
+        21
+      ],
+      "statement_sections": [
+        "AMOUNT DUE TO DIRECTOR",
+        "AUDITORS' REMUNERATION",
+        "AUTHORISATION TO ISSUE FINANCIAL STATEMENTS",
+        "COMPARATIVE FIGURES",
+        "DIRECTORS",
+        "DIRECTORS' REPORT",
+        "DIVIDEND",
+        "FINANCIAL RESULTS",
+        "ISSUE OF SHARES",
+        "NUMBER OF EMPLOYEES AND REGISTERED OFFICE",
+        "PRINCIPAL ACTIVITIES",
+        "SHARE CAPITAL",
+        "TAXATION"
+      ],
+      "label": "",
+      "normalized_label": "",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:3:579",
+        "005-jconnector:candidate:4:580",
+        "005-jconnector:candidate:5:581",
+        "005-jconnector:candidate:6:582",
+        "005-jconnector:candidate:7:583",
+        "005-jconnector:candidate:8:584",
+        "005-jconnector:candidate:27:603",
+        "005-jconnector:candidate:28:604",
+        "005-jconnector:candidate:101:677",
+        "005-jconnector:candidate:102:678",
+        "005-jconnector:candidate:108:684",
+        "005-jconnector:candidate:114:690",
+        "005-jconnector:candidate:116:692"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0030",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        13,
+        16
+      ],
+      "statement_sections": [
+        "ASSETS",
+        "Cash flows from financing activities"
+      ],
+      "label": "Bank balances",
+      "normalized_label": "bank balances",
+      "values": [
+        {
+          "value": "558",
+          "previous_value": "73"
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:34:610",
+        "005-jconnector:candidate:77:653"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0031",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        14,
+        22
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income",
+        "TURNOVER"
+      ],
+      "label": "Turnover",
+      "normalized_label": "turnover",
+      "values": [
+        {
+          "value": "-",
+          "previous_value": "-"
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:47:623",
+        "005-jconnector:candidate:117:693"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0032",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        14,
+        16,
+        21
+      ],
+      "statement_sections": [
+        "Cash flows from operating activities",
+        "Loss Before Taxation",
+        "Taxation"
+      ],
+      "label": "Loss before taxation",
+      "normalized_label": "loss before taxation",
+      "values": [
+        {
+          "value": "(9,915)",
+          "previous_value": "(188,217)"
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:51:627",
+        "005-jconnector:candidate:66:642",
+        "005-jconnector:candidate:109:685"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0033",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        21,
+        22
+      ],
+      "statement_sections": [
+        "Loss before taxation",
+        "OTHER OPERATING EXPENSES"
+      ],
+      "label": "Auditor's remuneration",
+      "normalized_label": "auditor s remuneration",
+      "values": [
+        {
+          "value": "600",
+          "previous_value": "600"
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:104:680",
+        "005-jconnector:candidate:119:695"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0034",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        21,
+        22
+      ],
+      "statement_sections": [
+        "Loss before taxation",
+        "OTHER OPERATING EXPENSES"
+      ],
+      "label": "Research and development expenditure written off",
+      "normalized_label": "research and development expenditure written off",
+      "values": [
+        {
+          "value": "-",
+          "previous_value": "161,320"
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:106:682",
+        "005-jconnector:candidate:127:703"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0035",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        13,
+        16
+      ],
+      "statement_sections": [
+        "ASSETS",
+        "Cash flows from financing activities"
+      ],
+      "label": "Bank balances",
+      "normalized_label": "bank balances",
+      "values": [
+        {
+          "value": "13,232",
+          "previous_value": "14,638"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:17:727",
+        "006-Rahsia-Herbal:candidate:75:785"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0036",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        14,
+        16
+      ],
+      "statement_sections": [
+        "Cash flows from operating activities",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Loss before taxation",
+      "normalized_label": "loss before taxation",
+      "values": [
+        {
+          "value": "(138,197)",
+          "previous_value": "(104,646)"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:40:750",
+        "006-Rahsia-Herbal:candidate:59:769"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0037",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        16,
+        22
+      ],
+      "statement_sections": [
+        "Cash flows from operating activities",
+        "NOTES TO THE FINANCIAL STATEMENTS \u2013 31 DECEMBER 2024 (Continued)"
+      ],
+      "label": "Depreciation of property, plant and equipment",
+      "normalized_label": "depreciation of property plant and equipment",
+      "values": [
+        {
+          "value": "21,449",
+          "previous_value": "21,712"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:61:771",
+        "006-Rahsia-Herbal:candidate:113:823"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0038",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 12,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        3,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "AMOUNT DUE TO DIRECTOR",
+        "BANK OVERDRAFT - unsecured",
+        "DIRECTOR'S REMUNERATION",
+        "DIRECTORS' BENEFITS",
+        "DIRECTORS' INTERESTS IN SHARES",
+        "DIVIDENDS",
+        "RELATED PARTY DISCLOSURES",
+        "SIGNIFICANT ACCOUNTING POLICIES - Continued"
+      ],
+      "label": "",
+      "normalized_label": "",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:14:870",
+        "007-Shield-Plus:candidate:15:871",
+        "007-Shield-Plus:candidate:16:872",
+        "007-Shield-Plus:candidate:17:873",
+        "007-Shield-Plus:candidate:18:874",
+        "007-Shield-Plus:candidate:23:879",
+        "007-Shield-Plus:candidate:24:880",
+        "007-Shield-Plus:candidate:25:881",
+        "007-Shield-Plus:candidate:74:930",
+        "007-Shield-Plus:candidate:81:937",
+        "007-Shield-Plus:candidate:82:938",
+        "007-Shield-Plus:candidate:83:939"
+      ]
+    },
+    {
+      "group_id": "conflict-0039",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        24,
+        26
+      ],
+      "statement_sections": [
+        "PROFIT / (LOSS) BEFORE TAXATION",
+        "STAFF COST"
+      ],
+      "label": "EPF Contribution",
+      "normalized_label": "epf contribution",
+      "values": [
+        {
+          "value": "897",
+          "previous_value": ""
+        },
+        {
+          "value": "897",
+          "previous_value": "-"
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:73:195",
+        "002-bezlife-marketing:candidate:84:206"
+      ]
+    },
+    {
+      "group_id": "conflict-0040",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        24,
+        26
+      ],
+      "statement_sections": [
+        "OTHER OPERATING EXPENSES",
+        "PROFIT / (LOSS) BEFORE TAXATION"
+      ],
+      "label": "Director's fee",
+      "normalized_label": "director s fee",
+      "values": [
+        {
+          "value": "94,000",
+          "previous_value": ""
+        },
+        {
+          "value": "94,000",
+          "previous_value": "-"
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:74:196",
+        "002-bezlife-marketing:candidate:96:218"
+      ]
+    },
+    {
+      "group_id": "conflict-0041",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "002-bezlife-marketing",
+      "page_numbers": [
+        24,
+        26
+      ],
+      "statement_sections": [
+        "OTHER OPERATING EXPENSES",
+        "PROFIT / (LOSS) BEFORE TAXATION"
+      ],
+      "label": "Rental of office",
+      "normalized_label": "rental of office",
+      "values": [
+        {
+          "value": "69,120",
+          "previous_value": ""
+        },
+        {
+          "value": "69,120",
+          "previous_value": "-"
+        }
+      ],
+      "candidate_ids": [
+        "002-bezlife-marketing:candidate:75:197",
+        "002-bezlife-marketing:candidate:103:225"
+      ]
+    },
+    {
+      "group_id": "conflict-0042",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        3
+      ],
+      "statement_sections": [
+        "FINANCIAL RESULTS"
+      ],
+      "label": "Accumulated losses carried forward",
+      "normalized_label": "accumulated losses carried forward",
+      "values": [
+        {
+          "value": "(367,321)",
+          "previous_value": ""
+        },
+        {
+          "value": "(392,608)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:1:238",
+        "003-fine-batik:candidate:2:239"
+      ]
+    },
+    {
+      "group_id": "conflict-0043",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        13,
+        16
+      ],
+      "statement_sections": [
+        "ASSETS",
+        "Cash and cash equivalents"
+      ],
+      "label": "Bank balances",
+      "normalized_label": "bank balances",
+      "values": [
+        {
+          "value": "16,153",
+          "previous_value": ""
+        },
+        {
+          "value": "16,153",
+          "previous_value": "28,022"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:30:267",
+        "003-fine-batik:candidate:81:318"
+      ]
+    },
+    {
+      "group_id": "conflict-0044",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        13
+      ],
+      "statement_sections": [
+        "EQUITY AND LIABILITIES"
+      ],
+      "label": "Term loan",
+      "normalized_label": "term loan",
+      "values": [
+        {
+          "value": "656,479",
+          "previous_value": "605,232"
+        },
+        {
+          "value": "68,432",
+          "previous_value": "68,432"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:36:273",
+        "003-fine-batik:candidate:40:277"
+      ]
+    },
+    {
+      "group_id": "conflict-0045",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        14,
+        16,
+        23
+      ],
+      "statement_sections": [
+        "Cash flows from operating activities",
+        "Statement of Comprehensive Income",
+        "TAXATION - Continued"
+      ],
+      "label": "Loss before taxation",
+      "normalized_label": "loss before taxation",
+      "values": [
+        {
+          "value": "(23,562)",
+          "previous_value": ""
+        },
+        {
+          "value": "(23,562)",
+          "previous_value": "(77,641)"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:52:289",
+        "003-fine-batik:candidate:67:304",
+        "003-fine-batik:candidate:141:378"
+      ]
+    },
+    {
+      "group_id": "conflict-0046",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        14,
+        15,
+        24
+      ],
+      "statement_sections": [
+        "Accumulated Losses",
+        "Loss for the Financial Year",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "values": [
+        {
+          "value": "(23,562)",
+          "previous_value": "(77,641)"
+        },
+        {
+          "value": "(25,287)",
+          "previous_value": ""
+        },
+        {
+          "value": "(25,287)",
+          "previous_value": "(77,641)"
+        },
+        {
+          "value": "(77,641)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:54:291",
+        "003-fine-batik:candidate:59:296",
+        "003-fine-batik:candidate:63:300",
+        "003-fine-batik:candidate:156:393"
+      ]
+    },
+    {
+      "group_id": "conflict-0047",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Accumulated Losses",
+        "Share Capital",
+        "Total"
+      ],
+      "label": "As at 31st December 2022",
+      "normalized_label": "as at 31st december 2022",
+      "values": [
+        {
+          "value": "(189,680)",
+          "previous_value": ""
+        },
+        {
+          "value": "(289,680)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:56:293",
+        "003-fine-batik:candidate:57:294",
+        "003-fine-batik:candidate:58:295"
+      ]
+    },
+    {
+      "group_id": "conflict-0048",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Accumulated Losses",
+        "Share Capital",
+        "Total"
+      ],
+      "label": "As at 31st December 2023",
+      "normalized_label": "as at 31st december 2023",
+      "values": [
+        {
+          "value": "(267,321)",
+          "previous_value": ""
+        },
+        {
+          "value": "(367,321)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:60:297",
+        "003-fine-batik:candidate:61:298",
+        "003-fine-batik:candidate:62:299"
+      ]
+    },
+    {
+      "group_id": "conflict-0049",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Accumulated Losses",
+        "Share Capital",
+        "Total"
+      ],
+      "label": "As at 31st December 2024",
+      "normalized_label": "as at 31st december 2024",
+      "values": [
+        {
+          "value": "(292,608)",
+          "previous_value": ""
+        },
+        {
+          "value": "(392,605)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:64:301",
+        "003-fine-batik:candidate:65:302",
+        "003-fine-batik:candidate:66:303"
+      ]
+    },
+    {
+      "group_id": "conflict-0050",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        16
+      ],
+      "statement_sections": [
+        "Cash flows from financing activities",
+        "Cash flows from investing activities"
+      ],
+      "label": "Net cash to investing activities",
+      "normalized_label": "net cash to investing activities",
+      "values": [
+        {
+          "value": "(63,691)",
+          "previous_value": ""
+        },
+        {
+          "value": "-",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:75:312",
+        "003-fine-batik:candidate:77:314"
+      ]
+    },
+    {
+      "group_id": "conflict-0051",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        18,
+        25
+      ],
+      "statement_sections": [
+        "DETAILED STATEMENT OF COMPREHENSIVE INCOME",
+        "SIGNIFICANT ACCOUNTING POLICIES"
+      ],
+      "label": "Renovation",
+      "normalized_label": "renovation",
+      "values": [
+        {
+          "value": "10%",
+          "previous_value": ""
+        },
+        {
+          "value": "830",
+          "previous_value": "830"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:84:321",
+        "003-fine-batik:candidate:158:395"
+      ]
+    },
+    {
+      "group_id": "conflict-0052",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "003-fine-batik",
+      "page_numbers": [
+        18,
+        25
+      ],
+      "statement_sections": [
+        "DETAILED STATEMENT OF COMPREHENSIVE INCOME",
+        "SIGNIFICANT ACCOUNTING POLICIES"
+      ],
+      "label": "Office premise",
+      "normalized_label": "office premise",
+      "values": [
+        {
+          "value": "2%",
+          "previous_value": ""
+        },
+        {
+          "value": "27,373",
+          "previous_value": "27,373"
+        }
+      ],
+      "candidate_ids": [
+        "003-fine-batik:candidate:88:325",
+        "003-fine-batik:candidate:159:396"
+      ]
+    },
+    {
+      "group_id": "conflict-0053",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        14,
+        23
+      ],
+      "statement_sections": [
+        "OTHER INCOME",
+        "Other income"
+      ],
+      "label": "Other income",
+      "normalized_label": "other income",
+      "values": [
+        {
+          "value": "100",
+          "previous_value": "8,430"
+        },
+        {
+          "value": "100",
+          "previous_value": "850"
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:63:489",
+        "004-info-house:candidate:133:559"
+      ]
+    },
+    {
+      "group_id": "conflict-0054",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        14,
+        22
+      ],
+      "statement_sections": [
+        "Loss before taxation",
+        "Taxation"
+      ],
+      "label": "Loss before taxation",
+      "normalized_label": "loss before taxation",
+      "values": [
+        {
+          "value": "(2,686)",
+          "previous_value": ""
+        },
+        {
+          "value": "(2,686)",
+          "previous_value": "(8,163)"
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:64:490",
+        "004-info-house:candidate:123:549"
+      ]
+    },
+    {
+      "group_id": "conflict-0055",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 5,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Loss for the financial year",
+        "Retained Profits",
+        "Total"
+      ],
+      "label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "values": [
+        {
+          "value": "(2,686)",
+          "previous_value": ""
+        },
+        {
+          "value": "(2,686)",
+          "previous_value": "(7,086)"
+        },
+        {
+          "value": "(7,086)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:66:492",
+        "004-info-house:candidate:71:497",
+        "004-info-house:candidate:72:498",
+        "004-info-house:candidate:76:502",
+        "004-info-house:candidate:77:503"
+      ]
+    },
+    {
+      "group_id": "conflict-0056",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Retained Profits",
+        "Share Capital",
+        "Total"
+      ],
+      "label": "As at 31 December 2022",
+      "normalized_label": "as at 31 december 2022",
+      "values": [
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "180,995",
+          "previous_value": ""
+        },
+        {
+          "value": "80,995",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:68:494",
+        "004-info-house:candidate:69:495",
+        "004-info-house:candidate:70:496"
+      ]
+    },
+    {
+      "group_id": "conflict-0057",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Retained Profits",
+        "Share Capital",
+        "Total"
+      ],
+      "label": "As at 31 December 2023",
+      "normalized_label": "as at 31 december 2023",
+      "values": [
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "173,909",
+          "previous_value": ""
+        },
+        {
+          "value": "73,909",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:73:499",
+        "004-info-house:candidate:74:500",
+        "004-info-house:candidate:75:501"
+      ]
+    },
+    {
+      "group_id": "conflict-0058",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Retained Profits",
+        "Share Capital",
+        "Total"
+      ],
+      "label": "As at 31 December 2024",
+      "normalized_label": "as at 31 december 2024",
+      "values": [
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "171,223",
+          "previous_value": ""
+        },
+        {
+          "value": "71,223",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:78:504",
+        "004-info-house:candidate:79:505",
+        "004-info-house:candidate:80:506"
+      ]
+    },
+    {
+      "group_id": "conflict-0059",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        20,
+        21
+      ],
+      "statement_sections": [
+        "OTHER PAYABLES AND ACCRUALS",
+        "OTHER RECEIVABLES, DEPOSITS AND PREPAYMENTS",
+        "PROPERTY, PLANT AND EQUIPMENT"
+      ],
+      "label": "Total",
+      "normalized_label": "total",
+      "values": [
+        {
+          "value": "120,800",
+          "previous_value": "25,400"
+        },
+        {
+          "value": "226,052",
+          "previous_value": ""
+        },
+        {
+          "value": "800",
+          "previous_value": "11,900"
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:97:523",
+        "004-info-house:candidate:110:536",
+        "004-info-house:candidate:116:542"
+      ]
+    },
+    {
+      "group_id": "conflict-0060",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "PROPERTY, PLANT AND EQUIPMENT"
+      ],
+      "label": "As at 31/12/23",
+      "normalized_label": "as at 31 12 23",
+      "values": [
+        {
+          "value": "1",
+          "previous_value": ""
+        },
+        {
+          "value": "16,890",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:99:525",
+        "004-info-house:candidate:104:530"
+      ]
+    },
+    {
+      "group_id": "conflict-0061",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "PROPERTY, PLANT AND EQUIPMENT"
+      ],
+      "label": "As at 31/12/24",
+      "normalized_label": "as at 31 12 24",
+      "values": [
+        {
+          "value": "1",
+          "previous_value": ""
+        },
+        {
+          "value": "16,890",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:102:528",
+        "004-info-house:candidate:105:531"
+      ]
+    },
+    {
+      "group_id": "conflict-0062",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        21
+      ],
+      "statement_sections": [
+        "OTHER PAYABLES AND ACCRUALS",
+        "OTHER RECEIVABLES, DEPOSITS AND PREPAYMENTS"
+      ],
+      "label": "Deposits",
+      "normalized_label": "deposits",
+      "values": [
+        {
+          "value": "1,000",
+          "previous_value": "1,000"
+        },
+        {
+          "value": "800",
+          "previous_value": "4,800"
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:108:534",
+        "004-info-house:candidate:115:541"
+      ]
+    },
+    {
+      "group_id": "conflict-0063",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        22,
+        23
+      ],
+      "statement_sections": [
+        "Loss Before Taxation",
+        "OTHER INCOME"
+      ],
+      "label": "Interests income",
+      "normalized_label": "interests income",
+      "values": [
+        {
+          "value": "-",
+          "previous_value": ""
+        },
+        {
+          "value": "-",
+          "previous_value": "7,580"
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:120:546",
+        "004-info-house:candidate:132:558"
+      ]
+    },
+    {
+      "group_id": "conflict-0064",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "Loss for the Financial Year"
+      ],
+      "label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "values": [
+        {
+          "value": "(188,217)",
+          "previous_value": ""
+        },
+        {
+          "value": "(9,915)",
+          "previous_value": ""
+        },
+        {
+          "value": "(9,915)",
+          "previous_value": "(188,217)"
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:53:629",
+        "005-jconnector:candidate:58:634",
+        "005-jconnector:candidate:62:638"
+      ]
+    },
+    {
+      "group_id": "conflict-0065",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "Share capital",
+        "Total"
+      ],
+      "label": "As at 31/12/2022",
+      "normalized_label": "as at 31 12 2022",
+      "values": [
+        {
+          "value": "(105,101)",
+          "previous_value": ""
+        },
+        {
+          "value": "(205,101)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:55:631",
+        "005-jconnector:candidate:56:632",
+        "005-jconnector:candidate:57:633"
+      ]
+    },
+    {
+      "group_id": "conflict-0066",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 6,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        15,
+        20
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "PROPERTY, PLANT AND EQUIPMENT",
+        "Share capital",
+        "Total"
+      ],
+      "label": "As at 31/12/2023",
+      "normalized_label": "as at 31 12 2023",
+      "values": [
+        {
+          "value": "(293,318)",
+          "previous_value": ""
+        },
+        {
+          "value": "(393,318)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "2",
+          "previous_value": ""
+        },
+        {
+          "value": "23,430",
+          "previous_value": ""
+        },
+        {
+          "value": "23,432",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:59:635",
+        "005-jconnector:candidate:60:636",
+        "005-jconnector:candidate:61:637",
+        "005-jconnector:candidate:88:664",
+        "005-jconnector:candidate:92:668",
+        "005-jconnector:candidate:96:672"
+      ]
+    },
+    {
+      "group_id": "conflict-0067",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 6,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        15,
+        20
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "PROPERTY, PLANT AND EQUIPMENT",
+        "Share capital",
+        "Total"
+      ],
+      "label": "As at 31/12/2024",
+      "normalized_label": "as at 31 12 2024",
+      "values": [
+        {
+          "value": "(303,233)",
+          "previous_value": ""
+        },
+        {
+          "value": "(403,233)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "2",
+          "previous_value": ""
+        },
+        {
+          "value": "23,430",
+          "previous_value": ""
+        },
+        {
+          "value": "23,432",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:63:639",
+        "005-jconnector:candidate:64:640",
+        "005-jconnector:candidate:65:641",
+        "005-jconnector:candidate:90:666",
+        "005-jconnector:candidate:94:670",
+        "005-jconnector:candidate:97:673"
+      ]
+    },
+    {
+      "group_id": "conflict-0068",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        3,
+        14
+      ],
+      "statement_sections": [
+        "FINANCIAL RESULTS",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "values": [
+        {
+          "value": "(138,197)",
+          "previous_value": ""
+        },
+        {
+          "value": "(138,197)",
+          "previous_value": "(104,646)"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:0:710",
+        "006-Rahsia-Herbal:candidate:42:752"
+      ]
+    },
+    {
+      "group_id": "conflict-0069",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        13
+      ],
+      "statement_sections": [
+        "EQUITY AND LIABILITIES"
+      ],
+      "label": "Term loan",
+      "normalized_label": "term loan",
+      "values": [
+        {
+          "value": "39,554",
+          "previous_value": "39,554"
+        },
+        {
+          "value": "426,344",
+          "previous_value": "465,906"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:24:734",
+        "006-Rahsia-Herbal:candidate:28:738"
+      ]
+    },
+    {
+      "group_id": "conflict-0070",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        14,
+        16,
+        22
+      ],
+      "statement_sections": [
+        "Cash flows from operating activities",
+        "NOTES TO THE FINANCIAL STATEMENTS \u2013 31 DECEMBER 2024 (Continued)",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Loss before taxation",
+      "normalized_label": "loss before taxation",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        },
+        {
+          "value": "(138,197)",
+          "previous_value": "(104,646)"
+        },
+        {
+          "value": "(138,917)",
+          "previous_value": "(104,646)"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:40:750",
+        "006-Rahsia-Herbal:candidate:59:769",
+        "006-Rahsia-Herbal:candidate:110:820",
+        "006-Rahsia-Herbal:candidate:116:826"
+      ]
+    },
+    {
+      "group_id": "conflict-0071",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 15,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation",
+        "Costs",
+        "Net Book Value"
+      ],
+      "label": "As at 31/12/2023",
+      "normalized_label": "as at 31 12 2023",
+      "values": [
+        {
+          "value": "1,034,896",
+          "previous_value": ""
+        },
+        {
+          "value": "1,045,033",
+          "previous_value": ""
+        },
+        {
+          "value": "192,649",
+          "previous_value": ""
+        },
+        {
+          "value": "2,463",
+          "previous_value": ""
+        },
+        {
+          "value": "2,678",
+          "previous_value": ""
+        },
+        {
+          "value": "2,687",
+          "previous_value": ""
+        },
+        {
+          "value": "201,346",
+          "previous_value": ""
+        },
+        {
+          "value": "3,050",
+          "previous_value": ""
+        },
+        {
+          "value": "3,556",
+          "previous_value": ""
+        },
+        {
+          "value": "4,400",
+          "previous_value": ""
+        },
+        {
+          "value": "587",
+          "previous_value": ""
+        },
+        {
+          "value": "842,247",
+          "previous_value": ""
+        },
+        {
+          "value": "843,687",
+          "previous_value": ""
+        },
+        {
+          "value": "844",
+          "previous_value": ""
+        },
+        {
+          "value": "9",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:76:786",
+        "006-Rahsia-Herbal:candidate:77:787",
+        "006-Rahsia-Herbal:candidate:78:788",
+        "006-Rahsia-Herbal:candidate:79:789",
+        "006-Rahsia-Herbal:candidate:80:790",
+        "006-Rahsia-Herbal:candidate:81:791",
+        "006-Rahsia-Herbal:candidate:82:792",
+        "006-Rahsia-Herbal:candidate:83:793",
+        "006-Rahsia-Herbal:candidate:84:794",
+        "006-Rahsia-Herbal:candidate:85:795",
+        "006-Rahsia-Herbal:candidate:99:809",
+        "006-Rahsia-Herbal:candidate:100:810",
+        "006-Rahsia-Herbal:candidate:101:811",
+        "006-Rahsia-Herbal:candidate:102:812",
+        "006-Rahsia-Herbal:candidate:103:813"
+      ]
+    },
+    {
+      "group_id": "conflict-0072",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 5,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation"
+      ],
+      "label": "Charges for the year",
+      "normalized_label": "charges for the year",
+      "values": [
+        {
+          "value": "20,698",
+          "previous_value": ""
+        },
+        {
+          "value": "21,496",
+          "previous_value": ""
+        },
+        {
+          "value": "305",
+          "previous_value": ""
+        },
+        {
+          "value": "440",
+          "previous_value": ""
+        },
+        {
+          "value": "53",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:86:796",
+        "006-Rahsia-Herbal:candidate:87:797",
+        "006-Rahsia-Herbal:candidate:88:798",
+        "006-Rahsia-Herbal:candidate:89:799",
+        "006-Rahsia-Herbal:candidate:90:800"
+      ]
+    },
+    {
+      "group_id": "conflict-0073",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation"
+      ],
+      "label": "Prior year",
+      "normalized_label": "prior year",
+      "values": [
+        {
+          "value": "(47)",
+          "previous_value": ""
+        },
+        {
+          "value": "-",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:91:801",
+        "006-Rahsia-Herbal:candidate:92:802"
+      ]
+    },
+    {
+      "group_id": "conflict-0074",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 10,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation",
+        "Net Book Value"
+      ],
+      "label": "As at 31/12/2024",
+      "normalized_label": "as at 31 12 2024",
+      "values": [
+        {
+          "value": "2,684",
+          "previous_value": ""
+        },
+        {
+          "value": "2,768",
+          "previous_value": ""
+        },
+        {
+          "value": "213,347",
+          "previous_value": ""
+        },
+        {
+          "value": "222,795",
+          "previous_value": ""
+        },
+        {
+          "value": "282",
+          "previous_value": ""
+        },
+        {
+          "value": "3",
+          "previous_value": ""
+        },
+        {
+          "value": "3,996",
+          "previous_value": ""
+        },
+        {
+          "value": "404",
+          "previous_value": ""
+        },
+        {
+          "value": "821,549",
+          "previous_value": ""
+        },
+        {
+          "value": "822,238",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:94:804",
+        "006-Rahsia-Herbal:candidate:95:805",
+        "006-Rahsia-Herbal:candidate:96:806",
+        "006-Rahsia-Herbal:candidate:97:807",
+        "006-Rahsia-Herbal:candidate:98:808",
+        "006-Rahsia-Herbal:candidate:104:814",
+        "006-Rahsia-Herbal:candidate:105:815",
+        "006-Rahsia-Herbal:candidate:106:816",
+        "006-Rahsia-Herbal:candidate:107:817",
+        "006-Rahsia-Herbal:candidate:108:818"
+      ]
+    },
+    {
+      "group_id": "conflict-0075",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        24
+      ],
+      "statement_sections": [
+        "DEPRECIATION",
+        "OTHER OPERATING EXPENSES - Continued"
+      ],
+      "label": "Subtotal",
+      "normalized_label": "subtotal",
+      "values": [
+        {
+          "value": "168,846",
+          "previous_value": "156,007"
+        },
+        {
+          "value": "21,449",
+          "previous_value": "21,712"
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:137:847",
+        "006-Rahsia-Herbal:candidate:143:853"
+      ]
+    },
+    {
+      "group_id": "conflict-0076",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        8
+      ],
+      "statement_sections": [
+        "Revenue"
+      ],
+      "label": "Revenue",
+      "normalized_label": "revenue",
+      "values": [
+        {
+          "value": "25,258",
+          "previous_value": ""
+        },
+        {
+          "value": "26,933",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:42:898",
+        "007-Shield-Plus:candidate:43:899"
+      ]
+    },
+    {
+      "group_id": "conflict-0077",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        8
+      ],
+      "statement_sections": [
+        "Administration expenses"
+      ],
+      "label": "Administration expenses",
+      "normalized_label": "administration expenses",
+      "values": [
+        {
+          "value": "(38,429)",
+          "previous_value": ""
+        },
+        {
+          "value": "(38,447)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:44:900",
+        "007-Shield-Plus:candidate:45:901"
+      ]
+    },
+    {
+      "group_id": "conflict-0078",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        8
+      ],
+      "statement_sections": [
+        "Loss before tax"
+      ],
+      "label": "Loss before tax",
+      "normalized_label": "loss before tax",
+      "values": [
+        {
+          "value": "(11,514)",
+          "previous_value": ""
+        },
+        {
+          "value": "(13,171)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:46:902",
+        "007-Shield-Plus:candidate:47:903"
+      ]
+    },
+    {
+      "group_id": "conflict-0079",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        8
+      ],
+      "statement_sections": [
+        "Loss after tax and representing total comprehensive loss for the year"
+      ],
+      "label": "Loss after tax and representing total comprehensive loss for the year",
+      "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+      "values": [
+        {
+          "value": "(11,514)",
+          "previous_value": ""
+        },
+        {
+          "value": "(13,171)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:49:905",
+        "007-Shield-Plus:candidate:50:906"
+      ]
+    },
+    {
+      "group_id": "conflict-0080",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        8
+      ],
+      "statement_sections": [
+        "Loss attributable to: Owners of the Company"
+      ],
+      "label": "Loss attributable to: Owners of the Company",
+      "normalized_label": "loss attributable to owners of the company",
+      "values": [
+        {
+          "value": "(11,514)",
+          "previous_value": ""
+        },
+        {
+          "value": "(13,171)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:51:907",
+        "007-Shield-Plus:candidate:52:908"
+      ]
+    },
+    {
+      "group_id": "conflict-0081",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        9
+      ],
+      "statement_sections": [
+        "Attributable to Owners of the Company"
+      ],
+      "label": "Accumulated Loss RM",
+      "normalized_label": "accumulated loss rm",
+      "values": [
+        {
+          "value": "(169,863)",
+          "previous_value": ""
+        },
+        {
+          "value": "(181,377)",
+          "previous_value": ""
+        },
+        {
+          "value": "(194,548)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:56:912",
+        "007-Shield-Plus:candidate:61:917",
+        "007-Shield-Plus:candidate:65:921"
+      ]
+    },
+    {
+      "group_id": "conflict-0082",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        9
+      ],
+      "statement_sections": [
+        "Attributable to Owners of the Company"
+      ],
+      "label": "Total RM",
+      "normalized_label": "total rm",
+      "values": [
+        {
+          "value": "(169,861)",
+          "previous_value": ""
+        },
+        {
+          "value": "(181,375)",
+          "previous_value": ""
+        },
+        {
+          "value": "(194,546)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:57:913",
+        "007-Shield-Plus:candidate:62:918",
+        "007-Shield-Plus:candidate:66:922"
+      ]
+    },
+    {
+      "group_id": "conflict-0083",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "007-Shield-Plus",
+      "page_numbers": [
+        9
+      ],
+      "statement_sections": [
+        "Attributable to Owners of the Company"
+      ],
+      "label": "Net loss for the year",
+      "normalized_label": "net loss for the year",
+      "values": [
+        {
+          "value": "(11,514)",
+          "previous_value": ""
+        },
+        {
+          "value": "(13,171)",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "007-Shield-Plus:candidate:58:914",
+        "007-Shield-Plus:candidate:63:919"
+      ]
+    },
+    {
+      "group_id": "period-label-0084",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "001-bizaid-synthetic",
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "statement_sections": [
+        "Statement of Financial Position"
+      ],
+      "label": "This Year",
+      "normalized_label": "this year",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        },
+        {
+          "value": "112796",
+          "previous_value": "-281.19"
+        }
+      ],
+      "candidate_ids": [
+        "001-bizaid-synthetic:candidate:2:2",
+        "001-bizaid-synthetic:candidate:82:82",
+        "001-bizaid-synthetic:candidate:117:117",
+        "001-bizaid-synthetic:candidate:118:118"
+      ]
+    },
+    {
+      "group_id": "period-label-0085",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "PROPERTY, PLANT AND EQUIPMENT"
+      ],
+      "label": "As at 31/12/23",
+      "normalized_label": "as at 31 12 23",
+      "values": [
+        {
+          "value": "1",
+          "previous_value": ""
+        },
+        {
+          "value": "16,890",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:99:525",
+        "004-info-house:candidate:104:530"
+      ]
+    },
+    {
+      "group_id": "period-label-0086",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "004-info-house",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "PROPERTY, PLANT AND EQUIPMENT"
+      ],
+      "label": "As at 31/12/24",
+      "normalized_label": "as at 31 12 24",
+      "values": [
+        {
+          "value": "1",
+          "previous_value": ""
+        },
+        {
+          "value": "16,890",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "004-info-house:candidate:102:528",
+        "004-info-house:candidate:105:531"
+      ]
+    },
+    {
+      "group_id": "period-label-0087",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        15
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "Share capital",
+        "Total"
+      ],
+      "label": "As at 31/12/2022",
+      "normalized_label": "as at 31 12 2022",
+      "values": [
+        {
+          "value": "(105,101)",
+          "previous_value": ""
+        },
+        {
+          "value": "(205,101)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:55:631",
+        "005-jconnector:candidate:56:632",
+        "005-jconnector:candidate:57:633"
+      ]
+    },
+    {
+      "group_id": "period-label-0088",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 6,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        15,
+        20
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "PROPERTY, PLANT AND EQUIPMENT",
+        "Share capital",
+        "Total"
+      ],
+      "label": "As at 31/12/2023",
+      "normalized_label": "as at 31 12 2023",
+      "values": [
+        {
+          "value": "(293,318)",
+          "previous_value": ""
+        },
+        {
+          "value": "(393,318)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "2",
+          "previous_value": ""
+        },
+        {
+          "value": "23,430",
+          "previous_value": ""
+        },
+        {
+          "value": "23,432",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:59:635",
+        "005-jconnector:candidate:60:636",
+        "005-jconnector:candidate:61:637",
+        "005-jconnector:candidate:88:664",
+        "005-jconnector:candidate:92:668",
+        "005-jconnector:candidate:96:672"
+      ]
+    },
+    {
+      "group_id": "period-label-0089",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 6,
+      "case_id": "005-jconnector",
+      "page_numbers": [
+        15,
+        20
+      ],
+      "statement_sections": [
+        "Accumulated losses",
+        "PROPERTY, PLANT AND EQUIPMENT",
+        "Share capital",
+        "Total"
+      ],
+      "label": "As at 31/12/2024",
+      "normalized_label": "as at 31 12 2024",
+      "values": [
+        {
+          "value": "(303,233)",
+          "previous_value": ""
+        },
+        {
+          "value": "(403,233)",
+          "previous_value": ""
+        },
+        {
+          "value": "100,000",
+          "previous_value": ""
+        },
+        {
+          "value": "2",
+          "previous_value": ""
+        },
+        {
+          "value": "23,430",
+          "previous_value": ""
+        },
+        {
+          "value": "23,432",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "005-jconnector:candidate:63:639",
+        "005-jconnector:candidate:64:640",
+        "005-jconnector:candidate:65:641",
+        "005-jconnector:candidate:90:666",
+        "005-jconnector:candidate:94:670",
+        "005-jconnector:candidate:97:673"
+      ]
+    },
+    {
+      "group_id": "period-label-0090",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 15,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation",
+        "Costs",
+        "Net Book Value"
+      ],
+      "label": "As at 31/12/2023",
+      "normalized_label": "as at 31 12 2023",
+      "values": [
+        {
+          "value": "1,034,896",
+          "previous_value": ""
+        },
+        {
+          "value": "1,045,033",
+          "previous_value": ""
+        },
+        {
+          "value": "192,649",
+          "previous_value": ""
+        },
+        {
+          "value": "2,463",
+          "previous_value": ""
+        },
+        {
+          "value": "2,678",
+          "previous_value": ""
+        },
+        {
+          "value": "2,687",
+          "previous_value": ""
+        },
+        {
+          "value": "201,346",
+          "previous_value": ""
+        },
+        {
+          "value": "3,050",
+          "previous_value": ""
+        },
+        {
+          "value": "3,556",
+          "previous_value": ""
+        },
+        {
+          "value": "4,400",
+          "previous_value": ""
+        },
+        {
+          "value": "587",
+          "previous_value": ""
+        },
+        {
+          "value": "842,247",
+          "previous_value": ""
+        },
+        {
+          "value": "843,687",
+          "previous_value": ""
+        },
+        {
+          "value": "844",
+          "previous_value": ""
+        },
+        {
+          "value": "9",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:76:786",
+        "006-Rahsia-Herbal:candidate:77:787",
+        "006-Rahsia-Herbal:candidate:78:788",
+        "006-Rahsia-Herbal:candidate:79:789",
+        "006-Rahsia-Herbal:candidate:80:790",
+        "006-Rahsia-Herbal:candidate:81:791",
+        "006-Rahsia-Herbal:candidate:82:792",
+        "006-Rahsia-Herbal:candidate:83:793",
+        "006-Rahsia-Herbal:candidate:84:794",
+        "006-Rahsia-Herbal:candidate:85:795",
+        "006-Rahsia-Herbal:candidate:99:809",
+        "006-Rahsia-Herbal:candidate:100:810",
+        "006-Rahsia-Herbal:candidate:101:811",
+        "006-Rahsia-Herbal:candidate:102:812",
+        "006-Rahsia-Herbal:candidate:103:813"
+      ]
+    },
+    {
+      "group_id": "period-label-0091",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation"
+      ],
+      "label": "Prior year",
+      "normalized_label": "prior year",
+      "values": [
+        {
+          "value": "(47)",
+          "previous_value": ""
+        },
+        {
+          "value": "-",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:91:801",
+        "006-Rahsia-Herbal:candidate:92:802"
+      ]
+    },
+    {
+      "group_id": "period-label-0092",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 10,
+      "case_id": "006-Rahsia-Herbal",
+      "page_numbers": [
+        20
+      ],
+      "statement_sections": [
+        "Accumulated Depreciation",
+        "Net Book Value"
+      ],
+      "label": "As at 31/12/2024",
+      "normalized_label": "as at 31 12 2024",
+      "values": [
+        {
+          "value": "2,684",
+          "previous_value": ""
+        },
+        {
+          "value": "2,768",
+          "previous_value": ""
+        },
+        {
+          "value": "213,347",
+          "previous_value": ""
+        },
+        {
+          "value": "222,795",
+          "previous_value": ""
+        },
+        {
+          "value": "282",
+          "previous_value": ""
+        },
+        {
+          "value": "3",
+          "previous_value": ""
+        },
+        {
+          "value": "3,996",
+          "previous_value": ""
+        },
+        {
+          "value": "404",
+          "previous_value": ""
+        },
+        {
+          "value": "821,549",
+          "previous_value": ""
+        },
+        {
+          "value": "822,238",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "006-Rahsia-Herbal:candidate:94:804",
+        "006-Rahsia-Herbal:candidate:95:805",
+        "006-Rahsia-Herbal:candidate:96:806",
+        "006-Rahsia-Herbal:candidate:97:807",
+        "006-Rahsia-Herbal:candidate:98:808",
+        "006-Rahsia-Herbal:candidate:104:814",
+        "006-Rahsia-Herbal:candidate:105:815",
+        "006-Rahsia-Herbal:candidate:106:816",
+        "006-Rahsia-Herbal:candidate:107:817",
+        "006-Rahsia-Herbal:candidate:108:818"
+      ]
+    }
+  ],
+  "limitations": [
+    "Only exact duplicate evidence is suppressible.",
+    "Conflicting values are preserved and require review.",
+    "This report does not choose values, aggregate detail rows, map taxonomy concepts, flip signs, infer dimensions, or merge text blocks across sections."
+  ]
+}

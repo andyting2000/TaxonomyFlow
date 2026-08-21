@@ -1,0 +1,114 @@
+{
+  "report_id": "toc_detection_and_page_alignment_19a",
+  "feature_id": "19A",
+  "generated_on": "2026-07-30",
+  "status": "PASS",
+  "toc_detection": {
+    "scope": "document-wide; no fixed page-position assumption",
+    "signals": [
+      "INDEX, CONTENTS, or TABLE OF CONTENTS heading",
+      "title plus terminal Arabic/Roman page or range",
+      "Page, Pages, or Page No. column",
+      "known financial-report section aliases",
+      "short title/page row density"
+    ],
+    "continuation_policy": {
+      "explicit_heading_seed_required_for_expansion": true,
+      "maximum_distance": 3,
+      "adjacent_reference_continuity": true,
+      "strong_later_page_evidence": true,
+      "recursive_seed_creation": false
+    },
+    "ordering": "numeric source/table order, not lexical ID order",
+    "limits": {
+      "pages": 1000,
+      "source_lines": 50000
+    },
+    "safe_no_toc_result": "toc_detected=false, toc_not_detected warning, no false boundaries"
+  },
+  "entry_parser": {
+    "supports": [
+      "explicit ranges",
+      "start-only rows",
+      "Arabic labels",
+      "canonical Roman labels",
+      "hyphen, en dash, em dash, and minus",
+      "leading numbering",
+      "dotted leaders with or without whitespace",
+      "Page No. labels",
+      "OCR-confused separators"
+    ],
+    "raw_source_text_preserved": true,
+    "malformed_entries_preserved": true,
+    "unparsed_or_out_of_document_entries_create_boundaries": false,
+    "range_inference": "immediate next TOC entry within the same numbering scheme",
+    "shared_start_pages_preserved": true,
+    "regime_changes_and_decreases_warn": true
+  },
+  "canonical_title_types": [
+    "directors_report",
+    "statement_by_directors",
+    "statutory_declaration",
+    "independent_auditors_report",
+    "statement_of_financial_position",
+    "statement_of_comprehensive_income",
+    "income_statement",
+    "statement_of_changes_in_equity",
+    "statement_of_cash_flows",
+    "notes_to_financial_statements",
+    "company_information",
+    "unknown_section"
+  ],
+  "normalization_order": [
+    "exact normalized alias",
+    "deterministic fuzzy match at threshold 0.88",
+    "unknown_section"
+  ],
+  "heading_anchors": {
+    "match_signals": [
+      "exact normalized title",
+      "title containment",
+      "canonical alias",
+      "bounded fuzzy similarity",
+      "Azure heading role",
+      "uppercase style",
+      "top-of-page geometry",
+      "matching nearby printed-page label",
+      "precedes table boundary"
+    ],
+    "same_location_paragraph_line_duplicates_collapsed": true,
+    "spatial_or_cross_page_alternatives_retained": true,
+    "alternative_limit_per_anchor": 5,
+    "cross_page_ambiguity_margin": 0.12,
+    "text_and_bounds_retained": true
+  },
+  "page_alignment": {
+    "formula": "offset = pdf_page_index - printed_page_number",
+    "consistent_multiple_anchors": "heading_anchor_consensus",
+    "single_anchor": "review-required proposal; broad grouping is stopped",
+    "piecewise_regime_minimum_support": 2,
+    "roman_and_arabic_labels_preserved": true,
+    "duplicate_printed_labels_are_regime_scoped": true,
+    "cross_page_near_ties_support_consensus": false,
+    "inconsistent_offsets": "exact anchor evidence only; unmapped pages and page_alignment_ambiguous",
+    "requires_human_review_on_ambiguous_alignment": true
+  },
+  "adversarial_regressions": [
+    "numeric body pages do not recursively extend a TOC",
+    "three-page TOC continuation remains supported",
+    "five-row financial statement pages are not weak continuations",
+    "more than nine TOC rows retain numeric source order",
+    "Roman title-word suffixes are not parsed as page labels",
+    "Page No. and no-space dotted leaders parse correctly",
+    "coherent alternate heading sets prevent silent wrong consensus",
+    "same-page spatial alternatives remain auditable",
+    "Roman/Arabic resets preserve separate regimes",
+    "duplicate printed labels do not cross-project ranges"
+  ],
+  "verification": {
+    "focused_19a_tests_passed": 51,
+    "full_backend_tests_passed": 1317,
+    "failures": 0
+  },
+  "recommended_next_feature": "19B - Classify primary sections and note subsections into the 24 internal template groups"
+}

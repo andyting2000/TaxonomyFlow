@@ -1,0 +1,66 @@
+{
+  "run_metadata": {
+    "feature": "18F-D",
+    "generated_at": "2026-06-25T01:54:45Z",
+    "report_type": "ranked_candidate_advisory_api_safety"
+  },
+  "required_safety_counters": {
+    "safe_for_auto_apply_count": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "persistence_writes": 0,
+    "ai_suggestion_table_writes": 0,
+    "external_calls": 0,
+    "xbrl_generation_count": 0,
+    "arelle_runs": 0
+  },
+  "candidate_invariants": {
+    "requires_human_review": true,
+    "safe_for_auto_apply": false,
+    "allowed_recommended_actions": [
+      "review_candidate",
+      "keep_for_human_review",
+      "no_candidate",
+      "blocked"
+    ],
+    "rejected_actions": [
+      "accept",
+      "apply",
+      "confirm",
+      "auto_apply",
+      "auto_accept",
+      "set_confirmed_tag_id"
+    ]
+  },
+  "guardrails": {
+    "advisory_only": true,
+    "dry_run_only": true,
+    "persistence_enabled": false,
+    "auto_apply_enabled": false,
+    "auto_accept_enabled": false,
+    "auto_reject_enabled": false,
+    "safe_for_auto_apply_always_false": true,
+    "requires_human_review_always_true": true,
+    "confirmed_tag_id_mutation_allowed": false,
+    "final_mapping_mutation_allowed": false,
+    "ai_mapping_suggestion_mutation_allowed": false,
+    "external_llm_called": false,
+    "supervisor_called": false,
+    "qwen_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generation_allowed": false,
+    "arelle_run_allowed": false,
+    "api_changed": true,
+    "database_mutated": false,
+    "persistence_writes": 0,
+    "final_mapping_mutations": 0,
+    "mapping_row_mutations": 0
+  },
+  "fail_closed_behavior": [
+    "Run endpoint rejects disabled feature flag with HTTP 403.",
+    "Run endpoint rejects non-dry-run request modes.",
+    "Run endpoint rejects unsupported profiles.",
+    "Run endpoint rejects request caps above configured limits.",
+    "Missing local taxonomy or concept-card artifacts return a safe advisory error."
+  ]
+}

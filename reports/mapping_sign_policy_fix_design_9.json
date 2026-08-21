@@ -1,0 +1,2203 @@
+{
+  "job": {
+    "company_name": "Feature 10E Verification",
+    "financial_year_end": "2024-12-31",
+    "id": 9,
+    "page_count": 3,
+    "registration_number": "10E-TEST",
+    "status": "REVIEW"
+  },
+  "manual_review_requirements": {
+    "manual_review_reason": "Rows with conflicting mapping/sign evidence must not be auto-corrected or auto-normalized from the current evidence.",
+    "mapping_rows_sampled_for_manual_review": 45,
+    "signed_rows_requiring_manual_review": 10
+  },
+  "mapping_breadth_problems": [
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ssmt-mpers:CurrentBiologicalAssets",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Reject automatic matches to this concept unless the source label explicitly contains biological/agricultural evidence.",
+        "Route current job 9 rows under this concept to manual review before any replacement concept is assigned.",
+        "Add regression fixtures proving P&L, share capital, share premium, creditors, accruals, and company names do not map to biological assets."
+      ],
+      "generated_fact_count": 29,
+      "identical_duplicate_fact_keys": [
+        {
+          "all_rows_share_same_label_value_template_context_unit": false,
+          "classification": "likely_mapping_too_broad",
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "generated_fact_count": 2,
+          "generator_emitted_same_fact_twice_from_one_source_row": false,
+          "source_rows": [
+            {
+              "concept": "ssmt-mpers:CurrentBiologicalAssets",
+              "confirmed_tag_id": null,
+              "contextRef": "asof_20241231_SeparateMember",
+              "generated_value": "5032604.00",
+              "item_id": "afa44b47-5c6e-4a2e-8e78-8bce525cedf2",
+              "label": "SHARE CAPITAL",
+              "page_number": 2,
+              "source_value": "5,032,604.00",
+              "source_value_column": "extracted_value",
+              "statement_type": "Statement of Financial Position",
+              "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+              "template_metadata": {
+                "data_type": null,
+                "is_abstract": null,
+                "label": "Biological assets",
+                "level": 5,
+                "parent": "ifrs-smes:CurrentAssetsAbstract",
+                "position": 16,
+                "required": false,
+                "template_code": "210000",
+                "template_description": "Template 210000"
+              },
+              "unitRef": "MYR",
+              "value_year": 2025
+            },
+            {
+              "concept": "ssmt-mpers:CurrentBiologicalAssets",
+              "confirmed_tag_id": null,
+              "contextRef": "asof_20241231_SeparateMember",
+              "generated_value": "5032604.00",
+              "item_id": "e8a4b42e-f0bf-4b04-a193-d7345e1e63bb",
+              "label": "INFOHOUSE (I.T) SDN BHD",
+              "page_number": 2,
+              "source_value": "5,032,604.00",
+              "source_value_column": "extracted_value",
+              "statement_type": "Statement of Financial Position",
+              "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+              "template_metadata": {
+                "data_type": null,
+                "is_abstract": null,
+                "label": "Biological assets",
+                "level": 5,
+                "parent": "ifrs-smes:CurrentAssetsAbstract",
+                "position": 16,
+                "required": false,
+                "template_code": "210000",
+                "template_description": "Template 210000"
+              },
+              "unitRef": "MYR",
+              "value_year": 2025
+            }
+          ],
+          "source_rows_duplicated": false,
+          "traceable_source_fact_count": 2,
+          "unitRef": "MYR",
+          "value": "5032604.00"
+        }
+      ],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "blocked_from_auto_mapping",
+      "rows_that_must_remain_manual_review": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "700.00",
+          "item_id": "579adc40-1a60-4acb-8ca1-065782cd2c98",
+          "label": "ACCRUAL - AUDIT FEE",
+          "page_number": 2,
+          "source_value": "700.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "9216.60",
+          "item_id": "c10e7ac9-0618-4065-a29b-6e1b22c520b1",
+          "label": "ACCRUAL - DIRECTOR REMUNERATION",
+          "page_number": 2,
+          "source_value": "9,216.60",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "7.90",
+          "item_id": "e86c3c22-cfc5-4b1f-90e8-953662bdc94b",
+          "label": "ACCRUAL - EIS",
+          "page_number": 2,
+          "source_value": "7.90",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "195.75",
+          "item_id": "46cb7d25-3cec-414d-8d20-9bb51811eec5",
+          "label": "ACCRUAL - PCB",
+          "page_number": 2,
+          "source_value": "195.75",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "86.65",
+          "item_id": "97d5fd5a-563a-4755-a62e-f037c705eb93",
+          "label": "ACCRUAL - SOCSO",
+          "page_number": 2,
+          "source_value": "86.65",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5032604.00",
+          "item_id": "e8a4b42e-f0bf-4b04-a193-d7345e1e63bb",
+          "label": "INFOHOUSE (I.T) SDN BHD",
+          "page_number": 2,
+          "source_value": "5,032,604.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "14000.00",
+          "item_id": "b5dfa02e-b129-4245-b734-7aa908fd5787",
+          "label": "OTHER CREDITOR - AS",
+          "page_number": 2,
+          "source_value": "14,000.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "448406.01",
+          "item_id": "3f96cea9-07be-4ec2-91a3-182507564225",
+          "label": "OTHER CREDITOR - DOCTOR VICTOR",
+          "page_number": 2,
+          "source_value": "448,406.01",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5400.00",
+          "item_id": "e261edb5-2bd1-49e6-852c-deaba64a3f56",
+          "label": "OTHER CREDITOR - IH(M)",
+          "page_number": 2,
+          "source_value": "5,400.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-1839510.00",
+          "item_id": "a25eabd0-218a-4cee-97d0-fc748aff9c35",
+          "label": "P&L 2001",
+          "page_number": 2,
+          "source_value": "-1,839,510.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-5372033.00",
+          "item_id": "1b5f1b48-f1ad-4c3a-97ff-bcfda7b22be4",
+          "label": "P&L 2002",
+          "page_number": 2,
+          "source_value": "-5,372,033.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-549005.00",
+          "item_id": "ff9d9fb7-6888-4ab1-89eb-03225347e69a",
+          "label": "P&L 2003",
+          "page_number": 2,
+          "source_value": "-549,005.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-1483026.00",
+          "item_id": "63d907ad-fbd0-4e96-a363-44379a162034",
+          "label": "P&L 2004",
+          "page_number": 2,
+          "source_value": "-1,483,026.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-277811.00",
+          "item_id": "6b00d206-f8b2-41d3-8691-784f3f5cda53",
+          "label": "P&L 2005",
+          "page_number": 2,
+          "source_value": "-277,811.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-379725.00",
+          "item_id": "58e269c5-e802-4fb9-af08-a13a73b4a3c2",
+          "label": "P&L 2006",
+          "page_number": 2,
+          "source_value": "-379,725.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-101920.00",
+          "item_id": "101e69d8-fbdc-4183-9f0e-4c69fe5573ec",
+          "label": "P&L 2007",
+          "page_number": 2,
+          "source_value": "-101,920.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "87741.00",
+          "item_id": "3dc881c7-bdea-4ed5-a934-08141584e70d",
+          "label": "P&L 2008",
+          "page_number": 2,
+          "source_value": "87,741.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-2796.00",
+          "item_id": "67a64523-ab30-4526-90be-d165e0630e42",
+          "label": "P&L 2009",
+          "page_number": 2,
+          "source_value": "-2,796.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "16846.40",
+          "item_id": "ed1a1e5a-bff1-4cf1-879f-6d5e58c56c21",
+          "label": "P&L 2010",
+          "page_number": 2,
+          "source_value": "16,846.40",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "60501.00",
+          "item_id": "08b23772-11af-4682-9557-5f95162012a8",
+          "label": "P&L 2011",
+          "page_number": 2,
+          "source_value": "60,501.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "300.00",
+          "item_id": "501e1e67-1c4d-49d9-bac5-9bb221ddd0df",
+          "label": "RAHSIA HERBAL SDN BHD",
+          "page_number": 2,
+          "source_value": "300.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "17116.13",
+          "item_id": "2b865663-48c5-4c56-bb52-0928f70f4249",
+          "label": "SERVICE TAX ACCOUNT",
+          "page_number": 2,
+          "source_value": "17,116.13",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5032604.00",
+          "item_id": "afa44b47-5c6e-4a2e-8e78-8bce525cedf2",
+          "label": "SHARE CAPITAL",
+          "page_number": 2,
+          "source_value": "5,032,604.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "3939661.59",
+          "item_id": "5aae2c21-fd43-4ca6-adc0-1296406bb71e",
+          "label": "SHARE PREMIUM",
+          "page_number": 2,
+          "source_value": "3,939,661.59",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "10368.00",
+          "item_id": "0a3f8744-a883-4cf1-a794-a207e4d57c45",
+          "label": "SIN THYE MANAGEMENT SDN BHD",
+          "page_number": 2,
+          "source_value": "10,368.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        }
+      ],
+      "source_labels_currently_mapped": [
+        "ACCRUAL - AUDIT FEE",
+        "ACCRUAL - DIRECTOR REMUNERATION",
+        "ACCRUAL - EIS",
+        "ACCRUAL - PCB",
+        "ACCRUAL - SOCSO",
+        "INFOHOUSE (I.T) SDN BHD",
+        "OTHER CREDITOR - AS",
+        "OTHER CREDITOR - DOCTOR VICTOR",
+        "OTHER CREDITOR - IH(M)",
+        "P&L 2001",
+        "P&L 2002",
+        "P&L 2003",
+        "P&L 2004",
+        "P&L 2005",
+        "P&L 2006",
+        "P&L 2007",
+        "P&L 2008",
+        "P&L 2009",
+        "P&L 2010",
+        "P&L 2011",
+        "RAHSIA HERBAL SDN BHD",
+        "SERVICE TAX ACCOUNT",
+        "SHARE CAPITAL",
+        "SHARE PREMIUM",
+        "SIN THYE MANAGEMENT SDN BHD",
+        "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+        "VR CORPORATE ADVISORY SDN. BHD.",
+        "YONGDA CORPORATE CONSULTANTS SDN BHD",
+        "YTL CORPORATION BERHAD"
+      ],
+      "source_row_count": 29,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "700.00",
+          "item_id": "579adc40-1a60-4acb-8ca1-065782cd2c98",
+          "label": "ACCRUAL - AUDIT FEE",
+          "page_number": 2,
+          "source_value": "700.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "9216.60",
+          "item_id": "c10e7ac9-0618-4065-a29b-6e1b22c520b1",
+          "label": "ACCRUAL - DIRECTOR REMUNERATION",
+          "page_number": 2,
+          "source_value": "9,216.60",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "7.90",
+          "item_id": "e86c3c22-cfc5-4b1f-90e8-953662bdc94b",
+          "label": "ACCRUAL - EIS",
+          "page_number": 2,
+          "source_value": "7.90",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "195.75",
+          "item_id": "46cb7d25-3cec-414d-8d20-9bb51811eec5",
+          "label": "ACCRUAL - PCB",
+          "page_number": 2,
+          "source_value": "195.75",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "86.65",
+          "item_id": "97d5fd5a-563a-4755-a62e-f037c705eb93",
+          "label": "ACCRUAL - SOCSO",
+          "page_number": 2,
+          "source_value": "86.65",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5032604.00",
+          "item_id": "e8a4b42e-f0bf-4b04-a193-d7345e1e63bb",
+          "label": "INFOHOUSE (I.T) SDN BHD",
+          "page_number": 2,
+          "source_value": "5,032,604.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "14000.00",
+          "item_id": "b5dfa02e-b129-4245-b734-7aa908fd5787",
+          "label": "OTHER CREDITOR - AS",
+          "page_number": 2,
+          "source_value": "14,000.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "448406.01",
+          "item_id": "3f96cea9-07be-4ec2-91a3-182507564225",
+          "label": "OTHER CREDITOR - DOCTOR VICTOR",
+          "page_number": 2,
+          "source_value": "448,406.01",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5400.00",
+          "item_id": "e261edb5-2bd1-49e6-852c-deaba64a3f56",
+          "label": "OTHER CREDITOR - IH(M)",
+          "page_number": 2,
+          "source_value": "5,400.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-1839510.00",
+          "item_id": "a25eabd0-218a-4cee-97d0-fc748aff9c35",
+          "label": "P&L 2001",
+          "page_number": 2,
+          "source_value": "-1,839,510.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-5372033.00",
+          "item_id": "1b5f1b48-f1ad-4c3a-97ff-bcfda7b22be4",
+          "label": "P&L 2002",
+          "page_number": 2,
+          "source_value": "-5,372,033.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-549005.00",
+          "item_id": "ff9d9fb7-6888-4ab1-89eb-03225347e69a",
+          "label": "P&L 2003",
+          "page_number": 2,
+          "source_value": "-549,005.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-1483026.00",
+          "item_id": "63d907ad-fbd0-4e96-a363-44379a162034",
+          "label": "P&L 2004",
+          "page_number": 2,
+          "source_value": "-1,483,026.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-277811.00",
+          "item_id": "6b00d206-f8b2-41d3-8691-784f3f5cda53",
+          "label": "P&L 2005",
+          "page_number": 2,
+          "source_value": "-277,811.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-379725.00",
+          "item_id": "58e269c5-e802-4fb9-af08-a13a73b4a3c2",
+          "label": "P&L 2006",
+          "page_number": 2,
+          "source_value": "-379,725.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-101920.00",
+          "item_id": "101e69d8-fbdc-4183-9f0e-4c69fe5573ec",
+          "label": "P&L 2007",
+          "page_number": 2,
+          "source_value": "-101,920.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "87741.00",
+          "item_id": "3dc881c7-bdea-4ed5-a934-08141584e70d",
+          "label": "P&L 2008",
+          "page_number": 2,
+          "source_value": "87,741.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-2796.00",
+          "item_id": "67a64523-ab30-4526-90be-d165e0630e42",
+          "label": "P&L 2009",
+          "page_number": 2,
+          "source_value": "-2,796.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "16846.40",
+          "item_id": "ed1a1e5a-bff1-4cf1-879f-6d5e58c56c21",
+          "label": "P&L 2010",
+          "page_number": 2,
+          "source_value": "16,846.40",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "60501.00",
+          "item_id": "08b23772-11af-4682-9557-5f95162012a8",
+          "label": "P&L 2011",
+          "page_number": 2,
+          "source_value": "60,501.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "300.00",
+          "item_id": "501e1e67-1c4d-49d9-bac5-9bb221ddd0df",
+          "label": "RAHSIA HERBAL SDN BHD",
+          "page_number": 2,
+          "source_value": "300.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "17116.13",
+          "item_id": "2b865663-48c5-4c56-bb52-0928f70f4249",
+          "label": "SERVICE TAX ACCOUNT",
+          "page_number": 2,
+          "source_value": "17,116.13",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5032604.00",
+          "item_id": "afa44b47-5c6e-4a2e-8e78-8bce525cedf2",
+          "label": "SHARE CAPITAL",
+          "page_number": 2,
+          "source_value": "5,032,604.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "3939661.59",
+          "item_id": "5aae2c21-fd43-4ca6-adc0-1296406bb71e",
+          "label": "SHARE PREMIUM",
+          "page_number": 2,
+          "source_value": "3,939,661.59",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "10368.00",
+          "item_id": "0a3f8744-a883-4cf1-a794-a207e4d57c45",
+          "label": "SIN THYE MANAGEMENT SDN BHD",
+          "page_number": 2,
+          "source_value": "10,368.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets"
+        }
+      ],
+      "template_labels_seen": [
+        "Biological assets"
+      ],
+      "treatment_reason": "No source label in the duplicate group contains biological-asset evidence; the rows should not be auto-mapped to biological assets without explicit source support.",
+      "why_likely_too_broad": "The taxonomy concept label is Biological assets, but job 9 labels mapped here include ACCRUAL - AUDIT FEE, ACCRUAL - DIRECTOR REMUNERATION, ACCRUAL - EIS, ACCRUAL - PCB, ACCRUAL - SOCSO, INFOHOUSE (I.T) SDN BHD, OTHER CREDITOR - AS, OTHER CREDITOR - DOCTOR VICTOR, plus 21 more. Those labels are not biological-asset evidence."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require debtor/receivable context evidence or manual confirmation for customer-name detail rows.",
+        "Define whether detail rows should be aggregated, dimensionalized later, or kept out of generated XBRL."
+      ],
+      "generated_fact_count": 18,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "972.00",
+          "item_id": "b585f55d-f11c-4bbc-9288-6970206981f3",
+          "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "972.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "1080.00",
+          "item_id": "86fbe7ae-2c9c-42fe-ac17-b295b003d768",
+          "label": "ADISS CONSULTANTS SDN BHD",
+          "page_number": 1,
+          "source_value": "1,080.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "475.20",
+          "item_id": "f2b6d4ea-b0c1-4a30-a25e-68e48a81c70a",
+          "label": "AMK CORPORATION SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "475.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "4800.00",
+          "item_id": "304ee8c1-5e4c-4526-ad41-030bac0cdcad",
+          "label": "ASIAN SECRETS SDN BHD",
+          "page_number": 1,
+          "source_value": "4,800.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "438.48",
+          "item_id": "91a0dfda-c0e2-41f3-9c47-f2af573f4fb2",
+          "label": "BBS TRUST INT'L LIMITED",
+          "page_number": 1,
+          "source_value": "438.48",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "13000.00",
+          "item_id": "bc3578cd-a6e6-467e-9504-7bc3acf27a19",
+          "label": "BEZLIFE MARKETING SDN BHD",
+          "page_number": 1,
+          "source_value": "13,000.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "1512.00",
+          "item_id": "634493c4-bdd9-457c-b004-0928c300ae9a",
+          "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+          "page_number": 1,
+          "source_value": "1,512.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "756.00",
+          "item_id": "b473acd8-bd03-4920-9446-9eb60a58ddb4",
+          "label": "CEO CORPORATE SERVICES SDN. BHD.",
+          "page_number": 1,
+          "source_value": "756.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "864.00",
+          "item_id": "28f6863e-f183-4cc0-ad1f-8dd84c9c2dc0",
+          "label": "CORPSEC SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "864.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "10368.00",
+          "item_id": "c556e150-1a3b-4bbb-a769-a91bb089bc1b",
+          "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "10,368.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "8300.00",
+          "item_id": "58b0af2e-493f-4212-9873-c422b26c7e6a",
+          "label": "INFO HOUSE (M) SDN BHD",
+          "page_number": 1,
+          "source_value": "8,300.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "2365.20",
+          "item_id": "5532d0ac-9618-4046-bb03-cce4a0ea787a",
+          "label": "KINGDOM ADVISORY SDN BHD",
+          "page_number": 1,
+          "source_value": "2,365.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "4320.00",
+          "item_id": "41ecf65a-e5f6-4868-b757-7354d40cd77e",
+          "label": "MALAYSIAN RESOURCES CORPORATION BHD",
+          "page_number": 1,
+          "source_value": "4,320.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "139320.00",
+          "item_id": "4edab752-d38a-4e10-ba1d-a87fd64ce4b3",
+          "label": "PERMODALAN NASIONAL BERHAD",
+          "page_number": 1,
+          "source_value": "139,320.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "8500.00",
+          "item_id": "e79c58f0-ae87-4ebd-add3-90488bc6d8e9",
+          "label": "QINETICS MSP SDN BHD",
+          "page_number": 1,
+          "source_value": "8,500.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        }
+      ],
+      "source_labels_currently_mapped": [
+        "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+        "ADISS CONSULTANTS SDN BHD",
+        "AMK CORPORATION SERVICES SDN BHD",
+        "ASIAN SECRETS SDN BHD",
+        "BBS TRUST INT'L LIMITED",
+        "BEZLIFE MARKETING SDN BHD",
+        "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+        "CEO CORPORATE SERVICES SDN. BHD.",
+        "CORPSEC SERVICES SDN BHD",
+        "GEMCO MANAGEMENT SERVICES SDN BHD",
+        "INFO HOUSE (M) SDN BHD",
+        "KINGDOM ADVISORY SDN BHD",
+        "MALAYSIAN RESOURCES CORPORATION BHD",
+        "OTHER DEBTOR - AS",
+        "OTHER DEBTOR - IH(I.T)",
+        "OTHER DEBTOR - RH",
+        "PERMODALAN NASIONAL BERHAD",
+        "QINETICS MSP SDN BHD"
+      ],
+      "source_row_count": 18,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "972.00",
+          "item_id": "b585f55d-f11c-4bbc-9288-6970206981f3",
+          "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "972.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "1080.00",
+          "item_id": "86fbe7ae-2c9c-42fe-ac17-b295b003d768",
+          "label": "ADISS CONSULTANTS SDN BHD",
+          "page_number": 1,
+          "source_value": "1,080.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "475.20",
+          "item_id": "f2b6d4ea-b0c1-4a30-a25e-68e48a81c70a",
+          "label": "AMK CORPORATION SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "475.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "4800.00",
+          "item_id": "304ee8c1-5e4c-4526-ad41-030bac0cdcad",
+          "label": "ASIAN SECRETS SDN BHD",
+          "page_number": 1,
+          "source_value": "4,800.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "438.48",
+          "item_id": "91a0dfda-c0e2-41f3-9c47-f2af573f4fb2",
+          "label": "BBS TRUST INT'L LIMITED",
+          "page_number": 1,
+          "source_value": "438.48",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "13000.00",
+          "item_id": "bc3578cd-a6e6-467e-9504-7bc3acf27a19",
+          "label": "BEZLIFE MARKETING SDN BHD",
+          "page_number": 1,
+          "source_value": "13,000.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "1512.00",
+          "item_id": "634493c4-bdd9-457c-b004-0928c300ae9a",
+          "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+          "page_number": 1,
+          "source_value": "1,512.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "756.00",
+          "item_id": "b473acd8-bd03-4920-9446-9eb60a58ddb4",
+          "label": "CEO CORPORATE SERVICES SDN. BHD.",
+          "page_number": 1,
+          "source_value": "756.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "864.00",
+          "item_id": "28f6863e-f183-4cc0-ad1f-8dd84c9c2dc0",
+          "label": "CORPSEC SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "864.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "10368.00",
+          "item_id": "c556e150-1a3b-4bbb-a769-a91bb089bc1b",
+          "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+          "page_number": 1,
+          "source_value": "10,368.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "8300.00",
+          "item_id": "58b0af2e-493f-4212-9873-c422b26c7e6a",
+          "label": "INFO HOUSE (M) SDN BHD",
+          "page_number": 1,
+          "source_value": "8,300.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "2365.20",
+          "item_id": "5532d0ac-9618-4046-bb03-cce4a0ea787a",
+          "label": "KINGDOM ADVISORY SDN BHD",
+          "page_number": 1,
+          "source_value": "2,365.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "4320.00",
+          "item_id": "41ecf65a-e5f6-4868-b757-7354d40cd77e",
+          "label": "MALAYSIAN RESOURCES CORPORATION BHD",
+          "page_number": 1,
+          "source_value": "4,320.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "133279.62",
+          "item_id": "d975d208-bc7f-40d1-9701-b167147cdfa3",
+          "label": "OTHER DEBTOR - AS",
+          "page_number": 1,
+          "source_value": "133,279.62",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "48552.00",
+          "item_id": "102e52f6-128a-4df3-a0e3-ecce84443513",
+          "label": "OTHER DEBTOR - IH(I.T)",
+          "page_number": 1,
+          "source_value": "48,552.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "2700.00",
+          "item_id": "84138f4e-8313-43ef-8031-dc84f5e48048",
+          "label": "OTHER DEBTOR - RH",
+          "page_number": 1,
+          "source_value": "2,700.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "139320.00",
+          "item_id": "4edab752-d38a-4e10-ba1d-a87fd64ce4b3",
+          "label": "PERMODALAN NASIONAL BERHAD",
+          "page_number": 1,
+          "source_value": "139,320.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "8500.00",
+          "item_id": "e79c58f0-ae87-4ebd-add3-90488bc6d8e9",
+          "label": "QINETICS MSP SDN BHD",
+          "page_number": 1,
+          "source_value": "8,500.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables"
+        }
+      ],
+      "template_labels_seen": [
+        "Trade and other current receivables"
+      ],
+      "treatment_reason": "Company/customer names may be receivable detail rows, but repeated same concept/context/unit facts without dimensions or aggregation policy are not safe to emit blindly.",
+      "why_likely_too_broad": "Many source labels look like customer/vendor detail rows. Even when receivable-like, emitting many same concept/context/unit facts without dimensions or aggregation policy is semantically weak."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ssmt-mpers:NoncurrentBiologicalAssets",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Reject automatic matches to this concept unless the source label explicitly contains biological/agricultural evidence.",
+        "Route current job 9 rows under this concept to manual review before any replacement concept is assigned.",
+        "Add regression fixtures proving P&L, share capital, share premium, creditors, accruals, and company names do not map to biological assets."
+      ],
+      "generated_fact_count": 5,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "blocked_from_auto_mapping",
+      "rows_that_must_remain_manual_review": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "549576.00",
+          "item_id": "de5fa73b-ac19-4368-9124-b09ee49d0055",
+          "label": "COMPUTER HARDWARE",
+          "page_number": 1,
+          "source_value": "549,576.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "153802.50",
+          "item_id": "d0b658e2-308e-4d31-a5b3-4fa35797d0a9",
+          "label": "COMPUTER SOFTWARE",
+          "page_number": 1,
+          "source_value": "153,802.50",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "13306.00",
+          "item_id": "fa769d14-5cb3-4bcc-9b7f-5d4179db5cf5",
+          "label": "FURNITURE &FITTINGS",
+          "page_number": 1,
+          "source_value": "13,306.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "2464003.00",
+          "item_id": "02d27aae-2156-417e-9c20-4fab39b6a5ff",
+          "label": "GOOD WILL",
+          "page_number": 1,
+          "source_value": "2,464,003.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5246.00",
+          "item_id": "881fa959-d429-49d8-9bb1-b922d4c77709",
+          "label": "OFFICE EQUIPMENT",
+          "page_number": 1,
+          "source_value": "5,246.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        }
+      ],
+      "source_labels_currently_mapped": [
+        "COMPUTER HARDWARE",
+        "COMPUTER SOFTWARE",
+        "FURNITURE &FITTINGS",
+        "GOOD WILL",
+        "OFFICE EQUIPMENT"
+      ],
+      "source_row_count": 5,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "549576.00",
+          "item_id": "de5fa73b-ac19-4368-9124-b09ee49d0055",
+          "label": "COMPUTER HARDWARE",
+          "page_number": 1,
+          "source_value": "549,576.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "153802.50",
+          "item_id": "d0b658e2-308e-4d31-a5b3-4fa35797d0a9",
+          "label": "COMPUTER SOFTWARE",
+          "page_number": 1,
+          "source_value": "153,802.50",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "13306.00",
+          "item_id": "fa769d14-5cb3-4bcc-9b7f-5d4179db5cf5",
+          "label": "FURNITURE &FITTINGS",
+          "page_number": 1,
+          "source_value": "13,306.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "2464003.00",
+          "item_id": "02d27aae-2156-417e-9c20-4fab39b6a5ff",
+          "label": "GOOD WILL",
+          "page_number": 1,
+          "source_value": "2,464,003.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "5246.00",
+          "item_id": "881fa959-d429-49d8-9bb1-b922d4c77709",
+          "label": "OFFICE EQUIPMENT",
+          "page_number": 1,
+          "source_value": "5,246.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:NoncurrentBiologicalAssets"
+        }
+      ],
+      "template_labels_seen": [
+        "Biological assets"
+      ],
+      "treatment_reason": "No source label in the duplicate group contains biological-asset evidence; the rows should not be auto-mapped to biological assets without explicit source support.",
+      "why_likely_too_broad": "The taxonomy concept label is Biological assets, but job 9 labels mapped here include COMPUTER HARDWARE, COMPUTER SOFTWARE, FURNITURE &FITTINGS, GOOD WILL, OFFICE EQUIPMENT. Those labels are not biological-asset evidence."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:Assets",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 3,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "ASSETS",
+        "Assets",
+        "NET CURRENT ASSETS"
+      ],
+      "source_row_count": 3,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "46410.85",
+          "item_id": "f7a1c8d2-8f9a-4c40-8cf6-fc9184445de8",
+          "label": "ASSETS",
+          "page_number": 1,
+          "source_value": "46,410.85",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-47432.31",
+          "item_id": "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+          "label": "NET CURRENT ASSETS",
+          "page_number": 2,
+          "source_value": "-47,432.31",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-9149051.14",
+          "item_id": "2f1dc68b-3c71-436d-89f3-70d40a88b5c0",
+          "label": "Assets",
+          "page_number": 3,
+          "source_value": "-9,149,051.14",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets"
+        }
+      ],
+      "template_labels_seen": [
+        "Assets"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:CurrentAssets",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 3,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CURRENT ASSETS",
+        "Current assets",
+        "NET CURRENT ASSETS"
+      ],
+      "source_row_count": 3,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "39092.79",
+          "item_id": "094e4c2b-ad0d-4063-984e-f2380aeb5c01",
+          "label": "CURRENT ASSETS",
+          "page_number": 1,
+          "source_value": "39,092.79",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-47432.31",
+          "item_id": "e3e645b7-d58a-4143-8cff-817221091f89",
+          "label": "NET CURRENT ASSETS",
+          "page_number": 2,
+          "source_value": "-47,432.31",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "22866.90",
+          "item_id": "7b962f88-1de3-48cd-9c6f-66e160a54cd1",
+          "label": "Current assets",
+          "page_number": 3,
+          "source_value": "22,866.90",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets"
+        }
+      ],
+      "template_labels_seen": [
+        "Current assets"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:NoncurrentAssets",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 3,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CURRENT LIABILITIES",
+        "FIXED ASSETS",
+        "Non-current assets"
+      ],
+      "source_row_count": 3,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "7318.06",
+          "item_id": "a8859c55-5ecb-408d-a096-2295670c8ab4",
+          "label": "FIXED ASSETS",
+          "page_number": 1,
+          "source_value": "7,318.06",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "495129.04",
+          "item_id": "82dbeb6c-0ac3-446c-b556-67373528ae9d",
+          "label": "CURRENT LIABILITIES",
+          "page_number": 2,
+          "source_value": "495,129.04",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-9172918.04",
+          "item_id": "b263ac7f-654b-4081-8c01-d8057376f021",
+          "label": "Non-current assets",
+          "page_number": 3,
+          "source_value": "-9,172,918.04",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets"
+        }
+      ],
+      "template_labels_seen": [
+        "Non-current assets"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_valid_multi_fact": 1
+      },
+      "concept": "ifrs-smes:CurrentLiabilities",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Keep as a regression observation; do not change until a broader dimensional/aggregation policy exists."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "regression pack only"
+      ],
+      "recommended_treatment": "left_unchanged",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CURRENT LIABILITIES",
+        "Current liabilities"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "495129.04",
+          "item_id": "7f31a139-3205-451f-9716-de1d06ac9c45",
+          "label": "CURRENT LIABILITIES",
+          "page_number": 2,
+          "source_value": "495,129.04",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentLiabilities"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "500.20",
+          "item_id": "14a9c6f7-da65-4821-b112-eb2e0b54db92",
+          "label": "Current liabilities",
+          "page_number": 3,
+          "source_value": "500.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentLiabilities"
+        }
+      ],
+      "template_labels_seen": [
+        "Current liabilities"
+      ],
+      "treatment_reason": "The row-level triage did not find an immediate broad-mapping defect for this group.",
+      "why_likely_too_broad": "The duplicate group may be valid, but remains a regression observation because instance_baseline cannot prove semantic correctness."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:Equity",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "Equity at beginning of period",
+        "FINANCED BY"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-6215913.41",
+          "item_id": "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1",
+          "label": "FINANCED BY",
+          "page_number": 2,
+          "source_value": "-6,215,913.41",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Equity"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "160538.20",
+          "item_id": "b54ef220-9804-416d-905e-9e23b6d749bd",
+          "label": "Equity at beginning of period",
+          "page_number": 3,
+          "source_value": "160,538.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Equity"
+        }
+      ],
+      "template_labels_seen": [
+        "Equity at beginning of period"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:EquityAndLiabilities",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "Equity and liabilities",
+        "FINANCED BY"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-6215913.41",
+          "item_id": "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+          "label": "FINANCED BY",
+          "page_number": 2,
+          "source_value": "-6,215,913.41",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-9149051.14",
+          "item_id": "b2b4e95e-243b-4607-90c3-1166537094cf",
+          "label": "Equity and liabilities",
+          "page_number": 3,
+          "source_value": "-9,149,051.14",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities"
+        }
+      ],
+      "template_labels_seen": [
+        "Equity and liabilities"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:EquityAttributableToOwnersOfParent",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CAPITAL",
+        "Total equity attributable to owners"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "3939661.59",
+          "item_id": "ebd21df0-75d4-4615-86ca-91aa2150fc1f",
+          "label": "CAPITAL",
+          "page_number": 2,
+          "source_value": "3,939,661.59",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "160538.20",
+          "item_id": "23356a6e-33b5-4658-a8e7-2cf77fa0cde2",
+          "label": "Total equity attributable to owners",
+          "page_number": 3,
+          "source_value": "160,538.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent"
+        }
+      ],
+      "template_labels_seen": [
+        "Total equity attributable to owners"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:Liabilities",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CURRENT LIABILITIES",
+        "Liabilities"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "495129.04",
+          "item_id": "4141ce81-811e-4365-95e9-c5616cc7d892",
+          "label": "CURRENT LIABILITIES",
+          "page_number": 2,
+          "source_value": "495,129.04",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-200152.25",
+          "item_id": "f2608d33-2490-45d4-9617-73c8dd487c54",
+          "label": "Liabilities",
+          "page_number": 3,
+          "source_value": "-200,152.25",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities"
+        }
+      ],
+      "template_labels_seen": [
+        "Liabilities"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ifrs-smes:RetainedEarnings",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "Retained earnings at beginning of period",
+        "TOTAL PROFIT & LOSS (PREVIOUS YEAR)"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-10155575.00",
+          "item_id": "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+          "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "page_number": 2,
+          "source_value": "-10,155,575.00",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "160538.20",
+          "item_id": "39fd347d-a660-45ae-b5eb-fa9047326ec6",
+          "label": "Retained earnings at beginning of period",
+          "page_number": 3,
+          "source_value": "160,538.20",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings"
+        }
+      ],
+      "template_labels_seen": [
+        "Retained earnings at beginning of period"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ssmt-mpers:OtherComponentsOfEquity",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CAPITAL",
+        "Total equity - other components"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "3939661.59",
+          "item_id": "a1959798-861f-4962-86cd-8530e9511ff9",
+          "label": "CAPITAL",
+          "page_number": 2,
+          "source_value": "3,939,661.59",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:OtherComponentsOfEquity"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-40114.25",
+          "item_id": "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2",
+          "label": "Total equity - other components",
+          "page_number": 3,
+          "source_value": "-40,114.25",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:OtherComponentsOfEquity"
+        }
+      ],
+      "template_labels_seen": [
+        "Total equity - other components"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    },
+    {
+      "classification_counts": {
+        "likely_mapping_too_broad": 1
+      },
+      "concept": "ssmt:CashAndBankBalances",
+      "duplicate_group_count": 1,
+      "first_safe_correction_candidates": [
+        "Require exact or near-exact total/subtotal label evidence before auto-mapping aggregate concepts.",
+        "Manual-review detail rows that currently collapse into aggregate concepts."
+      ],
+      "generated_fact_count": 2,
+      "identical_duplicate_fact_keys": [],
+      "implementation_owner": [
+        "template mapping data",
+        "semantic matcher thresholds",
+        "review UI/manual tagging",
+        "regression pack only"
+      ],
+      "recommended_treatment": "allowed_only_with_high_confidence_or_manual_confirmation",
+      "rows_that_must_remain_manual_review": [],
+      "source_labels_currently_mapped": [
+        "CASH AT BANK",
+        "NET CURRENT ASSETS"
+      ],
+      "source_row_count": 2,
+      "source_row_samples": [
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "33812.79",
+          "item_id": "332afce8-257e-41f8-b2b6-4e0795574546",
+          "label": "CASH AT BANK",
+          "page_number": 1,
+          "source_value": "33,812.79",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt:CashAndBankBalances"
+        },
+        {
+          "confirmed_tag_id": null,
+          "generated_value": "-47432.31",
+          "item_id": "898eb2da-6373-4ffd-b884-0b019ffd2c73",
+          "label": "NET CURRENT ASSETS",
+          "page_number": 2,
+          "source_value": "-47,432.31",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt:CashAndBankBalances"
+        }
+      ],
+      "template_labels_seen": [
+        "Total cash and cash equivalents"
+      ],
+      "treatment_reason": "Aggregate concepts should normally be reserved for labels that exactly represent totals/subtotals, not arbitrary detail rows with the same context and unit.",
+      "why_likely_too_broad": "Distinct source labels collapse into one concept/context/unit group. The first safe move is to tighten auto-mapping eligibility or require manual confirmation."
+    }
+  ],
+  "non_goals_honored": [
+    "No extraction logic change",
+    "No mapping logic change",
+    "No generated XBRL output change",
+    "No React/frontend change",
+    "No DB schema change",
+    "No route/download behavior change",
+    "No OpenAI or LLM auto-fix",
+    "No automatic remapping",
+    "No local taxonomy file modification",
+    "No full MBRS/FS-MPERS validation claim"
+  ],
+  "regression_checks_required": [
+    "Unit tests for concept guardrails: P&L, share capital, share premium, creditor, accrual, and company-name labels must not auto-map to biological assets.",
+    "Fixture or report-based regression for job 9 duplicate groups: CurrentBiologicalAssets duplicate count should fall after approved mapping guardrails.",
+    "Sign-policy tests proving likely-correct negative equity/liability/loss rows are preserved.",
+    "Sign-policy tests proving positive-nature asset/cash rows are not flipped until mapping confirmation exists.",
+    "Generated-instance audit rerun for job 9 after any #11J behavior change.",
+    "Arelle instance_baseline rerun for job 9 after any generated-output-affecting change."
+  ],
+  "scope": {
+    "basis": "Feature #11I design only; no mapping, sign, generator, extraction, frontend, route, schema, OpenAI, or taxonomy file changes.",
+    "database_modified": false,
+    "does_not_claim_full_mbrs_validation": true,
+    "extraction_logic_modified": false,
+    "generated_xbrl_modified": false,
+    "mapping_logic_modified": false,
+    "read_only": true
+  },
+  "sign_policy": {
+    "category_counts": {
+      "convert_to_positive": 5,
+      "manual_review_required": 10,
+      "preserve_negative": 6
+    },
+    "normalization_rules_proposed": [
+      "Do not make the XBRL generator silently flip signs; it should continue preserving reviewed numeric values until a reviewed sign policy is stored upstream.",
+      "Preserve negative values for loss/deficit/liability/equity-reduction rows when concept and label evidence agree.",
+      "Convert to positive only for positive-nature asset/cash/receivable concepts after the mapping is accepted and the source row is confirmed to use presentation-negative notation.",
+      "For P&L or retained-loss labels mapped to positive-nature asset concepts, fix or block the mapping first; do not normalize the sign in isolation.",
+      "Rows whose labels are company names or detail accounts need manual review or explicit detail-row policy before sign normalization."
+    ],
+    "policy_categories_defined": {
+      "convert_to_positive": "Convert only after mapping is confirmed and the concept is positive-nature while the source sign appears to be presentation-only.",
+      "infer_from_label": "Use explicit label cues such as loss, deficit, depreciation, accumulated depreciation, payable, receivable, or total/subtotal before choosing sign treatment.",
+      "manual_review_required": "Do not normalize automatically because mapping and sign evidence conflict or the row is semantically ambiguous.",
+      "not_enough_information": "No deterministic label/concept cue is sufficient.",
+      "preserve_negative": "Keep the negative amount when the concept/label evidence indicates a deficit, liability, retained loss, or equity reduction."
+    },
+    "row_level_decisions": [
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-101920.00",
+        "item_id": "101e69d8-fbdc-4183-9f0e-4c69fe5573ec",
+        "label": "P&L 2007",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-101,920.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-5372033.00",
+        "item_id": "1b5f1b48-f1ad-4c3a-97ff-bcfda7b22be4",
+        "label": "P&L 2002",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-5,372,033.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-379725.00",
+        "item_id": "58e269c5-e802-4fb9-af08-a13a73b4a3c2",
+        "label": "P&L 2006",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-379,725.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-1483026.00",
+        "item_id": "63d907ad-fbd0-4e96-a363-44379a162034",
+        "label": "P&L 2004",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-1,483,026.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-2796.00",
+        "item_id": "67a64523-ab30-4526-90be-d165e0630e42",
+        "label": "P&L 2009",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-2,796.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-277811.00",
+        "item_id": "6b00d206-f8b2-41d3-8691-784f3f5cda53",
+        "label": "P&L 2005",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-277,811.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ssmt:CashAndBankBalances",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-47432.31",
+        "item_id": "898eb2da-6373-4ffd-b884-0b019ffd2c73",
+        "label": "NET CURRENT ASSETS",
+        "page_number": 2,
+        "policy_category": "convert_to_positive",
+        "proposed_rule": "Convert only after confirming the positive-nature mapping; this is a policy candidate, not an automatic generator rule.",
+        "should_not_auto_normalize_reason": "Mapping confirmation is required before sign conversion because a wrong concept can make the sign diagnosis misleading.",
+        "source_value": "-47,432.31",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt:CashAndBankBalances",
+        "triage_classification": "likely_wrong_sign"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-1839510.00",
+        "item_id": "a25eabd0-218a-4cee-97d0-fc748aff9c35",
+        "label": "P&L 2001",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-1,839,510.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ifrs-smes:EquityAndLiabilities",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-6215913.41",
+        "item_id": "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+        "label": "FINANCED BY",
+        "page_number": 2,
+        "policy_category": "preserve_negative",
+        "proposed_rule": "Preserve the negative value because the row-level triage found concept/label evidence consistent with a negative balance.",
+        "should_not_auto_normalize_reason": null,
+        "source_value": "-6,215,913.41",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:EquityAndLiabilities",
+        "triage_classification": "likely_correct_sign"
+      },
+      {
+        "concept": "ifrs-smes:RetainedEarnings",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-10155575.00",
+        "item_id": "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+        "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+        "page_number": 2,
+        "policy_category": "preserve_negative",
+        "proposed_rule": "Preserve the negative value because the row-level triage found concept/label evidence consistent with a negative balance.",
+        "should_not_auto_normalize_reason": null,
+        "source_value": "-10,155,575.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:RetainedEarnings",
+        "triage_classification": "likely_correct_sign"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-10155575.00",
+        "item_id": "c3813df9-8402-4e09-8936-5e759a50537c",
+        "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-10,155,575.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ifrs-smes:Assets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-47432.31",
+        "item_id": "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+        "label": "NET CURRENT ASSETS",
+        "page_number": 2,
+        "policy_category": "convert_to_positive",
+        "proposed_rule": "Convert only after confirming the positive-nature mapping; this is a policy candidate, not an automatic generator rule.",
+        "should_not_auto_normalize_reason": "Mapping confirmation is required before sign conversion because a wrong concept can make the sign diagnosis misleading.",
+        "source_value": "-47,432.31",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:Assets",
+        "triage_classification": "likely_wrong_sign"
+      },
+      {
+        "concept": "ifrs-smes:CurrentAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-47432.31",
+        "item_id": "e3e645b7-d58a-4143-8cff-817221091f89",
+        "label": "NET CURRENT ASSETS",
+        "page_number": 2,
+        "policy_category": "convert_to_positive",
+        "proposed_rule": "Convert only after confirming the positive-nature mapping; this is a policy candidate, not an automatic generator rule.",
+        "should_not_auto_normalize_reason": "Mapping confirmation is required before sign conversion because a wrong concept can make the sign diagnosis misleading.",
+        "source_value": "-47,432.31",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:CurrentAssets",
+        "triage_classification": "likely_wrong_sign"
+      },
+      {
+        "concept": "ifrs-smes:Equity",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-6215913.41",
+        "item_id": "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1",
+        "label": "FINANCED BY",
+        "page_number": 2,
+        "policy_category": "preserve_negative",
+        "proposed_rule": "Preserve the negative value because the row-level triage found concept/label evidence consistent with a negative balance.",
+        "should_not_auto_normalize_reason": null,
+        "source_value": "-6,215,913.41",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:Equity",
+        "triage_classification": "likely_correct_sign"
+      },
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-549005.00",
+        "item_id": "ff9d9fb7-6888-4ab1-89eb-03225347e69a",
+        "label": "P&L 2003",
+        "page_number": 2,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Resolve the likely mapping defect before considering sign normalization.",
+        "should_not_auto_normalize_reason": "Positive-nature biological-asset concept conflicts with labels such as P&L/profit/loss/share/company detail rows.",
+        "source_value": "-549,005.00",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ifrs-smes:Assets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-9149051.14",
+        "item_id": "2f1dc68b-3c71-436d-89f3-70d40a88b5c0",
+        "label": "Assets",
+        "page_number": 3,
+        "policy_category": "convert_to_positive",
+        "proposed_rule": "Convert only after confirming the positive-nature mapping; this is a policy candidate, not an automatic generator rule.",
+        "should_not_auto_normalize_reason": "Mapping confirmation is required before sign conversion because a wrong concept can make the sign diagnosis misleading.",
+        "source_value": "-9,149,051.14",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:Assets",
+        "triage_classification": "likely_wrong_sign"
+      },
+      {
+        "concept": "ssmt-mpers:OtherComponentsOfEquity",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-40114.25",
+        "item_id": "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2",
+        "label": "Total equity - other components",
+        "page_number": 3,
+        "policy_category": "manual_review_required",
+        "proposed_rule": "Manual review is required because aggregate/detail sign treatment cannot be inferred safely.",
+        "should_not_auto_normalize_reason": "No approved sign policy exists for this row family yet.",
+        "source_value": "-40,114.25",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ssmt-mpers:OtherComponentsOfEquity",
+        "triage_classification": "sign_policy_needed"
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentAssets",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-9172918.04",
+        "item_id": "b263ac7f-654b-4081-8c01-d8057376f021",
+        "label": "Non-current assets",
+        "page_number": 3,
+        "policy_category": "convert_to_positive",
+        "proposed_rule": "Convert only after confirming the positive-nature mapping; this is a policy candidate, not an automatic generator rule.",
+        "should_not_auto_normalize_reason": "Mapping confirmation is required before sign conversion because a wrong concept can make the sign diagnosis misleading.",
+        "source_value": "-9,172,918.04",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:NoncurrentAssets",
+        "triage_classification": "likely_wrong_sign"
+      },
+      {
+        "concept": "ifrs-smes:EquityAndLiabilities",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-9149051.14",
+        "item_id": "b2b4e95e-243b-4607-90c3-1166537094cf",
+        "label": "Equity and liabilities",
+        "page_number": 3,
+        "policy_category": "preserve_negative",
+        "proposed_rule": "Preserve the negative value because the row-level triage found concept/label evidence consistent with a negative balance.",
+        "should_not_auto_normalize_reason": null,
+        "source_value": "-9,149,051.14",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:EquityAndLiabilities",
+        "triage_classification": "likely_correct_sign"
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentLiabilities",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-200652.45",
+        "item_id": "bd9ba39d-e9c1-43a6-8b3b-30f21544d781",
+        "label": "Non-current liabilities",
+        "page_number": 3,
+        "policy_category": "preserve_negative",
+        "proposed_rule": "Preserve the negative value because the row-level triage found concept/label evidence consistent with a negative balance.",
+        "should_not_auto_normalize_reason": null,
+        "source_value": "-200,652.45",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:NoncurrentLiabilities",
+        "triage_classification": "likely_correct_sign"
+      },
+      {
+        "concept": "ifrs-smes:Liabilities",
+        "contextRef": "asof_20241231_SeparateMember",
+        "generated_value": "-200152.25",
+        "item_id": "f2608d33-2490-45d4-9617-73c8dd487c54",
+        "label": "Liabilities",
+        "page_number": 3,
+        "policy_category": "preserve_negative",
+        "proposed_rule": "Preserve the negative value because the row-level triage found concept/label evidence consistent with a negative balance.",
+        "should_not_auto_normalize_reason": null,
+        "source_value": "-200,152.25",
+        "statement_type": "Statement of Financial Position",
+        "template_field_id": "ifrs-smes:Liabilities",
+        "triage_classification": "likely_correct_sign"
+      }
+    ],
+    "sign_cases_that_should_not_be_auto_normalized": [
+      "Rows where the concept is likely wrong, especially biological-asset mappings for P&L/share/equity/creditor/accrual/company-name labels.",
+      "Rows where an aggregate/subtotal can legitimately be negative, such as equity, liabilities, retained earnings, and accumulated losses.",
+      "Rows where source evidence lacks enough context to distinguish a presentation sign from an accounting sign."
+    ]
+  },
+  "source_reports": {
+    "generated_instance_audit": "reports\\generated_instance_audit_report_9.json",
+    "quality_triage": "reports\\generated_instance_quality_triage_report_9.json"
+  },
+  "summary": {
+    "code_change_justification": "Behavior changes are justified only for the next narrow slice after this design is reviewed: start with template mapping guardrails for clearly impossible biological-asset matches and regression checks. This #11I slice itself changes no behavior.",
+    "code_changes_now_justified": true,
+    "first_safe_mapping_correction_candidates": [
+      {
+        "concept": "ssmt-mpers:CurrentBiologicalAssets",
+        "reason": "No source label in the duplicate group contains biological-asset evidence; the rows should not be auto-mapped to biological assets without explicit source support.",
+        "recommended_treatment": "blocked_from_auto_mapping",
+        "sample_labels": [
+          "ACCRUAL - AUDIT FEE",
+          "ACCRUAL - DIRECTOR REMUNERATION",
+          "ACCRUAL - EIS",
+          "ACCRUAL - PCB",
+          "ACCRUAL - SOCSO",
+          "INFOHOUSE (I.T) SDN BHD",
+          "OTHER CREDITOR - AS",
+          "OTHER CREDITOR - DOCTOR VICTOR",
+          "OTHER CREDITOR - IH(M)",
+          "P&L 2001"
+        ]
+      },
+      {
+        "concept": "ssmt-mpers:NoncurrentBiologicalAssets",
+        "reason": "No source label in the duplicate group contains biological-asset evidence; the rows should not be auto-mapped to biological assets without explicit source support.",
+        "recommended_treatment": "blocked_from_auto_mapping",
+        "sample_labels": [
+          "COMPUTER HARDWARE",
+          "COMPUTER SOFTWARE",
+          "FURNITURE &FITTINGS",
+          "GOOD WILL",
+          "OFFICE EQUIPMENT"
+        ]
+      }
+    ],
+    "implementation_layer_recommendation": {
+      "extraction_prompt": "Not first owner; job 9 shows template-backed rows are present, but mappings are too broad.",
+      "regression_pack_only": "Required in the same implementation slice to prevent broad concepts from reappearing for known bad labels.",
+      "review_ui_manual_tagging": "Needed for uncertain rows and detail rows that cannot be deterministically mapped.",
+      "semantic_matcher_thresholds": "Secondary owner for raising confidence requirements around broad or aggregate concepts.",
+      "template_mapping_data": "Primary owner for blocking clearly impossible template_field_id assignments and narrowing concept eligibility.",
+      "xbrl_generator_sign_handling": "Not first owner; generator should preserve reviewed values until upstream mapping/sign decisions are explicit."
+    },
+    "mapping_problem_concepts": 14,
+    "recommended_feature_11j_scope": "Implement the first mapping guardrail slice only: prevent clearly impossible biological-asset auto-matches, route affected rows to manual review/no automatic concept instead of inventing replacements, add regression tests, then rerun job 9 generated-instance audit. Defer sign normalization changes until mapping guardrails are verified.",
+    "sign_policy_categories": {
+      "convert_to_positive": 5,
+      "manual_review_required": 10,
+      "preserve_negative": 6
+    }
+  },
+  "xbrl_path": "uploads\\xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl"
+}

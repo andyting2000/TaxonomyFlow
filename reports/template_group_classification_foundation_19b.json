@@ -1,0 +1,84 @@
+{
+  "feature_id": "19B-resume",
+  "generated_on": "2026-07-31",
+  "status": "PASS",
+  "canonical_registry": {
+    "source": "taxonomy/template_group_registry_mpers_2022_v1.json",
+    "version": "mpers-2022-v1",
+    "semantic_hash": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+    "template_count": 24
+  },
+  "verification": {
+    "focused_tests_passed": 33,
+    "affected_tests_passed": 264,
+    "full_backend_tests_passed": 1375
+  },
+  "report_id": "template_group_classification_foundation_19b",
+  "title": "Template Group Classification Foundation #19B",
+  "evidence": {
+    "feature_flags_false_by_default": [
+      "TOC_AWARE_TEMPLATE_CLASSIFICATION_ENABLED",
+      "TOC_AWARE_TEMPLATE_CLASSIFICATION_PERSISTENCE_ENABLED",
+      "TOC_AWARE_TEMPLATE_CLASSIFICATION_LIVE_LLM_ENABLED"
+    ],
+    "contracts": [
+      "TemplateGroupCard",
+      "TemplateGroupAssignment",
+      "SectionClassificationOutcome",
+      "DocumentTemplateClassificationResult"
+    ],
+    "primary_routing": [
+      {
+        "title": "Statement of Changes in Equity",
+        "expected_code": "610000",
+        "predicted_code": "610000",
+        "outcome": "matched",
+        "passed": true
+      },
+      {
+        "title": "Statement of Financial Position",
+        "expected_code": "210000",
+        "predicted_code": "210000",
+        "outcome": "matched",
+        "passed": true
+      },
+      {
+        "title": "Statement of Profit or Loss",
+        "expected_code": "310000",
+        "predicted_code": "310000",
+        "outcome": "matched",
+        "passed": true
+      },
+      {
+        "title": "Statement of Cash Flows",
+        "expected_code": "520000",
+        "predicted_code": "520000",
+        "outcome": "matched",
+        "passed": true
+      }
+    ],
+    "presentation_variants": [
+      {
+        "fixture": "K",
+        "expected_code": "220000",
+        "predicted_code": "220000",
+        "passed": true
+      },
+      {
+        "fixture": "L",
+        "expected_code": "420000",
+        "predicted_code": "420000",
+        "passed": true
+      }
+    ],
+    "narrative_false_positives": 0,
+    "notes_parent_outcome": "container_only",
+    "many_to_many_fixture_passed": true,
+    "artifact": "uploads/document-structures/job_{job_id}/template_classification_19b_v1.json",
+    "api": [
+      "GET /api/v1/filings/jobs/{job_id}/template-classification/capabilities",
+      "GET /api/v1/filings/jobs/{job_id}/template-classification"
+    ]
+  },
+  "decision": "Foundation passes; classification remains disabled by default."
+}

@@ -1,0 +1,3702 @@
+{
+  "run_metadata": {
+    "feature": "18E-B",
+    "generated_at": "2026-06-21T11:00:16Z",
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "include_samples": [],
+    "exclude_samples": [],
+    "include_outlier": false,
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "auto_applied": false,
+    "confirmed_tag_id_mutated": false
+  },
+  "summary": {
+    "feature": "18E-B",
+    "total_note_links": 174,
+    "included_samples": 5,
+    "note_links_with_titles": 15,
+    "high_confidence_note_links": 171,
+    "safe_for_auto_apply_count": 0,
+    "top_note_numbers": [
+      {
+        "note_number": "30",
+        "count": 18
+      },
+      {
+        "note_number": "1",
+        "count": 15
+      },
+      {
+        "note_number": "20",
+        "count": 14
+      },
+      {
+        "note_number": "10",
+        "count": 14
+      },
+      {
+        "note_number": "7",
+        "count": 13
+      },
+      {
+        "note_number": "4",
+        "count": 12
+      },
+      {
+        "note_number": "5",
+        "count": 12
+      },
+      {
+        "note_number": "2",
+        "count": 11
+      },
+      {
+        "note_number": "6",
+        "count": 8
+      },
+      {
+        "note_number": "8",
+        "count": 8
+      },
+      {
+        "note_number": "9",
+        "count": 8
+      },
+      {
+        "note_number": "40",
+        "count": 8
+      },
+      {
+        "note_number": "12",
+        "count": 4
+      },
+      {
+        "note_number": "57",
+        "count": 4
+      },
+      {
+        "note_number": "53",
+        "count": 4
+      },
+      {
+        "note_number": "47",
+        "count": 3
+      },
+      {
+        "note_number": "33",
+        "count": 2
+      },
+      {
+        "note_number": "3",
+        "count": 2
+      },
+      {
+        "note_number": "50",
+        "count": 2
+      },
+      {
+        "note_number": "54",
+        "count": 2
+      }
+    ],
+    "top_note_linked_labels": [
+      {
+        "normalized_label": "bank charges",
+        "count": 14
+      },
+      {
+        "normalized_label": "commissioner for oaths",
+        "count": 14
+      },
+      {
+        "normalized_label": "property plant and equipment",
+        "count": 12
+      },
+      {
+        "normalized_label": "trade and other payables",
+        "count": 8
+      },
+      {
+        "normalized_label": "tax expense",
+        "count": 8
+      },
+      {
+        "normalized_label": "share capital",
+        "count": 6
+      },
+      {
+        "normalized_label": "telephone and fax charges",
+        "count": 6
+      },
+      {
+        "normalized_label": "trade and other receivables",
+        "count": 6
+      },
+      {
+        "normalized_label": "1 1",
+        "count": 6
+      },
+      {
+        "normalized_label": "other income",
+        "count": 6
+      },
+      {
+        "normalized_label": "amount due to directors",
+        "count": 6
+      },
+      {
+        "normalized_label": "revenue",
+        "count": 5
+      },
+      {
+        "normalized_label": "commissioner for oaths unselected",
+        "count": 4
+      },
+      {
+        "normalized_label": "as at 31 12 23 1 1",
+        "count": 4
+      },
+      {
+        "normalized_label": "as at 31 12 24 1 1 purpose",
+        "count": 4
+      },
+      {
+        "normalized_label": "printing and stationeries or discussionbrojrp",
+        "count": 4
+      },
+      {
+        "normalized_label": "totalt telephone fax and postage",
+        "count": 4
+      },
+      {
+        "normalized_label": "printing and stationery",
+        "count": 4
+      },
+      {
+        "normalized_label": "telephone fax charges and postage",
+        "count": 4
+      },
+      {
+        "normalized_label": "term loan",
+        "count": 4
+      },
+      {
+        "normalized_label": "prior year",
+        "count": 3
+      },
+      {
+        "normalized_label": "ung ming xian",
+        "count": 2
+      },
+      {
+        "normalized_label": "amount due to director",
+        "count": 2
+      },
+      {
+        "normalized_label": "eis contribution",
+        "count": 2
+      },
+      {
+        "normalized_label": "penalties",
+        "count": 2
+      },
+      {
+        "normalized_label": "printing and stationeries for discussion",
+        "count": 2
+      },
+      {
+        "normalized_label": "printing and stationeries akescheda",
+        "count": 2
+      },
+      {
+        "normalized_label": "web hosting",
+        "count": 2
+      },
+      {
+        "normalized_label": "term loan r discussione",
+        "count": 2
+      },
+      {
+        "normalized_label": "amount due to director a",
+        "count": 2
+      }
+    ],
+    "per_sample_summary": [
+      {
+        "sample_id": "case_001",
+        "company_name": "001-bezlife-marketing",
+        "status": "included",
+        "reason": "included",
+        "pdf_rows_found": 148,
+        "note_links": 23,
+        "normalized_extraction_sources": [
+          "reports/golden_mbrs_case_001_17a_extraction_v2_report_13y.json"
+        ]
+      },
+      {
+        "sample_id": "case_002",
+        "company_name": "002-fine-batik",
+        "status": "included",
+        "reason": "included",
+        "pdf_rows_found": 171,
+        "note_links": 37,
+        "normalized_extraction_sources": [
+          "reports/golden_mbrs_case_002_17a_extraction_v2_report_13y.json"
+        ]
+      },
+      {
+        "sample_id": "case_003",
+        "company_name": "003-info-house",
+        "status": "included",
+        "reason": "included",
+        "pdf_rows_found": 146,
+        "note_links": 48,
+        "normalized_extraction_sources": [
+          "reports/golden_mbrs_case_003_17a_extraction_v2_report_13y.json"
+        ]
+      },
+      {
+        "sample_id": "case_004",
+        "company_name": "004-jconnector",
+        "status": "included",
+        "reason": "included",
+        "pdf_rows_found": 127,
+        "note_links": 28,
+        "normalized_extraction_sources": [
+          "reports/golden_mbrs_case_004_17a_extraction_v2_report_13y.json"
+        ]
+      },
+      {
+        "sample_id": "case_005",
+        "company_name": "005-Rahsia-Herbal",
+        "status": "included",
+        "reason": "included",
+        "pdf_rows_found": 170,
+        "note_links": 38,
+        "normalized_extraction_sources": [
+          "reports/golden_mbrs_case_005_17a_extraction_v2_report_13y.json"
+        ]
+      },
+      {
+        "sample_id": "case_006",
+        "status": "skipped",
+        "reason": "outlier_excluded_by_default",
+        "note_links": 0
+      }
+    ],
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false,
+      "auto_applied": false,
+      "confirmed_tag_id_mutated": false
+    }
+  },
+  "note_links": [
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:13:13:current",
+      "source_row_id": "case_001:candidate:13:13",
+      "original_label": "Ung Ming Xian",
+      "normalized_label": "ung ming xian",
+      "statement_family": "financial_position",
+      "section_block": "financial_position_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:13:13:prior",
+      "source_row_id": "case_001:candidate:13:13",
+      "original_label": "Ung Ming Xian",
+      "normalized_label": "ung ming xian",
+      "statement_family": "financial_position",
+      "section_block": "financial_position_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:18:18:current",
+      "source_row_id": "case_001:candidate:18:18",
+      "original_label": "Share capital",
+      "normalized_label": "share capital",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:18:18:prior",
+      "source_row_id": "case_001:candidate:18:18",
+      "original_label": "Share capital",
+      "normalized_label": "share capital",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:21:21:current",
+      "source_row_id": "case_001:candidate:21:21",
+      "original_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:21:21:prior",
+      "source_row_id": "case_001:candidate:21:21",
+      "original_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:22:22:current",
+      "source_row_id": "case_001:candidate:22:22",
+      "original_label": "Amount due to director",
+      "normalized_label": "amount due to director",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "6",
+      "note_title": "Amount Due To Director",
+      "note_page": 24,
+      "note_section_label": "6. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:22:22:prior",
+      "source_row_id": "case_001:candidate:22:22",
+      "original_label": "Amount due to director",
+      "normalized_label": "amount due to director",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "6",
+      "note_title": "Amount Due To Director",
+      "note_page": 24,
+      "note_section_label": "6. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:26:26:current",
+      "source_row_id": "case_001:candidate:26:26",
+      "original_label": "Turnover",
+      "normalized_label": "revenue",
+      "statement_family": "income_statement",
+      "section_block": "revenue",
+      "note_number": "7",
+      "note_title": "Amount Due To Director",
+      "note_page": 24,
+      "note_section_label": "7. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:33:33:current",
+      "source_row_id": "case_001:candidate:33:33",
+      "original_label": "Profit / (Loss) before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss_before_tax",
+      "note_number": "8",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:33:33:prior",
+      "source_row_id": "case_001:candidate:33:33",
+      "original_label": "Profit / (Loss) before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss_before_tax",
+      "note_number": "8",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:34:34:current",
+      "source_row_id": "case_001:candidate:34:34",
+      "original_label": "Less : Taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "tax_expense",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:34:34:prior",
+      "source_row_id": "case_001:candidate:34:34",
+      "original_label": "Less : Taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "tax_expense",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:61:61:current",
+      "source_row_id": "case_001:candidate:61:61",
+      "original_label": "EIS Contribution",
+      "normalized_label": "eis contribution",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:61:61:prior",
+      "source_row_id": "case_001:candidate:61:61",
+      "original_label": "EIS Contribution",
+      "normalized_label": "eis contribution",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:67:67:current",
+      "source_row_id": "case_001:candidate:67:67",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:67:67:prior",
+      "source_row_id": "case_001:candidate:67:67",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:70:70:current",
+      "source_row_id": "case_001:candidate:70:70",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:70:70:prior",
+      "source_row_id": "case_001:candidate:70:70",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:75:75:current",
+      "source_row_id": "case_001:candidate:75:75",
+      "original_label": "Penalties",
+      "normalized_label": "penalties",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:75:75:prior",
+      "source_row_id": "case_001:candidate:75:75",
+      "original_label": "Penalties",
+      "normalized_label": "penalties",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:76:76:current",
+      "source_row_id": "case_001:candidate:76:76",
+      "original_label": "Printing and stationeries FOR DISCUSSION",
+      "normalized_label": "printing and stationeries for discussion",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "33",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "row_id": "case_001:candidate:76:76:prior",
+      "source_row_id": "case_001:candidate:76:76",
+      "original_label": "Printing and stationeries FOR DISCUSSION",
+      "normalized_label": "printing and stationeries for discussion",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "33",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:100:100:current",
+      "source_row_id": "case_002:candidate:100:100",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "3",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:100:100:current",
+      "source_row_id": "case_002:candidate:100:100",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "50",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:100:100:prior",
+      "source_row_id": "case_002:candidate:100:100",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "3",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:100:100:prior",
+      "source_row_id": "case_002:candidate:100:100",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "50",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:102:102:current",
+      "source_row_id": "case_002:candidate:102:102",
+      "original_label": "Commissioner for oaths :unselected:",
+      "normalized_label": "commissioner for oaths unselected",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:102:102:current",
+      "source_row_id": "case_002:candidate:102:102",
+      "original_label": "Commissioner for oaths :unselected:",
+      "normalized_label": "commissioner for oaths unselected",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:102:102:prior",
+      "source_row_id": "case_002:candidate:102:102",
+      "original_label": "Commissioner for oaths :unselected:",
+      "normalized_label": "commissioner for oaths unselected",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:102:102:prior",
+      "source_row_id": "case_002:candidate:102:102",
+      "original_label": "Commissioner for oaths :unselected:",
+      "normalized_label": "commissioner for oaths unselected",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:110:110:current",
+      "source_row_id": "case_002:candidate:110:110",
+      "original_label": "Printing and stationeries akescheda",
+      "normalized_label": "printing and stationeries akescheda",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:110:110:prior",
+      "source_row_id": "case_002:candidate:110:110",
+      "original_label": "Printing and stationeries akescheda",
+      "normalized_label": "printing and stationeries akescheda",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:115:115:current",
+      "source_row_id": "case_002:candidate:115:115",
+      "original_label": "Telephone & fax charges",
+      "normalized_label": "telephone and fax charges",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:115:115:prior",
+      "source_row_id": "case_002:candidate:115:115",
+      "original_label": "Telephone & fax charges",
+      "normalized_label": "telephone and fax charges",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:116:116:current",
+      "source_row_id": "case_002:candidate:116:116",
+      "original_label": "Web hosting",
+      "normalized_label": "web hosting",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "54",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:116:116:prior",
+      "source_row_id": "case_002:candidate:116:116",
+      "original_label": "Web hosting",
+      "normalized_label": "web hosting",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "54",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:14:14:current",
+      "source_row_id": "case_002:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:14:14:prior",
+      "source_row_id": "case_002:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:17:17:current",
+      "source_row_id": "case_002:candidate:17:17",
+      "original_label": "Other receivables and deposits",
+      "normalized_label": "trade and other receivables",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:17:17:prior",
+      "source_row_id": "case_002:candidate:17:17",
+      "original_label": "Other receivables and deposits",
+      "normalized_label": "trade and other receivables",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:24:24:current",
+      "source_row_id": "case_002:candidate:24:24",
+      "original_label": "Term loan R DISCUSSIONE",
+      "normalized_label": "term loan r discussione",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:24:24:prior",
+      "source_row_id": "case_002:candidate:24:24",
+      "original_label": "Term loan R DISCUSSIONE",
+      "normalized_label": "term loan r discussione",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:25:25:current",
+      "source_row_id": "case_002:candidate:25:25",
+      "original_label": "Amount due to director a",
+      "normalized_label": "amount due to director a",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "8",
+      "note_title": "Amount Due To Director",
+      "note_page": 21,
+      "note_section_label": "8. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:25:25:prior",
+      "source_row_id": "case_002:candidate:25:25",
+      "original_label": "Amount due to director a",
+      "normalized_label": "amount due to director a",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "8",
+      "note_title": "Amount Due To Director",
+      "note_page": 21,
+      "note_section_label": "8. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:27:27:current",
+      "source_row_id": "case_002:candidate:27:27",
+      "original_label": "Other payables and accruals fprables",
+      "normalized_label": "trade and other payables",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:27:27:prior",
+      "source_row_id": "case_002:candidate:27:27",
+      "original_label": "Other payables and accruals fprables",
+      "normalized_label": "trade and other payables",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:28:28:current",
+      "source_row_id": "case_002:candidate:28:28",
+      "original_label": "Term loan on",
+      "normalized_label": "term loan on",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:28:28:prior",
+      "source_row_id": "case_002:candidate:28:28",
+      "original_label": "Term loan on",
+      "normalized_label": "term loan on",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:33:33:current",
+      "source_row_id": "case_002:candidate:33:33",
+      "original_label": "Turnover 56,984 :unselected:",
+      "normalized_label": "revenue",
+      "statement_family": "income_statement",
+      "section_block": "revenue",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:41:41:current",
+      "source_row_id": "case_002:candidate:41:41",
+      "original_label": "Less : Taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "tax_expense",
+      "note_number": "12",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:41:41:prior",
+      "source_row_id": "case_002:candidate:41:41",
+      "original_label": "Less : Taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "tax_expense",
+      "note_number": "12",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:65:65:current",
+      "source_row_id": "case_002:candidate:65:65",
+      "original_label": "1 1",
+      "normalized_label": "1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": "1",
+      "note_page": 20,
+      "note_section_label": "Notes to the Financial Statements",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:65:65:prior",
+      "source_row_id": "case_002:candidate:65:65",
+      "original_label": "1 1",
+      "normalized_label": "1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": "1",
+      "note_page": 20,
+      "note_section_label": "Notes to the Financial Statements",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:66:66:current",
+      "source_row_id": "case_002:candidate:66:66",
+      "original_label": "1 1",
+      "normalized_label": "1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": "1",
+      "note_page": 20,
+      "note_section_label": "Notes to the Financial Statements",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:66:66:prior",
+      "source_row_id": "case_002:candidate:66:66",
+      "original_label": "1 1",
+      "normalized_label": "1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": "1",
+      "note_page": 20,
+      "note_section_label": "Notes to the Financial Statements",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:93:93:current",
+      "source_row_id": "case_002:candidate:93:93",
+      "original_label": "Other income",
+      "normalized_label": "other income",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:93:93:current",
+      "source_row_id": "case_002:candidate:93:93",
+      "original_label": "Other income",
+      "normalized_label": "other income",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "note_number": "60",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:93:93:prior",
+      "source_row_id": "case_002:candidate:93:93",
+      "original_label": "Other income",
+      "normalized_label": "other income",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "row_id": "case_002:candidate:93:93:prior",
+      "source_row_id": "case_002:candidate:93:93",
+      "original_label": "Other income",
+      "normalized_label": "other income",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "note_number": "60",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:14:14:current",
+      "source_row_id": "case_003:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:14:14:current",
+      "source_row_id": "case_003:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:14:14:prior",
+      "source_row_id": "case_003:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:14:14:prior",
+      "source_row_id": "case_003:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:15:15:current",
+      "source_row_id": "case_003:candidate:15:15",
+      "original_label": "Investments",
+      "normalized_label": "investments",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:15:15:prior",
+      "source_row_id": "case_003:candidate:15:15",
+      "original_label": "Investments",
+      "normalized_label": "investments",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:18:18:current",
+      "source_row_id": "case_003:candidate:18:18",
+      "original_label": "Other receivables, deposits and prepayments",
+      "normalized_label": "trade and other receivables",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "note_number": "6",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:18:18:prior",
+      "source_row_id": "case_003:candidate:18:18",
+      "original_label": "Other receivables, deposits and prepayments",
+      "normalized_label": "trade and other receivables",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "note_number": "6",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:19:19:current",
+      "source_row_id": "case_003:candidate:19:19",
+      "original_label": "Amount due from directors",
+      "normalized_label": "amount due from directors",
+      "statement_family": "financial_position",
+      "section_block": "financial_position_other",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:19:19:prior",
+      "source_row_id": "case_003:candidate:19:19",
+      "original_label": "Amount due from directors",
+      "normalized_label": "amount due from directors",
+      "statement_family": "financial_position",
+      "section_block": "financial_position_other",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:25:25:current",
+      "source_row_id": "case_003:candidate:25:25",
+      "original_label": "Amount due to directors",
+      "normalized_label": "amount due to directors",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:25:25:prior",
+      "source_row_id": "case_003:candidate:25:25",
+      "original_label": "Amount due to directors",
+      "normalized_label": "amount due to directors",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:27:27:current",
+      "source_row_id": "case_003:candidate:27:27",
+      "original_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:27:27:prior",
+      "source_row_id": "case_003:candidate:27:27",
+      "original_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:31:31:current",
+      "source_row_id": "case_003:candidate:31:31",
+      "original_label": "Turnover",
+      "normalized_label": "revenue",
+      "statement_family": "income_statement",
+      "section_block": "revenue",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:31:31:prior",
+      "source_row_id": "case_003:candidate:31:31",
+      "original_label": "Turnover",
+      "normalized_label": "revenue",
+      "statement_family": "income_statement",
+      "section_block": "revenue",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:47:47:current",
+      "source_row_id": "case_003:candidate:47:47",
+      "original_label": "Net cash from operating activities",
+      "normalized_label": "net cash from operating activities",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "note_number": "57",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:47:47:prior",
+      "source_row_id": "case_003:candidate:47:47",
+      "original_label": "Net cash from operating activities",
+      "normalized_label": "net cash from operating activities",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "note_number": "57",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:50:50:current",
+      "source_row_id": "case_003:candidate:50:50",
+      "original_label": "Net increase in cash and cash equivalent",
+      "normalized_label": "net increase in cash and cash equivalent",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "note_number": "57",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:50:50:prior",
+      "source_row_id": "case_003:candidate:50:50",
+      "original_label": "Net increase in cash and cash equivalent",
+      "normalized_label": "net increase in cash and cash equivalent",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "note_number": "57",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:51:51:current",
+      "source_row_id": "case_003:candidate:51:51",
+      "original_label": "Cash and cash equivalent at beginning of the year",
+      "normalized_label": "cash and cash equivalent at beginning of the year",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "note_number": "24",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:51:51:prior",
+      "source_row_id": "case_003:candidate:51:51",
+      "original_label": "Cash and cash equivalent at beginning of the year",
+      "normalized_label": "cash and cash equivalent at beginning of the year",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "note_number": "24",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:59:59:current",
+      "source_row_id": "case_003:candidate:59:59",
+      "original_label": "As at 31/12/23 1 1",
+      "normalized_label": "as at 31 12 23 1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:59:59:current",
+      "source_row_id": "case_003:candidate:59:59",
+      "original_label": "As at 31/12/23 1 1",
+      "normalized_label": "as at 31 12 23 1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:59:59:prior",
+      "source_row_id": "case_003:candidate:59:59",
+      "original_label": "As at 31/12/23 1 1",
+      "normalized_label": "as at 31 12 23 1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:59:59:prior",
+      "source_row_id": "case_003:candidate:59:59",
+      "original_label": "As at 31/12/23 1 1",
+      "normalized_label": "as at 31 12 23 1 1",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:60:60:current",
+      "source_row_id": "case_003:candidate:60:60",
+      "original_label": "As at 31/12/24 1 1 PURPOSE",
+      "normalized_label": "as at 31 12 24 1 1 purpose",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:60:60:current",
+      "source_row_id": "case_003:candidate:60:60",
+      "original_label": "As at 31/12/24 1 1 PURPOSE",
+      "normalized_label": "as at 31 12 24 1 1 purpose",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:60:60:prior",
+      "source_row_id": "case_003:candidate:60:60",
+      "original_label": "As at 31/12/24 1 1 PURPOSE",
+      "normalized_label": "as at 31 12 24 1 1 purpose",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:60:60:prior",
+      "source_row_id": "case_003:candidate:60:60",
+      "original_label": "As at 31/12/24 1 1 PURPOSE",
+      "normalized_label": "as at 31 12 24 1 1 purpose",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:75:75:current",
+      "source_row_id": "case_003:candidate:75:75",
+      "original_label": "Expenses not deductible for tax purposes",
+      "normalized_label": "expenses not deductible for tax purposes",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "note_number": "39",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:75:75:prior",
+      "source_row_id": "case_003:candidate:75:75",
+      "original_label": "Expenses not deductible for tax purposes",
+      "normalized_label": "expenses not deductible for tax purposes",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "note_number": "39",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:83:83:current",
+      "source_row_id": "case_003:candidate:83:83",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:83:83:current",
+      "source_row_id": "case_003:candidate:83:83",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "44",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:83:83:prior",
+      "source_row_id": "case_003:candidate:83:83",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:83:83:prior",
+      "source_row_id": "case_003:candidate:83:83",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "note_number": "44",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:84:84:current",
+      "source_row_id": "case_003:candidate:84:84",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:84:84:current",
+      "source_row_id": "case_003:candidate:84:84",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:84:84:prior",
+      "source_row_id": "case_003:candidate:84:84",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:84:84:prior",
+      "source_row_id": "case_003:candidate:84:84",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:86:86:current",
+      "source_row_id": "case_003:candidate:86:86",
+      "original_label": "Printing and stationeries OR DISCUSSIONBROJRP",
+      "normalized_label": "printing and stationeries or discussionbrojrp",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:86:86:current",
+      "source_row_id": "case_003:candidate:86:86",
+      "original_label": "Printing and stationeries OR DISCUSSIONBROJRP",
+      "normalized_label": "printing and stationeries or discussionbrojrp",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:86:86:prior",
+      "source_row_id": "case_003:candidate:86:86",
+      "original_label": "Printing and stationeries OR DISCUSSIONBROJRP",
+      "normalized_label": "printing and stationeries or discussionbrojrp",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:86:86:prior",
+      "source_row_id": "case_003:candidate:86:86",
+      "original_label": "Printing and stationeries OR DISCUSSIONBROJRP",
+      "normalized_label": "printing and stationeries or discussionbrojrp",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:89:89:current",
+      "source_row_id": "case_003:candidate:89:89",
+      "original_label": "totalt Telephone, fax and postage",
+      "normalized_label": "totalt telephone fax and postage",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:89:89:current",
+      "source_row_id": "case_003:candidate:89:89",
+      "original_label": "totalt Telephone, fax and postage",
+      "normalized_label": "totalt telephone fax and postage",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:89:89:prior",
+      "source_row_id": "case_003:candidate:89:89",
+      "original_label": "totalt Telephone, fax and postage",
+      "normalized_label": "totalt telephone fax and postage",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "row_id": "case_003:candidate:89:89:prior",
+      "source_row_id": "case_003:candidate:89:89",
+      "original_label": "totalt Telephone, fax and postage",
+      "normalized_label": "totalt telephone fax and postage",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:14:14:current",
+      "source_row_id": "case_004:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:14:14:current",
+      "source_row_id": "case_004:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:14:14:prior",
+      "source_row_id": "case_004:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:14:14:prior",
+      "source_row_id": "case_004:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:15:15:current",
+      "source_row_id": "case_004:candidate:15:15",
+      "original_label": "Total non-current assets",
+      "normalized_label": "total non current assets",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:15:15:prior",
+      "source_row_id": "case_004:candidate:15:15",
+      "original_label": "Total non-current assets",
+      "normalized_label": "total non current assets",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:20:20:current",
+      "source_row_id": "case_004:candidate:20:20",
+      "original_label": "Share capital",
+      "normalized_label": "share capital",
+      "statement_family": "financial_position",
+      "section_block": "equity",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:20:20:prior",
+      "source_row_id": "case_004:candidate:20:20",
+      "original_label": "Share capital",
+      "normalized_label": "share capital",
+      "statement_family": "financial_position",
+      "section_block": "equity",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:23:23:current",
+      "source_row_id": "case_004:candidate:23:23",
+      "original_label": "Amount due to directors",
+      "normalized_label": "amount due to directors",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "6",
+      "note_title": "Amount Due To Director",
+      "note_page": 20,
+      "note_section_label": "6. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:23:23:prior",
+      "source_row_id": "case_004:candidate:23:23",
+      "original_label": "Amount due to directors",
+      "normalized_label": "amount due to directors",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "6",
+      "note_title": "Amount Due To Director",
+      "note_page": 20,
+      "note_section_label": "6. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:51:51:current",
+      "source_row_id": "case_004:candidate:51:51",
+      "original_label": "1 1",
+      "normalized_label": "1 1",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:51:51:current",
+      "source_row_id": "case_004:candidate:51:51",
+      "original_label": "1 1",
+      "normalized_label": "1 1",
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "note_number": "2",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:62:62:current",
+      "source_row_id": "case_004:candidate:62:62",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:62:62:current",
+      "source_row_id": "case_004:candidate:62:62",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "58",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:62:62:prior",
+      "source_row_id": "case_004:candidate:62:62",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:62:62:prior",
+      "source_row_id": "case_004:candidate:62:62",
+      "original_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "58",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:63:63:current",
+      "source_row_id": "case_004:candidate:63:63",
+      "original_label": "Commissioner for Oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:63:63:current",
+      "source_row_id": "case_004:candidate:63:63",
+      "original_label": "Commissioner for Oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:63:63:prior",
+      "source_row_id": "case_004:candidate:63:63",
+      "original_label": "Commissioner for Oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:63:63:prior",
+      "source_row_id": "case_004:candidate:63:63",
+      "original_label": "Commissioner for Oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:65:65:current",
+      "source_row_id": "case_004:candidate:65:65",
+      "original_label": "Printing and Stationery",
+      "normalized_label": "printing and stationery",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:65:65:current",
+      "source_row_id": "case_004:candidate:65:65",
+      "original_label": "Printing and Stationery",
+      "normalized_label": "printing and stationery",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:65:65:prior",
+      "source_row_id": "case_004:candidate:65:65",
+      "original_label": "Printing and Stationery",
+      "normalized_label": "printing and stationery",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:65:65:prior",
+      "source_row_id": "case_004:candidate:65:65",
+      "original_label": "Printing and Stationery",
+      "normalized_label": "printing and stationery",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:69:69:current",
+      "source_row_id": "case_004:candidate:69:69",
+      "original_label": "Telephone, fax charges and postage",
+      "normalized_label": "telephone fax charges and postage",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:69:69:current",
+      "source_row_id": "case_004:candidate:69:69",
+      "original_label": "Telephone, fax charges and postage",
+      "normalized_label": "telephone fax charges and postage",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:69:69:prior",
+      "source_row_id": "case_004:candidate:69:69",
+      "original_label": "Telephone, fax charges and postage",
+      "normalized_label": "telephone fax charges and postage",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "row_id": "case_004:candidate:69:69:prior",
+      "source_row_id": "case_004:candidate:69:69",
+      "original_label": "Telephone, fax charges and postage",
+      "normalized_label": "telephone fax charges and postage",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:105:105:current",
+      "source_row_id": "case_005:candidate:105:105",
+      "original_label": "Telephone & fax charges",
+      "normalized_label": "telephone and fax charges",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:105:105:current",
+      "source_row_id": "case_005:candidate:105:105",
+      "original_label": "Telephone & fax charges",
+      "normalized_label": "telephone and fax charges",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:105:105:prior",
+      "source_row_id": "case_005:candidate:105:105",
+      "original_label": "Telephone & fax charges",
+      "normalized_label": "telephone and fax charges",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:105:105:prior",
+      "source_row_id": "case_005:candidate:105:105",
+      "original_label": "Telephone & fax charges",
+      "normalized_label": "telephone and fax charges",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "40",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:110:110:current",
+      "source_row_id": "case_005:candidate:110:110",
+      "original_label": "Office equipment - current year OR",
+      "normalized_label": "office equipment current year or",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "53",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:110:110:prior",
+      "source_row_id": "case_005:candidate:110:110",
+      "original_label": "Office equipment - current year OR",
+      "normalized_label": "office equipment current year or",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "53",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:111:111:current",
+      "source_row_id": "case_005:candidate:111:111",
+      "original_label": "- prior year",
+      "normalized_label": "prior year",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "47",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.55,
+      "note_link_reasons": [
+        "source_snippet_note_reference",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:13:13:current",
+      "source_row_id": "case_005:candidate:13:13",
+      "original_label": "Ung Ming Xian (f)",
+      "normalized_label": "ung ming xian f",
+      "statement_family": null,
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:13:13:prior",
+      "source_row_id": "case_005:candidate:13:13",
+      "original_label": "Ung Ming Xian (f)",
+      "normalized_label": "ung ming xian f",
+      "statement_family": null,
+      "section_block": "notes_detail",
+      "note_number": "1",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:14:14:current",
+      "source_row_id": "case_005:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:14:14:prior",
+      "source_row_id": "case_005:candidate:14:14",
+      "original_label": "Property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "note_number": "4",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:17:17:current",
+      "source_row_id": "case_005:candidate:17:17",
+      "original_label": "Other receivables and deposits",
+      "normalized_label": "trade and other receivables",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:17:17:prior",
+      "source_row_id": "case_005:candidate:17:17",
+      "original_label": "Other receivables and deposits",
+      "normalized_label": "trade and other receivables",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "note_number": "5",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:21:21:current",
+      "source_row_id": "case_005:candidate:21:21",
+      "original_label": "Share capital",
+      "normalized_label": "share capital",
+      "statement_family": "financial_position",
+      "section_block": "equity",
+      "note_number": "6",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:21:21:prior",
+      "source_row_id": "case_005:candidate:21:21",
+      "original_label": "Share capital",
+      "normalized_label": "share capital",
+      "statement_family": "financial_position",
+      "section_block": "equity",
+      "note_number": "6",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:24:24:current",
+      "source_row_id": "case_005:candidate:24:24",
+      "original_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:24:24:prior",
+      "source_row_id": "case_005:candidate:24:24",
+      "original_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:25:25:current",
+      "source_row_id": "case_005:candidate:25:25",
+      "original_label": "Amount due to directors",
+      "normalized_label": "amount due to directors",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "8",
+      "note_title": "Amount Due To Director",
+      "note_page": 21,
+      "note_section_label": "8. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:25:25:prior",
+      "source_row_id": "case_005:candidate:25:25",
+      "original_label": "Amount due to directors",
+      "normalized_label": "amount due to directors",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "8",
+      "note_title": "Amount Due To Director",
+      "note_page": 21,
+      "note_section_label": "8. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:27:27:current",
+      "source_row_id": "case_005:candidate:27:27",
+      "original_label": "Other payables and accruals clean",
+      "normalized_label": "trade and other payables",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:27:27:prior",
+      "source_row_id": "case_005:candidate:27:27",
+      "original_label": "Other payables and accruals clean",
+      "normalized_label": "trade and other payables",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "note_number": "9",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:28:28:current",
+      "source_row_id": "case_005:candidate:28:28",
+      "original_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "8",
+      "note_title": "Amount Due To Director",
+      "note_page": 21,
+      "note_section_label": "8. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:28:28:prior",
+      "source_row_id": "case_005:candidate:28:28",
+      "original_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "note_number": "8",
+      "note_title": "Amount Due To Director",
+      "note_page": 21,
+      "note_section_label": "8. Amount Due To Director",
+      "note_link_confidence": 0.9,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:32:32:current",
+      "source_row_id": "case_005:candidate:32:32",
+      "original_label": "Turnover",
+      "normalized_label": "revenue",
+      "statement_family": "income_statement",
+      "section_block": "revenue",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:39:39:current",
+      "source_row_id": "case_005:candidate:39:39",
+      "original_label": "Other income",
+      "normalized_label": "other income",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:39:39:prior",
+      "source_row_id": "case_005:candidate:39:39",
+      "original_label": "Other income",
+      "normalized_label": "other income",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "note_number": "10",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:41:41:current",
+      "source_row_id": "case_005:candidate:41:41",
+      "original_label": "Less : Taxation DRAFT F\u00c5Cate",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "tax_expense",
+      "note_number": "12",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:41:41:prior",
+      "source_row_id": "case_005:candidate:41:41",
+      "original_label": "Less : Taxation DRAFT F\u00c5Cate",
+      "normalized_label": "tax expense",
+      "statement_family": "income_statement",
+      "section_block": "tax_expense",
+      "note_number": "12",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:61:61:current",
+      "source_row_id": "case_005:candidate:61:61",
+      "original_label": "Charges for the year 53",
+      "normalized_label": "charges for the year 53",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "53",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:61:61:prior",
+      "source_row_id": "case_005:candidate:61:61",
+      "original_label": "Charges for the year 53",
+      "normalized_label": "charges for the year 53",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "53",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_ignored_note_values",
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:62:62:current",
+      "source_row_id": "case_005:candidate:62:62",
+      "original_label": "Prior year",
+      "normalized_label": "prior year",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "47",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.55,
+      "note_link_reasons": [
+        "source_snippet_note_reference",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:62:62:prior",
+      "source_row_id": "case_005:candidate:62:62",
+      "original_label": "Prior year",
+      "normalized_label": "prior year",
+      "statement_family": "notes",
+      "section_block": "notes_detail",
+      "note_number": "47",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.55,
+      "note_link_reasons": [
+        "source_snippet_note_reference",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:92:92:current",
+      "source_row_id": "case_005:candidate:92:92",
+      "original_label": "Ronic",
+      "normalized_label": "ronic",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:92:92:prior",
+      "source_row_id": "case_005:candidate:92:92",
+      "original_label": "Ronic",
+      "normalized_label": "ronic",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "7",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:93:93:current",
+      "source_row_id": "case_005:candidate:93:93",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:93:93:current",
+      "source_row_id": "case_005:candidate:93:93",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:93:93:prior",
+      "source_row_id": "case_005:candidate:93:93",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "20",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "row_id": "case_005:candidate:93:93:prior",
+      "source_row_id": "case_005:candidate:93:93",
+      "original_label": "Commissioner for oaths",
+      "normalized_label": "commissioner for oaths",
+      "statement_family": "income_statement",
+      "section_block": "income_statement_other",
+      "note_number": "30",
+      "note_title": null,
+      "note_page": null,
+      "note_section_label": null,
+      "note_link_confidence": 0.8,
+      "note_link_reasons": [
+        "provenance_cell_note_value",
+        "cached_note_link_extraction"
+      ]
+    }
+  ]
+}

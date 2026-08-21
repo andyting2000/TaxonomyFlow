@@ -1,0 +1,1062 @@
+{
+  "run_metadata": {
+    "feature": "16E",
+    "generated_at": "2026-05-22T03:42:52.334566+00:00",
+    "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "llm_called": true,
+    "candidate_constrained": true,
+    "confirmed_tag_id_set": false,
+    "min_display_confidence": 0.5,
+    "min_manual_confidence": 0.0,
+    "high_confidence_threshold": 0.88,
+    "auto_apply_high_confidence": false,
+    "persist_suggestions": false
+  },
+  "job_id": 31,
+  "company_name": "test3",
+  "status": "REVIEW",
+  "summary": {
+    "total_rows": 32,
+    "already_mapped_rows": 20,
+    "rows_considered": 12,
+    "rows_sent_to_llm": 8,
+    "suggestions_generated": 8,
+    "display_suggestions_generated": 8,
+    "high_confidence_suggestions": 5,
+    "medium_confidence_suggestions": 2,
+    "low_confidence_suggestions": 1,
+    "rejected_rows": 4,
+    "rejected_precheck_rows": 4,
+    "rejected_low_confidence_rows": 0,
+    "rejected_no_candidate_rows": 1,
+    "candidate_coverage_rate": 0.6667,
+    "invalid_llm_responses": 0,
+    "hallucinated_concept_rejections": 0,
+    "before_mapped_count": 20,
+    "after_mapped_count": 20,
+    "applied_suggestions": 0,
+    "db_mutated_extracted_data_items": false
+  },
+  "rows": [
+    {
+      "extracted_data_item_id": "af588fb0-53e1-42c4-8239-3b6188f61d65",
+      "page_number": 2,
+      "extracted_label": "- Owners of the Company",
+      "extracted_value": "13171",
+      "value_previous_year": "",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany",
+          "label": "Loan from holding company",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.3824,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 185,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ssmt-mpers:NoncurrentPortionOfLoanFromHoldingCompany",
+          "label": "Loan from holding company",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.3824,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 134,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherBorrowingsLoanFromHoldingCompany",
+          "label": "Loan from holding company",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+          "template_code": "220100",
+          "deterministic_score": 0.3824,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 117,
+          "namespace": "ssmt-mpers"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany",
+        "confidence": 0.4224,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany",
+            "confidence": 0.4224,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:NoncurrentPortionOfLoanFromHoldingCompany",
+            "confidence": 0.4224,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:OtherBorrowingsLoanFromHoldingCompany",
+            "confidence": 0.4224,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": "low_confidence",
+        "confidence_category": "low",
+        "selected_candidate": {
+          "template_field_id": "ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany",
+          "label": "Loan from holding company",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.3824,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 185,
+          "namespace": "ssmt-mpers"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:NoncurrentPortionOfLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:OtherBorrowingsLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ssmt-mpers:CurrentPortionOfLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:NoncurrentPortionOfLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:OtherBorrowingsLoanFromHoldingCompany\", \"confidence\": 0.4224, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "c71a3a3c-42b7-4a39-af14-b24f3ccc4b7e",
+      "page_number": 3,
+      "extracted_label": "Siah Teong Ban",
+      "extracted_value": "1",
+      "value_previous_year": "0",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_person_or_company_name",
+      "precheck_rejection_reason": "rejected_person_or_company_name",
+      "candidate_concepts": [],
+      "suggestion": {
+        "selected_template_field_id": null,
+        "confidence": 0.0,
+        "reason": "",
+        "ranked_candidates": [],
+        "requires_human_confirmation": true,
+        "rejection_reason": "rejected_person_or_company_name",
+        "status": "rejected",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "low"
+      }
+    },
+    {
+      "extracted_data_item_id": "e2174e3d-bda0-4d8f-b3a0-5b718ef3bedb",
+      "page_number": 3,
+      "extracted_label": "Lee Ah Kim",
+      "extracted_value": "1",
+      "value_previous_year": "0",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_person_or_company_name",
+      "precheck_rejection_reason": "rejected_person_or_company_name",
+      "candidate_concepts": [],
+      "suggestion": {
+        "selected_template_field_id": null,
+        "confidence": 0.0,
+        "reason": "",
+        "ranked_candidates": [],
+        "requires_human_confirmation": true,
+        "rejection_reason": "rejected_person_or_company_name",
+        "status": "rejected",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "low"
+      }
+    },
+    {
+      "extracted_data_item_id": "486728db-5e91-4aa3-8f29-da7c1268f3cd",
+      "page_number": 7,
+      "extracted_label": "Total Asset",
+      "extracted_value": "400",
+      "value_previous_year": "400",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_generic_label",
+      "precheck_rejection_reason": "rejected_generic_label",
+      "candidate_concepts": [],
+      "suggestion": {
+        "selected_template_field_id": null,
+        "confidence": 0.0,
+        "reason": "",
+        "ranked_candidates": [],
+        "requires_human_confirmation": true,
+        "rejection_reason": "rejected_generic_label",
+        "status": "rejected",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "low"
+      }
+    },
+    {
+      "extracted_data_item_id": "50df72d7-9394-4e86-b8d4-d8fc312bfcc4",
+      "page_number": 7,
+      "extracted_label": "Capital Deficiency",
+      "extracted_value": "-194546",
+      "value_previous_year": "-181375",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:Equity",
+          "label": "Equity at beginning of period",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 32,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "label": "Total equity attributable to owners",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 29,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ssmt-mpers:CapitalReserve",
+          "label": "Capital reserve",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.4379,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 115,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ifrs-smes:IssuedCapital",
+          "label": "Total issued capital",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.373,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 25,
+          "namespace": "ifrs-smes"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ifrs-smes:Equity",
+        "confidence": 0.96,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ifrs-smes:Equity",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:CapitalReserve",
+            "confidence": 0.4779,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:IssuedCapital",
+            "confidence": 0.413,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "high",
+        "selected_candidate": {
+          "template_field_id": "ifrs-smes:Equity",
+          "label": "Equity at beginning of period",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 32,
+          "namespace": "ifrs-smes"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ifrs-smes:Equity\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:Equity\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:CapitalReserve\", \"confidence\": 0.4779, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:IssuedCapital\", \"confidence\": 0.413, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ifrs-smes:Equity\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:Equity\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:CapitalReserve\", \"confidence\": 0.4779, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:IssuedCapital\", \"confidence\": 0.413, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "ae4dfb80-288c-44a7-bf92-6e27fcd57cf0",
+      "page_number": 7,
+      "extracted_label": "Capital Deficiency and Liabilities",
+      "extracted_value": "400",
+      "value_previous_year": "400",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "label": "Total equity attributable to owners",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 29,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:Equity",
+          "label": "Equity at beginning of period",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.89,
+          "deterministic_method": "phrase_containment_match",
+          "required": false,
+          "position": 32,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "label": "Equity and liabilities",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.43,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 49,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:Liabilities",
+          "label": "Liabilities",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.3887,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 48,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:CurrentLiabilities",
+          "label": "Current liabilities",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.3827,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 47,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:DeferredTaxLiabilities",
+          "label": "Deferred tax liabilities",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.3827,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 36,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ssmt-mpers:CurrentPortionOfFinanceLeaseLiabilities",
+          "label": "Finance lease liabilities",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.3783,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 184,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ssmt-mpers:NoncurrentPortionOfFinanceLeaseLiabilities",
+          "label": "Finance lease liabilities",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.3783,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 133,
+          "namespace": "ssmt-mpers"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+        "confidence": 0.96,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:Equity",
+            "confidence": 0.93,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:Liabilities",
+            "confidence": 0.91,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:EquityAndLiabilities",
+            "confidence": 0.47,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:CurrentLiabilities",
+            "confidence": 0.4227,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:DeferredTaxLiabilities",
+            "confidence": 0.4227,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:CurrentPortionOfFinanceLeaseLiabilities",
+            "confidence": 0.4183,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:NoncurrentPortionOfFinanceLeaseLiabilities",
+            "confidence": 0.4183,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "high",
+        "selected_candidate": {
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "label": "Total equity attributable to owners",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 29,
+          "namespace": "ifrs-smes"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:Equity\", \"confidence\": 0.93, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:Liabilities\", \"confidence\": 0.91, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:EquityAndLiabilities\", \"confidence\": 0.47, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:CurrentLiabilities\", \"confidence\": 0.4227, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:DeferredTaxLiabilities\", \"confidence\": 0.4227, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:CurrentPortionOfFinanceLeaseLiabilities",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:Equity\", \"confidence\": 0.93, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:Liabilities\", \"confidence\": 0.91, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:EquityAndLiabilities\", \"confidence\": 0.47, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:CurrentLiabilities\", \"confidence\": 0.4227, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:DeferredTaxLiabilities\", \"confidence\": 0.4227, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:CurrentPortionOfFinanceLeaseLiabilities",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "d8a63c51-8adb-44d5-951a-83badb09c4a2",
+      "page_number": 8,
+      "extracted_label": "Loss attributable to: Owners of the Company",
+      "extracted_value": "-13171",
+      "value_previous_year": "-11514",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+          "label": "Profit (loss), attributable to owners of parent",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.5621,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 21,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "label": "Total equity attributable to owners",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.5251,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 29,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "label": "Comprehensive income, attributable to owners of parent",
+          "statement_type": "Statement of Comprehensive Income",
+          "template_code": "410000",
+          "deterministic_score": 0.4144,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 16,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ssmt-mpers:ProfitLossAttributableToOtherComponentsOfEquity",
+          "label": "Profit (loss), attributable to equity other components",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.4131,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 22,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ifrs-smes:ProfitLossAttributableToNoncontrollingInterests",
+          "label": "Profit (loss), attributable to non-controlling interests",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.3727,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 23,
+          "namespace": "ifrs-smes"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "confidence": 0.6021,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+            "confidence": 0.6021,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+            "confidence": 0.5651,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+            "confidence": 0.4544,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:ProfitLossAttributableToOtherComponentsOfEquity",
+            "confidence": 0.4531,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ProfitLossAttributableToNoncontrollingInterests",
+            "confidence": 0.4127,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "medium",
+        "selected_candidate": {
+          "template_field_id": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+          "label": "Profit (loss), attributable to owners of parent",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.5621,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 21,
+          "namespace": "ifrs-smes"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ifrs-smes:ProfitLossAttributableToOwnersOfParent\", \"confidence\": 0.6021, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:ProfitLossAttributableToOwnersOfParent\", \"confidence\": 0.6021, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.5651, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent\", \"confidence\": 0.4544, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:ProfitLossAttributableToOtherComponentsOfEquity\", \"confidence\": 0.4531, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossAttributableToNoncontrollingInterests\", \"confidence\": 0.4127, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ifrs-smes:ProfitLossAttributableToOwnersOfParent\", \"confidence\": 0.6021, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:ProfitLossAttributableToOwnersOfParent\", \"confidence\": 0.6021, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:EquityAttributableToOwnersOfParent\", \"confidence\": 0.5651, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent\", \"confidence\": 0.4544, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:ProfitLossAttributableToOtherComponentsOfEquity\", \"confidence\": 0.4531, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossAttributableToNoncontrollingInterests\", \"confidence\": 0.4127, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "d7f74b7b-a439-4675-9af3-dd70c3969993",
+      "page_number": 9,
+      "extracted_label": "Net loss for the year",
+      "extracted_value": "0",
+      "value_previous_year": "-13171",
+      "statement_type": "Statement of Comprehensive Income",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:ProfitLoss",
+          "label": "Total Profit (Loss)",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 20,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+          "label": "Profit (loss) before tax, from continuing operations",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.376,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 15,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:ProfitLossFromContinuingOperations",
+          "label": "Profit (loss) from continuing operations, net",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.374,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 18,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ssmt-mpers:AggregateProfitLossBeforeTax",
+          "label": "Total profit(loss) before tax",
+          "statement_type": "Statement of Cash Flows (Indirect Method)",
+          "template_code": "520000",
+          "deterministic_score": 0.346,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 5,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ifrs-smes:ComprehensiveIncome",
+          "label": "Comprehensive income",
+          "statement_type": "Statement of Comprehensive Income",
+          "template_code": "410000",
+          "deterministic_score": 0.341,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 15,
+          "namespace": "ifrs-smes"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ifrs-smes:ProfitLoss",
+        "confidence": 0.96,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ifrs-smes:ProfitLoss",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+            "confidence": 0.416,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ProfitLossFromContinuingOperations",
+            "confidence": 0.414,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:AggregateProfitLossBeforeTax",
+            "confidence": 0.386,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ComprehensiveIncome",
+            "confidence": 0.381,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "high",
+        "selected_candidate": {
+          "template_field_id": "ifrs-smes:ProfitLoss",
+          "label": "Total Profit (Loss)",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 20,
+          "namespace": "ifrs-smes"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ifrs-smes:ProfitLoss\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:ProfitLoss\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossBeforeTax\", \"confidence\": 0.416, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossFromContinuingOperations\", \"confidence\": 0.414, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:AggregateProfitLossBeforeTax\", \"confidence\": 0.386, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ComprehensiveIncome\", \"confidence\": 0.381, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ifrs-smes:ProfitLoss\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:ProfitLoss\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossBeforeTax\", \"confidence\": 0.416, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossFromContinuingOperations\", \"confidence\": 0.414, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:AggregateProfitLossBeforeTax\", \"confidence\": 0.386, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ComprehensiveIncome\", \"confidence\": 0.381, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "7ec55884-a2f9-452e-a73c-f516c86a7f35",
+      "page_number": 10,
+      "extracted_label": "Loss before tax and working capital changes",
+      "extracted_value": "-13171",
+      "value_previous_year": "-11514",
+      "statement_type": "Statement of Profit or Loss (By Function)",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_low_confidence",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+          "label": "Profit (loss) before tax, from continuing operations",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.5169,
+          "deterministic_method": "statement_family_match",
+          "required": false,
+          "position": 15,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:ProfitLoss",
+          "label": "Total Profit (Loss)",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.4154,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 20,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:ProfitLossFromDiscontinuedOperations",
+          "label": "Profit (loss) before tax, from discontinued operation",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.3911,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 19,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ssmt-mpers:AggregateProfitLossBeforeTax",
+          "label": "Total profit(loss) before tax",
+          "statement_type": "Statement of Cash Flows (Indirect Method)",
+          "template_code": "520000",
+          "deterministic_score": 0.391,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 5,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ifrs-smes:ComprehensiveIncome",
+          "label": "Comprehensive income",
+          "statement_type": "Statement of Comprehensive Income",
+          "template_code": "410000",
+          "deterministic_score": 0.3862,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 15,
+          "namespace": "ifrs-smes"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+        "confidence": 0.5569,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+            "confidence": 0.5569,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ProfitLoss",
+            "confidence": 0.4554,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ProfitLossFromDiscontinuedOperations",
+            "confidence": 0.4311,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:AggregateProfitLossBeforeTax",
+            "confidence": 0.431,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:ComprehensiveIncome",
+            "confidence": 0.4262,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "medium",
+        "selected_candidate": {
+          "template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+          "label": "Profit (loss) before tax, from continuing operations",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "template_code": "310000",
+          "deterministic_score": 0.5169,
+          "deterministic_method": "statement_family_match",
+          "required": false,
+          "position": 15,
+          "namespace": "ifrs-smes"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ifrs-smes:ProfitLossBeforeTax\", \"confidence\": 0.5569, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:ProfitLossBeforeTax\", \"confidence\": 0.5569, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLoss\", \"confidence\": 0.4554, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossFromDiscontinuedOperations\", \"confidence\": 0.4311, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:AggregateProfitLossBeforeTax\", \"confidence\": 0.431, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ComprehensiveIncome\", \"confidence\": 0.4262, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ifrs-smes:ProfitLossBeforeTax\", \"confidence\": 0.5569, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:ProfitLossBeforeTax\", \"confidence\": 0.5569, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLoss\", \"confidence\": 0.4554, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ProfitLossFromDiscontinuedOperations\", \"confidence\": 0.4311, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:AggregateProfitLossBeforeTax\", \"confidence\": 0.431, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:ComprehensiveIncome\", \"confidence\": 0.4262, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "e6d16981-6074-49dd-80cd-7252f7ebed60",
+      "page_number": 10,
+      "extracted_label": "Increase in director's account",
+      "extracted_value": "12763",
+      "value_previous_year": "14352",
+      "statement_type": "Statement of Cash Flows",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "label": "Adjustments for increase (decrease) in trade accounts payable",
+          "statement_type": "Statement of Cash Flows (Indirect Method)",
+          "template_code": "520000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 14,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentPayables",
+          "label": "Trade and other current payables",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 43,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "label": "Adjustments for decrease (increase) in trade accounts receivable",
+          "statement_type": "Statement of Cash Flows (Indirect Method)",
+          "template_code": "520000",
+          "deterministic_score": 0.4035,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 12,
+          "namespace": "ifrs-smes"
+        },
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "label": "Trade and other current receivables",
+          "statement_type": "Statement of Financial Position",
+          "template_code": "210000",
+          "deterministic_score": 0.3805,
+          "deterministic_method": "token_overlap_match",
+          "required": false,
+          "position": 18,
+          "namespace": "ifrs-smes"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+        "confidence": 0.96,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+            "confidence": 0.4435,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+            "confidence": 0.4205,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "high",
+        "selected_candidate": {
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "label": "Adjustments for increase (decrease) in trade accounts payable",
+          "statement_type": "Statement of Cash Flows (Indirect Method)",
+          "template_code": "520000",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 14,
+          "namespace": "ifrs-smes"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:TradeAndOtherCurrentPayables\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable\", \"confidence\": 0.4435, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:TradeAndOtherCurrentReceivables\", \"confidence\": 0.4205, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:TradeAndOtherCurrentPayables\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable\", \"confidence\": 0.4435, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ifrs-smes:TradeAndOtherCurrentReceivables\", \"confidence\": 0.4205, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    },
+    {
+      "extracted_data_item_id": "42b9a9f2-9769-4746-8707-6a9262761c30",
+      "page_number": 14,
+      "extracted_label": "no par value 2",
+      "extracted_value": "2",
+      "value_previous_year": "22",
+      "statement_type": "Statement of Cash Flows",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_no_template_candidate",
+      "precheck_rejection_reason": "rejected_no_template_candidate",
+      "candidate_concepts": [],
+      "suggestion": {
+        "selected_template_field_id": null,
+        "confidence": 0.0,
+        "reason": "",
+        "ranked_candidates": [],
+        "requires_human_confirmation": true,
+        "rejection_reason": "rejected_no_template_candidate",
+        "status": "rejected",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "low"
+      }
+    },
+    {
+      "extracted_data_item_id": "08f328c8-59ce-4d25-a818-323dc044eee6",
+      "page_number": 15,
+      "extracted_label": "Accruals",
+      "extracted_value": "1300",
+      "value_previous_year": "1600",
+      "statement_type": "Statement of Financial Position",
+      "already_mapped": false,
+      "deterministic_mapping_rejection_reason": "rejected_ambiguous",
+      "precheck_rejection_reason": null,
+      "candidate_concepts": [
+        {
+          "template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+          "label": "Accruals",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 223,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ssmt-mpers:NoncurrentNontradeAccruals",
+          "label": "Accruals",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 171,
+          "namespace": "ssmt-mpers"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherNontradeAccruals",
+          "label": "Accruals",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+          "template_code": "220100",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 155,
+          "namespace": "ssmt-mpers"
+        }
+      ],
+      "suggestion": {
+        "selected_template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+        "confidence": 0.96,
+        "reason": "The extracted label and statement context align with this provided candidate concept.",
+        "ranked_candidates": [
+          {
+            "template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:NoncurrentNontradeAccruals",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          },
+          {
+            "template_field_id": "ssmt-mpers:OtherNontradeAccruals",
+            "confidence": 0.96,
+            "reason": "Candidate provided by local deterministic template retrieval."
+          }
+        ],
+        "requires_human_confirmation": true,
+        "rejection_reason": null,
+        "status": "suggested",
+        "invalid_response": false,
+        "hallucinated_concept": false,
+        "warning_level": null,
+        "confidence_category": "high",
+        "selected_candidate": {
+          "template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+          "label": "Accruals",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "template_code": "210100",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match",
+          "required": false,
+          "position": 223,
+          "namespace": "ssmt-mpers"
+        },
+        "raw_response_preview": "{\"selected_template_field_id\": \"ssmt-mpers:CurrentNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ssmt-mpers:CurrentNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:NoncurrentNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:OtherNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "parsed_content_preview": "{\"selected_template_field_id\": \"ssmt-mpers:CurrentNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"The extracted label and statement context align with this provided candidate concept.\", \"ranked_candidates\": [{\"template_field_id\": \"ssmt-mpers:CurrentNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:NoncurrentNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}, {\"template_field_id\": \"ssmt-mpers:OtherNontradeAccruals\", \"confidence\": 0.96, \"reason\": \"Candidate provided by local deterministic template retrieval.\"}], \"requires_human_confirmation\": true, \"rejection_reason\": null}",
+        "normalized_response_shape": "direct_json"
+      }
+    }
+  ]
+}

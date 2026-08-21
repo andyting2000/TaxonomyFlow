@@ -1,0 +1,647 @@
+{
+  "run_metadata": {
+    "feature": "14C",
+    "generated_at": "2026-05-19T09:24:00Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "final_mapping_approved": false,
+    "real_human_approval_recorded": false,
+    "production_mapping_approval_produced": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "automatic_xbrl_generation": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_reviewed_mapping_simulation_14c",
+    "report_type": "azure_di_reviewed_mapping_handoff",
+    "script": "scripts/simulate_azure_di_reviewed_mapping_decisions_14c.py",
+    "output_path": "reports\\azure_di_reviewed_mapping_handoff_14c.json"
+  },
+  "input_reports": {
+    "review_queue": "reports\\azure_di_manual_mapping_review_queue_14b.json",
+    "review_policy": "reports\\azure_di_mapping_review_policy_14b.json",
+    "handoff_contract": "reports\\azure_di_mapping_review_handoff_contract_14b.json"
+  },
+  "source_feature_chain": [
+    "13X",
+    "13Y",
+    "13Z",
+    "14A",
+    "14B",
+    "14C"
+  ],
+  "package_status": "simulated_only_not_human_approved_not_xbrl_ready",
+  "total_simulated_decisions": 53,
+  "xbrl_eligible_count": 8,
+  "handoff_items": [
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0001",
+      "simulated_decision_id": "14C-SIM-0001",
+      "mapping_input_id": "13V-MAP-0001",
+      "source_candidate_id": "Shield-Plus:candidate:8:8",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "final_concept_label": "Disclosure of Director's Report [text block]",
+      "final_concept_type": "text_block",
+      "final_label": "Notes to the Financial Statements: The Directors hereby submit their report and the audited financial",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "The Directors hereby submit their report and the audited financial statements of the Company for the financial year ended 31 December 2024.",
+      "final_row_type": "text_block",
+      "final_statement_section": "Notes to the Financial Statements",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "evidence": {
+        "label": "Notes to the Financial Statements: The Directors hereby submit their report and the audited financial",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "The Directors hereby submit their report and the audited financial statements of the Company for the financial year ended 31 December 2024.",
+        "statement_section": "Notes to the Financial Statements",
+        "warning_flags": [
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 2,
+        "mapping_input_id": "13V-MAP-0001",
+        "source_candidate_id": "Shield-Plus:candidate:8:8",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:8:8",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0001",
+          "source_candidate_id": "Shield-Plus:candidate:8:8",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:8:8",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0001",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0002",
+      "simulated_decision_id": "14C-SIM-0002",
+      "mapping_input_id": "13V-MAP-0002",
+      "source_candidate_id": "Shield-Plus:candidate:9:9",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "final_concept_label": "Disclosure of Director's Report [text block]",
+      "final_concept_type": "text_block",
+      "final_label": "Notes to the Financial Statements: The Directors in office during the financial year and during",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "The Directors in office during the financial year and during the period from the end of the financial year to the date of the report are:",
+      "final_row_type": "text_block",
+      "final_statement_section": "Notes to the Financial Statements",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "evidence": {
+        "label": "Notes to the Financial Statements: The Directors in office during the financial year and during",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "The Directors in office during the financial year and during the period from the end of the financial year to the date of the report are:",
+        "statement_section": "Notes to the Financial Statements",
+        "warning_flags": [
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 2,
+        "mapping_input_id": "13V-MAP-0002",
+        "source_candidate_id": "Shield-Plus:candidate:9:9",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:9:9",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0002",
+          "source_candidate_id": "Shield-Plus:candidate:9:9",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:9:9",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0002",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0003",
+      "simulated_decision_id": "14C-SIM-0009",
+      "mapping_input_id": "13V-MAP-0009",
+      "source_candidate_id": "Shield-Plus:candidate:17:17",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "final_concept_label": "Disclosure of Director's Report [text block]",
+      "final_concept_type": "text_block",
+      "final_label": "Notes to the Financial Statements: According to the Register of Directors' Shareholdings required to be",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "According to the Register of Directors' Shareholdings required to be kept under Section 59 of the Companies Act 2016, the interests of Directors in office at the end of the financial year in shares in the Company during the financial year w",
+      "final_row_type": "text_block",
+      "final_statement_section": "Notes to the Financial Statements",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "evidence": {
+        "label": "Notes to the Financial Statements: According to the Register of Directors' Shareholdings required to be",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "According to the Register of Directors' Shareholdings required to be kept under Section 59 of the Companies Act 2016, the interests of Directors in office at the end of the financial year in shares in the Company during the financial year w",
+        "statement_section": "Notes to the Financial Statements",
+        "warning_flags": [
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 3,
+        "mapping_input_id": "13V-MAP-0009",
+        "source_candidate_id": "Shield-Plus:candidate:17:17",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:17:17",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0009",
+          "source_candidate_id": "Shield-Plus:candidate:17:17",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:17:17",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0009",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0004",
+      "simulated_decision_id": "14C-SIM-0025",
+      "mapping_input_id": "13V-MAP-0025",
+      "source_candidate_id": "Shield-Plus:candidate:42:42",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt-mpers:CapitalFromOrdinaryShares",
+      "final_concept_label": "Capital from ordinary shares",
+      "final_concept_type": "numeric",
+      "final_label": "Contributed share capital",
+      "final_value": "6",
+      "final_previous_value": "2",
+      "final_text": "Contributed share capital 6 2 2",
+      "final_row_type": "comparative_numeric_fact",
+      "final_statement_section": "Statement of Financial Position",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt-mpers:CapitalFromOrdinaryShares",
+      "evidence": {
+        "label": "Contributed share capital",
+        "value": "6",
+        "previous_value": "2",
+        "text_preview": "Contributed share capital 6 2 2",
+        "statement_section": "Statement of Financial Position",
+        "warning_flags": [],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 7,
+        "mapping_input_id": "13V-MAP-0025",
+        "source_candidate_id": "Shield-Plus:candidate:42:42",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:42:42",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0025",
+          "source_candidate_id": "Shield-Plus:candidate:42:42",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:42:42",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0025",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0005",
+      "simulated_decision_id": "14C-SIM-0041",
+      "mapping_input_id": "13V-MAP-0041",
+      "source_candidate_id": "Shield-Plus:candidate:68:68",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "final_concept_label": "Disclosure of corporate information [textblock]",
+      "final_concept_type": "text_block",
+      "final_label": "Corporate Information: The Company is a private company incorporated and domiciled in",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "The Company is a private company incorporated and domiciled in Malaysia. The Company is principally engaged in the business as insurance broker and agent.",
+      "final_row_type": "text_block",
+      "final_statement_section": "Corporate Information",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "evidence": {
+        "label": "Corporate Information: The Company is a private company incorporated and domiciled in",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "The Company is a private company incorporated and domiciled in Malaysia. The Company is principally engaged in the business as insurance broker and agent.",
+        "statement_section": "Corporate Information",
+        "warning_flags": [
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 11,
+        "mapping_input_id": "13V-MAP-0041",
+        "source_candidate_id": "Shield-Plus:candidate:68:68",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:68:68",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0041",
+          "source_candidate_id": "Shield-Plus:candidate:68:68",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:68:68",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0041",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0006",
+      "simulated_decision_id": "14C-SIM-0042",
+      "mapping_input_id": "13V-MAP-0042",
+      "source_candidate_id": "Shield-Plus:candidate:69:69",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "final_concept_label": "Disclosure of corporate information [textblock]",
+      "final_concept_type": "text_block",
+      "final_label": "Corporate Information: The registered office of the Company is located at Wisma",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "The registered office of the Company is located at Wisma Goshen, 2nd Floor, 60 & 62 Jalan SS 22/21, Damansara Jaya, 47400 Petaling Jaya, Selangor Darul Ehsan.",
+      "final_row_type": "text_block",
+      "final_statement_section": "Corporate Information",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "evidence": {
+        "label": "Corporate Information: The registered office of the Company is located at Wisma",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "The registered office of the Company is located at Wisma Goshen, 2nd Floor, 60 & 62 Jalan SS 22/21, Damansara Jaya, 47400 Petaling Jaya, Selangor Darul Ehsan.",
+        "statement_section": "Corporate Information",
+        "warning_flags": [
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 11,
+        "mapping_input_id": "13V-MAP-0042",
+        "source_candidate_id": "Shield-Plus:candidate:69:69",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:69:69",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0042",
+          "source_candidate_id": "Shield-Plus:candidate:69:69",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:69:69",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0042",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0007",
+      "simulated_decision_id": "14C-SIM-0043",
+      "mapping_input_id": "13V-MAP-0043",
+      "source_candidate_id": "Shield-Plus:candidate:70:70",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "final_concept_label": "Disclosure of corporate information [textblock]",
+      "final_concept_type": "text_block",
+      "final_label": "Corporate Information: The address of the principal place of business of the",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "The address of the principal place of business of the Company is located at 6 Jalan 7/18B, Taman Batu Permai, Batu 5, Off Jalan Ipoh, 51200 Kuala Lumpur. The financial statements of the Company are presented in Ringgit Malaysia (RM).",
+      "final_row_type": "text_block",
+      "final_statement_section": "Corporate Information",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "evidence": {
+        "label": "Corporate Information: The address of the principal place of business of the",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "The address of the principal place of business of the Company is located at 6 Jalan 7/18B, Taman Batu Permai, Batu 5, Off Jalan Ipoh, 51200 Kuala Lumpur. The financial statements of the Company are presented in Ringgit Malaysia (RM).",
+        "statement_section": "Corporate Information",
+        "warning_flags": [
+          "merged_adjacent_text_block_fragment",
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 11,
+        "mapping_input_id": "13V-MAP-0043",
+        "source_candidate_id": "Shield-Plus:candidate:70:70",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:70:70",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0043",
+          "source_candidate_id": "Shield-Plus:candidate:70:70",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:70:70",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0043",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    },
+    {
+      "reviewed_mapping_id": "14C-REVIEWED-MAP-0008",
+      "simulated_decision_id": "14C-SIM-0044",
+      "mapping_input_id": "13V-MAP-0044",
+      "source_candidate_id": "Shield-Plus:candidate:71:71",
+      "case_id": "Shield-Plus",
+      "final_concept_qname": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "final_concept_label": "Disclosure of corporate information [textblock]",
+      "final_concept_type": "text_block",
+      "final_label": "Corporate Information: The financial statements were authorised for issue by the Director",
+      "final_value": null,
+      "final_previous_value": null,
+      "final_text": "The financial statements were authorised for issue by the Director in accordance with a resolution of the Director on 24 June 2025.",
+      "final_row_type": "text_block",
+      "final_statement_section": "Corporate Information",
+      "approval_status": "simulated_approved",
+      "simulated_only": true,
+      "human_approved": false,
+      "requires_confirmation": false,
+      "source_suggestion_id": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "evidence": {
+        "label": "Corporate Information: The financial statements were authorised for issue by the Director",
+        "value": null,
+        "previous_value": null,
+        "text_preview": "The financial statements were authorised for issue by the Director in accordance with a resolution of the Director on 24 June 2025.",
+        "statement_section": "Corporate Information",
+        "warning_flags": [
+          "text_block_not_numeric"
+        ],
+        "blockers": []
+      },
+      "provenance": {
+        "case_id": "Shield-Plus",
+        "page_number": 11,
+        "mapping_input_id": "13V-MAP-0044",
+        "source_candidate_id": "Shield-Plus:candidate:71:71",
+        "source_handoff_audit_trail": {
+          "source": "13V_report_based_handoff",
+          "original_candidate_id": "Shield-Plus:candidate:71:71",
+          "cleaned_candidate_present": true,
+          "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+          "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+          "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+          "resolution_action": "keep"
+        },
+        "mapping_audit_trail": {
+          "source": "14A_enriched_deterministic_report_based_mapping_suggestion",
+          "mapping_input_id": "13V-MAP-0044",
+          "source_candidate_id": "Shield-Plus:candidate:71:71",
+          "source_handoff_audit_trail": {
+            "source": "13V_report_based_handoff",
+            "original_candidate_id": "Shield-Plus:candidate:71:71",
+            "cleaned_candidate_present": true,
+            "gate_status_source": "reports/extraction_v2_mapping_candidate_gate_13t.json",
+            "cleaned_candidate_source": "reports/extraction_v2_cleaned_candidates_13s.json",
+            "manual_review_queue_source": "reports/extraction_v2_manual_review_queue_13t.json",
+            "resolution_action": "keep"
+          },
+          "mapping_decision_status": "suggested_only",
+          "final_mapping_approved": false,
+          "baseline_source_feature": "13Z"
+        }
+      },
+      "audit_trail": {
+        "source": "14C_simulated_reviewed_mapping_handoff",
+        "source_simulated_decision_id": "14C-SIM-0044",
+        "simulated_only": true,
+        "human_approved": false,
+        "production_mapping_approved": false
+      },
+      "xbrl_eligible": true,
+      "xbrl_blockers": []
+    }
+  ],
+  "eligibility_statement": [
+    "This is not production approval.",
+    "This is not human approval.",
+    "This is not ready for XBRL filing.",
+    "It exists only to test downstream package shape and future XBRL eligibility logic."
+  ],
+  "limitations": [
+    "All decisions are simulated_only=true and human_approved=false.",
+    "No final production mapping approval occurs.",
+    "No XBRL is generated and no Arelle validation is run.",
+    "No live provider, model, embedding, semantic matcher, DB, API, or UI path is used."
+  ]
+}

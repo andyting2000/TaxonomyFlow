@@ -1,0 +1,193 @@
+{
+  "run_metadata": {
+    "feature": "18E-F-A",
+    "generated_at": "2026-06-23T11:23:15Z",
+    "top_n": 5,
+    "debug_label": null,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "total_observations": 782,
+    "rows_with_at_least_1_candidate": 525,
+    "rows_with_at_least_3_candidates": 281,
+    "rows_with_high_or_medium_candidate": 309,
+    "rows_with_only_low_risk_candidates": 164,
+    "rows_blocked_by_note_boundaries": 6,
+    "no_candidate_rows": 251,
+    "candidate_coverage_rate": 0.6714,
+    "three_candidate_coverage_rate": 0.3593,
+    "high_or_medium_candidate_coverage_rate": 0.3951,
+    "candidate_coverage_status_counts": {
+      "blocked_by_note_boundary": 6,
+      "deterministic_candidate_available": 37,
+      "no_candidate": 251,
+      "ranked_candidates_available": 488
+    },
+    "candidate_count_by_row": {
+      "0": 257,
+      "1": 172,
+      "2": 72,
+      "3": 28,
+      "4": 33,
+      "5": 220
+    },
+    "candidate_source_counts": {
+      "deterministic_current_mapper": 334,
+      "statement_dictionary": 264,
+      "taxonomy_lexical": 1413
+    },
+    "candidate_source_row_counts": {
+      "deterministic_current_mapper": 334,
+      "statement_dictionary": 236,
+      "taxonomy_lexical": 394
+    },
+    "risk_distribution": {
+      "high": 1006,
+      "low": 588,
+      "medium": 38
+    },
+    "confidence_bucket_distribution": {
+      "candidate_high": 141,
+      "candidate_low": 1020,
+      "candidate_medium": 236,
+      "candidate_review_only": 235
+    },
+    "safe_for_auto_apply_count": 0,
+    "requires_human_review_count": 1632,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "qwen_called": false,
+      "supervisor_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "evaluation_summary": {
+    "total_rows": 782,
+    "locally_evaluable_unique_support_rows": 103,
+    "candidate_rows_with_local_support": 98,
+    "top1_hits": 49,
+    "top3_hits": 60,
+    "top5_hits": 60,
+    "top1_precision_if_evaluable": 0.5,
+    "top3_recall_if_evaluable": 0.5825,
+    "top5_recall_if_evaluable": 0.5825,
+    "evaluation_status_counts": {
+      "ambiguous_xbrl_support": 422,
+      "correct_qname_not_in_candidates": 43,
+      "correct_qname_top1": 49,
+      "correct_qname_top3": 11,
+      "not_evaluable": 257
+    },
+    "correct_candidate_risk_distribution": {
+      "high": 43,
+      "low": 16,
+      "medium": 1
+    },
+    "safe_for_auto_apply_count": 0,
+    "requires_human_review_count": 1632,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "qwen_called": false,
+      "supervisor_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "risk_summary": {
+    "candidate_risk_distribution": {
+      "high": 1006,
+      "low": 588,
+      "medium": 38
+    },
+    "high_or_critical_candidate_count": 1006,
+    "high_or_critical_candidate_family_counts": {
+      "borrowings": 38,
+      "cash": 144,
+      "cash_flow": 153,
+      "financial_position": 135,
+      "payables": 138,
+      "profit_loss": 367,
+      "receivables": 110,
+      "tax": 306,
+      "unknown": 241
+    },
+    "rows_blocked_by_note_boundaries": 72,
+    "safe_for_auto_apply_count": 0,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "qwen_called": false,
+      "supervisor_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "recommendation": {
+    "recommended_next_feature": "Feature #18E-F-A-hotfix-2 - Tighten risk scoring and candidate filters",
+    "reason": "Candidate coverage is usable but high/critical risk candidates dominate the review burden.",
+    "basis": {
+      "candidate_coverage_rate": 0.6714,
+      "top5_recall_if_evaluable": 0.5825,
+      "high_or_critical_candidate_count": 1006,
+      "candidate_total": 1632,
+      "candidate_list_too_noisy": true
+    }
+  }
+}

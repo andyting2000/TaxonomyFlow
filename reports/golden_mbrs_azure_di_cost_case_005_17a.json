@@ -1,0 +1,46 @@
+{
+  "run_metadata": {
+    "feature": "13W-AzureDI-spike",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_provider": false,
+    "reference_xml_sent_to_model": false,
+    "generated_at": "2026-06-01T12:47:19Z",
+    "report_type": "azure_di_cost_runtime_estimate",
+    "script": "scripts/run_extraction_v2_azure_di_spike.py",
+    "output_path": "reports\\golden_mbrs_azure_di_cost_case_005_17a.json",
+    "pricing_source": "not_configured",
+    "dollar_cost_estimated": false
+  },
+  "summary": {
+    "documents_processed": 1,
+    "total_pages_processed": 24,
+    "billable_pages_estimate": 24,
+    "total_runtime_seconds": 375.672,
+    "average_seconds_per_page": 15.653,
+    "average_seconds_per_document": 375.672,
+    "tables_per_document": 17.0,
+    "characters_per_page": 1342.208
+  },
+  "cost_tracking_instructions": [
+    "Azure Portal -> Document Intelligence resource -> Monitoring -> Metrics -> Processed Pages",
+    "Azure Portal -> Cost Management + Billing -> Cost Analysis"
+  ],
+  "limitations": [
+    "Pricing is not hard-coded in this report.",
+    "No dollar estimate is produced unless pricing is explicitly supplied in a future approved feature."
+  ]
+}

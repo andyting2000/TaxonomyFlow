@@ -1,0 +1,440 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBRL Filing Platform - FastAPI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+        .main-scrollbar::-webkit-scrollbar-track { background: #f3f4f6; }
+        
+        /* Horizontal scrollbar for statement selector */
+        .scrollbar-thin::-webkit-scrollbar { height: 6px; }
+        .scrollbar-thin::-webkit-scrollbar-track { background: #f3f4f6; border-radius: 3px; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 3px; }
+        .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+        
+        /* Firefox scrollbar */
+        .scrollbar-thin {
+            scrollbar-width: thin;
+            scrollbar-color: #9ca3af #f3f4f6;
+        }
+        
+        /* Animations */
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .slide-up { animation: slideUp 0.3s ease-out; }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
+        .loading-spinner {
+            display: inline-block; width: 16px; height: 16px;
+            border: 2px solid #f3f3f3; border-top: 2px solid #3b82f6;
+            border-radius: 50%; animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Status badges */
+        .status-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+        }
+        .status-badge.processing {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+        }
+        .status-badge.error {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+        }
+        
+        /* Enhanced buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Modal animations */
+        .modal-backdrop {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Notification styles */
+        .notification {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        .notification.show { transform: translateX(0); }
+        
+        /* Taxonomy search */
+        .taxonomy-dropdown {
+            max-height: 300px; overflow-y: auto;
+            background: white; border: 1px solid #e5e7eb;
+            border-radius: 8px; z-index: 1000;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .taxonomy-option {
+            padding: 12px 16px; cursor: pointer;
+            transition: all 0.15s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .taxonomy-option:hover {
+            background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%);
+            color: #1e40af;
+        }
+        
+        /* Progress tracker styles */
+        .shadow-3xl {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Page info styling */
+        .page-info-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Add item button styling */
+        .add-item-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.2s ease;
+        }
+        .add-item-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Enhanced pagination */
+        .page-navigation {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Template container zoom adjustment */
+        #template-container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        #statement-selector {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        /* Better field spacing */
+        .field-container {
+            margin-bottom: 0.75rem;
+        }
+        
+        .field-input {
+            font-size: 0.875rem;
+        }
+        
+        /* Compact sections */
+        .section, .group, .subgroup {
+            margin-bottom: 1rem;
+        }
+        
+        /* Better responsive table */
+        .table-container {
+            overflow-x: auto;
+            max-width: 100%;
+        }
+        
+        .table-container table {
+            font-size: 0.875rem;
+        }
+        
+        .table-cell-input {
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen overflow-x-hidden">
+    
+    <!-- Notification Container -->
+    <div id="notification-container" class="fixed top-6 right-6 z-50 space-y-3"></div>
+    
+    <div class="flex min-h-screen">
+        <!-- SIDEBAR -->
+        <aside class="w-80 shrink-0 h-screen sticky top-0 bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col shadow-2xl">
+            <div class="p-6 border-b border-gray-700">
+                <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    XBRL Platform
+                </h1>
+                <p class="text-sm text-gray-400 mt-1" id="job-count-display">Loading jobs...</p>
+            </div>
+            
+            <nav id="jobs-list" class="flex-1 p-4 space-y-3 overflow-y-auto">
+                <!-- Jobs will be loaded here -->
+            </nav>
+            
+            <div class="p-4 border-t border-gray-700">
+                <button id="upload-btn" class="btn-primary w-full flex items-center justify-center space-x-3 px-6 py-4 text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                    </svg>
+                    <span>Upload New PDF</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="flex-1 min-w-0 bg-white">
+            <!-- HEADER -->
+            <header class="bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <h2 class="text-xl font-semibold text-gray-900" id="header-title">
+                            Select a job to review
+                        </h2>
+                        <div id="pagination-info" class="hidden flex items-center space-x-2 text-sm text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
+                            <span id="pagination-text"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <button id="refresh-btn" class="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors border border-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-sm font-medium">Refresh</span>
+                        </button>
+
+                        <button id="download-btn" class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Download XBRL</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENT AREA -->
+            <div id="content-area" class="p-6">
+                <!-- Welcome Screen -->
+                <div id="welcome-screen" class="text-center py-16">
+                    <div class="text-gray-300 text-8xl mb-6">📊</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">FastAPI XBRL Platform</h3>
+                    <p class="text-gray-600 mb-8">Upload a PDF annual report to start extracting financial data</p>
+                    
+                    <!-- Dashboard Stats -->
+                    <div id="dashboard-stats" class="grid grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
+                        <!-- Stats will be loaded here -->
+                    </div>
+                    
+                    <button id="get-started-btn" class="btn-primary px-6 py-3 text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Job Content Area -->
+                <div id="job-content" class="hidden">
+                    <!-- Template Review UI (NEW) -->
+                    <div id="template-review-section" class="mb-6">
+                        <!-- Statement Selector -->
+                        <div id="statement-selector" class="mb-6">
+                            <!-- Statement buttons will be rendered here -->
+                        </div>
+
+                        <!-- Template Container -->
+                        <div id="template-container">
+                            <!-- Template structure will be rendered here -->
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="mt-6 flex items-center justify-between bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                            <div id="unsaved-indicator" class="hidden text-orange-600 font-semibold">
+                                <!-- Unsaved changes count -->
+                            </div>
+                            <button onclick="window.templateReview.saveChanges()"
+                                    class="btn-primary px-6 py-3 text-white font-semibold rounded-lg shadow-md hover:shadow-lg flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Save Changes</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- OLD: Page Info Section (keep for backward compatibility) -->
+                    <div id="page-info" class="page-info-section rounded-xl p-4 mb-6 hidden">
+                        <!-- Page information and add button will be inserted here -->
+                    </div>
+
+                    <!-- OLD: Review Table (keep for backward compatibility) -->
+                    <div id="review-table-container" class="bg-white shadow-sm rounded-xl border border-gray-200 overflow-hidden mb-6 hidden">
+                        <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-gray-50 to-white">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Extracted Data Review</h3>
+                                    <p class="text-sm text-gray-500 mt-1">Review and confirm MBRS taxonomy tags for this page</p>
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    <span id="reviewed-count">0</span> of <span id="total-count">0</span> reviewed
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page Navigation Controls -->
+                        <div id="pagination-controls" class="hidden page-navigation rounded-xl p-4 mb-6 shadow-sm">
+                            <div class="flex justify-between items-center">
+                                <div class="text-sm text-gray-600" id="items-info"></div>
+                                <nav class="flex space-x-1" id="pagination-nav"></nav>
+                            </div>
+                        </div>
+                        <div id="loading-indicator" class="flex items-center justify-center p-12">
+                            <div class="text-center">
+                                <div class="loading-spinner mx-auto mb-4" style="width: 32px; height: 32px;"></div>
+                                <p class="text-gray-600">Loading data...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full" id="data-table">
+                                <thead class="bg-gray-50 border-b border-gray-200">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Year</th>
+                                        <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Label</th>
+                                        <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Value</th>
+                                        <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">MBRS Tag</th>
+                                        <th class="px-6 py-4 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">Status</th>
+                                        <th class="px-6 py-4 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider w-16">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="data-table-body" class="bg-white divide-y divide-gray-200">
+                                    <!-- Table rows will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- OLD: Save Button (hidden, replaced by template save button) -->
+                    <div id="save-section" class="hidden bg-white shadow-sm rounded-xl p-6 border border-gray-200" style="display: none;">
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">
+                                <span id="changes-indicator" class="hidden text-orange-600 font-semibold">⚡ Unsaved changes</span>
+                            </div>
+                            <button id="save-btn" class="btn-primary px-6 py-3 text-white font-semibold rounded-lg shadow-md hover:shadow-lg flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Save Changes</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pages Section -->
+                    <!-- <div id="pages-section" class="hidden bg-white shadow-sm rounded-xl border border-gray-200 mb-6">
+                        <button type="button" id="toggle-pages" class="w-full p-6 text-left hover:bg-gray-50 transition-colors rounded-xl">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">Page Images</h3>
+                                    <p class="text-sm text-gray-500 mt-1" id="pages-count">Loading pages...</p>
+                                </div>
+                                <svg id="pages-chevron" class="w-6 h-6 text-gray-400 transform transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div id="pages-container" class="hidden border-t border-gray-200">
+                            <div id="pages-grid" class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- UPLOAD MODAL -->
+    <div id="upload-modal" class="modal-backdrop fixed inset-0 bg-black/50 flex items-start sm:items-center justify-center p-4 overflow-y-auto overflow-x-auto hidden opacity-0 z-50">
+        <div class="modal-content bg-white w-full max-w-md rounded-2xl shadow-2xl transform scale-95 my-4 max-h-[calc(100vh-2rem)] overflow-y-auto">
+            <div class="p-8">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Upload Annual Report</h2>
+                    <p class="text-gray-600 mt-2">Create a new filing job for XBRL conversion</p>
+                </div>
+                
+                <form id="upload-form" class="space-y-6">
+                    <div>
+                        <label for="company_name" class="block text-sm font-semibold text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company_name" name="company_name" required
+                               class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                               placeholder="e.g., ABC Company Sdn Bhd">
+                    </div>
+                    
+                    <div>
+                        <label for="registration_number" class="block text-sm font-semibold text-gray-700 mb-2">Registration Number</label>
+                        <input type="text" id="registration_number" name="registration_number"
+                               class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                               placeholder="e.g., 202401000123 (1234567-A)">
+                    </div>
+                    
+                    <div>
+                        <label for="financial_year_end" class="block text-sm font-semibold text-gray-700 mb-2">Financial Year End *</label>
+                        <input type="date" id="financial_year_end" name="financial_year_end" required
+                               class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                    </div>
+
+                    <div>
+                        <label for="xbrl_format" class="block text-sm font-semibold text-gray-700 mb-2">XBRL Format *</label>
+                        <select id="xbrl_format" name="xbrl_format" required
+                                class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                            <option value="FS-MPERS" selected>FS-MPERS</option>
+                            <option value="AR1" disabled>AR1 (Coming Soon)</option>
+                        </select>
+                        <p class="mt-2 text-sm text-gray-500">Current processing supports FS-MPERS only. AR1 is shown for future support.</p>
+                    </div>
+                    
+                    <div>
+                        <label for="file" class="block text-sm font-semibold text-gray-700 mb-2">Annual Report PDF *</label>
+                        <input type="file" id="file" name="file" accept=".pdf" required
+                               class="w-full text-sm text-gray-600 file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition-all">
+                    </div>
+                    
+                    <div class="flex justify-end space-x-3 pt-6">
+                        <button type="button" id="cancel-upload-btn" class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+                            Cancel
+                        </button>
+                        <button type="submit" id="submit-upload-btn" class="btn-primary px-6 py-3 text-white font-semibold rounded-lg hover:shadow-lg">
+                            <span class="upload-text">Start Processing</span>
+                            <span class="upload-spinner hidden flex items-center">
+                                <div class="loading-spinner mr-2"></div>
+                                Uploading...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include the main JavaScript -->
+    <script type="module" src="/static/js/dashboard.js"></script>
+</body>
+</html>

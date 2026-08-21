@@ -1,0 +1,166 @@
+{
+  "report_id": "toc_aware_structure_foundation_19a",
+  "feature_id": "19A",
+  "generated_on": "2026-07-30",
+  "status": "PASS",
+  "objective": "Add a disabled-by-default, deterministic TOC-aware document structure layer without changing the existing mapping workflow.",
+  "insertion_point": {
+    "service": "services.azure_di_production_extraction.process_azure_di_filing_job",
+    "after": "usable Azure DI normalization and candidate validation",
+    "before": "existing candidate persistence and deterministic statement/template mapping",
+    "publication": "after extracted rows commit and the job reaches REVIEW"
+  },
+  "current_page_semantics": {
+    "azure_page_number": "1-based",
+    "existing_database_page_number": "1-based",
+    "pdf_page_index": "0-based",
+    "printed_page_number": "independent value reconciled through heading anchors",
+    "printed_labels_previously_persisted": false,
+    "raw_azure_layout_previously_persisted": false
+  },
+  "feature_flags": [
+    {
+      "name": "TOC_AWARE_PIPELINE_ENABLED",
+      "default": false,
+      "purpose": "run deterministic local structure analysis"
+    },
+    {
+      "name": "TOC_AWARE_STRUCTURE_PERSISTENCE_ENABLED",
+      "default": false,
+      "purpose": "publish the versioned structure artifact"
+    },
+    {
+      "name": "TOC_AWARE_LLM_FALLBACK_ENABLED",
+      "default": false,
+      "purpose": "reserved only; no #19A model call is implemented"
+    }
+  ],
+  "contracts": [
+    "TocEntry",
+    "HeadingAnchor",
+    "DocumentPageMapping",
+    "DocumentContentEvidence",
+    "DocumentContentDisposition",
+    "DocumentSection",
+    "DocumentStructureResult",
+    "DocumentStructureCapabilitiesRead"
+  ],
+  "structure_layer": {
+    "feature_version": "19A-v1",
+    "deterministic_local_only": true,
+    "toc_metadata": true,
+    "heading_anchor_evidence": true,
+    "page_number_mapping": true,
+    "primary_sections": true,
+    "content_evidence_catalog": true,
+    "ambiguous_content_preserved": true,
+    "unassigned_content_preserved": true,
+    "notes_future_child_fields": true
+  },
+  "persistence": {
+    "model": "bounded versioned JSON artifact",
+    "path": "uploads/document-structures/job_{job_id}/structure_19a_v1.json",
+    "maximum_bytes": 26214400,
+    "write_semantics": "unique temporary file plus atomic replace",
+    "retry_semantics": "one fixed job/version artifact; prior attempt invalidated at every extraction start",
+    "identity_validation": true,
+    "job_cleanup_integrated": true,
+    "gitignored": true,
+    "future_plan": "job-owned database artifact or normalized TOC/section tables with attempt identity, cascade deletion, and transactional upsert"
+  },
+  "read_only_api": [
+    "GET /api/v1/filings/jobs/{job_id}/document-structure/capabilities",
+    "GET /api/v1/filings/jobs/{job_id}/document-structure"
+  ],
+  "api_controls": {
+    "owned_job_check": true,
+    "cross_owner_hidden": true,
+    "available_job_statuses": [
+      "REVIEW",
+      "COMPLETED"
+    ],
+    "artifact_schema_validation": true,
+    "new_normal_user_panel": false
+  },
+  "sample_structure": {
+    "fixture": "fixture_d_page_offset.json",
+    "job_id": 19,
+    "toc_detected": true,
+    "toc_page_indexes": [
+      1
+    ],
+    "toc_confidence": 1.0,
+    "page_mapping_confidence": 0.98,
+    "mapping_method": "heading_anchor_consensus",
+    "offset_candidates": {
+      "2": 3
+    },
+    "section_count": 3,
+    "sections": [
+      {
+        "canonical_section_type": "directors_report",
+        "printed_pages": [
+          1,
+          2
+        ],
+        "pdf_page_indexes": [
+          3,
+          4
+        ]
+      },
+      {
+        "canonical_section_type": "statement_of_financial_position",
+        "printed_pages": [
+          3,
+          3
+        ],
+        "pdf_page_indexes": [
+          5,
+          5
+        ]
+      },
+      {
+        "canonical_section_type": "notes_to_financial_statements",
+        "printed_pages": [
+          4,
+          5
+        ],
+        "pdf_page_indexes": [
+          6,
+          7
+        ]
+      }
+    ],
+    "content_inventory_count": 9,
+    "content_evidence_count": 9,
+    "dropped_content_count": 0,
+    "content_conservation_passed": true
+  },
+  "fixtures": {
+    "A": "explicit page ranges",
+    "B": "start-only pages",
+    "C": "numbered INDEX layout",
+    "D": "cover/index offset",
+    "E": "two sections sharing a page",
+    "F": "no TOC",
+    "G": "OCR-noisy/malformed TOC",
+    "H": "multi-page TOC",
+    "I": "multi-page Notes section",
+    "J": "inconsistent heading anchors"
+  },
+  "verification": {
+    "focused_19a_tests": {
+      "passed": 51,
+      "failed": 0
+    },
+    "full_backend_tests": {
+      "passed": 1317,
+      "failed": 0
+    },
+    "changed_file_compilation": "PASS",
+    "app_import": "PASS (83 routes)",
+    "report_json_validation": "PASS",
+    "frontend_build_required": false
+  },
+  "recommended_next_feature": "19B - Classify primary sections and note subsections into the 24 internal template groups"
+}

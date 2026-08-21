@@ -1,0 +1,105 @@
+{
+  "name": "L_real_pdf_job66_anchor_range",
+  "pages": [
+    {"page_number": 1, "height": 1000, "lines": [
+      {"content": "COMPANY NO. : 202201047805 (1493502-X)", "page_number": 1, "polygon": [{"x": 1, "y": 20}]},
+      {"content": "BEZLIFE MARKETING SDN. BHD.", "page_number": 1, "polygon": [{"x": 1, "y": 50}]},
+      {"content": "DIRECTORS' REPORT AND", "page_number": 1, "polygon": [{"x": 1, "y": 100}]},
+      {"content": "FINANCIAL STATEMENTS", "page_number": 1, "polygon": [{"x": 1, "y": 140}]},
+      {"content": "FOR", "page_number": 1, "polygon": [{"x": 1, "y": 180}]},
+      {"content": "THE FINANCIAL YEAR ENDED", "page_number": 1, "polygon": [{"x": 1, "y": 220}]},
+      {"content": "31 DECEMBER 2024", "page_number": 1, "polygon": [{"x": 1, "y": 260}]},
+      {"content": "IM ISMAIL MIDON & CO", "page_number": 1, "polygon": [{"x": 1, "y": 300}]},
+      {"content": "TEL: 03-12345678", "page_number": 1, "polygon": [{"x": 1, "y": 340}]},
+      {"content": "FAX: 03-87654321", "page_number": 1, "polygon": [{"x": 1, "y": 380}]}
+    ]},
+    {"page_number": 2, "height": 1000, "lines": [
+      {"content": "INDEX", "page_number": 2, "polygon": [{"x": 1, "y": 40}]},
+      {"content": "Directors' Report 1-4", "page_number": 2, "polygon": [{"x": 1, "y": 100}]},
+      {"content": "Statement by Directors 5", "page_number": 2, "polygon": [{"x": 1, "y": 140}]},
+      {"content": "Statutory Declaration :unselected 6", "page_number": 2, "polygon": [{"x": 1, "y": 180}]},
+      {"content": "Independent Auditors' Report 7-10", "page_number": 2, "polygon": [{"x": 1, "y": 220}]},
+      {"content": "Statement of Financial Position 11", "page_number": 2, "polygon": [{"x": 1, "y": 260}]},
+      {"content": "Statement of Comprehensive Income 12", "page_number": 2, "polygon": [{"x": 1, "y": 300}]},
+      {"content": "Statement of Changes in Equity 13", "page_number": 2, "polygon": [{"x": 1, "y": 340}]},
+      {"content": "Statement of Cash Flows 14", "page_number": 2, "polygon": [{"x": 1, "y": 380}]},
+      {"content": "Notes to the Financial Statements 15-22", "page_number": 2, "polygon": [{"x": 1, "y": 420}]}
+    ]},
+    {"page_number": 3, "height": 1000, "lines": [
+      {"content": "DIRECTORS' REPORT", "page_number": 3, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "DIRECTORS", "page_number": 3, "polygon": [{"x": 1, "y": 120}]},
+      {"content": "The directors submit their report.", "page_number": 3, "polygon": [{"x": 1, "y": 190}]}
+    ]},
+    {"page_number": 4, "height": 1000, "lines": [{"content": "Directors' interests and benefits", "page_number": 4}]},
+    {"page_number": 5, "height": 1000, "lines": [{"content": "Directors' report continued", "page_number": 5}]},
+    {"page_number": 6, "height": 1000, "lines": [{"content": "Signed on behalf of the Board", "page_number": 6}]},
+    {"page_number": 7, "height": 1000, "lines": [
+      {"content": "STATEMENT BY DIRECTOR PURSUANT TO", "page_number": 7, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "The directors state that the financial statements are drawn up.", "page_number": 7, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 8, "height": 1000, "lines": [
+      {"content": "STATUTORY DECLARATION PURSUANT TO", "page_number": 8, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "I solemnly and sincerely declare.", "page_number": 8, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 9, "height": 1000, "lines": [
+      {"content": "INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE", "page_number": 9, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Report on the audit of the financial statements.", "page_number": 9, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 10, "height": 1000, "lines": [{"content": "Auditors' responsibilities", "page_number": 10}]},
+    {"page_number": 11, "height": 1000, "lines": [{"content": "Audit evidence", "page_number": 11}]},
+    {"page_number": 12, "height": 1000, "lines": [{"content": "Auditors' report conclusion", "page_number": 12}]},
+    {"page_number": 13, "height": 1000, "lines": [
+      {"content": "STATEMENT OF FINANCIAL POSITION", "page_number": 13, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Total assets 100000", "page_number": 13, "polygon": [{"x": 1, "y": 180}]}
+    ]},
+    {"page_number": 14, "height": 1000, "lines": [
+      {"content": "STATEMENT OF COMPREHENSIVE INCOME", "page_number": 14, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Profit for the financial year 20000", "page_number": 14, "polygon": [{"x": 1, "y": 180}]}
+    ]},
+    {"page_number": 15, "height": 1000, "lines": [
+      {"content": "STATEMENT OF CHANGES IN EQUITY", "page_number": 15, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Closing equity 80000", "page_number": 15, "polygon": [{"x": 1, "y": 180}]}
+    ]},
+    {"page_number": 16, "height": 1000, "lines": [
+      {"content": "STATEMENT OF CASH FLOWS", "page_number": 16, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Cash and cash equivalents 15000", "page_number": 16, "polygon": [{"x": 1, "y": 180}]}
+    ]},
+    {"page_number": 17, "height": 1000, "lines": [
+      {"content": "NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024", "page_number": 17, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "1. GENERAL INFORMATION", "page_number": 17, "polygon": [{"x": 1, "y": 140}]},
+      {"content": "The company is incorporated in Malaysia.", "page_number": 17, "polygon": [{"x": 1, "y": 210}]}
+    ]},
+    {"page_number": 18, "height": 1000, "lines": [
+      {"content": "2. BASIS OF PREPARATION", "page_number": 18, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "These financial statements comply with applicable standards.", "page_number": 18, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 19, "height": 1000, "lines": [
+      {"content": "3. SIGNIFICANT ACCOUNTING POLICIES", "page_number": 19, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "The principal accounting policies are set out below.", "page_number": 19, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 20, "height": 1000, "lines": [
+      {"content": "4. REVENUE", "page_number": 20, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Revenue from contracts with customers 100000", "page_number": 20, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 21, "height": 1000, "lines": [
+      {"content": "5. PROPERTY, PLANT AND EQUIPMENT", "page_number": 21, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Property plant and equipment 30000", "page_number": 21, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 22, "height": 1000, "lines": [
+      {"content": "6. TRADE RECEIVABLES", "page_number": 22, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Trade receivables 12000", "page_number": 22, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 23, "height": 1000, "lines": [
+      {"content": "7. TRADE PAYABLES", "page_number": 23, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Trade payables 9000", "page_number": 23, "polygon": [{"x": 1, "y": 150}]}
+    ]},
+    {"page_number": 24, "height": 1000, "lines": [
+      {"content": "8. RELATED PARTY DISCLOSURES", "page_number": 24, "polygon": [{"x": 1, "y": 45}]},
+      {"content": "Related party balances are disclosed below.", "page_number": 24, "polygon": [{"x": 1, "y": 150}]}
+    ]}
+  ],
+  "paragraphs": [],
+  "tables": [],
+  "table_cells": [],
+  "lines": []
+}

@@ -1,0 +1,73 @@
+{
+  "run_metadata": {
+    "feature": "18F-D",
+    "generated_at": "2026-06-25T01:54:45Z",
+    "report_type": "ranked_candidate_advisory_api"
+  },
+  "summary": {
+    "implemented": true,
+    "disabled_by_default": true,
+    "dry_run_only": true,
+    "persistence_enabled": false,
+    "ui_changed": false,
+    "db_migration_added": false,
+    "recommended_next_feature": "Feature #18F-E - Add read-only frontend test panel for ranked candidates behind disabled UI flag"
+  },
+  "endpoints_added": [
+    {
+      "method": "GET",
+      "path": "/api/v1/filings/jobs/{job_id}/ranked-candidates/capabilities",
+      "response_model": "RankedCandidateCapabilitiesRead",
+      "ownership_check": "_get_owned_job_or_404",
+      "side_effects": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/filings/jobs/{job_id}/ranked-candidates/run",
+      "request_model": "RankedCandidateAdvisoryRequest",
+      "response_model": "RankedCandidateAdvisoryResponse",
+      "ownership_check": "_get_owned_job_or_404",
+      "feature_flag": "RANKED_CANDIDATES_ADVISORY_ENABLED",
+      "side_effects": []
+    }
+  ],
+  "feature_flag_defaults": {
+    "RANKED_CANDIDATES_ADVISORY_ENABLED": false,
+    "RANKED_CANDIDATES_ADVISORY_DEFAULT_MODE": "dry_run",
+    "RANKED_CANDIDATES_ADVISORY_ALLOW_PERSISTENCE": false,
+    "RANKED_CANDIDATES_ADVISORY_DEFAULT_PROFILE": "balanced",
+    "RANKED_CANDIDATES_ADVISORY_MAX_ROWS": 1000,
+    "RANKED_CANDIDATES_ADVISORY_MAX_CANDIDATES_PER_ROW": 5,
+    "RANKED_CANDIDATES_ADVISORY_ADMIN_ONLY": true
+  },
+  "disabled_behavior": {
+    "capabilities_endpoint": "Returns enabled=false and dry-run-only metadata after ownership check.",
+    "run_endpoint": "Returns HTTP 403 before generation when ranked candidate advisory is disabled.",
+    "candidate_generation": false,
+    "persistence_writes": 0,
+    "mapping_mutations": 0
+  },
+  "dry_run_enabled_behavior": {
+    "mode": "dry_run",
+    "profile_default": "balanced",
+    "supported_profiles": [
+      "strict",
+      "balanced",
+      "recall"
+    ],
+    "sources": [
+      "existing job extracted_data_items",
+      "local taxonomy metadata",
+      "local concept playbook artifacts",
+      "statement dictionary and local candidate source packs"
+    ],
+    "excluded_sources": [
+      "evaluation labels",
+      "paired XBRL gold answers",
+      "Qwen",
+      "Supervisor",
+      "LLM/API calls",
+      "live Azure Document Intelligence"
+    ]
+  }
+}

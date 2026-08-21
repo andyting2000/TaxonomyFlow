@@ -1,0 +1,98 @@
+{
+  "report_id": "anchor_candidate_selection_19a_hotfix_2",
+  "feature_id": "19A-hotfix-2",
+  "generated_on": "2026-08-10",
+  "status": "PASS",
+  "fresh_real_pdf_smoke_status": "PENDING",
+  "job_66_v2_defects": [
+    {
+      "section": "Directors' Report",
+      "wrong_selected": "DIRECTORS' REPORT AND",
+      "wrong_pdf_page_index": 0,
+      "wrong_tier": "C",
+      "stronger_existing_alternative": "DIRECTORS' REPORT",
+      "stronger_pdf_page_index": 2,
+      "stronger_tier": "A"
+    },
+    {
+      "section": "Statement by Directors",
+      "wrong_selected": "DIRECTORS",
+      "wrong_pdf_page_index": 2,
+      "wrong_tier": "D",
+      "correct_candidate": "STATEMENT BY DIRECTOR PURSUANT TO",
+      "correct_pdf_page_index": 6
+    },
+    {
+      "section": "Statutory Declaration :unselected",
+      "wrong_result": "unknown_section and canonical prefix rejected",
+      "correct_candidate": "STATUTORY DECLARATION PURSUANT TO",
+      "correct_pdf_page_index": 7
+    },
+    {
+      "section": "Independent Auditors' Report",
+      "wrong_result": "canonical prefix rejected",
+      "correct_candidate": "INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE",
+      "correct_pdf_page_index": 8
+    },
+    {
+      "section": "Notes to the Financial Statements",
+      "wrong_selected": "FINANCIAL STATEMENTS",
+      "wrong_pdf_page_index": 0,
+      "wrong_tier": "D",
+      "correct_candidate": "NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024",
+      "correct_pdf_page_index": 16
+    }
+  ],
+  "root_cause": "The former final candidate ordering used a combined score before match tier, so cover-layout bonuses could let a Tier C/D candidate beat a later Tier A candidate. Generic containment lacked distinctive-token completeness, and canonical titles with normal trailing qualifiers were not a separate trusted class.",
+  "selection_mark_normalization": {
+    "removed_from_semantic_text": [":selected", ":unselected", "whitespace and punctuation variants"],
+    "raw_source_preserved": true,
+    "azure_payload_mutated": false
+  },
+  "core_token_model": {
+    "statement_by_directors": ["statement", "director"],
+    "notes_to_financial_statements": ["notes", "financial", "statement"],
+    "independent_auditors_report": ["independent", "auditor", "report"],
+    "controlled_equivalences": ["account/accounts", "auditor/auditors", "director/directors", "flow/flows", "report/reports", "statement/statements"],
+    "uncontrolled_stemming": false
+  },
+  "trusted_match_precedence": [
+    "A exact normalized title",
+    "B exact canonical alias, controlled equivalent, or canonical prefix with substantial/full expected core",
+    "C strong fuzzy with lexical, coverage, and length safeguards",
+    "D substantial containment with expected-core completeness"
+  ],
+  "same_tier_tie_break_order": [
+    "lexical score",
+    "expected core-token coverage",
+    "heading quality",
+    "distance from provisional offset",
+    "combined match score including bounded layout evidence",
+    "earlier PDF page",
+    "stable content id"
+  ],
+  "two_pass_resolution": {
+    "pass_1": "Choose the best Tier A/B candidate per entry and derive a provisional offset only with at least two agreeing anchors and at least 72% weighted support.",
+    "pass_2": "Select among lexically trusted candidates by tier first, then use provisional-offset distance as a same-tier tie-break. Page proximity cannot rescue an untrusted candidate."
+  },
+  "job_66_regression_fixture_result": {
+    "trusted_anchor_count": 9,
+    "selected_exact_count": 5,
+    "selected_canonical_prefix_count": 4,
+    "selected_fuzzy_count": 0,
+    "selected_partial_count": 0,
+    "weaker_selected_while_stronger_alternative_count": 0,
+    "off_regime_selected_anchor_count": 0,
+    "dominant_offsets": [1],
+    "weighted_offset_support": {"1": 8.56},
+    "alignment_confidence": 0.9884,
+    "requires_human_review": false
+  },
+  "safety": {
+    "provider_calls": 0,
+    "source_payload_mutations": 0,
+    "mapping_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0
+  }
+}

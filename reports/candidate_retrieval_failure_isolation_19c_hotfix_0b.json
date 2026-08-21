@@ -1,0 +1,69 @@
+{
+  "analysis_status": "PASS",
+  "feature": "19C-hotfix-0b",
+  "design": {
+    "row_local_outcome": "retrieval_failed",
+    "requires_human_review": true,
+    "selected_concept": null,
+    "cross_template_fallback": false,
+    "continue_independent_rows": true
+  },
+  "row_local_failures": [
+    "unsupported row context",
+    "candidate scoring exception",
+    "candidate sorting exception",
+    "context character-limit failure",
+    "empty safe candidate scope"
+  ],
+  "stage_fatal_failures": [
+    "current structure or classification missing/invalid/stale",
+    "registry unavailable or linkage invalid",
+    "concept inventory unavailable or candidate index malformed",
+    "duplicate or missing authoritative source identity",
+    "configured source row limit exceeded"
+  ],
+  "row_reason_codes": [
+    "missing_section_context",
+    "unclassified_section",
+    "ambiguous_template_group",
+    "unsupported_row_context",
+    "unsupported_period_type",
+    "unsupported_datatype",
+    "empty_candidate_scope",
+    "candidate_scoring_failed",
+    "candidate_sort_failed",
+    "candidate_card_invalid"
+  ],
+  "telemetry": {
+    "metrics": [
+      "source_rows_received",
+      "rows_structurally_skipped",
+      "rows_eligible",
+      "rows_attempted",
+      "rows_successful",
+      "rows_with_zero_safe_candidates",
+      "rows_failed_locally",
+      "stage_fatal_error_count"
+    ],
+    "row_error_fields": ["row_identifier", "reason_code", "exception_class"],
+    "maximum_row_errors": 100,
+    "source_values_persisted_in_telemetry": false,
+    "arbitrary_exception_messages_persisted": false,
+    "stack_traces_persisted": false
+  },
+  "regression_fixture": "tests/fixtures/toc_aware/fixture_n_job68_candidate_context_overflow.json",
+  "read_only_diagnostic": "scripts/diagnose_candidate_retrieval_job_19c.py --job-id 68",
+  "verification_evidence": {
+    "focused_tests": "33 passed",
+    "complete_19c_tests": "68 passed in 6.473 seconds",
+    "19a_19b_azure_celery_api_regressions": "128 passed in 16.360 seconds",
+    "row_local_publication_test": "PASS",
+    "deterministic_zero_provider_test": "PASS",
+    "stage_fatal_registry_test": "PASS",
+    "stage_fatal_inventory_test": "PASS",
+    "mutation_counts_zero": true,
+    "full_backend_suite": "1471 passed in 74.005 seconds"
+  },
+  "ranking_quality_scope": "UNCHANGED",
+  "production_fresh_pdf_rerun": "REQUIRED"
+}

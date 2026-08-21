@@ -1,0 +1,524 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-closeout",
+  "generated_at": "2026-07-23T03:54:21.5890703+00:00",
+  "phase": "phase_1_case_selection",
+  "status": "waiting_for_manual_ui_actions",
+  "implementation_changed": false,
+  "ingestion_gate": {
+    "status": "passed",
+    "source_report": "reports/celery_terminal_state_live_smoke_closeout.json",
+    "repeated": false,
+    "jobs": [
+      59,
+      60,
+      61
+    ]
+  },
+  "selection_summary": {
+    "available_pending_suggestions": 35,
+    "available_completed_supervisor_reviews": 0,
+    "available_supervisor_guided_revisions": 0,
+    "selected_case_count": 5,
+    "filing_count": 3,
+    "job_ids": [
+      59,
+      60,
+      61
+    ],
+    "statement_family_count": 3,
+    "statement_families": [
+      "Statement of Cash Flows",
+      "Statement of Financial Position",
+      "Statement of Profit or Loss"
+    ],
+    "category_count": 5,
+    "categories": [
+      "statement_family_mismatch",
+      "period_context_mismatch",
+      "concept_family_or_scope_mismatch",
+      "preferred_alternative_or_disagreement",
+      "ambiguous_or_generic_row"
+    ],
+    "likely_qname_change_cases": 1,
+    "likely_qname_retention_cases": 2,
+    "appropriate_abstention_cases": 2,
+    "actual_supervisor_outcomes_available": false,
+    "quality_evaluation_started": false
+  },
+  "selection_policy": {
+    "preferred_recent_jobs": true,
+    "exactly_five_cases": true,
+    "at_least_two_filings": true,
+    "at_least_three_statement_families": true,
+    "target_outcome_distribution": {
+      "disagree_or_prefer_alternative": 2,
+      "needs_human_review_with_concrete_issue": 2,
+      "request_better_candidate": 1
+    },
+    "outcome_distribution_is_target_only": true,
+    "note": "No Supervisor result exists yet. Expected outcomes guide representative selection and are not fabricated review results."
+  },
+  "cases": [
+    {
+      "case_id": "18f-g-a-case-01",
+      "selection_category": "statement_family_mismatch",
+      "target_supervisor_outcome": "request_better_candidate",
+      "likely_revision_behavior": "abstain_unless_a_cash_flow_tax_candidate_is_supported",
+      "filing_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "job_id": 61,
+      "page_number": 22,
+      "row_id": "384594c5-8f64-4ec8-b7e0-8cc3f717523f",
+      "suggestion_id": "c3d67b79-9543-4018-9dd1-85e7c60d56f2",
+      "row_label": "Tax expenses for the year",
+      "row_value": "0",
+      "prior_value": "-1077",
+      "financial_year": 2024,
+      "prior_financial_year": 2023,
+      "statement_family": "Statement of Cash Flows",
+      "section_block": null,
+      "section_block_evidence": "Not persisted in diagnostic_json.",
+      "initial_mapping": {
+        "qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "concept_label": "Tax expense",
+        "candidate_statement_type": "Statement of Profit or Loss (By Function)",
+        "confidence": 0.85,
+        "reason": "The label 'Tax expenses for the year' aligns best with 'Tax expense' concept despite originating in a cash flow context, as tax is a standard financial item that appears across statements. The deterministic score (0.41) is second highest among candidates, and semantic fit is strong.",
+        "status": "suggested",
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "created_at": "2026-07-23T03:12:14.211989+00:00"
+      },
+      "candidate_concepts": [
+        {
+          "qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+          "concept_label": "Tax expense",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "confidence": 0.85
+        },
+        {
+          "qname": "ifrs-smes:OtherExpenseByFunction",
+          "concept_label": "Total other expenses",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "confidence": 0.3
+        },
+        {
+          "qname": "ifrs-smes:OtherExpenseByNature",
+          "concept_label": "Total other expenses",
+          "statement_type": "Statement of Profit or Loss (By Nature)",
+          "confidence": 0.3
+        },
+        {
+          "qname": "ifrs-smes:AdministrativeExpense",
+          "concept_label": "Administrative expenses",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "confidence": 0.1
+        },
+        {
+          "qname": "ifrs-smes:ProfitLoss",
+          "concept_label": "Total Profit (Loss)",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "confidence": 0.05
+        }
+      ],
+      "existing_supervisor_review": null,
+      "correction_eligibility": {
+        "currently_eligible": false,
+        "current_reason": "missing_supervisor_review",
+        "initial_suggestion_status_is_suggested": true,
+        "confirmed_tag_id_is_null": true,
+        "candidate_count": 5,
+        "existing_revision_count": 0,
+        "eligible_after_review_if": "A completed valid review disagrees, requests a better candidate, or records an eligible concrete mapping issue."
+      },
+      "selection_reason": "The row is in a cash-flow statement, but every available candidate is a profit-or-loss concept. The initial reason explicitly acknowledges the statement mismatch and still assigns 0.85 confidence. This is the clearest statement-family mismatch and the strongest abstention/request-better-candidate case.",
+      "initial_state": {
+        "row_template_field_id": null,
+        "confirmed_tag_id": null,
+        "is_reviewed": false,
+        "review_count": 0,
+        "revision_count": 0,
+        "snapshot_sha256": "8c5d0b65d03f79194444f31781037bbc3b7455e98a0e7c10688b1183df6221d7"
+      },
+      "user_still_needs_supervisor_review": true,
+      "user_still_needs_remapping": true,
+      "remapping_action_is_conditional_on_eligible_review": true
+    },
+    {
+      "case_id": "18f-g-a-case-02",
+      "selection_category": "period_context_mismatch",
+      "target_supervisor_outcome": "needs_human_review",
+      "likely_revision_behavior": "retain_qname_with_clear_period_context_explanation_or_abstain",
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_id": 59,
+      "page_number": 16,
+      "row_id": "9e1c42a9-db17-4130-a007-ee149543ca5d",
+      "suggestion_id": "38feda38-bec0-427e-a28d-f5d258adb081",
+      "row_label": "Cash and cash equivalents at beginning of year / period",
+      "row_value": "300",
+      "prior_value": "0",
+      "financial_year": 2024,
+      "prior_financial_year": 2023,
+      "statement_family": "Statement of Cash Flows",
+      "section_block": null,
+      "section_block_evidence": "Not persisted in diagnostic_json.",
+      "initial_mapping": {
+        "qname": "ifrs-smes:CashAndCashEquivalents",
+        "concept_label": "Cash and cash equivalents at end of period",
+        "candidate_statement_type": "Statement of Cash Flows (Direct Method)",
+        "confidence": 0.93,
+        "reason": "The extracted label 'Cash and cash equivalents at beginning of year / period' closely matches the meaning and structure of ifrs-smes:CashAndCashEquivalents, which is used for both beginning and end-of-period disclosures in cash flow statements. The statement context (Statement of Cash Flows) and few-shot examples support this mapping. Deterministic method confirms phrase containment with high score (0.93).",
+        "status": "suggested",
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "created_at": "2026-07-23T03:10:44.753729+00:00"
+      },
+      "candidate_concepts": [
+        {
+          "qname": "ifrs-smes:CashAndCashEquivalents",
+          "concept_label": "Cash and cash equivalents at end of period",
+          "statement_type": "Statement of Cash Flows (Direct Method)",
+          "confidence": 0.93
+        },
+        {
+          "qname": "ssmt:CashAndBankBalances",
+          "concept_label": "Total cash and cash equivalents",
+          "statement_type": "Statement of Financial Position",
+          "confidence": 0.7
+        },
+        {
+          "qname": "ifrs-smes:CashEquivalents",
+          "concept_label": "Cash equivalents",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "confidence": 0.55
+        }
+      ],
+      "existing_supervisor_review": null,
+      "correction_eligibility": {
+        "currently_eligible": false,
+        "current_reason": "missing_supervisor_review",
+        "initial_suggestion_status_is_suggested": true,
+        "confirmed_tag_id_is_null": true,
+        "candidate_count": 3,
+        "existing_revision_count": 0,
+        "eligible_after_review_if": "A completed valid review records an eligible period/ambiguous-label issue, disagrees, or requests a better candidate."
+      },
+      "selection_reason": "The row explicitly says beginning of period while the candidate metadata label says end of period. The qname may still be defensible when period is carried by context, making this a useful retained-qname or explicit-period-ambiguity test rather than a forced qname-change case.",
+      "initial_state": {
+        "row_template_field_id": null,
+        "confirmed_tag_id": null,
+        "is_reviewed": false,
+        "review_count": 0,
+        "revision_count": 0,
+        "snapshot_sha256": "1571807c83440c26243adc13120a27b15c2eda1a899f135fbd46b412693d2d7a"
+      },
+      "user_still_needs_supervisor_review": true,
+      "user_still_needs_remapping": true,
+      "remapping_action_is_conditional_on_eligible_review": true
+    },
+    {
+      "case_id": "18f-g-a-case-03",
+      "selection_category": "concept_family_or_scope_mismatch",
+      "target_supervisor_outcome": "needs_human_review",
+      "likely_revision_behavior": "retain_total_trade_receivables_or_choose_a_supported_current_receivables_variant",
+      "filing_name": "FINE BATIK SDN. BHD.",
+      "job_id": 60,
+      "page_number": 13,
+      "row_id": "26a44a6f-bc75-4727-9507-0df28e9e7393",
+      "suggestion_id": "144bcaa2-a328-42f4-a133-49905aa6411d",
+      "row_label": "Trade receivables",
+      "row_value": "0",
+      "prior_value": "6913",
+      "financial_year": 2024,
+      "prior_financial_year": 2023,
+      "statement_family": "Statement of Financial Position",
+      "section_block": null,
+      "section_block_evidence": "Not persisted in diagnostic_json; current/non-current row qualification is not available.",
+      "initial_mapping": {
+        "qname": "ssmt-mpers:TradeReceivables",
+        "concept_label": "Total trade receivables",
+        "candidate_statement_type": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+        "confidence": 0.97,
+        "reason": "The extracted label 'Trade receivables' closely matches the candidate concept 'Total trade receivables' (ssmt-mpers:TradeReceivables) via exact alias matching logic and high deterministic score. Despite the absence of 'Total' in the extracted label, this is a common abbreviation pattern in financial statements. Statement context is Statement of Financial Position, which aligns with the candidate's intended use.",
+        "status": "suggested",
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "created_at": "2026-07-23T03:09:04.745483+00:00"
+      },
+      "candidate_concepts": [
+        {
+          "qname": "ssmt-mpers:TradeReceivables",
+          "concept_label": "Total trade receivables",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+          "confidence": 0.97
+        },
+        {
+          "qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "concept_label": "Trade and other current receivables",
+          "statement_type": "Statement of Financial Position",
+          "confidence": 0.85
+        },
+        {
+          "qname": "ssmt-mpers:CurrentTradeReceivables",
+          "concept_label": "Total current trade receivables",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "confidence": 0.8
+        }
+      ],
+      "existing_supervisor_review": null,
+      "correction_eligibility": {
+        "currently_eligible": false,
+        "current_reason": "missing_supervisor_review",
+        "initial_suggestion_status_is_suggested": true,
+        "confirmed_tag_id_is_null": true,
+        "candidate_count": 3,
+        "existing_revision_count": 0,
+        "eligible_after_review_if": "A completed valid review records an eligible concept-scope issue, disagrees, or requests a better candidate."
+      },
+      "selection_reason": "The candidates span total trade receivables, trade-and-other current receivables, and current trade receivables. The row lacks a persisted current/non-current section qualifier, so the selected total/order-of-liquidity concept may be correct but its 0.97 confidence needs concept-scope scrutiny.",
+      "initial_state": {
+        "row_template_field_id": null,
+        "confirmed_tag_id": null,
+        "is_reviewed": false,
+        "review_count": 0,
+        "revision_count": 0,
+        "snapshot_sha256": "330c4230c92582381c0ceeaf7091c9f08dcd71d0cee2c2dd645652997abb1de7"
+      },
+      "user_still_needs_supervisor_review": true,
+      "user_still_needs_remapping": true,
+      "remapping_action_is_conditional_on_eligible_review": true
+    },
+    {
+      "case_id": "18f-g-a-case-04",
+      "selection_category": "preferred_alternative_or_disagreement",
+      "target_supervisor_outcome": "disagree_or_prefer_alternative",
+      "likely_revision_behavior": "change_to_ifrs_smes_cash_flows_from_used_in_investing_activities_or_abstain",
+      "filing_name": "FINE BATIK SDN. BHD.",
+      "job_id": 60,
+      "page_number": 16,
+      "row_id": "e5304cca-d3a9-4f76-acae-1a6af42e0266",
+      "suggestion_id": "38b4306a-0fae-47b6-af5a-ead713204c39",
+      "row_label": "Cash flows from investing activities",
+      "row_value": "0",
+      "prior_value": "0",
+      "financial_year": 2024,
+      "prior_financial_year": 2023,
+      "statement_family": "Statement of Cash Flows",
+      "section_block": null,
+      "section_block_evidence": "Not persisted in diagnostic_json.",
+      "initial_mapping": {
+        "qname": "ifrs-smes:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities",
+        "concept_label": "Other cash inflows (outflows) from investing activities",
+        "candidate_statement_type": "Statement of Cash Flows (Direct Method)",
+        "confidence": 0.65,
+        "reason": "The extracted label 'Cash flows from investing activities' aligns best with 'Other inflows outflows of cash classified as investing activities' under IFRS for SMEs in the direct method context, as it captures specific investing outflows not summarized under net investing cash flows.",
+        "status": "suggested",
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "created_at": "2026-07-23T03:11:11.059263+00:00"
+      },
+      "candidate_concepts": [
+        {
+          "qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "concept_label": "Net cash flows from (used in) investing activities",
+          "statement_type": "Statement of Cash Flows (Direct Method)",
+          "confidence": 0.6
+        },
+        {
+          "qname": "ifrs-smes:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities",
+          "concept_label": "Other cash inflows (outflows) from investing activities",
+          "statement_type": "Statement of Cash Flows (Direct Method)",
+          "confidence": 0.65
+        },
+        {
+          "qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "concept_label": "Net cash flows from (used in) operating activities",
+          "statement_type": "Statement of Cash Flows (Direct Method)",
+          "confidence": 0.3
+        }
+      ],
+      "preferred_alternative_to_review": {
+        "qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+        "reason": "The row label is a whole investing-activities cash-flow line, while the selected concept is specifically for other inflows/outflows. The net investing concept is already candidate constrained."
+      },
+      "existing_supervisor_review": null,
+      "correction_eligibility": {
+        "currently_eligible": false,
+        "current_reason": "missing_supervisor_review",
+        "initial_suggestion_status_is_suggested": true,
+        "confirmed_tag_id_is_null": true,
+        "candidate_count": 3,
+        "existing_revision_count": 0,
+        "eligible_after_review_if": "A completed valid review disagrees, prefers the available net-investing candidate, or records an eligible broad-substitute issue."
+      },
+      "selection_reason": "This is the strongest bounded qname-change case. The selected 'other inflows/outflows' concept is narrower than the generic whole-section row, while the candidate list already contains the net investing cash-flow alternative.",
+      "initial_state": {
+        "row_template_field_id": null,
+        "confirmed_tag_id": null,
+        "is_reviewed": false,
+        "review_count": 0,
+        "revision_count": 0,
+        "snapshot_sha256": "0631e8bf9686a22720d39e36ab1e7f80aa7a17000d311e39cbdfeab3292523ce"
+      },
+      "user_still_needs_supervisor_review": true,
+      "user_still_needs_remapping": true,
+      "remapping_action_is_conditional_on_eligible_review": true
+    },
+    {
+      "case_id": "18f-g-a-case-05",
+      "selection_category": "ambiguous_or_generic_row",
+      "target_supervisor_outcome": "disagree_or_prefer_alternative",
+      "likely_revision_behavior": "retain_with_broad_substitute_explanation_or_abstain",
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_id": 59,
+      "page_number": 14,
+      "row_id": "ecca68af-d1db-4784-9246-72dc2dba1dc7",
+      "suggestion_id": "790e39da-f6dc-42a7-9b2b-8d0b6a1e52fd",
+      "row_label": "Add : Other income",
+      "row_value": "140",
+      "prior_value": "0",
+      "financial_year": 2024,
+      "prior_financial_year": null,
+      "statement_family": "Statement of Profit or Loss",
+      "section_block": null,
+      "section_block_evidence": "Not persisted in diagnostic_json.",
+      "initial_mapping": {
+        "qname": "ifrs-smes:OtherIncome",
+        "concept_label": "Total other income",
+        "candidate_statement_type": "Statement of Profit or Loss (By Function)",
+        "confidence": 0.86,
+        "reason": "The extracted label 'Add : Other income' matches deterministically to 'Total other income' via phrase containment, with high score (0.86), correct statement context (Statement of Profit or Loss), and strong precedent in few-shot examples. Other candidates are balance sheet accruals or deferrals, which are contextually misaligned.",
+        "status": "suggested",
+        "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "created_at": "2026-07-23T03:09:50.215377+00:00"
+      },
+      "candidate_concepts": [
+        {
+          "qname": "ifrs-smes:OtherIncome",
+          "concept_label": "Total other income",
+          "statement_type": "Statement of Profit or Loss (By Function)",
+          "confidence": 0.86
+        },
+        {
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "concept_label": "Other comprehensive income",
+          "statement_type": "Statement of Comprehensive Income",
+          "confidence": 0.3
+        },
+        {
+          "qname": "ssmt-mpers:OtherAccruedIncome",
+          "concept_label": "Accrued income",
+          "statement_type": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+          "confidence": 0.2
+        }
+      ],
+      "existing_supervisor_review": null,
+      "correction_eligibility": {
+        "currently_eligible": false,
+        "current_reason": "missing_supervisor_review",
+        "initial_suggestion_status_is_suggested": true,
+        "confirmed_tag_id_is_null": true,
+        "candidate_count": 3,
+        "existing_revision_count": 0,
+        "eligible_after_review_if": "A completed valid review disagrees, requests a better candidate, or records an eligible broad-substitute/ambiguous-label issue."
+      },
+      "selection_reason": "The row label is generic and additive, but the candidate is a total summary concept. No specific other-income subtype is available in the bounded candidates, making retention with explicit limitation or abstention safer than forced confidence.",
+      "initial_state": {
+        "row_template_field_id": null,
+        "confirmed_tag_id": null,
+        "is_reviewed": false,
+        "review_count": 0,
+        "revision_count": 0,
+        "snapshot_sha256": "ad4801317eed30ea13b79da69acde323a8babb5103d00727b1a1bf5f02d1602f"
+      },
+      "user_still_needs_supervisor_review": true,
+      "user_still_needs_remapping": true,
+      "remapping_action_is_conditional_on_eligible_review": true
+    }
+  ],
+  "current_persistence_evidence": {
+    "selected_initial_suggestions_still_suggested": 5,
+    "selected_initial_suggestions_with_confirmed_tag_id": 0,
+    "selected_rows_with_template_field_id": 0,
+    "selected_rows_marked_reviewed": 0,
+    "selected_supervisor_review_count": 0,
+    "selected_revision_count": 0,
+    "initial_snapshot_hashes_recorded": 5
+  },
+  "runtime_visibility_and_gates": {
+    "supervisor_live_backend_enabled": true,
+    "supervisor_live_admin_only": false,
+    "supervisor_live_ui_visible": true,
+    "supervisor_mapper_feedback_enabled": true,
+    "supervisor_mapper_feedback_auto_run": false,
+    "supervisor_mapper_feedback_max_retries": 1,
+    "supervisor_mapper_feedback_admin_only": false,
+    "supervisor_mapper_feedback_ui_visible": true,
+    "frontend_flags_are_visibility_only": true,
+    "backend_gates_remain_authoritative": true
+  },
+  "manual_ui_actions": {
+    "required": true,
+    "do_not_use_batch_supervisor_action": true,
+    "reason_not_to_use_batch": "Only the five selected cards should trigger live review; the job-wide action would review unrelated suggestions.",
+    "per_case_steps": [
+      "Open the named job in Review Workspace and locate the AI Mapping Suggestions card by exact row label and initial qname.",
+      "Click Run Supervisor review on that card and confirm the live advisory request.",
+      "Wait until the persisted Supervisor decision and issues appear.",
+      "If the card shows Re-run mapping with Supervisor feedback, click it exactly once.",
+      "If the remapping button does not appear, record the Supervisor decision; the review was not correction-eligible and the case may need replacement for Phase 3.",
+      "Do not Accept or Reject the initial suggestion and do not run a second correction attempt."
+    ],
+    "selected_cards": [
+      {
+        "case_id": "18f-g-a-case-01",
+        "job_id": 61,
+        "row_label": "Tax expenses for the year",
+        "initial_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations"
+      },
+      {
+        "case_id": "18f-g-a-case-02",
+        "job_id": 59,
+        "row_label": "Cash and cash equivalents at beginning of year / period",
+        "initial_qname": "ifrs-smes:CashAndCashEquivalents"
+      },
+      {
+        "case_id": "18f-g-a-case-03",
+        "job_id": 60,
+        "row_label": "Trade receivables",
+        "initial_qname": "ssmt-mpers:TradeReceivables"
+      },
+      {
+        "case_id": "18f-g-a-case-04",
+        "job_id": 60,
+        "row_label": "Cash flows from investing activities",
+        "initial_qname": "ifrs-smes:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities"
+      },
+      {
+        "case_id": "18f-g-a-case-05",
+        "job_id": 59,
+        "row_label": "Add : Other income",
+        "initial_qname": "ifrs-smes:OtherIncome"
+      }
+    ]
+  },
+  "safety": {
+    "live_supervisor_calls_by_selection": 0,
+    "live_mapper_calls_by_selection": 0,
+    "database_or_job_mutations_by_selection": 0,
+    "initial_suggestion_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "automatic_accepts": 0,
+    "automatic_rejects": 0,
+    "auditor_xml_sent_externally": false,
+    "parsed_auditor_xbrl_facts_sent_externally": false,
+    "benchmark_gold_qname_sent_externally": false,
+    "target_answer_sent_externally": false,
+    "evaluation_label_sent_externally": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "next_transition": {
+    "feature_remains_active": true,
+    "phase_2_status": "waiting_for_user_manual_ui_actions",
+    "phase_3_status": "not_started",
+    "resume_condition": "The user completes the selected card-level Supervisor reviews and one eligible remapping attempt per case, then asks Codex to inspect the persisted records.",
+    "recommended_next_feature": null
+  }
+}

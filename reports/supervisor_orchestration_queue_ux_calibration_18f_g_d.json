@@ -1,0 +1,93 @@
+{
+  "feature": "18F-G-D",
+  "resume_feature": "18F-G-D-resume",
+  "generated_at": "2026-07-28T10:54:40+08:00",
+  "result": "passed_no_code_change",
+  "served_frontend": {
+    "bundle": "/app/assets/app.js",
+    "canonical_queue_present": true,
+    "explicit_actionability_fields_present": true,
+    "stale_contract_warning_visible": false
+  },
+  "summary": {
+    "status": "passed",
+    "backend_frontend_difference_count": 0,
+    "assessment": "The metric pills are dense but remain readable and use like-for-like canonical counts."
+  },
+  "filters": {
+    "status": "passed",
+    "labels": [
+      "All suggestions",
+      "Supervisor eligible",
+      "High priority",
+      "Medium priority",
+      "Already reviewed",
+      "Remapping available",
+      "Revision completed",
+      "Not eligible"
+    ],
+    "jobs_tested": [
+      59,
+      60,
+      61
+    ],
+    "comparisons": 24,
+    "difference_count": 0,
+    "duplicate_card_count": 0,
+    "assessment": "All filters are understandable and map to distinct workflow states."
+  },
+  "state_presentation": {
+    "mapper_abstention": {
+      "status": "passed",
+      "evidence": "AI summary shows no-safe-mapping separately from human rejected; the card shows mapper status rejected and remains non-terminal."
+    },
+    "priority": {
+      "status": "passed",
+      "evidence": "Expanded card text explicitly says structural signals indicate review priority and do not prove incorrectness."
+    },
+    "reviewed": {
+      "status": "passed",
+      "evidence": "The live review moved the row to Already reviewed without applying a mapping."
+    },
+    "remapping_available": {
+      "status": "passed",
+      "evidence": "The correction action appeared only while remapping_executable was true."
+    },
+    "revision_complete": {
+      "status": "passed",
+      "evidence": "Correction attempt 1 completed is visible and the second correction action is absent."
+    },
+    "accepted": {
+      "status": "not_applicable_no_current_rows",
+      "evidence": "Targeted frontend/backend terminal-state regressions passed."
+    },
+    "ignored": {
+      "status": "not_applicable_no_current_rows",
+      "evidence": "Targeted frontend/backend terminal-state regressions passed."
+    }
+  },
+  "batch": {
+    "status": "passed",
+    "max_batch_size": 10,
+    "button_count_per_job": 10,
+    "confirmation_count_per_job": 10,
+    "dialogs_dismissed": 3,
+    "batch_executed": false,
+    "assessment": "The intended live call count and backend cap are explicit."
+  },
+  "actions": {
+    "single_review_loading_and_duplicate_guard": "passed",
+    "guided_remap_loading_and_duplicate_guard": "passed",
+    "automatic_action_wording": "passed",
+    "human_review_wording": "passed"
+  },
+  "refresh": {
+    "status": "passed",
+    "get_only": true,
+    "stale_state": false,
+    "duplicate_cards": false
+  },
+  "code_changes_required": false,
+  "remaining_manual_checks": [],
+  "recommendation": "No 18F-G-D-hotfix-2 is justified. Continue to 18F-G-E."
+}

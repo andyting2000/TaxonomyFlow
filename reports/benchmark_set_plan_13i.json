@@ -1,0 +1,333 @@
+{
+  "feature": "Feature #13I",
+  "title": "Representative 7-PDF benchmark set creation, upload/runbook, and future few-shot planning",
+  "date": "2026-05-05",
+  "purpose": "Define the seven-PDF benchmark set, upload/runbook, manifest examples, metrics interpretation, future ground-truth shape, and few-shot leakage policy before any extraction architecture rewrite.",
+  "scope_guard": {
+    "planning_only": true,
+    "production_behavior_changed": false,
+    "database_mutated": false,
+    "files_uploaded_automatically": false,
+    "private_pdfs_committed": false,
+    "no_real_customer_data_in_examples": true,
+    "allowed_changed_files": [
+      "benchmark_cases/README.md",
+      "benchmark_cases/benchmark_manifest.example.json",
+      "benchmark_cases/benchmark_manifest.local.example.json",
+      "benchmark_cases/few_shot_examples.example.json",
+      "reports/benchmark_set_plan_13i.json",
+      "reports/benchmark_set_plan_13i.md",
+      "tests/test_benchmark_set_plan.py",
+      "feature_list.json",
+      "PROGRESS.md"
+    ]
+  },
+  "user_pdf_context": {
+    "available_pdf_count": 7,
+    "mostly_ocr_or_scanned": true,
+    "current_benchmark_candidate": "Job 11",
+    "job_11_metrics_from_13h": {
+      "total_extracted_rows": 53,
+      "rows_with_template_field_id": 37,
+      "rows_without_template_field_id": 16,
+      "rows_with_confirmed_tag_id": 0,
+      "rows_with_blank_statement_type": 0,
+      "duplicate_label_count": 0,
+      "suspicious_signed_value_count": 7
+    },
+    "job_9_policy": "Job 9 is smoke-test-only and must not be used as benchmark ground truth."
+  },
+  "required_categories": [
+    {
+      "case_id": "standard_text_native_01",
+      "category": "standard_text_native",
+      "purpose": "Clear text-native baseline with normal financial statement structure.",
+      "ideal_pdf_characteristics": [
+        "selectable text",
+        "clear headings",
+        "ordinary financial statements"
+      ],
+      "risk_tested": [
+        "baseline extraction quality",
+        "statement_type propagation",
+        "ordinary mapping coverage"
+      ],
+      "expected_processing_notes": "Should be the easiest baseline if the user has at least one text-native PDF.",
+      "required_or_optional": "required_if_available",
+      "benchmark_role": "primary_benchmark",
+      "needs_human_ground_truth_later": true
+    },
+    {
+      "case_id": "ocr_clean_01",
+      "category": "ocr_clean",
+      "purpose": "Readable OCR/scanned PDF.",
+      "ideal_pdf_characteristics": [
+        "scanned or OCR-heavy",
+        "clear text",
+        "limited skew"
+      ],
+      "risk_tested": [
+        "OCR-heavy extraction",
+        "vision fallback routing",
+        "row completeness"
+      ],
+      "expected_processing_notes": "Important because most available PDFs are OCR/scanned or OCR-heavy.",
+      "required_or_optional": "required",
+      "benchmark_role": "ocr_benchmark",
+      "needs_human_ground_truth_later": true
+    },
+    {
+      "case_id": "ocr_poor_quality_01",
+      "category": "ocr_poor_quality",
+      "purpose": "Difficult scanned/OCR PDF with blur, skew, shadows, small text, or inconsistent OCR.",
+      "ideal_pdf_characteristics": [
+        "poor scan quality",
+        "OCR artifacts",
+        "layout or image noise"
+      ],
+      "risk_tested": [
+        "OCR failure modes",
+        "missing rows",
+        "wrong value/sign recognition"
+      ],
+      "expected_processing_notes": "Use as OCR stress evidence, not the only success criterion.",
+      "required_or_optional": "required",
+      "benchmark_role": "ocr_benchmark",
+      "needs_human_ground_truth_later": true
+    },
+    {
+      "case_id": "complex_table_01",
+      "category": "complex_table",
+      "purpose": "Dense tables with multiple year columns, subtotals/totals, and continuation pages.",
+      "ideal_pdf_characteristics": [
+        "multi-year columns",
+        "subtotals and totals",
+        "dense tabular rows"
+      ],
+      "risk_tested": [
+        "table structure loss",
+        "current/prior year confusion",
+        "subtotal/total confusion"
+      ],
+      "expected_processing_notes": "High priority for comparing current extraction to text/table-first prototypes.",
+      "required_or_optional": "required",
+      "benchmark_role": "primary_benchmark",
+      "needs_human_ground_truth_later": true
+    },
+    {
+      "case_id": "notes_heavy_01",
+      "category": "notes_heavy",
+      "purpose": "Notes/schedules with company-name-like detail rows and receivables/payables.",
+      "ideal_pdf_characteristics": [
+        "many notes",
+        "detail schedules",
+        "company-name-like labels"
+      ],
+      "risk_tested": [
+        "broad receivable/payable mapping",
+        "guardrail-sensitive detail rows",
+        "mapping review burden"
+      ],
+      "expected_processing_notes": "Useful for testing whether future mapping candidates avoid broad concept overreach.",
+      "required_or_optional": "required",
+      "benchmark_role": "primary_benchmark",
+      "needs_human_ground_truth_later": true
+    },
+    {
+      "case_id": "customer_like_01",
+      "category": "customer_like",
+      "purpose": "Closest to expected real customer upload.",
+      "ideal_pdf_characteristics": [
+        "near-real customer-like filing",
+        "representative formatting",
+        "complete enough for review-burden assessment"
+      ],
+      "risk_tested": [
+        "realistic end-to-end extraction",
+        "mapping suitability",
+        "human review burden"
+      ],
+      "expected_processing_notes": "Keep as holdout if possible. Do not use the same pages as few-shot examples unless excluded from evaluation.",
+      "required_or_optional": "required",
+      "benchmark_role": "holdout",
+      "needs_human_ground_truth_later": true
+    },
+    {
+      "case_id": "edge_case_01",
+      "category": "edge_case",
+      "purpose": "Unusual formatting, messy layout, mixed language, mixed scan/text, or other difficult case.",
+      "ideal_pdf_characteristics": [
+        "formatting edge case",
+        "mixed scan/text",
+        "non-standard layout"
+      ],
+      "risk_tested": [
+        "fallback behavior",
+        "layout ambiguity",
+        "stress-only robustness"
+      ],
+      "expected_processing_notes": "Stress test only. Do not treat this as the primary success criterion.",
+      "required_or_optional": "required",
+      "benchmark_role": "stress_edge",
+      "needs_human_ground_truth_later": true
+    }
+  ],
+  "benchmark_vs_few_shot_policy": {
+    "problem": "Using the same PDFs or pages as few-shot prompt examples and benchmark evaluation targets causes benchmark leakage.",
+    "option_a_strict_benchmark_first": {
+      "summary": "Use all seven PDFs as benchmark/holdout first, record initial benchmark output, then select only small snippets from one or two PDFs as few-shot candidates later.",
+      "pros": [
+        "clean initial baseline",
+        "maximizes evidence before prompt tuning",
+        "reduces leakage risk"
+      ],
+      "cons": [
+        "few-shot prompt work starts later"
+      ]
+    },
+    "option_b_split_now": {
+      "summary": "Use five PDFs as benchmark/holdout and reserve two PDFs or selected pages as future few-shot candidates.",
+      "pros": [
+        "allows earlier few-shot planning"
+      ],
+      "cons": [
+        "smaller holdout set",
+        "requires stricter case labeling"
+      ]
+    },
+    "recommended_for_user": "Use strict benchmark-first because only seven PDFs are available. After initial benchmark, select one or two small, manually verified snippets as few-shot examples and keep at least three to five PDFs/pages as holdout.",
+    "leakage_rules": [
+      "Few-shot examples must be manually verified.",
+      "Few-shot examples should be small snippets, not entire PDFs.",
+      "Pages used in prompts must be excluded from benchmark scoring unless labeled as training/few-shot cases.",
+      "Do not evaluate few-shot improvements on exact examples used in the prompt."
+    ]
+  },
+  "benchmark_policy": {
+    "minimum_before_architecture_prototype": "At least 3 benchmark_candidate jobs, excluding Job 9.",
+    "preferred_before_architecture_prototype": "At least 5 benchmark_candidate jobs.",
+    "seven_pdf_policy": "Upload and benchmark all seven PDFs if possible; keep at least 3-5 PDFs/pages as holdout.",
+    "job_9_policy": "Job 9 can test command execution and regression smoke only.",
+    "job_11_policy": "Job 11 can remain a benchmark_candidate but should not be the only benchmark.",
+    "no_overfitting_policy": "Do not optimize extraction/mapping architecture around one PDF.",
+    "cutover_policy": "No new extraction architecture should be cut over until old vs new comparison exists on the representative benchmark set."
+  },
+  "upload_runbook_summary": {
+    "start_backend": [
+      "docker compose up -d db redis",
+      "python -B db_init.py --apply",
+      "uvicorn main:app --host 0.0.0.0 --port 8001"
+    ],
+    "start_worker": "python -B start_celery.py",
+    "open_app": [
+      "http://localhost:8001/app",
+      "http://localhost:5173/ if using Vite"
+    ],
+    "record_for_each_upload": [
+      "case_id",
+      "category",
+      "benchmark_role",
+      "job_id",
+      "company_name used",
+      "registration_number used",
+      "financial_year_end used",
+      "text-native/OCR/scanned/mixed",
+      "reached REVIEW",
+      "observed page count",
+      "notes"
+    ],
+    "commands": {
+      "job_11_only": "python -B scripts/benchmark_extraction_mapping.py --jobs 11 --markdown",
+      "seven_pdf_set_plus_job_11": "python -B scripts/benchmark_extraction_mapping.py --jobs 11 12 13 14 15 16 17 18 --markdown",
+      "seven_pdf_set_with_smoke_job": "python -B scripts/benchmark_extraction_mapping.py --jobs 9 11 12 13 14 15 16 17 18 --include-job-9 --markdown",
+      "optional_existing_xbrl_arelle": "python -B scripts/benchmark_extraction_mapping.py --jobs 11 12 13 14 15 16 17 18 --markdown --with-xbrl-audit --with-arelle-baseline"
+    }
+  },
+  "manifest_schema": {
+    "path": "benchmark_cases/benchmark_manifest.example.json",
+    "local_template_path": "benchmark_cases/benchmark_manifest.local.example.json",
+    "fields": [
+      "case_id",
+      "category",
+      "description",
+      "file_name_placeholder",
+      "uploaded_job_id",
+      "job_role",
+      "benchmark_role",
+      "is_smoke_test",
+      "is_primary_benchmark",
+      "is_holdout",
+      "is_few_shot_candidate",
+      "pdf_characteristics",
+      "expected_risks",
+      "notes",
+      "ground_truth_status",
+      "benchmark_command"
+    ]
+  },
+  "few_shot_example_schema": {
+    "path": "benchmark_cases/few_shot_examples.example.json",
+    "fields": [
+      "example_id",
+      "source_case_id",
+      "source_pdf_role",
+      "allowed_for_prompting",
+      "excluded_from_evaluation",
+      "page_number",
+      "statement_type",
+      "source_evidence_excerpt",
+      "input_type",
+      "input_excerpt",
+      "expected_output_schema",
+      "expected_rows",
+      "mapping_notes",
+      "why_this_is_a_good_example",
+      "caution_notes"
+    ],
+    "expected_row_fields": [
+      "raw_label",
+      "clean_label",
+      "raw_value",
+      "normalized_value",
+      "year",
+      "column_name",
+      "statement_section",
+      "row_type",
+      "sign_source",
+      "expected_concept_id",
+      "evidence_text",
+      "do_not_invent"
+    ]
+  },
+  "metrics_interpretation": {
+    "rows_extracted": "High or low alone does not prove correctness.",
+    "template_field_id_coverage": "Useful, but can hide wrong mappings.",
+    "confirmed_tag_coverage": "Usually zero before human review.",
+    "blank_statement_type": "Should be near zero for fresh jobs.",
+    "unmapped_rate": "High means mapping/candidate generation needs work.",
+    "duplicate_labels": "May indicate extraction duplication or legitimate repeated financial rows.",
+    "suspicious_signed_values": "Manual review signal, not automatic error.",
+    "company_name_like_rows": "Important for receivable/payable guardrails.",
+    "arelle_baseline": "Structural signal only, not submission-ready proof."
+  },
+  "future_ground_truth_design": {
+    "path_pattern": "benchmark_cases/<case_id>/expected_rows.json",
+    "not_required_in_13i": true,
+    "fields": [
+      "expected_label",
+      "expected_value",
+      "expected_year",
+      "expected_statement_type",
+      "expected_row_type",
+      "expected_concept_id",
+      "required",
+      "notes",
+      "tolerance"
+    ],
+    "distinction_from_few_shot": "Few-shot examples teach output style. Ground truth evaluates correctness."
+  },
+  "recommended_next_feature": {
+    "manual_step_first": "User uploads seven representative PDFs through /app and records job IDs.",
+    "next_feature_after_manual_upload": "Feature #13J Run representative 7-PDF benchmark set and analyze results."
+  }
+}

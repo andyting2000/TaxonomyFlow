@@ -1,0 +1,706 @@
+{
+  "run_metadata": {
+    "feature": "18D-A",
+    "generated_at": "2026-06-18T14:00:02Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "outlier_samples_excluded_from_main_metrics": [
+      "case_006"
+    ],
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "feature": "18D-A",
+    "generated_at": "2026-06-18T14:00:02Z",
+    "original_active_rules": 9,
+    "original_active_strong_rules": 2,
+    "original_active_usable_rules": 7,
+    "expanded_active_rules": 13,
+    "expanded_active_strong_rules": 3,
+    "expanded_active_usable_rules": 10,
+    "upgraded_strong_rules": 1,
+    "upgraded_usable_rules": 3,
+    "still_review_required_rules": 6,
+    "still_excluded_rules": 232,
+    "before_after_leave_one_out": {
+      "active_rule_coverage_rate": {
+        "before": 0.0243,
+        "after": 0.055,
+        "delta": 0.0307
+      },
+      "active_rule_precision_on_evaluable": {
+        "before": 0.9474,
+        "after": 0.9302,
+        "delta": -0.0172
+      },
+      "active_rule_predictions": {
+        "before": 19,
+        "after": 43,
+        "delta": 24
+      },
+      "active_rule_false_positive_count": {
+        "before": 1,
+        "after": 3,
+        "delta": 2
+      },
+      "coverage_rate": {
+        "before": 0.0806,
+        "after": 0.101,
+        "delta": 0.0204
+      },
+      "precision_on_evaluable": {
+        "before": 0.6349,
+        "after": 0.7089,
+        "delta": 0.074
+      },
+      "false_positive_count": {
+        "before": 23,
+        "after": 23,
+        "delta": 0
+      }
+    },
+    "original_leave_one_out": {
+      "pdf_observations": 782,
+      "replay_predictions": 63,
+      "coverage_rate": 0.0806,
+      "active_rule_predictions": 19,
+      "active_rule_coverage_rate": 0.0243,
+      "active_rule_qname_value_matches": 18,
+      "active_rule_false_positive_count": 1,
+      "active_rule_precision_on_evaluable": 0.9474,
+      "exact_qname_value_period_matches": 38,
+      "qname_value_matches": 40,
+      "false_positive_count": 23,
+      "not_evaluable_count": 0,
+      "precision_on_evaluable": 0.6349,
+      "strong_rule_predictions": 17,
+      "strong_rule_qname_value_matches": 16,
+      "strong_rule_false_positive_count": 1,
+      "strong_rule_precision": 0.9412,
+      "usable_rule_predictions": 2,
+      "usable_rule_qname_value_matches": 2,
+      "usable_rule_false_positive_count": 0,
+      "usable_rule_precision": 1.0,
+      "review_required_rule_predictions": 44,
+      "review_required_rule_qname_value_matches": 22,
+      "review_required_rule_false_positive_count": 22,
+      "review_required_rule_precision": 0.5,
+      "no_rule_match_count": 719,
+      "evaluation_status_counts": {
+        "exact_qname_value_period_match": 38,
+        "not_evaluable": 719,
+        "qname_exists_but_value_mismatch": 5,
+        "qname_value_match_period_uncertain": 2,
+        "value_exists_but_different_qname": 18
+      },
+      "replay_confidence_counts": {
+        "no_rule_match": 719,
+        "review_required_rule_match": 44,
+        "strong_rule_match": 17,
+        "usable_rule_match": 2
+      },
+      "fold_count": 5,
+      "holdout_samples": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "upgraded_strong_rules_built_avg": 0.0,
+      "upgraded_usable_rules_built_avg": 0.0
+    },
+    "expanded_leave_one_out": {
+      "pdf_observations": 782,
+      "replay_predictions": 79,
+      "coverage_rate": 0.101,
+      "active_rule_predictions": 43,
+      "active_rule_coverage_rate": 0.055,
+      "active_rule_qname_value_matches": 40,
+      "active_rule_false_positive_count": 3,
+      "active_rule_precision_on_evaluable": 0.9302,
+      "exact_qname_value_period_matches": 54,
+      "qname_value_matches": 56,
+      "false_positive_count": 23,
+      "not_evaluable_count": 0,
+      "precision_on_evaluable": 0.7089,
+      "strong_rule_predictions": 25,
+      "strong_rule_qname_value_matches": 24,
+      "strong_rule_false_positive_count": 1,
+      "strong_rule_precision": 0.96,
+      "usable_rule_predictions": 18,
+      "usable_rule_qname_value_matches": 16,
+      "usable_rule_false_positive_count": 2,
+      "usable_rule_precision": 0.8889,
+      "review_required_rule_predictions": 36,
+      "review_required_rule_qname_value_matches": 16,
+      "review_required_rule_false_positive_count": 20,
+      "review_required_rule_precision": 0.4444,
+      "no_rule_match_count": 703,
+      "evaluation_status_counts": {
+        "exact_qname_value_period_match": 54,
+        "not_evaluable": 703,
+        "qname_exists_but_value_mismatch": 5,
+        "qname_value_match_period_uncertain": 2,
+        "value_exists_but_different_qname": 18
+      },
+      "replay_confidence_counts": {
+        "no_rule_match": 703,
+        "review_required_rule_match": 36,
+        "strong_rule_match": 25,
+        "usable_rule_match": 18
+      },
+      "fold_count": 5,
+      "holdout_samples": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "upgraded_strong_rules_built_avg": 1.0,
+      "upgraded_usable_rules_built_avg": 2.6
+    },
+    "expanded_in_sample": {
+      "pdf_observations": 782,
+      "replay_predictions": 90,
+      "coverage_rate": 0.1151,
+      "active_rule_predictions": 53,
+      "active_rule_coverage_rate": 0.0678,
+      "active_rule_qname_value_matches": 50,
+      "active_rule_false_positive_count": 3,
+      "active_rule_precision_on_evaluable": 0.9434,
+      "exact_qname_value_period_matches": 73,
+      "qname_value_matches": 75,
+      "false_positive_count": 15,
+      "not_evaluable_count": 0,
+      "precision_on_evaluable": 0.8333,
+      "strong_rule_predictions": 20,
+      "strong_rule_qname_value_matches": 19,
+      "strong_rule_false_positive_count": 1,
+      "strong_rule_precision": 0.95,
+      "usable_rule_predictions": 33,
+      "usable_rule_qname_value_matches": 31,
+      "usable_rule_false_positive_count": 2,
+      "usable_rule_precision": 0.9394,
+      "review_required_rule_predictions": 37,
+      "review_required_rule_qname_value_matches": 25,
+      "review_required_rule_false_positive_count": 12,
+      "review_required_rule_precision": 0.6757,
+      "no_rule_match_count": 692,
+      "evaluation_status_counts": {
+        "exact_qname_value_period_match": 73,
+        "not_evaluable": 692,
+        "qname_exists_but_value_mismatch": 3,
+        "qname_value_match_period_uncertain": 2,
+        "value_exists_but_different_qname": 12
+      },
+      "replay_confidence_counts": {
+        "no_rule_match": 692,
+        "review_required_rule_match": 37,
+        "strong_rule_match": 20,
+        "usable_rule_match": 33
+      },
+      "sample_count": 5,
+      "active_rules_used": 13,
+      "unused_active_rules": []
+    },
+    "top_upgraded_labels": [
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:PropertyPlantAndEquipment",
+        "upgraded_status": "upgraded_strong",
+        "required_context_conditions": {
+          "statement_family": "financial_position",
+          "period_type": "instant",
+          "label_exact_any": [
+            "property plant and equipment",
+            "ppe"
+          ],
+          "label_contains_all": [
+            "property",
+            "equipment"
+          ],
+          "statement_type_contains_any": [
+            "financial position",
+            "non current assets",
+            "assets"
+          ]
+        },
+        "blocking_conditions": {
+          "label_contains_any": [
+            "depreciation",
+            "addition",
+            "disposal",
+            "movement",
+            "increase",
+            "decrease"
+          ],
+          "statement_type_contains_any": [
+            "cash flows",
+            "notes"
+          ]
+        },
+        "replay_precision_before": null,
+        "replay_precision_after": 1.0,
+        "replay_after": {
+          "predictions": 8,
+          "qname_value_matches": 8,
+          "false_positive_count": 0,
+          "precision_on_evaluable": 1.0
+        }
+      },
+      {
+        "normalized_label_pattern": "bank balances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "upgraded_status": "upgraded_usable",
+        "required_context_conditions": {
+          "statement_family": "financial_position",
+          "period_type": "instant",
+          "label_contains_any": [
+            "bank balances",
+            "cash and cash equivalents",
+            "cash"
+          ],
+          "statement_type_contains_any": [
+            "financial position"
+          ]
+        },
+        "blocking_conditions": {
+          "label_contains_any": [
+            "increase",
+            "decrease",
+            "beginning",
+            "end of",
+            "net"
+          ],
+          "statement_type_contains_any": [
+            "cash flows",
+            "notes"
+          ]
+        },
+        "replay_precision_before": null,
+        "replay_precision_after": 1.0,
+        "replay_after": {
+          "predictions": 8,
+          "qname_value_matches": 8,
+          "false_positive_count": 0,
+          "precision_on_evaluable": 1.0
+        }
+      },
+      {
+        "normalized_label_pattern": "add other income",
+        "target_qname": "ifrs-smes:OtherIncome",
+        "upgraded_status": "upgraded_usable",
+        "required_context_conditions": {
+          "statement_family": "income_statement",
+          "period_type": "duration",
+          "label_contains_all": [
+            "other",
+            "income"
+          ]
+        },
+        "blocking_conditions": {
+          "label_contains_any": [
+            "revenue",
+            "sales",
+            "turnover",
+            "finance",
+            "interest",
+            "dividend"
+          ],
+          "statement_type_contains_any": [
+            "notes"
+          ]
+        },
+        "replay_precision_before": 0.8333,
+        "replay_precision_after": 0.8333,
+        "replay_after": {
+          "predictions": 6,
+          "qname_value_matches": 5,
+          "false_positive_count": 1,
+          "precision_on_evaluable": 0.8333
+        }
+      },
+      {
+        "normalized_label_pattern": "total operating expenses",
+        "target_qname": "ifrs-smes:OtherExpenseByFunction",
+        "upgraded_status": "upgraded_usable",
+        "required_context_conditions": {
+          "statement_family": "income_statement",
+          "period_type": "duration",
+          "label_contains_all": [
+            "operating",
+            "expenses"
+          ],
+          "requires_total_semantics": true,
+          "statement_type_contains_any": [
+            "comprehensive income",
+            "profit or loss",
+            "income statement"
+          ]
+        },
+        "blocking_conditions": {
+          "label_contains_any": [
+            "finance costs",
+            "tax"
+          ],
+          "statement_type_contains_any": [
+            "notes",
+            "cash flows",
+            "financial position"
+          ]
+        },
+        "replay_precision_before": 0.8333,
+        "replay_precision_after": 0.8333,
+        "replay_after": {
+          "predictions": 6,
+          "qname_value_matches": 5,
+          "false_positive_count": 1,
+          "precision_on_evaluable": 0.8333
+        }
+      }
+    ],
+    "top_rejected_labels": [
+      {
+        "normalized_label_pattern": "bank balances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "bank_balances_financial_position",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,period_type_mismatch,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "other income",
+        "target_qname": "ifrs-smes:OtherIncome",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "other_income_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "other income",
+        "target_qname": "ssmt-mpers:OtherMiscellaneousIncome",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "other_income_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+        ],
+        "replay_precision_before": 1.0
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "period_type_not_allowed_for_context_spec",
+          "prior_replay_precision_below_usable_threshold",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": 0.0
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:OtherAdjustmentsToReconcileProfitLoss",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:OtherPropertyPlantAndEquipment",
+        "statement_family": "financial_position",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:CostOfSales",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,major_alignment_conflict,sign_mismatch_absolute_value_only,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:CostOfSales",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,major_alignment_conflict,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:Revenue",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:RevenueFromInterest",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:RevenueFromRenderingOfServices",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ComprehensiveIncome",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": "financial_position",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,period_type_mismatch,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:current_comparative_period_confusion,label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,period_year_mismatch,sign_mismatch_absolute_value_only"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": null,
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      }
+    ],
+    "recommendation": {
+      "recommended_action": "prepare_integration_plan_after_expanded_replay",
+      "recommended_next_feature": "Feature #18D-B - Replay expanded rulebook on holdout/outlier and prepare deterministic-first mapper integration plan",
+      "production_integration_now_justified": false,
+      "deterministic_first_integration_plan_justified": true,
+      "basis": {
+        "expanded_active_rule_precision": 0.9302,
+        "expanded_active_rule_coverage": 0.055,
+        "active_rule_coverage_delta": 0.0307,
+        "active_rule_false_positive_count": 3
+      }
+    },
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  }
+}

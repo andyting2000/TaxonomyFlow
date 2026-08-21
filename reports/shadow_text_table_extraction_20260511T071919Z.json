@@ -1,0 +1,233 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-11T07:19:19.457127+00:00",
+    "script": "scripts/shadow_text_table_extraction.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "openai_used": false,
+    "limit_pages": null,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\shadow_text_table_extraction_20260511T071919Z.json"
+  },
+  "selected_jobs": [
+    13,
+    14,
+    15,
+    18,
+    19,
+    20,
+    23
+  ],
+  "default_benchmark_jobs": [
+    13,
+    14,
+    15,
+    18,
+    19,
+    20,
+    23
+  ],
+  "missing_jobs": [],
+  "job_reports": [
+    {
+      "job_id": 13,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\4d49fc9f354a4285932bc6b24bc40b5b.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\4d49fc9f354a4285932bc6b24bc40b5b.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 13,
+        "company_name": "BizAid Technologies Sdn. Bhd.",
+        "registration_number": "200101007565",
+        "financial_year_end": "2025-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\4d49fc9f354a4285932bc6b24bc40b5b.pdf",
+        "db_page_count": 3
+      }
+    },
+    {
+      "job_id": 14,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\1f4df405590943299e88138ae2a4fb6c.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\1f4df405590943299e88138ae2a4fb6c.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 14,
+        "company_name": "BEZLIFE MARKETING SDN. BHD.",
+        "registration_number": "202201047805",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\1f4df405590943299e88138ae2a4fb6c.pdf",
+        "db_page_count": 26
+      }
+    },
+    {
+      "job_id": 15,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\a6123a2092f140e2abc464a0b004fb70.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\a6123a2092f140e2abc464a0b004fb70.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 15,
+        "company_name": "FINE BATIK SDN. BHD.",
+        "registration_number": "200401035264",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\a6123a2092f140e2abc464a0b004fb70.pdf",
+        "db_page_count": 25
+      }
+    },
+    {
+      "job_id": 18,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\61e22416a080422fa6d1aa7d53a99eed.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\61e22416a080422fa6d1aa7d53a99eed.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 18,
+        "company_name": "RAHSIA HERBAL SDN. BHD.",
+        "registration_number": "201101003690",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\61e22416a080422fa6d1aa7d53a99eed.pdf",
+        "db_page_count": 23
+      }
+    },
+    {
+      "job_id": 19,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\2f67b84cdcee48b5acd6fce93010da3b.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\2f67b84cdcee48b5acd6fce93010da3b.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 19,
+        "company_name": "SHIELD PLUS SDN. BHD.",
+        "registration_number": "199301006101",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\2f67b84cdcee48b5acd6fce93010da3b.pdf",
+        "db_page_count": 15
+      }
+    },
+    {
+      "job_id": 20,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\9e131e849fe540f88c0b71d2bceabd12.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\9e131e849fe540f88c0b71d2bceabd12.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 20,
+        "company_name": "AGENSI PEKERJAAN JCONNECTOR.COM SDN. BHD.",
+        "registration_number": "200801035105",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\9e131e849fe540f88c0b71d2bceabd12.pdf",
+        "db_page_count": 22
+      }
+    },
+    {
+      "job_id": 23,
+      "source_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\aa4fba8f87484a389b298119b7752f8b.pdf",
+      "status": "missing_pdf",
+      "pages_analyzed": 0,
+      "candidate_count": 0,
+      "numeric_fact_count": 0,
+      "text_block_count": 0,
+      "method_counts": {},
+      "row_type_counts": {},
+      "warning_counts": {},
+      "warnings": [
+        "Source PDF missing: C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\aa4fba8f87484a389b298119b7752f8b.pdf"
+      ],
+      "openai_allowed": false,
+      "candidates": [],
+      "job_metadata": {
+        "job_id": 23,
+        "company_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+        "registration_number": "19920102215",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "source_pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\aa4fba8f87484a389b298119b7752f8b.pdf",
+        "db_page_count": 23
+      }
+    }
+  ],
+  "candidates": [],
+  "aggregate_metrics": {
+    "jobs_analyzed": 7,
+    "candidate_count": 0,
+    "numeric_fact_count": 0,
+    "text_block_count": 0,
+    "heading_count": 0,
+    "subtotal_or_total_count": 0,
+    "method_counts": {},
+    "row_type_counts": {},
+    "warning_counts": {}
+  },
+  "limitations": [
+    "Shadow prototype only; no database rows are inserted, updated, or deleted.",
+    "Native text/table heuristics are intentionally conservative and are not a production cutover.",
+    "OpenAI vision fallback runs only when --use-openai is supplied.",
+    "No taxonomy mapping, XBRL generation, Arelle validation, or production processing is performed."
+  ]
+}

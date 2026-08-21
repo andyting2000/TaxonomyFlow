@@ -1,0 +1,1281 @@
+{
+  "run_metadata": {
+    "feature": "18B",
+    "generated_at": "2026-06-18T13:01:46Z",
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "feature": "18B",
+    "generated_at": "2026-06-18T13:01:46Z",
+    "candidate_pattern_count": 251,
+    "active_strong_rules": 2,
+    "active_usable_rules": 7,
+    "review_required_rules": 8,
+    "excluded_rules": 234,
+    "zero_only_exclusions": 66,
+    "generic_label_exclusions": 1,
+    "statement_family_conflicts": 45,
+    "concept_coverage_summary": {
+      "active_concept_count": 9,
+      "candidate_concept_count": 101,
+      "strong_concept_count": 2
+    },
+    "sample_support_summary": [
+      {
+        "sample_id": "case_001",
+        "active_rules": 0,
+        "review_required_rules": 4,
+        "excluded_rules": 136,
+        "strong_rules": 0,
+        "usable_rules": 0
+      },
+      {
+        "sample_id": "case_002",
+        "active_rules": 5,
+        "review_required_rules": 3,
+        "excluded_rules": 138,
+        "strong_rules": 2,
+        "usable_rules": 3
+      },
+      {
+        "sample_id": "case_003",
+        "active_rules": 1,
+        "review_required_rules": 3,
+        "excluded_rules": 128,
+        "strong_rules": 1,
+        "usable_rules": 0
+      },
+      {
+        "sample_id": "case_004",
+        "active_rules": 1,
+        "review_required_rules": 0,
+        "excluded_rules": 108,
+        "strong_rules": 1,
+        "usable_rules": 0
+      },
+      {
+        "sample_id": "case_005",
+        "active_rules": 5,
+        "review_required_rules": 3,
+        "excluded_rules": 104,
+        "strong_rules": 1,
+        "usable_rules": 4
+      }
+    ],
+    "top_strong_rules": [
+      {
+        "rule_id": "18B-R0202-total-current-assets-ifrs-smes-currentassets",
+        "normalized_label_pattern": "total current assets",
+        "observed_labels": [
+          "Total current assets"
+        ],
+        "aliases": [
+          "total current asset",
+          "total current assets"
+        ],
+        "target_qname": "ifrs-smes:CurrentAssets",
+        "target_concept_label": "Current Assets",
+        "statement_family": "financial_position",
+        "statement_type_examples": [
+          "Statement of Financial Position"
+        ],
+        "period_type_hint": "instant",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "asof_20231231_SeparateMember",
+            "asof_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "observation_count": 7,
+        "total_observation_count": 7,
+        "high_confidence_count": 7,
+        "medium_confidence_count": 0,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_002:case_002:candidate:19:19:current:case_002-fact-136",
+          "case_002:case_002:candidate:19:19:prior:case_002-fact-137",
+          "case_003:case_003:candidate:21:21:prior:case_003-fact-137",
+          "case_004:case_004:candidate:18:18:current:case_004-fact-138",
+          "case_004:case_004:candidate:18:18:prior:case_004-fact-139",
+          "case_005:case_005:candidate:19:19:current:case_005-fact-137",
+          "case_005:case_005:candidate:19:19:prior:case_005-fact-138"
+        ],
+        "score_min": 85,
+        "score_max": 85,
+        "score_avg": 85.0,
+        "evidence_summary": {
+          "label_support": true,
+          "zero_value_count": 0,
+          "nonzero_value_count": 7,
+          "match_reasons": [
+            "label_containment",
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "strong",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [],
+        "competing_label_patterns": [],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0217-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit",
+        "normalized_label_pattern": "total non current liabilities w",
+        "observed_labels": [
+          "Total non - current liabilities w"
+        ],
+        "aliases": [
+          "total non current liabilities w"
+        ],
+        "target_qname": "ifrs-smes:NoncurrentLiabilities",
+        "target_concept_label": "Noncurrent Liabilities",
+        "statement_family": "financial_position",
+        "statement_type_examples": [
+          "Statement of Financial Position"
+        ],
+        "period_type_hint": "instant",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "asof_20231231_SeparateMember",
+            "asof_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_002"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 2,
+        "medium_confidence_count": 0,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_002:case_002:candidate:26:26:current:case_002-fact-162",
+          "case_002:case_002:candidate:26:26:prior:case_002-fact-163"
+        ],
+        "score_min": 86,
+        "score_max": 86,
+        "score_avg": 86.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "strong",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [],
+        "competing_label_patterns": [
+          "total deferred liabilities",
+          "ung ming xin f"
+        ],
+        "notes": []
+      }
+    ],
+    "top_usable_rules": [
+      {
+        "rule_id": "18B-R0019-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+        "normalized_label_pattern": "amount due to director a",
+        "observed_labels": [
+          "Amount due to director a"
+        ],
+        "aliases": [
+          "amount due to director a"
+        ],
+        "target_qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+        "target_concept_label": "Other Noncurrent Liabilities",
+        "statement_family": "financial_position",
+        "statement_type_examples": [
+          "Statement of Financial Position"
+        ],
+        "period_type_hint": "instant",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "asof_20231231_SeparateMember",
+            "asof_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_002"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 0,
+        "medium_confidence_count": 2,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_002:case_002:candidate:25:25:current:case_002-fact-160",
+          "case_002:case_002:candidate:25:25:prior:case_002-fact-161"
+        ],
+        "score_min": 76,
+        "score_max": 76,
+        "score_avg": 76.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [],
+        "competing_qnames": [],
+        "competing_label_patterns": [],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0150-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+        "normalized_label_pattern": "rental received",
+        "observed_labels": [
+          "Rental received"
+        ],
+        "aliases": [
+          "rental received",
+          "rental receiveds"
+        ],
+        "target_qname": "ssmt-mpers:OtherRentalIncomeOnLandAndBuildings",
+        "target_concept_label": "Other Rental Income On Land And Buildings",
+        "statement_family": "income_statement",
+        "statement_type_examples": [
+          "Statement of Comprehensive Income"
+        ],
+        "period_type_hint": "duration",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "fromto_20230101_20231231_SeparateMember",
+            "fromto_20240101_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_002"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 0,
+        "medium_confidence_count": 2,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_002:case_002:candidate:94:94:current:case_002-fact-296",
+          "case_002:case_002:candidate:94:94:prior:case_002-fact-297"
+        ],
+        "score_min": 79,
+        "score_max": 79,
+        "score_avg": 79.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [],
+        "competing_qnames": [],
+        "competing_label_patterns": [
+          "and crediting rental received"
+        ],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0195-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+        "normalized_label_pattern": "term loan r discussione",
+        "observed_labels": [
+          "Term loan R DISCUSSIONE"
+        ],
+        "aliases": [
+          "term loan r discussione",
+          "term loan r discussiones"
+        ],
+        "target_qname": "ssmt-mpers:NoncurrentPortionOfNoncurrentSecuredBankLoansReceived",
+        "target_concept_label": "Noncurrent Portion Of Noncurrent Secured Bank Loans Received",
+        "statement_family": "financial_position",
+        "statement_type_examples": [
+          "Statement of Financial Position"
+        ],
+        "period_type_hint": "instant",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "asof_20231231_SeparateMember",
+            "asof_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_002"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 0,
+        "medium_confidence_count": 2,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_002:case_002:candidate:24:24:current:case_002-fact-228",
+          "case_002:case_002:candidate:24:24:prior:case_002-fact-229"
+        ],
+        "score_min": 77,
+        "score_max": 77,
+        "score_avg": 77.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [],
+        "competing_qnames": [
+          "ssmt-mpers:NoncurrentBorrowings"
+        ],
+        "competing_label_patterns": [
+          "term loan",
+          "to less due more than twelve months"
+        ],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0196-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+        "normalized_label_pattern": "term loans repayments",
+        "observed_labels": [
+          "Term loans repayments"
+        ],
+        "aliases": [
+          "term loans repayment",
+          "term loans repayments"
+        ],
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+        "target_concept_label": "Cash Flows From Used In Financing Activities",
+        "statement_family": "cash_flow",
+        "statement_type_examples": [
+          "Statement of Cash Flows"
+        ],
+        "period_type_hint": "duration",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "fromto_20230101_20231231_SeparateMember",
+            "fromto_20240101_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_005"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 0,
+        "medium_confidence_count": 2,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_005:case_005:candidate:54:54:current:case_005-fact-341",
+          "case_005:case_005:candidate:54:54:prior:case_005-fact-342"
+        ],
+        "score_min": 75,
+        "score_max": 75,
+        "score_avg": 75.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities"
+        ],
+        "competing_label_patterns": [
+          "cash flows from financing activities",
+          "net cash to investing activities",
+          "property plant and equipment",
+          "repayment of term loan"
+        ],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0220-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+        "normalized_label_pattern": "total operating expenses folaviceral",
+        "observed_labels": [
+          "TOTAL OPERATING EXPENSES FOLAViceRal"
+        ],
+        "aliases": [
+          "total operating expenses folaviceral",
+          "total operating expenses folavicerals"
+        ],
+        "target_qname": "ifrs-smes:OtherExpenseByFunction",
+        "target_concept_label": "Other Expense By Function",
+        "statement_family": "income_statement",
+        "statement_type_examples": [
+          "Statement of Comprehensive Income"
+        ],
+        "period_type_hint": "duration",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "fromto_20230101_20231231_SeparateMember",
+            "fromto_20240101_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_005"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 0,
+        "medium_confidence_count": 2,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_005:case_005:candidate:115:115:current:case_005-fact-259",
+          "case_005:case_005:candidate:115:115:prior:case_005-fact-260"
+        ],
+        "score_min": 77,
+        "score_max": 77,
+        "score_avg": 77.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [
+          "subtotal_total_semantics_mismatch",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [],
+        "competing_label_patterns": [
+          "less operating expenses schedule ii",
+          "other operating costs",
+          "total operating expenses"
+        ],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0250-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits",
+        "normalized_label_pattern": "utilities deposits",
+        "observed_labels": [
+          "Utilities deposits"
+        ],
+        "aliases": [
+          "utilities deposit",
+          "utilities deposits"
+        ],
+        "target_qname": "ssmt-mpers:OtherCurrentNontradeDeposits",
+        "target_concept_label": "Other Current Nontrade Deposits",
+        "statement_family": "notes",
+        "statement_type_examples": [
+          "Notes to the Financial Statements"
+        ],
+        "period_type_hint": "instant",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current",
+            "prior"
+          ],
+          "xbrl_context_examples": [
+            "asof_20231231_SeparateMember",
+            "asof_20241231_SeparateMember"
+          ],
+          "period_years": [
+            "2023",
+            "2024"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_005"
+        ],
+        "observation_count": 2,
+        "total_observation_count": 2,
+        "high_confidence_count": 0,
+        "medium_confidence_count": 2,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_005:case_005:candidate:66:66:current:case_005-fact-205",
+          "case_005:case_005:candidate:66:66:prior:case_005-fact-206"
+        ],
+        "score_min": 68,
+        "score_max": 68,
+        "score_avg": 68.0,
+        "evidence_summary": {
+          "label_support": false,
+          "zero_value_count": 0,
+          "nonzero_value_count": 2,
+          "match_reasons": [
+            "period_year_match",
+            "token_or_sequence_similarity",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [],
+        "competing_qnames": [
+          "ssmt-mpers:OtherCurrentNontradeDeposits"
+        ],
+        "competing_label_patterns": [
+          "deposits",
+          "other deposits"
+        ],
+        "notes": []
+      },
+      {
+        "rule_id": "18B-R0214-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+        "normalized_label_pattern": "total liabilities d por current fral to",
+        "observed_labels": [
+          "Total liabilities D Por current Fral to"
+        ],
+        "aliases": [
+          "total liabilities d por current fral to"
+        ],
+        "target_qname": "ifrs-smes:Liabilities",
+        "target_concept_label": "Liabilities",
+        "statement_family": "financial_position",
+        "statement_type_examples": [
+          "Statement of Financial Position"
+        ],
+        "period_type_hint": "instant",
+        "context_hint": {
+          "pdf_value_roles": [
+            "current"
+          ],
+          "xbrl_context_examples": [
+            "asof_20231231_SeparateMember"
+          ],
+          "period_years": [
+            "2023"
+          ]
+        },
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_005"
+        ],
+        "observation_count": 1,
+        "total_observation_count": 1,
+        "high_confidence_count": 1,
+        "medium_confidence_count": 0,
+        "ambiguous_observation_count": 0,
+        "low_confidence_count": 0,
+        "source_alignment_ids": [
+          "case_005:case_005:candidate:30:30:current:case_005-fact-174"
+        ],
+        "score_min": 85,
+        "score_max": 85,
+        "score_avg": 85.0,
+        "evidence_summary": {
+          "label_support": true,
+          "zero_value_count": 0,
+          "nonzero_value_count": 1,
+          "match_reasons": [
+            "label_containment",
+            "period_type_match",
+            "period_year_match",
+            "statement_family_match",
+            "unit_match",
+            "value_exact"
+          ]
+        },
+        "confidence_tier": "usable",
+        "rule_status": "active",
+        "exclusion_reason": null,
+        "conflict_reasons": [
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [],
+        "competing_label_patterns": [
+          "total liabilities"
+        ],
+        "notes": []
+      }
+    ],
+    "top_conflicts": [
+      {
+        "rule_id": "18B-R0037-bank-balances-ssmt-cashandbankbalances",
+        "normalized_label_pattern": "bank balances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 4,
+        "observation_count": 8,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "major_alignment_conflict",
+          "multiple_candidates_close_in_score",
+          "period_type_mismatch",
+          "statement_family_conflict",
+          "statement_family_mismatch"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:BalancesWithBanks",
+          "ifrs-smes:Cash",
+          "ifrs-smes:CashAndCashEquivalents"
+        ],
+        "competing_label_patterns": [],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0038-bank-balances-ssmt-cashandbankbalances",
+        "normalized_label_pattern": "bank balances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 4,
+        "observation_count": 8,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "multiple_candidates_close_in_score",
+          "statement_family_conflict"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:BalancesWithBanks",
+          "ifrs-smes:Cash",
+          "ifrs-smes:CashAndCashEquivalents"
+        ],
+        "competing_label_patterns": [],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0215-total-non-current-assets-ifrs-smes-noncurrentassets",
+        "normalized_label_pattern": "total non current assets",
+        "target_qname": "ifrs-smes:NoncurrentAssets",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 4,
+        "observation_count": 8,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_pdf_label_with_duplicate_value",
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:NoncurrentAssets",
+          "ifrs-smes:OtherPropertyPlantAndEquipment",
+          "ifrs-smes:PropertyPlantAndEquipment"
+        ],
+        "competing_label_patterns": [
+          "1 1"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0208-total-equity-ifrs-smes-equity",
+        "normalized_label_pattern": "total equity",
+        "target_qname": "ifrs-smes:Equity",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 4,
+        "observation_count": 7,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_pdf_label_with_duplicate_value",
+          "multiple_candidates_close_in_score",
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:Equity",
+          "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "ssmt-mpers:EquityBalanceRestated"
+        ],
+        "competing_label_patterns": [
+          "total shareholders equity"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0209-total-equity-and-liabilities-ifrs-smes-equityandliabilities",
+        "normalized_label_pattern": "total equity and liabilities",
+        "target_qname": "ifrs-smes:EquityAndLiabilities",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 4,
+        "observation_count": 7,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_pdf_label_with_duplicate_value",
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:Assets"
+        ],
+        "competing_label_patterns": [
+          "total equity and liabilities draft wie"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0007-accumulated-losses-ifrs-smes-retainedearnings",
+        "normalized_label_pattern": "accumulated losses",
+        "target_qname": "ifrs-smes:RetainedEarnings",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 6,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "multiple_candidates_close_in_score",
+          "same_value_repeated_across_many_facts",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:Equity",
+          "ssmt-mpers:EquityBalanceRestated"
+        ],
+        "competing_label_patterns": [
+          "accumulated losses brought forward",
+          "accumulated losses carried forward",
+          "retained profits brought forward",
+          "retained profits unselected"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0014-addition-ifrs-smes-landandbuildings",
+        "normalized_label_pattern": "addition",
+        "target_qname": "ifrs-smes:LandAndBuildings",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 6,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_label_requires_review",
+          "generic_pdf_label_with_duplicate_value",
+          "multiple_candidates_close_in_score",
+          "same_value_repeated_across_many_facts",
+          "statement_family_conflict",
+          "zero_only_evidence"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:Buildings",
+          "ifrs-smes:CurrentProvisions",
+          "ifrs-smes:InvestmentsInJointVentures",
+          "ifrs-smes:Land"
+        ],
+        "competing_label_patterns": [
+          "as at 31 12 23 1 1"
+        ],
+        "exclusion_reason": "zero_only_evidence; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0079-disposal-ssmt-mpers-gainsondisposalofsubsidiaryjointventures",
+        "normalized_label_pattern": "disposal",
+        "target_qname": "ssmt-mpers:GainsOnDisposalOfSubsidiaryJointVenturesAndAssociates",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 6,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_label_requires_review",
+          "generic_pdf_label_with_duplicate_value",
+          "zero_only_evidence"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:Buildings",
+          "ifrs-smes:CurrentProvisions",
+          "ifrs-smes:FinanceCosts",
+          "ifrs-smes:InvestmentProperty"
+        ],
+        "competing_label_patterns": [],
+        "exclusion_reason": "zero_only_evidence; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0097-loss-for-the-financial-year-ssmt-mpers-otherbalanceswithrela",
+        "normalized_label_pattern": "loss for the financial year",
+        "target_qname": "ssmt-mpers:OtherBalancesWithRelatedParties",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 6,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "label_statement_maps_to_multiple_qnames",
+          "multiple_candidates_close_in_score",
+          "same_value_repeated_across_many_facts",
+          "zero_only_evidence"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+          "ifrs-smes:NoncurrentProvisionsForEmployeeBenefits",
+          "ifrs-smes:OtherReserves",
+          "ssmt-mpers:OtherBalancesWithRelatedParties"
+        ],
+        "competing_label_patterns": [],
+        "exclusion_reason": "conflicting_qnames; zero_only_evidence; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0158-revenue-ifrs-smes-revenue",
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:Revenue",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 6,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_pdf_label_with_duplicate_value",
+          "label_statement_maps_to_multiple_qnames",
+          "multiple_candidates_close_in_score"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:GrossProfit",
+          "ifrs-smes:RevenueFromRenderingOfServices",
+          "ifrs-smes:RevenueFromSaleOfGoods",
+          "ssmt-mpers:CurrentTradeReceivables",
+          "ssmt-mpers:RevenueFromRenderingOfOtherServices",
+          "ssmt-mpers:RevenueFromSaleOfOtherGoods"
+        ],
+        "competing_label_patterns": [],
+        "exclusion_reason": "conflicting_qnames; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0176-tax-expense-ifrs-smes-incometaxexpensecontinuingoperations",
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 6,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "current_comparative_period_confusion",
+          "label_statement_maps_to_multiple_qnames",
+          "major_alignment_conflict",
+          "one_xbrl_fact_matches_multiple_pdf_rows",
+          "period_year_mismatch",
+          "sign_mismatch_absolute_value_only",
+          "statement_family_conflict",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:ComprehensiveIncome",
+          "ifrs-smes:CurrentTaxLiabilitiesCurrent",
+          "ifrs-smes:EmployeeBenefitsExpense",
+          "ifrs-smes:FinanceIncome",
+          "ifrs-smes:GrossProfit",
+          "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+          "ifrs-smes:OtherIncome",
+          "ifrs-smes:RevenueFromInterest",
+          "ifrs-smes:RevenueFromRenderingOfServices",
+          "ssmt-mpers:FeeAndCommissionIncome"
+        ],
+        "competing_label_patterns": [
+          "eis contribution",
+          "epf contribution",
+          "over provision in prior year",
+          "socso contribution"
+        ],
+        "exclusion_reason": "conflicting_qnames; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0055-cash-flows-from-investing-activities-ifrs-smes-cashflowsfrom",
+        "normalized_label_pattern": "cash flows from investing activities",
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 5,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "multiple_candidates_close_in_score",
+          "target_qname_maps_from_many_label_patterns",
+          "zero_only_evidence"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "ifrs-smes:ProceedsFromIssuingShares",
+          "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+          "ssmt-mpers:DirectorsRemuneration",
+          "ssmt-mpers:GainsOnForeignExchange",
+          "ssmt-mpers:ImpactOfChangeInAccountingStandards"
+        ],
+        "competing_label_patterns": [
+          "cash and cash equivalents at beginning of year period",
+          "tax expense",
+          "trade and other receivables"
+        ],
+        "exclusion_reason": "zero_only_evidence"
+      },
+      {
+        "rule_id": "18B-R0108-net-cash-from-operating-activities-ifrs-smes-cashflowsfromus",
+        "normalized_label_pattern": "net cash from operating activities",
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 5,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "label_statement_maps_to_multiple_qnames",
+          "multiple_candidates_close_in_score",
+          "subtotal_total_semantics_mismatch",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+          "ssmt-mpers:CashFlowsFromUsedInOperations"
+        ],
+        "competing_label_patterns": [
+          "cash from operating activities",
+          "net cash from to operating activities",
+          "net increase decrease in cash and cash equivalents",
+          "net increase in cash and cash equivalent",
+          "net increase in cash and cash equivalents"
+        ],
+        "exclusion_reason": "conflicting_qnames; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0178-tax-expense-ifrs-smes-profitlossbeforetax",
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 5,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "label_statement_maps_to_multiple_qnames",
+          "multiple_candidates_close_in_score",
+          "same_value_repeated_across_many_facts",
+          "statement_family_conflict",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+          "ifrs-smes:ProfitLossFromContinuingOperations",
+          "ssmt-mpers:AggregateProfitLossBeforeTax",
+          "ssmt-mpers:ProfitLossFromOperatingActivities"
+        ],
+        "competing_label_patterns": [
+          "accumulated losses brought forward",
+          "loss for the year",
+          "operating loss before working capital changes"
+        ],
+        "exclusion_reason": "conflicting_qnames; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0185-tax-expense-ifrs-smes-profitlossbeforetax",
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 4,
+        "observation_count": 5,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "label_statement_maps_to_multiple_qnames",
+          "major_alignment_conflict",
+          "multiple_candidates_close_in_score",
+          "same_value_repeated_across_many_facts",
+          "statement_family_conflict",
+          "statement_family_mismatch",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+          "ifrs-smes:ProfitLossFromContinuingOperations",
+          "ssmt-mpers:AggregateProfitLossBeforeTax",
+          "ssmt-mpers:ProfitLossFromOperatingActivities"
+        ],
+        "competing_label_patterns": [
+          "accumulated losses brought forward",
+          "loss for the year",
+          "operating loss before working capital changes"
+        ],
+        "exclusion_reason": "conflicting_qnames; ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0198-total-assets-ifrs-smes-assets",
+        "normalized_label_pattern": "total assets",
+        "target_qname": "ifrs-smes:Assets",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 5,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "generic_pdf_label_with_duplicate_value",
+          "subtotal_total_semantics_mismatch"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:EquityAndLiabilities"
+        ],
+        "competing_label_patterns": [
+          "total assets discussion",
+          "total current assets"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0232-trade-and-other-receivables-ifrs-smes-adjustmentsfordecrease",
+        "normalized_label_pattern": "trade and other receivables",
+        "target_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 5,
+        "conflict_reasons": [
+          "label_statement_maps_to_multiple_qnames",
+          "major_alignment_conflict",
+          "statement_family_mismatch"
+        ],
+        "competing_qnames": [],
+        "competing_label_patterns": [],
+        "exclusion_reason": "conflicting_qnames; low_confidence_only"
+      },
+      {
+        "rule_id": "18B-R0010-accumulated-losses-carried-forward-ifrs-smes-retainedearning",
+        "normalized_label_pattern": "accumulated losses carried forward",
+        "target_qname": "ifrs-smes:RetainedEarnings",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 3,
+        "observation_count": 4,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "current_comparative_period_confusion",
+          "major_alignment_conflict",
+          "multiple_candidates_close_in_score",
+          "period_year_mismatch",
+          "same_value_repeated_across_many_facts",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ifrs-smes:Equity",
+          "ssmt-mpers:EquityBalanceRestated"
+        ],
+        "competing_label_patterns": [
+          "accumulated losses",
+          "accumulated losses brought forward",
+          "retained profits brought forward",
+          "retained profits unselected"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0032-audit-fee-ssmt-mpers-auditorsremuneration",
+        "normalized_label_pattern": "audit fee",
+        "target_qname": "ssmt-mpers:AuditorsRemuneration",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 2,
+        "observation_count": 4,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "multiple_candidates_close_in_score",
+          "same_value_repeated_across_many_facts",
+          "statement_family_conflict",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ssmt-mpers:AuditorsRemuneration",
+          "ssmt-mpers:AuditorsRemunerationForAuditServices",
+          "ssmt-mpers:CurrentNontradeAccruals"
+        ],
+        "competing_label_patterns": [
+          "accounting fee",
+          "audit fees",
+          "auditor s remuneration",
+          "auditors remuneration",
+          "deposits"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      },
+      {
+        "rule_id": "18B-R0034-auditor-s-remuneration-ssmt-mpers-auditorsremuneration",
+        "normalized_label_pattern": "auditor s remuneration",
+        "target_qname": "ssmt-mpers:AuditorsRemuneration",
+        "rule_status": "excluded",
+        "confidence_tier": "excluded",
+        "sample_support_count": 1,
+        "observation_count": 4,
+        "conflict_reasons": [
+          "ambiguous_observations_present",
+          "multiple_candidates_close_in_score",
+          "target_qname_maps_from_many_label_patterns"
+        ],
+        "competing_qnames": [
+          "ssmt-mpers:AuditorsRemuneration",
+          "ssmt-mpers:AuditorsRemunerationForAuditServices"
+        ],
+        "competing_label_patterns": [
+          "accounting fee",
+          "audit fee",
+          "audit fees",
+          "auditors remuneration",
+          "deposits"
+        ],
+        "exclusion_reason": "ambiguous_alignment_only"
+      }
+    ],
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    },
+    "recommendation": {
+      "feature_18c_holdout_replay_justified": true,
+      "recommended_next_feature": "Feature #18C - Replay rulebook on holdout sample and measure deterministic coverage/accuracy.",
+      "basis": {
+        "active_rule_count": 9,
+        "strong_rule_count": 2,
+        "usable_rule_count": 7
+      }
+    }
+  }
+}

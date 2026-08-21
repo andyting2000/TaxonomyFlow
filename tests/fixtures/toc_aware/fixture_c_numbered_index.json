@@ -1,0 +1,23 @@
+{
+  "name": "C_numbered_index",
+  "pages": [
+    {"page_number": 1, "height": 1000, "lines": [
+      {"content": "INDEX", "page_number": 1},
+      {"content": "1. DIRECTORS' REPORT 1-2", "page_number": 1},
+      {"content": "2. STATEMENT BY DIRECTORS 3", "page_number": 1},
+      {"content": "3. STATUTORY DECLARATION 3", "page_number": 1},
+      {"content": "4. STATEMENT OF FINANCIAL POSITION 4", "page_number": 1}
+    ]},
+    {"page_number": 2, "height": 1000, "lines": [{"content": "DIRECTORS' REPORT", "page_number": 2, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 3, "height": 1000, "lines": []},
+    {"page_number": 4, "height": 1000, "lines": [
+      {"content": "STATEMENT BY DIRECTORS", "page_number": 4, "polygon": [{"x": 1, "y": 80}]},
+      {"content": "STATUTORY DECLARATION", "page_number": 4, "polygon": [{"x": 1, "y": 500}]}
+    ]},
+    {"page_number": 5, "height": 1000, "lines": [{"content": "STATEMENT OF FINANCIAL POSITION", "page_number": 5, "polygon": [{"x": 1, "y": 50}]}]}
+  ],
+  "paragraphs": [],
+  "tables": [],
+  "table_cells": [],
+  "lines": []
+}

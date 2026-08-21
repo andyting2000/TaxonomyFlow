@@ -1,0 +1,283 @@
+{
+  "feature": "17D-C-A",
+  "name": "Supervisor production integration design spec",
+  "generated_at": "2026-06-17",
+  "status": "complete",
+  "design_only": true,
+  "production_behavior_changed": false,
+  "live_llm_called_by_codex": false,
+  "database_mutated": false,
+  "db_migration_added": false,
+  "ui_code_changed": false,
+  "xbrl_generated": false,
+  "arelle_run": false,
+  "source_evidence": {
+    "completed_prerequisites": [
+      "17D-B",
+      "17D-B-hotfix-4",
+      "17D-B-hotfix-5",
+      "17D-B-hotfix-6",
+      "17D-B-hotfix-7"
+    ],
+    "bounded_live_retest": {
+      "total_reviewed": 29,
+      "safe_to_accept": 15,
+      "safe_to_accept_accuracy": 1.0,
+      "agree_accuracy": 1.0,
+      "false_safe_accept_count": 0,
+      "false_agree_count": 0,
+      "invalid_response_count": 0,
+      "blocked_correct_mapping_count": 4,
+      "broad_substitute_total": 0,
+      "cash_flow_false_safe_accept_count": 0
+    }
+  },
+  "inspected_files": [
+    "feature_list.json",
+    "PROGRESS.md",
+    "database.py",
+    "db_init.py",
+    "migrations/009_add_llm_mapping_suggestions.sql",
+    "migrations/011_add_ai_mapping_job_status.sql",
+    "migrations/README.md",
+    "routers/filings.py",
+    "services/llm_taxonomy_mapping.py",
+    "services/supervisor_mapping_review.py",
+    "services/supervisor_llm_client.py",
+    "scripts/evaluate_supervisor_live_17d.py",
+    "scripts/analyze_supervisor_evaluation_17d_b_hotfix_4.py",
+    "scripts/analyze_supervisor_calibration_17d_b_hotfix_5.py",
+    "scripts/analyze_supervisor_safe_accept_threshold_17d_b_hotfix_6.py",
+    "tasks.py",
+    "frontend/src/api.js",
+    "frontend/src/review-workspace.jsx",
+    "frontend/src/App.jsx",
+    "frontend/tests/auth_helpers.test.mjs",
+    "tests/test_user_isolation_filings.py",
+    "tests/test_supervisor_mapping_review.py",
+    "tests/test_supervisor_llm_client.py",
+    "tests/test_supervisor_evaluation_hotfix_4.py"
+  ],
+  "current_flow_summary": {
+    "pdf_extraction": "Upload creates a user-owned FilingJob and Celery process_pdf_task runs the configured extraction pipeline, currently Azure DI in production mode.",
+    "normalized_rows": "Extraction writes FinancialStatementPage and ExtractedDataItem rows with labels, values, statement type, years, template metadata, review flag, and optional confirmed_tag_id.",
+    "deterministic_mapping": "Azure DI production mapping can populate template_field_id and statement/template metadata on extracted rows.",
+    "ai_mapping_suggestions": "Qwen suggestions are persisted in llm_mapping_suggestions through run_llm_mapping_for_job with persist_suggestions=true and apply_high_confidence=false.",
+    "user_review": "The Review Workspace displays persisted suggestions and requires explicit user Accept or Reject. Accept updates template-field metadata and is_reviewed, but does not automatically set confirmed_tag_id.",
+    "supervisor_fit": "Supervisor should run after mapper suggestion generation and before human acceptance as a reviewer of mapper output, not as a mapper."
+  },
+  "architecture": {
+    "primary_attachment": "per_ai_mapping_suggestion",
+    "secondary_attachment": "per_extracted_data_item_for_omission_review",
+    "batch_scope": "per_job_batch_as_operational_grouping",
+    "principle": "Persist Supervisor review as advisory metadata attached to an AI suggestion or extracted row. It must not directly mutate final mapping.",
+    "must_not_mutate": [
+      "extracted_data_items.template_field_id",
+      "extracted_data_items.confirmed_tag_id",
+      "llm_mapping_suggestions.status",
+      "final XBRL output"
+    ]
+  },
+  "db_schema_design": {
+    "future_migration": "012_add_mapping_supervisor_reviews.sql",
+    "table": "mapping_supervisor_reviews",
+    "fields": [
+      "id",
+      "user_id",
+      "job_id",
+      "extracted_data_item_id",
+      "ai_suggestion_id",
+      "mapper_selected_template_field_id",
+      "mapper_selected_qname",
+      "mapper_confidence",
+      "mapper_status",
+      "supervisor_decision",
+      "supervisor_risk_level",
+      "supervisor_recommended_action",
+      "supervisor_safe_to_accept",
+      "calibrated_safe_to_accept",
+      "supervisor_confidence_adjustment",
+      "supervisor_issues_json",
+      "supervisor_reason",
+      "supervisor_model_provider",
+      "supervisor_model_id",
+      "supervisor_prompt_version",
+      "supervisor_schema_version",
+      "supervisor_payload_hash",
+      "supervisor_response_hash",
+      "review_input_signature_hash",
+      "status",
+      "error_type",
+      "error_message_sanitized",
+      "created_at",
+      "updated_at"
+    ],
+    "recommended_indexes": [
+      "idx_mapping_supervisor_reviews_job_status",
+      "idx_mapping_supervisor_reviews_item",
+      "idx_mapping_supervisor_reviews_suggestion",
+      "idx_mapping_supervisor_reviews_safe",
+      "idx_mapping_supervisor_reviews_risk",
+      "unique active/latest idempotency index on job, item, suggestion, input signature, prompt version, and schema version"
+    ],
+    "storage_policy": "Store payload hashes by default, not raw sensitive payloads. Raw payload storage requires separate approval, redaction, access control, and retention policy."
+  },
+  "backend_service_design": {
+    "proposed_module": "services/supervisor_production_review.py",
+    "responsibilities": [
+      "build production Supervisor payload from extracted row, mapper suggestion, candidates, concept cards, few-shot examples, and do-not-confuse notes",
+      "assert payload safety before any live call",
+      "call Supervisor LLM using SUPERVISOR_LLM_* configuration only",
+      "validate strict JSON schema",
+      "apply deterministic post-validation guardrails",
+      "compute calibrated advisory safe_accept",
+      "persist review result",
+      "never mutate final mapping",
+      "never set confirmed_tag_id"
+    ],
+    "reused_components": [
+      "services.supervisor_mapping_review.assert_supervisor_payload_is_leakage_safe",
+      "services.supervisor_mapping_review.validate_supervisor_response",
+      "services.supervisor_llm_client.SupervisorLLMClient",
+      "17D-B-hotfix-6 threshold classification logic after it is ported with tests"
+    ]
+  },
+  "api_contract_design": {
+    "base_path": "/api/v1/filings",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/jobs/{job_id}/supervisor-reviews",
+        "purpose": "List advisory Supervisor reviews for an owned job with status/risk/safe filters."
+      },
+      {
+        "method": "GET",
+        "path": "/supervisor-reviews/{review_id}",
+        "purpose": "Fetch one owned Supervisor review."
+      },
+      {
+        "method": "POST",
+        "path": "/jobs/{job_id}/supervisor-reviews/run",
+        "purpose": "Run one mock Supervisor review for a suggestion or row in early phases."
+      },
+      {
+        "method": "POST",
+        "path": "/jobs/{job_id}/supervisor-reviews/run-batch",
+        "purpose": "Run or enqueue an idempotent batch review for a job."
+      }
+    ],
+    "response_fields": [
+      "review_decision",
+      "risk_level",
+      "recommended_action",
+      "safe_to_accept",
+      "calibrated_safe_to_accept",
+      "issues",
+      "reason",
+      "status",
+      "created_at",
+      "model metadata",
+      "non-sensitive diagnostics"
+    ]
+  },
+  "ui_design": {
+    "integration_point": "AI Mapping Suggestions panel in frontend/src/review-workspace.jsx",
+    "badges": [
+      "Safe",
+      "Review needed",
+      "High risk",
+      "Omission suspected",
+      "Unsupported candidate",
+      "Ambiguous label"
+    ],
+    "behavior": [
+      "show Supervisor badge beside each AI suggestion",
+      "show reason and issues in collapsible detail",
+      "show safe_to_accept and calibrated_safe_to_accept as advisory only",
+      "keep existing Accept and Reject controls unchanged",
+      "do not auto-click, auto-accept, or hide risky suggestions"
+    ]
+  },
+  "safety_boundaries": {
+    "allowed_payload": [
+      "production extracted row context",
+      "mapper suggestion",
+      "candidate concepts",
+      "concept cards",
+      "few-shot examples approved for production use",
+      "do-not-confuse notes",
+      "non-sensitive diagnostics"
+    ],
+    "forbidden_payload": [
+      "auditor XML",
+      "parsed XML facts",
+      "gold answers",
+      "target correct qname",
+      "target correct template field",
+      "evaluation labels",
+      "local scoring fields"
+    ],
+    "result_cannot": [
+      "directly mutate final mapping",
+      "set confirmed_tag_id",
+      "mark suggestions accepted",
+      "generate XBRL",
+      "run Arelle"
+    ],
+    "human_review_final": true,
+    "first_production_version": "status/review-only"
+  },
+  "rollout_plan": [
+    {
+      "feature": "17D-C-A",
+      "scope": "Design spec only"
+    },
+    {
+      "feature": "17D-C-B",
+      "scope": "Backend persistence schema, model, migration, serializers, and migration tests only; no live LLM call"
+    },
+    {
+      "feature": "17D-C-C",
+      "scope": "Backend service and API with mock Supervisor mode only"
+    },
+    {
+      "feature": "17D-C-D",
+      "scope": "UI display integration with mock/persisted results only"
+    },
+    {
+      "feature": "17D-C-E",
+      "scope": "Live Supervisor run button or batch job behind admin or feature flag"
+    },
+    {
+      "feature": "17D-C-F",
+      "scope": "Production monitoring and audit logs"
+    }
+  ],
+  "test_plan": [
+    "DB model and migration idempotency tests",
+    "payload safety tests proving no auditor XML, parsed XML facts, gold answers, or evaluation labels are present",
+    "Supervisor review does not mutate extracted row mapping",
+    "confirmed_tag_id is never set by Supervisor review",
+    "safe_to_accept display does not trigger accept",
+    "API ownership and user-isolation tests",
+    "failed provider/config call persists failed or skipped review safely",
+    "deterministic guardrail tests",
+    "UI badge rendering tests",
+    "batch idempotency tests"
+  ],
+  "risks_and_open_questions": [
+    "Live batch review can increase provider cost and rate-limit exposure.",
+    "Live batch review likely needs Celery for latency control.",
+    "Raw payload storage should remain disabled unless separately justified.",
+    "Review results can become stale when row, suggestion, candidates, prompt version, or schema version changes.",
+    "Live execution should initially be admin-only or feature-flagged.",
+    "Whether to store sanitized raw response previews should be decided separately."
+  ],
+  "deliverables": [
+    "docs/supervisor_production_integration_design_17d_c.md",
+    "reports/supervisor_production_integration_design_17d_c.json",
+    "reports/supervisor_production_integration_design_17d_c.md"
+  ],
+  "recommended_next_feature": "17D-C-B - Backend persistence schema, SQLAlchemy model, serializer helpers, and migration tests only. No live LLM call, no endpoint behavior change, no UI change, and no auto-apply."
+}
+

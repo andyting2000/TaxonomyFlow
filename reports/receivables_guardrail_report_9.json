@@ -1,0 +1,200 @@
+{
+  "feature": "11N",
+  "job_id": 9,
+  "target_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+  "scope": {
+    "mapping_behavior_changed": true,
+    "database_modified": false,
+    "generated_xbrl_logic_changed": true,
+    "aggregation_implemented": false,
+    "dimensions_implemented": false,
+    "sign_normalization_implemented": false,
+    "replacement_concepts_assigned": false,
+    "full_mbrs_validation_claimed": false
+  },
+  "guardrail_implementation_layer": [
+    "services/xbrl_template_service.py shared automatic_mapping_guardrail_allows and automatic_mapping_guardrail_reason helpers",
+    "services/xbrl_template_service.py hybrid automatic concept matching",
+    "services/smart_ai_processor.py LLM-supplied template concept acceptance path",
+    "services/xbrl_generator.py generator safety net for already-persisted template_field_id rows"
+  ],
+  "allowed_evidence_terms": [
+    "trade receivables",
+    "trade and other receivables",
+    "trade and other current receivables",
+    "other receivables",
+    "other debtor",
+    "other debtors",
+    "accounts receivable",
+    "account receivable",
+    "receivables",
+    "receivable",
+    "amount due from",
+    "amounts due from",
+    "due from",
+    "debtor",
+    "debtors"
+  ],
+  "blocked_company_or_customer_like_label_patterns": [
+    "SDN BHD / SDN. BHD.",
+    "BHD / BHD.",
+    "BERHAD",
+    "LTD / LTD.",
+    "LIMITED",
+    "PTE LTD",
+    "CORPORATION / CORP",
+    "Company/customer-like detail rows without explicit receivable, debtor, or due-from wording"
+  ],
+  "manual_confirmation_behavior": {
+    "blocked_rows_receive_replacement_concept": false,
+    "blocked_rows_are_deleted": false,
+    "blocked_rows_remain_available_for_manual_review_or_tagging": true,
+    "confirmed_tag_behavior": "Generator guardrail applies only to automatic template_field_id rows. Manually confirmed tags continue through the existing confirmed_tag path and are not silently overridden in this slice."
+  },
+  "job_9_before_after_audit_summary": {
+    "before_11n": {
+      "source": "reports/generated_instance_audit_report_9.json before Feature #11N, as recorded by Feature #11L/#11M",
+      "generated_facts": 54,
+      "expected_extracted_facts": 47,
+      "represented_expected_extracted_facts": 47,
+      "not_represented_expected_extracted_facts": 0,
+      "trade_and_other_current_receivables_facts": 18,
+      "duplicate_concept_context_unit_groups": 12,
+      "identical_duplicate_fact_groups": 0,
+      "suspicious_signed_values": 12
+    },
+    "after_11n": {
+      "source": "reports/generated_instance_audit_report_9.json after Feature #11N",
+      "generated_facts": 39,
+      "expected_extracted_facts": 47,
+      "represented_expected_extracted_facts": 32,
+      "not_represented_expected_extracted_facts": 15,
+      "trade_and_other_current_receivables_facts": 3,
+      "duplicate_concept_context_unit_groups": 12,
+      "identical_duplicate_fact_groups": 0,
+      "suspicious_signed_values": 12,
+      "missing_context_refs": 0,
+      "missing_unit_refs": 0,
+      "monetary_facts_without_unitRef": 0
+    }
+  },
+  "impact": {
+    "generated_fact_delta": -15,
+    "trade_and_other_current_receivables_fact_reduction": 15,
+    "trade_and_other_current_receivables_before": 18,
+    "trade_and_other_current_receivables_after": 3,
+    "duplicate_group_count_delta": 0,
+    "duplicate_group_detail": "The overall duplicate group count remains 12 because the three allowed OTHER DEBTOR receivable summary-like rows still share the same concept/context/unit. The noisy company/customer-like detail facts were removed from generated XBRL.",
+    "rows_moved_to_manual_review_or_no_automatic_generated_concept": 15
+  },
+  "rows_moved_to_manual_review_or_no_automatic_generated_concept": [
+    {
+      "item_id": "28f6863e-f183-4cc0-ad1f-8dd84c9c2dc0",
+      "label": "CORPSEC SERVICES SDN BHD",
+      "value": "864.00"
+    },
+    {
+      "item_id": "304ee8c1-5e4c-4526-ad41-030bac0cdcad",
+      "label": "ASIAN SECRETS SDN BHD",
+      "value": "4,800.00"
+    },
+    {
+      "item_id": "41ecf65a-e5f6-4868-b757-7354d40cd77e",
+      "label": "MALAYSIAN RESOURCES CORPORATION BHD",
+      "value": "4,320.00"
+    },
+    {
+      "item_id": "4edab752-d38a-4e10-ba1d-a87fd64ce4b3",
+      "label": "PERMODALAN NASIONAL BERHAD",
+      "value": "139,320.00"
+    },
+    {
+      "item_id": "5532d0ac-9618-4046-bb03-cce4a0ea787a",
+      "label": "KINGDOM ADVISORY SDN BHD",
+      "value": "2,365.20"
+    },
+    {
+      "item_id": "58b0af2e-493f-4212-9873-c422b26c7e6a",
+      "label": "INFO HOUSE (M) SDN BHD",
+      "value": "8,300.00"
+    },
+    {
+      "item_id": "634493c4-bdd9-457c-b004-0928c300ae9a",
+      "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+      "value": "1,512.00"
+    },
+    {
+      "item_id": "86fbe7ae-2c9c-42fe-ac17-b295b003d768",
+      "label": "ADISS CONSULTANTS SDN BHD",
+      "value": "1,080.00"
+    },
+    {
+      "item_id": "91a0dfda-c0e2-41f3-9c47-f2af573f4fb2",
+      "label": "BBS TRUST INT'L LIMITED",
+      "value": "438.48"
+    },
+    {
+      "item_id": "b473acd8-bd03-4920-9446-9eb60a58ddb4",
+      "label": "CEO CORPORATE SERVICES SDN. BHD.",
+      "value": "756.00"
+    },
+    {
+      "item_id": "b585f55d-f11c-4bbc-9288-6970206981f3",
+      "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+      "value": "972.00"
+    },
+    {
+      "item_id": "bc3578cd-a6e6-467e-9504-7bc3acf27a19",
+      "label": "BEZLIFE MARKETING SDN BHD",
+      "value": "13,000.00"
+    },
+    {
+      "item_id": "c556e150-1a3b-4bbb-a769-a91bb089bc1b",
+      "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+      "value": "10,368.00"
+    },
+    {
+      "item_id": "e79c58f0-ae87-4ebd-add3-90488bc6d8e9",
+      "label": "QINETICS MSP SDN BHD",
+      "value": "8,500.00"
+    },
+    {
+      "item_id": "f2b6d4ea-b0c1-4a30-a25e-68e48a81c70a",
+      "label": "AMK CORPORATION SERVICES SDN BHD",
+      "value": "475.20"
+    }
+  ],
+  "allowed_job_9_receivables_rows_remaining_generated": [
+    "OTHER DEBTOR - IH(I.T)",
+    "OTHER DEBTOR - RH",
+    "OTHER DEBTOR - AS"
+  ],
+  "arelle_instance_baseline": {
+    "report": "reports/arelle_validation_baseline_report_9.json",
+    "validation_mode": "instance_baseline",
+    "is_valid": true,
+    "return_code": 0,
+    "full_validation_status": "Full validation remains invalid due to known local FS-MPERS formula/table taxonomy diagnostics.",
+    "submission_ready_proof": false
+  },
+  "limitations": [
+    "This is not aggregation or dimension handling.",
+    "This does not mutate already-persisted job 9 template_field_id values.",
+    "The generated-instance audit still reports the 15 blocked rows as not represented because they remain persisted template_field_id rows in the database.",
+    "This is structural Arelle instance_baseline validation only, not full MBRS/FS-MPERS validation."
+  ],
+  "next_step_recommendation": {
+    "recommended_feature_11o_scope": "Create a dry-run persisted-row correction plan for the 15 job 9 TradeAndOtherCurrentReceivables detail rows now blocked by the guardrail; do not apply without explicit approval.",
+    "dry_run_persisted_row_correction_planning_justified": true,
+    "aggregation_dimension_policy_still_needed_later": true,
+    "sign_policy_still_deferred": true
+  },
+  "verification": [
+    "python -B -m py_compile services/xbrl_template_service.py services/semantic_matcher.py services/smart_ai_processor.py services/xbrl_generator.py tests/test_receivables_guardrail.py",
+    "python -B -m unittest tests.test_receivables_guardrail -v",
+    "python -B -m unittest tests.test_biological_asset_guardrail -v",
+    "python -B scripts/run_real_arelle_validation.py --job-id 9",
+    "python -B scripts/audit_generated_xbrl_instance.py --job-id 9",
+    "python -B scripts/audit_generated_xbrl_instance.py --job-id 9 --json"
+  ]
+}

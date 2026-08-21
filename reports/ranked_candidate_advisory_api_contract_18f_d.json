@@ -1,0 +1,56 @@
+{
+  "run_metadata": {
+    "feature": "18F-D",
+    "generated_at": "2026-06-25T01:54:45Z",
+    "report_type": "ranked_candidate_advisory_api_contract"
+  },
+  "capabilities_response": {
+    "model": "RankedCandidateCapabilitiesRead",
+    "fields": [
+      "job_id",
+      "enabled",
+      "default_mode",
+      "allow_persistence",
+      "default_profile",
+      "supported_profiles",
+      "supported_modes",
+      "supported_actions",
+      "max_rows",
+      "max_candidates_per_row",
+      "admin_only",
+      "feature_flags",
+      "endpoints",
+      "safety"
+    ]
+  },
+  "run_request": {
+    "model": "RankedCandidateAdvisoryRequest",
+    "fields": {
+      "profile": "balanced by default; must be one of strict/balanced/recall",
+      "mode": "dry_run only",
+      "max_rows": "must not exceed configured RANKED_CANDIDATES_ADVISORY_MAX_ROWS",
+      "max_candidates_per_row": "must not exceed configured RANKED_CANDIDATES_ADVISORY_MAX_CANDIDATES_PER_ROW"
+    }
+  },
+  "run_response": {
+    "model": "RankedCandidateAdvisoryResponse",
+    "row_model": "RankedCandidateRow",
+    "candidate_model": "RankedCandidateItem",
+    "safety_model": "RankedCandidateSafetySummary",
+    "status": "completed for successful dry-run generation"
+  },
+  "non_goals_confirmed": [
+    "No UI work.",
+    "No DB migration.",
+    "No persistence.",
+    "No AI suggestion table writes.",
+    "No final mapping mutation.",
+    "No mapping row mutation.",
+    "No confirmed_tag_id automation.",
+    "No auto-apply, auto-accept, or auto-reject.",
+    "No Qwen, Supervisor, LLM, external provider, or live Azure DI call.",
+    "No XBRL generation.",
+    "No Arelle run."
+  ],
+  "recommended_next_feature": "Feature #18F-E - Add read-only frontend test panel for ranked candidates behind disabled UI flag"
+}

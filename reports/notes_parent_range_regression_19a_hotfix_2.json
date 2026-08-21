@@ -1,0 +1,46 @@
+{
+  "report_id": "notes_parent_range_regression_19a_hotfix_2",
+  "feature_id": "19A-hotfix-2",
+  "generated_on": "2026-08-10",
+  "status": "PASS",
+  "fresh_real_pdf_smoke_status": "PENDING",
+  "job_66_v2_false_positive": {
+    "reported_note_subsections": 17,
+    "reported_conservation_passed": true,
+    "actual_parent_pdf_range": [0, 0],
+    "actual_child_pdf_pages": [0],
+    "examples": [
+      "COMPANY NO. : 202201047805 ...",
+      "BEZLIFE MARKETING SDN. BHD.",
+      "DIRECTORS' REPORT AND",
+      "FINANCIAL STATEMENTS",
+      "FOR",
+      "THE FINANCIAL YEAR ENDED",
+      "31 DECEMBER 2024",
+      "TEL:",
+      "FAX:"
+    ]
+  },
+  "invariants": [
+    "Only evidence fully inside the corrected Notes parent range may create a Notes child.",
+    "Boundary-spanning evidence is represented as ambiguous and cannot silently create a child.",
+    "Every emitted child PDF range must be contained by its Notes parent; otherwise segmentation fails closed.",
+    "Selection-state markers use the same semantic normalization as TOC and anchor titles."
+  ],
+  "job_66_regression_fixture_result": {
+    "notes_parent_pdf_range": [16, 23],
+    "notes_parent_azure_range": [17, 24],
+    "note_subsection_count": 9,
+    "notes_child_page_distribution": {"16": 2, "17": 1, "18": 1, "19": 1, "20": 1, "21": 1, "22": 1, "23": 1},
+    "notes_children_outside_parent_range_count": 0,
+    "cover_page_child_count": 0,
+    "notes_evidence_total": 17,
+    "notes_evidence_assigned": 17,
+    "notes_evidence_unassigned": 0,
+    "notes_evidence_ambiguous": 0,
+    "notes_evidence_dropped": 0,
+    "notes_conservation_passed": true,
+    "smoke_hard_gates_passed": true
+  },
+  "scope": "The primary correction is #19A parent-range authority. #19B received only the containment invariant needed to prevent a downstream false success; its semantic classifier was not redesigned."
+}

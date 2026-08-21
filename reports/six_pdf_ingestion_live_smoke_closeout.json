@@ -1,0 +1,357 @@
+{
+  "run_metadata": {
+    "feature": "18F-G-A-quality-smoke-closeout",
+    "generated_at": "2026-07-23T10:08:16.1986187+08:00",
+    "mode": "read_only_live_evidence_audit",
+    "phase_a_status": "failed",
+    "phase_b_status": "skipped_phase_a_failed",
+    "external_provider_called": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "supervisor_called": false,
+    "mapper_correction_called": false
+  },
+  "selection": {
+    "rule": "Six most recently uploaded FilingJob rows still present in the database, ordered by uploaded_at descending.",
+    "job_ids": [
+      58,
+      57,
+      56,
+      55,
+      51,
+      50
+    ],
+    "caveat": "Jobs 50 and 51 predate the current Celery worker and the final task-identity hotfix. Jobs 55 through 58 are the four tasks processed by the current worker after it loaded the current code."
+  },
+  "jobs": [
+    {
+      "filing_id": 58,
+      "job_id": 58,
+      "filing_name": "SHIELD PLUS SDN. BHD.",
+      "stored_pdf_filename": "827833198d5349d8b37bc12dd63bcbb2.pdf",
+      "uploaded_at_utc": "2026-07-23T01:40:35.818666+00:00",
+      "start_timestamp": null,
+      "completion_timestamp_utc": "2026-07-23T01:48:09.531260+00:00",
+      "completion_timestamp_evidence": "Celery SUCCESS date_done",
+      "final_filing_job_status": "REVIEW",
+      "progress": 100,
+      "celery_task_uuid": "a5024edf-f999-4fbc-a354-926baa7d2a4b",
+      "celery_result_status": "SUCCESS",
+      "azure_di_page_count": 15,
+      "azure_di_page_count_evidence": "15 persisted Azure-derived pages with 15 distinct page numbers",
+      "azure_di_table_count": null,
+      "azure_di_table_count_evidence": "Exact provider table count was not persisted; 8 distinct table indexes are represented in row provenance.",
+      "normalized_candidate_count": null,
+      "normalized_candidate_count_evidence": "Exact pre-persistence normalized count was not persisted.",
+      "persisted_extracted_row_count": 32,
+      "ai_mapping_status": "completed",
+      "ai_suggestion_count": 22,
+      "warnings": [
+        "Azure DI text block normalization timed out; table candidates continued.",
+        "Six rows recorded note_column_values_ignored."
+      ],
+      "stable_error_code": null,
+      "worker_process_id": 7428,
+      "worker_event_loop_id": null,
+      "worker_event_loop_id_evidence": "Not retained outside non-persisted worker logs."
+    },
+    {
+      "filing_id": 57,
+      "job_id": 57,
+      "filing_name": "RAHSIA HERBAL SDN. BHD.",
+      "stored_pdf_filename": "2fb941a7d9f74c56ac1347def1e72d76.pdf",
+      "uploaded_at_utc": "2026-07-23T01:40:07.354264+00:00",
+      "start_timestamp": null,
+      "completion_timestamp_utc": "2026-07-23T01:49:52.432050+00:00",
+      "completion_timestamp_evidence": "Celery SUCCESS date_done",
+      "final_filing_job_status": "REVIEW",
+      "progress": 100,
+      "celery_task_uuid": "e9759918-d78c-45a1-a944-23027ac39057",
+      "celery_result_status": "SUCCESS",
+      "azure_di_page_count": 24,
+      "azure_di_page_count_evidence": "24 persisted Azure-derived pages with 24 distinct page numbers",
+      "azure_di_table_count": null,
+      "azure_di_table_count_evidence": "Exact provider table count was not persisted; 12 distinct table indexes are represented in row provenance.",
+      "normalized_candidate_count": null,
+      "normalized_candidate_count_evidence": "Exact pre-persistence normalized count was not persisted.",
+      "persisted_extracted_row_count": 101,
+      "ai_mapping_status": "completed",
+      "ai_suggestion_count": 50,
+      "warnings": [
+        "Azure DI text block normalization timed out; table candidates continued.",
+        "Ten rows recorded note_column_values_ignored."
+      ],
+      "stable_error_code": null,
+      "worker_process_id": 7428,
+      "worker_event_loop_id": null,
+      "worker_event_loop_id_evidence": "Not retained outside non-persisted worker logs."
+    },
+    {
+      "filing_id": 56,
+      "job_id": 56,
+      "filing_name": "AGENSI PEKERJAAN JCONNECTOR.COM SDN. BHD.",
+      "stored_pdf_filename": "8f28c195ff35432f885176ff7223357b.pdf",
+      "uploaded_at_utc": "2026-07-23T01:39:21.379953+00:00",
+      "start_timestamp": null,
+      "completion_timestamp_utc": null,
+      "completion_timestamp_evidence": "Celery date_done is absent. Redis TTL places the last PROGRESS write at approximately 2026-07-23T01:49:21.592+00:00.",
+      "final_filing_job_status": "REVIEW",
+      "progress": 100,
+      "celery_task_uuid": "da711d85-d699-463e-befe-ae640653bf3c",
+      "celery_result_status": "PROGRESS",
+      "celery_result_progress": 100,
+      "azure_di_page_count": 22,
+      "azure_di_page_count_evidence": "Structured timeout metadata and 22 distinct persisted page numbers",
+      "azure_di_table_count": 16,
+      "azure_di_table_count_evidence": "Structured timeout fallback metadata",
+      "raw_table_candidate_count": 72,
+      "normalized_candidate_count": 63,
+      "normalized_candidate_count_evidence": "Structured timeout fallback metadata",
+      "persisted_extracted_row_count": 63,
+      "ai_mapping_status": "completed",
+      "ai_suggestion_count": 50,
+      "warnings": [
+        "azure_di_text_block_normalization_timeout",
+        "Table-only fallback used.",
+        "Four rows recorded note_column_values_ignored."
+      ],
+      "stable_error_code": null,
+      "worker_process_id": 7428,
+      "worker_event_loop_id": null,
+      "worker_event_loop_id_evidence": "Not retained outside non-persisted worker logs."
+    },
+    {
+      "filing_id": 55,
+      "job_id": 55,
+      "filing_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "stored_pdf_filename": "b47264e6204243138350cfc631ae5f4d.pdf",
+      "uploaded_at_utc": "2026-07-23T01:32:41.907159+00:00",
+      "start_timestamp": null,
+      "completion_timestamp_utc": null,
+      "completion_timestamp_evidence": "Celery date_done is absent. Redis TTL places the last PROGRESS write at approximately 2026-07-23T01:45:13.592+00:00.",
+      "final_filing_job_status": "REVIEW",
+      "progress": 100,
+      "celery_task_uuid": "d7b1838e-52dd-4220-b39f-bda0366f4212",
+      "celery_result_status": "PROGRESS",
+      "celery_result_progress": 100,
+      "azure_di_page_count": 23,
+      "azure_di_page_count_evidence": "Structured timeout metadata and 23 distinct persisted page numbers",
+      "azure_di_table_count": 17,
+      "azure_di_table_count_evidence": "Structured timeout fallback metadata",
+      "raw_table_candidate_count": 93,
+      "normalized_candidate_count": 83,
+      "normalized_candidate_count_evidence": "Structured timeout fallback metadata",
+      "persisted_extracted_row_count": 83,
+      "ai_mapping_status": "completed",
+      "ai_suggestion_count": 50,
+      "warnings": [
+        "azure_di_text_block_normalization_timeout",
+        "Table-only fallback used.",
+        "Ten rows recorded note_column_values_ignored."
+      ],
+      "stable_error_code": null,
+      "worker_process_id": 7428,
+      "worker_event_loop_id": null,
+      "worker_event_loop_id_evidence": "Not retained outside non-persisted worker logs."
+    },
+    {
+      "filing_id": 51,
+      "job_id": 51,
+      "filing_name": "FINE BATIK SDN. BHD.",
+      "stored_pdf_filename": "d85c445e7fda4d2287ca7dc50bb50bbe.pdf",
+      "uploaded_at_utc": "2026-07-22T15:36:22.604681+00:00",
+      "start_timestamp": null,
+      "completion_timestamp_utc": null,
+      "completion_timestamp_evidence": "Task result expired and FilingJob has no completion timestamp. Last persisted suggestion was created at 2026-07-22T15:38:59.112145+00:00.",
+      "final_filing_job_status": "REVIEW",
+      "progress": 100,
+      "celery_task_uuid": null,
+      "celery_task_uuid_evidence": "Unavailable because the one-hour Celery result expired and task IDs are not stored on FilingJob; this is not evidence that the original ID was null.",
+      "celery_result_status": "expired_or_missing_at_audit",
+      "azure_di_page_count": 25,
+      "azure_di_page_count_evidence": "25 persisted Azure-derived pages with 25 distinct page numbers",
+      "azure_di_table_count": null,
+      "azure_di_table_count_evidence": "Exact provider table count was not persisted; 12 distinct table indexes are represented in row provenance.",
+      "normalized_candidate_count": null,
+      "normalized_candidate_count_evidence": "Exact pre-persistence normalized count was not persisted.",
+      "persisted_extracted_row_count": 107,
+      "ai_mapping_status": "failed",
+      "ai_suggestion_count": 6,
+      "warnings": [
+        "Azure DI text block normalization timed out; table candidates continued.",
+        "Twelve rows recorded note_column_values_ignored."
+      ],
+      "stable_error_code": null,
+      "error": "Optional AI mapping persisted: Future attached to a different loop.",
+      "worker_process_id": null,
+      "worker_event_loop_id": null
+    },
+    {
+      "filing_id": 50,
+      "job_id": 50,
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "stored_pdf_filename": "8d1ff62a73704dd1a13fa3871f7285e1.pdf",
+      "uploaded_at_utc": "2026-07-22T15:31:48.613023+00:00",
+      "start_timestamp": null,
+      "completion_timestamp_utc": null,
+      "completion_timestamp_evidence": "Task result expired and FilingJob has no completion timestamp. Last persisted suggestion was created at 2026-07-22T15:36:09.458970+00:00.",
+      "final_filing_job_status": "REVIEW",
+      "progress": 100,
+      "celery_task_uuid": null,
+      "celery_task_uuid_evidence": "Unavailable because the one-hour Celery result expired and task IDs are not stored on FilingJob; this is not evidence that the original ID was null.",
+      "celery_result_status": "expired_or_missing_at_audit",
+      "azure_di_page_count": 26,
+      "azure_di_page_count_evidence": "26 persisted Azure-derived pages with 26 distinct page numbers",
+      "azure_di_table_count": null,
+      "azure_di_table_count_evidence": "Exact provider table count was not persisted; 11 distinct table indexes are represented in row provenance.",
+      "normalized_candidate_count": null,
+      "normalized_candidate_count_evidence": "Exact pre-persistence normalized count was not persisted.",
+      "persisted_extracted_row_count": 76,
+      "ai_mapping_status": "completed",
+      "ai_suggestion_count": 50,
+      "warnings": [
+        "Azure DI text block normalization timed out; table candidates continued.",
+        "Six rows recorded note_column_values_ignored."
+      ],
+      "stable_error_code": null,
+      "worker_process_id": null,
+      "worker_event_loop_id": null
+    }
+  ],
+  "aggregate": {
+    "jobs_reviewed": 6,
+    "filing_job_status_counts": {
+      "REVIEW": 6
+    },
+    "persisted_pages": 135,
+    "persisted_extracted_rows": 462,
+    "ai_mapping_status_counts": {
+      "completed": 5,
+      "failed": 1
+    },
+    "ai_suggestions": 228,
+    "current_worker_jobs": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "current_worker_pid": 7428,
+    "current_worker_started_at_local": "2026-07-23T09:31:22+08:00",
+    "current_worker_uptime_seconds_at_audit": 2110,
+    "current_worker_task_count": 4,
+    "current_worker_active_tasks": 0,
+    "current_worker_reserved_tasks": 0,
+    "current_worker_scheduled_tasks": 0,
+    "current_worker_code_freshness": "tasks.py was last modified at 2026-07-23T09:09:00.9429841+08:00, before worker start."
+  },
+  "regression_checks": {
+    "all_six_filing_jobs_terminal": {
+      "status": "pass",
+      "evidence": "All six FilingJob rows are REVIEW at progress 100; the database contains zero PROCESSING jobs."
+    },
+    "successful_extraction_rows_nonzero": {
+      "status": "pass",
+      "evidence": "Row counts are 76, 107, 83, 63, 101, and 32."
+    },
+    "task_identity": {
+      "status": "inconclusive_for_all_six",
+      "evidence": "Jobs 55-58 have nonempty UUIDs. Jobs 50-51 expired from the Celery backend and FilingJob does not persist task UUIDs."
+    },
+    "cross_event_loop": {
+      "status": "fail",
+      "evidence": "Job 51 ai_mapping_last_error_message contains 'Future ... attached to a different loop'. Jobs 55-58 do not contain a cross-loop error."
+    },
+    "unknown_protocol_state": {
+      "status": "not_observed_in_persisted_state",
+      "evidence": "No matching database error was found. No persisted Celery/backend log was available for a complete historical log search."
+    },
+    "redis_cross_loop_or_client_ownership": {
+      "status": "not_observed_for_current_worker_jobs",
+      "evidence": "Jobs 55-58 reached REVIEW with AI mapping completed and the local Redis endpoint remained responsive. Worker loop IDs were not persisted."
+    },
+    "stuck_processing": {
+      "status": "pass_for_filing_jobs_fail_for_task_results",
+      "evidence": "No FilingJob is PROCESSING and the worker queue is idle, but Celery result records for jobs 55 and 56 remain PROGRESS at 100 with no date_done."
+    },
+    "duplicate_persistence": {
+      "status": "pass",
+      "evidence": "All six jobs have page count equal to distinct page-number count; SQL found zero exact duplicate extracted-row groups within a page."
+    },
+    "stale_worker": {
+      "status": "pass_for_current_worker",
+      "evidence": "Worker PID 7428 started after the current tasks.py modification and processed exactly the four current-window PDF tasks."
+    },
+    "sequential_worker_stability": {
+      "status": "partial",
+      "evidence": "Jobs 55-58 all ran under PID 7428 without a restart and later jobs reached Azure DI, REVIEW, and completed AI mapping. Jobs 50-51 predate that worker, so no-restart stability across all six cannot be established."
+    },
+    "optional_mapping_failure_isolation": {
+      "status": "pass_with_restart_caveat",
+      "evidence": "Job 51 retained 107 rows and REVIEW after optional mapping failed. Later jobs succeeded, but they ran under a later worker process."
+    }
+  },
+  "log_search": {
+    "persisted_backend_or_celery_log_found": false,
+    "searched_patterns": [
+      "Future attached to a different loop",
+      "got result for unknown protocol state",
+      "task_id must not be empty",
+      "task_id=None",
+      "Redis cross-loop/client ownership errors",
+      "PROCESSING job not finalized",
+      "duplicate extracted-row persistence",
+      "stale worker using old code"
+    ],
+    "limitation": "The application did not persist worker console logs in the workspace. Database, Redis result metadata, Celery inspect output, process metadata, and persisted row provenance were audited instead."
+  },
+  "phase_a": {
+    "status": "failed",
+    "failing_jobs": [
+      {
+        "job_id": 51,
+        "stage": "optional AI mapping",
+        "failure": "Persisted cross-event-loop Future error."
+      },
+      {
+        "job_id": 55,
+        "stage": "Celery result finalization after successful processing",
+        "failure": "Worker is idle and FilingJob is REVIEW, but Celery result remains PROGRESS at 100 without date_done."
+      },
+      {
+        "job_id": 56,
+        "stage": "Celery result finalization after successful processing",
+        "failure": "Worker is idle and FilingJob is REVIEW, but Celery result remains PROGRESS at 100 without date_done."
+      }
+    ],
+    "reason": "The strict no-cross-loop criterion failed, all-six task identity/no-restart evidence is incomplete, and two current-worker task results did not become terminal."
+  },
+  "phase_b": {
+    "status": "skipped_phase_a_failed",
+    "case_selection_report_generated": false,
+    "manual_ui_cases_selected": 0,
+    "quality_reports_generated": false,
+    "retry_limit_tested": false
+  },
+  "safety": {
+    "automatic_supervisor_review": false,
+    "automatic_remapping": false,
+    "external_llm_call": false,
+    "mapping_mutation": false,
+    "confirmed_tag_id_mutation": false,
+    "final_mapping_mutation": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "recommended_next_feature": {
+    "id": "18F-G-A-quality-smoke-blocker-2",
+    "name": "Finalize successful explicit-ID Celery PDF tasks to a terminal result state",
+    "scope": [
+      "Reproduce and fix the missing terminal SUCCESS result for jobs that finish after explicit backend PROGRESS writes.",
+      "Add focused coverage proving PROGRESS is followed by terminal SUCCESS with the same captured task UUID.",
+      "Retain the persistent worker event loop, fatal cleanup, REVIEW preservation, and advisory mapping isolation.",
+      "Repeat the smoke with six post-hotfix tasks whose UUIDs and terminal timestamps remain observable."
+    ],
+    "root_cause_status": "The missing terminal backend write is confirmed; its internal Celery cause is not established because worker logs were not persisted."
+  }
+}

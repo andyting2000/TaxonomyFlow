@@ -1,0 +1,104 @@
+{
+  "report_id": "heading_anchor_hardening_19a_hotfix_1",
+  "feature_id": "19A-hotfix-1",
+  "generated_on": "2026-08-07",
+  "status": "PASS",
+  "live_job_65_smoke_status": "NOT_RERUN",
+  "original_defect": {
+    "examples": ["TO", "SE", "(e)"],
+    "impact": "Very short document fragments could match materially longer TOC headings, become anchors, and pollute page-offset consensus."
+  },
+  "root_cause": [
+    "Containment and fuzzy text scores were allowed to receive layout boosts before lexical trust was established.",
+    "Anchor output did not explicitly distinguish trusted matches from rejected candidates.",
+    "Expected-title and candidate-title token coverage and length compatibility were not enforced."
+  ],
+  "changes": {
+    "lexical_first": true,
+    "layout_can_rescue_untrusted_text": false,
+    "match_tiers": {
+      "A": "exact normalized title",
+      "B": "exact canonical alias",
+      "C": "strong fuzzy match with lexical, token-coverage, and length-ratio thresholds",
+      "D": "substantial containment with coverage and length safeguards"
+    },
+    "anchor_evidence_fields": [
+      "match_tier",
+      "lexical_score",
+      "token_coverage",
+      "expected_token_coverage",
+      "candidate_token_coverage",
+      "length_ratio",
+      "heading_quality_score",
+      "trusted",
+      "rejection_reason",
+      "confidence",
+      "rejected_candidates"
+    ],
+    "rejection_classes": [
+      "empty or low-quality heading",
+      "short fragment",
+      "insufficient expected-title token coverage",
+      "insufficient candidate-title token coverage",
+      "incompatible title length",
+      "weak lexical similarity"
+    ]
+  },
+  "job_65_style_fixture_result": {
+    "trusted_anchor_count": 9,
+    "rejected_anchor_count": 0,
+    "short_fragment_anchors": 0,
+    "trusted_anchor_match_tiers": "exact or strong lexical matches",
+    "alignment_confidence": 0.98
+  },
+  "anchor_examples": {
+    "trusted": [
+      {
+        "expected": "Statement of Financial Position",
+        "observed": "STATEMENT OF FINANCIAL POSITION",
+        "tier": "A"
+      },
+      {
+        "expected": "Notes to the Financial Statements",
+        "observed": "NOTES TO THE FINANCIAL STATEMENTS",
+        "tier": "A"
+      }
+    ],
+    "rejected_by_adversarial_tests": [
+      {
+        "expected": "Statement by Directors",
+        "observed": "TO",
+        "reason": "short fragment and insufficient token coverage"
+      },
+      {
+        "expected": "Statutory Declaration",
+        "observed": "SE",
+        "reason": "short fragment and insufficient token coverage"
+      },
+      {
+        "expected": "Notes to the Financial Statements",
+        "observed": "(e)",
+        "reason": "section marker and insufficient token coverage"
+      }
+    ]
+  },
+  "adversarial_regressions": [
+    "TO cannot anchor Statement by Directors",
+    "SE cannot anchor Statutory Declaration",
+    "(e) cannot anchor Notes to the Financial Statements",
+    "layout position cannot rescue an untrusted lexical candidate",
+    "trusted and rejected evidence remains inspectable"
+  ],
+  "verification": {
+    "focused_19a_tests_passed": 65,
+    "full_backend_tests_passed": 1420,
+    "failures": 0
+  },
+  "safety": {
+    "provider_calls": 0,
+    "mapping_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "template_field_mutations": 0
+  },
+  "decision": "Anchor eligibility now depends on trustworthy lexical evidence before geometry or layout scoring. Rejected candidates cannot vote in alignment consensus or establish section boundaries."
+}

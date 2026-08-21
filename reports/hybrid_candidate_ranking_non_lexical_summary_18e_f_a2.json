@@ -1,0 +1,1016 @@
+{
+  "run_metadata": {
+    "feature": "18E-F-A-2",
+    "generated_at": "2026-06-24T23:46:41Z",
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "baseline": {
+      "total_observations": 782,
+      "rows_with_at_least_1_candidate": 445,
+      "rows_with_at_least_3_candidates": 181,
+      "rows_with_high_or_medium_candidate": 317,
+      "rows_with_only_low_risk_candidates": 244,
+      "rows_blocked_by_note_boundaries": 138,
+      "no_candidate_rows": 337,
+      "no_candidate_status_rows": 199,
+      "candidate_coverage_rate": 0.5691,
+      "three_candidate_coverage_rate": 0.2315,
+      "high_or_medium_candidate_coverage_rate": 0.4054,
+      "candidate_coverage_status_counts": {
+        "blocked_by_note_boundary": 138,
+        "deterministic_candidate_available": 6,
+        "no_candidate": 199,
+        "ranked_candidates_available": 439
+      },
+      "candidate_count_by_row": {
+        "0": 337,
+        "1": 217,
+        "2": 47,
+        "3": 169,
+        "4": 12
+      },
+      "candidate_source_counts": {
+        "deterministic_current_mapper": 300,
+        "statement_dictionary": 246,
+        "taxonomy_lexical": 826
+      },
+      "candidate_source_row_counts": {
+        "deterministic_current_mapper": 300,
+        "statement_dictionary": 226,
+        "taxonomy_lexical": 429
+      },
+      "risk_distribution": {
+        "high": 211,
+        "low": 528,
+        "medium": 127
+      },
+      "confidence_bucket_distribution": {
+        "candidate_high": 228,
+        "candidate_low": 534,
+        "candidate_medium": 104
+      },
+      "filtered_candidate_count": 2033,
+      "filtered_reason_counts": {
+        "candidate_score_below_tightened_threshold": 162,
+        "cash_flow_row_blocks_balance_sheet_cash_concept": 20,
+        "cash_flow_row_blocks_balance_sheet_working_capital_concept": 40,
+        "financial_position_row_blocks_profit_loss_or_cash_flow_concept": 4,
+        "high_risk_candidate_score_below_tightened_threshold": 421,
+        "high_risk_label_family_requires_corrob_or_exact_strong_context": 413,
+        "note_detail_row_blocks_main_statement_candidate_without_boundary_support": 766,
+        "profit_loss_row_blocks_balance_sheet_concept": 8,
+        "taxonomy_lexical_generic_label_without_strong_context": 46,
+        "taxonomy_lexical_similarity_below_tightened_threshold": 302,
+        "taxonomy_lexical_standalone_top_n_pruned": 745
+      },
+      "safe_for_auto_apply_count": 0,
+      "requires_human_review_count": 866,
+      "safety": {
+        "external_llm_called": false,
+        "external_provider_called": false,
+        "qwen_called": false,
+        "supervisor_called": false,
+        "azure_di_live_call_made": false,
+        "database_mutated": false,
+        "production_behavior_changed": false,
+        "production_mapper_integrated": false,
+        "api_changed": false,
+        "ui_changed": false,
+        "ai_suggestion_table_written": false,
+        "auto_applied": false,
+        "auto_accept_recommended": false,
+        "auto_reject_recommended": false,
+        "confirmed_tag_id_mutated": false,
+        "confirmed_tag_id_automation_recommended": false,
+        "xbrl_generated": false,
+        "arelle_run": false
+      }
+    },
+    "non_lexical_enhanced": {
+      "total_observations": 782,
+      "rows_with_at_least_1_candidate": 476,
+      "rows_with_at_least_3_candidates": 216,
+      "rows_with_high_or_medium_candidate": 430,
+      "rows_with_only_low_risk_candidates": 80,
+      "rows_blocked_by_note_boundaries": 0,
+      "no_candidate_rows": 306,
+      "no_candidate_status_rows": 0,
+      "candidate_coverage_rate": 0.6087,
+      "three_candidate_coverage_rate": 0.2762,
+      "high_or_medium_candidate_coverage_rate": 0.5499,
+      "candidate_coverage_status_counts": {
+        "deterministic_candidate_available": 6,
+        "not_evaluable": 306,
+        "ranked_candidates_available": 470
+      },
+      "candidate_count_by_row": {
+        "0": 306,
+        "1": 161,
+        "2": 99,
+        "3": 128,
+        "4": 44,
+        "5": 44
+      },
+      "candidate_source_counts": {
+        "cash_flow_movement_pack": 59,
+        "concept_playbook_lookup": 549,
+        "deterministic_current_mapper": 300,
+        "equity_movement_pack": 14,
+        "local_concept_family_pack": 58,
+        "section_concept_pack": 131,
+        "statement_dictionary": 246,
+        "statement_role_pack": 46,
+        "taxonomy_lexical": 776,
+        "taxonomy_structure_hint": 38
+      },
+      "candidate_source_row_counts": {
+        "cash_flow_movement_pack": 59,
+        "concept_playbook_lookup": 249,
+        "deterministic_current_mapper": 300,
+        "equity_movement_pack": 14,
+        "local_concept_family_pack": 58,
+        "section_concept_pack": 131,
+        "statement_dictionary": 226,
+        "statement_role_pack": 46,
+        "taxonomy_lexical": 425,
+        "taxonomy_structure_hint": 22
+      },
+      "risk_distribution": {
+        "high": 403,
+        "low": 340,
+        "medium": 396
+      },
+      "confidence_bucket_distribution": {
+        "candidate_high": 182,
+        "candidate_low": 460,
+        "candidate_medium": 497
+      },
+      "filtered_candidate_count": 346,
+      "filtered_reason_counts": {
+        "cash_flow_row_blocks_balance_sheet_cash_concept": 114,
+        "high_risk_candidate_score_below_tightened_threshold": 28,
+        "high_risk_label_family_requires_corrob_or_exact_strong_context": 216
+      },
+      "safe_for_auto_apply_count": 0,
+      "requires_human_review_count": 1139,
+      "safety": {
+        "external_llm_called": false,
+        "external_provider_called": false,
+        "qwen_called": false,
+        "supervisor_called": false,
+        "azure_di_live_call_made": false,
+        "database_mutated": false,
+        "production_behavior_changed": false,
+        "production_mapper_integrated": false,
+        "api_changed": false,
+        "ui_changed": false,
+        "ai_suggestion_table_written": false,
+        "auto_applied": false,
+        "auto_accept_recommended": false,
+        "auto_reject_recommended": false,
+        "confirmed_tag_id_mutated": false,
+        "confirmed_tag_id_automation_recommended": false,
+        "xbrl_generated": false,
+        "arelle_run": false
+      }
+    },
+    "coverage_delta": 0.0396,
+    "rows_with_at_least_1_candidate_delta": 31,
+    "rows_with_at_least_3_candidates_delta": 35,
+    "no_candidate_rows_delta": -31,
+    "candidate_total_delta": 273,
+    "high_risk_delta": 192,
+    "high_risk_vs_original_18e_f_a_baseline": {
+      "original_18e_f_a_high_or_critical_candidate_count": 1006,
+      "non_lexical_enhanced_high_or_critical_candidate_count": 403,
+      "materially_below_original_baseline": true
+    },
+    "top1_precision_before": 0.7027,
+    "top1_precision_after": 0.7838,
+    "top3_recall_before": 0.6019,
+    "top3_recall_after": 0.5922,
+    "top5_recall_before": 0.6019,
+    "top5_recall_after": 0.6019,
+    "risk_summary": {
+      "candidate_risk_distribution": {
+        "high": 403,
+        "low": 340,
+        "medium": 396
+      },
+      "high_or_critical_candidate_count": 403,
+      "high_or_critical_candidate_family_counts": {
+        "borrowings": 16,
+        "cash": 106,
+        "cash_flow": 317,
+        "financial_position": 203,
+        "payables": 27,
+        "profit_loss": 354,
+        "receivables": 35,
+        "tax": 57,
+        "unknown": 24
+      },
+      "rows_blocked_by_note_boundaries": 0,
+      "rows_with_blocked_note_boundary_candidates": 0,
+      "safe_for_auto_apply_count": 0,
+      "safety": {
+        "external_llm_called": false,
+        "external_provider_called": false,
+        "qwen_called": false,
+        "supervisor_called": false,
+        "azure_di_live_call_made": false,
+        "database_mutated": false,
+        "production_behavior_changed": false,
+        "production_mapper_integrated": false,
+        "api_changed": false,
+        "ui_changed": false,
+        "ai_suggestion_table_written": false,
+        "auto_applied": false,
+        "auto_accept_recommended": false,
+        "auto_reject_recommended": false,
+        "confirmed_tag_id_mutated": false,
+        "confirmed_tag_id_automation_recommended": false,
+        "xbrl_generated": false,
+        "arelle_run": false
+      }
+    },
+    "source_summary": {
+      "rows_considered": 782,
+      "rows_with_local_candidates": 414,
+      "local_candidate_count": 1229,
+      "source_types_enabled": [
+        "cash_flow_movement_pack",
+        "concept_playbook_lookup",
+        "equity_movement_pack",
+        "format_memory_pack",
+        "local_concept_family_pack",
+        "note_total_candidate",
+        "section_concept_pack",
+        "statement_role_pack",
+        "taxonomy_structure_hint"
+      ],
+      "candidate_source_counts": {
+        "cash_flow_movement_pack": 59,
+        "concept_playbook_lookup": 867,
+        "equity_movement_pack": 14,
+        "local_concept_family_pack": 58,
+        "section_concept_pack": 141,
+        "statement_role_pack": 46,
+        "taxonomy_structure_hint": 44
+      },
+      "candidate_source_row_counts": {
+        "cash_flow_movement_pack": 59,
+        "concept_playbook_lookup": 252,
+        "equity_movement_pack": 14,
+        "local_concept_family_pack": 58,
+        "section_concept_pack": 133,
+        "statement_role_pack": 46,
+        "taxonomy_structure_hint": 22
+      },
+      "top_qnames": [
+        {
+          "qname": "ifrs-smes:OtherExpenseByFunction",
+          "count": 92
+        },
+        {
+          "qname": "ssmt:CashAndBankBalances",
+          "count": 84
+        },
+        {
+          "qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "count": 83
+        },
+        {
+          "qname": "ifrs-smes:CashAndCashEquivalents",
+          "count": 80
+        },
+        {
+          "qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "count": 78
+        },
+        {
+          "qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "count": 72
+        },
+        {
+          "qname": "ifrs-smes:ProfitLossBeforeTax",
+          "count": 61
+        },
+        {
+          "qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+          "count": 61
+        },
+        {
+          "qname": "ifrs-smes:GrossProfit",
+          "count": 43
+        },
+        {
+          "qname": "ssmt-mpers:OtherMiscellaneousIncome",
+          "count": 43
+        },
+        {
+          "qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "count": 35
+        },
+        {
+          "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "count": 32
+        },
+        {
+          "qname": "ifrs-smes:NoncurrentLiabilities",
+          "count": 31
+        },
+        {
+          "qname": "ssmt-mpers:CurrentNontradePayables",
+          "count": 29
+        },
+        {
+          "qname": "ifrs-smes:EquityAndLiabilities",
+          "count": 27
+        },
+        {
+          "qname": "ifrs-smes:Liabilities",
+          "count": 26
+        },
+        {
+          "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "count": 25
+        },
+        {
+          "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "count": 25
+        },
+        {
+          "qname": "ifrs-smes:CurrentLiabilities",
+          "count": 25
+        },
+        {
+          "qname": "ifrs-smes:OtherIncome",
+          "count": 22
+        },
+        {
+          "qname": "ifrs-smes:Revenue",
+          "count": 20
+        },
+        {
+          "qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+          "count": 18
+        },
+        {
+          "qname": "ifrs-smes:ProfitLoss",
+          "count": 16
+        },
+        {
+          "qname": "ifrs-smes:PropertyPlantAndEquipment",
+          "count": 16
+        },
+        {
+          "qname": "ifrs-smes:NoncurrentAssets",
+          "count": 16
+        },
+        {
+          "qname": "ifrs-smes:OtherRevenue",
+          "count": 13
+        },
+        {
+          "qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "count": 11
+        },
+        {
+          "qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "count": 10
+        },
+        {
+          "qname": "ssmt-mpers:AuditorsRemuneration",
+          "count": 10
+        },
+        {
+          "qname": "ifrs-smes:Equity",
+          "count": 10
+        }
+      ],
+      "top_labels_with_local_candidates": [
+        {
+          "normalized_label": "tax expense",
+          "count": 33
+        },
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 18
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 17
+        },
+        {
+          "normalized_label": "bank balances",
+          "count": 16
+        },
+        {
+          "normalized_label": "property plant and equipment",
+          "count": 14
+        },
+        {
+          "normalized_label": "loss for the financial year",
+          "count": 14
+        },
+        {
+          "normalized_label": "revenue",
+          "count": 12
+        },
+        {
+          "normalized_label": "cash flows from investing activities",
+          "count": 10
+        },
+        {
+          "normalized_label": "total non current assets",
+          "count": 8
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 8
+        },
+        {
+          "normalized_label": "total equity",
+          "count": 8
+        },
+        {
+          "normalized_label": "total equity and liabilities",
+          "count": 8
+        },
+        {
+          "normalized_label": "loss from operating activities",
+          "count": 7
+        },
+        {
+          "normalized_label": "add other income",
+          "count": 6
+        },
+        {
+          "normalized_label": "net cash from operating activities",
+          "count": 6
+        },
+        {
+          "normalized_label": "bank charges",
+          "count": 6
+        },
+        {
+          "normalized_label": "total assets",
+          "count": 6
+        },
+        {
+          "normalized_label": "accumulated losses",
+          "count": 6
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 6
+        },
+        {
+          "normalized_label": "total liabilities",
+          "count": 6
+        },
+        {
+          "normalized_label": "other operating expenses",
+          "count": 6
+        },
+        {
+          "normalized_label": "amount due to directors",
+          "count": 6
+        },
+        {
+          "normalized_label": "gross profit",
+          "count": 5
+        },
+        {
+          "normalized_label": "increase in amount due to director",
+          "count": 5
+        },
+        {
+          "normalized_label": "operating loss before working capital changes",
+          "count": 5
+        },
+        {
+          "normalized_label": "cash and cash equivalents at end of period",
+          "count": 4
+        },
+        {
+          "normalized_label": "accounting fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "secretarial fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "net decrease increase in cash and cash equivalents",
+          "count": 4
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of year",
+          "count": 4
+        }
+      ],
+      "concept_cards": {
+        "status": "loaded",
+        "discovered_files": [
+          {
+            "path": "reports\\fs_mpers_concept_playbook_17d_pre.json",
+            "exists": true,
+            "size_bytes": 146852
+          },
+          {
+            "path": "reports\\fs_mpers_concept_playbook_summary_17d_pre.json",
+            "exists": true,
+            "size_bytes": 31508
+          },
+          {
+            "path": "reports\\fs_mpers_rag_payload_examples_17d_pre.json",
+            "exists": true,
+            "size_bytes": 330491
+          },
+          {
+            "path": "reports\\fs_mpers_rag_retrieval_examples_17d_pre.json",
+            "exists": true,
+            "size_bytes": 147264
+          }
+        ],
+        "loaded_files": [
+          "reports\\fs_mpers_concept_playbook_17d_pre.json",
+          "reports\\fs_mpers_concept_playbook_summary_17d_pre.json",
+          "reports\\fs_mpers_rag_payload_examples_17d_pre.json",
+          "reports\\fs_mpers_rag_retrieval_examples_17d_pre.json"
+        ],
+        "missing_files": [],
+        "unsupported_files": [],
+        "concept_card_count": 39,
+        "taxonomy_metadata_status": "loaded"
+      },
+      "taxonomy_structure": {
+        "concepts_considered": 923,
+        "presentation_or_calculation_tree_available": true,
+        "minimal_qname_concept_family_hints_used": true
+      },
+      "safe_for_auto_apply_count": 0,
+      "requires_human_review": true,
+      "safety": {
+        "external_llm_called": false,
+        "external_provider_called": false,
+        "qwen_called": false,
+        "supervisor_called": false,
+        "azure_di_live_call_made": false,
+        "database_mutated": false,
+        "production_behavior_changed": false,
+        "production_mapper_integrated": false,
+        "api_changed": false,
+        "ui_changed": false,
+        "ai_suggestion_table_written": false,
+        "auto_applied": false,
+        "auto_accept_recommended": false,
+        "auto_reject_recommended": false,
+        "confirmed_tag_id_mutated": false,
+        "confirmed_tag_id_automation_recommended": false,
+        "xbrl_generated": false,
+        "arelle_run": false
+      }
+    },
+    "filter_summary": {
+      "recovered_row_count": 35,
+      "recovered_true_positive_count": 0,
+      "new_wrong_candidate_rows": 0,
+      "rows_losing_all_candidates": 4,
+      "newly_covered_high_or_critical_risk_rows": 2,
+      "local_source_candidate_counts": {
+        "cash_flow_movement_pack": 59,
+        "concept_playbook_lookup": 549,
+        "equity_movement_pack": 14,
+        "local_concept_family_pack": 58,
+        "section_concept_pack": 131,
+        "statement_role_pack": 46,
+        "taxonomy_structure_hint": 38
+      },
+      "local_source_row_counts": {
+        "cash_flow_movement_pack": 59,
+        "concept_playbook_lookup": 249,
+        "equity_movement_pack": 14,
+        "local_concept_family_pack": 58,
+        "section_concept_pack": 131,
+        "statement_role_pack": 46,
+        "taxonomy_structure_hint": 22
+      },
+      "newly_covered_labels": [
+        {
+          "normalized_label": "operating loss before working capital changes",
+          "count": 5
+        },
+        {
+          "normalized_label": "advertisement",
+          "count": 2
+        },
+        {
+          "normalized_label": "commission paid",
+          "count": 2
+        },
+        {
+          "normalized_label": "membership fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "penalties",
+          "count": 2
+        },
+        {
+          "normalized_label": "seminar fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "upkeep of office equipment",
+          "count": 2
+        },
+        {
+          "normalized_label": "web hosting",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount due from directors",
+          "count": 2
+        },
+        {
+          "normalized_label": "totalt telephone fax and postage",
+          "count": 2
+        },
+        {
+          "normalized_label": "electricity and water",
+          "count": 2
+        },
+        {
+          "normalized_label": "rental of photostat machine",
+          "count": 2
+        },
+        {
+          "normalized_label": "computer and software ba",
+          "count": 2
+        },
+        {
+          "normalized_label": "travelling",
+          "count": 1
+        },
+        {
+          "normalized_label": "website maintenance fee",
+          "count": 1
+        },
+        {
+          "normalized_label": "legal fee",
+          "count": 1
+        },
+        {
+          "normalized_label": "petrol",
+          "count": 1
+        },
+        {
+          "normalized_label": "computer",
+          "count": 1
+        },
+        {
+          "normalized_label": "printing and stationeries 1 242 and mur",
+          "count": 1
+        }
+      ],
+      "top_still_uncovered_labels": [
+        {
+          "normalized_label": "tax expense",
+          "count": 37
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 10
+        },
+        {
+          "normalized_label": "expenses not deductible for tax purposes",
+          "count": 10
+        },
+        {
+          "normalized_label": "ooi boon beng",
+          "count": 8
+        },
+        {
+          "normalized_label": "addition",
+          "count": 8
+        },
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 6
+        },
+        {
+          "normalized_label": "disposal",
+          "count": 6
+        },
+        {
+          "normalized_label": "at beginning and end of the year",
+          "count": 6
+        },
+        {
+          "normalized_label": "1 1",
+          "count": 5
+        },
+        {
+          "normalized_label": "operating profit loss before working capital changes",
+          "count": 4
+        },
+        {
+          "normalized_label": "accruals",
+          "count": 4
+        },
+        {
+          "normalized_label": "audit fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses carried forward",
+          "count": 4
+        },
+        {
+          "normalized_label": "directors remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "term loan interests",
+          "count": 4
+        },
+        {
+          "normalized_label": "effect of unabsorbed losses",
+          "count": 4
+        },
+        {
+          "normalized_label": "ung ming xian f",
+          "count": 4
+        },
+        {
+          "normalized_label": "auditor s remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "research and development expenditure written off",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses brought forward",
+          "count": 3
+        },
+        {
+          "normalized_label": "deposits",
+          "count": 3
+        },
+        {
+          "normalized_label": "retained profits carried forward",
+          "count": 2
+        },
+        {
+          "normalized_label": "dr ooi boon beng",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian",
+          "count": 2
+        },
+        {
+          "normalized_label": "cash at bank",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 2
+        },
+        {
+          "normalized_label": "total assets discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "share capital",
+          "count": 2
+        },
+        {
+          "normalized_label": "retained profits accumulated losses",
+          "count": 2
+        },
+        {
+          "normalized_label": "total shareholders equity",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount due to director",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 2
+        },
+        {
+          "normalized_label": "total equity and liabilities draft wie",
+          "count": 2
+        },
+        {
+          "normalized_label": "at beginning and end of the financial year period",
+          "count": 2
+        },
+        {
+          "normalized_label": "epf contribution",
+          "count": 2
+        },
+        {
+          "normalized_label": "director s fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "rental of office",
+          "count": 2
+        },
+        {
+          "normalized_label": "printing and stationeries for discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "web building fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian f man kan 5 000 de the",
+          "count": 2
+        }
+      ],
+      "safe_for_auto_apply_count": 0,
+      "safety": {
+        "external_llm_called": false,
+        "external_provider_called": false,
+        "qwen_called": false,
+        "supervisor_called": false,
+        "azure_di_live_call_made": false,
+        "database_mutated": false,
+        "production_behavior_changed": false,
+        "production_mapper_integrated": false,
+        "api_changed": false,
+        "ui_changed": false,
+        "ai_suggestion_table_written": false,
+        "auto_applied": false,
+        "auto_accept_recommended": false,
+        "auto_reject_recommended": false,
+        "confirmed_tag_id_mutated": false,
+        "confirmed_tag_id_automation_recommended": false,
+        "xbrl_generated": false,
+        "arelle_run": false
+      }
+    },
+    "source_specific_evaluation": {
+      "unique_support_rows": 103,
+      "sources": [
+        {
+          "source": "cash_flow_movement_pack",
+          "rows_with_source": 59,
+          "candidate_rows_with_local_support": 5,
+          "top1_hits_when_source_on_top": 3,
+          "correct_candidate_rows_with_source": 3,
+          "top1_precision_if_source_on_top": 0.6,
+          "top5_recall_if_source_present": 0.0291
+        },
+        {
+          "source": "concept_playbook_lookup",
+          "rows_with_source": 249,
+          "candidate_rows_with_local_support": 40,
+          "top1_hits_when_source_on_top": 33,
+          "correct_candidate_rows_with_source": 35,
+          "top1_precision_if_source_on_top": 0.8919,
+          "top5_recall_if_source_present": 0.3398
+        },
+        {
+          "source": "deterministic_current_mapper",
+          "rows_with_source": 300,
+          "candidate_rows_with_local_support": 55,
+          "top1_hits_when_source_on_top": 44,
+          "correct_candidate_rows_with_source": 44,
+          "top1_precision_if_source_on_top": 0.8302,
+          "top5_recall_if_source_present": 0.4272
+        },
+        {
+          "source": "equity_movement_pack",
+          "rows_with_source": 14,
+          "candidate_rows_with_local_support": 0,
+          "top1_hits_when_source_on_top": 0,
+          "correct_candidate_rows_with_source": 0,
+          "top1_precision_if_source_on_top": null,
+          "top5_recall_if_source_present": 0.0
+        },
+        {
+          "source": "local_concept_family_pack",
+          "rows_with_source": 58,
+          "candidate_rows_with_local_support": 0,
+          "top1_hits_when_source_on_top": 0,
+          "correct_candidate_rows_with_source": 0,
+          "top1_precision_if_source_on_top": null,
+          "top5_recall_if_source_present": 0.0
+        },
+        {
+          "source": "section_concept_pack",
+          "rows_with_source": 131,
+          "candidate_rows_with_local_support": 28,
+          "top1_hits_when_source_on_top": 21,
+          "correct_candidate_rows_with_source": 21,
+          "top1_precision_if_source_on_top": 0.75,
+          "top5_recall_if_source_present": 0.2039
+        },
+        {
+          "source": "statement_dictionary",
+          "rows_with_source": 226,
+          "candidate_rows_with_local_support": 45,
+          "top1_hits_when_source_on_top": 35,
+          "correct_candidate_rows_with_source": 35,
+          "top1_precision_if_source_on_top": 0.814,
+          "top5_recall_if_source_present": 0.3398
+        },
+        {
+          "source": "statement_role_pack",
+          "rows_with_source": 46,
+          "candidate_rows_with_local_support": 7,
+          "top1_hits_when_source_on_top": 7,
+          "correct_candidate_rows_with_source": 7,
+          "top1_precision_if_source_on_top": 1.0,
+          "top5_recall_if_source_present": 0.068
+        },
+        {
+          "source": "taxonomy_lexical",
+          "rows_with_source": 425,
+          "candidate_rows_with_local_support": 73,
+          "top1_hits_when_source_on_top": 58,
+          "correct_candidate_rows_with_source": 62,
+          "top1_precision_if_source_on_top": 0.7945,
+          "top5_recall_if_source_present": 0.6019
+        },
+        {
+          "source": "taxonomy_structure_hint",
+          "rows_with_source": 22,
+          "candidate_rows_with_local_support": 10,
+          "top1_hits_when_source_on_top": 0,
+          "correct_candidate_rows_with_source": 0,
+          "top1_precision_if_source_on_top": null,
+          "top5_recall_if_source_present": 0.0
+        }
+      ]
+    },
+    "eighty_percent_candidate_coverage_path_realistic": false,
+    "safe_for_auto_apply_count": 0,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "qwen_called": false,
+      "supervisor_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "recommendation": {
+    "recommended_next_feature": "Feature #18F-B - Hybrid candidate-ranking hardening and threshold calibration",
+    "reason": "Coverage is now at or above 60% with preserved top-N quality and controlled review-only risk.",
+    "basis": {
+      "candidate_coverage_rate": 0.6087,
+      "top1_precision_if_evaluable": 0.7838,
+      "top3_recall_if_evaluable": 0.5922,
+      "top5_recall_if_evaluable": 0.6019,
+      "topn_preserved_or_improved": true,
+      "high_or_critical_candidate_count": 403,
+      "candidate_total": 1139,
+      "candidate_list_too_noisy": false,
+      "new_wrong_candidate_rows": 0,
+      "recovered_true_positive_count": 0,
+      "concept_card_count": 39
+    }
+  }
+}

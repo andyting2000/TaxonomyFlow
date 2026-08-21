@@ -1,0 +1,144 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-19T06:46:48.321061+00:00",
+    "feature": "13Y",
+    "script": "scripts/resolve_extraction_v2_duplicates.py",
+    "report_type": "azure_di_normalized_duplicate_conflict",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "output_path": "reports\\azure_di_normalized_duplicate_conflict_13y.json",
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "reference_xml_sent_to_provider": false,
+    "source_pipeline": "azure_di_normalized_report",
+    "live_external_provider_call": false,
+    "azure_di_live_call_made": false
+  },
+  "input_reports": {
+    "v2_report": "reports\\azure_di_normalized_extraction_v2_report_13y.json",
+    "quality_report": "reports\\azure_di_normalized_candidate_quality_13y.json",
+    "readiness_report": "in_memory_azure_di_normalized_readiness"
+  },
+  "final_13q_benchmark_still_successful": true,
+  "pre_cleanup_13r_readiness": {
+    "high": 20,
+    "low": 2,
+    "medium": 46,
+    "not_ready": 24
+  },
+  "aggregate": {
+    "total_candidates_analyzed": 92,
+    "exact_duplicate_groups": 0,
+    "same_label_value_duplicate_groups": 1,
+    "conflicting_duplicate_groups": 1,
+    "heading_like_duplicate_groups": 0,
+    "date_year_label_groups": 0,
+    "text_block_duplicate_groups": 0,
+    "safe_suppression_count": 0,
+    "downgrade_count": 0,
+    "converted_row_type_count": 0,
+    "conflict_review_count": 2,
+    "manual_review_required_count": 0,
+    "kept_count": 90
+  },
+  "per_case_duplicate_conflict_summary": [
+    {
+      "case_id": "Shield-Plus",
+      "original_candidate_count": 92,
+      "cleaned_candidate_count": 92,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 0,
+      "conflict_groups": 1,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    }
+  ],
+  "top_20_risky_duplicate_labels": [
+    {
+      "label": "net loss for the year",
+      "count": 2
+    }
+  ],
+  "top_20_suppressed_exact_duplicates": [],
+  "duplicate_groups": [
+    {
+      "group_id": "same-label-value-0001",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        14
+      ],
+      "statement_sections": [
+        "Other Receivable"
+      ],
+      "label": "Other receivable",
+      "normalized_label": "other receivable",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:35:35",
+        "Shield-Plus:candidate:81:81"
+      ]
+    },
+    {
+      "group_id": "conflict-0002",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        9
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Net loss for the year",
+      "normalized_label": "net loss for the year",
+      "values": [
+        {
+          "value": "0",
+          "previous_value": "-11514"
+        },
+        {
+          "value": "0",
+          "previous_value": "-13171"
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:57:57",
+        "Shield-Plus:candidate:59:59"
+      ]
+    }
+  ],
+  "limitations": [
+    "Only exact duplicate evidence is suppressible.",
+    "Conflicting values are preserved and require review.",
+    "This report does not choose values, aggregate detail rows, map taxonomy concepts, flip signs, infer dimensions, or merge text blocks across sections."
+  ]
+}

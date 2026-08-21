@@ -1,0 +1,960 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-19T06:46:48.283380+00:00",
+    "feature": "13Y",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "report_type": "azure_di_normalized_candidate_quality",
+    "script": "scripts/analyze_extraction_v2_candidate_quality.py",
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "reference_xml_sent_to_provider": false,
+    "output_path": "reports\\azure_di_normalized_candidate_quality_13y.json",
+    "source_pipeline": "azure_di_normalized_report",
+    "live_external_provider_call": false,
+    "azure_di_live_call_made": false
+  },
+  "input_reports": {
+    "v2_report": "reports\\azure_di_normalized_extraction_v2_report_13y.json"
+  },
+  "final_13q_benchmark_still_successful": true,
+  "aggregate_candidate_counts": {
+    "total_candidates": 92,
+    "candidate_type_distribution": {
+      "comparative_numeric_fact": 22,
+      "heading": 24,
+      "numeric_fact": 1,
+      "subtotal_or_total": 9,
+      "text_block": 36
+    },
+    "source_distribution": {
+      "unknown": 92
+    },
+    "readiness_distribution": {
+      "high": 20,
+      "low": 2,
+      "medium": 46,
+      "not_ready": 24
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "Shield-Plus",
+      "total_candidates": 92,
+      "numeric_candidates": 32,
+      "text_block_candidates": 36,
+      "huggingface_candidates": 0,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 0,
+      "reference_numeric_facts": 0,
+      "reference_text_blocks": 0,
+      "candidate_quality_score": 50.9,
+      "mapping_readiness_score": 50.9,
+      "high_readiness_count": 20,
+      "medium_readiness_count": 46,
+      "low_readiness_count": 2,
+      "not_ready_count": 24,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 9
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 7
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 6
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 5
+        },
+        {
+          "issue": "missing_year_context",
+          "count": 3
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 2
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 2
+        },
+        {
+          "issue": "text_under_numeric_section",
+          "count": 1
+        },
+        {
+          "issue": "short_text_block",
+          "count": 1
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 9
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 7
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 6
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 5
+        },
+        {
+          "issue": "missing_year_context",
+          "count": 3
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 2
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 2
+        },
+        {
+          "issue": "text_under_numeric_section",
+          "count": 1
+        },
+        {
+          "issue": "short_text_block",
+          "count": 1
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "siah teong ban",
+          "count": 1
+        },
+        {
+          "label": "lee ah kim",
+          "count": 1
+        },
+        {
+          "label": "capital deficiency",
+          "count": 1
+        },
+        {
+          "label": "capital deficiency and liabilities",
+          "count": 1
+        },
+        {
+          "label": "revenue",
+          "count": 1
+        },
+        {
+          "label": "net decrease increase in cash and cash equivalents",
+          "count": 1
+        },
+        {
+          "label": "cash and cash equivalents at beginning of year",
+          "count": 1
+        },
+        {
+          "label": "deposit",
+          "count": 1
+        },
+        {
+          "label": "accruals",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "ready_for_mapping_prototype"
+    }
+  ],
+  "quality_issue_counts": {
+    "dash_or_zero_value": 7,
+    "duplicate_label_conflicting_values": 2,
+    "duplicate_label_value_same_case": 2,
+    "heading_like_numeric_fact": 9,
+    "identical_current_previous_values": 6,
+    "missing_year_context": 3,
+    "short_text_block": 1,
+    "suspicious_negative_value": 5,
+    "text_under_numeric_section": 1
+  },
+  "quality_issue_category_counts": {
+    "comparative_quality": 9,
+    "duplicate_quality": 4,
+    "label_quality": 9,
+    "numeric_quality": 12,
+    "section_quality": 1,
+    "text_block_quality": 1
+  },
+  "top_issue_categories": [
+    {
+      "category": "numeric_quality",
+      "count": 12
+    },
+    {
+      "category": "label_quality",
+      "count": 9
+    },
+    {
+      "category": "comparative_quality",
+      "count": 9
+    },
+    {
+      "category": "duplicate_quality",
+      "count": 4
+    },
+    {
+      "category": "section_quality",
+      "count": 1
+    },
+    {
+      "category": "text_block_quality",
+      "count": 1
+    }
+  ],
+  "top_suspicious_labels": [
+    {
+      "label": "siah teong ban",
+      "count": 1
+    },
+    {
+      "label": "lee ah kim",
+      "count": 1
+    },
+    {
+      "label": "capital deficiency",
+      "count": 1
+    },
+    {
+      "label": "capital deficiency and liabilities",
+      "count": 1
+    },
+    {
+      "label": "revenue",
+      "count": 1
+    },
+    {
+      "label": "net decrease increase in cash and cash equivalents",
+      "count": 1
+    },
+    {
+      "label": "cash and cash equivalents at beginning of year",
+      "count": 1
+    },
+    {
+      "label": "deposit",
+      "count": 1
+    },
+    {
+      "label": "accruals",
+      "count": 1
+    }
+  ],
+  "top_duplicate_labels": [
+    {
+      "label": "other receivable",
+      "count": 2
+    },
+    {
+      "label": "net loss for the year",
+      "count": 2
+    }
+  ],
+  "top_near_duplicate_labels": [
+    {
+      "normalized_label": "otherreceivable",
+      "count": 3
+    },
+    {
+      "normalized_label": "contributedsharecapital",
+      "count": 2
+    },
+    {
+      "normalized_label": "otherpayable",
+      "count": 2
+    },
+    {
+      "normalized_label": "amountduetodirector",
+      "count": 2
+    },
+    {
+      "normalized_label": "bankoverdraftunsecured",
+      "count": 2
+    },
+    {
+      "normalized_label": "netlossfortheyear",
+      "count": 2
+    }
+  ],
+  "top_section_problems": [
+    {
+      "issue": "text_under_numeric_section",
+      "count": 1
+    }
+  ],
+  "numeric_quality_summary": {
+    "numeric_candidate_count": 32,
+    "missing_value_count": 0,
+    "non_numeric_value_count": 0,
+    "date_or_year_value_as_amount_count": 0,
+    "parentheses_negative_count": 0,
+    "dash_or_zero_count": 7,
+    "amount_format_normalization_count": 0,
+    "suspicious_negative_count": 5
+  },
+  "text_block_quality_summary": {
+    "text_block_count": 36,
+    "short_text_block_count": 1,
+    "long_text_block_count": 0,
+    "heading_only_text_block_count": 0,
+    "weak_text_block_label_count": 0,
+    "cases_missing_text_block_signal": []
+  },
+  "source_quality_summary": {
+    "source_distribution": {
+      "unknown": 92
+    },
+    "huggingface_candidate_count": 0,
+    "native_only_candidate_count": 0,
+    "openai_candidate_count": 0,
+    "unknown_source_candidate_count": 92
+  },
+  "reference_overlap_summary": {
+    "reference_total_facts": 0,
+    "reference_concepts_count": 0,
+    "rough_label_concept_overlap_count": 0,
+    "top_reference_concepts_not_represented_in_v2": [],
+    "top_v2_labels_not_found_in_reference": [],
+    "likely_extraction_misses": [],
+    "likely_label_normalization_issues": [],
+    "likely_structural_taxonomy_concepts": [],
+    "limitation": "This is rough offline overlap only and is not final taxonomy mapping accuracy."
+  },
+  "candidate_samples_with_issues": [
+    {
+      "candidate_id": "Shield-Plus:3:19",
+      "candidate": {
+        "index": 19,
+        "case_id": "Shield-Plus",
+        "page_number": 3,
+        "row_type": "comparative_numeric_fact",
+        "label": "Siah Teong Ban",
+        "value": "1",
+        "previous_value": "0",
+        "statement_section": "Notes to the Financial Statements",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:3:20",
+      "candidate": {
+        "index": 20,
+        "case_id": "Shield-Plus",
+        "page_number": 3,
+        "row_type": "comparative_numeric_fact",
+        "label": "Lee Ah Kim",
+        "value": "1",
+        "previous_value": "0",
+        "statement_section": "Notes to the Financial Statements",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:6:33",
+      "candidate": {
+        "index": 33,
+        "case_id": "Shield-Plus",
+        "page_number": 6,
+        "row_type": "text_block",
+        "label": "Statement of Cash Flows: STATUTORY DECLARATION PURSUANT TO SECTION 251(1)(b) OF THE COMPANIES ACT",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Cash Flows",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "text_under_numeric_section",
+          "category": "section_quality",
+          "severity": "low",
+          "message": "Text block is under a numeric statement section.",
+          "field": "statement_section"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:7:35",
+      "candidate": {
+        "index": 35,
+        "case_id": "Shield-Plus",
+        "page_number": 7,
+        "row_type": "heading",
+        "label": "Other receivable",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Other Receivable",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "Shield-Plus:7:41",
+      "candidate": {
+        "index": 41,
+        "case_id": "Shield-Plus",
+        "page_number": 7,
+        "row_type": "subtotal_or_total",
+        "label": "Total Asset",
+        "value": "400",
+        "previous_value": "400",
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "Shield-Plus:7:44",
+      "candidate": {
+        "index": 44,
+        "case_id": "Shield-Plus",
+        "page_number": 7,
+        "row_type": "subtotal_or_total",
+        "label": "Capital Deficiency",
+        "value": "-194546",
+        "previous_value": "-181375",
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:7:49",
+      "candidate": {
+        "index": 49,
+        "case_id": "Shield-Plus",
+        "page_number": 7,
+        "row_type": "subtotal_or_total",
+        "label": "Capital Deficiency and Liabilities",
+        "value": "400",
+        "previous_value": "400",
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:8:50",
+      "candidate": {
+        "index": 50,
+        "case_id": "Shield-Plus",
+        "page_number": 8,
+        "row_type": "comparative_numeric_fact",
+        "label": "Revenue",
+        "value": "25258",
+        "previous_value": "26933",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:8:51",
+      "candidate": {
+        "index": 51,
+        "case_id": "Shield-Plus",
+        "page_number": 8,
+        "row_type": "comparative_numeric_fact",
+        "label": "Administration expenses",
+        "value": "-38429",
+        "previous_value": "-38447",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "Shield-Plus:8:53",
+      "candidate": {
+        "index": 53,
+        "case_id": "Shield-Plus",
+        "page_number": 8,
+        "row_type": "comparative_numeric_fact",
+        "label": "Tax expense",
+        "value": "0",
+        "previous_value": "0",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "Shield-Plus:9:57",
+      "candidate": {
+        "index": 57,
+        "case_id": "Shield-Plus",
+        "page_number": 9,
+        "row_type": "subtotal_or_total",
+        "label": "Net loss for the year",
+        "value": "0",
+        "previous_value": "-11514",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "missing_year_context",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Comparative values have no current/prior year context."
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "duplicate_label_conflicting_values",
+          "category": "duplicate_quality",
+          "severity": "high",
+          "message": "Same case label appears with conflicting values."
+        }
+      ],
+      "readiness": "low"
+    },
+    {
+      "candidate_id": "Shield-Plus:9:58",
+      "candidate": {
+        "index": 58,
+        "case_id": "Shield-Plus",
+        "page_number": 9,
+        "row_type": "comparative_numeric_fact",
+        "label": "Other comprehensive income for the year",
+        "value": "0",
+        "previous_value": "0",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "missing_year_context",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Comparative values have no current/prior year context."
+        },
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:9:59",
+      "candidate": {
+        "index": 59,
+        "case_id": "Shield-Plus",
+        "page_number": 9,
+        "row_type": "subtotal_or_total",
+        "label": "Net loss for the year",
+        "value": "0",
+        "previous_value": "-13171",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "missing_year_context",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Comparative values have no current/prior year context."
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "duplicate_label_conflicting_values",
+          "category": "duplicate_quality",
+          "severity": "high",
+          "message": "Same case label appears with conflicting values."
+        }
+      ],
+      "readiness": "low"
+    },
+    {
+      "candidate_id": "Shield-Plus:10:61",
+      "candidate": {
+        "index": 61,
+        "case_id": "Shield-Plus",
+        "page_number": 10,
+        "row_type": "comparative_numeric_fact",
+        "label": "Decrease in receivable",
+        "value": "0",
+        "previous_value": "2292",
+        "statement_section": "Statement of Cash Flows",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "Shield-Plus:10:64",
+      "candidate": {
+        "index": 64,
+        "case_id": "Shield-Plus",
+        "page_number": 10,
+        "row_type": "comparative_numeric_fact",
+        "label": "NET (DECREASE) INCREASE IN CASH AND CASH EQUIVALENTS",
+        "value": "-1352",
+        "previous_value": "4883",
+        "statement_section": "Statement of Cash Flows",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:10:65",
+      "candidate": {
+        "index": 65,
+        "case_id": "Shield-Plus",
+        "page_number": 10,
+        "row_type": "comparative_numeric_fact",
+        "label": "CASH AND CASH EQUIVALENTS AT BEGINNING OF YEAR",
+        "value": "-215",
+        "previous_value": "-5098",
+        "statement_section": "Statement of Cash Flows",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:10:66",
+      "candidate": {
+        "index": 66,
+        "case_id": "Shield-Plus",
+        "page_number": 10,
+        "row_type": "comparative_numeric_fact",
+        "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+        "value": "-1567",
+        "previous_value": "-215",
+        "statement_section": "Statement of Cash Flows",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "Shield-Plus:14:81",
+      "candidate": {
+        "index": 81,
+        "case_id": "Shield-Plus",
+        "page_number": 14,
+        "row_type": "heading",
+        "label": "OTHER RECEIVABLE",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Other Receivable",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "Shield-Plus:14:83",
+      "candidate": {
+        "index": 83,
+        "case_id": "Shield-Plus",
+        "page_number": 14,
+        "row_type": "comparative_numeric_fact",
+        "label": "Deposit",
+        "value": "400",
+        "previous_value": "400",
+        "statement_section": "Notes to the Financial Statements",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:14:84",
+      "candidate": {
+        "index": 84,
+        "case_id": "Shield-Plus",
+        "page_number": 14,
+        "row_type": "comparative_numeric_fact",
+        "label": "no par value",
+        "value": "2",
+        "previous_value": "2",
+        "statement_section": "Notes to the Financial Statements",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "Shield-Plus:15:90",
+      "candidate": {
+        "index": 90,
+        "case_id": "Shield-Plus",
+        "page_number": 15,
+        "row_type": "text_block",
+        "label": "Notes to the Financial Statements: The outstanding amount due to director is shown in Note",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Notes to the Financial Statements",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "short_text_block",
+          "category": "text_block_quality",
+          "severity": "medium",
+          "message": "Text block is short and may be a heading or line fragment.",
+          "field": "text"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "Shield-Plus:15:91",
+      "candidate": {
+        "index": 91,
+        "case_id": "Shield-Plus",
+        "page_number": 15,
+        "row_type": "comparative_numeric_fact",
+        "label": "Accruals",
+        "value": "1300",
+        "previous_value": "1600",
+        "statement_section": "Notes to the Financial Statements",
+        "extraction_method": "azure_document_intelligence"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    }
+  ],
+  "limitations": [
+    "Heuristic analysis only; scores are provisional and are not final mapping accuracy.",
+    "Reference report is used only for offline comparison and is not sent to any model.",
+    "No benchmark rerun, model call, DB mutation, XBRL generation, Arelle validation, UI upload, or production cutover is performed."
+  ]
+}

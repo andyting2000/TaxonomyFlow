@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:ifrs-smes="https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes" xmlns:ssmt-dei="http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-dei-core" xmlns:ssmt-dei-ee-mpers="http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-dei-ee-mpers" xmlns:ssmt="http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-cor" xmlns:ssmt-mpers="http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor" xmlns:ssmt-mfrs="http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mfrs-cor" id="MBRS_Preparation_Tool_2.2">
+  <link:schemaRef xlink:type="simple" xlink:href="../../../taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/ssmt-fs-mpers_2022-12-31_entry_point.xsd"/>
+  <xbrli:context id="fromto_20240101_20241231">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:startDate>2024-01-01</xbrli:startDate>
+      <xbrli:endDate>2024-12-31</xbrli:endDate>
+    </xbrli:period>
+  </xbrli:context>
+  <xbrli:context id="asof_20241231">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2024-12-31</xbrli:instant>
+    </xbrli:period>
+  </xbrli:context>
+  <xbrli:context id="fromto_20230101_20231231">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:startDate>2023-01-01</xbrli:startDate>
+      <xbrli:endDate>2023-12-31</xbrli:endDate>
+    </xbrli:period>
+  </xbrli:context>
+  <xbrli:context id="asof_20231231">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2023-12-31</xbrli:instant>
+    </xbrli:period>
+  </xbrli:context>
+  <xbrli:context id="fromto_20240101_20241231_SeparateMember">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:startDate>2024-01-01</xbrli:startDate>
+      <xbrli:endDate>2024-12-31</xbrli:endDate>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis">ifrs-smes:SeparateMember</xbrldi:explicitMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <xbrli:context id="asof_20241231_SeparateMember">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2024-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis">ifrs-smes:SeparateMember</xbrldi:explicitMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <xbrli:context id="asof_20231231_SeparateMember">
+    <xbrli:entity>
+      <xbrli:identifier scheme="https://www.ssm.com.my/">10E-TEST</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2023-12-31</xbrli:instant>
+    </xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis">ifrs-smes:SeparateMember</xbrldi:explicitMember>
+    </xbrli:scenario>
+  </xbrli:context>
+  <xbrli:unit id="MYR">
+    <xbrli:measure>iso4217:MYR</xbrli:measure>
+  </xbrli:unit>
+  <ssmt-dei:DescriptionOfPresentationCurrency contextRef="fromto_20240101_20241231">Malaysian Ringgit (MYR)</ssmt-dei:DescriptionOfPresentationCurrency>
+  <ssmt-dei:LevelOfRoundingUsedInFinancialStatements contextRef="fromto_20240101_20241231">Actuals</ssmt-dei:LevelOfRoundingUsedInFinancialStatements>
+  <ssmt-dei:NameAndVersionOfSoftwareUsedToGenerateXBRLFile contextRef="fromto_20240101_20241231">MBRS_Preparation_Tool v2.2</ssmt-dei:NameAndVersionOfSoftwareUsedToGenerateXBRLFile>
+  <ssmt-dei:TaxonomyVersion contextRef="fromto_20240101_20241231">SSMxT_2022v1.0</ssmt-dei:TaxonomyVersion>
+  <ssmt:DisclosureOnWhetherCompanysSharesAreTradedOnAnyOfficialStockExchange contextRef="fromto_20240101_20241231">Not-listed</ssmt:DisclosureOnWhetherCompanysSharesAreTradedOnAnyOfficialStockExchange>
+  <ssmt:DisclosureOfWhetherCompanyRegulatedByBankNegaraMalaysiaAtFinancialYearEnd contextRef="fromto_20240101_20241231">Company not regulated by Bank Negara Malaysia</ssmt:DisclosureOfWhetherCompanyRegulatedByBankNegaraMalaysiaAtFinancialYearEnd>
+  <ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors contextRef="asof_20241231">2025-06-29</ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors>
+  <ifrs-smes:PropertyPlantAndEquipment contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">7318.06</ifrs-smes:PropertyPlantAndEquipment>
+  <ifrs-smes:NoncurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">7318.06</ifrs-smes:NoncurrentAssets>
+  <ssmt:CashAndBankBalances contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">33812.79</ssmt:CashAndBankBalances>
+  <ssmt-mpers:OtherCurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">5280.00</ssmt-mpers:OtherCurrentAssets>
+  <ifrs-smes:TradeAndOtherCurrentReceivables contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">133279.62</ifrs-smes:TradeAndOtherCurrentReceivables>
+  <ifrs-smes:TradeAndOtherCurrentReceivables contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">2700.00</ifrs-smes:TradeAndOtherCurrentReceivables>
+  <ifrs-smes:TradeAndOtherCurrentReceivables contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">48552.00</ifrs-smes:TradeAndOtherCurrentReceivables>
+  <ifrs-smes:CurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">39092.79</ifrs-smes:CurrentAssets>
+  <ifrs-smes:Assets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">46410.85</ifrs-smes:Assets>
+  <ssmt:CashAndBankBalances contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-47432.31</ssmt:CashAndBankBalances>
+  <ifrs-smes:CurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-47432.31</ifrs-smes:CurrentAssets>
+  <ifrs-smes:NoncurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">495129.04</ifrs-smes:NoncurrentAssets>
+  <ifrs-smes:CurrentLiabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">495129.04</ifrs-smes:CurrentLiabilities>
+  <ifrs-smes:EquityAttributableToOwnersOfParent contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">3939661.59</ifrs-smes:EquityAttributableToOwnersOfParent>
+  <ssmt-mpers:OtherComponentsOfEquity contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">3939661.59</ssmt-mpers:OtherComponentsOfEquity>
+  <ifrs-smes:RetainedEarnings contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-10155575.00</ifrs-smes:RetainedEarnings>
+  <ifrs-smes:Equity contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-6215913.41</ifrs-smes:Equity>
+  <ifrs-smes:Assets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-47432.31</ifrs-smes:Assets>
+  <ifrs-smes:Liabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">495129.04</ifrs-smes:Liabilities>
+  <ifrs-smes:EquityAndLiabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-6215913.41</ifrs-smes:EquityAndLiabilities>
+  <ifrs-smes:NoncurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-9172918.04</ifrs-smes:NoncurrentAssets>
+  <ifrs-smes:CurrentAssets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">22866.90</ifrs-smes:CurrentAssets>
+  <ifrs-smes:Assets contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-9149051.14</ifrs-smes:Assets>
+  <ifrs-smes:NoncurrentLiabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-200652.45</ifrs-smes:NoncurrentLiabilities>
+  <ifrs-smes:CurrentLiabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">500.20</ifrs-smes:CurrentLiabilities>
+  <ifrs-smes:Liabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-200152.25</ifrs-smes:Liabilities>
+  <ifrs-smes:EquityAttributableToOwnersOfParent contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">160538.20</ifrs-smes:EquityAttributableToOwnersOfParent>
+  <ssmt-mpers:OtherComponentsOfEquity contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-40114.25</ssmt-mpers:OtherComponentsOfEquity>
+  <ifrs-smes:NoncontrollingInterests contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">100.00</ifrs-smes:NoncontrollingInterests>
+  <ifrs-smes:Equity contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">160538.20</ifrs-smes:Equity>
+  <ifrs-smes:EquityAndLiabilities contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">-9149051.14</ifrs-smes:EquityAndLiabilities>
+  <ifrs-smes:RetainedEarnings contextRef="asof_20241231_SeparateMember" unitRef="MYR" decimals="2">160538.20</ifrs-smes:RetainedEarnings>
+</xbrli:xbrl>

@@ -1,0 +1,1107 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-19T06:16:16.289937+00:00",
+    "feature": "13X",
+    "script": "scripts/resolve_extraction_v2_duplicates.py",
+    "report_type": "azure_di_sandbox_duplicate_conflict",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_sandbox_duplicate_conflict_13x.json",
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "reference_xml_sent_to_provider": false,
+    "source_pipeline": "azure_di_sandbox"
+  },
+  "input_reports": {
+    "v2_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_sandbox_extraction_v2_report_13x.json",
+    "quality_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_sandbox_candidate_quality_13x.json",
+    "readiness_report": "in_memory_azure_di_sandbox_readiness"
+  },
+  "final_13q_benchmark_still_successful": true,
+  "pre_cleanup_13r_readiness": {
+    "high": 20,
+    "low": 2,
+    "medium": 56,
+    "not_ready": 239
+  },
+  "aggregate": {
+    "total_candidates_analyzed": 317,
+    "exact_duplicate_groups": 0,
+    "same_label_value_duplicate_groups": 27,
+    "conflicting_duplicate_groups": 1,
+    "heading_like_duplicate_groups": 0,
+    "date_year_label_groups": 2,
+    "text_block_duplicate_groups": 0,
+    "safe_suppression_count": 0,
+    "downgrade_count": 0,
+    "converted_row_type_count": 0,
+    "conflict_review_count": 3,
+    "manual_review_required_count": 0,
+    "kept_count": 314
+  },
+  "per_case_duplicate_conflict_summary": [
+    {
+      "case_id": "Shield-Plus",
+      "original_candidate_count": 317,
+      "cleaned_candidate_count": 317,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 0,
+      "conflict_groups": 1,
+      "manual_review_groups": 0,
+      "text_block_duplicate_groups": 0
+    }
+  ],
+  "top_20_risky_duplicate_labels": [
+    {
+      "label": "net loss for the year",
+      "count": 3
+    }
+  ],
+  "top_20_suppressed_exact_duplicates": [],
+  "duplicate_groups": [
+    {
+      "group_id": "same-label-value-0001",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 9,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows"
+      ],
+      "label": "Registration No. 199301006101 (260838-X)",
+      "normalized_label": "registration no 199301006101 260838 x",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:41:41",
+        "Shield-Plus:candidate:62:62",
+        "Shield-Plus:candidate:80:80",
+        "Shield-Plus:candidate:101:101",
+        "Shield-Plus:candidate:244:244",
+        "Shield-Plus:candidate:256:256",
+        "Shield-Plus:candidate:267:267",
+        "Shield-Plus:candidate:278:278",
+        "Shield-Plus:candidate:298:298"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0002",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 12,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position"
+      ],
+      "label": "SHIELD PLUS SDN. BHD. (Incorporated in Malaysia)",
+      "normalized_label": "shield plus sdn bhd incorporated in malaysia",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:42:42",
+        "Shield-Plus:candidate:63:63",
+        "Shield-Plus:candidate:81:81",
+        "Shield-Plus:candidate:102:102",
+        "Shield-Plus:candidate:118:118",
+        "Shield-Plus:candidate:131:131",
+        "Shield-Plus:candidate:181:181",
+        "Shield-Plus:candidate:198:198",
+        "Shield-Plus:candidate:257:257",
+        "Shield-Plus:candidate:268:268",
+        "Shield-Plus:candidate:279:279",
+        "Shield-Plus:candidate:299:299"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0003",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        1,
+        6
+      ],
+      "statement_sections": [
+        "Statement by Directors"
+      ],
+      "label": "STATEMENT BY DIRECTORS",
+      "normalized_label": "statement by directors",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:49:49",
+        "Shield-Plus:candidate:132:132"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0004",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 5,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        1,
+        6
+      ],
+      "statement_sections": [
+        "Statutory Declaration"
+      ],
+      "label": "STATUTORY DECLARATION",
+      "normalized_label": "statutory declaration",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:51:51",
+        "Shield-Plus:candidate:137:137",
+        "Shield-Plus:candidate:138:138",
+        "Shield-Plus:candidate:139:139",
+        "Shield-Plus:candidate:147:147"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0005",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        1,
+        14
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Financial Position"
+      ],
+      "label": "5.",
+      "normalized_label": "5",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:54:54",
+        "Shield-Plus:candidate:282:282"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0006",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 42,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements"
+      ],
+      "label": "NOTES TO THE FINANCIAL STATEMENTS",
+      "normalized_label": "notes to the financial statements",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:61:61",
+        "Shield-Plus:candidate:65:65",
+        "Shield-Plus:candidate:67:67",
+        "Shield-Plus:candidate:70:70",
+        "Shield-Plus:candidate:77:77",
+        "Shield-Plus:candidate:79:79",
+        "Shield-Plus:candidate:83:83",
+        "Shield-Plus:candidate:84:84",
+        "Shield-Plus:candidate:86:86",
+        "Shield-Plus:candidate:98:98",
+        "Shield-Plus:candidate:100:100",
+        "Shield-Plus:candidate:104:104",
+        "Shield-Plus:candidate:106:106",
+        "Shield-Plus:candidate:107:107",
+        "Shield-Plus:candidate:108:108",
+        "Shield-Plus:candidate:109:109",
+        "Shield-Plus:candidate:110:110",
+        "Shield-Plus:candidate:111:111",
+        "Shield-Plus:candidate:112:112",
+        "Shield-Plus:candidate:113:113",
+        "Shield-Plus:candidate:114:114",
+        "Shield-Plus:candidate:115:115",
+        "Shield-Plus:candidate:119:119",
+        "Shield-Plus:candidate:120:120",
+        "Shield-Plus:candidate:122:122",
+        "Shield-Plus:candidate:123:123",
+        "Shield-Plus:candidate:124:124",
+        "Shield-Plus:candidate:247:247",
+        "Shield-Plus:candidate:248:248",
+        "Shield-Plus:candidate:249:249",
+        "Shield-Plus:candidate:250:250",
+        "Shield-Plus:candidate:251:251",
+        "Shield-Plus:candidate:253:253",
+        "Shield-Plus:candidate:255:255",
+        "Shield-Plus:candidate:260:260",
+        "Shield-Plus:candidate:262:262",
+        "Shield-Plus:candidate:263:263",
+        "Shield-Plus:candidate:271:271",
+        "Shield-Plus:candidate:273:273",
+        "Shield-Plus:candidate:281:281",
+        "Shield-Plus:candidate:313:313",
+        "Shield-Plus:candidate:316:316"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0007",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 5,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        2,
+        7,
+        10,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Financial Position"
+      ],
+      "label": "RM",
+      "normalized_label": "rm",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:72:72",
+        "Shield-Plus:candidate:154:154",
+        "Shield-Plus:candidate:223:223",
+        "Shield-Plus:candidate:286:286",
+        "Shield-Plus:candidate:303:303"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0008",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        2,
+        8,
+        9,
+        10
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "13,171",
+      "normalized_label": "13 171",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:75:75",
+        "Shield-Plus:candidate:191:191",
+        "Shield-Plus:candidate:214:214",
+        "Shield-Plus:candidate:225:225"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0009",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        3,
+        6
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statutory Declaration"
+      ],
+      "label": "Siah Teong Ban",
+      "normalized_label": "siah teong ban",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:94:94",
+        "Shield-Plus:candidate:141:141"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0010",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 5,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        3,
+        8,
+        9,
+        10,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Changes in Equity",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "-",
+      "normalized_label": "",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:95:95",
+        "Shield-Plus:candidate:194:194",
+        "Shield-Plus:candidate:207:207",
+        "Shield-Plus:candidate:228:228",
+        "Shield-Plus:candidate:308:308"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0011",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 6,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position",
+        "Statutory Declaration"
+      ],
+      "label": "Registration No.",
+      "normalized_label": "registration no",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:116:116",
+        "Shield-Plus:candidate:129:129",
+        "Shield-Plus:candidate:148:148",
+        "Shield-Plus:candidate:179:179",
+        "Shield-Plus:candidate:196:196",
+        "Shield-Plus:candidate:218:218"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0012",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 6,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position",
+        "Statutory Declaration"
+      ],
+      "label": "199301006101 (260838-X)",
+      "normalized_label": "199301006101 260838 x",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:117:117",
+        "Shield-Plus:candidate:130:130",
+        "Shield-Plus:candidate:149:149",
+        "Shield-Plus:candidate:180:180",
+        "Shield-Plus:candidate:197:197",
+        "Shield-Plus:candidate:219:219"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0013",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        5,
+        6
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows"
+      ],
+      "label": "SIAH TEONG BAN Director",
+      "normalized_label": "siah teong ban director",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:126:126",
+        "Shield-Plus:candidate:134:134"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0014",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        5,
+        6
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows"
+      ],
+      "label": "Petaling Jaya",
+      "normalized_label": "petaling jaya",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:127:127",
+        "Shield-Plus:candidate:135:135"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0015",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        5,
+        6
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows"
+      ],
+      "label": "\u674e\u4e9c\u91d1 LEE AH KIM Director",
+      "normalized_label": "lee ah kim director",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:128:128",
+        "Shield-Plus:candidate:136:136"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0016",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        10,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Financial Position"
+      ],
+      "label": "2024",
+      "normalized_label": "2024",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:152:152",
+        "Shield-Plus:candidate:221:221",
+        "Shield-Plus:candidate:284:284",
+        "Shield-Plus:candidate:301:301"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0017",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        10,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Financial Position"
+      ],
+      "label": "2023",
+      "normalized_label": "2023",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:153:153",
+        "Shield-Plus:candidate:222:222",
+        "Shield-Plus:candidate:285:285",
+        "Shield-Plus:candidate:302:302"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0018",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        14
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Financial Position"
+      ],
+      "label": "Other receivable",
+      "normalized_label": "other receivable",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:156:156",
+        "Shield-Plus:candidate:283:283"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0019",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        9
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position"
+      ],
+      "label": "(194,548)",
+      "normalized_label": "194 548",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:161:161",
+        "Shield-Plus:candidate:216:216"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0020",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        9
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position"
+      ],
+      "label": "(181,377)",
+      "normalized_label": "181 377",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:162:162",
+        "Shield-Plus:candidate:211:211"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0021",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        9
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position"
+      ],
+      "label": "(194,546)",
+      "normalized_label": "194 546",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:164:164",
+        "Shield-Plus:candidate:217:217"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0022",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        9
+      ],
+      "statement_sections": [
+        "Statement of Comprehensive Income",
+        "Statement of Financial Position"
+      ],
+      "label": "(181,375)",
+      "normalized_label": "181 375",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:165:165",
+        "Shield-Plus:candidate:212:212"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0023",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Financial Position"
+      ],
+      "label": "1,300",
+      "normalized_label": "1 300",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:168:168",
+        "Shield-Plus:candidate:305:305"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0024",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Financial Position"
+      ],
+      "label": "2,244",
+      "normalized_label": "2 244",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:169:169",
+        "Shield-Plus:candidate:309:309"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0025",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        10
+      ],
+      "statement_sections": [
+        "Statement of Cash Flows",
+        "Statement of Financial Position"
+      ],
+      "label": "1,567",
+      "normalized_label": "1 567",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:174:174",
+        "Shield-Plus:candidate:243:243"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0026",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        8,
+        9,
+        10
+      ],
+      "statement_sections": [
+        "Statement of Cash Flows",
+        "Statement of Changes in Equity",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "(11,514)",
+      "normalized_label": "11 514",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:192:192",
+        "Shield-Plus:candidate:208:208",
+        "Shield-Plus:candidate:226:226"
+      ]
+    },
+    {
+      "group_id": "same-label-value-0027",
+      "group_type": "same_label_value_duplicate",
+      "classification": "review_different_context",
+      "action": "keep_with_review_warning",
+      "safe_to_suppress": false,
+      "candidate_count": 2,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        13,
+        14
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements"
+      ],
+      "label": "4. SIGNIFICANT ACCOUNTING POLICIES - Continued",
+      "normalized_label": "4 significant accounting policies continued",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:269:269",
+        "Shield-Plus:candidate:280:280"
+      ]
+    },
+    {
+      "group_id": "conflict-0028",
+      "group_type": "same_label_conflicting_values",
+      "classification": "conflict_review_required",
+      "action": "do_not_auto_choose_value",
+      "safe_to_suppress": false,
+      "candidate_count": 3,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        9
+      ],
+      "statement_sections": [
+        "Statement of Changes in Equity",
+        "Statement of Comprehensive Income"
+      ],
+      "label": "Net loss for the year",
+      "normalized_label": "net loss for the year",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        },
+        {
+          "value": "0",
+          "previous_value": "-11514"
+        },
+        {
+          "value": "0",
+          "previous_value": "-13171"
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:27:27",
+        "Shield-Plus:candidate:29:29",
+        "Shield-Plus:candidate:206:206"
+      ]
+    },
+    {
+      "group_id": "period-label-0029",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        10,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Financial Position"
+      ],
+      "label": "2024",
+      "normalized_label": "2024",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:152:152",
+        "Shield-Plus:candidate:221:221",
+        "Shield-Plus:candidate:284:284",
+        "Shield-Plus:candidate:301:301"
+      ]
+    },
+    {
+      "group_id": "period-label-0030",
+      "group_type": "period_date_label",
+      "classification": "not_a_fact",
+      "action": "downgrade_to_metadata",
+      "safe_to_suppress": false,
+      "candidate_count": 4,
+      "case_id": "Shield-Plus",
+      "page_numbers": [
+        7,
+        10,
+        14,
+        15
+      ],
+      "statement_sections": [
+        "Notes to the Financial Statements",
+        "Statement of Cash Flows",
+        "Statement of Financial Position"
+      ],
+      "label": "2023",
+      "normalized_label": "2023",
+      "values": [
+        {
+          "value": "",
+          "previous_value": ""
+        }
+      ],
+      "candidate_ids": [
+        "Shield-Plus:candidate:153:153",
+        "Shield-Plus:candidate:222:222",
+        "Shield-Plus:candidate:285:285",
+        "Shield-Plus:candidate:302:302"
+      ]
+    }
+  ],
+  "limitations": [
+    "Only exact duplicate evidence is suppressible.",
+    "Conflicting values are preserved and require review.",
+    "This report does not choose values, aggregate detail rows, map taxonomy concepts, flip signs, infer dimensions, or merge text blocks across sections."
+  ]
+}

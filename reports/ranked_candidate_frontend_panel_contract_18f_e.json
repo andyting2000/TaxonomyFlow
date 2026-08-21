@@ -1,0 +1,42 @@
+{
+  "feature": "18F-E",
+  "capabilities_fields_rendered": [
+    "enabled",
+    "default_mode",
+    "default_profile",
+    "allow_persistence",
+    "admin_only",
+    "max_rows",
+    "max_candidates_per_row",
+    "supported_profiles",
+    "supported_actions"
+  ],
+  "response_summary_fields_rendered": [
+    "total_rows",
+    "rows_with_candidates",
+    "candidate_coverage",
+    "generated_at",
+    "profile"
+  ],
+  "candidate_fields_rendered": [
+    "rank",
+    "qname",
+    "concept_label",
+    "score",
+    "confidence_bucket",
+    "risk_level",
+    "candidate_sources_combined",
+    "evidence.match_reasons",
+    "ambiguity_reasons",
+    "blocking_reasons",
+    "recommended_action"
+  ],
+  "read_only_contract": "recommended_action is rendered as a label only. No response field is mapped to a persistence or filing mutation action.",
+  "error_handling": [
+    "backend disabled capability notice",
+    "POST 403 fail-closed notice",
+    "API/network error notice",
+    "empty result notice",
+    "safety contract violation blocks candidate rows"
+  ]
+}

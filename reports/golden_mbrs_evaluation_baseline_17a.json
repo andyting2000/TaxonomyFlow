@@ -1,0 +1,47 @@
+{
+  "run_metadata": {
+    "feature": "17A",
+    "generated_at": "2026-06-01T12:51:20Z",
+    "cases_dir": "benchmark_mbrs_pairs",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_azure_di_extraction_changed": false,
+    "qwen_prompt_changed": false,
+    "react_ui_changed": false,
+    "confirmed_tag_id_set": false,
+    "external_llm_called": false,
+    "auditor_xml_sent_to_external_provider": false,
+    "arelle_feedback_loop_run": false
+  },
+  "metrics": {
+    "total_cases": 6,
+    "ready_pdf_xml_pairs": 6,
+    "cases_with_normalized_azure_di_extraction": 6,
+    "cases_missing_normalized_azure_di_extraction": 0,
+    "total_extracted_rows": 857,
+    "total_xml_facts": 2549,
+    "aligned_rows": 110,
+    "unaligned_rows": 526,
+    "strong_gold_examples": 110,
+    "ambiguous_alignments": 221,
+    "concept_coverage": {
+      "strong_gold_concepts": 39,
+      "reference_concepts": 282,
+      "ratio": 0.1383
+    },
+    "value_match_rate": 0.3944,
+    "current_prior_ambiguity": 77
+  },
+  "deterministic_mapping_accuracy": {
+    "measurable_rows": 0,
+    "correct_rows": 0,
+    "accuracy": null
+  },
+  "qwen_mapping_accuracy": {
+    "measurable_rows": 0,
+    "correct_rows": 0,
+    "accuracy": null
+  },
+  "measurement_policy": "Accuracy is reported only for strong gold rows that also have a local baseline prediction."
+}

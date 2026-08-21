@@ -1,0 +1,69 @@
+{
+  "feature_id": "18F-G-B",
+  "generated_at": "2026-07-23T17:40:13.8298379+08:00",
+  "classifications": [
+    "eligible",
+    "not_eligible",
+    "blocked",
+    "already_reviewed",
+    "terminal"
+  ],
+  "eligible_signals": {
+    "high_priority": [
+      "mapping_no_safe_candidate",
+      "statement_family_mismatch",
+      "concept_family_mismatch",
+      "ranked_candidate_source_conflict"
+    ],
+    "medium_priority": [
+      "broad_substitute",
+      "period_context_ambiguity",
+      "close_competing_candidates",
+      "mapper_confidence_below_threshold",
+      "requires_confirmation",
+      "explicit_human_request"
+    ]
+  },
+  "not_eligible_or_blocked": [
+    "high-confidence candidate with no local risk signal",
+    "completed low-risk agree review",
+    "accepted or human-rejected suggestion",
+    "missing usable row label",
+    "review already pending/running",
+    "failed review requiring non-LLM inspection",
+    "suggestion already superseded by revision"
+  ],
+  "remapping_policy": {
+    "available_after": [
+      "completed disagree review",
+      "completed request-better-candidate review",
+      "completed needs-human-review decision with a concrete mapping issue"
+    ],
+    "blocked_after": [
+      "agree review",
+      "incomplete or failed review",
+      "accepted/human-rejected suggestion",
+      "correction retry exhausted"
+    ],
+    "max_attempts": 1
+  },
+  "recommended_manual_actions": [
+    "run_supervisor_review",
+    "review_without_llm",
+    "no_action",
+    "inspect_revision"
+  ],
+  "external_call_count": 0,
+  "sample_evaluation": {
+    "job_ids": [59, 60, 61],
+    "total_suggestions": 150,
+    "eligible": 114,
+    "not_eligible": 18,
+    "already_reviewed": 18,
+    "blocked": 0,
+    "eligibility_rate": 0.76,
+    "calibration_required": true
+  },
+  "implementation": "services/supervisor_orchestration_policy.py",
+  "recommended_next_feature": "18F-G-B-hotfix-1"
+}

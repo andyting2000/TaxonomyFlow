@@ -1,0 +1,238 @@
+# Section Aware Candidate Retrieval 19C
+
+- Status: **PASS**
+- Generated: `2026-08-05T09:39:46Z`
+- Authoritative Concept Count: `923`
+- Fixture Rows: `6`
+- Recall At 1: `1.0`
+- Recall At 3: `1.0`
+- Recall At 5: `1.0`
+- Recall At 8: `1.0`
+- Mean Reciprocal Rank: `1.0`
+- Top K: `8`
+- Template Group Leakage: `0`
+
+## Evidence
+
+```json
+{
+  "feature": "19C",
+  "generated_at": "2026-08-05T09:39:46Z",
+  "status": "PASS",
+  "insertion_point": "Azure DI normalization -> #19A structure -> #19B classification -> #19C advisory artifact; legacy production mapping remains separate",
+  "changed_files": [
+    "config.py",
+    ".env.example",
+    ".env.docker.example",
+    "schemas.py",
+    "services/section_aware_taxonomy_concept_cards.py",
+    "services/section_aware_row_mapping_eligibility.py",
+    "services/section_aware_mapping_context_builder.py",
+    "services/section_aware_taxonomy_candidate_retriever.py",
+    "services/section_aware_candidate_scoring.py",
+    "services/section_aware_initial_mapping_llm.py",
+    "services/section_aware_initial_mapping.py",
+    "services/azure_di_production_extraction.py",
+    "routers/filings.py",
+    "tests/fixtures/section_aware_mapping/fixtures_19c.json",
+    "tests/section_aware_mapping_test_support.py",
+    "tests/test_section_aware_concept_cards.py",
+    "tests/test_section_aware_row_mapping_eligibility.py",
+    "tests/test_section_aware_mapping_context_builder.py",
+    "tests/test_section_aware_taxonomy_candidate_retriever.py",
+    "tests/test_section_aware_initial_mapping_llm.py",
+    "tests/test_initial_mapping_payload_boundary.py",
+    "tests/test_initial_mapping_artifact.py",
+    "tests/test_initial_mapping_api.py",
+    "tests/test_toc_aware_initial_mapping_integration.py",
+    "tests/test_initial_mapping_quality_report.py",
+    "tests/test_auth_backend_foundation.py",
+    "scripts/evaluate_section_aware_initial_mapping_19c.py",
+    "docs/toc_aware_template_native_pipeline.md",
+    "reports/section_aware_candidate_retrieval_19c.json",
+    "reports/section_aware_candidate_retrieval_19c.md",
+    "reports/bounded_initial_mapping_19c.json",
+    "reports/bounded_initial_mapping_19c.md",
+    "reports/initial_mapping_quality_19c.json",
+    "reports/initial_mapping_quality_19c.md",
+    "reports/initial_mapping_safety_19c.json",
+    "reports/initial_mapping_safety_19c.md",
+    "feature_list.json",
+    "PROGRESS.md"
+  ],
+  "feature_flags": {
+    "TOC_AWARE_TAXONOMY_CANDIDATE_RETRIEVAL_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_PERSISTENCE_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_LIVE_LLM_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_MODE": "deterministic_only",
+    "TOC_AWARE_INITIAL_MAPPING_MAX_CANDIDATES": 8,
+    "TOC_AWARE_INITIAL_MAPPING_MAX_ROWS_PER_JOB": 5000,
+    "TOC_AWARE_INITIAL_MAPPING_ROW_TIMEOUT_SECONDS": 120,
+    "TOC_AWARE_INITIAL_MAPPING_MAX_CONCURRENT_CALLS": 1,
+    "TOC_AWARE_INITIAL_MAPPING_MIN_CANDIDATE_SCORE": 0.0
+  },
+  "registry_hash": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+  "concept_inventory_hash": "5b648a0ac86614dfa8f63c767273a91ae63aad6164e68b9fdcfc849b2a960205",
+  "taxonomy_version": "SSMxT_2022v1.0",
+  "verification": {
+    "focused_19c_tests": 31,
+    "full_backend_tests": 1406,
+    "live_provider_calls": 0
+  },
+  "recommended_next_feature": "Feature #19D - Populate advisory #19C mappings directly into editable template draft fields without creating final mappings.",
+  "report_type": "section_aware_candidate_retrieval_19c",
+  "summary": {
+    "authoritative_concept_count": 923,
+    "fixture_rows": 6,
+    "recall_at_1": 1.0,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "recall_at_8": 1.0,
+    "mean_reciprocal_rank": 1.0,
+    "top_k": 8,
+    "template_group_leakage": 0
+  },
+  "authoritative_universe": [
+    "#19B canonical assignment",
+    "mpers_templates.json exact membership",
+    "bundled SSM MPERS schemas/linkbases",
+    "canonical registry semantics"
+  ],
+  "scoring": "bounded deterministic lexical, alias, documentation, section, exact membership, datatype, period, hierarchy, sibling, value-shape, and exclusion signals; score is not a probability",
+  "fixture_details": [
+    {
+      "fixture_id": "A",
+      "label": "Cash and cash equivalents",
+      "template_group_ids": [
+        "210000"
+      ],
+      "expected_qname_fixture_only": "ssmt:CashAndBankBalances",
+      "expected_qname_sent_to_provider": false,
+      "rank": 1,
+      "top_qnames": [
+        "ssmt:CashAndBankBalances",
+        "ifrs-smes:PropertyPlantAndEquipment",
+        "ifrs-smes:NoncurrentReceivables",
+        "ifrs-smes:IssuedCapital",
+        "ssmt-mpers:OtherComponentsOfEquity",
+        "ssmt-mpers:CurrentDerivativeFinancialAssets",
+        "ssmt-mpers:OtherNoncurrentAssets",
+        "ifrs-smes:NoncurrentPayables"
+      ],
+      "deterministic_decision": "mapped",
+      "deterministic_selected_qname": "ssmt:CashAndBankBalances"
+    },
+    {
+      "fixture_id": "B",
+      "label": "Trade and other receivables",
+      "template_group_ids": [
+        "220000"
+      ],
+      "expected_qname_fixture_only": "ifrs-smes:TradeAndOtherReceivables",
+      "expected_qname_sent_to_provider": false,
+      "rank": 1,
+      "top_qnames": [
+        "ifrs-smes:TradeAndOtherReceivables",
+        "ifrs-smes:TradeAndOtherPayables",
+        "ifrs-smes:OtherReserves",
+        "ssmt:CashAndBankBalances",
+        "ifrs-smes:RetainedEarnings",
+        "ifrs-smes:Borrowings",
+        "ssmt-mpers:InvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+        "ssmt-mpers:OtherComponentsOfEquity"
+      ],
+      "deterministic_decision": "mapped",
+      "deterministic_selected_qname": "ifrs-smes:TradeAndOtherReceivables"
+    },
+    {
+      "fixture_id": "C",
+      "label": "Revenue",
+      "template_group_ids": [
+        "310000"
+      ],
+      "expected_qname_fixture_only": "ifrs-smes:Revenue",
+      "expected_qname_sent_to_provider": false,
+      "rank": 1,
+      "top_qnames": [
+        "ifrs-smes:Revenue",
+        "ifrs-smes:OtherExpenseByFunction",
+        "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "ifrs-smes:AdministrativeExpense",
+        "ifrs-smes:OtherIncome",
+        "ifrs-smes:ResearchAndDevelopmentExpense",
+        "ifrs-smes:ProfitLossBeforeTax",
+        "ifrs-smes:FinanceIncome"
+      ],
+      "deterministic_decision": "mapped",
+      "deterministic_selected_qname": "ifrs-smes:Revenue"
+    },
+    {
+      "fixture_id": "D",
+      "label": "Cost of sales",
+      "template_group_ids": [
+        "310000"
+      ],
+      "expected_qname_fixture_only": "ifrs-smes:CostOfSales",
+      "expected_qname_sent_to_provider": false,
+      "rank": 1,
+      "top_qnames": [
+        "ifrs-smes:CostOfSales",
+        "ifrs-smes:OtherExpenseByFunction",
+        "ifrs-smes:AdministrativeExpense",
+        "ssmt-mpers:ContributionOfZakat",
+        "ifrs-smes:GrossProfit",
+        "ifrs-smes:ResearchAndDevelopmentExpense",
+        "ssmt-mpers:SellingAndDistributionExpenses",
+        "ifrs-smes:ProfitLoss"
+      ],
+      "deterministic_decision": "mapped",
+      "deterministic_selected_qname": "ifrs-smes:CostOfSales"
+    },
+    {
+      "fixture_id": "E",
+      "label": "Employee benefits expense",
+      "template_group_ids": [
+        "320100"
+      ],
+      "expected_qname_fixture_only": "ssmt-mpers:EmployeeBenefitsExpenseByNature",
+      "expected_qname_sent_to_provider": false,
+      "rank": 1,
+      "top_qnames": [
+        "ssmt-mpers:EmployeeBenefitsExpenseByNature",
+        "ifrs-smes:OtherEmployeeExpense",
+        "ifrs-smes:TerminationBenefitsExpense",
+        "ssmt-mpers:BenefitsInKindExpenses",
+        "ifrs-smes:PostemploymentBenefitExpenseDefinedBenefitPlans",
+        "ifrs-smes:OtherShorttermEmployeeBenefits",
+        "ssmt-mpers:RetirementBenefitsDefinedBenefitPlans",
+        "ifrs-smes:OtherLongtermBenefits"
+      ],
+      "deterministic_decision": "ambiguous",
+      "deterministic_selected_qname": null
+    },
+    {
+      "fixture_id": "F",
+      "label": "Income taxes paid",
+      "template_group_ids": [
+        "510000"
+      ],
+      "expected_qname_fixture_only": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+      "expected_qname_sent_to_provider": false,
+      "rank": 1,
+      "top_qnames": [
+        "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+        "ifrs-smes:InterestPaidClassifiedAsFinancingActivities",
+        "ifrs-smes:InterestPaidClassifiedAsOperatingActivities",
+        "ifrs-smes:DividendsPaidClassifiedAsFinancingActivities",
+        "ifrs-smes:DividendsPaidClassifiedAsOperatingActivities",
+        "ifrs-smes:InterestReceivedClassifiedAsInvestingActivities",
+        "ifrs-smes:InterestReceivedClassifiedAsOperatingActivities",
+        "ifrs-smes:CashAdvancesAndLoansMadeToOtherPartiesClassifiedAsInvestingActivities"
+      ],
+      "deterministic_decision": "mapped",
+      "deterministic_selected_qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities"
+    }
+  ]
+}
+```

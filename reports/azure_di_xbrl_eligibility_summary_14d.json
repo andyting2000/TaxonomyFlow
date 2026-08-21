@@ -1,0 +1,163 @@
+{
+  "run_metadata": {
+    "feature": "14D",
+    "generated_at": "2026-05-19T10:00:11Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "final_mapping_approved": false,
+    "real_human_approval_recorded": false,
+    "production_mapping_approval_produced": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "automatic_xbrl_generation": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_metadata_enrichment_v2_14d",
+    "report_type": "azure_di_xbrl_eligibility_summary",
+    "script": "scripts/refine_azure_di_mapping_candidates_14d.py",
+    "taxonomy_mapping_performed": false,
+    "output_path": "reports\\azure_di_xbrl_eligibility_summary_14d.json"
+  },
+  "input_reports": {
+    "mapping_report": "reports\\azure_di_mapping_candidates_14a.json",
+    "confidence_report": "reports\\azure_di_mapping_confidence_14a.json",
+    "gap_report": "reports\\azure_di_mapping_gap_analysis_14a.json",
+    "review_queue": "reports\\azure_di_manual_mapping_review_queue_14b.json",
+    "decisions_report": "reports\\azure_di_reviewed_mapping_decisions_14c.json",
+    "handoff_report": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json",
+    "baseline_14c_eligibility": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_xbrl_eligibility_summary_14c.json",
+    "template_file": "mpers_templates.json"
+  },
+  "total_review_items": 53,
+  "simulated_approved_count": 17,
+  "xbrl_eligible_count": 17,
+  "xbrl_blocked_count": 36,
+  "deferred_count": 17,
+  "alias_enrichment_needed_count": 0,
+  "metadata_enrichment_needed_count": 0,
+  "manual_taxonomy_mapping_needed_count": 15,
+  "rejected_count": 0,
+  "context_only_count": 0,
+  "decision_type_counts": {
+    "approve_suggested_concept_simulated": 17,
+    "defer_mapping": 17,
+    "blocked_from_xbrl": 4,
+    "require_manual_taxonomy_mapping": 15
+  },
+  "per_row_type_eligibility": {
+    "comparative_numeric_fact": {
+      "not_eligible": 13,
+      "eligible": 2
+    },
+    "numeric_fact": {
+      "not_eligible": 1
+    },
+    "subtotal_or_total": {
+      "not_eligible": 3
+    },
+    "text_block": {
+      "eligible": 15,
+      "not_eligible": 19
+    }
+  },
+  "per_workflow_status_eligibility": {
+    "blocked_from_xbrl": {
+      "not_eligible": 4
+    },
+    "needs_confirmation": {
+      "not_eligible": 17
+    },
+    "needs_human_concept_choice": {
+      "not_eligible": 15
+    },
+    "ready_for_review_approval": {
+      "eligible": 17
+    }
+  },
+  "per_confidence_tier_eligibility": {
+    "high": {
+      "eligible": 6
+    },
+    "low": {
+      "not_eligible": 1
+    },
+    "medium": {
+      "eligible": 11,
+      "not_eligible": 31
+    },
+    "none": {
+      "not_eligible": 4
+    }
+  },
+  "top_xbrl_blockers": [
+    {
+      "blocker": "simulate_confirm_medium_not_enabled",
+      "count": 17
+    },
+    {
+      "blocker": "ambiguous_multiple_suggestions",
+      "count": 15
+    },
+    {
+      "blocker": "section_family_mismatch",
+      "count": 2
+    },
+    {
+      "blocker": "generic_or_weak_label",
+      "count": 1
+    },
+    {
+      "blocker": "blocker:row_type_or_concept_type_mismatch",
+      "count": 1
+    },
+    {
+      "blocker": "concept_type_mismatch_blocks_xbrl",
+      "count": 1
+    },
+    {
+      "blocker": "row_type_or_concept_type_mismatch",
+      "count": 1
+    },
+    {
+      "blocker": "confirmation_candidate_below_medium_confidence",
+      "count": 1
+    }
+  ],
+  "why_xbrl_generation_is_still_not_allowed": [
+    "Every approval is simulated_only=true and human_approved=false.",
+    "No final production mapping approval exists.",
+    "Ambiguous, no-safe, blocked, and default confirmation-required records remain excluded.",
+    "This feature does not generate XBRL or run Arelle validation."
+  ],
+  "recommended_next_feature": "Feature #14D - Reviewed mapping quality evaluation against reference XML, no DB mutation.",
+  "limitations": [
+    "All decisions are simulated_only=true and human_approved=false.",
+    "No final production mapping approval occurs.",
+    "No XBRL is generated and no Arelle validation is run.",
+    "No live provider, model, embedding, semantic matcher, DB, API, or UI path is used."
+  ],
+  "source_feature_chain": [
+    "13X",
+    "13Y",
+    "13Z",
+    "14A",
+    "14B",
+    "14C",
+    "14D"
+  ]
+}

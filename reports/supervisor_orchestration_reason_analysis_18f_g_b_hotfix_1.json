@@ -1,0 +1,632 @@
+{
+  "feature_id": "18F-G-B-hotfix-1",
+  "generated_at": "2026-07-23T14:10:17.880899+00:00",
+  "requested_reason_category_audit": {
+    "requires_confirmation": {
+      "signal_type_after_calibration": "weak",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 150,
+      "calibrated_eligible_count": 47,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "agree": 10,
+        "needs_human_review": 8
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "no_safe_mapping": 1,
+        "retained": 3
+      }
+    },
+    "confidence_threshold": {
+      "signal_type_after_calibration": "weak",
+      "legacy_raw_sample_count": 119,
+      "legacy_eligible_count": 114,
+      "legacy_only_trigger_count": 1,
+      "calibrated_raw_sample_count": 4,
+      "calibrated_eligible_count": 2,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {
+        "changed": 1
+      }
+    },
+    "statement_family_mismatch": {
+      "signal_type_after_calibration": "strong",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 33,
+      "calibrated_eligible_count": 28,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 4
+      },
+      "known_revision_outcomes": {
+        "no_safe_mapping": 1,
+        "retained": 2
+      }
+    },
+    "concept_family_mismatch": {
+      "signal_type_after_calibration": "strong",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 9,
+      "calibrated_eligible_count": 9,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "broad_substitute": {
+      "signal_type_after_calibration": "strong",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 19,
+      "calibrated_eligible_count": 18,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {
+        "changed": 1
+      }
+    },
+    "period_ambiguity": {
+      "signal_type_after_calibration": "strong",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 5,
+      "calibrated_eligible_count": 4,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "agree": 1
+      },
+      "known_revision_outcomes": {}
+    },
+    "close_candidates": {
+      "signal_type_after_calibration": "weak",
+      "legacy_raw_sample_count": 41,
+      "legacy_eligible_count": 37,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 41,
+      "calibrated_eligible_count": 29,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 3
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "retained": 1
+      }
+    },
+    "source_conflict": {
+      "signal_type_after_calibration": "strong",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 0,
+      "calibrated_eligible_count": 0,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "no_safe_mapping": {
+      "signal_type_after_calibration": "evidence_only",
+      "legacy_raw_sample_count": 115,
+      "legacy_eligible_count": 112,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 115,
+      "calibrated_eligible_count": 0,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 2
+      },
+      "known_revision_outcomes": {}
+    },
+    "explicit_request": {
+      "signal_type_after_calibration": "strong_override",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 0,
+      "calibrated_eligible_count": 0,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "generic_label": {
+      "signal_type_after_calibration": "weak",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 21,
+      "calibrated_eligible_count": 7,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {}
+    },
+    "other": {
+      "signal_type_after_calibration": "none",
+      "legacy_raw_sample_count": 0,
+      "legacy_eligible_count": 0,
+      "legacy_only_trigger_count": 0,
+      "calibrated_raw_sample_count": 0,
+      "calibrated_eligible_count": 0,
+      "calibrated_only_trigger_count": 0,
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    }
+  },
+  "before_eligible_reason_analysis": {
+    "close_competing_candidates": {
+      "count": 37,
+      "percentage_of_eligible_queue": 0.3246,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 36,
+        "medium": 1
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 3
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "retained": 1
+      },
+      "known_outcome_scope": "all 150 suggestions carrying the legacy reason"
+    },
+    "mapper_confidence_below_threshold": {
+      "count": 114,
+      "percentage_of_eligible_queue": 1.0,
+      "only_trigger_count": 1,
+      "only_trigger_percentage": 0.0088,
+      "priority_distribution": {
+        "high": 112,
+        "medium": 2
+      },
+      "known_supervisor_outcomes": {
+        "agree": 2,
+        "needs_human_review": 3
+      },
+      "known_revision_outcomes": {
+        "changed": 1
+      },
+      "known_outcome_scope": "all 150 suggestions carrying the legacy reason"
+    },
+    "mapping_no_safe_candidate": {
+      "count": 112,
+      "percentage_of_eligible_queue": 0.9825,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 112
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 2
+      },
+      "known_revision_outcomes": {},
+      "known_outcome_scope": "all 150 suggestions carrying the legacy reason"
+    }
+  },
+  "after_eligible_signal_analysis": {
+    "broad_substitute_with_concrete_alternative": {
+      "count": 18,
+      "percentage_of_eligible_queue": 0.383,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 10,
+        "medium": 8
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "close_competing_candidates": {
+      "count": 29,
+      "percentage_of_eligible_queue": 0.617,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 11,
+        "medium": 18
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "concept_family_mismatch": {
+      "count": 9,
+      "percentage_of_eligible_queue": 0.1915,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 3,
+        "medium": 6
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "generic_label": {
+      "count": 7,
+      "percentage_of_eligible_queue": 0.1489,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 4,
+        "medium": 3
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "incomplete_context": {
+      "count": 4,
+      "percentage_of_eligible_queue": 0.0851,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "medium": 4
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "mapper_confidence_below_threshold": {
+      "count": 2,
+      "percentage_of_eligible_queue": 0.0426,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "medium": 2
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "requires_confirmation": {
+      "count": 47,
+      "percentage_of_eligible_queue": 1.0,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 13,
+        "medium": 34
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "severe_period_context_conflict": {
+      "count": 4,
+      "percentage_of_eligible_queue": 0.0851,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 4
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "statement_family_mismatch": {
+      "count": 28,
+      "percentage_of_eligible_queue": 0.5957,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 9,
+        "medium": 19
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    }
+  },
+  "legacy_all_sample_reason_analysis": {
+    "close_competing_candidates": {
+      "count": 41,
+      "percentage_of_eligible_queue": 0.2733,
+      "only_trigger_count": 1,
+      "only_trigger_percentage": 0.0244,
+      "priority_distribution": {
+        "high": 38,
+        "medium": 3
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 3
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "retained": 1
+      }
+    },
+    "mapper_confidence_below_threshold": {
+      "count": 119,
+      "percentage_of_eligible_queue": 0.7933,
+      "only_trigger_count": 2,
+      "only_trigger_percentage": 0.0168,
+      "priority_distribution": {
+        "high": 115,
+        "medium": 4
+      },
+      "known_supervisor_outcomes": {
+        "agree": 2,
+        "needs_human_review": 3
+      },
+      "known_revision_outcomes": {
+        "changed": 1
+      }
+    },
+    "mapping_no_safe_candidate": {
+      "count": 115,
+      "percentage_of_eligible_queue": 0.7667,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 115
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 2
+      },
+      "known_revision_outcomes": {}
+    }
+  },
+  "calibrated_all_sample_reason_analysis": {
+    "broad_substitute_with_concrete_alternative": {
+      "count": 19,
+      "percentage_of_eligible_queue": 0.1267,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 11,
+        "medium": 8
+      },
+      "known_supervisor_outcomes": {
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {
+        "changed": 1
+      }
+    },
+    "close_competing_candidates": {
+      "count": 41,
+      "percentage_of_eligible_queue": 0.2733,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 14,
+        "low": 9,
+        "medium": 18
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 3
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "retained": 1
+      }
+    },
+    "concept_family_mismatch": {
+      "count": 9,
+      "percentage_of_eligible_queue": 0.06,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 3,
+        "medium": 6
+      },
+      "known_supervisor_outcomes": {},
+      "known_revision_outcomes": {}
+    },
+    "generic_label": {
+      "count": 21,
+      "percentage_of_eligible_queue": 0.14,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 5,
+        "low": 13,
+        "medium": 3
+      },
+      "known_supervisor_outcomes": {
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {}
+    },
+    "incomplete_context": {
+      "count": 7,
+      "percentage_of_eligible_queue": 0.0467,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 1,
+        "low": 2,
+        "medium": 4
+      },
+      "known_supervisor_outcomes": {
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {}
+    },
+    "mapper_confidence_below_threshold": {
+      "count": 4,
+      "percentage_of_eligible_queue": 0.0267,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 1,
+        "medium": 3
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {
+        "changed": 1
+      }
+    },
+    "mapping_no_safe_candidate": {
+      "count": 115,
+      "percentage_of_eligible_queue": 0.7667,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 15,
+        "low": 69,
+        "medium": 31
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 2
+      },
+      "known_revision_outcomes": {}
+    },
+    "no_safe_revised_mapping": {
+      "count": 1,
+      "percentage_of_eligible_queue": 0.0067,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 1
+      },
+      "known_supervisor_outcomes": {
+        "needs_human_review": 1
+      },
+      "known_revision_outcomes": {
+        "no_safe_mapping": 1
+      }
+    },
+    "previous_supervisor_disagreement": {
+      "count": 8,
+      "percentage_of_eligible_queue": 0.0533,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 8
+      },
+      "known_supervisor_outcomes": {
+        "needs_human_review": 8
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "no_safe_mapping": 1,
+        "retained": 3
+      }
+    },
+    "requires_confirmation": {
+      "count": 150,
+      "percentage_of_eligible_queue": 1.0,
+      "only_trigger_count": 21,
+      "only_trigger_percentage": 0.14,
+      "priority_distribution": {
+        "high": 21,
+        "low": 92,
+        "medium": 37
+      },
+      "known_supervisor_outcomes": {
+        "agree": 10,
+        "needs_human_review": 8
+      },
+      "known_revision_outcomes": {
+        "changed": 1,
+        "no_safe_mapping": 1,
+        "retained": 3
+      }
+    },
+    "safe_flag_withheld_due_confidence": {
+      "count": 4,
+      "percentage_of_eligible_queue": 0.0267,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "low": 2,
+        "medium": 2
+      },
+      "known_supervisor_outcomes": {
+        "agree": 4
+      },
+      "known_revision_outcomes": {}
+    },
+    "severe_period_context_conflict": {
+      "count": 5,
+      "percentage_of_eligible_queue": 0.0333,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 4,
+        "medium": 1
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1
+      },
+      "known_revision_outcomes": {}
+    },
+    "statement_family_mismatch": {
+      "count": 33,
+      "percentage_of_eligible_queue": 0.22,
+      "only_trigger_count": 0,
+      "only_trigger_percentage": 0.0,
+      "priority_distribution": {
+        "high": 13,
+        "medium": 20
+      },
+      "known_supervisor_outcomes": {
+        "agree": 1,
+        "needs_human_review": 4
+      },
+      "known_revision_outcomes": {
+        "no_safe_mapping": 1,
+        "retained": 2
+      }
+    }
+  },
+  "after_reason_counts": {
+    "broad_substitute_with_concrete_alternative": 18,
+    "close_competing_candidates": 29,
+    "concept_family_mismatch": 9,
+    "generic_label": 7,
+    "incomplete_context": 4,
+    "mapper_confidence_below_threshold": 2,
+    "mapping_no_safe_candidate": 44,
+    "requires_confirmation": 47,
+    "severe_period_context_conflict": 4,
+    "statement_family_mismatch": 28
+  },
+  "after_strong_signal_counts": {
+    "broad_substitute_with_concrete_alternative": 18,
+    "concept_family_mismatch": 9,
+    "severe_period_context_conflict": 4,
+    "statement_family_mismatch": 28
+  },
+  "after_weak_signal_counts": {
+    "close_competing_candidates": 29,
+    "generic_label": 7,
+    "incomplete_context": 4,
+    "mapper_confidence_below_threshold": 2,
+    "requires_confirmation": 47
+  },
+  "interpretation": {
+    "raw_rejected_status_count": 115,
+    "generic_rejection_is_not_a_strong_signal": true,
+    "no_safe_definition": "A generic rejected/no-selected-candidate status is not equivalent to a structurally risky no-safe revised mapping.",
+    "largest_remaining_reasons": [
+      "requires_confirmation",
+      "close_competing_candidates",
+      "statement_family_mismatch",
+      "broad_substitute_with_concrete_alternative",
+      "concept_family_mismatch"
+    ]
+  }
+}

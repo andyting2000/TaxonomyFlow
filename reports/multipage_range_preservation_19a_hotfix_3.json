@@ -1,0 +1,444 @@
+{
+  "analysis_status": "PASS",
+  "assignment_metrics": {
+    "before": {
+      "ambiguous_content_count": 0,
+      "assigned_content_count": 640,
+      "assignment_rate": 0.287124,
+      "assignment_rate_excluding_toc": 0.300611,
+      "content_inventory_count": 2229,
+      "dropped_content_count": 0,
+      "toc_excluded_content_count": 100,
+      "unassigned_content_count": 1589,
+      "unassigned_rate_excluding_toc": 0.699389
+    },
+    "projected_after": {
+      "ambiguous_content_count": 0,
+      "assigned_content_count": 1699,
+      "assignment_rate": 0.762225,
+      "assignment_rate_excluding_toc": 0.798027,
+      "content_inventory_count": 2229,
+      "dropped_content_count": 0,
+      "toc_excluded_content_count": 100,
+      "unassigned_content_count": 530,
+      "unassigned_rate_excluding_toc": 0.201973
+    }
+  },
+  "classification": {
+    "children_outside_parent_count": 0,
+    "live_llm_calls": 0,
+    "notes_conservation_passed": true,
+    "primary_outcomes": {
+      "Directors' Report": "narrative_only",
+      "Independent Auditors' Report": "narrative_only",
+      "Notes to the Financial Statements": "container_only",
+      "Statement by Directors": "narrative_only",
+      "Statement of Cash Flows": "ambiguous",
+      "Statement of Changes in Equity": "matched",
+      "Statement of Comprehensive Income": "matched",
+      "Statement of Financial Position": "matched",
+      "Statutory Declaration": "narrative_only"
+    }
+  },
+  "corrected_ranges": [
+    {
+      "assigned_evidence_count": 269,
+      "derived_azure_range": [
+        3,
+        6
+      ],
+      "derived_pdf_range": [
+        2,
+        5
+      ],
+      "end_heading_bbox": [],
+      "end_heading_offset": null,
+      "grouping_method": "authoritative_toc_page_mapping_with_heading_confirmation",
+      "heading_anchor_page": 2,
+      "page_count": 4,
+      "range_consistency": {
+        "conflict_dimensions": [],
+        "expected_pdf_range": [
+          2,
+          5
+        ],
+        "observed_boundary_sources": {
+          "end": "mapped_toc_end",
+          "start": "mapped_toc_start"
+        },
+        "observed_pdf_range": [
+          2,
+          5
+        ],
+        "safe_reconciliation": true,
+        "status": "validated"
+      },
+      "raw_title": "Directors' Report",
+      "requires_human_review": false,
+      "section_id": "section-1",
+      "start_heading_bbox": [
+        {
+          "page_number": 3,
+          "polygon": [
+            1.1712,
+            2.2573,
+            2.9106,
+            2.2569,
+            2.9107,
+            2.4216,
+            1.1713,
+            2.4221
+          ]
+        }
+      ],
+      "start_heading_offset": 2.2573
+    },
+    {
+      "assigned_evidence_count": 186,
+      "derived_azure_range": [
+        9,
+        12
+      ],
+      "derived_pdf_range": [
+        8,
+        11
+      ],
+      "end_heading_bbox": [],
+      "end_heading_offset": null,
+      "grouping_method": "authoritative_toc_page_mapping_with_heading_confirmation",
+      "heading_anchor_page": 8,
+      "page_count": 4,
+      "range_consistency": {
+        "conflict_dimensions": [],
+        "expected_pdf_range": [
+          8,
+          11
+        ],
+        "observed_boundary_sources": {
+          "end": "mapped_toc_end",
+          "start": "mapped_toc_start"
+        },
+        "observed_pdf_range": [
+          8,
+          11
+        ],
+        "safe_reconciliation": true,
+        "status": "validated"
+      },
+      "raw_title": "Independent Auditors' Report",
+      "requires_human_review": false,
+      "section_id": "section-4",
+      "start_heading_bbox": [
+        {
+          "page_number": 9,
+          "polygon": [
+            1.1801,
+            3.1712,
+            7.2834,
+            3.1395,
+            7.2843,
+            3.3169,
+            1.181,
+            3.3479
+          ]
+        }
+      ],
+      "start_heading_offset": 3.1712
+    },
+    {
+      "assigned_evidence_count": 604,
+      "derived_azure_range": [
+        17,
+        24
+      ],
+      "derived_pdf_range": [
+        16,
+        23
+      ],
+      "end_heading_bbox": [],
+      "end_heading_offset": null,
+      "grouping_method": "authoritative_toc_page_mapping_with_heading_confirmation",
+      "heading_anchor_page": 16,
+      "page_count": 8,
+      "range_consistency": {
+        "conflict_dimensions": [],
+        "expected_pdf_range": [
+          16,
+          23
+        ],
+        "observed_boundary_sources": {
+          "end": "mapped_toc_end",
+          "start": "mapped_toc_start"
+        },
+        "observed_pdf_range": [
+          16,
+          23
+        ],
+        "safe_reconciliation": true,
+        "status": "validated"
+      },
+      "raw_title": "Notes to the Financial Statements",
+      "requires_human_review": false,
+      "section_id": "section-9",
+      "start_heading_bbox": [
+        {
+          "page_number": 17,
+          "polygon": [
+            1.1682,
+            2.0656,
+            6.1375,
+            2.0492,
+            6.1381,
+            2.2278,
+            1.1688,
+            2.2442
+          ]
+        }
+      ],
+      "start_heading_offset": 2.0656
+    }
+  ],
+  "feature": "19A-hotfix-3",
+  "focus": "authoritative multi-page ownership and separate geometry",
+  "generated_at": "2026-08-10T06:51:29.493514+00:00",
+  "human_review": {
+    "alignment_requires_human_review": false,
+    "requires_human_review": false,
+    "section_ids_requiring_human_review": []
+  },
+  "notes_containment": {
+    "child_count": 116,
+    "children_outside_parent": [],
+    "children_outside_parent_count": 0,
+    "conservation_passed": true,
+    "cover_page_child_count": 0,
+    "dropped_items": 0,
+    "parent_evidence_count": 604,
+    "parent_pdf_range": [
+      16,
+      23
+    ]
+  },
+  "old_conflicts": [
+    {
+      "actual_anchor_offset": 1,
+      "anchor_confidence": 1.0,
+      "anchor_method": "exact_normalized_title",
+      "anchor_tier": "A",
+      "canonical_section_type": "directors_report",
+      "canonical_title": "directors report",
+      "expected_offset": 1,
+      "geometry_evidence": [
+        {
+          "page_number": 3,
+          "polygon": [
+            1.1712,
+            2.2573,
+            2.9106,
+            2.2569,
+            2.9107,
+            2.4216,
+            1.1713,
+            2.4221
+          ]
+        }
+      ],
+      "mapped_pdf_range": [
+        2,
+        5
+      ],
+      "old_consistency_validator": {
+        "conflict_reason": "section_range_conflicts_with_page_mapping",
+        "expected_pdf_range": [
+          2,
+          5
+        ],
+        "grouping_method": "unresolved_page_mapping_conflict",
+        "observed_persisted_pdf_range": [
+          null,
+          null
+        ],
+        "pre_clear_observed_range": "not persisted by 19A-v3",
+        "reconciled": false,
+        "status": "unresolved"
+      },
+      "printed_range": [
+        1,
+        4
+      ],
+      "raw_toc_title": "Directors' Report",
+      "root_cause": "The document-wide page_alignment_ambiguous flag activated unsafe_range_projection after the exact Tier-A start anchor had resolved PDF page 2. That branch collapsed the already derivable 2-5 range to 2-2; the fail-closed validator then cleared both endpoints.",
+      "section_id": "section-1",
+      "selected_anchor": "DIRECTORS' REPORT",
+      "selected_anchor_azure_page": 3,
+      "selected_anchor_page": 2,
+      "stored_azure_range": [
+        null,
+        null
+      ],
+      "stored_pdf_range": [
+        null,
+        null
+      ]
+    },
+    {
+      "actual_anchor_offset": 1,
+      "anchor_confidence": 1.0,
+      "anchor_method": "canonical_title_prefix",
+      "anchor_tier": "B",
+      "canonical_section_type": "independent_auditors_report",
+      "canonical_title": "independent auditors report",
+      "expected_offset": 1,
+      "geometry_evidence": [
+        {
+          "page_number": 9,
+          "polygon": [
+            1.1801,
+            3.1712,
+            7.2834,
+            3.1395,
+            7.2843,
+            3.3169,
+            1.181,
+            3.3479
+          ]
+        }
+      ],
+      "mapped_pdf_range": [
+        8,
+        11
+      ],
+      "old_consistency_validator": {
+        "conflict_reason": "section_range_conflicts_with_page_mapping",
+        "expected_pdf_range": [
+          8,
+          11
+        ],
+        "grouping_method": "unresolved_page_mapping_conflict",
+        "observed_persisted_pdf_range": [
+          null,
+          null
+        ],
+        "pre_clear_observed_range": "not persisted by 19A-v3",
+        "reconciled": false,
+        "status": "unresolved"
+      },
+      "printed_range": [
+        7,
+        10
+      ],
+      "raw_toc_title": "Independent Auditors' Report",
+      "root_cause": "Repeated canonical-prefix report headers produced a cross-page near tie. The selected PDF-8 anchor agreed with the +1 regime, but the old grouper withheld it and the document-wide ambiguous flag discarded the uniquely mapped 8-11 endpoints; the validator then cleared both endpoints.",
+      "section_id": "section-4",
+      "selected_anchor": "INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE",
+      "selected_anchor_azure_page": 9,
+      "selected_anchor_page": 8,
+      "stored_azure_range": [
+        null,
+        null
+      ],
+      "stored_pdf_range": [
+        null,
+        null
+      ]
+    },
+    {
+      "actual_anchor_offset": 1,
+      "anchor_confidence": 1.0,
+      "anchor_method": "canonical_title_prefix",
+      "anchor_tier": "B",
+      "canonical_section_type": "notes_to_financial_statements",
+      "canonical_title": "notes to the financial statements",
+      "expected_offset": 1,
+      "geometry_evidence": [
+        {
+          "page_number": 17,
+          "polygon": [
+            1.1682,
+            2.0656,
+            6.1375,
+            2.0492,
+            6.1381,
+            2.2278,
+            1.1688,
+            2.2442
+          ]
+        }
+      ],
+      "mapped_pdf_range": [
+        16,
+        23
+      ],
+      "old_consistency_validator": {
+        "conflict_reason": "section_range_conflicts_with_page_mapping",
+        "expected_pdf_range": [
+          16,
+          23
+        ],
+        "grouping_method": "unresolved_page_mapping_conflict",
+        "observed_persisted_pdf_range": [
+          null,
+          null
+        ],
+        "pre_clear_observed_range": "not persisted by 19A-v3",
+        "reconciled": false,
+        "status": "unresolved"
+      },
+      "printed_range": [
+        15,
+        22
+      ],
+      "raw_toc_title": "Notes to the Financial Statements",
+      "root_cause": "Repeated Notes continuation headers produced a cross-page near tie. The selected PDF-16 anchor agreed with the +1 regime, but the old grouper withheld it and discarded the uniquely mapped 16-23 endpoints, leaving the long Notes container unresolved.",
+      "section_id": "section-9",
+      "selected_anchor": "NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024",
+      "selected_anchor_azure_page": 17,
+      "selected_anchor_page": 16,
+      "stored_azure_range": [
+        null,
+        null
+      ],
+      "stored_pdf_range": [
+        null,
+        null
+      ]
+    }
+  ],
+  "range_authority": {
+    "alignment_confidence": 1.0,
+    "alignment_requires_human_review": false,
+    "competing_high_quality_offset_count": 0,
+    "dominant_offsets": [
+      1
+    ],
+    "page_range_and_geometry_conflated_after": false,
+    "page_range_and_geometry_conflated_before": true,
+    "rule": "Unique explicit TOC endpoints mapped by one sufficiently supported numbering regime own the full PDF page range; heading geometry is stored separately and cannot replace either endpoint.",
+    "weighted_offset_support": {
+      "1": 6.8
+    }
+  },
+  "range_topology": {
+    "section_page_gap_count": 0,
+    "section_page_overlap_count": 0,
+    "section_same_page_geometry_boundary_count": 0
+  },
+  "real_pdf_smoke_status": "NOT_RERUN",
+  "safety": {
+    "arelle_run": false,
+    "confirmed_or_final_mapping_mutations": 0,
+    "database_writes": 0,
+    "fixture_or_projection_only": true,
+    "llm_calls": 0,
+    "mapping_or_template_mutations": 0,
+    "provider_calls": 0,
+    "source_artifact_read_only": true,
+    "xbrl_generated": false
+  },
+  "source_artifact": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\document-structures\\job_67\\structure_19a_v3.json",
+  "source_artifact_sha256": "a54042e1ea46ba44119a6602dc7bd2edab7844973f8adbbe5b7b60aa5963c8ce",
+  "source_artifact_version": "19A-v3",
+  "source_job_id": 67,
+  "target_artifact_version": "19A-v4",
+  "versioning_decision": "Incremented to 19A-v4 / structure_19a_v4.json because persisted page-range and geometry semantics changed. Existing 19B/19C version/hash validation rejects v3 linkages."
+}

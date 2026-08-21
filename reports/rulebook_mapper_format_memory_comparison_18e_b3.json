@@ -1,0 +1,3396 @@
+{
+  "run_metadata": {
+    "feature": "18E-B-3",
+    "generated_at": "2026-06-23T10:56:34Z",
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "feature": "18E-B-3",
+    "generated_at": "2026-06-23T10:56:34Z",
+    "baseline": {
+      "total_observations": 782,
+      "candidate_count": 352,
+      "touched_rows": 352,
+      "touched_coverage_rate": 0.4501,
+      "exact_matches": 200,
+      "period_uncertain_matches": 47,
+      "qname_value_matches": 247,
+      "false_positive_count": 88,
+      "ambiguous_count": 17,
+      "not_evaluable_count": 17,
+      "precision_on_evaluable": 0.7373,
+      "evaluation_status_counts": {
+        "ambiguous_xbrl_support": 17,
+        "exact_qname_value_period_match": 200,
+        "not_evaluable": 430,
+        "predicted_qname_not_found_in_xbrl": 2,
+        "qname_exists_but_value_mismatch": 35,
+        "qname_value_match_period_uncertain": 47,
+        "value_exists_but_different_qname": 51
+      },
+      "confidence_bucket_counts": {
+        "advisory_high": 16,
+        "advisory_medium": 4,
+        "no_match": 430,
+        "review_required": 332
+      },
+      "candidate_source_counts": {
+        "dictionary": 14,
+        "note_link_template": 14,
+        "pdf_xbrl_rulebook": 196,
+        "statement_template": 128
+      },
+      "blocked_candidate_rows": 148,
+      "safe_for_auto_apply_count": 0,
+      "requires_human_review_count": 782,
+      "strict_period_match": false,
+      "no_match_count": 430,
+      "false_positives": 88
+    },
+    "optimized": {
+      "total_observations": 782,
+      "candidate_count": 334,
+      "touched_rows": 334,
+      "touched_coverage_rate": 0.4271,
+      "exact_matches": 197,
+      "period_uncertain_matches": 50,
+      "qname_value_matches": 247,
+      "false_positive_count": 71,
+      "ambiguous_count": 16,
+      "not_evaluable_count": 16,
+      "precision_on_evaluable": 0.7767,
+      "evaluation_status_counts": {
+        "ambiguous_xbrl_support": 16,
+        "exact_qname_value_period_match": 197,
+        "not_evaluable": 448,
+        "predicted_qname_not_found_in_xbrl": 2,
+        "qname_exists_but_value_mismatch": 33,
+        "qname_value_match_period_uncertain": 50,
+        "value_exists_but_different_qname": 36
+      },
+      "confidence_bucket_counts": {
+        "advisory_high": 16,
+        "advisory_medium": 4,
+        "no_match": 448,
+        "review_required": 314
+      },
+      "candidate_source_counts": {
+        "dictionary": 14,
+        "note_link_template": 18,
+        "pdf_xbrl_rulebook": 170,
+        "statement_template": 128,
+        "unknown": 4
+      },
+      "blocked_candidate_rows": 148,
+      "safe_for_auto_apply_count": 0,
+      "requires_human_review_count": 782,
+      "strict_period_match": false,
+      "no_match_count": 448,
+      "false_positives": 71
+    },
+    "coverage_delta": -0.023,
+    "precision_delta": 0.0394,
+    "optimized_false_positive_count_delta": -17,
+    "new_candidates_count": 8,
+    "new_true_positive_count": 8,
+    "new_false_positive_count": 0,
+    "new_candidate_precision_on_evaluable": 1.0,
+    "no_match_before": 430,
+    "no_match_after": 448,
+    "format_memory_entry_count": 23,
+    "note_boundary_counts": {
+      "main_statement_row": 536,
+      "note_detail_row": 146,
+      "note_movement_row": 38,
+      "note_reconciliation_row": 62
+    },
+    "candidates_blocked_by_note_boundaries": 26,
+    "format_memory_candidates_blocked_by_note_boundaries": 0,
+    "false_positives_prevented_by_note_boundaries": 17,
+    "correct_candidates_lost_due_to_note_boundaries": 8,
+    "top_newly_covered_labels": [
+      {
+        "normalized_label": "net increase in cash and cash equivalent",
+        "count": 2
+      },
+      {
+        "normalized_label": "cash and cash equivalent at beginning of the year",
+        "count": 2
+      },
+      {
+        "normalized_label": "cash and cash equivalent at the end of the year",
+        "count": 2
+      },
+      {
+        "normalized_label": "total deferred liabilities",
+        "count": 2
+      }
+    ],
+    "top_still_missed_labels": [
+      {
+        "normalized_label": "tax expense",
+        "count": 44
+      },
+      {
+        "normalized_label": "trade and other payables",
+        "count": 19
+      },
+      {
+        "normalized_label": "trade and other receivables",
+        "count": 13
+      },
+      {
+        "normalized_label": "expenses not deductible for tax purposes",
+        "count": 10
+      },
+      {
+        "normalized_label": "bank charges",
+        "count": 8
+      },
+      {
+        "normalized_label": "commissioner for oaths",
+        "count": 8
+      },
+      {
+        "normalized_label": "ooi boon beng",
+        "count": 8
+      },
+      {
+        "normalized_label": "addition",
+        "count": 8
+      },
+      {
+        "normalized_label": "loss from operating activities",
+        "count": 7
+      },
+      {
+        "normalized_label": "secretarial fee",
+        "count": 6
+      },
+      {
+        "normalized_label": "other operating expenses",
+        "count": 6
+      },
+      {
+        "normalized_label": "disposal",
+        "count": 6
+      },
+      {
+        "normalized_label": "at beginning and end of the year",
+        "count": 6
+      },
+      {
+        "normalized_label": "increase in amount due to director",
+        "count": 5
+      },
+      {
+        "normalized_label": "1 1",
+        "count": 5
+      },
+      {
+        "normalized_label": "operating loss before working capital changes",
+        "count": 5
+      },
+      {
+        "normalized_label": "total assets discussion",
+        "count": 4
+      },
+      {
+        "normalized_label": "operating profit loss before working capital changes",
+        "count": 4
+      },
+      {
+        "normalized_label": "accruals",
+        "count": 4
+      },
+      {
+        "normalized_label": "rental of office",
+        "count": 4
+      },
+      {
+        "normalized_label": "accounting fee",
+        "count": 4
+      },
+      {
+        "normalized_label": "payroll fee",
+        "count": 4
+      },
+      {
+        "normalized_label": "accumulated losses carried forward",
+        "count": 4
+      },
+      {
+        "normalized_label": "term loan interests",
+        "count": 4
+      },
+      {
+        "normalized_label": "insurance",
+        "count": 4
+      },
+      {
+        "normalized_label": "quit rent and assessment",
+        "count": 4
+      },
+      {
+        "normalized_label": "telephone and fax charges",
+        "count": 4
+      },
+      {
+        "normalized_label": "effect of unabsorbed losses",
+        "count": 4
+      },
+      {
+        "normalized_label": "ung ming xian f",
+        "count": 4
+      },
+      {
+        "normalized_label": "property plant and equipment",
+        "count": 4
+      }
+    ],
+    "eighty_percent_path": {
+      "target_coverage_rate": 0.8,
+      "optimized_touched_coverage_rate": 0.4271,
+      "additional_candidates_needed_for_80_percent": 292,
+      "realistic_with_current_deterministic_memory": false
+    },
+    "safe_for_auto_apply_count": 0,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    },
+    "recommendation": {
+      "recommended_next_feature": "Feature #18E-F-A - Redesign mapper target from deterministic-only to candidate-ranking hybrid with Qwen fallback",
+      "reason": "Coverage still stalls around the 45% baseline despite conservative format memory.",
+      "basis": {
+        "baseline_touched_coverage_rate": 0.4501,
+        "optimized_touched_coverage_rate": 0.4271,
+        "baseline_precision_on_evaluable": 0.7373,
+        "optimized_precision_on_evaluable": 0.7767,
+        "optimized_false_positive_count_delta": -17,
+        "safe_for_auto_apply_count": 0
+      },
+      "feature_18e_d_2_re_evaluation_justified": false
+    }
+  },
+  "new_candidates": [
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:50:50:current",
+      "pdf_label": "Net increase in cash and cash equivalent",
+      "normalized_label": "net increase in cash and cash equivalent",
+      "pdf_value": "740",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "row_role": "subtotal",
+      "predicted_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "predicted_concept_label": "Increase Decrease In Cash And Cash Equivalents",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:cash_flow",
+        "section_block:cash_flow_other",
+        "row_role:subtotal",
+        "memory_entry:18E-B3-format-cf-net-change-cash-equivalent"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:50:50:prior",
+      "pdf_label": "Net increase in cash and cash equivalent",
+      "normalized_label": "net increase in cash and cash equivalent",
+      "pdf_value": "57",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "row_role": "subtotal",
+      "predicted_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "predicted_concept_label": "Increase Decrease In Cash And Cash Equivalents",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:cash_flow",
+        "section_block:cash_flow_other",
+        "row_role:subtotal",
+        "memory_entry:18E-B3-format-cf-net-change-cash-equivalent"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:51:51:current",
+      "pdf_label": "Cash and cash equivalent at beginning of the year",
+      "normalized_label": "cash and cash equivalent at beginning of the year",
+      "pdf_value": "81",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:CashAndCashEquivalents",
+      "predicted_concept_label": "Cash And Cash Equivalents",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_value_match_period_uncertain",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:cash_flow",
+        "section_block:cash_flow_other",
+        "row_role:component",
+        "memory_entry:18E-B3-format-cf-cash-equivalent-beginning"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:51:51:prior",
+      "pdf_label": "Cash and cash equivalent at beginning of the year",
+      "normalized_label": "cash and cash equivalent at beginning of the year",
+      "pdf_value": "24",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:CashAndCashEquivalents",
+      "predicted_concept_label": "Cash And Cash Equivalents",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_value_match_period_uncertain",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:cash_flow",
+        "section_block:cash_flow_other",
+        "row_role:component",
+        "memory_entry:18E-B3-format-cf-cash-equivalent-beginning"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:52:52:current",
+      "pdf_label": "Cash and cash equivalent at the end of the year",
+      "normalized_label": "cash and cash equivalent at the end of the year",
+      "pdf_value": "821",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:CashAndCashEquivalents",
+      "predicted_concept_label": "Cash And Cash Equivalents",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_value_match_period_uncertain",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:cash_flow",
+        "section_block:cash_flow_other",
+        "row_role:component",
+        "memory_entry:18E-B3-format-cf-cash-equivalent-ending"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:52:52:prior",
+      "pdf_label": "Cash and cash equivalent at the end of the year",
+      "normalized_label": "cash and cash equivalent at the end of the year",
+      "pdf_value": "81",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_other",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:CashAndCashEquivalents",
+      "predicted_concept_label": "Cash And Cash Equivalents",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_value_match_period_uncertain",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:cash_flow",
+        "section_block:cash_flow_other",
+        "row_role:component",
+        "memory_entry:18E-B3-format-cf-cash-equivalent-ending"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "pdf_row_id": "case_004:candidate:24:24:current",
+      "pdf_label": "Total deferred liabilities",
+      "normalized_label": "total deferred liabilities",
+      "pdf_value": "261493",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "total",
+      "predicted_qname": "ifrs-smes:NoncurrentLiabilities",
+      "predicted_concept_label": "Noncurrent Liabilities",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:financial_position",
+        "section_block:non_current_liabilities",
+        "row_role:total",
+        "memory_entry:18E-B3-format-sfp-total-deferred-liabilities"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_004",
+      "company_name": "004-jconnector",
+      "pdf_row_id": "case_004:candidate:24:24:prior",
+      "pdf_label": "Total deferred liabilities",
+      "normalized_label": "total deferred liabilities",
+      "pdf_value": "261493",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "total",
+      "predicted_qname": "ifrs-smes:NoncurrentLiabilities",
+      "predicted_concept_label": "Noncurrent Liabilities",
+      "candidate_generation_method": "company_format_template_memory",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "company_format_template_memory_match",
+        "statement_family:financial_position",
+        "section_block:non_current_liabilities",
+        "row_role:total",
+        "memory_entry:18E-B3-format-sfp-total-deferred-liabilities"
+      ],
+      "blocking_reasons": [
+        "format_memory_candidate_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "main_statement_row",
+        "is_main_statement_row": true,
+        "is_note_summary_row": false,
+        "is_note_detail_row": false,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": true,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.9,
+        "boundary_reasons": [
+          "main_statement_context"
+        ],
+        "blocking_reasons": []
+      },
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    }
+  ],
+  "boundary_blocked_candidates": [
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:14:14:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "target_concept_label": "Trade And Other Current Receivables",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "receivables_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:15:15:current",
+      "pdf_label": "Cash at bank",
+      "normalized_label": "cash at bank",
+      "pdf_value": "39820",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-cash-at-bank-cashandbankbalances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "target_concept_label": "Cash And Bank Balances",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "cash_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:15:15:prior",
+      "pdf_label": "Cash at bank",
+      "normalized_label": "cash at bank",
+      "pdf_value": "300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-cash-at-bank-cashandbankbalances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "target_concept_label": "Cash And Bank Balances",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "cash_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:16:16:current",
+      "pdf_label": "Total current assets",
+      "normalized_label": "total current assets",
+      "pdf_value": "214624",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "generic_label_requires_review",
+        "hardened_rule_requires_review",
+        "known_false_positive_risk",
+        "missing_section_context",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18B-R0202-total-current-assets-ifrs-smes-currentassets",
+        "target_qname": "ifrs-smes:CurrentAssets",
+        "target_concept_label": "Current Assets",
+        "confidence_score": 0.875,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "exact_alias_match",
+          "statement_family_unavailable_or_unconstrained",
+          "context_conditions_match",
+          "hardened_readiness:downgrade_to_review_required"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:16:16:prior",
+      "pdf_label": "Total current assets",
+      "normalized_label": "total current assets",
+      "pdf_value": "300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "generic_label_requires_review",
+        "hardened_rule_requires_review",
+        "known_false_positive_risk",
+        "missing_section_context",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18B-R0202-total-current-assets-ifrs-smes-currentassets",
+        "target_qname": "ifrs-smes:CurrentAssets",
+        "target_concept_label": "Current Assets",
+        "confidence_score": 0.875,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "exact_alias_match",
+          "statement_family_unavailable_or_unconstrained",
+          "context_conditions_match",
+          "hardened_readiness:downgrade_to_review_required"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:20:20:current",
+      "pdf_label": "Total shareholders' equity",
+      "normalized_label": "total shareholders equity",
+      "pdf_value": "100553",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-total-shareholders-equity-equity",
+        "target_qname": "ifrs-smes:Equity",
+        "target_concept_label": "Equity",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "total_equity_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:20:20:prior",
+      "pdf_label": "Total shareholders' equity",
+      "normalized_label": "total shareholders equity",
+      "pdf_value": "-2997",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-total-shareholders-equity-equity",
+        "target_qname": "ifrs-smes:Equity",
+        "target_concept_label": "Equity",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "total_equity_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:21:21:current",
+      "pdf_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "63381",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:21:21:prior",
+      "pdf_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "1398",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:24:24:current",
+      "pdf_label": "Total current liabilities",
+      "normalized_label": "total current liabilities",
+      "pdf_value": "114071",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-total-current-liabilities-currentliabilities",
+        "target_qname": "ifrs-smes:CurrentLiabilities",
+        "target_concept_label": "Current Liabilities",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "total_current_liabilities_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:24:24:prior",
+      "pdf_label": "Total current liabilities",
+      "normalized_label": "total current liabilities",
+      "pdf_value": "3297",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-total-current-liabilities-currentliabilities",
+        "target_qname": "ifrs-smes:CurrentLiabilities",
+        "target_concept_label": "Current Liabilities",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "total_current_liabilities_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:25:25:current",
+      "pdf_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "normalized_label": "total equity and liabilities draft wie",
+      "pdf_value": "214624",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-total-equity-and-liabilities-draft-wie-equityandliabilities",
+        "target_qname": "ifrs-smes:EquityAndLiabilities",
+        "target_concept_label": "Equity And Liabilities",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "total_equity_and_liabilities_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:25:25:prior",
+      "pdf_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "normalized_label": "total equity and liabilities draft wie",
+      "pdf_value": "300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-total-equity-and-liabilities-draft-wie-equityandliabilities",
+        "target_qname": "ifrs-smes:EquityAndLiabilities",
+        "target_concept_label": "Equity And Liabilities",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "total_equity_and_liabilities_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:54:54:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "62681",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:54:54:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "pdf_row_id": "case_002:candidate:67:67:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "target_concept_label": "Trade And Other Current Receivables",
+        "confidence_score": 0.5,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "receivables_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "pdf_row_id": "case_002:candidate:75:75:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "75621",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "pdf_row_id": "case_002:candidate:75:75:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "66390",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:62:62:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "119700",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "target_concept_label": "Trade And Other Current Receivables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "receivables_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:62:62:prior",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "24300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "target_concept_label": "Trade And Other Current Receivables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "receivables_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:66:66:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:66:66:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "7100",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:65:65:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "11850",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "target_concept_label": "Trade And Other Current Receivables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "receivables_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:65:65:prior",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "7339",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "target_concept_label": "Trade And Other Current Receivables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "receivables_current_asset_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:72:72:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "140156",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:72:72:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "129266",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": null,
+      "predicted_concept_label": null,
+      "candidate_generation_method": "note_boundary_block",
+      "confidence_bucket": "no_match",
+      "evaluation_status": "not_evaluable",
+      "match_reasons": [],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "note_boundary_blocks_candidate",
+        "note_detail_row_blocks_main_statement_concept",
+        "notes_context_requires_review",
+        "receivables_payables_note_breakdown_blocks_main_aggregate"
+      ],
+      "note_boundary": {
+        "note_boundary_type": "note_detail_row",
+        "is_main_statement_row": false,
+        "is_note_summary_row": false,
+        "is_note_detail_row": true,
+        "is_note_movement_row": false,
+        "is_note_reconciliation_row": false,
+        "can_map_to_main_statement_concept": false,
+        "can_support_main_statement_mapping": false,
+        "boundary_confidence": 0.85,
+        "boundary_reasons": [
+          "notes_context",
+          "note_breakdown_terms"
+        ],
+        "blocking_reasons": [
+          "not_main_statement_row",
+          "note_detail_row_support_only"
+        ]
+      },
+      "blocked_note_boundary_candidate": {
+        "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+        "target_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+        "target_concept_label": "Trade And Other Current Payables",
+        "confidence_score": 0.55,
+        "confidence_bucket": "review_required",
+        "candidate_generation_method": "pdf_xbrl_rulebook",
+        "match_reasons": [
+          "payables_current_liability_context",
+          "context_optimized_rulebook_match"
+        ],
+        "blocking_reasons": [
+          "note_detail_row_blocks_main_statement_concept",
+          "receivables_payables_note_breakdown_blocks_main_aggregate"
+        ]
+      },
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    }
+  ],
+  "false_positives_prevented_by_note_boundaries": [
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:20:20:current",
+      "pdf_label": "Total shareholders' equity",
+      "normalized_label": "total shareholders equity",
+      "pdf_value": "100553",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:Equity",
+      "predicted_concept_label": "Equity",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "match_reasons": [
+        "total_equity_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:21:21:current",
+      "pdf_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "63381",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:21:21:prior",
+      "pdf_label": "Other payables and accruals",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "1398",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:24:24:current",
+      "pdf_label": "Total current liabilities",
+      "normalized_label": "total current liabilities",
+      "pdf_value": "114071",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "predicted_concept_label": "Current Liabilities",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "match_reasons": [
+        "total_current_liabilities_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:54:54:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "62681",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:54:54:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "pdf_row_id": "case_002:candidate:67:67:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "predicted_concept_label": "Trade And Other Current Receivables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "receivables_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "pdf_row_id": "case_002:candidate:75:75:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "75621",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_002",
+      "company_name": "002-fine-batik",
+      "pdf_row_id": "case_002:candidate:75:75:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "66390",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:62:62:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "119700",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "predicted_concept_label": "Trade And Other Current Receivables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "receivables_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:62:62:prior",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "24300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "predicted_concept_label": "Trade And Other Current Receivables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "receivables_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:66:66:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_003",
+      "company_name": "003-info-house",
+      "pdf_row_id": "case_003:candidate:66:66:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "7100",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:65:65:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "11850",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "predicted_concept_label": "Trade And Other Current Receivables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "receivables_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:65:65:prior",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "7339",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "predicted_concept_label": "Trade And Other Current Receivables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "receivables_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:72:72:current",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "140156",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_005",
+      "company_name": "005-Rahsia-Herbal",
+      "pdf_row_id": "case_005:candidate:72:72:prior",
+      "pdf_label": "Other payables",
+      "normalized_label": "trade and other payables",
+      "pdf_value": "129266",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": "notes",
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "predicted_concept_label": "Trade And Other Current Payables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "value_exists_but_different_qname",
+      "match_reasons": [
+        "payables_current_liability_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    }
+  ],
+  "correct_candidates_lost_due_to_note_boundaries": [
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:14:14:current",
+      "pdf_label": "Other receivables",
+      "normalized_label": "trade and other receivables",
+      "pdf_value": "0",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_receivables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "predicted_concept_label": "Trade And Other Current Receivables",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "qname_value_match_period_uncertain",
+      "match_reasons": [
+        "receivables_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:15:15:current",
+      "pdf_label": "Cash at bank",
+      "normalized_label": "cash at bank",
+      "pdf_value": "39820",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ssmt:CashAndBankBalances",
+      "predicted_concept_label": "Cash And Bank Balances",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "cash_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:15:15:prior",
+      "pdf_label": "Cash at bank",
+      "normalized_label": "cash at bank",
+      "pdf_value": "300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ssmt:CashAndBankBalances",
+      "predicted_concept_label": "Cash And Bank Balances",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "cash_current_asset_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:16:16:current",
+      "pdf_label": "Total current assets",
+      "normalized_label": "total current assets",
+      "pdf_value": "214624",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:CurrentAssets",
+      "predicted_concept_label": "Current Assets",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "exact_alias_match",
+        "statement_family_unavailable_or_unconstrained",
+        "context_conditions_match",
+        "hardened_readiness:downgrade_to_review_required"
+      ],
+      "blocking_reasons": [
+        "hardened_rule_requires_review",
+        "generic_label_requires_review",
+        "missing_section_context",
+        "known_false_positive_risk"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:16:16:prior",
+      "pdf_label": "Total current assets",
+      "normalized_label": "total current assets",
+      "pdf_value": "300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:CurrentAssets",
+      "predicted_concept_label": "Current Assets",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "exact_alias_match",
+        "statement_family_unavailable_or_unconstrained",
+        "context_conditions_match",
+        "hardened_readiness:downgrade_to_review_required"
+      ],
+      "blocking_reasons": [
+        "hardened_rule_requires_review",
+        "generic_label_requires_review",
+        "missing_section_context",
+        "known_false_positive_risk"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:24:24:prior",
+      "pdf_label": "Total current liabilities",
+      "normalized_label": "total current liabilities",
+      "pdf_value": "3297",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "predicted_concept_label": "Current Liabilities",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "total_current_liabilities_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:25:25:current",
+      "pdf_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "normalized_label": "total equity and liabilities draft wie",
+      "pdf_value": "214624",
+      "pdf_period": {
+        "value_role": "current",
+        "expected_year": 2024
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:EquityAndLiabilities",
+      "predicted_concept_label": "Equity And Liabilities",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "total_equity_and_liabilities_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "sample_id": "case_001",
+      "company_name": "001-bezlife-marketing",
+      "pdf_row_id": "case_001:candidate:25:25:prior",
+      "pdf_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "normalized_label": "total equity and liabilities draft wie",
+      "pdf_value": "300",
+      "pdf_period": {
+        "value_role": "prior",
+        "expected_year": 2023
+      },
+      "statement_family": null,
+      "section_block": "notes_payables",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:EquityAndLiabilities",
+      "predicted_concept_label": "Equity And Liabilities",
+      "candidate_generation_method": "pdf_xbrl_rulebook",
+      "confidence_bucket": "review_required",
+      "evaluation_status": "exact_qname_value_period_match",
+      "match_reasons": [
+        "total_equity_and_liabilities_context",
+        "context_optimized_rulebook_match"
+      ],
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "note_boundary": {},
+      "blocked_note_boundary_candidate": null,
+      "blocked_format_memory_candidate": null,
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    }
+  ]
+}

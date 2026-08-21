@@ -1,0 +1,237 @@
+{
+  "feature_id": "18F-G-D-runtime-blocker-1",
+  "generated_at": "2026-07-25T23:08:00+08:00",
+  "status": "diagnosed_and_source_hardened",
+  "objective": "Verify the FastAPI runtime provenance serving port 8001 and explain why it exposes the pre-18F-G-D-hotfix-1 orchestration contract.",
+  "main_startup": {
+    "app_owner": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\main.py",
+    "app_creation": "main.py creates the FastAPI instance directly; no application factory or alternate backend app module is used.",
+    "before": {
+      "script_command": "python main.py",
+      "uvicorn_target": "main:app",
+      "target_type": "import_string",
+      "reload": "settings.debug",
+      "workers_configured": false,
+      "duplicate_import_confirmed": true,
+      "duplicate_import_result": {
+        "__main___and_main_are_same_module": false,
+        "__main___app_and_main_app_are_same_object": false
+      }
+    },
+    "after": {
+      "script_command": ".\\.venv\\Scripts\\python.exe main.py",
+      "uvicorn_target": "existing app object",
+      "target_type": "application_object",
+      "reload": false,
+      "workers_configured": false,
+      "duplicate_import_removed": true
+    },
+    "cwd_changed_by_source": false,
+    "sys_path_modified_by_source": false,
+    "dotenv_changes_import_paths": false
+  },
+  "local_runtime": {
+    "cwd": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow",
+    "python_executable": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\python.exe",
+    "sys_prefix": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv",
+    "sys_base_prefix": "C:\\Program Files\\Python311",
+    "pythonpath": null,
+    "sys_path": [
+      "",
+      "C:\\Program Files\\Python311\\python311.zip",
+      "C:\\Program Files\\Python311\\DLLs",
+      "C:\\Program Files\\Python311\\Lib",
+      "C:\\Program Files\\Python311",
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv",
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Lib\\site-packages"
+    ],
+    "module_paths": {
+      "main": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\main.py",
+      "routers.filings": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\routers\\filings.py",
+      "services.supervisor_orchestration_policy": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\services\\supervisor_orchestration_policy.py",
+      "services.supervisor_mapping_orchestrator": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\services\\supervisor_mapping_orchestrator.py",
+      "services.suggestion_actionability": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\services\\suggestion_actionability.py",
+      "schemas": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\schemas.py"
+    },
+    "shadowing_findings": {
+      "unexpected_project_module_path": false,
+      "duplicate_project_main_found": false,
+      "editable_project_install_found": false,
+      "pythonpath_override_found": false,
+      "installed_taxonomy_flow_shadow_found": false
+    }
+  },
+  "live_runtime": {
+    "observed_at": "2026-07-25T23:07:00+08:00",
+    "requested_endpoint": "http://127.0.0.1:8001",
+    "listeners": [
+      {
+        "address": "0.0.0.0:8001",
+        "pid": 9152,
+        "parent_pid": 5604,
+        "process_created_at": "2026-07-25T22:49:41+08:00",
+        "executable": "C:\\Program Files\\Python311\\python.exe",
+        "command_line": "\"C:\\Program Files\\Python311\\python.exe\" main.py",
+        "parent_executable": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\python.exe",
+        "parent_command_line": "\"C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\python.exe\" main.py"
+      },
+      {
+        "address": "127.0.0.1:8001",
+        "pid": 15212,
+        "parent_pid": 13972,
+        "process_created_at": "2026-07-24T23:50:06+08:00",
+        "executable": "C:\\Program Files\\Python311\\python.exe",
+        "command_line": "\"C:\\Program Files\\Python311\\python.exe\" -B -m uvicorn main:app --host 127.0.0.1 --port 8001",
+        "parent_executable": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\python.exe",
+        "parent_command_line": "\"C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\python.exe\" -B -m uvicorn main:app --host 127.0.0.1 --port 8001"
+      }
+    ],
+    "working_directory": {
+      "value": null,
+      "status": "not_obtainable_from_the_bounded_CIM_process_query"
+    },
+    "health_response": {
+      "status": "healthy",
+      "version": "2.0.0",
+      "database": "connected",
+      "runtime_revision_present": false
+    }
+  },
+  "openapi_comparison": {
+    "classification": "definitive_runtime_code_mismatch",
+    "local_route_count": 81,
+    "field_presence": {
+      "policy_eligible_count": {
+        "local": true,
+        "live": false
+      },
+      "review_executable_count": {
+        "local": true,
+        "live": false
+      },
+      "remapping_eligible_count": {
+        "local": true,
+        "live": false
+      },
+      "remapping_executable_count": {
+        "local": true,
+        "live": false
+      },
+      "revision_completed_count": {
+        "local": true,
+        "live": false
+      },
+      "mapper_status": {
+        "local": true,
+        "live": false
+      },
+      "is_human_terminal": {
+        "local": true,
+        "live": false
+      },
+      "supervisor_review_executable": {
+        "local": true,
+        "live": false
+      },
+      "batch_review_executable": {
+        "local": true,
+        "live": false
+      },
+      "remapping_eligible": {
+        "local": true,
+        "live": false
+      },
+      "remapping_executable": {
+        "local": true,
+        "live": false
+      }
+    }
+  },
+  "root_cause": {
+    "primary_classification": [
+      "D_wrong_FastAPI_process_owns_the_expected_port",
+      "F_old_process_was_never_replaced"
+    ],
+    "primary_finding": "The smoke URL resolves to the older loopback-specific listener on PID 15212, started on 2026-07-24. The newer python main.py process is a separate listener on PID 9152 bound to 0.0.0.0. The old listener remained active and served the stale contract.",
+    "secondary_confirmed_issue": {
+      "classification": "A_main_py_self_import_duplicate_module_startup_issue",
+      "finding": "Before this blocker, python main.py executed the file as __main__ and uvicorn.run(\"main:app\") imported it again as main, creating distinct module and FastAPI app objects.",
+      "relationship_to_primary_cause": "This was a real startup defect and was removed, but it does not explain the observed stale live contract because the exact smoke endpoint was owned by the older separate uvicorn process."
+    },
+    "not_supported": [
+      "B_live_process_launched_from_a_proven_wrong_workspace",
+      "C_local_imports_use_a_wrong_Python_environment_or_installed_project_copy",
+      "E_frontend_and_backend_use_different_backend_URLs",
+      "G_current_source_intentionally_loads_another_app_module"
+    ]
+  },
+  "source_changes": [
+    "main.py now passes its existing FastAPI app object to uvicorn and disables script-mode reload, removing the second main import.",
+    "main.py logs non-secret PID, cwd, Python executable, and key module paths during application startup.",
+    "GET /health now returns APP_RUNTIME_REVISION=18F-G-D-hotfix-1+ without exposing filesystem paths or secrets.",
+    "tests/test_runtime_startup_provenance.py verifies import safety, app-object startup, local provenance, route/schema registration, and the safe health marker."
+  ],
+  "restart_procedure": {
+    "service_owner": "user",
+    "instructions": [
+      "Verify current listeners with: netstat -ano -p TCP | Select-String ':8001'",
+      "Stop both user-managed backend process trees currently listening on port 8001. At observation time these were parent/child 13972/15212 and 5604/9152; verify PIDs again before acting.",
+      "From C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow, start exactly one backend with: .\\.venv\\Scripts\\python.exe main.py",
+      "Do not simultaneously run python -m uvicorn main:app on port 8001.",
+      "Verify only the intended listener remains and query http://127.0.0.1:8001/health."
+    ]
+  },
+  "required_post_restart_preflight": {
+    "health": {
+      "runtime_revision": "18F-G-D-hotfix-1+"
+    },
+    "top_level_fields": [
+      "policy_eligible_count",
+      "review_executable_count",
+      "remapping_eligible_count",
+      "remapping_executable_count",
+      "revision_completed_count"
+    ],
+    "item_fields": [
+      "mapper_status",
+      "is_human_terminal",
+      "supervisor_review_executable",
+      "batch_review_executable",
+      "remapping_eligible",
+      "remapping_executable"
+    ],
+    "resume_gate": "#18F-G-D and #18F-G-D-resume remain blocked until the externally restarted runtime passes this preflight."
+  },
+  "verification": {
+    "targeted_runtime_tests": {
+      "command": "python -B -m unittest tests.test_runtime_startup_provenance -v",
+      "tests_run": 5,
+      "result": "passed"
+    },
+    "focused_orchestration_regressions": {
+      "tests_run": 52,
+      "result": "passed"
+    },
+    "full_backend_suite": {
+      "command": "python -B -m unittest discover -s tests -p \"test_*.py\"",
+      "tests_run": 1254,
+      "duration_seconds": 40.746,
+      "result": "passed"
+    },
+    "app_import": {
+      "result": "app_import_ok 81 18F-G-D-hotfix-1+"
+    }
+  },
+  "safety": {
+    "service_started_by_agent": false,
+    "service_stopped_by_agent": false,
+    "service_killed_by_agent": false,
+    "provider_call": false,
+    "database_mutation": false,
+    "job_mutation": false,
+    "orchestration_business_logic_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "recommended_next_feature": "18F-G-D-runtime-preflight"
+}

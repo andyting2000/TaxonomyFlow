@@ -1,0 +1,274 @@
+{
+  "report_id": "template_group_inventory_blocker_19b",
+  "feature_id": "19B",
+  "generated_on": "2026-07-30",
+  "status": "BLOCKED",
+  "finding": {
+    "classification": "confirmed_issue",
+    "severity": "high",
+    "title": "Canonical 24-template semantic inventory is inconsistent",
+    "affected_area": "template inventory, section classification, persisted statement_type labels, and Review Workspace grouping",
+    "blocks_later_features": true
+  },
+  "authoritative_source_split": {
+    "membership_concepts_and_role_uris": {
+      "source": "mpers_templates.json loaded by services.xbrl_template_service.XBRLTemplateService",
+      "reason": "This is the executable source used by startup, APIs, mapping, and the Review Workspace.",
+      "template_count": 24,
+      "sha256": "892024B5869BA983ACDE86DBF0E940F78DCB35459422455F21E8935DA19C6E5A"
+    },
+    "semantic_role_meanings": {
+      "source": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd plus each template's concepts",
+      "reason": "The bundled SSM MPERS taxonomy definitions and concept membership agree with each other.",
+      "sha256": "145BF4A40885BF2F6145121B805161EE94FB177150CD2FEA200E91D0E825872A"
+    },
+    "existing_statement_families": {
+      "source": "services.azure_di_production_mapping.TEMPLATE_CODE_FAMILY",
+      "reason": "This is the only existing all-24 family map, but it is not versioned inventory metadata."
+    },
+    "runtime_display_names": {
+      "source": "services.xbrl_template_service.FRIENDLY_TEMPLATE_DESCRIPTIONS",
+      "reason": "The service overlays raw placeholder descriptions before exposing templates to APIs and downstream mapping.",
+      "consistent": false
+    }
+  },
+  "inventory": [
+    {
+      "template_group_id": "020000",
+      "runtime_display_name": "Scope of Filing",
+      "taxonomy_definition": "Scope of filing",
+      "statement_family": "scope",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "120000",
+      "runtime_display_name": "Directors Report",
+      "taxonomy_definition": "Disclosure - Directors report",
+      "statement_family": "directors_report",
+      "comparison": "benign_shortening"
+    },
+    {
+      "template_group_id": "120100",
+      "runtime_display_name": "Statement by Directors",
+      "taxonomy_definition": "Disclosure - Statement by directors",
+      "statement_family": "statement_by_directors",
+      "comparison": "benign_shortening"
+    },
+    {
+      "template_group_id": "120200",
+      "runtime_display_name": "Director Business Review",
+      "taxonomy_definition": "Disclosure - Director business review",
+      "statement_family": "director_business_review",
+      "comparison": "benign_shortening"
+    },
+    {
+      "template_group_id": "130000",
+      "runtime_display_name": "Auditors Report",
+      "taxonomy_definition": "Disclosure - Auditors report to members",
+      "statement_family": "auditors_report",
+      "comparison": "benign_shortening"
+    },
+    {
+      "template_group_id": "210000",
+      "runtime_display_name": "Statement of Financial Position",
+      "taxonomy_definition": "Statement of financial position, by current/non-current method",
+      "statement_family": "financial_position",
+      "comparison": "semantic_detail_lost"
+    },
+    {
+      "template_group_id": "210100",
+      "runtime_display_name": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+      "taxonomy_definition": "Sub-classification of assets, liabilities and equity, by current/non-current method",
+      "statement_family": "financial_position",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "220000",
+      "runtime_display_name": "Statement of Financial Position (Order of Liquidity)",
+      "taxonomy_definition": "Statement of financial position, by order of liquidity method",
+      "statement_family": "financial_position",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "220100",
+      "runtime_display_name": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+      "taxonomy_definition": "Sub-classification of assets, liabilities and equity, by order of liquidity method",
+      "statement_family": "financial_position",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "310000",
+      "runtime_display_name": "Statement of Profit or Loss (By Function)",
+      "taxonomy_definition": "Statement of profit or loss, by function of expense",
+      "statement_family": "profit_or_loss",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "310100",
+      "runtime_display_name": "Analysis of Profit or Loss (By Function)",
+      "taxonomy_definition": "Analysis of profit or loss, by function of expense",
+      "statement_family": "profit_or_loss",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "320000",
+      "runtime_display_name": "Statement of Profit or Loss (By Nature)",
+      "taxonomy_definition": "Statement of profit or loss, by nature of expense",
+      "statement_family": "profit_or_loss",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "320100",
+      "runtime_display_name": "Analysis of Profit or Loss (By Nature)",
+      "taxonomy_definition": "Analysis of profit or loss, by nature of expense",
+      "statement_family": "profit_or_loss",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "410000",
+      "runtime_display_name": "Statement of Comprehensive Income",
+      "taxonomy_definition": "Statement of Comprehensive Income - Net of tax",
+      "statement_family": "comprehensive_income",
+      "comparison": "semantic_detail_lost"
+    },
+    {
+      "template_group_id": "420000",
+      "runtime_display_name": "Statement of Comprehensive Income (Before Tax)",
+      "taxonomy_definition": "Statement of Comprehensive Income - Before tax",
+      "statement_family": "comprehensive_income",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "510000",
+      "runtime_display_name": "Statement of Cash Flows (Direct Method)",
+      "taxonomy_definition": "Statement of cash flows, direct method",
+      "statement_family": "cash_flows",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "520000",
+      "runtime_display_name": "Statement of Cash Flows (Indirect Method)",
+      "taxonomy_definition": "Statement of cash flows, indirect method",
+      "statement_family": "cash_flows",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "610000",
+      "runtime_display_name": "Statement of Changes in Equity",
+      "taxonomy_definition": "Statement of Changes in Equity",
+      "statement_family": "changes_in_equity",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "620000",
+      "runtime_display_name": "Statement of Retained Earnings",
+      "taxonomy_definition": "Statement of Retained Earnings",
+      "statement_family": "changes_in_equity",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "710000",
+      "runtime_display_name": "Notes - Corporate Information",
+      "taxonomy_definition": "Notes - Corporate information",
+      "statement_family": "corporate_information",
+      "comparison": "equivalent"
+    },
+    {
+      "template_group_id": "720000",
+      "runtime_display_name": "Notes - Significant Accounting Policies",
+      "taxonomy_definition": "Notes - Summary of significant accounting policies",
+      "statement_family": "accounting_policies",
+      "comparison": "benign_shortening"
+    },
+    {
+      "template_group_id": "730000",
+      "runtime_display_name": "Notes to Financial Statements",
+      "taxonomy_definition": "Notes - List of notes",
+      "statement_family": "notes",
+      "comparison": "material_parent_container_ambiguity"
+    },
+    {
+      "template_group_id": "740000",
+      "runtime_display_name": "Notes - Information on Companies",
+      "taxonomy_definition": "Notes - Issued capital",
+      "statement_family": "notes",
+      "comparison": "material_mismatch"
+    },
+    {
+      "template_group_id": "750000",
+      "runtime_display_name": "Notes - Reports",
+      "taxonomy_definition": "Notes - Related party transactions",
+      "statement_family": "notes",
+      "comparison": "material_mismatch"
+    }
+  ],
+  "confirmed_conflicts": [
+    {
+      "code": "740000",
+      "runtime": "Notes - Information on Companies",
+      "taxonomy": "Notes - Issued capital",
+      "concept_evidence": "Disclosure of issued capital [text block]"
+    },
+    {
+      "code": "750000",
+      "runtime": "Notes - Reports",
+      "taxonomy": "Notes - Related party transactions",
+      "concept_evidence": "Disclosure of related parties [text block]"
+    },
+    {
+      "code": "730000",
+      "runtime": "Notes to Financial Statements",
+      "taxonomy": "Notes - List of notes",
+      "impact": "The runtime name resembles the Notes parent, while #19B requires that parent to remain container_only."
+    },
+    {
+      "area": "classification policy",
+      "existing_behavior": "Existing deterministic routing assigns Directors Report, Statement by Directors, statutory declaration, auditors report, and the Notes parent to template codes.",
+      "requested_behavior": "#19B requires those report sections to be narrative_only and the Notes parent to be container_only."
+    }
+  ],
+  "missing_canonical_metadata": [
+    "technical/internal name beyond the six-digit code",
+    "template_kind",
+    "description",
+    "canonical aliases",
+    "expected_section_types",
+    "positive_indicators",
+    "exclusion_indicators",
+    "allows_multiple_assignments",
+    "semantic inventory version"
+  ],
+  "reproduction": [
+    "Load XBRLTemplateService and print descriptions for 730000, 740000, and 750000.",
+    "Inspect the matching role definitions in the bundled MPERS role XSD.",
+    "Inspect the first concept in each matching mpers_templates.json entry.",
+    "Observe that runtime descriptions for 740000 and 750000 contradict both taxonomy roles and concepts."
+  ],
+  "remediation_direction": [
+    "Run #19B-blocker-1 before section classification.",
+    "Keep XBRLTemplateService/mpers_templates.json authoritative for the exact 24 IDs, concepts, and role URIs.",
+    "Reconcile semantic names against the bundled taxonomy roles and concepts with explicit compatibility aliases for existing persisted runtime names.",
+    "Resolve narrative/container policy separately from inventory membership.",
+    "Publish one versioned inventory-card adapter and hash both structural inventory and reconciled semantic metadata.",
+    "Add exact-24, unique-ID, role/concept consistency, compatibility, API, mapping, and Review Workspace regressions."
+  ],
+  "safety": {
+    "classifier_code_added": false,
+    "feature_flags_added": false,
+    "pipeline_changed": false,
+    "frontend_changed": false,
+    "database_changed": false,
+    "live_azure_calls": 0,
+    "live_llm_calls": 0,
+    "mapping_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "decision": {
+    "feature_19b": "BLOCKED at Part 1",
+    "recommended_next_feature": "19B-blocker-1 - Reconcile the canonical internal template-group inventory",
+    "feature_19c_started": false
+  }
+}

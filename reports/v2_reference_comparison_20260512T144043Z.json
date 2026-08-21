@@ -1,0 +1,357 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-12T14:41:27.073406+00:00",
+    "script": "scripts/compare_v2_to_reference.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "openai_used": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\v2_reference_comparison_20260512T144043Z.json"
+  },
+  "aggregate_metrics": {
+    "cases_compared": 7,
+    "reference_total_facts": 3101,
+    "v2_total_candidates": 940,
+    "v2_native_candidates": 940,
+    "v2_openai_candidates": 0,
+    "v2_openai_fallback_pages_attempted": 0,
+    "v2_openai_fallback_pages_succeeded": 0,
+    "v2_openai_fallback_pages_failed": 0,
+    "reference_numeric_facts": 2590,
+    "v2_numeric_fact_candidates": 655,
+    "reference_text_blocks": 304,
+    "v2_text_block_candidates": 146,
+    "reference_concepts_count": 293,
+    "v2_labels_count": 517,
+    "rough_label_concept_overlap_count": 109,
+    "missing_numeric_extraction_signal": false,
+    "missing_text_block_extraction_signal": false,
+    "numeric_extraction_signal_improved": true,
+    "text_block_extraction_signal_improved": true,
+    "numeric_candidate_to_reference_ratio": 0.2528957528957529,
+    "text_block_candidate_to_reference_ratio": 0.48026315789473684,
+    "remaining_numeric_gap": 1935,
+    "remaining_text_block_gap": 158,
+    "cases_where_reference_exists_but_v2_has_no_numeric_or_text": [],
+    "missing_numeric_cases": [],
+    "missing_text_block_cases": [
+      "001-bizaid-synthetic"
+    ]
+  },
+  "per_case": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "reference_total_facts": 552,
+      "v2_total_candidates": 122,
+      "reference_numeric_facts": 487,
+      "v2_numeric_candidates": 40,
+      "reference_text_blocks": 37,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 216,
+      "v2_labels_count": 75,
+      "rough_represented_reference_concepts": 20,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "reference_total_facts": 413,
+      "v2_total_candidates": 115,
+      "reference_numeric_facts": 339,
+      "v2_numeric_candidates": 89,
+      "reference_text_blocks": 43,
+      "v2_text_block_candidates": 24,
+      "reference_concepts_count": 222,
+      "v2_labels_count": 102,
+      "rough_represented_reference_concepts": 43,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": false
+    },
+    {
+      "case_id": "003-fine-batik",
+      "reference_total_facts": 427,
+      "v2_total_candidates": 189,
+      "reference_numeric_facts": 352,
+      "v2_numeric_candidates": 158,
+      "reference_text_blocks": 44,
+      "v2_text_block_candidates": 28,
+      "reference_concepts_count": 232,
+      "v2_labels_count": 161,
+      "rough_represented_reference_concepts": 61,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": false
+    },
+    {
+      "case_id": "004-info-house",
+      "reference_total_facts": 414,
+      "v2_total_candidates": 150,
+      "reference_numeric_facts": 338,
+      "v2_numeric_candidates": 99,
+      "reference_text_blocks": 45,
+      "v2_text_block_candidates": 34,
+      "reference_concepts_count": 227,
+      "v2_labels_count": 115,
+      "rough_represented_reference_concepts": 56,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": false
+    },
+    {
+      "case_id": "005-jconnector",
+      "reference_total_facts": 400,
+      "v2_total_candidates": 134,
+      "reference_numeric_facts": 323,
+      "v2_numeric_candidates": 90,
+      "reference_text_blocks": 46,
+      "v2_text_block_candidates": 29,
+      "reference_concepts_count": 219,
+      "v2_labels_count": 99,
+      "rough_represented_reference_concepts": 50,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": false
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "reference_total_facts": 421,
+      "v2_total_candidates": 146,
+      "reference_numeric_facts": 345,
+      "v2_numeric_candidates": 126,
+      "reference_text_blocks": 46,
+      "v2_text_block_candidates": 14,
+      "reference_concepts_count": 230,
+      "v2_labels_count": 107,
+      "rough_represented_reference_concepts": 44,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": false
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "reference_total_facts": 474,
+      "v2_total_candidates": 84,
+      "reference_numeric_facts": 406,
+      "v2_numeric_candidates": 53,
+      "reference_text_blocks": 43,
+      "v2_text_block_candidates": 17,
+      "reference_concepts_count": 216,
+      "v2_labels_count": 62,
+      "rough_represented_reference_concepts": 23,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": false
+    }
+  ],
+  "top_reference_concepts_not_represented_in_v2": [
+    {
+      "concept": "ssmt-mpers:EquityBalanceRestated",
+      "count": 96
+    },
+    {
+      "concept": "ifrs-smes:ComprehensiveIncome",
+      "count": 96
+    },
+    {
+      "concept": "ssmt-mpers:ImpactOfChangeInAccountingStandards",
+      "count": 73
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesOutstanding",
+      "count": 32
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesOutstandingDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInAmountOfSharesOutstanding",
+      "count": 16
+    },
+    {
+      "concept": "ifrs-smes:AmountsPayableRelatedPartyTransactions",
+      "count": 15
+    },
+    {
+      "concept": "ifrs-smes:InvestmentProperty",
+      "count": 14
+    },
+    {
+      "concept": "ssmt-mpers:InvestmentInSubisidiaries",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:InvestmentsInJointVentures",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:NoncurrentReceivables",
+      "count": 14
+    },
+    {
+      "concept": "ssmt-mpers:OtherNoncurrentAssets",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:NoncurrentAssets",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:RetainedEarnings",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:OtherReserves",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:EquityAttributableToOwnersOfParent",
+      "count": 14
+    },
+    {
+      "concept": "ssmt-mpers:OtherComponentsOfEquity",
+      "count": 14
+    },
+    {
+      "concept": "ssmt-mpers:NoncurrentBorrowings",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:NoncurrentProvisionsForEmployeeBenefits",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:NoncurrentPayables",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:NoncurrentLiabilities",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:ShorttermBorrowings",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:Land",
+      "count": 14
+    }
+  ],
+  "top_v2_candidates_not_found_in_reference": [
+    {
+      "candidate_label": "As at 31/12/2023",
+      "count": 21
+    },
+    {
+      "candidate_label": "As at 31/12/2024",
+      "count": 16
+    },
+    {
+      "candidate_label": "Loss for the financial year",
+      "count": 13
+    },
+    {
+      "candidate_label": "Turnover",
+      "count": 7
+    },
+    {
+      "candidate_label": "Charges for the year",
+      "count": 6
+    },
+    {
+      "candidate_label": "Expenses not deductible for tax purposes",
+      "count": 5
+    },
+    {
+      "candidate_label": "Total Operating Expenses",
+      "count": 5
+    },
+    {
+      "candidate_label": "This Year",
+      "count": 4
+    },
+    {
+      "candidate_label": "(c)",
+      "count": 4
+    },
+    {
+      "candidate_label": "(d)",
+      "count": 4
+    },
+    {
+      "candidate_label": "(e)",
+      "count": 4
+    },
+    {
+      "candidate_label": "(f)",
+      "count": 4
+    },
+    {
+      "candidate_label": "Statutory audit",
+      "count": 4
+    },
+    {
+      "candidate_label": "Tax expenses for the year",
+      "count": 4
+    },
+    {
+      "candidate_label": "Bank charges",
+      "count": 4
+    },
+    {
+      "candidate_label": "Penalties",
+      "count": 4
+    },
+    {
+      "candidate_label": "Printing and stationeries",
+      "count": 4
+    },
+    {
+      "candidate_label": "Secretarial fee",
+      "count": 4
+    },
+    {
+      "candidate_label": "Taxation fee",
+      "count": 4
+    },
+    {
+      "candidate_label": "Accumulated losses carried forward",
+      "count": 4
+    },
+    {
+      "candidate_label": "Term loan",
+      "count": 4
+    },
+    {
+      "candidate_label": "BIZAID FY2025",
+      "count": 3
+    },
+    {
+      "candidate_label": "Accumulated losses brought forward",
+      "count": 3
+    },
+    {
+      "candidate_label": "Directors' Benefits Description",
+      "count": 3
+    },
+    {
+      "candidate_label": "Directors' Interests Description",
+      "count": 3
+    }
+  ],
+  "recommended_next_extraction_v2_focus": [
+    "Use the reference report to refine overlap scoring and candidate classification."
+  ],
+  "assessment": "Extraction v2 now emits numeric and text-block candidates; remaining gaps should be measured against reference coverage and candidate quality.",
+  "limitations": [
+    "Comparison uses rough label/concept overlap only; it is not final taxonomy mapping.",
+    "OpenAI fallback metrics are reported when the v2 input report used the opt-in benchmark fallback.",
+    "No DB mutation, XBRL generation, Arelle validation, UI upload, or production cutover is performed."
+  ]
+}

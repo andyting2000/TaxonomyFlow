@@ -1,0 +1,59 @@
+{
+  "feature_id": "18F-G-C",
+  "generated_at": "2026-07-23T14:35:12.926815+00:00",
+  "status": "complete",
+  "calibration_sample": {
+    "total_suggestions": 150,
+    "eligible": 47,
+    "eligibility_rate": 0.3133,
+    "high_priority": 13,
+    "medium_priority": 34
+  },
+  "default_view": "All suggestions; no non-eligible suggestion is silently hidden",
+  "per_card_indicators": [
+    "Supervisor eligible with priority",
+    "already reviewed",
+    "remapping available",
+    "correction completed",
+    "blocked",
+    "not eligible"
+  ],
+  "expanded_details": [
+    "priority",
+    "eligibility reasons",
+    "blocking reasons",
+    "orchestration state",
+    "recommended manual action",
+    "existing Supervisor decision",
+    "remapping eligibility",
+    "correction attempts used"
+  ],
+  "states": [
+    "frontend flag hidden",
+    "capabilities loading",
+    "plan loading",
+    "backend disabled",
+    "backend unauthorized or unavailable",
+    "unsafe contradiction",
+    "endpoint error with manual refresh",
+    "empty eligible queue",
+    "empty selected filter"
+  ],
+  "batch_ux": {
+    "targets": "eligible, unreviewed, nonterminal suggestions only",
+    "confirmation_includes_count": true,
+    "backend_maximum_respected": true,
+    "already_reviewed_excluded": true,
+    "revision_completed_excluded": true
+  },
+  "wording_guardrail": "Eligibility indicates structural review priority and does not prove the current mapping is incorrect.",
+  "verification": {
+    "frontend_tests": "npm run test:auth passed 30 tests",
+    "frontend_build": "npm run build passed; 1,586 modules transformed",
+    "focused_backend": "orchestration policy/orchestrator/review API passed 46 tests",
+    "supervisor_discovery": "152 tests passed",
+    "mapping_ownership_admin": "69 tests passed",
+    "full_backend": "1,243 tests passed in 32.062 seconds",
+    "app_import": "app_import_ok 81"
+  }
+}

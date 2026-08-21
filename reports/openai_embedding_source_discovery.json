@@ -1,0 +1,183 @@
+{
+  "feature": "13E",
+  "mode": "read_only",
+  "mutates_database": false,
+  "reason": "Current DB embedding source tables are empty. XBRLTemplateService loads mpers_templates.json and is the active concept source used by template review and string/template matching.",
+  "recommended_source_for_openai_embeddings": "template-service-concepts",
+  "sources": [
+    {
+      "currently_used_by_production": "taxonomy search and legacy semantic search when populated; empty in current local DB",
+      "embedding_suitability": "usable if populated; current local table is empty",
+      "has_embedding_suitable_text": false,
+      "has_stable_ids": true,
+      "record_count": 0,
+      "sample_records": [],
+      "source_name": "mbrs_taxonomy_tags table",
+      "source_type": "mbrs_taxonomy_tag"
+    },
+    {
+      "currently_used_by_production": "legacy/template table source; empty in current local DB",
+      "embedding_suitability": "usable if populated; current local table is empty",
+      "has_embedding_suitable_text": false,
+      "has_stable_ids": true,
+      "record_count": 0,
+      "sample_records": [],
+      "source_name": "xml_template_fields table",
+      "source_type": "xml_template_field"
+    },
+    {
+      "currently_used_by_production": "loaded by XBRLTemplateService at runtime",
+      "embedding_suitability": "usable source, but template service is preferred because it reflects runtime-friendly descriptions",
+      "has_embedding_suitable_text": true,
+      "has_stable_ids": true,
+      "record_count": 1313,
+      "sample_records": [
+        {
+          "metadata": {
+            "aliases": [],
+            "concept_id": "ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+            "concept_label": "Date of financial statements approved by Board of Directors",
+            "level": 2,
+            "namespace": "ssmt",
+            "parent": "ssmt:ParticularsOfFinancialStatementsAndReportsAbstract",
+            "position": 0,
+            "required": true,
+            "source_id": "020000:ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+            "source_type": "mpers_template_concept",
+            "statement_description": "Template 020000",
+            "template_code": "020000"
+          },
+          "source_id": "020000:ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+          "source_label": "Date of financial statements approved by Board of Directors",
+          "source_text_preview": "Statement: Template 020000\nTemplate code: 020000\nConcept label: Date of financial statements approved by Board of Directors\nConcept id: ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors\nNamespace: ssmt\nParent: ssmt:ParticularsOfFinan",
+          "source_type": "mpers_template_concept"
+        },
+        {
+          "metadata": {
+            "aliases": [],
+            "concept_id": "ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers",
+            "concept_label": "Date of circulation of financial statements and reports to members",
+            "level": 2,
+            "namespace": "ssmt",
+            "parent": "ssmt:ParticularsOfFinancialStatementsAndReportsAbstract",
+            "position": 1,
+            "required": true,
+            "source_id": "020000:ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers",
+            "source_type": "mpers_template_concept",
+            "statement_description": "Template 020000",
+            "template_code": "020000"
+          },
+          "source_id": "020000:ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers",
+          "source_label": "Date of circulation of financial statements and reports to members",
+          "source_text_preview": "Statement: Template 020000\nTemplate code: 020000\nConcept label: Date of circulation of financial statements and reports to members\nConcept id: ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers\nNamespace: ssmt\nParent: ssmt:Parti",
+          "source_type": "mpers_template_concept"
+        },
+        {
+          "metadata": {
+            "aliases": [],
+            "concept_id": "ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+            "concept_label": "Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting",
+            "level": 2,
+            "namespace": "ssmt",
+            "parent": "ssmt:ParticularsOfFinancialStatementsAndReportsAbstract",
+            "position": 2,
+            "required": false,
+            "source_id": "020000:ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+            "source_type": "mpers_template_concept",
+            "statement_description": "Template 020000",
+            "template_code": "020000"
+          },
+          "source_id": "020000:ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+          "source_label": "Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting",
+          "source_text_preview": "Statement: Template 020000\nTemplate code: 020000\nConcept label: Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting\nConcept id: ssmt:DateOfFinancialStatementsAndReportsOfDire",
+          "source_type": "mpers_template_concept"
+        }
+      ],
+      "source_name": "mpers_templates.json",
+      "source_path": "mpers_templates.json",
+      "source_type": "mpers_template_concept"
+    },
+    {
+      "currently_used_by_production": "used by template review, prompt building, and find_matching_concept_hybrid string/template matching",
+      "embedding_suitability": "recommended active template/concept source",
+      "has_embedding_suitable_text": true,
+      "has_stable_ids": true,
+      "record_count": 1313,
+      "sample_records": [
+        {
+          "metadata": {
+            "aliases": [],
+            "concept_id": "ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+            "concept_label": "Date of financial statements approved by Board of Directors",
+            "level": 2,
+            "namespace": "ssmt",
+            "parent": "ssmt:ParticularsOfFinancialStatementsAndReportsAbstract",
+            "position": 0,
+            "required": true,
+            "source_id": "020000:ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+            "source_type": "template_service_concept",
+            "statement_description": "Scope of Filing",
+            "template_code": "020000"
+          },
+          "source_id": "020000:ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+          "source_label": "Date of financial statements approved by Board of Directors",
+          "source_text_preview": "Statement: Scope of Filing\nTemplate code: 020000\nConcept label: Date of financial statements approved by Board of Directors\nConcept id: ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors\nNamespace: ssmt\nParent: ssmt:ParticularsOfFinan",
+          "source_type": "template_service_concept"
+        },
+        {
+          "metadata": {
+            "aliases": [],
+            "concept_id": "ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers",
+            "concept_label": "Date of circulation of financial statements and reports to members",
+            "level": 2,
+            "namespace": "ssmt",
+            "parent": "ssmt:ParticularsOfFinancialStatementsAndReportsAbstract",
+            "position": 1,
+            "required": true,
+            "source_id": "020000:ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers",
+            "source_type": "template_service_concept",
+            "statement_description": "Scope of Filing",
+            "template_code": "020000"
+          },
+          "source_id": "020000:ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers",
+          "source_label": "Date of circulation of financial statements and reports to members",
+          "source_text_preview": "Statement: Scope of Filing\nTemplate code: 020000\nConcept label: Date of circulation of financial statements and reports to members\nConcept id: ssmt:DateOfCirculationOfFinancialStatementsAndReportsToMembers\nNamespace: ssmt\nParent: ssmt:Parti",
+          "source_type": "template_service_concept"
+        },
+        {
+          "metadata": {
+            "aliases": [],
+            "concept_id": "ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+            "concept_label": "Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting",
+            "level": 2,
+            "namespace": "ssmt",
+            "parent": "ssmt:ParticularsOfFinancialStatementsAndReportsAbstract",
+            "position": 2,
+            "required": false,
+            "source_id": "020000:ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+            "source_type": "template_service_concept",
+            "statement_description": "Scope of Filing",
+            "template_code": "020000"
+          },
+          "source_id": "020000:ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+          "source_label": "Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting",
+          "source_text_preview": "Statement: Scope of Filing\nTemplate code: 020000\nConcept label: Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting\nConcept id: ssmt:DateOfFinancialStatementsAndReportsOfDire",
+          "source_type": "template_service_concept"
+        }
+      ],
+      "source_name": "XBRLTemplateService loaded concepts",
+      "source_path": null,
+      "source_type": "template_service_concept"
+    },
+    {
+      "currently_used_by_production": "routers/taxonomy.py searches mbrs_taxonomy_tags; current local table is empty",
+      "embedding_suitability": "not recommended for #13E local backfill because source table is empty",
+      "has_embedding_suitable_text": false,
+      "has_stable_ids": true,
+      "record_count": 0,
+      "sample_records": [],
+      "source_name": "taxonomy search/cache DB source",
+      "source_type": "mbrs_taxonomy_tag"
+    }
+  ]
+}

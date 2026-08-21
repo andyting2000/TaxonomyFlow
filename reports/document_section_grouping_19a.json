@@ -1,0 +1,101 @@
+{
+  "report_id": "document_section_grouping_19a",
+  "feature_id": "19A",
+  "generated_on": "2026-07-30",
+  "status": "PASS",
+  "section_model": {
+    "primary_boundary": "reconciled PDF page range",
+    "same_page_refinement": "distinct trusted heading-anchor geometry for every candidate section",
+    "hierarchy_fields": [
+      "parent_section_id",
+      "section_level",
+      "section_order"
+    ],
+    "referenced_content": [
+      "paragraphs/text blocks",
+      "headings",
+      "tables",
+      "table cells",
+      "persisted extracted rows"
+    ],
+    "confidence_and_provenance": true
+  },
+  "grouping_rules": [
+    "TOC-page content is explicitly excluded from financial sections.",
+    "A single reliable page range assigns content directly.",
+    "Overlapping same-page ranges require trusted, distinct anchors for all candidate sections.",
+    "An exact heading source reference belongs to its matching section.",
+    "A multi-page item is assigned only when exactly one candidate section exists and fully contains every page.",
+    "Nested or intersecting multi-page candidates remain ambiguous with all candidate section IDs.",
+    "Tables spanning sections remain ambiguous while independently located cells/rows may be assigned.",
+    "Missing page provenance and content outside reliable ranges remain explicitly unassigned."
+  ],
+  "terminal_dispositions": [
+    "assigned to exactly one section",
+    "ambiguous between explicit candidate sections",
+    "unassigned with an explicit reason"
+  ],
+  "conservation_invariant": {
+    "equation": "inventory = assigned union ambiguous union unassigned",
+    "sets_pairwise_disjoint": true,
+    "duplicate_content_ids_rejected": true,
+    "dropped_content_rejected": true,
+    "content_evidence_for_every_inventory_item": true
+  },
+  "content_evidence": {
+    "text_evidence": true,
+    "all_pdf_page_indexes": true,
+    "all_azure_page_numbers": true,
+    "bounding_evidence": true,
+    "source_indices_and_provenance": true,
+    "persisted_extracted_row_uuid_resolution": true,
+    "original_candidate_id_retained": true
+  },
+  "notes_preparation": {
+    "canonical_type": "notes_to_financial_statements",
+    "primary_section_level": 1,
+    "parent_section_id": null,
+    "candidate_numbered_note_headings_retained": true,
+    "candidate_heading_text_page_bounds_resolvable": true,
+    "child_note_sections_created": false,
+    "template_classification_performed": false
+  },
+  "structured_warnings": [
+    "toc_not_detected",
+    "toc_parse_low_confidence",
+    "page_alignment_ambiguous",
+    "heading_anchor_missing",
+    "heading_anchor_same_page_near_tie",
+    "overlapping_section_ranges",
+    "unassigned_document_content"
+  ],
+  "verified_scenarios": [
+    "same-page sections split by heading geometry",
+    "missing same-page boundary remains ambiguous",
+    "same-page anchor near-tie requires review",
+    "overlapping ranges emit warnings",
+    "multi-page nested overlap remains ambiguous",
+    "spanning table remains ambiguous while cells assign",
+    "Notes spans multiple pages and retains three candidate headings",
+    "no-TOC filing creates no boundaries and conserves all content",
+    "low-confidence/unparsed and year-like TOC lines remain evidence only",
+    "every section/disposition reference resolves in content_evidence"
+  ],
+  "sample_conservation": {
+    "fixture": "fixture_d_page_offset.json",
+    "content_inventory_count": 9,
+    "content_evidence_count": 9,
+    "assigned_content_count": 3,
+    "ambiguous_content_count": 0,
+    "unassigned_content_count": 6,
+    "toc_excluded_content_count": 4,
+    "dropped_content_count": 0,
+    "content_conservation_passed": true
+  },
+  "verification": {
+    "focused_19a_tests_passed": 51,
+    "full_backend_tests_passed": 1317,
+    "failures": 0
+  },
+  "recommended_next_feature": "19B - Classify primary sections and note subsections into the 24 internal template groups"
+}

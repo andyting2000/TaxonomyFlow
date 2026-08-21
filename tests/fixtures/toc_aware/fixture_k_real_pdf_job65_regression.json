@@ -1,0 +1,66 @@
+{
+  "name": "K_real_pdf_job65_regression",
+  "pages": [
+    {"page_number": 1, "height": 1000, "lines": [{"content": "ANNUAL REPORT", "page_number": 1}]},
+    {"page_number": 2, "height": 1000, "lines": [
+      {"content": "INDEX", "page_number": 2},
+      {"content": "Directors' Report 1-4", "page_number": 2},
+      {"content": "Statement by Directors 5", "page_number": 2},
+      {"content": "Statutory Declaration 6", "page_number": 2},
+      {"content": "Independent Auditors' Report 7-10", "page_number": 2},
+      {"content": "Statement of Financial Position 11", "page_number": 2},
+      {"content": "Statement of Comprehensive Income 12", "page_number": 2},
+      {"content": "Statement of Changes in Equity 13", "page_number": 2},
+      {"content": "Statement of Cash Flows 14", "page_number": 2},
+      {"content": "Notes to the Financial Statements 15-22", "page_number": 2},
+      {"content": "BEZLIFE MARKETING SDN. BHD.", "page_number": 2},
+      {"content": "This page intentionally continues with corporate body content.", "page_number": 2},
+      {"content": "CORPORATE INFORMATION 1", "page_number": 2},
+      {"content": "BOARD OF DIRECTORS 2", "page_number": 2},
+      {"content": "Maybank Islamic Berhad 3", "page_number": 2},
+      {"content": "No. 1, Persiaran Jalil", "page_number": 2}
+    ]},
+    {"page_number": 3, "height": 1000, "lines": [
+      {"content": "DIRECTORS' REPORT", "page_number": 3, "polygon": [{"x": 1, "y": 50}]},
+      {"content": "The directors submit their report.", "page_number": 3, "polygon": [{"x": 1, "y": 160}]}
+    ]},
+    {"page_number": 4, "height": 1000, "lines": [{"content": "Directors' report continued", "page_number": 4}]},
+    {"page_number": 5, "height": 1000, "lines": [{"content": "Directors' report continued", "page_number": 5}]},
+    {"page_number": 6, "height": 1000, "lines": [{"content": "Directors' report continued", "page_number": 6}]},
+    {"page_number": 7, "height": 1000, "lines": [
+      {"content": "STATEMENT BY DIRECTORS", "page_number": 7, "polygon": [{"x": 1, "y": 50}]},
+      {"content": "TO", "page_number": 7, "polygon": [{"x": 1, "y": 300}]}
+    ]},
+    {"page_number": 8, "height": 1000, "lines": [
+      {"content": "STATUTORY DECLARATION", "page_number": 8, "polygon": [{"x": 1, "y": 50}]},
+      {"content": "SE", "page_number": 8, "polygon": [{"x": 1, "y": 300}]}
+    ]},
+    {"page_number": 9, "height": 1000, "lines": [{"content": "INDEPENDENT AUDITORS' REPORT", "page_number": 9, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 10, "height": 1000, "lines": [{"content": "Auditors' report continued", "page_number": 10}]},
+    {"page_number": 11, "height": 1000, "lines": [{"content": "Auditors' report continued", "page_number": 11}]},
+    {"page_number": 12, "height": 1000, "lines": [{"content": "Auditors' report continued", "page_number": 12}]},
+    {"page_number": 13, "height": 1000, "lines": [
+      {"content": "STATEMENT OF FINANCIAL POSITION", "page_number": 13, "polygon": [{"x": 1, "y": 50}]},
+      {"content": "Total assets 100000", "page_number": 13, "polygon": [{"x": 1, "y": 200}]}
+    ]},
+    {"page_number": 14, "height": 1000, "lines": [{"content": "STATEMENT OF COMPREHENSIVE INCOME", "page_number": 14, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 15, "height": 1000, "lines": [{"content": "STATEMENT OF CHANGES IN EQUITY", "page_number": 15, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 16, "height": 1000, "lines": [{"content": "STATEMENT OF CASH FLOWS", "page_number": 16, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 17, "height": 1000, "lines": [
+      {"content": "NOTES TO THE FINANCIAL STATEMENTS", "page_number": 17, "polygon": [{"x": 1, "y": 50}]},
+      {"content": "1. GENERAL INFORMATION", "page_number": 17, "polygon": [{"x": 1, "y": 180}]},
+      {"content": "(e)", "page_number": 17, "polygon": [{"x": 1, "y": 360}]}
+    ]},
+    {"page_number": 18, "height": 1000, "lines": [{"content": "2. BASIS OF PREPARATION", "page_number": 18}]},
+    {"page_number": 19, "height": 1000, "lines": [{"content": "3. SIGNIFICANT ACCOUNTING POLICIES", "page_number": 19}]},
+    {"page_number": 20, "height": 1000, "lines": [{"content": "4. REVENUE", "page_number": 20}]},
+    {"page_number": 21, "height": 1000, "lines": [{"content": "5. PROPERTY, PLANT AND EQUIPMENT", "page_number": 21}]},
+    {"page_number": 22, "height": 1000, "lines": [{"content": "6. TRADE RECEIVABLES", "page_number": 22}]},
+    {"page_number": 23, "height": 1000, "lines": [{"content": "7. TRADE PAYABLES", "page_number": 23}]},
+    {"page_number": 24, "height": 1000, "lines": [{"content": "8. RELATED PARTY DISCLOSURES", "page_number": 24}]}
+  ],
+  "paragraphs": [],
+  "tables": [],
+  "table_cells": [],
+  "lines": []
+}

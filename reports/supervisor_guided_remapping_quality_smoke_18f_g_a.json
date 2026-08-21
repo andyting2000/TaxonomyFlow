@@ -1,0 +1,80 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-closeout",
+  "generated_at": "2026-07-23T17:15:35.0228288+08:00",
+  "phase": "phase_3_complete",
+  "status": "passed",
+  "summary": {
+    "completed_revisions": 5,
+    "valid_responses": 5,
+    "filings_covered": 3,
+    "statement_families_covered": 3,
+    "qnames_changed": 1,
+    "qnames_retained": 3,
+    "explicit_abstentions": 1,
+    "improved": 1,
+    "unchanged_but_better_justified": 2,
+    "still_ambiguous": 2,
+    "degraded": 0,
+    "invalid_response": 0,
+    "acceptable_quality_count": 5,
+    "unjustified_confident_incorrect_remaps": 0
+  },
+  "coverage": {
+    "filings": [
+      "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "FINE BATIK SDN. BHD.",
+      "BEZLIFE MARKETING SDN. BHD."
+    ],
+    "statement_families": [
+      "Statement of Cash Flows",
+      "Statement of Cash Flows (Direct Method)",
+      "Statement of Changes in Equity"
+    ]
+  },
+  "quality_gate": {
+    "required_acceptable": 4,
+    "actual_acceptable": 5,
+    "valid_response_requirement": "5/5",
+    "actual_valid_responses": "5/5",
+    "degraded_limit": 0,
+    "actual_degraded": 0,
+    "invalid_response_limit": 0,
+    "actual_invalid_response": 0,
+    "passed": true
+  },
+  "selection_note": "The final five persisted revisions include the originally evaluated INFO House tax and Fine Batik investing cases plus Bezlife tax, share capital, and profit-before-tax cases. The latter two differ from the earlier proposed additional-case list; no cases were fabricated or selected after the database reached five actual revisions.",
+  "persistence": {
+    "initial_suggestions_still_suggested": 5,
+    "initial_qname_matches_revision_original_qname": 5,
+    "separate_revision_records": 5,
+    "exactly_one_revision_per_parent": 5,
+    "correction_attempt_one": 5,
+    "database_refresh_retained_revisions": 5
+  },
+  "safety": {
+    "requires_human_review_true": 5,
+    "safe_for_auto_apply_false": 5,
+    "confirmed_tag_id_mutations": 0,
+    "template_field_id_mutations": 0,
+    "rows_marked_reviewed": 0,
+    "automatic_accepts": 0,
+    "automatic_rejects": 0,
+    "recursive_supervisor_mapper_loops": 0,
+    "prohibited_payload_fields_allowed": 0
+  },
+  "retry_limit": {
+    "job_id": 61,
+    "suggestion_id": "c3d67b79-9543-4018-9dd1-85e7c60d56f2",
+    "expected_error": "Supervisor-guided mapper correction retry limit reached.",
+    "provider_called": false,
+    "revision_count_before": 1,
+    "revision_count_after": 1,
+    "first_revision_unchanged": true,
+    "passed": true
+  },
+  "conclusion": {
+    "quality_smoke_passed": true,
+    "production_auto_apply_approved": false,
+    "recommended_next_feature": "18F-G-B - Integrate conditional Supervisor-guided remapping into the production orchestration design"
+  }
+}

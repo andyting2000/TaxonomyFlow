@@ -1,0 +1,210 @@
+{
+  "baseline_goal": "Establish an Arelle mode that separates generated-instance structural defects from local taxonomy formula/table artifact compatibility noise.",
+  "modes_tested": [
+    "skip_formula_table",
+    "instance_baseline"
+  ],
+  "mode_options": {
+    "skip_formula_table": [
+      "--formula",
+      "none",
+      "--calc",
+      "none",
+      "--baseTaxonomyValidation",
+      "none",
+      "--skipLoading",
+      "*formula_ssmt-fs-mpers_2022-12-31.xml|*table_ssmt-fs-mpers_2022-12-31*.xml"
+    ],
+    "instance_baseline": [
+      "--formula",
+      "none",
+      "--calc",
+      "none",
+      "--baseTaxonomyValidation",
+      "none",
+      "--skipLoading",
+      "*formula_ssmt-fs-mpers_2022-12-31.xml|*table_ssmt-fs-mpers_2022-12-31*.xml|*existence_function_2022-12-31.xml"
+    ]
+  },
+  "skipped_taxonomy_patterns": {
+    "skip_formula_table": [
+      "*formula_ssmt-fs-mpers_2022-12-31.xml",
+      "*table_ssmt-fs-mpers_2022-12-31*.xml"
+    ],
+    "instance_baseline": [
+      "*formula_ssmt-fs-mpers_2022-12-31.xml",
+      "*table_ssmt-fs-mpers_2022-12-31*.xml",
+      "*existence_function_2022-12-31.xml"
+    ]
+  },
+  "taxonomy_package_metadata": {
+    "taxonomy_root": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0",
+    "metadata_files_found": [],
+    "package_or_catalog_available": false,
+    "assessment": "No local taxonomy package/catalog metadata was found under the SSMxT_2022v1.0 tree."
+  },
+  "mode_results": {
+    "skip_formula_table": {
+      "is_valid": false,
+      "errors": [
+        "[err:XPST0003] Parse error in qnameExpression_labels error: Expected end of text, found '('  (at char 35), (line:1, col:36)"
+      ],
+      "warnings": [],
+      "raw_output": "[info] loaded in 1.52 secs at 2026-04-30T11:35:30 - C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\skip_formula_table\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl \n[] Formula xpath2 grammar initialized in 0.43 secs - \n[err:XPST0003] Parse error in qnameExpression_labels error: Expected end of text, found '('  (at char 35), (line:1, col:36) \nfor $i in $elements  return map:get(\\u274b$m,fn:namespace-uri-from-QName($i) || '}' || fn:local-name-from-QName($i))\n                                   ^ \n - ../../../taxonomy/SSMxT_2022v1.0/def/ic/cor-ca2016/dei-cor/existence_function_2022-12-31.xml 18\n[info] import in 2.02 secs at 2026-04-30T11:35:30 - C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd \n",
+      "return_code": 3,
+      "duration_ms": 2718,
+      "instance_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\skip_formula_table\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl",
+      "taxonomy_entrypoint": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd",
+      "command_used": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\arelleCmdLine.exe --file C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\skip_formula_table\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl --import C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd --validate --validationExitCode --internetConnectivity offline --formula none --calc none --baseTaxonomyValidation none --skipLoading *formula_ssmt-fs-mpers_2022-12-31.xml|*table_ssmt-fs-mpers_2022-12-31*.xml",
+      "original_instance_path": "uploads\\xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl",
+      "validation_instance_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\skip_formula_table\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl",
+      "schema_ref_remaps": [
+        {
+          "from": "https://mbrs.ssm.com.my/taxonomy/SSMxT2022v1.0/rep/ssm/ca-2016/fs/mpers/ssmt-fs-mpers_2022-12-31_entry_point.xsd",
+          "to": "../../../taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/ssmt-fs-mpers_2022-12-31_entry_point.xsd",
+          "local_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd"
+        }
+      ],
+      "validation_mode": "skip_formula_table"
+    },
+    "instance_baseline": {
+      "is_valid": true,
+      "errors": [],
+      "warnings": [],
+      "raw_output": "[info] loaded in 1.55 secs at 2026-04-30T11:35:32 - C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\instance_baseline\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl \n[] Formula xpath2 grammar initialized in 0.42 secs - \n[info] import in 2.04 secs at 2026-04-30T11:35:32 - C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd \n[info] validated in 1.02 secs - C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\instance_baseline\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl \n",
+      "return_code": 0,
+      "duration_ms": 3765,
+      "instance_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\instance_baseline\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl",
+      "taxonomy_entrypoint": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd",
+      "command_used": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\arelleCmdLine.exe --file C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\instance_baseline\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl --import C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd --validate --validationExitCode --internetConnectivity offline --formula none --calc none --baseTaxonomyValidation none --skipLoading *formula_ssmt-fs-mpers_2022-12-31.xml|*table_ssmt-fs-mpers_2022-12-31*.xml|*existence_function_2022-12-31.xml",
+      "original_instance_path": "uploads\\xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl",
+      "validation_instance_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\instance_baseline\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl",
+      "schema_ref_remaps": [
+        {
+          "from": "https://mbrs.ssm.com.my/taxonomy/SSMxT2022v1.0/rep/ssm/ca-2016/fs/mpers/ssmt-fs-mpers_2022-12-31_entry_point.xsd",
+          "to": "../../../taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/ssmt-fs-mpers_2022-12-31_entry_point.xsd",
+          "local_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd"
+        }
+      ],
+      "validation_mode": "instance_baseline"
+    }
+  },
+  "mode_summaries": {
+    "skip_formula_table": {
+      "is_valid": false,
+      "return_code": 3,
+      "command_used": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\arelleCmdLine.exe --file C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\skip_formula_table\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl --import C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd --validate --validationExitCode --internetConnectivity offline --formula none --calc none --baseTaxonomyValidation none --skipLoading *formula_ssmt-fs-mpers_2022-12-31.xml|*table_ssmt-fs-mpers_2022-12-31*.xml",
+      "taxonomy_resolution_status": "no_taxonomy_resolution_error_detected",
+      "diagnostic_counts": {
+        "taxonomy_resolution_errors": 0,
+        "schemaRef_issues": 0,
+        "missing_contexts": 0,
+        "duplicate_facts": 0,
+        "invalid_concept_names": 2,
+        "namespace_issues": 0,
+        "unit_issues": 0,
+        "calculation_issues": 0,
+        "other": 3
+      },
+      "formula_table_diagnostics_remain": true,
+      "taxonomy_artifact_noise_remains": true,
+      "generated_instance_defects_visible": false,
+      "error_families": {
+        "taxonomy_artifact_compatibility": {
+          "count": 1,
+          "examples": [
+            "[err:XPST0003] Parse error in qnameExpression_labels error: Expected end of text, found '('  (at char 35), (line:1, col:36)"
+          ]
+        },
+        "arelle_mode_or_plugin_noise": {
+          "count": 0,
+          "examples": []
+        },
+        "generated_instance_defect": {
+          "count": 0,
+          "examples": []
+        },
+        "unknown": {
+          "count": 4,
+          "examples": [
+            "[] Formula xpath2 grammar initialized in 0.43 secs -",
+            "for $i in $elements  return map:get(\\u274b$m,fn:namespace-uri-from-QName($i) || '}' || fn:local-name-from-QName($i))",
+            "^",
+            "- ../../../taxonomy/SSMxT_2022v1.0/def/ic/cor-ca2016/dei-cor/existence_function_2022-12-31.xml 18"
+          ]
+        }
+      }
+    },
+    "instance_baseline": {
+      "is_valid": true,
+      "return_code": 0,
+      "command_used": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\.venv\\Scripts\\arelleCmdLine.exe --file C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\validation_copies\\instance_baseline\\SSM_FS-MPERS_10E-TEST_20241231_local_schemaRef.xbrl --import C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\taxonomy\\SSMxT_2022v1.0\\rep\\ssm\\ca-2016\\fs\\mpers\\ssmt-fs-mpers_2022-12-31_entry_point.xsd --validate --validationExitCode --internetConnectivity offline --formula none --calc none --baseTaxonomyValidation none --skipLoading *formula_ssmt-fs-mpers_2022-12-31.xml|*table_ssmt-fs-mpers_2022-12-31*.xml|*existence_function_2022-12-31.xml",
+      "taxonomy_resolution_status": "no_taxonomy_resolution_error_detected",
+      "diagnostic_counts": {
+        "taxonomy_resolution_errors": 0,
+        "schemaRef_issues": 0,
+        "missing_contexts": 0,
+        "duplicate_facts": 0,
+        "invalid_concept_names": 0,
+        "namespace_issues": 0,
+        "unit_issues": 0,
+        "calculation_issues": 0,
+        "other": 1
+      },
+      "formula_table_diagnostics_remain": false,
+      "taxonomy_artifact_noise_remains": false,
+      "generated_instance_defects_visible": false,
+      "error_families": {
+        "taxonomy_artifact_compatibility": {
+          "count": 0,
+          "examples": []
+        },
+        "arelle_mode_or_plugin_noise": {
+          "count": 0,
+          "examples": []
+        },
+        "generated_instance_defect": {
+          "count": 0,
+          "examples": []
+        },
+        "unknown": {
+          "count": 1,
+          "examples": [
+            "[] Formula xpath2 grammar initialized in 0.42 secs -"
+          ]
+        }
+      }
+    }
+  },
+  "final_recommendation": {
+    "recommended_baseline_mode": "instance_baseline",
+    "can_proceed_to_mapping_fixes": true,
+    "reason": "Arelle validates the generated instance under a structural baseline after skipping local FS-MPERS formula/table/existence-function artifacts. This is not full MBRS validation."
+  },
+  "limitations": [
+    "The recommended baseline is instance structural validation, not full MBRS/FS-MPERS formula or table validation.",
+    "Skipped taxonomy files must be recorded with every baseline validation report.",
+    "A clean baseline result must not be described as full submission-ready validation."
+  ],
+  "success": true,
+  "job": {
+    "id": 9,
+    "company_name": "Feature 10E Verification",
+    "status": "REVIEW",
+    "extracted_rows": 87,
+    "template_field_rows": 32,
+    "reviewed_rows": 81
+  },
+  "generation": {
+    "success": true,
+    "file_path": "uploads/xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl",
+    "file_exists": true,
+    "error": null
+  },
+  "validation_copy_strategy": {
+    "enabled": true,
+    "original_xbrl_modified": false,
+    "original_instance_path": "uploads/xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl"
+  },
+  "report_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\arelle_validation_baseline_report_9.json"
+}

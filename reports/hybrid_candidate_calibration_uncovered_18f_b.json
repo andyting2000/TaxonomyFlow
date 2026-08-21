@@ -1,0 +1,4561 @@
+{
+  "run_metadata": {
+    "feature": "18F-B",
+    "generated_at": "2026-06-25T01:00:17Z",
+    "baseline_report": "reports\\hybrid_candidate_ranking_non_lexical_18e_f_a2.json",
+    "evaluation_report": "reports\\hybrid_candidate_ranking_non_lexical_evaluation_18e_f_a2.json",
+    "top_n": 5,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "profiles": {
+    "strict": {
+      "still_uncovered_labels": [
+        {
+          "normalized_label": "tax expense",
+          "count": 40
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 19
+        },
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 13
+        },
+        {
+          "normalized_label": "expenses not deductible for tax purposes",
+          "count": 10
+        },
+        {
+          "normalized_label": "commissioner for oaths",
+          "count": 8
+        },
+        {
+          "normalized_label": "ooi boon beng",
+          "count": 8
+        },
+        {
+          "normalized_label": "addition",
+          "count": 8
+        },
+        {
+          "normalized_label": "disposal",
+          "count": 6
+        },
+        {
+          "normalized_label": "at beginning and end of the year",
+          "count": 6
+        },
+        {
+          "normalized_label": "increase in amount due to director",
+          "count": 5
+        },
+        {
+          "normalized_label": "1 1",
+          "count": 5
+        },
+        {
+          "normalized_label": "operating profit loss before working capital changes",
+          "count": 4
+        },
+        {
+          "normalized_label": "accruals",
+          "count": 4
+        },
+        {
+          "normalized_label": "audit fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "payroll fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses carried forward",
+          "count": 4
+        },
+        {
+          "normalized_label": "directors remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "term loan interests",
+          "count": 4
+        },
+        {
+          "normalized_label": "quit rent and assessment",
+          "count": 4
+        },
+        {
+          "normalized_label": "effect of unabsorbed losses",
+          "count": 4
+        },
+        {
+          "normalized_label": "ung ming xian f",
+          "count": 4
+        },
+        {
+          "normalized_label": "auditor s remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "research and development expenditure written off",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses brought forward",
+          "count": 3
+        },
+        {
+          "normalized_label": "deposits",
+          "count": 3
+        },
+        {
+          "normalized_label": "prior year",
+          "count": 3
+        },
+        {
+          "normalized_label": "retained profits carried forward",
+          "count": 2
+        },
+        {
+          "normalized_label": "dr ooi boon beng",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian",
+          "count": 2
+        },
+        {
+          "normalized_label": "cash at bank",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 2
+        },
+        {
+          "normalized_label": "total assets discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "share capital",
+          "count": 2
+        },
+        {
+          "normalized_label": "retained profits accumulated losses",
+          "count": 2
+        },
+        {
+          "normalized_label": "total shareholders equity",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount due to director",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 2
+        },
+        {
+          "normalized_label": "total equity and liabilities draft wie",
+          "count": 2
+        },
+        {
+          "normalized_label": "at beginning and end of the financial year period",
+          "count": 2
+        },
+        {
+          "normalized_label": "epf contribution",
+          "count": 2
+        },
+        {
+          "normalized_label": "director s fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "rental of office",
+          "count": 2
+        },
+        {
+          "normalized_label": "computer rental fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "printing and stationeries for discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "upkeep of office equipment",
+          "count": 2
+        },
+        {
+          "normalized_label": "web building fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian f man kan 5 000 de the",
+          "count": 2
+        },
+        {
+          "normalized_label": "term loan r discussione",
+          "count": 2
+        },
+        {
+          "normalized_label": "repayment of term loan",
+          "count": 2
+        },
+        {
+          "normalized_label": "charges",
+          "count": 2
+        },
+        {
+          "normalized_label": "other deposits",
+          "count": 2
+        },
+        {
+          "normalized_label": "tax refundable",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount payable",
+          "count": 2
+        },
+        {
+          "normalized_label": "less interests in suspense str",
+          "count": 2
+        },
+        {
+          "normalized_label": "to less due more than twelve months",
+          "count": 2
+        },
+        {
+          "normalized_label": "dratet due",
+          "count": 2
+        },
+        {
+          "normalized_label": "accuals",
+          "count": 2
+        },
+        {
+          "normalized_label": "depreciation of property plant equipment",
+          "count": 2
+        },
+        {
+          "normalized_label": "non taxable income",
+          "count": 2
+        },
+        {
+          "normalized_label": "purchases",
+          "count": 2
+        }
+      ],
+      "rows_losing_all_candidates": [
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:40:40:current",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:40:40:prior",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:41:41:current",
+          "normalized_label": "increase in amount due to director",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:41:41:prior",
+          "normalized_label": "increase in amount due to director",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:42:42:current",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:42:42:prior",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:69:69:current",
+          "normalized_label": "computer rental fee",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherRentalIncome",
+              "concept_label": "Other rental income",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4641,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:69:69:prior",
+          "normalized_label": "computer rental fee",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherRentalIncome",
+              "concept_label": "Other rental income",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4641,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:70:70:current",
+          "normalized_label": "commissioner for oaths",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:70:70:prior",
+          "normalized_label": "commissioner for oaths",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:74:74:current",
+          "normalized_label": "payroll fee",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:74:74:prior",
+          "normalized_label": "payroll fee",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:82:82:current",
+          "normalized_label": "upkeep of office equipment",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:82:82:prior",
+          "normalized_label": "upkeep of office equipment",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_001",
+          "row_id": "case_001:candidate:83:83:current",
+          "normalized_label": "website maintenance fee",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:24:24:current",
+          "normalized_label": "term loan r discussione",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:Borrowings",
+              "concept_label": "Borrowings",
+              "candidate_sources_combined": [
+                "statement_dictionary",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6329,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:24:24:prior",
+          "normalized_label": "term loan r discussione",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:Borrowings",
+              "concept_label": "Borrowings",
+              "candidate_sources_combined": [
+                "statement_dictionary",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6329,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:49:49:current",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:49:49:prior",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:50:50:current",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:50:50:prior",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:51:51:current",
+          "normalized_label": "increase in amount due to director",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:53:53:current",
+          "normalized_label": "tax expense",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5192,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+              "concept_label": "Net cash flows from (used in) operating activities",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5192,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:ProfitLossBeforeTax",
+              "concept_label": "Profit (loss) before tax, from continuing operations",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4377,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+              "concept_label": "Income taxes refund (paid)",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:53:53:prior",
+          "normalized_label": "tax expense",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5192,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+              "concept_label": "Net cash flows from (used in) operating activities",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5192,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:ProfitLossBeforeTax",
+              "concept_label": "Profit (loss) before tax, from continuing operations",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4377,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+              "concept_label": "Income taxes refund (paid)",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:56:56:current",
+          "normalized_label": "repayment of term loan",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:56:56:prior",
+          "normalized_label": "repayment of term loan",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:102:102:current",
+          "normalized_label": "commissioner for oaths unselected",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5056,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:102:102:prior",
+          "normalized_label": "commissioner for oaths unselected",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5056,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:107:107:current",
+          "normalized_label": "maintenance fees building",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:DirectorsFees",
+              "concept_label": "Fees",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:107:107:prior",
+          "normalized_label": "maintenance fees building",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:DirectorsFees",
+              "concept_label": "Fees",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:111:111:current",
+          "normalized_label": "quit rent and assessment",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:111:111:prior",
+          "normalized_label": "quit rent and assessment",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:15:15:current",
+          "normalized_label": "investments",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:InvestmentsInAssociates",
+              "concept_label": "Total investments in associates",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:InvestmentsInJointVentures",
+              "concept_label": "Total of investments in joint ventures",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:15:15:prior",
+          "normalized_label": "investments",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:InvestmentsInAssociates",
+              "concept_label": "Total investments in associates",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:InvestmentsInJointVentures",
+              "concept_label": "Total of investments in joint ventures",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:19:19:current",
+          "normalized_label": "amount due from directors",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ssmt-mpers:CurrentNontradePayables",
+              "concept_label": "Total current non-trade payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5532,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherCurrentReceivablesDueFromRelatedParties",
+              "concept_label": "Other Current Receivables Due From Related Parties",
+              "candidate_sources_combined": [
+                "section_concept_pack"
+              ],
+              "score": 0.5923,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+              "concept_label": "Other non-current liabilities",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5454,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:19:19:prior",
+          "normalized_label": "amount due from directors",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ssmt-mpers:CurrentNontradePayables",
+              "concept_label": "Total current non-trade payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5532,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherCurrentReceivablesDueFromRelatedParties",
+              "concept_label": "Other Current Receivables Due From Related Parties",
+              "candidate_sources_combined": [
+                "section_concept_pack"
+              ],
+              "score": 0.5923,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+              "concept_label": "Other non-current liabilities",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5454,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:42:42:current",
+          "normalized_label": "tax expense",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5192,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+              "concept_label": "Net cash flows from (used in) operating activities",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5192,
+              "risk_level": "high",
+              "filter_reasons": [
+                "high_risk_label_family_requires_corrob_or_exact_strong_context"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:ProfitLossBeforeTax",
+              "concept_label": "Profit (loss) before tax, from continuing operations",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4377,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+              "concept_label": "Income taxes refund (paid)",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:44:44:current",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:45:45:current",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:46:46:current",
+          "normalized_label": "decrease in amount due from directors",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.587,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:46:46:prior",
+          "normalized_label": "decrease in amount due from directors",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.587,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:84:84:current",
+          "normalized_label": "commissioner for oaths",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:84:84:prior",
+          "normalized_label": "commissioner for oaths",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:89:89:current",
+          "normalized_label": "totalt telephone fax and postage",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_003",
+          "row_id": "case_003:candidate:89:89:prior",
+          "normalized_label": "totalt telephone fax and postage",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_004",
+          "row_id": "case_004:candidate:24:24:current",
+          "normalized_label": "total deferred liabilities",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:NoncurrentLiabilities",
+              "concept_label": "Noncurrent Liabilities",
+              "candidate_sources_combined": [
+                "deterministic_current_mapper"
+              ],
+              "score": 0.66,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_high_risk_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_004",
+          "row_id": "case_004:candidate:24:24:prior",
+          "normalized_label": "total deferred liabilities",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:NoncurrentLiabilities",
+              "concept_label": "Noncurrent Liabilities",
+              "candidate_sources_combined": [
+                "deterministic_current_mapper"
+              ],
+              "score": 0.66,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_high_risk_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_004",
+          "row_id": "case_004:candidate:40:40:current",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_004",
+          "row_id": "case_004:candidate:40:40:prior",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_004",
+          "row_id": "case_004:candidate:41:41:current",
+          "normalized_label": "increase in amount due to director",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_004",
+          "row_id": "case_004:candidate:41:41:prior",
+          "normalized_label": "increase in amount due to director",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:48:48:current",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:48:48:prior",
+          "normalized_label": "trade and other receivables",
+          "baseline_candidate_count": 4,
+          "profile_filtered_candidate_count": 4,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+              "concept_label": "Adjustments for decrease (increase) in other operating receivables",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:49:49:current",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:49:49:prior",
+          "normalized_label": "trade and other payables",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6337,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5974,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:50:50:current",
+          "normalized_label": "increase in amount due to directors",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6232,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:50:50:prior",
+          "normalized_label": "increase in amount due to directors",
+          "baseline_candidate_count": 3,
+          "profile_filtered_candidate_count": 3,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+              "concept_label": "Adjustments for increase (decrease) in trade accounts payable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup",
+                "taxonomy_lexical"
+              ],
+              "score": 0.6232,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+              "concept_label": "Adjustments for decrease (increase) in trade accounts receivable",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            },
+            {
+              "qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+              "concept_label": "Adjustments for increase (decrease) in other operating payables",
+              "candidate_sources_combined": [
+                "concept_playbook_lookup"
+              ],
+              "score": 0.5319,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_non_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:54:54:current",
+          "normalized_label": "term loans repayments",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:54:54:prior",
+          "normalized_label": "term loans repayments",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4107,
+              "risk_level": "high",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum",
+                "strict_profile_high_risk_requires_validated_sources"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:87:87:current",
+          "normalized_label": "commission",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:FeeAndCommissionIncome",
+              "concept_label": "Total other fee and commission income",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:87:87:prior",
+          "normalized_label": "commission",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:FeeAndCommissionIncome",
+              "concept_label": "Total other fee and commission income",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4906,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:88:88:current",
+          "normalized_label": "payroll fee",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:88:88:prior",
+          "normalized_label": "payroll fee",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:93:93:current",
+          "normalized_label": "commissioner for oaths",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:93:93:prior",
+          "normalized_label": "commissioner for oaths",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:95:95:current",
+          "normalized_label": "directors pcb",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ssmt-mpers:DirectorsFees",
+              "concept_label": "Fees",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4751,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherDirectorsRemuneration",
+              "concept_label": "Other emoluments",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4751,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:95:95:prior",
+          "normalized_label": "directors pcb",
+          "baseline_candidate_count": 2,
+          "profile_filtered_candidate_count": 2,
+          "filtered_candidates": [
+            {
+              "qname": "ssmt-mpers:DirectorsFees",
+              "concept_label": "Fees",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4751,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            },
+            {
+              "qname": "ssmt-mpers:OtherDirectorsRemuneration",
+              "concept_label": "Other emoluments",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4751,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:96:96:current",
+          "normalized_label": "electricity and water",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:96:96:prior",
+          "normalized_label": "electricity and water",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:100:100:current",
+          "normalized_label": "printing and stationeries 1 242 and mur",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:101:101:current",
+          "normalized_label": "quit rent and assessment",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:101:101:prior",
+          "normalized_label": "quit rent and assessment",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Total other expenses",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.5607,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:102:102:current",
+          "normalized_label": "rental of photostat machine",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:102:102:prior",
+          "normalized_label": "rental of photostat machine",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:111:111:current",
+          "normalized_label": "prior year",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:ProfitLoss",
+              "concept_label": "Total Profit (Loss)",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4658,
+              "risk_level": "low",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum",
+                "profile_taxonomy_lexical_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:113:113:current",
+          "normalized_label": "computer and software ba",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:113:113:prior",
+          "normalized_label": "computer and software ba",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:OtherExpenseByFunction",
+              "concept_label": "Other Expense By Function",
+              "candidate_sources_combined": [
+                "local_concept_family_pack"
+              ],
+              "score": 0.6087,
+              "risk_level": "medium",
+              "profile": "strict",
+              "filter_reasons": [
+                "profile_candidate_score_below_minimum"
+              ]
+            }
+          ]
+        }
+      ],
+      "labels_most_affected": [
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 18,
+          "candidate_delta": -61
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 17,
+          "candidate_delta": -59
+        },
+        {
+          "normalized_label": "tax expense",
+          "count": 31,
+          "candidate_delta": -38
+        },
+        {
+          "normalized_label": "property plant and equipment",
+          "count": 14,
+          "candidate_delta": -28
+        },
+        {
+          "normalized_label": "bank balances",
+          "count": 8,
+          "candidate_delta": -16
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 8,
+          "candidate_delta": -16
+        },
+        {
+          "normalized_label": "total equity",
+          "count": 8,
+          "candidate_delta": -16
+        },
+        {
+          "normalized_label": "increase in amount due to director",
+          "count": 5,
+          "candidate_delta": -15
+        },
+        {
+          "normalized_label": "other operating expenses",
+          "count": 6,
+          "candidate_delta": -12
+        },
+        {
+          "normalized_label": "cash flows from investing activities",
+          "count": 10,
+          "candidate_delta": -10
+        },
+        {
+          "normalized_label": "revenue",
+          "count": 9,
+          "candidate_delta": -10
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of year",
+          "count": 4,
+          "candidate_delta": -8
+        },
+        {
+          "normalized_label": "cash and cash equivalents at end of period",
+          "count": 4,
+          "candidate_delta": -8
+        },
+        {
+          "normalized_label": "cash and cash equivalents at the end of year",
+          "count": 4,
+          "candidate_delta": -8
+        },
+        {
+          "normalized_label": "net decrease increase in cash and cash equivalents",
+          "count": 4,
+          "candidate_delta": -8
+        },
+        {
+          "normalized_label": "share capital",
+          "count": 4,
+          "candidate_delta": -8
+        },
+        {
+          "normalized_label": "add other income",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "amount due to directors",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "commissioner for oaths",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "decrease in amount due from directors",
+          "count": 2,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "increase in amount due to directors",
+          "count": 2,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "net cash from operating activities",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "total operating expenses",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "amount due from directors",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "audit fee",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "audit fees",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "auditors remuneration",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash and cash equivalent at beginning of the year",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash and cash equivalent at the end of the year",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of the year",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of year period",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash flows from financing activities",
+          "count": 4,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash from operating activities",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "commission",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "computer rental fee",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "director s salaries",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "directors pcb",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "directors salary",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "eis contribution",
+          "count": 2,
+          "candidate_delta": -4
+        }
+      ]
+    },
+    "balanced": {
+      "still_uncovered_labels": [
+        {
+          "normalized_label": "tax expense",
+          "count": 37
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 10
+        },
+        {
+          "normalized_label": "expenses not deductible for tax purposes",
+          "count": 10
+        },
+        {
+          "normalized_label": "ooi boon beng",
+          "count": 8
+        },
+        {
+          "normalized_label": "addition",
+          "count": 8
+        },
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 6
+        },
+        {
+          "normalized_label": "disposal",
+          "count": 6
+        },
+        {
+          "normalized_label": "at beginning and end of the year",
+          "count": 6
+        },
+        {
+          "normalized_label": "1 1",
+          "count": 5
+        },
+        {
+          "normalized_label": "operating profit loss before working capital changes",
+          "count": 4
+        },
+        {
+          "normalized_label": "accruals",
+          "count": 4
+        },
+        {
+          "normalized_label": "audit fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses carried forward",
+          "count": 4
+        },
+        {
+          "normalized_label": "directors remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "term loan interests",
+          "count": 4
+        },
+        {
+          "normalized_label": "effect of unabsorbed losses",
+          "count": 4
+        },
+        {
+          "normalized_label": "ung ming xian f",
+          "count": 4
+        },
+        {
+          "normalized_label": "auditor s remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "research and development expenditure written off",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses brought forward",
+          "count": 3
+        },
+        {
+          "normalized_label": "deposits",
+          "count": 3
+        },
+        {
+          "normalized_label": "retained profits carried forward",
+          "count": 2
+        },
+        {
+          "normalized_label": "dr ooi boon beng",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian",
+          "count": 2
+        },
+        {
+          "normalized_label": "cash at bank",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 2
+        },
+        {
+          "normalized_label": "total assets discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "share capital",
+          "count": 2
+        },
+        {
+          "normalized_label": "retained profits accumulated losses",
+          "count": 2
+        },
+        {
+          "normalized_label": "total shareholders equity",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount due to director",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 2
+        },
+        {
+          "normalized_label": "total equity and liabilities draft wie",
+          "count": 2
+        },
+        {
+          "normalized_label": "at beginning and end of the financial year period",
+          "count": 2
+        },
+        {
+          "normalized_label": "epf contribution",
+          "count": 2
+        },
+        {
+          "normalized_label": "director s fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "rental of office",
+          "count": 2
+        },
+        {
+          "normalized_label": "printing and stationeries for discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "web building fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian f man kan 5 000 de the",
+          "count": 2
+        },
+        {
+          "normalized_label": "repayment of term loan",
+          "count": 2
+        },
+        {
+          "normalized_label": "charges",
+          "count": 2
+        },
+        {
+          "normalized_label": "other deposits",
+          "count": 2
+        },
+        {
+          "normalized_label": "tax refundable",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount payable",
+          "count": 2
+        },
+        {
+          "normalized_label": "less interests in suspense str",
+          "count": 2
+        },
+        {
+          "normalized_label": "to less due more than twelve months",
+          "count": 2
+        },
+        {
+          "normalized_label": "dratet due",
+          "count": 2
+        },
+        {
+          "normalized_label": "accuals",
+          "count": 2
+        },
+        {
+          "normalized_label": "depreciation of property plant equipment",
+          "count": 2
+        },
+        {
+          "normalized_label": "non taxable income",
+          "count": 2
+        },
+        {
+          "normalized_label": "purchases",
+          "count": 2
+        },
+        {
+          "normalized_label": "penalties r discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "printing and stationeries akescheda",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xin f",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 23",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 24",
+          "count": 2
+        },
+        {
+          "normalized_label": "current charges",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 23 1 1",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 24 1 1 purpose",
+          "count": 2
+        }
+      ],
+      "rows_losing_all_candidates": [
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:56:56:current",
+          "normalized_label": "repayment of term loan",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4678,
+              "risk_level": "high",
+              "profile": "balanced",
+              "filter_reasons": [
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_002",
+          "row_id": "case_002:candidate:56:56:prior",
+          "normalized_label": "repayment of term loan",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4678,
+              "risk_level": "high",
+              "profile": "balanced",
+              "filter_reasons": [
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:54:54:current",
+          "normalized_label": "term loans repayments",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4678,
+              "risk_level": "high",
+              "profile": "balanced",
+              "filter_reasons": [
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": "case_005",
+          "row_id": "case_005:candidate:54:54:prior",
+          "normalized_label": "term loans repayments",
+          "baseline_candidate_count": 1,
+          "profile_filtered_candidate_count": 1,
+          "filtered_candidates": [
+            {
+              "qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+              "concept_label": "Repayments of borrowings",
+              "candidate_sources_combined": [
+                "taxonomy_lexical"
+              ],
+              "score": 0.4678,
+              "risk_level": "high",
+              "profile": "balanced",
+              "filter_reasons": [
+                "profile_high_risk_requires_corroboration",
+                "profile_high_risk_score_below_minimum"
+              ]
+            }
+          ]
+        }
+      ],
+      "labels_most_affected": [
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 18,
+          "candidate_delta": -29
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 8,
+          "candidate_delta": -16
+        },
+        {
+          "normalized_label": "total equity",
+          "count": 8,
+          "candidate_delta": -16
+        },
+        {
+          "normalized_label": "increase in amount due to director",
+          "count": 5,
+          "candidate_delta": -10
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 8,
+          "candidate_delta": -8
+        },
+        {
+          "normalized_label": "tax expense",
+          "count": 7,
+          "candidate_delta": -7
+        },
+        {
+          "normalized_label": "amount due to directors",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "total operating expenses",
+          "count": 6,
+          "candidate_delta": -6
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of year",
+          "count": 4,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash and cash equivalents at end of period",
+          "count": 4,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "cash and cash equivalents at the end of year",
+          "count": 4,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "decrease in amount due from directors",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "increase in amount due to directors",
+          "count": 2,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "net decrease increase in cash and cash equivalents",
+          "count": 4,
+          "candidate_delta": -4
+        },
+        {
+          "normalized_label": "amount due from directors",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "cash and cash equivalent at beginning of the year",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "cash and cash equivalent at the end of the year",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of the year",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "cash and cash equivalents at beginning of year period",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "eis contribution",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "epf contribution",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "net increase decrease in cash and cash equivalents",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "net increase in cash and cash equivalent",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "net increase in cash and cash equivalents",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "repayment of term loan",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "socso contribution",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "term loans repayments",
+          "count": 2,
+          "candidate_delta": -2
+        },
+        {
+          "normalized_label": "total operating expenses folaviceral",
+          "count": 2,
+          "candidate_delta": -2
+        }
+      ]
+    },
+    "recall": {
+      "still_uncovered_labels": [
+        {
+          "normalized_label": "tax expense",
+          "count": 37
+        },
+        {
+          "normalized_label": "trade and other payables",
+          "count": 10
+        },
+        {
+          "normalized_label": "expenses not deductible for tax purposes",
+          "count": 10
+        },
+        {
+          "normalized_label": "ooi boon beng",
+          "count": 8
+        },
+        {
+          "normalized_label": "addition",
+          "count": 8
+        },
+        {
+          "normalized_label": "trade and other receivables",
+          "count": 6
+        },
+        {
+          "normalized_label": "disposal",
+          "count": 6
+        },
+        {
+          "normalized_label": "at beginning and end of the year",
+          "count": 6
+        },
+        {
+          "normalized_label": "1 1",
+          "count": 5
+        },
+        {
+          "normalized_label": "operating profit loss before working capital changes",
+          "count": 4
+        },
+        {
+          "normalized_label": "accruals",
+          "count": 4
+        },
+        {
+          "normalized_label": "audit fee",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses carried forward",
+          "count": 4
+        },
+        {
+          "normalized_label": "directors remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "term loan interests",
+          "count": 4
+        },
+        {
+          "normalized_label": "effect of unabsorbed losses",
+          "count": 4
+        },
+        {
+          "normalized_label": "ung ming xian f",
+          "count": 4
+        },
+        {
+          "normalized_label": "auditor s remuneration",
+          "count": 4
+        },
+        {
+          "normalized_label": "research and development expenditure written off",
+          "count": 4
+        },
+        {
+          "normalized_label": "accumulated losses brought forward",
+          "count": 3
+        },
+        {
+          "normalized_label": "deposits",
+          "count": 3
+        },
+        {
+          "normalized_label": "retained profits carried forward",
+          "count": 2
+        },
+        {
+          "normalized_label": "dr ooi boon beng",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian",
+          "count": 2
+        },
+        {
+          "normalized_label": "cash at bank",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current assets",
+          "count": 2
+        },
+        {
+          "normalized_label": "total assets discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "share capital",
+          "count": 2
+        },
+        {
+          "normalized_label": "retained profits accumulated losses",
+          "count": 2
+        },
+        {
+          "normalized_label": "total shareholders equity",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount due to director",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 2
+        },
+        {
+          "normalized_label": "total equity and liabilities draft wie",
+          "count": 2
+        },
+        {
+          "normalized_label": "at beginning and end of the financial year period",
+          "count": 2
+        },
+        {
+          "normalized_label": "epf contribution",
+          "count": 2
+        },
+        {
+          "normalized_label": "director s fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "rental of office",
+          "count": 2
+        },
+        {
+          "normalized_label": "printing and stationeries for discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "web building fee",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xian f man kan 5 000 de the",
+          "count": 2
+        },
+        {
+          "normalized_label": "charges",
+          "count": 2
+        },
+        {
+          "normalized_label": "other deposits",
+          "count": 2
+        },
+        {
+          "normalized_label": "tax refundable",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount payable",
+          "count": 2
+        },
+        {
+          "normalized_label": "less interests in suspense str",
+          "count": 2
+        },
+        {
+          "normalized_label": "to less due more than twelve months",
+          "count": 2
+        },
+        {
+          "normalized_label": "dratet due",
+          "count": 2
+        },
+        {
+          "normalized_label": "accuals",
+          "count": 2
+        },
+        {
+          "normalized_label": "depreciation of property plant equipment",
+          "count": 2
+        },
+        {
+          "normalized_label": "non taxable income",
+          "count": 2
+        },
+        {
+          "normalized_label": "purchases",
+          "count": 2
+        },
+        {
+          "normalized_label": "penalties r discussion",
+          "count": 2
+        },
+        {
+          "normalized_label": "printing and stationeries akescheda",
+          "count": 2
+        },
+        {
+          "normalized_label": "ung ming xin f",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 23",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 24",
+          "count": 2
+        },
+        {
+          "normalized_label": "current charges",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 23 1 1",
+          "count": 2
+        },
+        {
+          "normalized_label": "as at 31 12 24 1 1 purpose",
+          "count": 2
+        },
+        {
+          "normalized_label": "unquoted shares at cost",
+          "count": 2
+        }
+      ],
+      "rows_losing_all_candidates": [],
+      "labels_most_affected": []
+    }
+  },
+  "recommended_profile": "balanced",
+  "recommended_uncovered_labels": [
+    {
+      "normalized_label": "tax expense",
+      "count": 37
+    },
+    {
+      "normalized_label": "trade and other payables",
+      "count": 10
+    },
+    {
+      "normalized_label": "expenses not deductible for tax purposes",
+      "count": 10
+    },
+    {
+      "normalized_label": "ooi boon beng",
+      "count": 8
+    },
+    {
+      "normalized_label": "addition",
+      "count": 8
+    },
+    {
+      "normalized_label": "trade and other receivables",
+      "count": 6
+    },
+    {
+      "normalized_label": "disposal",
+      "count": 6
+    },
+    {
+      "normalized_label": "at beginning and end of the year",
+      "count": 6
+    },
+    {
+      "normalized_label": "1 1",
+      "count": 5
+    },
+    {
+      "normalized_label": "operating profit loss before working capital changes",
+      "count": 4
+    },
+    {
+      "normalized_label": "accruals",
+      "count": 4
+    },
+    {
+      "normalized_label": "audit fee",
+      "count": 4
+    },
+    {
+      "normalized_label": "accumulated losses carried forward",
+      "count": 4
+    },
+    {
+      "normalized_label": "directors remuneration",
+      "count": 4
+    },
+    {
+      "normalized_label": "term loan interests",
+      "count": 4
+    },
+    {
+      "normalized_label": "effect of unabsorbed losses",
+      "count": 4
+    },
+    {
+      "normalized_label": "ung ming xian f",
+      "count": 4
+    },
+    {
+      "normalized_label": "auditor s remuneration",
+      "count": 4
+    },
+    {
+      "normalized_label": "research and development expenditure written off",
+      "count": 4
+    },
+    {
+      "normalized_label": "accumulated losses brought forward",
+      "count": 3
+    },
+    {
+      "normalized_label": "deposits",
+      "count": 3
+    },
+    {
+      "normalized_label": "retained profits carried forward",
+      "count": 2
+    },
+    {
+      "normalized_label": "dr ooi boon beng",
+      "count": 2
+    },
+    {
+      "normalized_label": "ung ming xian",
+      "count": 2
+    },
+    {
+      "normalized_label": "cash at bank",
+      "count": 2
+    },
+    {
+      "normalized_label": "total current assets",
+      "count": 2
+    },
+    {
+      "normalized_label": "total assets discussion",
+      "count": 2
+    },
+    {
+      "normalized_label": "share capital",
+      "count": 2
+    },
+    {
+      "normalized_label": "retained profits accumulated losses",
+      "count": 2
+    },
+    {
+      "normalized_label": "total shareholders equity",
+      "count": 2
+    },
+    {
+      "normalized_label": "amount due to director",
+      "count": 2
+    },
+    {
+      "normalized_label": "total current liabilities",
+      "count": 2
+    },
+    {
+      "normalized_label": "total equity and liabilities draft wie",
+      "count": 2
+    },
+    {
+      "normalized_label": "at beginning and end of the financial year period",
+      "count": 2
+    },
+    {
+      "normalized_label": "epf contribution",
+      "count": 2
+    },
+    {
+      "normalized_label": "director s fee",
+      "count": 2
+    },
+    {
+      "normalized_label": "rental of office",
+      "count": 2
+    },
+    {
+      "normalized_label": "printing and stationeries for discussion",
+      "count": 2
+    },
+    {
+      "normalized_label": "web building fee",
+      "count": 2
+    },
+    {
+      "normalized_label": "ung ming xian f man kan 5 000 de the",
+      "count": 2
+    },
+    {
+      "normalized_label": "repayment of term loan",
+      "count": 2
+    },
+    {
+      "normalized_label": "charges",
+      "count": 2
+    },
+    {
+      "normalized_label": "other deposits",
+      "count": 2
+    },
+    {
+      "normalized_label": "tax refundable",
+      "count": 2
+    },
+    {
+      "normalized_label": "amount payable",
+      "count": 2
+    },
+    {
+      "normalized_label": "less interests in suspense str",
+      "count": 2
+    },
+    {
+      "normalized_label": "to less due more than twelve months",
+      "count": 2
+    },
+    {
+      "normalized_label": "dratet due",
+      "count": 2
+    },
+    {
+      "normalized_label": "accuals",
+      "count": 2
+    },
+    {
+      "normalized_label": "depreciation of property plant equipment",
+      "count": 2
+    },
+    {
+      "normalized_label": "non taxable income",
+      "count": 2
+    },
+    {
+      "normalized_label": "purchases",
+      "count": 2
+    },
+    {
+      "normalized_label": "penalties r discussion",
+      "count": 2
+    },
+    {
+      "normalized_label": "printing and stationeries akescheda",
+      "count": 2
+    },
+    {
+      "normalized_label": "ung ming xin f",
+      "count": 2
+    },
+    {
+      "normalized_label": "as at 31 12 23",
+      "count": 2
+    },
+    {
+      "normalized_label": "as at 31 12 24",
+      "count": 2
+    },
+    {
+      "normalized_label": "current charges",
+      "count": 2
+    },
+    {
+      "normalized_label": "as at 31 12 23 1 1",
+      "count": 2
+    },
+    {
+      "normalized_label": "as at 31 12 24 1 1 purpose",
+      "count": 2
+    }
+  ],
+  "safety": {
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  }
+}

@@ -1,0 +1,1044 @@
+{
+  "audit_scope": {
+    "baseline_context": "Feature #11G uses instance_baseline only for structural context; this audit does not claim full MBRS validation.",
+    "database_modified": false,
+    "generated_xbrl_modified": false,
+    "read_only": true
+  },
+  "classifications": [
+    {
+      "classification": "likely_mapping_defect",
+      "evidence": "14 concept/context/unit duplicate groups exist.",
+      "severity": "medium"
+    },
+    {
+      "classification": "likely_extraction_duplicate",
+      "evidence": "1 duplicate extracted-row fact keys would produce identical XBRL facts.",
+      "severity": "medium"
+    },
+    {
+      "classification": "needs_manual_review",
+      "evidence": "21 suspicious signed extracted values are represented in generated facts.",
+      "severity": "medium"
+    },
+    {
+      "classification": "not_detectable_by_instance_baseline",
+      "evidence": "instance_baseline proves structural loadability only; it does not validate full MBRS/FS-MPERS formula/table rules or semantic mapping correctness.",
+      "severity": "info"
+    }
+  ],
+  "context_unit_summary": {
+    "contexts": {
+      "count": 7,
+      "details": {
+        "asof_20231231": {
+          "dimension_count": 0,
+          "dimensions": [],
+          "period": {
+            "instant": "2023-12-31"
+          },
+          "period_type": "instant"
+        },
+        "asof_20231231_SeparateMember": {
+          "dimension_count": 1,
+          "dimensions": [
+            {
+              "dimension": "ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis",
+              "member": "ifrs-smes:SeparateMember"
+            }
+          ],
+          "period": {
+            "instant": "2023-12-31"
+          },
+          "period_type": "instant"
+        },
+        "asof_20241231": {
+          "dimension_count": 0,
+          "dimensions": [],
+          "period": {
+            "instant": "2024-12-31"
+          },
+          "period_type": "instant"
+        },
+        "asof_20241231_SeparateMember": {
+          "dimension_count": 1,
+          "dimensions": [
+            {
+              "dimension": "ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis",
+              "member": "ifrs-smes:SeparateMember"
+            }
+          ],
+          "period": {
+            "instant": "2024-12-31"
+          },
+          "period_type": "instant"
+        },
+        "fromto_20230101_20231231": {
+          "dimension_count": 0,
+          "dimensions": [],
+          "period": {
+            "endDate": "2023-12-31",
+            "startDate": "2023-01-01"
+          },
+          "period_type": "duration"
+        },
+        "fromto_20240101_20241231": {
+          "dimension_count": 0,
+          "dimensions": [],
+          "period": {
+            "endDate": "2024-12-31",
+            "startDate": "2024-01-01"
+          },
+          "period_type": "duration"
+        },
+        "fromto_20240101_20241231_SeparateMember": {
+          "dimension_count": 1,
+          "dimensions": [
+            {
+              "dimension": "ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis",
+              "member": "ifrs-smes:SeparateMember"
+            }
+          ],
+          "period": {
+            "endDate": "2024-12-31",
+            "startDate": "2024-01-01"
+          },
+          "period_type": "duration"
+        }
+      },
+      "ids": [
+        "asof_20231231",
+        "asof_20231231_SeparateMember",
+        "asof_20241231",
+        "asof_20241231_SeparateMember",
+        "fromto_20230101_20231231",
+        "fromto_20240101_20241231",
+        "fromto_20240101_20241231_SeparateMember"
+      ],
+      "missing_context_refs": [],
+      "period_type_counts": {
+        "duration": 3,
+        "instant": 4
+      },
+      "unused_contexts": [
+        "asof_20231231",
+        "asof_20231231_SeparateMember",
+        "fromto_20230101_20231231",
+        "fromto_20240101_20241231_SeparateMember"
+      ],
+      "used_by_facts": {
+        "asof_20241231": 1,
+        "asof_20241231_SeparateMember": 81,
+        "fromto_20240101_20241231": 6
+      }
+    },
+    "units": {
+      "count": 1,
+      "details": {
+        "MYR": {
+          "measures": [
+            "iso4217:MYR"
+          ]
+        }
+      },
+      "ids": [
+        "MYR"
+      ],
+      "missing_unit_refs": [],
+      "unused_units": [],
+      "used_by_facts": {
+        "MYR": 81
+      }
+    }
+  },
+  "coverage": {
+    "expected_generated_fact_count": 81,
+    "extracted_rows_not_represented_in_xbrl": {
+      "count": 0,
+      "samples": []
+    },
+    "not_represented_expected_fact_count": 0,
+    "representation_rate": 1.0,
+    "represented_expected_fact_count": 81,
+    "xbrl_facts_not_traceable_to_extracted_rows": {
+      "count": 7,
+      "groups": [
+        {
+          "concept": "ssmt-dei:DescriptionOfPresentationCurrency",
+          "contextRef": "fromto_20240101_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "Malaysian Ringgit (MYR)"
+        },
+        {
+          "concept": "ssmt-dei:LevelOfRoundingUsedInFinancialStatements",
+          "contextRef": "fromto_20240101_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "Actuals"
+        },
+        {
+          "concept": "ssmt-dei:NameAndVersionOfSoftwareUsedToGenerateXBRLFile",
+          "contextRef": "fromto_20240101_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "MBRS_Preparation_Tool v2.2"
+        },
+        {
+          "concept": "ssmt-dei:TaxonomyVersion",
+          "contextRef": "fromto_20240101_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "SSMxT_2022v1.0"
+        },
+        {
+          "concept": "ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+          "contextRef": "asof_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "2025-06-29"
+        },
+        {
+          "concept": "ssmt:DisclosureOfWhetherCompanyRegulatedByBankNegaraMalaysiaAtFinancialYearEnd",
+          "contextRef": "fromto_20240101_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "Company not regulated by Bank Negara Malaysia"
+        },
+        {
+          "concept": "ssmt:DisclosureOnWhetherCompanysSharesAreTradedOnAnyOfficialStockExchange",
+          "contextRef": "fromto_20240101_20241231",
+          "count": 1,
+          "traceability": "static_document_fact",
+          "unitRef": "",
+          "value": "Not-listed"
+        }
+      ]
+    }
+  },
+  "extracted_rows": {
+    "duplicate_expected_fact_keys": {
+      "group_count": 1,
+      "groups": [
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR",
+          "value": "5032604.00"
+        }
+      ]
+    },
+    "expected_generated_fact_count": 81,
+    "extracted_rows_used_for_generation": 81,
+    "facts_by_concept": {
+      "ifrs-smes:Assets": 3,
+      "ifrs-smes:CurrentAssets": 3,
+      "ifrs-smes:CurrentLiabilities": 2,
+      "ifrs-smes:Equity": 2,
+      "ifrs-smes:EquityAndLiabilities": 2,
+      "ifrs-smes:EquityAttributableToOwnersOfParent": 2,
+      "ifrs-smes:Liabilities": 2,
+      "ifrs-smes:NoncontrollingInterests": 1,
+      "ifrs-smes:NoncurrentAssets": 3,
+      "ifrs-smes:NoncurrentLiabilities": 1,
+      "ifrs-smes:PropertyPlantAndEquipment": 1,
+      "ifrs-smes:RetainedEarnings": 2,
+      "ifrs-smes:TradeAndOtherCurrentReceivables": 18,
+      "ssmt-mpers:CurrentBiologicalAssets": 29,
+      "ssmt-mpers:NoncurrentBiologicalAssets": 5,
+      "ssmt-mpers:OtherComponentsOfEquity": 2,
+      "ssmt-mpers:OtherCurrentAssets": 1,
+      "ssmt:CashAndBankBalances": 2
+    },
+    "facts_by_concept_source": {
+      "template_field_id": 81
+    },
+    "suspicious_signed_values_carried_into_xbrl": {
+      "count": 21,
+      "samples": [
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2007",
+          "extracted_value": "-101,920.00",
+          "item_id": "101e69d8-fbdc-4183-9f0e-4c69fe5573ec",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-101920.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2002",
+          "extracted_value": "-5,372,033.00",
+          "item_id": "1b5f1b48-f1ad-4c3a-97ff-bcfda7b22be4",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-5372033.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2006",
+          "extracted_value": "-379,725.00",
+          "item_id": "58e269c5-e802-4fb9-af08-a13a73b4a3c2",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-379725.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2004",
+          "extracted_value": "-1,483,026.00",
+          "item_id": "63d907ad-fbd0-4e96-a363-44379a162034",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-1483026.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2009",
+          "extracted_value": "-2,796.00",
+          "item_id": "67a64523-ab30-4526-90be-d165e0630e42",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-2796.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2005",
+          "extracted_value": "-277,811.00",
+          "item_id": "6b00d206-f8b2-41d3-8691-784f3f5cda53",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-277811.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt:CashAndBankBalances",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "NET CURRENT ASSETS",
+          "extracted_value": "-47,432.31",
+          "item_id": "898eb2da-6373-4ffd-b884-0b019ffd2c73",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt:CashAndBankBalances",
+          "unit_ref": "MYR",
+          "value": "-47432.31",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2001",
+          "extracted_value": "-1,839,510.00",
+          "item_id": "a25eabd0-218a-4cee-97d0-fc748aff9c35",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-1839510.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:EquityAndLiabilities",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "FINANCED BY",
+          "extracted_value": "-6,215,913.41",
+          "item_id": "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "unit_ref": "MYR",
+          "value": "-6215913.41",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:RetainedEarnings",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "extracted_value": "-10,155,575.00",
+          "item_id": "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings",
+          "unit_ref": "MYR",
+          "value": "-10155575.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "extracted_value": "-10,155,575.00",
+          "item_id": "c3813df9-8402-4e09-8936-5e759a50537c",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-10155575.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:Assets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "NET CURRENT ASSETS",
+          "extracted_value": "-47,432.31",
+          "item_id": "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets",
+          "unit_ref": "MYR",
+          "value": "-47432.31",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:CurrentAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "NET CURRENT ASSETS",
+          "extracted_value": "-47,432.31",
+          "item_id": "e3e645b7-d58a-4143-8cff-817221091f89",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets",
+          "unit_ref": "MYR",
+          "value": "-47432.31",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:Equity",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "FINANCED BY",
+          "extracted_value": "-6,215,913.41",
+          "item_id": "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Equity",
+          "unit_ref": "MYR",
+          "value": "-6215913.41",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "P&L 2003",
+          "extracted_value": "-549,005.00",
+          "item_id": "ff9d9fb7-6888-4ab1-89eb-03225347e69a",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:CurrentBiologicalAssets",
+          "unit_ref": "MYR",
+          "value": "-549005.00",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:Assets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "Assets",
+          "extracted_value": "-9,149,051.14",
+          "item_id": "2f1dc68b-3c71-436d-89f3-70d40a88b5c0",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets",
+          "unit_ref": "MYR",
+          "value": "-9149051.14",
+          "value_year": 2025
+        },
+        {
+          "concept": "ssmt-mpers:OtherComponentsOfEquity",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "Total equity - other components",
+          "extracted_value": "-40,114.25",
+          "item_id": "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:OtherComponentsOfEquity",
+          "unit_ref": "MYR",
+          "value": "-40114.25",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:NoncurrentAssets",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "Non-current assets",
+          "extracted_value": "-9,172,918.04",
+          "item_id": "b263ac7f-654b-4081-8c01-d8057376f021",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets",
+          "unit_ref": "MYR",
+          "value": "-9172918.04",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:EquityAndLiabilities",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "Equity and liabilities",
+          "extracted_value": "-9,149,051.14",
+          "item_id": "b2b4e95e-243b-4607-90c3-1166537094cf",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "unit_ref": "MYR",
+          "value": "-9149051.14",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:NoncurrentLiabilities",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "Non-current liabilities",
+          "extracted_value": "-200,652.45",
+          "item_id": "bd9ba39d-e9c1-43a6-8b3b-30f21544d781",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentLiabilities",
+          "unit_ref": "MYR",
+          "value": "-200652.45",
+          "value_year": 2025
+        },
+        {
+          "concept": "ifrs-smes:Liabilities",
+          "concept_source": "template_field_id",
+          "confirmed_tag_id": null,
+          "context_ref": "asof_20241231_SeparateMember",
+          "extracted_label": "Liabilities",
+          "extracted_value": "-200,152.25",
+          "item_id": "f2608d33-2490-45d4-9617-73c8dd487c54",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "signed_value_suspicious": true,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities",
+          "unit_ref": "MYR",
+          "value": "-200152.25",
+          "value_year": 2025
+        }
+      ]
+    }
+  },
+  "generated_facts": {
+    "concepts_multiple_times_identical_value_context_unit": {
+      "group_count": 1,
+      "groups": [
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR",
+          "value": "5032604.00"
+        }
+      ]
+    },
+    "duplicate_concept_context_unit_facts": {
+      "group_count": 14,
+      "groups": [
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 29,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 18,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ssmt-mpers:NoncurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 5,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:Assets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 3,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:CurrentAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 3,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:NoncurrentAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 3,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:CurrentLiabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:Equity",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:EquityAndLiabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:Liabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ifrs-smes:RetainedEarnings",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ssmt-mpers:OtherComponentsOfEquity",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        },
+        {
+          "concept": "ssmt:CashAndBankBalances",
+          "contextRef": "asof_20241231_SeparateMember",
+          "count": 2,
+          "unitRef": "MYR"
+        }
+      ]
+    },
+    "facts_by_concept": {
+      "ifrs-smes:Assets": 3,
+      "ifrs-smes:CurrentAssets": 3,
+      "ifrs-smes:CurrentLiabilities": 2,
+      "ifrs-smes:Equity": 2,
+      "ifrs-smes:EquityAndLiabilities": 2,
+      "ifrs-smes:EquityAttributableToOwnersOfParent": 2,
+      "ifrs-smes:Liabilities": 2,
+      "ifrs-smes:NoncontrollingInterests": 1,
+      "ifrs-smes:NoncurrentAssets": 3,
+      "ifrs-smes:NoncurrentLiabilities": 1,
+      "ifrs-smes:PropertyPlantAndEquipment": 1,
+      "ifrs-smes:RetainedEarnings": 2,
+      "ifrs-smes:TradeAndOtherCurrentReceivables": 18,
+      "ssmt-dei:DescriptionOfPresentationCurrency": 1,
+      "ssmt-dei:LevelOfRoundingUsedInFinancialStatements": 1,
+      "ssmt-dei:NameAndVersionOfSoftwareUsedToGenerateXBRLFile": 1,
+      "ssmt-dei:TaxonomyVersion": 1,
+      "ssmt-mpers:CurrentBiologicalAssets": 29,
+      "ssmt-mpers:NoncurrentBiologicalAssets": 5,
+      "ssmt-mpers:OtherComponentsOfEquity": 2,
+      "ssmt-mpers:OtherCurrentAssets": 1,
+      "ssmt:CashAndBankBalances": 2,
+      "ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors": 1,
+      "ssmt:DisclosureOfWhetherCompanyRegulatedByBankNegaraMalaysiaAtFinancialYearEnd": 1,
+      "ssmt:DisclosureOnWhetherCompanysSharesAreTradedOnAnyOfficialStockExchange": 1
+    },
+    "facts_by_namespace": {
+      "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-cor": 5,
+      "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-dei-core": 4,
+      "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor": 37,
+      "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes": 42
+    },
+    "facts_by_prefix": {
+      "ifrs-smes": 42,
+      "ssmt": 5,
+      "ssmt-dei": 4,
+      "ssmt-mpers": 37
+    },
+    "facts_with_contextRef": 88,
+    "facts_with_unitRef": 81,
+    "monetary_facts_without_unitRef": {
+      "count": 0,
+      "samples": []
+    },
+    "negative_numeric_facts": {
+      "count": 21,
+      "samples": [
+        {
+          "concept": "ssmt:CashAndBankBalances",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CashAndBankBalances",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-cor",
+          "prefix": "ssmt",
+          "unitRef": "MYR",
+          "value": "-47432.31"
+        },
+        {
+          "concept": "ifrs-smes:CurrentAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentAssets",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-47432.31"
+        },
+        {
+          "concept": "ifrs-smes:RetainedEarnings",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "RetainedEarnings",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-10155575.00"
+        },
+        {
+          "concept": "ifrs-smes:Equity",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "Equity",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-6215913.41"
+        },
+        {
+          "concept": "ifrs-smes:Assets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "Assets",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-47432.31"
+        },
+        {
+          "concept": "ifrs-smes:EquityAndLiabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "EquityAndLiabilities",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-6215913.41"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-10155575.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-1839510.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-5372033.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-549005.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-1483026.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-277811.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-379725.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-101920.00"
+        },
+        {
+          "concept": "ssmt-mpers:CurrentBiologicalAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "CurrentBiologicalAssets",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-2796.00"
+        },
+        {
+          "concept": "ifrs-smes:NoncurrentAssets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "NoncurrentAssets",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-9172918.04"
+        },
+        {
+          "concept": "ifrs-smes:Assets",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "Assets",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-9149051.14"
+        },
+        {
+          "concept": "ifrs-smes:NoncurrentLiabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "NoncurrentLiabilities",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-200652.45"
+        },
+        {
+          "concept": "ifrs-smes:Liabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "Liabilities",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-200152.25"
+        },
+        {
+          "concept": "ssmt-mpers:OtherComponentsOfEquity",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "OtherComponentsOfEquity",
+          "namespace": "http://xbrl.ssm.com.my/taxonomy/2022-12-31/ssmt-mpers-cor",
+          "prefix": "ssmt-mpers",
+          "unitRef": "MYR",
+          "value": "-40114.25"
+        },
+        {
+          "concept": "ifrs-smes:EquityAndLiabilities",
+          "contextRef": "asof_20241231_SeparateMember",
+          "decimals": "2",
+          "is_numeric": true,
+          "local_name": "EquityAndLiabilities",
+          "namespace": "https://xbrl.ifrs.org/taxonomy/2022-03-24/ifrs-smes",
+          "prefix": "ifrs-smes",
+          "unitRef": "MYR",
+          "value": "-9149051.14"
+        }
+      ]
+    },
+    "total_generated_facts": 88
+  },
+  "job": {
+    "company_name": "Feature 10E Verification",
+    "financial_year_end": "2024-12-31",
+    "id": 9,
+    "page_count": 3,
+    "registration_number": "10E-TEST",
+    "status": "REVIEW"
+  },
+  "schema_refs": [
+    "https://mbrs.ssm.com.my/taxonomy/SSMxT2022v1.0/rep/ssm/ca-2016/fs/mpers/ssmt-fs-mpers_2022-12-31_entry_point.xsd"
+  ],
+  "xbrl_path": "uploads\\xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl"
+}

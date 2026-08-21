@@ -1,0 +1,192 @@
+{
+  "run_metadata": {
+    "feature": "18E-C",
+    "generated_at": "2026-06-21T13:00:01Z",
+    "deterministic_report": "reports\\rulebook_mapper_template_optimized_18e_b.json",
+    "qwen_report": "reports\\golden_mbrs_fewshot_qwen_predictions_17b.json",
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_rows_written": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "auto_applied": false,
+    "confirmed_tag_id_mutated": false,
+    "safe_for_auto_apply": false,
+    "human_review_final": true
+  },
+  "summary": {
+    "feature": "18E-C",
+    "total_observations": 782,
+    "deterministic_source_file": "reports\\rulebook_mapper_template_optimized_18e_b.json",
+    "qwen_source_file": "reports\\golden_mbrs_fewshot_qwen_predictions_17b.json",
+    "qwen_source_format": "golden_mbrs_fewshot_qwen_predictions",
+    "qwen_report_status": "loaded",
+    "deterministic_touched": 338,
+    "deterministic_coverage_rate": 0.4322,
+    "qwen_comparable_observations": 43,
+    "qwen_touched": 27,
+    "qwen_coverage_rate": 0.0345,
+    "both_touched": 27,
+    "both_agree_same_qname": 25,
+    "both_suggest_conflict": 2,
+    "deterministic_only": 8,
+    "qwen_only": 0,
+    "both_no_match": 8,
+    "qwen_missing": 459,
+    "not_comparable": 280,
+    "combined_touched": 338,
+    "combined_coverage_rate": 0.4322,
+    "hybrid_reaches_80_percent": false,
+    "hybrid_coverage_gap_to_80_percent": 0.3678,
+    "comparison_status_counts": {
+      "both_agree_same_qname": 25,
+      "both_no_match": 8,
+      "both_suggest_conflict": 2,
+      "deterministic_only": 8,
+      "not_comparable": 280,
+      "qwen_missing": 459
+    },
+    "conflict_type_counts": {
+      "same_concept_family_different_specificity": 2
+    },
+    "high_risk_conflict_count": 0,
+    "deterministic_local_precision": {
+      "predictions": 338,
+      "good": 234,
+      "false_positive": 87,
+      "not_evaluable": 17,
+      "precision_on_evaluable": 0.729
+    },
+    "qwen_local_precision_where_available": {
+      "predictions": 27,
+      "good": 27,
+      "false_positive": 0,
+      "not_evaluable": 0,
+      "precision_on_evaluable": 1.0
+    },
+    "qwen_records_loaded": 277,
+    "qwen_unaligned_records": 35,
+    "qwen_unaligned_by_sample": {
+      "case_006": 35
+    },
+    "per_statement_family": [
+      {
+        "statement_family": "cash_flow",
+        "total_observations": 115,
+        "deterministic_touched": 64,
+        "deterministic_coverage_rate": 0.5565,
+        "qwen_touched": 10,
+        "qwen_coverage_rate": 0.087,
+        "combined_touched": 64,
+        "combined_coverage_rate": 0.5565,
+        "comparison_status_counts": {
+          "both_agree_same_qname": 8,
+          "both_no_match": 2,
+          "both_suggest_conflict": 2,
+          "deterministic_only": 1,
+          "not_comparable": 31,
+          "qwen_missing": 71
+        }
+      },
+      {
+        "statement_family": "changes_in_equity",
+        "total_observations": 16,
+        "deterministic_touched": 0,
+        "deterministic_coverage_rate": 0.0,
+        "qwen_touched": 0,
+        "qwen_coverage_rate": 0.0,
+        "combined_touched": 0,
+        "combined_coverage_rate": 0.0,
+        "comparison_status_counts": {
+          "not_comparable": 8,
+          "qwen_missing": 8
+        }
+      },
+      {
+        "statement_family": "financial_position",
+        "total_observations": 146,
+        "deterministic_touched": 118,
+        "deterministic_coverage_rate": 0.8082,
+        "qwen_touched": 12,
+        "qwen_coverage_rate": 0.0822,
+        "combined_touched": 118,
+        "combined_coverage_rate": 0.8082,
+        "comparison_status_counts": {
+          "both_agree_same_qname": 12,
+          "both_no_match": 2,
+          "deterministic_only": 1,
+          "not_comparable": 57,
+          "qwen_missing": 74
+        }
+      },
+      {
+        "statement_family": "income_statement",
+        "total_observations": 259,
+        "deterministic_touched": 108,
+        "deterministic_coverage_rate": 0.417,
+        "qwen_touched": 5,
+        "qwen_coverage_rate": 0.0193,
+        "combined_touched": 108,
+        "combined_coverage_rate": 0.417,
+        "comparison_status_counts": {
+          "both_agree_same_qname": 5,
+          "both_no_match": 2,
+          "deterministic_only": 2,
+          "not_comparable": 65,
+          "qwen_missing": 185
+        }
+      },
+      {
+        "statement_family": "notes",
+        "total_observations": 179,
+        "deterministic_touched": 34,
+        "deterministic_coverage_rate": 0.1899,
+        "qwen_touched": 0,
+        "qwen_coverage_rate": 0.0,
+        "combined_touched": 34,
+        "combined_coverage_rate": 0.1899,
+        "comparison_status_counts": {
+          "both_no_match": 2,
+          "deterministic_only": 4,
+          "not_comparable": 81,
+          "qwen_missing": 92
+        }
+      },
+      {
+        "statement_family": "unknown",
+        "total_observations": 67,
+        "deterministic_touched": 14,
+        "deterministic_coverage_rate": 0.209,
+        "qwen_touched": 0,
+        "qwen_coverage_rate": 0.0,
+        "combined_touched": 14,
+        "combined_coverage_rate": 0.209,
+        "comparison_status_counts": {
+          "not_comparable": 38,
+          "qwen_missing": 29
+        }
+      }
+    ]
+  },
+  "recommendation": {
+    "recommended_next_feature": "Feature #18E-B-2 - Expand deterministic mapper coverage for rows neither mapper covers.",
+    "reason": "Combined offline coverage is below 70%.",
+    "basis": {
+      "combined_coverage_rate": 0.4322,
+      "qwen_comparable_observations": 43,
+      "both_touched": 27,
+      "both_suggest_conflict": 2,
+      "conflict_rate_when_both_touched": 0.0741,
+      "high_risk_conflict_count": 0
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "feature": "18F-F-blocker-1",
+  "title": "Azure DI local normalization timeout fallback",
+  "root_cause": "asyncio.wait_for timed out the local normalization coroutine, but its asyncio.to_thread worker could not be cancelled. The worker later logged usable normalized candidates after the coroutine had already entered the fatal timeout handler and marked the job ERROR.",
+  "affected_job_evidence": {
+    "job_id": 48,
+    "azure_submit_status": 202,
+    "azure_result_status": 200,
+    "pages_count": 23,
+    "tables_count": 17,
+    "table_cells": 607,
+    "content_length": 30570,
+    "table_candidate_count": 96,
+    "deduped_candidate_count": 93,
+    "normalized_candidates_count": 83,
+    "incorrect_final_status_before_hotfix": "ERROR",
+    "interpretation": "Local normalization timeout, not an Azure DI service limit failure."
+  },
+  "non_fatal_classification": [
+    "Outer local normalization timeout after a valid Azure result with pages and table evidence",
+    "Text-block or paragraph normalization timeout when table-only normalization returns persistable candidates"
+  ],
+  "fatal_classification": [
+    "Azure DI configuration, submit, or analyze-result failure",
+    "Azure DI result with no usable pages/table evidence",
+    "Table-only fallback with zero persistable candidates",
+    "Table-only fallback timeout or normalization failure",
+    "Database persistence failure"
+  ],
+  "fallback_behavior": {
+    "enabled_by_default": true,
+    "config": "AZURE_DI_ALLOW_TABLE_FALLBACK_ON_TEXT_TIMEOUT=true",
+    "input": "Already-received local Azure DI result",
+    "mode": "One bounded table-only normalization attempt",
+    "success_status": "REVIEW",
+    "warning_code": "azure_di_text_block_normalization_timeout",
+    "fallback_used": "table_candidates_only",
+    "warning_storage": "Existing ExtractedDataItem.validation_warnings JSON; no migration",
+    "fatal_if_no_persistable_candidates": true
+  },
+  "tests_added": [
+    "service result + outer timeout + tables completes with warning",
+    "normalized fallback rows and structured warning metadata persist",
+    "outer timeout + zero table candidates remains ERROR",
+    "submit failure remains ERROR",
+    "analyze failure remains ERROR"
+  ],
+  "manual_retest": [
+    "Restart backend and Celery workers so the hotfix is loaded.",
+    "Upload the INFO House PDF once, or reuse a cached raw result if an existing isolated path supports it.",
+    "Confirm the job reaches REVIEW rather than ERROR when the local text-block timeout occurs.",
+    "Confirm extracted rows are greater than zero and Review Workspace loads them.",
+    "Confirm logs and row validation_warnings contain azure_di_text_block_normalization_timeout and table_candidates_only."
+  ],
+  "safety": {
+    "live_azure_di_called": false,
+    "llm_qwen_supervisor_called": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "auto_mapping_changed": false,
+    "confirmed_tag_id_automation": false
+  },
+  "recommended_next_feature_after_manual_retest": "Feature #18F-G - Decide next path: persistence design vs reviewer UX workflow"
+}

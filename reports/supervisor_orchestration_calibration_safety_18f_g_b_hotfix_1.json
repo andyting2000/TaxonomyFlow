@@ -1,0 +1,44 @@
+{
+  "feature_id": "18F-G-B-hotfix-1",
+  "generated_at": "2026-07-23T14:10:17.880899+00:00",
+  "status": "passed",
+  "planning": {
+    "external_calls": 0,
+    "supervisor_calls": 0,
+    "mapper_calls": 0,
+    "azure_di_calls": 0,
+    "database_writes": 0,
+    "session_new_dirty_deleted_before": [
+      0,
+      0,
+      0
+    ],
+    "session_new_dirty_deleted_after": [
+      0,
+      0,
+      0
+    ],
+    "object_snapshot_unchanged": true
+  },
+  "workflow_boundaries": {
+    "automatic_supervisor_reviews": 0,
+    "automatic_remaps": 0,
+    "auto_apply_count": 0,
+    "auto_accept_count": 0,
+    "auto_reject_count": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "requires_human_review": true,
+    "safe_for_auto_apply": false
+  },
+  "payload_boundaries": {
+    "auditor_xml_used": false,
+    "parsed_auditor_xbrl_facts_used": false,
+    "benchmark_gold_qnames_used": false,
+    "external_provider_payload_created": false
+  },
+  "runtime_defaults_changed": false,
+  "frontend_changed": false,
+  "xbrl_generated": false,
+  "arelle_run": false
+}

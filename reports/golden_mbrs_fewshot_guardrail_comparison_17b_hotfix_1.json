@@ -1,0 +1,676 @@
+{
+  "run_metadata": {
+    "feature": "17B-hotfix-1",
+    "generated_at": "2026-06-07T08:28:54Z",
+    "report_only": true,
+    "source_reports": [
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\golden_mbrs_fewshot_qwen_accuracy_17b.json",
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\golden_mbrs_fewshot_vs_baseline_17b.json"
+    ],
+    "source_report_snapshot_note": "This report embeds the analyzed rows and metrics as a local snapshot; source report paths can be refreshed by later evaluator commands.",
+    "database_mutated": false,
+    "production_filing_jobs_mutated": false,
+    "production_extraction_changed": false,
+    "qwen_production_prompt_changed": false,
+    "react_ui_changed": false,
+    "admin_user_management_changed": false,
+    "auto_apply_mappings": false,
+    "confirmed_tag_id_set": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "external_llm_called": false,
+    "auditor_xml_sent_to_external_provider": false,
+    "parsed_xml_facts_sent_to_external_provider": false,
+    "target_gold_answers_sent_to_external_provider": false,
+    "target_correct_qnames_sent_to_external_provider": false,
+    "target_correct_template_fields_sent_to_external_provider": false,
+    "evaluation_labels_sent_to_external_provider": false
+  },
+  "comparison_policy": "No live Qwen rerun was performed. This compares current #17B live metrics with a local guardrail projection from identified wrong rows.",
+  "current_fewshot_live": {
+    "strict_scoring_rows": 29,
+    "predicted_rows": 23,
+    "coverage": 0.7931,
+    "correct": 20,
+    "qname_exact_correct": 20,
+    "qname_exact_accuracy": 0.6897,
+    "template_field_id_exact_correct": 20,
+    "template_field_id_exact_accuracy": 0.6897,
+    "accuracy": 0.6897,
+    "accuracy_when_predicted": 0.8696,
+    "wrong_concept": 3,
+    "no_prediction": 5,
+    "candidate_missing": 7,
+    "hallucinated_concept_rejected": 1,
+    "invalid_response": 0,
+    "low_confidence_suggestion": 0,
+    "correct_but_not_high_confidence": 3,
+    "high_confidence_accuracy": 0.85,
+    "medium_confidence_accuracy": 1.0,
+    "low_confidence_accuracy": 0.0,
+    "statement_family_measurable_rows": 23,
+    "statement_family_correct": 23,
+    "statement_family_accuracy": 1.0,
+    "accuracy_by_statement_type": [
+      {
+        "group": "Statement of Financial Position",
+        "rows": 10,
+        "correct": 8,
+        "accuracy": 0.8,
+        "no_prediction": 1,
+        "wrong_concept": 1
+      },
+      {
+        "group": "Statement of Cash Flows",
+        "rows": 9,
+        "correct": 8,
+        "accuracy": 0.8889,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Statement of Comprehensive Income",
+        "rows": 6,
+        "correct": 4,
+        "accuracy": 0.6667,
+        "no_prediction": 2,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Notes to the Financial Statements",
+        "rows": 4,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 2,
+        "wrong_concept": 2
+      }
+    ],
+    "accuracy_by_label_family": [
+      {
+        "group": "bank balances",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at beginning of year",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "decrease increase in cash and cash equivalents",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "gross profit",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "accruals",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "assets discussion",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at end of year note 9",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at the end of year",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash from operating activities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "current assets",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "current liabilities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "decrease increase in trade and other receivables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "depreciation",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "depreciation of property plant and equipment",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "equity",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "equity and liabilities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "liabilities d por current fral to",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "non current assets",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "operating expenses folaviceral",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other income",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other payable",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 0,
+        "wrong_concept": 1
+      },
+      {
+        "group": "other payables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 0,
+        "wrong_concept": 1
+      },
+      {
+        "group": "other receivables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 0,
+        "wrong_concept": 1
+      },
+      {
+        "group": "property plant and equipment",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "revenue",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      }
+    ],
+    "accuracy_by_confidence_tier": [
+      {
+        "group": "high",
+        "rows": 20,
+        "correct": 17,
+        "accuracy": 0.85,
+        "no_prediction": 0,
+        "wrong_concept": 3
+      },
+      {
+        "group": "low",
+        "rows": 5,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 4,
+        "wrong_concept": 0
+      },
+      {
+        "group": "medium",
+        "rows": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "none",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      }
+    ],
+    "top_confused_concepts": [
+      {
+        "pair": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables -> ssmt-mpers:OtherCurrentReceivables",
+        "count": 1
+      },
+      {
+        "pair": "ssmt-mpers:OtherNoncurrentNontradePayables -> ssmt-mpers:OtherPayables",
+        "count": 1
+      },
+      {
+        "pair": "ssmt-mpers:CurrentNontradePayables -> ifrs-smes:TradeAndOtherCurrentPayables",
+        "count": 1
+      }
+    ],
+    "measurable": true,
+    "status": "completed",
+    "completed_provider_rows": 28,
+    "rows_blocked_by_rate_limit": 0,
+    "provider_rate_limit_events": 0
+  },
+  "same_holdout_baseline": {
+    "strict_scoring_rows": 29,
+    "predicted_rows": 16,
+    "coverage": 0.5517,
+    "correct": 16,
+    "qname_exact_correct": 16,
+    "qname_exact_accuracy": 0.5517,
+    "template_field_id_exact_correct": 16,
+    "template_field_id_exact_accuracy": 0.5517,
+    "accuracy": 0.5517,
+    "accuracy_when_predicted": 1.0,
+    "wrong_concept": 0,
+    "no_prediction": 13,
+    "candidate_missing": 7,
+    "hallucinated_concept_rejected": 0,
+    "invalid_response": 0,
+    "low_confidence_suggestion": 0,
+    "correct_but_not_high_confidence": 4,
+    "high_confidence_accuracy": 1.0,
+    "medium_confidence_accuracy": 1.0,
+    "low_confidence_accuracy": 0.0,
+    "statement_family_measurable_rows": 16,
+    "statement_family_correct": 16,
+    "statement_family_accuracy": 1.0,
+    "accuracy_by_statement_type": [
+      {
+        "group": "Statement of Financial Position",
+        "rows": 10,
+        "correct": 6,
+        "accuracy": 0.6,
+        "no_prediction": 4,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Statement of Cash Flows",
+        "rows": 9,
+        "correct": 6,
+        "accuracy": 0.6667,
+        "no_prediction": 3,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Statement of Comprehensive Income",
+        "rows": 6,
+        "correct": 4,
+        "accuracy": 0.6667,
+        "no_prediction": 2,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Notes to the Financial Statements",
+        "rows": 4,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 4,
+        "wrong_concept": 0
+      }
+    ],
+    "accuracy_by_label_family": [
+      {
+        "group": "bank balances",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at beginning of year",
+        "rows": 2,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 2,
+        "wrong_concept": 0
+      },
+      {
+        "group": "decrease increase in cash and cash equivalents",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "gross profit",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "accruals",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "assets discussion",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at end of year note 9",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at the end of year",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash from operating activities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "current assets",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "current liabilities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "decrease increase in trade and other receivables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "depreciation",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "depreciation of property plant and equipment",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "equity",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "equity and liabilities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "liabilities d por current fral to",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "non current assets",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "operating expenses folaviceral",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other income",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other payable",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other payables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other receivables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "property plant and equipment",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "revenue",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      }
+    ],
+    "accuracy_by_confidence_tier": [
+      {
+        "group": "high",
+        "rows": 12,
+        "correct": 12,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "low",
+        "rows": 12,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 12,
+        "wrong_concept": 0
+      },
+      {
+        "group": "medium",
+        "rows": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "none",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      }
+    ],
+    "top_confused_concepts": []
+  },
+  "delta_vs_same_holdout_baseline": {
+    "coverage": 0.2414,
+    "accuracy": 0.138,
+    "accuracy_when_predicted": -0.1304,
+    "wrong_concept": 3.0,
+    "no_prediction": -8.0,
+    "correct": 4.0
+  },
+  "projected_after_guardrails": {
+    "strict_scoring_rows": 29,
+    "projection_policy": "local_projection_if_guardrails_force_candidate-missing broad substitutions to null; not a live Qwen rerun",
+    "projection_scope": "aggregate metrics only; detailed statement/confidence breakdown requires a separately approved live rerun",
+    "predicted_rows": 20,
+    "coverage": 0.6897,
+    "correct": 20,
+    "accuracy": 0.6897,
+    "accuracy_when_predicted": 1.0,
+    "wrong_concept": 0,
+    "no_prediction": 8,
+    "blocked_wrong_concept_rows": 3
+  },
+  "projected_tradeoff": {
+    "coverage": -0.1034,
+    "accuracy": 0.0,
+    "accuracy_when_predicted": 0.1304,
+    "wrong_concept": -3.0,
+    "no_prediction": 3.0,
+    "correct": 0.0
+  },
+  "success_criteria_assessment": {
+    "wrong_concepts_decrease_projected": true,
+    "accuracy_when_predicted_recovers_projected": true,
+    "coverage_remains_above_deterministic_baseline_projected": true,
+    "live_rerun_required_for_measured_result": true
+  }
+}

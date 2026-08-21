@@ -1,0 +1,368 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-11T08:22:48.217623+00:00",
+    "script": "scripts/compare_v2_to_reference.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "openai_used": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\v2_reference_comparison_20260511T082235Z.json"
+  },
+  "aggregate_metrics": {
+    "cases_compared": 7,
+    "reference_total_facts": 3101,
+    "v2_total_candidates": 185,
+    "reference_numeric_facts": 2590,
+    "v2_numeric_fact_candidates": 0,
+    "reference_text_blocks": 319,
+    "v2_text_block_candidates": 0,
+    "reference_concepts_count": 293,
+    "v2_labels_count": 175,
+    "rough_label_concept_overlap_count": 21,
+    "missing_numeric_extraction_signal": true,
+    "missing_text_block_extraction_signal": true,
+    "cases_where_reference_exists_but_v2_has_no_numeric_or_text": [
+      "001-bizaid-synthetic",
+      "002-bezlife-marketing",
+      "003-fine-batik",
+      "004-info-house",
+      "005-jconnector",
+      "006-Rahsia-Herbal",
+      "007-Shield-Plus"
+    ],
+    "missing_numeric_cases": [
+      "001-bizaid-synthetic",
+      "002-bezlife-marketing",
+      "003-fine-batik",
+      "004-info-house",
+      "005-jconnector",
+      "006-Rahsia-Herbal",
+      "007-Shield-Plus"
+    ],
+    "missing_text_block_cases": [
+      "001-bizaid-synthetic",
+      "002-bezlife-marketing",
+      "003-fine-batik",
+      "004-info-house",
+      "005-jconnector",
+      "006-Rahsia-Herbal",
+      "007-Shield-Plus"
+    ]
+  },
+  "per_case": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "reference_total_facts": 552,
+      "v2_total_candidates": 185,
+      "reference_numeric_facts": 487,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 40,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 216,
+      "v2_labels_count": 175,
+      "rough_represented_reference_concepts": 19,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "reference_total_facts": 413,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 339,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 45,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 222,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "003-fine-batik",
+      "reference_total_facts": 427,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 352,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 46,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 232,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "004-info-house",
+      "reference_total_facts": 414,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 338,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 47,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 227,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "005-jconnector",
+      "reference_total_facts": 400,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 323,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 48,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 219,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "reference_total_facts": 421,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 345,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 48,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 230,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "reference_total_facts": 474,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 406,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 45,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 216,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    }
+  ],
+  "top_reference_concepts_not_represented_in_v2": [
+    {
+      "concept": "ifrs-smes:Equity",
+      "count": 134
+    },
+    {
+      "concept": "ssmt-mpers:EquityBalanceRestated",
+      "count": 96
+    },
+    {
+      "concept": "ifrs-smes:ComprehensiveIncome",
+      "count": 96
+    },
+    {
+      "concept": "ifrs-smes:ChangesInEquity",
+      "count": 96
+    },
+    {
+      "concept": "ssmt-mpers:ImpactOfChangeInAccountingStandards",
+      "count": 73
+    },
+    {
+      "concept": "ifrs-smes:OtherComprehensiveIncome",
+      "count": 70
+    },
+    {
+      "concept": "ifrs-smes:NumberOfSharesOutstanding",
+      "count": 32
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesOutstanding",
+      "count": 32
+    },
+    {
+      "concept": "ifrs-smes:CashAndCashEquivalents",
+      "count": 21
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidOutstanding",
+      "count": 20
+    },
+    {
+      "concept": "ifrs-smes:NumberOfSharesIssuedAndFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesIssuedAndFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ifrs-smes:NumberOfSharesIssuedButNotFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesIssuedAndNotFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesIssuedButNotFullyPaidDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfOtherChangesInSharesIssuedButNotFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:NumberOfSharesIssued",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesOutstandingDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInAmountOfSharesOutstanding",
+      "count": 16
+    },
+    {
+      "concept": "ifrs-smes:AmountsPayableRelatedPartyTransactions",
+      "count": 15
+    },
+    {
+      "concept": "ifrs-smes:PropertyPlantAndEquipment",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:InvestmentProperty",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:IntangibleAssetsAndGoodwill",
+      "count": 14
+    },
+    {
+      "concept": "ssmt-mpers:InvestmentInSubisidiaries",
+      "count": 14
+    }
+  ],
+  "top_v2_candidates_not_found_in_reference": [
+    {
+      "candidate_label": "BIZAID FY2025",
+      "count": 3
+    },
+    {
+      "candidate_label": "This Year",
+      "count": 3
+    },
+    {
+      "candidate_label": "%",
+      "count": 3
+    },
+    {
+      "candidate_label": "17/03/2026 09:56:09",
+      "count": 2
+    },
+    {
+      "candidate_label": "AF-1100",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFF-1103",
+      "count": 1
+    },
+    {
+      "candidate_label": "FURNITURE &FITTINGS",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFF-1103D",
+      "count": 1
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFG-1105",
+      "count": 1
+    },
+    {
+      "candidate_label": "GOOD WILL",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFG-115D",
+      "count": 1
+    },
+    {
+      "candidate_label": "ACCUM. AMORTIZATION. GOOD WILL",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFH-1101",
+      "count": 1
+    },
+    {
+      "candidate_label": "COMPUTER HARDWARE",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFH-1101D",
+      "count": 1
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFO-1104",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFO-1104D",
+      "count": 1
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFS-1102",
+      "count": 1
+    },
+    {
+      "candidate_label": "COMPUTER SOFTWARE",
+      "count": 1
+    },
+    {
+      "candidate_label": "AFS-1102D",
+      "count": 1
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+      "count": 1
+    },
+    {
+      "candidate_label": "AC-1200",
+      "count": 1
+    }
+  ],
+  "recommended_next_extraction_v2_focus": [
+    "Prioritize v2 numeric table/fact extraction; reference XML contains numeric facts but v2 emitted none.",
+    "Prioritize v2 text-block/disclosure extraction; reference XML contains text blocks but v2 emitted none."
+  ],
+  "assessment": "Extraction v2 has not yet extracted numeric facts or text blocks; reference XML contains facts that can guide v2 development.",
+  "limitations": [
+    "Comparison uses rough label/concept overlap only; it is not final taxonomy mapping.",
+    "No DB mutation, XBRL generation, Arelle validation, OpenAI calls, UI upload, or production cutover is performed."
+  ]
+}

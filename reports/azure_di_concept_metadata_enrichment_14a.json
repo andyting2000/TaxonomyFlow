@@ -1,0 +1,125 @@
+{
+  "run_metadata": {
+    "feature": "14A",
+    "generated_at": "2026-05-19T08:34:01Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "final_mapping_approved": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_mapping_refinement_14a",
+    "report_type": "azure_di_concept_metadata_enrichment",
+    "script": "scripts/refine_azure_di_mapping_candidates_14a.py",
+    "output_path": "reports\\azure_di_concept_metadata_enrichment_14a.json"
+  },
+  "input_reports": {
+    "handoff_report": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "baseline_mapping_report": "reports\\azure_di_mapping_candidates_13z.json",
+    "baseline_confidence_report": "reports\\azure_di_mapping_confidence_13z.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json",
+    "template_file": "mpers_templates.json"
+  },
+  "concept_sources_used": {
+    "mpers_templates.json": 923,
+    "reference_report_concept_inventory": 23
+  },
+  "concept_count": 946,
+  "alias_count": 3625,
+  "curated_alias_count": 127,
+  "curated_aliases_by_group": {
+    "administrative_expenses": 1,
+    "bank_overdraft": 9,
+    "basis_of_preparation": 8,
+    "cash_and_cash_equivalents": 10,
+    "corporate_information": 5,
+    "directors_report": 11,
+    "financial_instruments_policy": 12,
+    "other_comprehensive_income": 1,
+    "other_payables": 15,
+    "other_receivables": 19,
+    "profit_loss_after_tax": 10,
+    "profit_loss_before_tax": 5,
+    "retained_earnings": 7,
+    "share_capital": 7,
+    "statement_by_directors": 4,
+    "statutory_declaration": 2,
+    "tax_expense": 1
+  },
+  "unresolved_alias_count": 2,
+  "unresolved_aliases": [
+    {
+      "alias_group": "principal_activity",
+      "aliases": [
+        "Principal Activity",
+        "principal activities",
+        "principally engaged",
+        "business as insurance agent"
+      ],
+      "reason": "no_existing_local_concept_qname_matched_group"
+    },
+    {
+      "alias_group": "director_account",
+      "aliases": [
+        "Amount due to director",
+        "Amount owing to directors",
+        "Increase in director's account"
+      ],
+      "reason": "no_existing_local_concept_qname_matched_group"
+    }
+  ],
+  "numeric_concept_count": 656,
+  "text_block_concept_count": 148,
+  "concept_families": {
+    "accounting_policies": 56,
+    "basis_of_preparation": 2,
+    "cash_and_overdraft": 6,
+    "cash_flows": 10,
+    "changes_in_equity": 5,
+    "comprehensive_income": 168,
+    "corporate_information": 1,
+    "directors_report": 1,
+    "expenses": 1,
+    "financial_instruments": 2,
+    "financial_position": 191,
+    "notes": 73,
+    "other_comprehensive_income": 1,
+    "payables": 4,
+    "profit_loss": 4,
+    "receivables": 5,
+    "retained_earnings": 2,
+    "share_capital": 2,
+    "statement_by_directors": 19,
+    "statutory_declaration": 1,
+    "tax": 1,
+    "unknown": 391
+  },
+  "metadata_limitations": [
+    "Reference report was used only as an offline concept inventory fallback, not as a direct answer key.",
+    "Aliases attach only to qnames discovered in local template metadata or optional reference concept inventory.",
+    "No fake concept qnames are created.",
+    "Reference report, when provided, is used only as offline concept inventory and not as a direct answer key."
+  ],
+  "source_feature_chain": [
+    "13X",
+    "13Y",
+    "13Z",
+    "14A"
+  ]
+}

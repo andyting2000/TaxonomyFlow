@@ -1,0 +1,283 @@
+{
+  "run_metadata": {
+    "feature": "18F-C",
+    "generated_at": "2026-06-25T01:18:27Z",
+    "calibration_summary_report": "reports\\hybrid_candidate_calibration_summary_18f_b.json",
+    "recommended_profile_report": "reports\\hybrid_candidate_calibration_recommended_profile_18f_b.json",
+    "offline_only": true,
+    "design_only": true,
+    "dry_run_scaffold_only": true,
+    "ui_changed": false,
+    "api_changed": false,
+    "database_mutated": false,
+    "production_persistence_enabled": false,
+    "production_mapper_integrated": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "external_llm_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "schema_names": [
+    "RankedCandidateAdvisoryRequest",
+    "RankedCandidateAdvisoryResponse",
+    "RankedCandidateRow",
+    "RankedCandidateItem",
+    "RankedCandidateEvidence",
+    "RankedCandidateSafetySummary"
+  ],
+  "job_level_response": [
+    {
+      "field": "job_id",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "field": "filing_id",
+      "type": "integer|null",
+      "required": false
+    },
+    {
+      "field": "profile",
+      "type": "string",
+      "default": "balanced"
+    },
+    {
+      "field": "mode",
+      "type": "enum",
+      "values": [
+        "dry_run",
+        "persisted_later"
+      ]
+    },
+    {
+      "field": "candidate_generation_status",
+      "type": "enum",
+      "values": [
+        "disabled",
+        "ready",
+        "running",
+        "completed",
+        "failed"
+      ]
+    },
+    {
+      "field": "total_rows",
+      "type": "integer"
+    },
+    {
+      "field": "rows_with_candidates",
+      "type": "integer"
+    },
+    {
+      "field": "candidate_coverage",
+      "type": "number|null"
+    },
+    {
+      "field": "generated_at",
+      "type": "iso8601 string|null"
+    },
+    {
+      "field": "feature_flags",
+      "type": "object"
+    },
+    {
+      "field": "safety",
+      "type": "RankedCandidateSafetySummary"
+    },
+    {
+      "field": "rows",
+      "type": "RankedCandidateRow[]"
+    }
+  ],
+  "row_level_payload": [
+    {
+      "field": "row_id",
+      "type": "string"
+    },
+    {
+      "field": "statement_family",
+      "type": "string|null"
+    },
+    {
+      "field": "section_block",
+      "type": "string|null"
+    },
+    {
+      "field": "row_label",
+      "type": "string|null"
+    },
+    {
+      "field": "normalized_label",
+      "type": "string|null"
+    },
+    {
+      "field": "row_value",
+      "type": "any"
+    },
+    {
+      "field": "period",
+      "type": "object"
+    },
+    {
+      "field": "note_boundary_type",
+      "type": "string|null"
+    },
+    {
+      "field": "candidate_coverage_status",
+      "type": "string"
+    },
+    {
+      "field": "candidates",
+      "type": "RankedCandidateItem[]"
+    }
+  ],
+  "candidate_payload": [
+    {
+      "field": "rank",
+      "type": "integer"
+    },
+    {
+      "field": "qname",
+      "type": "string"
+    },
+    {
+      "field": "concept_label",
+      "type": "string|null"
+    },
+    {
+      "field": "namespace",
+      "type": "string|null"
+    },
+    {
+      "field": "candidate_sources_combined",
+      "type": "string[]"
+    },
+    {
+      "field": "score",
+      "type": "number"
+    },
+    {
+      "field": "confidence_bucket",
+      "type": "string"
+    },
+    {
+      "field": "risk_level",
+      "type": "string"
+    },
+    {
+      "field": "evidence",
+      "type": "RankedCandidateEvidence"
+    },
+    {
+      "field": "ambiguity_reasons",
+      "type": "string[]"
+    },
+    {
+      "field": "blocking_reasons",
+      "type": "string[]"
+    },
+    {
+      "field": "requires_human_review",
+      "type": "boolean",
+      "must_equal": true
+    },
+    {
+      "field": "safe_for_auto_apply",
+      "type": "boolean",
+      "must_equal": false
+    },
+    {
+      "field": "recommended_action",
+      "type": "enum",
+      "values": [
+        "review_candidate",
+        "keep_for_human_review",
+        "no_candidate",
+        "blocked"
+      ]
+    },
+    {
+      "field": "profile",
+      "type": "string"
+    },
+    {
+      "field": "calibration_version",
+      "type": "string"
+    }
+  ],
+  "feature_flags": [
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_ENABLED",
+      "default": false
+    },
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_DEFAULT_MODE",
+      "default": "dry_run"
+    },
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_ALLOW_PERSISTENCE",
+      "default": false
+    },
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_DEFAULT_PROFILE",
+      "default": "balanced"
+    },
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_MAX_ROWS",
+      "default": 1000
+    },
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_MAX_CANDIDATES_PER_ROW",
+      "default": 5
+    },
+    {
+      "name": "RANKED_CANDIDATES_ADVISORY_ADMIN_ONLY",
+      "default": true
+    }
+  ],
+  "forbidden_fields": [
+    "confirmed_tag_id",
+    "confirmed_tag_id_mutation",
+    "final_mapping_update",
+    "auto_apply",
+    "auto_accept",
+    "auto_reject"
+  ],
+  "recommended_action_allowed_values": [
+    "review_candidate",
+    "keep_for_human_review",
+    "no_candidate",
+    "blocked"
+  ],
+  "recommended_action_forbidden_values": [
+    "accept",
+    "apply",
+    "confirm"
+  ],
+  "safety": {
+    "advisory_only": true,
+    "dry_run_only": true,
+    "persistence_enabled": false,
+    "auto_apply_enabled": false,
+    "auto_accept_enabled": false,
+    "auto_reject_enabled": false,
+    "safe_for_auto_apply_always_false": true,
+    "requires_human_review_always_true": true,
+    "confirmed_tag_id_mutation_allowed": false,
+    "final_mapping_mutation_allowed": false,
+    "ai_mapping_suggestion_mutation_allowed": false,
+    "external_llm_called": false,
+    "supervisor_called": false,
+    "qwen_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generation_allowed": false,
+    "arelle_run_allowed": false
+  }
+}

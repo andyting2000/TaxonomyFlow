@@ -1,0 +1,620 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-05T14:40:45.768270+00:00",
+    "script": "scripts/benchmark_extraction_mapping.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "with_xbrl_audit": false,
+    "with_arelle_baseline": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_mapping_benchmark_20260505T144045Z.json",
+    "warnings": []
+  },
+  "selected_jobs": [
+    9,
+    11
+  ],
+  "job_9_policy": "Job 9 is smoke-test only and must not be used as the primary benchmark or ground truth.",
+  "benchmark_jobs_analyzed": [
+    11
+  ],
+  "smoke_test_jobs_analyzed": [
+    9
+  ],
+  "missing_jobs": [],
+  "benchmark_dataset_policy": {
+    "minimum_future_dataset": [
+      "3-5 representative PDFs/jobs minimum",
+      "one standard financial statement PDF",
+      "one complex table PDF",
+      "one notes-heavy PDF",
+      "one scanned/image-heavy PDF if available",
+      "one real or near-real customer-like PDF"
+    ],
+    "job_9_policy": [
+      "Job 9 is smoke-test only.",
+      "It can test whether commands run.",
+      "It must not be used as main benchmark or ground truth.",
+      "Do not optimize architecture around Job 9."
+    ],
+    "ground_truth_note": [
+      "This benchmark initially measures system output quality signals.",
+      "It does not prove extraction correctness unless human ground-truth labels are later added.",
+      "A future feature may add ground_truth JSON support."
+    ],
+    "future_ground_truth_design": {
+      "path_pattern": "benchmark_cases/<case_id>/expected_rows.json",
+      "fields": [
+        "expected labels",
+        "expected values",
+        "expected years",
+        "expected statement sections",
+        "expected concept ids where known",
+        "tolerance rules for numeric comparison"
+      ]
+    }
+  },
+  "per_job_metrics": [
+    {
+      "job_metadata": {
+        "job_id": 9,
+        "company_name": "Feature 10E Verification",
+        "registration_number": "10E-TEST",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-04-27T08:56:24.043896",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\c0d8eb1aa1b34f8e90234983ceb5bcec.pdf",
+        "page_count": 3,
+        "job_role": "smoke_test_only"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 89,
+        "rows_with_template_field_id": 34,
+        "rows_without_template_field_id": 55,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 89,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 89,
+        "rows_without_value": 0,
+        "reviewed_count": 83,
+        "unreviewed_count": 6,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 89
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Scope of Filing": 1,
+          "Statement by Directors": 1,
+          "Statement of Financial Position": 87
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 3,
+        "pages_by_classified_statement": {
+          "Scope of Filing": 1,
+          "Statement by Directors": 1,
+          "Statement of Financial Position": 3
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.382,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 55,
+        "unmapped_rate": 0.618,
+        "mapping_source_counts": {
+          "none": 55,
+          "template_field_id": 34
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ifrs-smes:Assets",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:CurrentAssets",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:NoncurrentAssets",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:TradeAndOtherCurrentReceivables",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAndLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAttributableToOwnersOfParent",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Liabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:RetainedEarnings",
+            "count": 2
+          },
+          {
+            "key": "ssmt-mpers:OtherComponentsOfEquity",
+            "count": 2
+          },
+          {
+            "key": "ssmt:CashAndBankBalances",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 3
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 0,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 11,
+        "duplicate_label_rate": 0.1236,
+        "duplicate_label_value_count": 8,
+        "duplicate_label_value_rate": 0.0899,
+        "suspicious_signed_value_count": 27,
+        "suspicious_signed_value_rate": 0.3034,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 21,
+        "rows_with_total_or_subtotal_labels": 4,
+        "keyword_counts": {
+          "cash_bank": 2,
+          "receivable": 3,
+          "payable": 8,
+          "equity": 6
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "current liabilities",
+            "count": 4
+          },
+          {
+            "key": "net current assets",
+            "count": 3
+          },
+          {
+            "key": "assets",
+            "count": 2
+          },
+          {
+            "key": "capital",
+            "count": 2
+          },
+          {
+            "key": "current assets",
+            "count": 2
+          },
+          {
+            "key": "financed by",
+            "count": 2
+          },
+          {
+            "key": "fixed assets",
+            "count": 2
+          },
+          {
+            "key": "total profit & loss (previous year)",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "current liabilities|495,129.04",
+            "count": 3
+          },
+          {
+            "key": "net current assets|-47,432.31",
+            "count": 3
+          },
+          {
+            "key": "capital|3,939,661.59",
+            "count": 2
+          },
+          {
+            "key": "financed by|-6,215,913.41",
+            "count": 2
+          },
+          {
+            "key": "fixed assets|7,318.06",
+            "count": 2
+          },
+          {
+            "key": "total profit & loss (previous year)|-10,155,575.00",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+            "value": "-13,305.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. AMORTIZATION. GOOD WILL",
+            "value": "-2,464,002.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+            "value": "-549,575.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+            "value": "-4,872.61",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+            "value": "-146,860.83",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "CEO CORPORATE SERVICES SDN. BHD.",
+            "value": "756.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ADISS CONSULTANTS SDN BHD",
+            "value": "1,080.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "AMK CORPORATION SERVICES SDN BHD",
+            "value": "475.20",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+            "value": "972.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ASIAN SECRETS SDN BHD",
+            "value": "4,800.00",
+            "statement_type": "Statement of Financial Position"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+            "value": "-13,305.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. AMORTIZATION. GOOD WILL",
+            "value": "-2,464,002.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+            "value": "-549,575.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+            "value": "-4,872.61",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+            "value": "-146,860.83",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "NET CURRENT ASSETS",
+            "value": "-47,432.31",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "NET CURRENT ASSETS",
+            "value": "-47,432.31",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+            "value": "-10,155,575.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "FINANCED BY",
+            "value": "-6,215,913.41",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "NET CURRENT ASSETS",
+            "value": "-47,432.31",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 11,
+        "company_name": "testing",
+        "registration_number": "2024123456789",
+        "financial_year_end": "2025-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-05T08:35:27.148609",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\54205de9e13d4754b7ad6aedc87fdfb8.pdf",
+        "page_count": 3,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 53,
+        "rows_with_template_field_id": 37,
+        "rows_without_template_field_id": 16,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 53,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 53,
+        "rows_without_value": 0,
+        "reviewed_count": 36,
+        "unreviewed_count": 17,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 53
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Scope of Filing": 1,
+          "Statement of Financial Position": 52
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 2,
+        "pages_by_classified_statement": {
+          "Scope of Filing": 1,
+          "Statement of Financial Position": 2
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.6981,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 16,
+        "unmapped_rate": 0.3019,
+        "mapping_source_counts": {
+          "none": 16,
+          "template_field_id": 37
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ssmt-mpers:OtherCurrentAssets",
+            "count": 11
+          },
+          {
+            "key": "ifrs-smes:PropertyPlantAndEquipment",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:CurrentProvisions",
+            "count": 5
+          },
+          {
+            "key": "ifrs-smes:IntangibleAssetsAndGoodwill",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IssuedCapital",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 0
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 0,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 0,
+        "duplicate_label_rate": 0.0,
+        "duplicate_label_value_count": 0,
+        "duplicate_label_value_rate": 0.0,
+        "suspicious_signed_value_count": 7,
+        "suspicious_signed_value_rate": 0.1321,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 20,
+        "rows_with_total_or_subtotal_labels": 2,
+        "keyword_counts": {
+          "cash_bank": 2,
+          "receivable": 3,
+          "payable": 9,
+          "equity": 1
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [],
+        "duplicate_label_value_groups": [],
+        "unmapped_rows": [
+          {
+            "label": "CEO CORPORATE SERVICES SDN. BHD.",
+            "value": "756.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ADISS CONSULTANTS SDN BHD",
+            "value": "1,080.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "AMK CORPORATION SERVICES SDN BHD",
+            "value": "475.20",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+            "value": "972.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ASIAN SECRETS SDN BHD",
+            "value": "4,800.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+            "value": "1,512.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "BEZLIFE MARKETING SDN BHD",
+            "value": "13,000.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "BBS TRUST INT'L LIMITED",
+            "value": "438.48",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "CORPSEC SERVICES SDN BHD",
+            "value": "864.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+            "value": "10,368.00",
+            "statement_type": "Statement of Financial Position"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+            "value": "-13,305.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. AMORTIZATION. GOOD WILL",
+            "value": "-2,464,002.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+            "value": "-549,575.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+            "value": "-4,872.61",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+            "value": "-146,860.83",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "NET CURRENT ASSETS",
+            "value": "-47,432.31",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+            "value": "-1,839,510.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          }
+        ]
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "total_jobs_analyzed": 2,
+    "total_rows": 142,
+    "average_template_field_coverage": 0.5401,
+    "average_confirmed_tag_coverage": 0.0,
+    "average_blank_statement_type_rate": 0.0,
+    "average_unmapped_rate": 0.4599,
+    "average_duplicate_label_rate": 0.0618,
+    "average_suspicious_sign_rate": 0.2177,
+    "jobs_with_xbrl_audit": 0,
+    "jobs_with_arelle_baseline": 0
+  },
+  "risk_summary": {
+    "jobs_with_high_unmapped_rate": [
+      9,
+      11
+    ],
+    "jobs_with_high_duplicate_rate": [],
+    "jobs_with_high_suspicious_sign_rate": [
+      9,
+      11
+    ],
+    "jobs_with_low_template_coverage": [
+      9
+    ],
+    "jobs_with_missing_blank_statement_types": [],
+    "jobs_that_should_not_be_used_as_benchmark": [
+      9
+    ]
+  },
+  "recommended_next_step": "Feature #13I Side-by-side text/table-first extraction prototype, no production cutover"
+}

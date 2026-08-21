@@ -1,0 +1,85 @@
+{
+  "feature": "18F-G-E",
+  "title": "Supervisor internal rollout safety",
+  "generated_at": "2026-07-28",
+  "status": "pass",
+  "safe_defaults": {
+    "SUPERVISOR_PRODUCTION_LIVE_ENABLED": false,
+    "SUPERVISOR_MAPPER_FEEDBACK_ENABLED": false,
+    "SUPERVISOR_MAPPER_FEEDBACK_AUTO_RUN": false,
+    "SUPERVISOR_ORCHESTRATION_ENABLED": false,
+    "SUPERVISOR_ORCHESTRATION_AUTO_REVIEW": false,
+    "SUPERVISOR_ORCHESTRATION_AUTO_REMAP": false,
+    "SUPERVISOR_ORCHESTRATION_ADMIN_ONLY": true,
+    "SUPERVISOR_ORCHESTRATION_ALLOWED_USER_IDS": "",
+    "VITE_SHOW_SUPERVISOR_ORCHESTRATION_QUEUE": false,
+    "VITE_SHOW_SUPERVISOR_MAPPER_FEEDBACK": false,
+    "VITE_SHOW_SUPERVISOR_MOCK_CONTROLS": false
+  },
+  "bounds": {
+    "initial_rollout_batch_maximum": 5,
+    "repository_maximum_batch_default": 10,
+    "initial_rollout_concurrent_live_calls_per_api_process": 1,
+    "repository_concurrent_live_calls_default": 2,
+    "provider_timeout_seconds": 120,
+    "guided_correction_maximum_attempts": 1,
+    "batch_execution": "sequential",
+    "automatic_llm_scheduling": false,
+    "recursive_supervisor_mapper_loop": false
+  },
+  "duplicate_and_stale_state_controls": [
+    "Suggestion row locks serialize review and correction actions.",
+    "Completed reviews are reused unless a new explicit force-refresh request is made.",
+    "Accepted and ignored human-terminal suggestions cannot be reviewed again.",
+    "A persisted revision and unique parent/attempt index block another correction.",
+    "The one-attempt retry limit is persisted and survives process restart.",
+    "Backend actionability remains authoritative when frontend state is stale."
+  ],
+  "payload_boundary": {
+    "auditor_xml_sent": false,
+    "parsed_auditor_xbrl_facts_sent": false,
+    "benchmark_gold_mappings_sent": false,
+    "target_correct_qnames_sent": false,
+    "evaluation_labels_sent": false,
+    "allowed_context": [
+      "production row context",
+      "mapper suggestion",
+      "bounded ranked candidates",
+      "concept cards",
+      "approved few-shot examples",
+      "do-not-confuse notes",
+      "missing-card diagnostics"
+    ]
+  },
+  "expected_safety_counters": {
+    "auto_review_calls": 0,
+    "auto_remap_calls": 0,
+    "auto_apply": 0,
+    "orchestration_confirmed_tag_mutations": 0,
+    "orchestration_final_mapping_mutations": 0
+  },
+  "kill_switch_order": [
+    "SUPERVISOR_PRODUCTION_LIVE_ENABLED=false",
+    "SUPERVISOR_MAPPER_FEEDBACK_ENABLED=false",
+    "SUPERVISOR_ORCHESTRATION_ENABLED=false",
+    "hide frontend queue/live/remap flags on the next frontend build"
+  ],
+  "rollback_preserves": [
+    "mapping suggestions",
+    "Supervisor reviews",
+    "guided revisions",
+    "human decisions",
+    "ordinary Review Workspace workflow"
+  ],
+  "verification": {
+    "tests.test_supervisor_rollout_safety": "5 passed",
+    "supervisor_focused_tests": "170 passed",
+    "frontend_auth_queue_tests": "30 passed",
+    "full_backend_discovery": "1266 passed",
+    "external_provider_calls": 0,
+    "production_database_mutations": 0,
+    "xbrl_generation": 0,
+    "arelle_runs": 0
+  },
+  "result": "manual_advisory_safety_boundaries_preserved"
+}

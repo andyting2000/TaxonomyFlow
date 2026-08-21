@@ -1,0 +1,22 @@
+{
+  "name": "E_same_page_sections",
+  "pages": [
+    {"page_number": 1, "height": 1000, "lines": [
+      {"content": "INDEX", "page_number": 1},
+      {"content": "Statement by Directors 1", "page_number": 1},
+      {"content": "Statutory Declaration 1", "page_number": 1},
+      {"content": "Statement of Financial Position 2", "page_number": 1}
+    ]},
+    {"page_number": 2, "height": 1000, "lines": [
+      {"content": "STATEMENT BY DIRECTORS", "page_number": 2, "polygon": [{"x": 1, "y": 80}]},
+      {"content": "The directors approve these statements.", "page_number": 2, "polygon": [{"x": 1, "y": 200}]},
+      {"content": "STATUTORY DECLARATION", "page_number": 2, "polygon": [{"x": 1, "y": 520}]},
+      {"content": "I solemnly declare the information is correct.", "page_number": 2, "polygon": [{"x": 1, "y": 650}]}
+    ]},
+    {"page_number": 3, "height": 1000, "lines": [{"content": "STATEMENT OF FINANCIAL POSITION", "page_number": 3, "polygon": [{"x": 1, "y": 60}]}]}
+  ],
+  "paragraphs": [],
+  "tables": [],
+  "table_cells": [],
+  "lines": []
+}

@@ -1,0 +1,120 @@
+{
+  "feature_id": "18F-G-B",
+  "generated_at": "2026-07-23T17:40:13.8298379+08:00",
+  "status": "scaffold_complete",
+  "five_revision_quality_baseline": {
+    "improved": 1,
+    "unchanged_but_better_justified": 2,
+    "still_ambiguous": 2,
+    "degraded": 0,
+    "invalid_response": 0,
+    "retry_limit_passed": true
+  },
+  "current_manual_workflow": [
+    "PDF extraction completes",
+    "mapping suggestions are generated",
+    "user explicitly runs one Supervisor review or confirms a bounded batch",
+    "eligible completed review may expose one manual guided-remapping action",
+    "revision persists separately and remains human-review-required",
+    "user explicitly accepts or rejects through existing actions"
+  ],
+  "target_workflow": [
+    "PDF extraction completes",
+    "mapping suggestions are generated",
+    "local orchestration policy derives eligibility and workflow state",
+    "eligible suggestions appear in a read-only queue",
+    "user explicitly runs Supervisor review through an existing endpoint",
+    "completed review determines local remapping eligibility",
+    "user optionally runs one guided remapping through the existing endpoint",
+    "revision persists separately",
+    "human explicitly accepts or rejects"
+  ],
+  "implementation": {
+    "policy_module": "services/supervisor_orchestration_policy.py",
+    "orchestrator_module": "services/supervisor_mapping_orchestrator.py",
+    "persistence_change": false,
+    "frontend_change": false,
+    "background_execution_added": false,
+    "automatic_run_all_endpoint_added": false
+  },
+  "api_contract": {
+    "capabilities": "GET /api/v1/filings/jobs/{job_id}/supervisor-orchestration/capabilities",
+    "plan": "GET /api/v1/filings/jobs/{job_id}/supervisor-orchestration/plan",
+    "plan_behavior": [
+      "owned-job access required",
+      "disabled feature returns 403 after ownership check",
+      "local database evidence only",
+      "zero Supervisor or mapper calls",
+      "zero mapping mutation"
+    ],
+    "manual_execution_routes_unchanged": [
+      "POST /api/v1/filings/jobs/{job_id}/supervisor-reviews/run",
+      "POST /api/v1/filings/jobs/{job_id}/supervisor-reviews/run-batch",
+      "POST /api/v1/filings/jobs/{job_id}/suggestions/{suggestion_id}/remap-with-supervisor-feedback"
+    ]
+  },
+  "queue_contract": {
+    "job_fields": [
+      "job_id",
+      "filing_id",
+      "orchestration_enabled",
+      "mode",
+      "generated_at",
+      "total_suggestions",
+      "eligible_count",
+      "not_eligible_count",
+      "blocked_count",
+      "already_reviewed_count",
+      "remapping_available_count",
+      "revision_created_count",
+      "items",
+      "safety_summary"
+    ],
+    "item_fields": [
+      "suggestion_id",
+      "row_id",
+      "row_label",
+      "statement_family",
+      "initial_qname",
+      "confidence",
+      "requires_confirmation",
+      "orchestration_state",
+      "state_details",
+      "supervisor_eligibility",
+      "eligibility_reasons",
+      "blocking_reasons",
+      "priority",
+      "existing_supervisor_review_id",
+      "supervisor_decision",
+      "remapping_eligibility",
+      "existing_revision_id",
+      "correction_attempts_used",
+      "recommended_manual_action",
+      "requires_human_review",
+      "safe_for_auto_apply",
+      "provenance"
+    ]
+  },
+  "implementation_sequence": [
+    "18F-G-B: disabled plan-only policy/service/API scaffold",
+    "18F-G-B-hotfix-1: calibrate queue thresholds and no-safe-candidate prioritization",
+    "18F-G-C: integrate the calibrated disabled queue into application workflow",
+    "separately approved future work may add read-only frontend status"
+  ],
+  "queue_volume_observation": {
+    "jobs": [59, 60, 61],
+    "total_suggestions": 150,
+    "eligible_count": 114,
+    "eligible_rate": 0.76,
+    "already_reviewed_count": 18,
+    "remapping_available_count": 3,
+    "revision_created_count": 5,
+    "dominant_reasons": {
+      "mapping_no_safe_candidate": 112,
+      "mapper_confidence_below_threshold": 114,
+      "close_competing_candidates": 37
+    },
+    "interpretation": "The scaffold is safe, but the current default policy creates excessive manual queue volume."
+  },
+  "recommended_next_feature": "18F-G-B-hotfix-1 - Calibrate Supervisor orchestration eligibility and priority thresholds"
+}

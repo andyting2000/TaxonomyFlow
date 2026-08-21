@@ -1,0 +1,1807 @@
+{
+  "after_decisions": {
+    "abstain": 11,
+    "ambiguous": 1,
+    "mapped": 13,
+    "structural_only": 51
+  },
+  "analysis_status": "PASS",
+  "before_decisions": {
+    "abstain": 8,
+    "ambiguous": 15,
+    "mapped": 2,
+    "structural_only": 51
+  },
+  "job_id": 70,
+  "persistence_invoked": false,
+  "provider_calls": 0,
+  "quality_metrics": {
+    "abstract_or_nonselectable_candidate_exposure_count": 0,
+    "contradictory_family_top1_count": 0,
+    "correct_family_top1_count": 13,
+    "correct_family_top1_rate": 1.0,
+    "correct_family_top3_count": 13,
+    "correct_family_top3_rate": 1.0,
+    "correct_family_top5_count": 13,
+    "correct_family_top5_rate": 1.0,
+    "expected_absent_scope_count": 9,
+    "expected_absent_scope_detected_count": 9,
+    "expected_filtered_out_count": 0,
+    "safe_abstention_fixture_count": 9,
+    "supported_fixture_count": 13
+  },
+  "read_only": true,
+  "report_type": "job70_candidate_ranking_19c_hotfix_1",
+  "report_version": "19C-hotfix-1-report-v1",
+  "rows": [
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Trade and other current receivables",
+          "qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.86907
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other investments",
+          "qname": "ssmt-mpers:CurrentInvestments",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.654233
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.64007
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total reserves",
+          "qname": "ifrs-smes:OtherReserves",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.801137
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Trade and other non-current receivables",
+          "qname": "ifrs-smes:NoncurrentReceivables",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.77415
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other non-current liabilities",
+          "qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.728204
+        }
+      ],
+      "raw_label": "Other receivables",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "other receivables",
+      "source_row_id": "061ca7f3-c6fa-4c84-a890-ec77b9b6f73b",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.867305
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current assets",
+          "qname": "ifrs-smes:CurrentAssets",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.60907
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Biological assets",
+          "qname": "ssmt-mpers:CurrentBiologicalAssets",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.571968
+        }
+      ],
+      "before_decision": "mapped",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.802292
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total current loans and borrowings",
+          "qname": "ifrs-smes:ShorttermBorrowings",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.603976
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Biological assets",
+          "qname": "ssmt-mpers:CurrentBiologicalAssets",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.573832
+        }
+      ],
+      "raw_label": "Cash at bank",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "cash at bank",
+      "source_row_id": "d8f7cef7-ade0-423b-8003-d060dc2df07f",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Current assets",
+          "qname": "ifrs-smes:CurrentAssets",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.918465
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current tax assets",
+          "qname": "ifrs-smes:CurrentTaxAssetsCurrent",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.71926
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Biological assets",
+          "qname": "ssmt-mpers:CurrentBiologicalAssets",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.709014
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Non-current assets",
+          "qname": "ifrs-smes:NoncurrentAssets",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.829354
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other non-current assets",
+          "qname": "ssmt-mpers:OtherNoncurrentAssets",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.809283
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current tax assets",
+          "qname": "ifrs-smes:CurrentTaxAssetsCurrent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.74016
+        }
+      ],
+      "raw_label": "Total current assets",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total current assets",
+      "source_row_id": "b71547a6-1071-42bd-b7d8-0ac8543e6bf7",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Assets",
+          "qname": "ifrs-smes:Assets",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.876667
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current assets",
+          "qname": "ifrs-smes:CurrentAssets",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.829535
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.747984
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Current tax assets",
+          "qname": "ifrs-smes:CurrentTaxAssetsCurrent",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.700731
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Intangible assets",
+          "qname": "ifrs-smes:IntangibleAssetsAndGoodwill",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.663666
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Biological assets",
+          "qname": "ssmt-mpers:CurrentBiologicalAssets",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.657517
+        }
+      ],
+      "raw_label": "TOTAL ASSETS DISCUSSION",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total assets",
+      "source_row_id": "21564f27-4123-44a4-b265-3c68fb71d3a5",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total issued capital",
+          "qname": "ifrs-smes:IssuedCapital",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.872972
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.598721
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total equity - other components",
+          "qname": "ssmt-mpers:OtherComponentsOfEquity",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.576769
+        }
+      ],
+      "before_decision": "mapped",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total issued capital",
+          "qname": "ifrs-smes:IssuedCapital",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.784357
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.615813
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Trade and other non-current payables",
+          "qname": "ifrs-smes:NoncurrentPayables",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.603935
+        }
+      ],
+      "raw_label": "Share capital",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "share capital",
+      "source_row_id": "73da82ac-fb2e-4f38-b324-c645da6637cc",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Retained earnings at beginning of period",
+          "qname": "ifrs-smes:RetainedEarnings",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.74476
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total issued capital",
+          "qname": "ifrs-smes:IssuedCapital",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.568442
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.55809
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Retained earnings at beginning of period",
+          "qname": "ifrs-smes:RetainedEarnings",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.681597
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Provisions",
+          "qname": "ifrs-smes:CurrentProvisions",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.624328
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total investments in associates",
+          "qname": "ifrs-smes:InvestmentsInAssociates",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.623551
+        }
+      ],
+      "raw_label": "Retained profits / (Accumulated losses)",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "retained profits accumulated losses",
+      "source_row_id": "fd81d5eb-5a0a-475a-b5c9-3280b6170f9e",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total equity attributable to owners",
+          "qname": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.804
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total equity - other components",
+          "qname": "ssmt-mpers:OtherComponentsOfEquity",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.756698
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total reserves",
+          "qname": "ifrs-smes:OtherReserves",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.690041
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total equity - other components",
+          "qname": "ssmt-mpers:OtherComponentsOfEquity",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.691483
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total reserves",
+          "qname": "ifrs-smes:OtherReserves",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.688601
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total cash and cash equivalents",
+          "qname": "ssmt:CashAndBankBalances",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.675738
+        }
+      ],
+      "raw_label": "Total shareholders' equity",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total shareholders equity",
+      "source_row_id": "262771e7-5fe2-4808-a494-f8b19848e61f",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Trade and other current payables",
+          "qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.833019
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total current loans and borrowings",
+          "qname": "ifrs-smes:ShorttermBorrowings",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.651498
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current liabilities",
+          "qname": "ifrs-smes:CurrentLiabilities",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.627534
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total reserves",
+          "qname": "ifrs-smes:OtherReserves",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.65797
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Trade and other non-current payables",
+          "qname": "ifrs-smes:NoncurrentPayables",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.655863
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total equity - other components",
+          "qname": "ssmt-mpers:OtherComponentsOfEquity",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.64187
+        }
+      ],
+      "raw_label": "Other payables and accruals",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "other payables and accruals",
+      "source_row_id": "261b66c8-e9d9-4995-bc71-17dd32620066",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Trade and other current payables",
+          "qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.659122
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total current employee benefits",
+          "qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.607638
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current liabilities",
+          "qname": "ifrs-smes:CurrentLiabilities",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.597285
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total inventories",
+          "qname": "ifrs-smes:InventoriesTotal",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.610897
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other investments",
+          "qname": "ssmt-mpers:CurrentInvestments",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.610122
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Provisions",
+          "qname": "ifrs-smes:NoncurrentProvisions",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.60267
+        }
+      ],
+      "raw_label": "Amount due to director",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "amount due to director",
+      "source_row_id": "5937c877-b2cb-49f3-a4df-a4ad8a7826c4",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "ambiguous",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Current tax liabilities",
+          "qname": "ifrs-smes:CurrentTaxLiabilitiesCurrent",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.714387
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total current employee benefits",
+          "qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.706245
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Provisions",
+          "qname": "ifrs-smes:CurrentProvisions",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.681269
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Provisions",
+          "qname": "ifrs-smes:CurrentProvisions",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.677689
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Provisions",
+          "qname": "ifrs-smes:NoncurrentProvisions",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.671972
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total current employee benefits",
+          "qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.659923
+        }
+      ],
+      "raw_label": "Provision for taxation",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "provision for taxation",
+      "source_row_id": "bd202fd6-6690-4863-8f92-ed348154d178",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Current liabilities",
+          "qname": "ifrs-smes:CurrentLiabilities",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.93
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total current employee benefits",
+          "qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.785883
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Equity and liabilities",
+          "qname": "ifrs-smes:EquityAndLiabilities",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.772654
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Non-current liabilities",
+          "qname": "ifrs-smes:NoncurrentLiabilities",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.849093
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other non-current liabilities",
+          "qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.830996
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current tax liabilities",
+          "qname": "ifrs-smes:CurrentTaxLiabilitiesCurrent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.791039
+        }
+      ],
+      "raw_label": "Total current liabilities",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total current liabilities",
+      "source_row_id": "9cccd45e-321d-4f9c-866e-5451b98a93b7",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Equity and liabilities",
+          "qname": "ifrs-smes:EquityAndLiabilities",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.934871
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current liabilities",
+          "qname": "ifrs-smes:CurrentLiabilities",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.766094
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total equity attributable to owners",
+          "qname": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.683894
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total equity attributable to owners",
+          "qname": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.702613
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Current tax liabilities",
+          "qname": "ifrs-smes:CurrentTaxLiabilitiesCurrent",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.676475
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other non-current liabilities",
+          "qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.673124
+        }
+      ],
+      "raw_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total equity and liabilities",
+      "source_row_id": "49fcc710-5d54-4a64-92df-805a10a02303",
+      "template_group_ids": [
+        "210000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.19808
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.185078
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.094085
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.547206
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.511299
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.507519
+        }
+      ],
+      "raw_label": "Turnover",
+      "semantic_scope_limitations": [
+        "revenue"
+      ],
+      "semantic_source_label": "turnover",
+      "source_row_id": "13fdf0c3-5a72-4945-bf08-5a4449f9bfd1",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.244569
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.140937
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.101345
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, change in fair value of hedging instrument",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeBeforeTaxChangesInFairValueOfHedgingInstrument",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.539174
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.533834
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Aggregated income tax relating to components of other comprehensive income that will be reclassified to profit or loss",
+          "qname": "ssmt-mpers:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLoss",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.52947
+        }
+      ],
+      "raw_label": "Less : Cost of sales",
+      "semantic_scope_limitations": [
+        "cost_of_sales"
+      ],
+      "semantic_source_label": "cost of sales",
+      "source_row_id": "2b5afad4-a55c-4dba-9a93-e1b2c36519e7",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.276793
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.257152
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.080619
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.608251
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.538465
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will not be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.533646
+        }
+      ],
+      "raw_label": "Gross profit",
+      "semantic_scope_limitations": [
+        "gross_profit"
+      ],
+      "semantic_source_label": "gross profit",
+      "source_row_id": "4a999452-21d2-410b-81eb-2d7614cb8958",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.29926
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.20565
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.129619
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.659434
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.541316
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.503518
+        }
+      ],
+      "raw_label": "Staff costs",
+      "semantic_scope_limitations": [
+        "employee_expense"
+      ],
+      "semantic_source_label": "staff costs",
+      "source_row_id": "0cdd863a-c399-483c-bd2e-9745189b85e2",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.256512
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.255098
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.178277
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.60542
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.599489
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.594338
+        }
+      ],
+      "raw_label": "Other operating costs",
+      "semantic_scope_limitations": [
+        "operating_expense"
+      ],
+      "semantic_source_label": "other operating costs",
+      "source_row_id": "5bec3947-7ea9-40e8-9aa8-35b6e88c2e96",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.341653
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.264711
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.170089
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.666024
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.590469
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.555225
+        }
+      ],
+      "raw_label": "Profit / (Loss) from operating activities",
+      "semantic_scope_limitations": [
+        "operating_profit"
+      ],
+      "semantic_source_label": "profit loss from operating activities",
+      "source_row_id": "f6394ebd-a154-4edc-8d54-ce14d6d4d08c",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.350548
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.263293
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.143818
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.600507
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.598455
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.594522
+        }
+      ],
+      "raw_label": "Add : Other income",
+      "semantic_scope_limitations": [
+        "ordinary_income"
+      ],
+      "semantic_source_label": "other income",
+      "source_row_id": "9799f441-1d56-4249-a38f-15c89f3a1b32",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.266732
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.178197
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.05375
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.635509
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.623607
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will not be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.616205
+        }
+      ],
+      "raw_label": "Profit / (Loss) before taxation",
+      "semantic_scope_limitations": [
+        "profit_before_tax"
+      ],
+      "semantic_source_label": "profit loss before taxation",
+      "source_row_id": "de8a7d4a-16c6-43ba-aaa5-73868abb246e",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.215896
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.170207
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.08962
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.569674
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, change in fair value of hedging instrument",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeBeforeTaxChangesInFairValueOfHedgingInstrument",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.51532
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.513636
+        }
+      ],
+      "raw_label": "Less : Taxation",
+      "semantic_scope_limitations": [
+        "tax_expense"
+      ],
+      "semantic_source_label": "taxation",
+      "source_row_id": "02406dc9-8f9e-4cd7-b63f-3d1c56d46295",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.786231
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.668448
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.46
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.711792
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will not be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.70388
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.700647
+        }
+      ],
+      "raw_label": "Total comprehensive profit / (loss) for the year / period",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total comprehensive profit loss for the year period",
+      "source_row_id": "0286f065-513d-4cc3-a630-a1bd66cfcc0e",
+      "template_group_ids": [
+        "420000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.835368
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.508933
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Increase (decrease) through share-based payment transactions, equity",
+          "qname": "ifrs-smes:IncreaseDecreaseThroughSharebasedPaymentTransactions",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.468434
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.650197
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.619041
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Increase (decrease) through share-based payment transactions, equity",
+          "qname": "ifrs-smes:IncreaseDecreaseThroughSharebasedPaymentTransactions",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.607549
+        }
+      ],
+      "raw_label": "Comprehensive loss for the period",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "comprehensive loss for the period",
+      "source_row_id": "67a3b478-9c2d-4882-aab2-456012436b21",
+      "template_group_ids": [
+        "610000"
+      ]
+    },
+    {
+      "after_decision": "mapped",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.8344
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.549419
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Issuance of shares",
+          "qname": "ifrs-smes:IssueOfEquity",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.44907
+        }
+      ],
+      "before_decision": "abstain",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.697
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.618208
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.598559
+        }
+      ],
+      "raw_label": "Comprehensive profit for the year",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "comprehensive profit for the year",
+      "source_row_id": "fef51f3d-67d7-4ca0-90bc-04b2f0128969",
+      "template_group_ids": [
+        "610000"
+      ]
+    },
+    {
+      "after_decision": "abstain",
+      "after_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Amount of outstanding shares issued during financial year",
+          "qname": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.481024
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total amount of shares issued during financial year",
+          "qname": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidDuringPeriod",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.476535
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Balance at the beginning of period",
+          "qname": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidOutstanding",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.469548
+        }
+      ],
+      "before_decision": "ambiguous",
+      "before_top3": [
+        {
+          "exclusion_reason": null,
+          "label": "Amount of outstanding shares issued during financial year",
+          "qname": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.620162
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total amount of shares issued during financial year",
+          "qname": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidDuringPeriod",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.614851
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Balance at the beginning of period",
+          "qname": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidOutstanding",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.60782
+        }
+      ],
+      "raw_label": "At beginning and end of the financial year / period",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "at beginning and end of the financial year period",
+      "source_row_id": "d29036cd-9863-4d50-b87f-76f628c4d783",
+      "template_group_ids": [
+        "740000"
+      ]
+    }
+  ],
+  "safety_summary": {
+    "abstract_fact_selection_count": 0,
+    "advisory_only": true,
+    "arelle_runs": 0,
+    "auditor_xml_used": false,
+    "benchmark_gold_used": false,
+    "confirmed_tag_id_mutations": 0,
+    "existing_mapping_suggestion_mutations": 0,
+    "final_mapping_mutations": 0,
+    "maximum_provider_calls_per_eligible_row": 1,
+    "narrative_or_container_mapping_count": 0,
+    "payload_boundary_violations": 0,
+    "provider_calls": 0,
+    "recursive_retries": 0,
+    "requires_human_review_count": 76,
+    "safe_for_auto_apply_count": 0,
+    "source_rows_dropped": 0,
+    "template_field_mutations": 0,
+    "template_group_leakage_count": 0,
+    "xbrl_generation_count": 0
+  },
+  "versions": {
+    "baseline_mapping": "19C-v1",
+    "retrieval": "19C-section-aware-retrieval-v2",
+    "target_mapping": "19C-v2"
+  }
+}

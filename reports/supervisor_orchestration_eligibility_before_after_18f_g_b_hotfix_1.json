@@ -1,0 +1,234 @@
+{
+  "feature_id": "18F-G-B-hotfix-1",
+  "generated_at": "2026-07-23T14:10:17.880899+00:00",
+  "sample": {
+    "job_ids": [
+      59,
+      60,
+      61
+    ],
+    "total_suggestions": 150,
+    "source": "local persisted suggestions/reviews/revisions only",
+    "external_calls": 0
+  },
+  "before": {
+    "total": 150,
+    "eligible": 114,
+    "eligible_rate": 0.76,
+    "priority_distribution": {
+      "high": 112,
+      "medium": 2
+    },
+    "not_eligible": 18,
+    "blocked": 0,
+    "already_reviewed": 18
+  },
+  "after": {
+    "total": 150,
+    "eligible": 47,
+    "eligible_rate": 0.3133,
+    "priority_distribution": {
+      "high": 13,
+      "medium": 34
+    },
+    "not_eligible": 85,
+    "blocked": 0,
+    "already_reviewed": 18,
+    "per_job": {
+      "59": {
+        "total_suggestions": 50,
+        "eligible_count": 16,
+        "not_eligible_count": 24,
+        "blocked_count": 0,
+        "already_reviewed_count": 10,
+        "remapping_available_count": 1,
+        "revision_created_count": 3
+      },
+      "60": {
+        "total_suggestions": 50,
+        "eligible_count": 15,
+        "not_eligible_count": 33,
+        "blocked_count": 0,
+        "already_reviewed_count": 2,
+        "remapping_available_count": 0,
+        "revision_created_count": 1
+      },
+      "61": {
+        "total_suggestions": 50,
+        "eligible_count": 16,
+        "not_eligible_count": 28,
+        "blocked_count": 0,
+        "already_reviewed_count": 6,
+        "remapping_available_count": 2,
+        "revision_created_count": 1
+      }
+    }
+  },
+  "delta": {
+    "eligible_count": -67,
+    "eligible_rate": -0.4467
+  },
+  "positive_anchors": [
+    {
+      "suggestion_id": "09cad642-1871-4eee-b1d5-b04bb6d1e9e6",
+      "label": "Profit / (Loss) before taxation",
+      "quality_classification": "unchanged_but_better_justified",
+      "risk_qualified": true,
+      "eligibility_score": 11,
+      "strong_signals": [
+        "statement_family_mismatch",
+        "previous_supervisor_disagreement"
+      ],
+      "queue_classification": "already_reviewed",
+      "queue_exclusion_reason": "suggestion_superseded_by_revision"
+    },
+    {
+      "suggestion_id": "9f5b310d-4b6f-4b4e-82fe-2d488554f769",
+      "label": "Tax expenses for the year",
+      "quality_classification": "still_ambiguous",
+      "risk_qualified": true,
+      "eligibility_score": 15,
+      "strong_signals": [
+        "statement_family_mismatch",
+        "previous_supervisor_disagreement",
+        "no_safe_revised_mapping"
+      ],
+      "queue_classification": "already_reviewed",
+      "queue_exclusion_reason": "suggestion_superseded_by_revision"
+    },
+    {
+      "suggestion_id": "6c67617e-f6e4-4cf3-b3c2-e483fe682f75",
+      "label": "Share capital",
+      "quality_classification": "unchanged_but_better_justified",
+      "risk_qualified": true,
+      "eligibility_score": 6,
+      "strong_signals": [
+        "previous_supervisor_disagreement"
+      ],
+      "queue_classification": "already_reviewed",
+      "queue_exclusion_reason": "suggestion_superseded_by_revision"
+    },
+    {
+      "suggestion_id": "38b4306a-0fae-47b6-af5a-ead713204c39",
+      "label": "Cash flows from investing activities",
+      "quality_classification": "improved",
+      "risk_qualified": true,
+      "eligibility_score": 12,
+      "strong_signals": [
+        "broad_substitute_with_concrete_alternative",
+        "previous_supervisor_disagreement"
+      ],
+      "queue_classification": "already_reviewed",
+      "queue_exclusion_reason": "suggestion_superseded_by_revision"
+    },
+    {
+      "suggestion_id": "c3d67b79-9543-4018-9dd1-85e7c60d56f2",
+      "label": "Tax expenses for the year",
+      "quality_classification": "still_ambiguous",
+      "risk_qualified": true,
+      "eligibility_score": 10,
+      "strong_signals": [
+        "statement_family_mismatch",
+        "previous_supervisor_disagreement"
+      ],
+      "queue_classification": "already_reviewed",
+      "queue_exclusion_reason": "suggestion_superseded_by_revision"
+    }
+  ],
+  "positive_anchor_recall": {
+    "recalled": 5,
+    "total": 5,
+    "rate": 1.0,
+    "note": "Persisted revisions remain already_reviewed and are not requeued; recall measures their local risk qualification."
+  },
+  "no_safe_revision_anchors": [
+    {
+      "suggestion_id": "9f5b310d-4b6f-4b4e-82fe-2d488554f769",
+      "risk_qualified": true,
+      "priority": "high",
+      "strong_signals": [
+        "statement_family_mismatch",
+        "previous_supervisor_disagreement",
+        "no_safe_revised_mapping"
+      ]
+    }
+  ],
+  "low_risk_agree_cases": [
+    {
+      "suggestion_id": "c1128e1c-e6ca-480b-a95b-0bdf1f00278c",
+      "label": "Cash flows from investing activities",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "38feda38-bec0-427e-a28d-f5d258adb081",
+      "label": "Cash and cash equivalents at beginning of year / period",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "08ee5eb7-abcb-489f-be83-820d76369eaa",
+      "label": "Cash and cash equivalents at end of year / period",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "35940459-d520-463a-8eaa-466aa3c4516c",
+      "label": "Net cash from operating activities",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "790e39da-f6dc-42a7-9b2b-8d0b6a1e52fd",
+      "label": "Add : Other income",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "681f1ed0-721f-4a26-8a67-ef275cb5811a",
+      "label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "144bcaa2-a328-42f4-a133-49905aa6411d",
+      "label": "Trade receivables",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "4b373675-5dab-44db-a6a9-3fb1451ae87a",
+      "label": "At beginning and end of the year",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "9c392e31-b8eb-4a91-8508-83be0d669442",
+      "label": "Cash and cash equivalent at beginning of the year",
+      "classification": "already_reviewed",
+      "excluded": true
+    },
+    {
+      "suggestion_id": "92fc48ca-7694-4d5b-8eaf-3dcc1adf3895",
+      "label": "Total non-current assets",
+      "classification": "already_reviewed",
+      "excluded": true
+    }
+  ],
+  "low_risk_agree_exclusion": {
+    "excluded": 10,
+    "total": 10,
+    "rate": 1.0
+  },
+  "decision_checks": {
+    "eligibility_rate_between_0_25_and_0_40": true,
+    "five_revision_anchor_recall_is_100_percent": true,
+    "all_no_safe_revision_anchors_risk_qualified": true,
+    "low_risk_agree_exclusion_at_least_80_percent": true,
+    "requires_confirmation_alone_never_eligible": true,
+    "confidence_alone_never_eligible": true,
+    "planning_external_calls_zero": true,
+    "safety_boundaries_unchanged": true
+  },
+  "decision": "pass"
+}

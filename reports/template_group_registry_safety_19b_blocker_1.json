@@ -1,0 +1,43 @@
+{
+  "feature_id": "19B-blocker-1",
+  "generated_on": "2026-07-31",
+  "status": "PASS",
+  "canonical_source_of_truth": "taxonomy/template_group_registry_mpers_2022_v1.json",
+  "registry_id": "template_group_registry_mpers_2022_v1",
+  "semantic_inventory_version": "mpers-2022-v1",
+  "source_taxonomy_version": "SSMxT_2022v1.0",
+  "registry_file_sha256": "4fe4dd11f5e33ca1b70233b3927ad971d709c0773e863c4b53ff2789c612ea28",
+  "semantic_inventory_sha256": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+  "report_id": "template_group_registry_safety_19b_blocker_1",
+  "scope": "inventory reconciliation and metadata-only compatibility",
+  "forbidden_action_counts": {
+    "live_llm_calls": 0,
+    "azure_calls": 0,
+    "supervisor_calls": 0,
+    "database_mutations": 0,
+    "mapping_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "template_field_value_mutations": 0,
+    "xbrl_generation_runs": 0,
+    "arelle_runs": 0
+  },
+  "unchanged_runtime_assets": {
+    "mpers_templates_json_sha256": "892024b5869ba983acde86dbf0e940f78dcb35459422455f21e8935da19c6e5a",
+    "role_xsd_sha256": "145bf4a40885bf2f6145121b805161ee94fb177150cd2fea200e91d0e825872a",
+    "concept_membership_validated_for_all_24": true
+  },
+  "validation_passed": true,
+  "test_evidence": [
+    "Focused canonical registry tests passed: 25 tests in 0.119s.",
+    "Targeted template service, mapping, Review Workspace API, ownership, document structure, taxonomy metadata, and XBRL validation regressions passed: 110 tests in 13.277s.",
+    "Frontend authenticated helper and Review Workspace source regressions passed: 30 tests.",
+    "Frontend production build passed: 1,586 modules transformed.",
+    "Full backend discovery passed: 1,342 tests in 44.413s.",
+    "Changed Python files passed py_compile."
+  ],
+  "additional_safety_evidence": [
+    "mpers_templates.json and the bundled role XSD retain their audited SHA-256 hashes.",
+    "Unit and full-suite execution used fakes/mocks only; no live LLM, Azure, Supervisor, database mutation, mapping mutation, XBRL generation, or Arelle execution occurred."
+  ]
+}

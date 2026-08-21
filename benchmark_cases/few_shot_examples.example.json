@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Example schema for future few-shot prompt examples. This file contains placeholders only and must not contain real private PDF text unless explicitly approved for local-only use.",
+  "few_shot_policy": {
+    "manual_verification_required": true,
+    "keep_examples_small": true,
+    "avoid_confidential_data": true,
+    "exclude_prompt_examples_from_evaluation": true,
+    "do_not_paste_entire_pdfs": true,
+    "preferred_example_type": "small row or table snippet with expected strict JSON output",
+    "leakage_warning": "PDFs or pages used as few-shot prompt examples must be excluded from benchmark scoring unless explicitly labeled as training/few-shot cases."
+  },
+  "examples": [
+    {
+      "example_id": "few_shot_candidate_001",
+      "source_case_id": "ocr_clean_01",
+      "source_pdf_role": "few_shot_candidate",
+      "allowed_for_prompting": false,
+      "excluded_from_evaluation": true,
+      "page_number": null,
+      "statement_type": "Statement of Financial Position",
+      "source_evidence_excerpt": "<short manually verified source excerpt only>",
+      "input_type": "ocr_text",
+      "input_excerpt": "<small OCR/text/table snippet, not an entire PDF>",
+      "expected_output_schema": "NormalizedFinancialRow[]",
+      "expected_rows": [
+        {
+          "raw_label": "<raw source label>",
+          "clean_label": "<cleaned label>",
+          "raw_value": "<raw value as shown>",
+          "normalized_value": "<numeric normalized value>",
+          "year": "<year shown in table column>",
+          "column_name": "<column header>",
+          "statement_section": "<statement or note section>",
+          "row_type": "line_item",
+          "sign_source": "explicit_minus_or_brackets_or_positive",
+          "expected_concept_id": null,
+          "evidence_text": "<source row evidence>",
+          "do_not_invent": true
+        }
+      ],
+      "mapping_notes": "Concept IDs are optional for few-shot normalization examples. Do not teach the extractor to invent taxonomy mappings.",
+      "why_this_is_a_good_example": "Use only if it demonstrates a recurring OCR/table/sign pattern clearly.",
+      "caution_notes": [
+        "Manually verify every expected row.",
+        "Remove unnecessary confidential names.",
+        "Do not evaluate few-shot improvements on this exact page unless it is labeled as a training/few-shot case."
+      ]
+    },
+    {
+      "example_id": "few_shot_candidate_002",
+      "source_case_id": "complex_table_01",
+      "source_pdf_role": "few_shot_candidate",
+      "allowed_for_prompting": false,
+      "excluded_from_evaluation": true,
+      "page_number": null,
+      "statement_type": "Statement of Financial Position",
+      "source_evidence_excerpt": "<short manually verified multi-year table excerpt>",
+      "input_type": "table_candidate",
+      "input_excerpt": "<small table snippet with current and prior year columns>",
+      "expected_output_schema": "NormalizedFinancialRow[]",
+      "expected_rows": [
+        {
+          "raw_label": "<raw source label>",
+          "clean_label": "<cleaned label>",
+          "raw_value": "<raw current-year value>",
+          "normalized_value": "<normalized current-year value>",
+          "year": "<current year>",
+          "column_name": "current_year",
+          "statement_section": "<statement section>",
+          "row_type": "line_item",
+          "sign_source": "positive",
+          "expected_concept_id": null,
+          "evidence_text": "<source row evidence>",
+          "do_not_invent": true
+        }
+      ],
+      "mapping_notes": "If mapping examples are added later, keep them separate from extraction normalization examples.",
+      "why_this_is_a_good_example": "Use only if it clearly teaches year/column handling.",
+      "caution_notes": [
+        "Exclude this page from holdout scoring if used in a prompt.",
+        "Keep at least 3-5 other PDFs/pages as holdout evaluation cases."
+      ]
+    }
+  ]
+}

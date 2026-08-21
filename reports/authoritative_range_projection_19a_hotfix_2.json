@@ -1,0 +1,53 @@
+{
+  "report_id": "authoritative_range_projection_19a_hotfix_2",
+  "feature_id": "19A-hotfix-2",
+  "generated_on": "2026-08-10",
+  "status": "PASS",
+  "fresh_real_pdf_smoke_status": "PENDING",
+  "job_66_v2_contradiction": {
+    "section": "Notes to the Financial Statements",
+    "printed_range": [15, 22],
+    "existing_page_mapping_pdf_range": [16, 23],
+    "wrong_published_pdf_range": [0, 0],
+    "wrong_published_azure_range": [1, 1]
+  },
+  "authority_rule": {
+    "reliable_alignment_minimum_confidence": 0.8,
+    "requires_human_review_must_be": false,
+    "allowed_alignment_methods": ["weighted_heading_anchor_consensus", "heading_anchor_piecewise"],
+    "explicit_unique_start_and_end_mapping_required": true,
+    "heading_behavior": "confirm the mapped start, refine same-page boundaries, or help when mappings are missing; never replace a reliable explicit mapped range with an off-regime page"
+  },
+  "consistency_validator": {
+    "warning": "section_range_conflicts_with_page_mapping",
+    "reliable_contradiction": "reconcile to the unique mapped range and record section_range_reconciled_to_page_mapping",
+    "unreliable_or_unsafe_contradiction": "clear the range, require review, and publish it as unresolved rather than publish a false range"
+  },
+  "job_66_expected_derived_ranges": {
+    "directors_report": {"printed": [1, 4], "pdf": [2, 5], "azure": [3, 6]},
+    "statement_by_directors": {"printed": [5, 5], "pdf": [6, 6], "azure": [7, 7]},
+    "statutory_declaration": {"printed": [6, 6], "pdf": [7, 7], "azure": [8, 8]},
+    "independent_auditors_report": {"printed": [7, 10], "pdf": [8, 11], "azure": [9, 12]},
+    "statement_of_financial_position": {"printed": [11, 11], "pdf": [12, 12], "azure": [13, 13]},
+    "statement_of_comprehensive_income": {"printed": [12, 12], "pdf": [13, 13], "azure": [14, 14]},
+    "statement_of_changes_in_equity": {"printed": [13, 13], "pdf": [14, 14], "azure": [15, 15]},
+    "statement_of_cash_flows": {"printed": [14, 14], "pdf": [15, 15], "azure": [16, 16]},
+    "notes_to_financial_statements": {"printed": [15, 22], "pdf": [16, 23], "azure": [17, 24]}
+  },
+  "job_66_regression_fixture_result": {
+    "resolved_range_projection_success_count": 9,
+    "explicit_range_projection_success_count": 3,
+    "section_page_mapping_validated_count": 9,
+    "section_page_mapping_conflict_count": 0,
+    "forced_contradiction_detected_count": 1,
+    "forced_contradiction_reconciled_count": 1,
+    "notes_pdf_range": [16, 23],
+    "notes_azure_range": [17, 24]
+  },
+  "artifact_contract": {
+    "feature_version": "19A-v3",
+    "filename": "structure_19a_v3.json",
+    "loads_19a_v2_as_current": false,
+    "dependent_19b_19c_staleness": "source version and hash changes invalidate dependent artifacts"
+  }
+}

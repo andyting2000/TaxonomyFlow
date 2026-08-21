@@ -1,0 +1,267 @@
+{
+  "run_metadata": {
+    "feature": "13V",
+    "generated_at": "2026-05-13T08:02:08Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "benchmark_rerun": false,
+    "reference_xml_sent_to_model": false,
+    "report_type": "mapping_handoff_contract",
+    "script": "scripts/build_extraction_v2_mapping_handoff.py"
+  },
+  "input_reports": {
+    "cleaned_candidates": "reports\\extraction_v2_cleaned_candidates_13s.json",
+    "mapping_gate_report": "reports\\extraction_v2_mapping_candidate_gate_13t.json",
+    "manual_review_queue": "reports\\extraction_v2_manual_review_queue_13t.json",
+    "data_contract": "reports\\manual_review_queue_data_contract_13u.json",
+    "ui_api_plan": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\manual_review_queue_ui_api_plan_13u.json"
+  },
+  "handoff_package_metadata": {
+    "total_handoff_candidates": 411,
+    "requires_confirmation_count": 180,
+    "validation_passed": true
+  },
+  "allowed_gate_statuses": [
+    "auto_mappable_candidate",
+    "suggest_mapping_only"
+  ],
+  "excluded_gate_statuses": [
+    "blocked_from_mapping",
+    "manual_review_required",
+    "reference_only_or_context"
+  ],
+  "confirmation_rules": {
+    "auto_mappable_candidate": "requires_confirmation=false",
+    "suggest_mapping_only": "requires_confirmation=true"
+  },
+  "conflict_rules": [
+    "Unresolved conflict candidates must not enter handoff.",
+    "Conflict group options are preserved in review reports, not auto-selected in handoff.",
+    "Future reviewer decisions may create a new approved handoff item."
+  ],
+  "handoff_item_schema": {
+    "required_fields": [
+      "mapping_input_id",
+      "source_candidate_id",
+      "case_id",
+      "page_number",
+      "row_type",
+      "label or text",
+      "statement_section or warning",
+      "gate_status",
+      "requires_confirmation",
+      "source_provenance",
+      "mapping_allowed",
+      "audit_trail"
+    ],
+    "optional_fields": [
+      "original_candidate_id",
+      "cleaned_candidate_id",
+      "value",
+      "previous_value",
+      "readiness_score",
+      "readiness_level",
+      "confidence",
+      "source_snippet",
+      "warning_flags",
+      "review_reasons",
+      "duplicate_group_id",
+      "conflict_group_id",
+      "manual_review_queue_id"
+    ]
+  },
+  "examples": {
+    "auto_mappable_candidate": {
+      "mapping_input_id": "13V-MAP-0001",
+      "gate_status": "auto_mappable_candidate",
+      "requires_confirmation": false,
+      "mapping_allowed": true
+    },
+    "suggest_mapping_only": {
+      "mapping_input_id": "13V-MAP-0002",
+      "gate_status": "suggest_mapping_only",
+      "requires_confirmation": true,
+      "mapping_allowed": true
+    }
+  },
+  "validation_rules": [
+    "No blocked, manual-review, reference/context, suppressed, downgraded, rejected, or unresolved conflict candidates may be included.",
+    "Suggest-only items must have requires_confirmation=true.",
+    "Auto-mappable items must have requires_confirmation=false.",
+    "Every item must have stable identity, case_id, row_type, usable label or text, provenance, and audit trail.",
+    "Numeric items must contain numeric-looking current or previous values.",
+    "Text blocks must contain sufficient narrative text."
+  ],
+  "required_provenance_fields": [
+    "source_candidate_id",
+    "original_candidate_id",
+    "cleaned_candidate_id",
+    "source_method",
+    "source_provenance",
+    "page_number",
+    "audit_trail"
+  ],
+  "expected_downstream_13w_behavior": [
+    "Consume only handoff_items from this package.",
+    "Preserve requires_confirmation and warning_flags.",
+    "Generate mapping candidates only; do not generate XBRL.",
+    "Do not call semantic matcher for excluded candidates.",
+    "Keep mapping suggestions traceable to mapping_input_id and source_candidate_id."
+  ],
+  "prohibited_downstream_behavior": [
+    "Do not treat this as final taxonomy mapping.",
+    "Do not call semantic matcher for candidates outside the handoff package.",
+    "Do not generate XBRL or run Arelle from this contract alone.",
+    "Do not mutate DB from report-based handoff output.",
+    "Do not auto-map suggest-only candidates without confirmation metadata."
+  ],
+  "source_contract_references": {
+    "data_contract_mapping_handoff_contract": {
+      "allowed_with_confirmation": [
+        {
+          "conditions": [
+            "requires_confirmation=true",
+            "not conflict-blocked",
+            "review warnings preserved"
+          ],
+          "gate_status": "suggest_mapping_only",
+          "requires_confirmation": true
+        },
+        {
+          "conditions": [
+            "reviewer explicitly approved candidate"
+          ],
+          "decision_status": "approved_for_mapping",
+          "requires_confirmation": false
+        },
+        {
+          "conditions": [
+            "final corrected fields captured in reviewer decision"
+          ],
+          "decision_status": "corrected_and_approved",
+          "requires_confirmation": false
+        }
+      ],
+      "allowed_without_review": [
+        {
+          "conditions": [
+            "not conflict-blocked",
+            "not suppressed",
+            "not downgraded",
+            "valid label/value/text"
+          ],
+          "gate_status": "auto_mappable_candidate",
+          "requires_confirmation": false
+        }
+      ],
+      "blocked_from_handoff": [
+        "manual_review_required and unresolved",
+        "blocked_from_mapping",
+        "reference_only_or_context",
+        "suppressed exact duplicate",
+        "downgraded metadata/date/year row",
+        "unresolved conflict group",
+        "rejected candidate",
+        "candidate requiring aggregation policy",
+        "candidate requiring dimension policy"
+      ],
+      "handoff_item_fields": [
+        "mapping_allowed",
+        "requires_confirmation",
+        "review_decision_id",
+        "original_candidate_id",
+        "cleaned_candidate_id",
+        "final_label",
+        "final_value",
+        "final_previous_value",
+        "final_row_type",
+        "final_statement_section",
+        "warnings",
+        "provenance"
+      ]
+    },
+    "ui_api_mapping_handoff_rules": {
+      "allowed_with_confirmation": [
+        {
+          "conditions": [
+            "requires_confirmation=true",
+            "not conflict-blocked",
+            "review warnings preserved"
+          ],
+          "gate_status": "suggest_mapping_only",
+          "requires_confirmation": true
+        },
+        {
+          "conditions": [
+            "reviewer explicitly approved candidate"
+          ],
+          "decision_status": "approved_for_mapping",
+          "requires_confirmation": false
+        },
+        {
+          "conditions": [
+            "final corrected fields captured in reviewer decision"
+          ],
+          "decision_status": "corrected_and_approved",
+          "requires_confirmation": false
+        }
+      ],
+      "allowed_without_review": [
+        {
+          "conditions": [
+            "not conflict-blocked",
+            "not suppressed",
+            "not downgraded",
+            "valid label/value/text"
+          ],
+          "gate_status": "auto_mappable_candidate",
+          "requires_confirmation": false
+        }
+      ],
+      "blocked_from_handoff": [
+        "manual_review_required and unresolved",
+        "blocked_from_mapping",
+        "reference_only_or_context",
+        "suppressed exact duplicate",
+        "downgraded metadata/date/year row",
+        "unresolved conflict group",
+        "rejected candidate",
+        "candidate requiring aggregation policy",
+        "candidate requiring dimension policy"
+      ],
+      "handoff_item_fields": [
+        "mapping_allowed",
+        "requires_confirmation",
+        "review_decision_id",
+        "original_candidate_id",
+        "cleaned_candidate_id",
+        "final_label",
+        "final_value",
+        "final_previous_value",
+        "final_row_type",
+        "final_statement_section",
+        "warnings",
+        "provenance"
+      ]
+    }
+  },
+  "non_goals": [
+    "This is not taxonomy mapping.",
+    "This is not semantic matching.",
+    "This is not XBRL generation.",
+    "This does not prove mapping accuracy.",
+    "This is only the safe report-based input contract for #13W."
+  ],
+  "recommended_next_feature": "Feature #13W - Mapping candidate generation v2 with conservative readiness gates."
+}

@@ -1,0 +1,2625 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-11T07:05:12.767923+00:00",
+    "script": "scripts/benchmark_extraction_mapping.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "with_xbrl_audit": false,
+    "with_arelle_baseline": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_mapping_benchmark_20260511T070512Z.json",
+    "warnings": []
+  },
+  "selected_jobs": [
+    13,
+    14,
+    15,
+    18,
+    19,
+    20,
+    23
+  ],
+  "job_9_policy": "Job 9 is smoke-test only and must not be used as the primary benchmark or ground truth.",
+  "benchmark_jobs_analyzed": [
+    13,
+    14,
+    15,
+    18,
+    19,
+    20,
+    23
+  ],
+  "smoke_test_jobs_analyzed": [],
+  "missing_jobs": [],
+  "benchmark_dataset_policy": {
+    "minimum_future_dataset": [
+      "3-5 representative PDFs/jobs minimum",
+      "one standard financial statement PDF",
+      "one complex table PDF",
+      "one notes-heavy PDF",
+      "one scanned/image-heavy PDF if available",
+      "one real or near-real customer-like PDF"
+    ],
+    "job_9_policy": [
+      "Job 9 is smoke-test only.",
+      "It can test whether commands run.",
+      "It must not be used as main benchmark or ground truth.",
+      "Do not optimize architecture around Job 9."
+    ],
+    "ground_truth_note": [
+      "This benchmark initially measures system output quality signals.",
+      "It does not prove extraction correctness unless human ground-truth labels are later added.",
+      "A future feature may add ground_truth JSON support."
+    ],
+    "future_ground_truth_design": {
+      "path_pattern": "benchmark_cases/<case_id>/expected_rows.json",
+      "fields": [
+        "expected labels",
+        "expected values",
+        "expected years",
+        "expected statement sections",
+        "expected concept ids where known",
+        "tolerance rules for numeric comparison"
+      ]
+    }
+  },
+  "per_job_metrics": [
+    {
+      "job_metadata": {
+        "job_id": 13,
+        "company_name": "BizAid Technologies Sdn. Bhd.",
+        "registration_number": "200101007565",
+        "financial_year_end": "2025-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T07:36:24.374292",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\4d49fc9f354a4285932bc6b24bc40b5b.pdf",
+        "page_count": 3,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 62,
+        "rows_with_template_field_id": 47,
+        "rows_without_template_field_id": 15,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 62,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 61,
+        "rows_without_value": 1,
+        "reviewed_count": 47,
+        "unreviewed_count": 15,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 62
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Statement of Financial Position": 62
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 1,
+        "pages_by_classified_statement": {
+          "Statement of Financial Position": 2
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.7581,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 15,
+        "unmapped_rate": 0.2419,
+        "mapping_source_counts": {
+          "none": 15,
+          "template_field_id": 47
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ssmt-mpers:OtherCurrentAssets",
+            "count": 12
+          },
+          {
+            "key": "ifrs-smes:RetainedEarnings",
+            "count": 11
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 10
+          },
+          {
+            "key": "ifrs-smes:PropertyPlantAndEquipment",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:IntangibleAssetsAndGoodwill",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:IssuedCapital",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 0
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 0,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 0,
+        "duplicate_label_rate": 0.0,
+        "duplicate_label_value_count": 0,
+        "duplicate_label_value_rate": 0.0,
+        "suspicious_signed_value_count": 14,
+        "suspicious_signed_value_rate": 0.2258,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 21,
+        "rows_with_total_or_subtotal_labels": 12,
+        "keyword_counts": {
+          "cash_bank": 3,
+          "receivable": 3,
+          "payable": 8,
+          "equity": 1
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [],
+        "duplicate_label_value_groups": [],
+        "unmapped_rows": [
+          {
+            "label": "CEO CORPORATE SERVICES SDN. BHD.",
+            "value": "756.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ADISS CONSULTANTS SDN BHD",
+            "value": "1,080.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "AMK CORPORATION SERVICES SDN BHD",
+            "value": "475.20",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+            "value": "972.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ASIAN SECRETS SDN BHD",
+            "value": "4,800.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+            "value": "1,512.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "BEZLIFE MARKETING SDN BHD",
+            "value": "13,000.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "BBS TRUST INT'L LIMITED",
+            "value": "438.48",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "CORPSEC SERVICES SDN BHD",
+            "value": "864.00",
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+            "value": "10,368.00",
+            "statement_type": "Statement of Financial Position"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+            "value": "-13,305.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. AMORTIZATION. GOOD WILL",
+            "value": "-2,464,002.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+            "value": "-549,575.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+            "value": "-4,872.61",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+            "value": "-146,860.83",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "NET CURRENT ASSETS",
+            "value": "-47,432.31",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR) - P&L 2001",
+            "value": "-1,839,510.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR) - P&L 2002",
+            "value": "-5,372,033.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR) - P&L 2003",
+            "value": "-549,005.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR) - P&L 2004",
+            "value": "-1,483,026.00",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 14,
+        "company_name": "BEZLIFE MARKETING SDN. BHD.",
+        "registration_number": "202201047805",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T07:43:34.476975",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\1f4df405590943299e88138ae2a4fb6c.pdf",
+        "page_count": 26,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 169,
+        "rows_with_template_field_id": 141,
+        "rows_without_template_field_id": 28,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 169,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 168,
+        "rows_without_value": 1,
+        "reviewed_count": 138,
+        "unreviewed_count": 31,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 169
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Analysis of Profit or Loss (By Function)": 34,
+          "Auditors Report": 11,
+          "Directors Report": 11,
+          "Notes - Corporate Information": 8,
+          "Notes - Information on Companies": 5,
+          "Notes - Reports": 4,
+          "Notes - Significant Accounting Policies": 20,
+          "Notes to Financial Statements": 1,
+          "Statement by Directors": 9,
+          "Statement of Cash Flows (Indirect Method)": 21,
+          "Statement of Changes in Equity": 9,
+          "Statement of Comprehensive Income": 16,
+          "Statement of Financial Position": 20
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 13,
+        "pages_by_classified_statement": {
+          "Analysis of Profit or Loss (By Function)": 1,
+          "Auditors Report": 6,
+          "Directors Report": 3,
+          "Notes - Corporate Information": 3,
+          "Notes - Information on Companies": 2,
+          "Notes - Reports": 2,
+          "Notes - Significant Accounting Policies": 7,
+          "Notes to Financial Statements": 1,
+          "Statement by Directors": 3,
+          "Statement of Cash Flows (Indirect Method)": 1,
+          "Statement of Changes in Equity": 1,
+          "Statement of Comprehensive Income": 2,
+          "Statement of Financial Position": 1
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.8343,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 28,
+        "unmapped_rate": 0.1657,
+        "mapping_source_counts": {
+          "none": 28,
+          "template_field_id": 141
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ifrs-smes:ProfitLoss",
+            "count": 10
+          },
+          {
+            "key": "ifrs-smes:ConsolidatedMember",
+            "count": 8
+          },
+          {
+            "key": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+            "count": 8
+          },
+          {
+            "key": "ssmt-mpers:DescriptionOfAccountingPolicyForOtherSignificantAccountingPoliciesRelevantToUnderstandingOfFinancialStatementsExplanatory",
+            "count": 6
+          },
+          {
+            "key": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:CashAndCashEquivalents",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:DisclosureOfClassesOfShareCapitalExplanatory",
+            "count": 4
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReportExplanatory",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:DisclosureOfTransactionsBetweenRelatedPartiesExplanatory",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:OtherExpenseByFunction",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:RetainedEarningsMember",
+            "count": 3
+          },
+          {
+            "key": "ssmt-mpers:DescriptionOfAccountingPolicyForImpairmentOfNonfinancialAssetsExplanatory",
+            "count": 3
+          },
+          {
+            "key": "ssmt-mpers:OtherCurrentLiabilities",
+            "count": 3
+          },
+          {
+            "key": "ssmt:CashAndBankBalances",
+            "count": 3
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReceivedOrBecomeEntitledToReceiveOtherBenefitsByReasonOfContractMadeByCompanyOrRelatedCorporation",
+            "count": 3
+          },
+          {
+            "key": "ssmt:DisclosureOfOccurenceOfAnySubstantialMaterialOrUnusualInNatureItemsTransactionsOrEvents",
+            "count": 3
+          },
+          {
+            "key": "ssmt:NameOfFirstDirectorWhoSignedStatementByDirectors",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Assets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentAssets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAndLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAttributableToOwnersOfParent",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 1
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 12,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 41,
+        "duplicate_label_rate": 0.2426,
+        "duplicate_label_value_count": 5,
+        "duplicate_label_value_rate": 0.0296,
+        "suspicious_signed_value_count": 18,
+        "suspicious_signed_value_rate": 0.1065,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 1,
+        "rows_with_total_or_subtotal_labels": 17,
+        "keyword_counts": {
+          "cash_bank": 15,
+          "receivable": 7,
+          "payable": 0,
+          "equity": 11
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "profit / (loss) before taxation",
+            "count": 4
+          },
+          {
+            "key": "share capital",
+            "count": 4
+          },
+          {
+            "key": "accumulated (losses) / retained profits",
+            "count": 3
+          },
+          {
+            "key": "disclosure of auditor's report to members",
+            "count": 3
+          },
+          {
+            "key": "name of first director who signed statement by directors",
+            "count": 3
+          },
+          {
+            "key": "total",
+            "count": 3
+          },
+          {
+            "key": "7. amount due to director",
+            "count": 2
+          },
+          {
+            "key": "amount due to director",
+            "count": 2
+          },
+          {
+            "key": "auditors",
+            "count": 2
+          },
+          {
+            "key": "auditors\u2019 remuneration",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "7. amount due to director|turnover represents invoiced value of goods sold less discount allowed.",
+            "count": 2
+          },
+          {
+            "key": "name of first director who signed statement by directors|dr ooi boon beng",
+            "count": 2
+          },
+          {
+            "key": "profit / (loss) before taxation|(3,097)",
+            "count": 2
+          },
+          {
+            "key": "profit / (loss) before taxation|128,242",
+            "count": 2
+          },
+          {
+            "key": "share capital|100",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "d) Derecognition of financial instruments",
+            "value": "A financial asset is derecognised when, and only when, the contractual rights to receive the cash flows from the financial asset expire, or when the Company transfers the contractual rights to receive cash flows of the financial asset, including circumstances when the Company acts only as a collecting agent of the transferee, and retains no significant risks and rewards of ownership of the financial asset or no continuing involvement in the control of the financial asset transferred. A financial liability is derecognised when, and only when, it is legally extinguished, which is either when the obligation specified in the contract is discharged or cancelled or expires. A substantial modification of the terms of an existing financial liability is accounted for as an extinguishment of the original financial liability and the recognition of a new financial liability.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Fair Value Measurement",
+            "value": "For assets, liabilities and equity instruments (whether financial or non-financial items) that require fair value measurement or disclosure, the Company establishes a fair value measurement hierarchy that gives the highest priority to quoted prices (unadjusted) in active markets for identical assets, liabilities or equity instruments and the lowest priority to unobservable inputs.\n\nA fair value measurement of an item is estimated using a quoted price in an active market if that price is observable. The active market is the principal market for the asset or liability or, in the absence of a principal market, the most advantageous market for the asset or liability; and for which the group can enter into a transaction for the asset or liability at the price in that market at the measurement date.\n\nIn the absence of an active market price, the fair value of an item is estimated by an established valuation technique using inputs from the marketplace that are observable for substantially the full term of the asset or liability.\n\nIn the absence of both market price and observable inputs, a fair value measurement of an item is estimated by an established valuation technique using unobservable inputs, including internally developed assumptions that are reasonable and supportable.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Salaries",
+            "value": "49,629",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "STAFF COST",
+            "value": "50,612",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Accounting fee",
+            "value": "12,000",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Advertisement",
+            "value": "16,860",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Bank charges",
+            "value": "481",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Commission paid",
+            "value": "33,231",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Computer rental fee",
+            "value": "5,400",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Commissioner for oaths",
+            "value": "30",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "REGISTERED OFFICE",
+            "value": "A-3-3, Plaza Bukit Jalil (Aurora Place)\nNo. 1, Persiaran Jalil 1\nBandar Bukit Jalil\n57000 Kuala Lumpur\nW.P. Kuala Lumpur",
+            "previous_value": null,
+            "statement_type": "Notes - Corporate Information"
+          },
+          {
+            "label": "FINANCIAL RESULTS",
+            "value": "Profit after taxation  RM 103,550\nAccumulated losses brought forward  (3,097)\nRetained profits carried forward  100,453",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "DIRECTORS' INTERESTS",
+            "value": "The shareholding of those who was Directors at the end of the financial year is as follows:-\n\nNumbers of Ordinary shares of RM 1 each\nAs at 01/01/2024 | Bought | Sold | As at 31/12/2024\nDr Ooi Boon Beng 70 - - 70\nUng Ming Xian 30 - - 30",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "Retained profits / (Accumulated losses)",
+            "value": "(3,097)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total shareholders\u2019 equity",
+            "value": "(2,997)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total comprehensive profit / (loss) for the year / period",
+            "value": "(3,097)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Profit / (Loss) before taxation",
+            "value": "(3,097)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Profit / (Loss) from operating activities",
+            "value": "(3,097)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Cost of sales",
+            "value": "(338,646)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Taxation",
+            "value": "(24,692)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 15,
+        "company_name": "FINE BATIK SDN. BHD.",
+        "registration_number": "200401035264",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T07:48:36.789841",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\a6123a2092f140e2abc464a0b004fb70.pdf",
+        "page_count": 25,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 192,
+        "rows_with_template_field_id": 159,
+        "rows_without_template_field_id": 33,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 192,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 191,
+        "rows_without_value": 1,
+        "reviewed_count": 156,
+        "unreviewed_count": 36,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 192
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Analysis of Profit or Loss (By Function)": 28,
+          "Auditors Report": 16,
+          "Directors Report": 16,
+          "Notes - Corporate Information": 3,
+          "Notes - Information on Companies": 5,
+          "Notes - Reports": 7,
+          "Notes - Significant Accounting Policies": 19,
+          "Notes to Financial Statements": 2,
+          "Statement by Directors": 8,
+          "Statement of Cash Flows (Indirect Method)": 27,
+          "Statement of Changes in Equity": 15,
+          "Statement of Comprehensive Income": 4,
+          "Statement of Financial Position": 35,
+          "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)": 7
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 14,
+        "pages_by_classified_statement": {
+          "Analysis of Profit or Loss (By Function)": 1,
+          "Auditors Report": 5,
+          "Directors Report": 4,
+          "Notes - Corporate Information": 1,
+          "Notes - Information on Companies": 1,
+          "Notes - Reports": 1,
+          "Notes - Significant Accounting Policies": 5,
+          "Notes to Financial Statements": 1,
+          "Statement by Directors": 3,
+          "Statement of Cash Flows (Indirect Method)": 1,
+          "Statement of Changes in Equity": 1,
+          "Statement of Comprehensive Income": 2,
+          "Statement of Financial Position": 1,
+          "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)": 1
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.8281,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 33,
+        "unmapped_rate": 0.1719,
+        "mapping_source_counts": {
+          "none": 33,
+          "template_field_id": 159
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ifrs-smes:ProfitLoss",
+            "count": 10
+          },
+          {
+            "key": "ifrs-smes:AmountsPayableRelatedPartyTransactions",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 5
+          },
+          {
+            "key": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+            "count": 5
+          },
+          {
+            "key": "ifrs-smes:CashAndCashEquivalents",
+            "count": 4
+          },
+          {
+            "key": "ssmt:CashAndBankBalances",
+            "count": 4
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReceivedOrBecomeEntitledToReceiveOtherBenefitsByReasonOfContractMadeByCompanyOrRelatedCorporation",
+            "count": 4
+          },
+          {
+            "key": "ssmt:DisclosureOfOccurenceOfAnySubstantialMaterialOrUnusualInNatureItemsTransactionsOrEvents",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:IssuedCapitalMember",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:RetainedEarningsMember",
+            "count": 3
+          },
+          {
+            "key": "ssmt-mpers:DescriptionOfAccountingPolicyForIncomeTaxExplanatory",
+            "count": 3
+          },
+          {
+            "key": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+            "count": 3
+          },
+          {
+            "key": "ssmt-mpers:NoncurrentBorrowings",
+            "count": 3
+          },
+          {
+            "key": "ssmt:NameOfFirstDirectorWhoSignedStatementByDirectors",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Assets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentAssets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentProvisions",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAndLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Liabilities",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 1
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 12,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 44,
+        "duplicate_label_rate": 0.2292,
+        "duplicate_label_value_count": 7,
+        "duplicate_label_value_rate": 0.0365,
+        "suspicious_signed_value_count": 36,
+        "suspicious_signed_value_rate": 0.1875,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 0,
+        "rows_with_total_or_subtotal_labels": 25,
+        "keyword_counts": {
+          "cash_bank": 17,
+          "receivable": 3,
+          "payable": 0,
+          "equity": 11
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "bank balances",
+            "count": 4
+          },
+          {
+            "key": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "key": "disclosure of auditor's report to members",
+            "count": 3
+          },
+          {
+            "key": "name of first director who signed statement by directors",
+            "count": 3
+          },
+          {
+            "key": "term loan",
+            "count": 3
+          },
+          {
+            "key": "accumulated losses",
+            "count": 2
+          },
+          {
+            "key": "address 1",
+            "count": 2
+          },
+          {
+            "key": "amount due to director",
+            "count": 2
+          },
+          {
+            "key": "auditors\u2019 remuneration",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at beginning of year",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "name of first director who signed statement by directors|ooi boon beng",
+            "count": 3
+          },
+          {
+            "key": "bank balances|16,153",
+            "count": 2
+          },
+          {
+            "key": "bank balances|28,022",
+            "count": 2
+          },
+          {
+            "key": "loss for the financial year|(77,641)",
+            "count": 2
+          },
+          {
+            "key": "name of audit firm|ismail midon & co",
+            "count": 2
+          },
+          {
+            "key": "name of second director who signed statement by directors|ung ming xian (f)",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "Operating profit / (loss) before working capital changes",
+            "value": "4,641",
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "Operating profit / (loss) before working capital changes",
+            "value": "(49,438)",
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "Increase in amount due to director",
+            "value": ".",
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "Liquidity Risk",
+            "value": "The Company actively manages its debt maturity profile, operating cash flows and the availability of funding so as to ensure that all refinancing, repayment and funding needs are met. As part of its overall prudent liquidity management, the Company endeavors to maintain sufficient levels of cash or cash convertible investments to meet its working capital requirements.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Credit Risks",
+            "value": "The Company controls its credit risk by the application of credit approvals, limits and monitoring procedures. Credit evaluations are performed on all customers requiring credit over a certain amount and strictly limiting the Company's associations to business partners with high credit worthiness. Trade receivables are monitored on an ongoing basis. Generally, the Company does not require collateral in respect of its financial assets.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Computer and Software",
+            "value": "30,603",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Shop Equipment",
+            "value": "54,018",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Renovation",
+            "value": "100,828",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Signboard",
+            "value": "1,520",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Office Premise",
+            "value": "1,368,630",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "REGISTERED OFFICE",
+            "value": "A-3-3, Plaza Bukit Jalil (Aurora Place)\nNo.1, Persiaran Jalil 1\nBandar Bukit Jalil\n57000 Kuala Lumpur\nW.P. Kuala Lumpur",
+            "previous_value": null,
+            "statement_type": "Notes - Corporate Information"
+          },
+          {
+            "label": "INDEX",
+            "value": "Directors\u2019 Report 1 - 4\nStatement by Directors 5\nStatutory Declaration 6\nIndependent Auditors\u2019 Report 7 - 10\nStatement of Financial Position 11\nStatement of Comprehensive Income 12\nStatement of Changes in Equity 13\nStatement of Cash Flows 14\nNotes to the Financial Statements 15 - 21",
+            "previous_value": null,
+            "statement_type": "Notes to Financial Statements"
+          },
+          {
+            "label": "DIRECTORS' REPORT",
+            "value": "The Directors have pleasure in submitting their report and the audited financial statements of the Company for the financial year ended 31 December 2024.\n\nPRINCIPAL ACTIVITY\nThe Company is principally engaged as dealers in batik, batik designed accessories and its related activities.\nThere has been no significant change in the nature of this activity during the financial year under review.\n\nFINANCIAL RESULTS\nLoss after taxation RM (25,287)\nAccumulated losses carried forward RM (367,321)\nAccumulated losses carried forward RM (392,608)\n\nThere were no material transfers to or from reserves or provisions during the financial year other than those disclosed in the financial statements.\nIn the opinion of the Directors, the results of the operations of the Company during the financial year have not been substantially affected by any item, transaction, or event of a material and unusual nature.\n\nDIVIDEND\nNo dividend had been declared or paid since the end of the previous financial year.\n\nSHARE CAPITAL\nThere were no shares issued during the financial year.\n\nDIRECTORS\nThe Directors in office since the date of the last report and the date of this report are:-\nOoi Boon Beng\nOoi Guat Lee (f)\nUng Ming Xian (f)",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "Disclosure of directors received or become entitled to receive other benefits by reason of contract made by company or related corporation",
+            "value": "The shareholdings of those who were Directors at the end of the financial year were as follows :-\n\nNumbers of Ordinary shares of RM 1 each\n\nAs at 01/01/2024 Bought Sold As at 31/12/2024\n\nOoi Boon Beng 95,000 - - 95,000\nUng Ming Xian (f) 5,000 - - 5,000",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "NUMBER OF EMPLOYEES AND REGISTERED OFFICE",
+            "value": "The average numbers of employees in the Company was NIL in 2024 (2023 : NIL). The registered office address of the Company is located at A A-3-3, Plaza Bukit Jalil (Aurora Place), No.1, Persiaran Jalil 1, Bandar Bukit Jalil, 57000 Kuala Lumpur, W.P. Kuala Lumpur.",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "Accumulated losses",
+            "value": "(392,608)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Accumulated losses",
+            "value": "(367,321)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total equity",
+            "value": "(292,608)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total equity",
+            "value": "(267,321)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(25,287)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 18,
+        "company_name": "RAHSIA HERBAL SDN. BHD.",
+        "registration_number": "201101003690",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T07:51:40.309917",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\61e22416a080422fa6d1aa7d53a99eed.pdf",
+        "page_count": 23,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 144,
+        "rows_with_template_field_id": 122,
+        "rows_without_template_field_id": 22,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 144,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 144,
+        "rows_without_value": 0,
+        "reviewed_count": 120,
+        "unreviewed_count": 24,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 144
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Analysis of Profit or Loss (By Function)": 27,
+          "Auditors Report": 9,
+          "Directors Report": 8,
+          "Notes - Information on Companies": 1,
+          "Notes - Reports": 4,
+          "Notes - Significant Accounting Policies": 19,
+          "Statement by Directors": 8,
+          "Statement of Cash Flows (Indirect Method)": 22,
+          "Statement of Changes in Equity": 9,
+          "Statement of Comprehensive Income": 4,
+          "Statement of Financial Position": 33
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 11,
+        "pages_by_classified_statement": {
+          "Analysis of Profit or Loss (By Function)": 1,
+          "Auditors Report": 5,
+          "Directors Report": 4,
+          "Notes - Information on Companies": 1,
+          "Notes - Reports": 1,
+          "Notes - Significant Accounting Policies": 4,
+          "Statement by Directors": 3,
+          "Statement of Cash Flows (Indirect Method)": 1,
+          "Statement of Changes in Equity": 1,
+          "Statement of Comprehensive Income": 2,
+          "Statement of Financial Position": 1
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.8472,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 22,
+        "unmapped_rate": 0.1528,
+        "mapping_source_counts": {
+          "none": 22,
+          "template_field_id": 122
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ifrs-smes:ProfitLoss",
+            "count": 6
+          },
+          {
+            "key": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 5
+          },
+          {
+            "key": "ifrs-smes:CashAndCashEquivalents",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:OtherIncome",
+            "count": 4
+          },
+          {
+            "key": "ssmt-mpers:DescriptionOfAccountingPolicyForOtherSignificantAccountingPoliciesRelevantToUnderstandingOfFinancialStatementsExplanatory",
+            "count": 4
+          },
+          {
+            "key": "ssmt-mpers:OtherTransactionsWithRelatedParties",
+            "count": 4
+          },
+          {
+            "key": "ssmt:CashAndBankBalances",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:RetainedEarningsMember",
+            "count": 3
+          },
+          {
+            "key": "ssmt-mpers:NoncurrentBorrowings",
+            "count": 3
+          },
+          {
+            "key": "ssmt:NameOfFirstDirectorWhoSignedStatementByDirectors",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Assets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CostOfSales",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentAssets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAndLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Liabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:NoncurrentAssets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:NoncurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ProfitLossBeforeTax",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:PropertyPlantAndEquipment",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 1
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 8,
+          "revenue": 2
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 54,
+        "duplicate_label_rate": 0.375,
+        "duplicate_label_value_count": 8,
+        "duplicate_label_value_rate": 0.0556,
+        "suspicious_signed_value_count": 26,
+        "suspicious_signed_value_rate": 0.1806,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 1,
+        "rows_with_total_or_subtotal_labels": 21,
+        "keyword_counts": {
+          "cash_bank": 15,
+          "receivable": 5,
+          "payable": 0,
+          "equity": 6
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "accumulated losses",
+            "count": 5
+          },
+          {
+            "key": "bank balances",
+            "count": 4
+          },
+          {
+            "key": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "key": "depreciation of property, plant and equipment",
+            "count": 3
+          },
+          {
+            "key": "term loan",
+            "count": 3
+          },
+          {
+            "key": "total",
+            "count": 3
+          },
+          {
+            "key": "amount due to directors",
+            "count": 2
+          },
+          {
+            "key": "bank charge",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at beginning of year",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at the end of year",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "accumulated losses|(1,018,209)",
+            "count": 2
+          },
+          {
+            "key": "accumulated losses|(1,156,406)",
+            "count": 2
+          },
+          {
+            "key": "bank balances|13,232",
+            "count": 2
+          },
+          {
+            "key": "bank balances|14,638",
+            "count": 2
+          },
+          {
+            "key": "loss for the financial year|(104,646)",
+            "count": 2
+          },
+          {
+            "key": "loss for the financial year|(138,197)",
+            "count": 2
+          },
+          {
+            "key": "name of first director who signed statement by directors|ooi boon beng",
+            "count": 2
+          },
+          {
+            "key": "share capital|100,000",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "Increase in amount due to directors",
+            "value": "134,700",
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "Increase in amount due to directors",
+            "value": "25,399",
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "Liquidity Risks",
+            "value": "The Company actively manages its debts maturity profile, operating cash flows and the availability of funding so as to ensure that all refinancing, prepayment and funding needs are met. As part of its overall prudent liquidity management, the Company endeavors to maintain sufficient levels of cash or cash convertible investments to meet its working capital requirements.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Credit Risks",
+            "value": "The Company controls its credit risk by the application of the credits approvals, limits and monitoring procedures. Credit evaluations are performed on all customers requiring credit over a certain amount and strictly limiting the Company\u2019s associations to business partners with high credit worthiness. Trade receivables are monitored on and on going basis. Generally the Company does not require collateral in respect of its financial assets.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "TURNOVER",
+            "value": "Turnover represents sales at invoiced values less discounts.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "GROSS PROFIT",
+            "value": "56,243",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "GROSS PROFIT",
+            "value": "73,571",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Commission",
+            "value": "3,555",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Commission",
+            "value": "198",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          },
+          {
+            "label": "Payroll fee",
+            "value": "600",
+            "statement_type": "Analysis of Profit or Loss (By Function)"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "DIRECTORS' REPORT",
+            "value": "The Directors have pleasure in submitting their report and the audited financial statements of the Company for the financial year ended 31 December 2024.\n\nPRINCIPAL ACTIVITIES\n\nThe principal activities of the Company are to carry on business as a producer, wholesaler, dealer and retailer of herbs related products.\n\nThere have been no significant changes in the nature of these activities during the financial year under review.\n\nFINANCIAL RESULTS\n\nLoss for the financial year RM (138,197)\nAccumulated losses brought forward RM (1,018,209)\nAccumulated losses carried forward RM (1,156,406)\n\nThere were no material transfers to or from reserves or provisions during the financial year other than those disclosed in the financial statements.\n\nIn the opinion of the Directors, the results of the operations of the Company during the financial year have not been substantially affected by any item, transaction, or event of a material and unusual nature.\n\nDIVIDEND\n\nNo dividend has been paid or declared since the end of the previous financial year.\n\nISSUE OF SHARES\n\nThere were no issues of shares during the financial year.\n\nDIRECTORS\n\nThe Directors in office since the date of last report and the date of this report are:-\n\nOoi Boon Beng\nUng Ming Xian (f)",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "Accumulated Losses",
+            "value": "(1,156,406)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Accumulated Losses",
+            "value": "(1,018,209)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total equity",
+            "value": "(1,056,406)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total equity",
+            "value": "(918,209)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(138,197)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(104,646)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Accumulated Losses",
+            "value": "(913,563)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Total",
+            "value": "(813,563)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(104,646)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 19,
+        "company_name": "SHIELD PLUS SDN. BHD.",
+        "registration_number": "199301006101",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T07:52:04.601365",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\2f67b84cdcee48b5acd6fce93010da3b.pdf",
+        "page_count": 15,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 101,
+        "rows_with_template_field_id": 97,
+        "rows_without_template_field_id": 4,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 101,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 101,
+        "rows_without_value": 0,
+        "reviewed_count": 97,
+        "unreviewed_count": 4,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 101
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Directors Report": 13,
+          "Notes - Corporate Information": 1,
+          "Notes - Information on Companies": 4,
+          "Notes - Reports": 7,
+          "Notes - Significant Accounting Policies": 9,
+          "Scope of Filing": 1,
+          "Statement by Directors": 13,
+          "Statement of Cash Flows (Indirect Method)": 14,
+          "Statement of Changes in Equity": 11,
+          "Statement of Comprehensive Income": 11,
+          "Statement of Financial Position": 17
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 11,
+        "pages_by_classified_statement": {
+          "Directors Report": 3,
+          "Notes - Corporate Information": 1,
+          "Notes - Information on Companies": 1,
+          "Notes - Reports": 2,
+          "Notes - Significant Accounting Policies": 4,
+          "Scope of Filing": 1,
+          "Statement by Directors": 2,
+          "Statement of Cash Flows (Indirect Method)": 1,
+          "Statement of Changes in Equity": 1,
+          "Statement of Comprehensive Income": 1,
+          "Statement of Financial Position": 1
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.9604,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 4,
+        "unmapped_rate": 0.0396,
+        "mapping_source_counts": {
+          "none": 4,
+          "template_field_id": 97
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis",
+            "count": 6
+          },
+          {
+            "key": "ssmt-mpers:DescriptionOfAccountingPolicyForOtherSignificantAccountingPoliciesRelevantToUnderstandingOfFinancialStatementsExplanatory",
+            "count": 6
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReportExplanatory",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:CashAndCashEquivalents",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:ProfitLoss",
+            "count": 4
+          },
+          {
+            "key": "ssmt-mpers:OtherBalancesWithRelatedParties",
+            "count": 4
+          },
+          {
+            "key": "ssmt-mpers:OtherCurrentLiabilities",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:EquityAttributableToOwnersOfParentMember",
+            "count": 3
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReceivedOrBecomeEntitledToReceiveOtherBenefitsByReasonOfContractMadeByCompanyOrRelatedCorporation",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ComprehensiveIncome",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ProfitLossBeforeTax",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:RetainedEarnings",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:RetainedEarningsMember",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "count": 2
+          },
+          {
+            "key": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidOutstanding",
+            "count": 2
+          },
+          {
+            "key": "ssmt-mpers:OrdinarySharesMember",
+            "count": 2
+          },
+          {
+            "key": "ssmt:DateOfSigningStatementByDirectors",
+            "count": 2
+          },
+          {
+            "key": "ssmt:DisclosureOfStatementByDirectorsExplanatory",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 1
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 6,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 31,
+        "duplicate_label_rate": 0.3069,
+        "duplicate_label_value_count": 4,
+        "duplicate_label_value_rate": 0.0396,
+        "suspicious_signed_value_count": 31,
+        "suspicious_signed_value_rate": 0.3069,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 0,
+        "rows_with_total_or_subtotal_labels": 8,
+        "keyword_counts": {
+          "cash_bank": 11,
+          "receivable": 8,
+          "payable": 4,
+          "equity": 2
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "accumulated loss rm",
+            "count": 4
+          },
+          {
+            "key": "total rm",
+            "count": 3
+          },
+          {
+            "key": "accruals",
+            "count": 2
+          },
+          {
+            "key": "accumulated loss",
+            "count": 2
+          },
+          {
+            "key": "administration expenses",
+            "count": 2
+          },
+          {
+            "key": "amount due to director",
+            "count": 2
+          },
+          {
+            "key": "bank overdraft - unsecured",
+            "count": 2
+          },
+          {
+            "key": "capital deficiency",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at beginning of year",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at end of year (note 9)",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "accumulated loss rm|(181,377)",
+            "count": 2
+          },
+          {
+            "key": "date of signing statement by directors|24 jun 2025",
+            "count": 2
+          },
+          {
+            "key": "name of first director who signed statement by directors|siah teong ban",
+            "count": 2
+          },
+          {
+            "key": "name of second director who signed statement by directors|lee ah kim",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "Accumulated Loss RM",
+            "value": "(181,377)",
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Accumulated Loss RM",
+            "value": "(194,548)",
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Deposit",
+            "value": "400",
+            "statement_type": "Notes - Reports"
+          },
+          {
+            "label": "Issued ordinary shares - Ordinary shares with no par value",
+            "value": "2",
+            "statement_type": "Notes - Reports"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "DIRECTORS' INTERESTS IN SHARES",
+            "value": "According to the Register of Directors' Shareholdings required to be kept under Section 59 of the Companies Act 2016, the interests of Directors in office at the end of the financial year in shares in the Company during the financial year were as follows:\n\nNumber of Ordinary Shares\n\nThe Company\nAt 1.1.2024 Acquired Sold At 31.12.2024\nSiah Teong Ban 1 - - 1\nLee Ah Kim 1 - - 1",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "Accumulated loss",
+            "value": "(194,548)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Accumulated loss",
+            "value": "(181,377)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Capital Deficiency",
+            "value": "(194,546)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Capital Deficiency",
+            "value": "(181,375)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Loss before tax",
+            "value": "(13,171)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss before tax",
+            "value": "(11,514)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss after tax and representing total comprehensive loss for the year",
+            "value": "(13,171)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss after tax and representing total comprehensive loss for the year",
+            "value": "(11,514)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss attributable to:\nOwners of the Company",
+            "value": "(13,171)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 20,
+        "company_name": "AGENSI PEKERJAAN JCONNECTOR.COM SDN. BHD.",
+        "registration_number": "200801035105",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T08:25:27.578183",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\9e131e849fe540f88c0b71d2bceabd12.pdf",
+        "page_count": 22,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 125,
+        "rows_with_template_field_id": 120,
+        "rows_without_template_field_id": 5,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 125,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 124,
+        "rows_without_value": 1,
+        "reviewed_count": 118,
+        "unreviewed_count": 7,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 125
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Auditors Report": 10,
+          "Directors Report": 10,
+          "Notes - Corporate Information": 4,
+          "Notes - Information on Companies": 3,
+          "Notes - Reports": 4,
+          "Notes - Significant Accounting Policies": 12,
+          "Notes to Financial Statements": 17,
+          "Statement by Directors": 8,
+          "Statement of Cash Flows (Indirect Method)": 16,
+          "Statement of Changes in Equity": 13,
+          "Statement of Comprehensive Income": 4,
+          "Statement of Financial Position": 24
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 12,
+        "pages_by_classified_statement": {
+          "Auditors Report": 4,
+          "Directors Report": 3,
+          "Notes - Corporate Information": 2,
+          "Notes - Information on Companies": 1,
+          "Notes - Reports": 1,
+          "Notes - Significant Accounting Policies": 3,
+          "Notes to Financial Statements": 2,
+          "Statement by Directors": 3,
+          "Statement of Cash Flows (Indirect Method)": 1,
+          "Statement of Changes in Equity": 1,
+          "Statement of Comprehensive Income": 2,
+          "Statement of Financial Position": 1
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.96,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 5,
+        "unmapped_rate": 0.04,
+        "mapping_source_counts": {
+          "none": 5,
+          "template_field_id": 120
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ifrs-smes:ProfitLoss",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:DisclosureOfIncomeTaxExplanatory",
+            "count": 5
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 5
+          },
+          {
+            "key": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+            "count": 5
+          },
+          {
+            "key": "ifrs-smes:CashAndCashEquivalents",
+            "count": 4
+          },
+          {
+            "key": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+            "count": 4
+          },
+          {
+            "key": "ssmt-mpers:DisclosureOfOtherOperatingExpenseExplanatory",
+            "count": 4
+          },
+          {
+            "key": "ssmt:CashAndBankBalances",
+            "count": 4
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReportExplanatory",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:IssuedCapitalMember",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:RetainedEarningsMember",
+            "count": 3
+          },
+          {
+            "key": "ssmt:NameOfFirstDirectorWhoSignedStatementByDirectors",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:Assets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ChangesInEquity",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentAssets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:DisclosureOfTransactionsBetweenRelatedPartiesExplanatory",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAndLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Liabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ProfitLossBeforeTax",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:RetainedEarnings",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "count": 2
+          },
+          {
+            "key": "ssmt-mpers:CashFlowsFromUsedInOperations",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 0
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 8,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 31,
+        "duplicate_label_rate": 0.248,
+        "duplicate_label_value_count": 8,
+        "duplicate_label_value_rate": 0.064,
+        "suspicious_signed_value_count": 28,
+        "suspicious_signed_value_rate": 0.224,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 1,
+        "rows_with_total_or_subtotal_labels": 19,
+        "keyword_counts": {
+          "cash_bank": 15,
+          "receivable": 2,
+          "payable": 0,
+          "equity": 10
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "bank balances",
+            "count": 4
+          },
+          {
+            "key": "loss before taxation",
+            "count": 4
+          },
+          {
+            "key": "disclosure of auditor's report to members",
+            "count": 3
+          },
+          {
+            "key": "name of first director who signed statement by directors",
+            "count": 3
+          },
+          {
+            "key": "accumulated losses",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at beginning of the year",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalents at end of the year",
+            "count": 2
+          },
+          {
+            "key": "decrease in property, plant and equipment",
+            "count": 2
+          },
+          {
+            "key": "directors' fees",
+            "count": 2
+          },
+          {
+            "key": "expenses not deductible for tax purposes",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "name of first director who signed statement by directors|ooi boon beng",
+            "count": 3
+          },
+          {
+            "key": "bank balances|558",
+            "count": 2
+          },
+          {
+            "key": "bank balances|73",
+            "count": 2
+          },
+          {
+            "key": "issued and fully paid ordinary shares at beginning and end of the year|100,000",
+            "count": 2
+          },
+          {
+            "key": "loss before taxation|(188,217)",
+            "count": 2
+          },
+          {
+            "key": "loss before taxation|(9,915)",
+            "count": 2
+          },
+          {
+            "key": "name of second director who signed statement by directors|ung ming xian (f)",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "Liquidity Risk",
+            "value": "The Company actively manages its debt maturity profile, operating cash flows and the availability of funding so as to ensure that all refinancing, repayment and funding needs are met. As part of its overall prudent liquidity management, the Company endeavors to maintain sufficient levels of cash or cash convertible investments to meet its working capital requirements.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Credit Risks",
+            "value": "The Company controls its credit risk by the application of credit approvals, limits and monitoring procedures. Credit evaluations are performed on all customers requiring credit over a certain amount and strictly limiting the Company\u2019s associations to business partners with high credit worthiness. Trade receivables are monitored on an ongoing basis. Generally, the Company does not require collateral in respect of its financial assets.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "3.4.1 Trade and Other Receivables",
+            "value": "Trade and other receivables are carried at anticipated realizable values. Bad debts are written off when identified. An estimate is made for doubtful debts based on a review of all outstanding amounts as at the balance sheet date.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "The tax rate is 15% of the estimated assessable profit for Malaysian small medium industries with paid up capital less than RM 2.5 million. Reconciliations of income tax expense applicable to (loss) / profit before taxation at the statutory income tax rate to income tax expense at the effective income tax rate of the Company are as follows :-",
+            "value": "The tax rate is 15% of the estimated assessable profit for Malaysian small medium industries with paid up capital less than RM 2.5 million. Reconciliations of income tax expense applicable to (loss) / profit before taxation at the statutory income tax rate to income tax expense at the effective income tax rate of the Company are as follows :-",
+            "statement_type": "Notes to Financial Statements"
+          },
+          {
+            "label": "Certain comparative figures were reclassified where necessary in order to conform with the presentation of the current year.",
+            "value": "Certain comparative figures were reclassified where necessary in order to conform with the presentation of the current year.",
+            "statement_type": "Notes to Financial Statements"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "Company No : 200801035105 (836445-W) AGENSI PEKERJAAN JCONNECTOR.COM SDN. BHD. (Incorporated in Malaysia) CORPORATE INFORMATION DIRECTORS Ooi Boon Beng Ung Ming Xian (f) SECRETARY Lee Yong Cieh (BC/L/1886) REGISTERED OFFICE A-3-3, Plaza Bukit Jalil (Aurora Place), No. 1, Persiaran Jalil 1, Bandar Bukit Jalil, 57000 Kuala Lumpur W.P. Kuala Lumpur",
+            "value": "Company No : 200801035105 (836445-W)\nAGENSI PEKERJAAN JCONNECTOR.COM SDN. BHD.\n(Incorporated in Malaysia)\n\nCORPORATE INFORMATION\n\nDIRECTORS\nOoi Boon Beng\nUng Ming Xian (f)\n\nSECRETARY\nLee Yong Cieh (BC/L/1886)\n\nREGISTERED OFFICE\nA-3-3, Plaza Bukit Jalil (Aurora Place),\nNo. 1, Persiaran Jalil 1,\nBandar Bukit Jalil,\n57000 Kuala Lumpur\nW.P. Kuala Lumpur",
+            "previous_value": null,
+            "statement_type": "Notes - Corporate Information"
+          },
+          {
+            "label": "FINANCIAL RESULTS",
+            "value": "Loss after taxation                                              RM (9,915)\nAccumulated losses brought forward                   (393,318)\nAccumulated losses carried forward                  (403,233)\n\nThere were no material transfers to or from reserves or provisions during the financial year other than those disclosed in the financial statements.\n\nIn the opinion of the Directors, the results of the operations of the Company during the financial year have not been substantially affected by any item, transaction, or event of a material and unusual nature.",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "Accumulated losses",
+            "value": "(403,233)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Accumulated losses",
+            "value": "(393,318)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total equity",
+            "value": "(303,233)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Total equity",
+            "value": "(293,318)",
+            "previous_value": null,
+            "statement_type": "Statement of Financial Position"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(9,915)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(188,217)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Accumulated losses As at 31/12/2022",
+            "value": "(205,101)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Loss for the financial year 2023",
+            "value": "(188,217)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          }
+        ]
+      }
+    },
+    {
+      "job_metadata": {
+        "job_id": 23,
+        "company_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+        "registration_number": "19920102215",
+        "financial_year_end": "2024-12-31T00:00:00",
+        "status": "REVIEW",
+        "created_at": "2026-05-08T08:40:06.060153",
+        "updated_at": null,
+        "pdf_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\uploads\\pdfs\\aa4fba8f87484a389b298119b7752f8b.pdf",
+        "page_count": 23,
+        "job_role": "benchmark_candidate"
+      },
+      "extraction_metrics": {
+        "total_extracted_rows": 145,
+        "rows_with_template_field_id": 128,
+        "rows_without_template_field_id": 17,
+        "rows_with_confirmed_tag_id": 0,
+        "rows_without_confirmed_tag_id": 145,
+        "rows_with_blank_statement_type": 0,
+        "rows_with_value": 143,
+        "rows_without_value": 2,
+        "reviewed_count": 126,
+        "unreviewed_count": 19,
+        "average_confidence": null,
+        "confidence_distribution": {
+          "unavailable": 145
+        }
+      },
+      "statement_metrics": {
+        "rows_by_statement_type": {
+          "Auditors Report": 11,
+          "Directors Report": 15,
+          "Notes - Corporate Information": 1,
+          "Notes - Information on Companies": 9,
+          "Notes - Reports": 19,
+          "Notes - Significant Accounting Policies": 7,
+          "Notes to Financial Statements": 1,
+          "Statement by Directors": 11,
+          "Statement of Cash Flows (Indirect Method)": 19,
+          "Statement of Changes in Equity": 9,
+          "Statement of Comprehensive Income": 4,
+          "Statement of Financial Position": 30,
+          "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)": 9
+        },
+        "blank_statement_type_count": 0,
+        "statement_type_diversity": 13,
+        "pages_by_classified_statement": {
+          "Auditors Report": 5,
+          "Directors Report": 4,
+          "Notes - Corporate Information": 1,
+          "Notes - Information on Companies": 1,
+          "Notes - Reports": 2,
+          "Notes - Significant Accounting Policies": 4,
+          "Notes to Financial Statements": 1,
+          "Statement by Directors": 3,
+          "Statement of Cash Flows (Indirect Method)": 1,
+          "Statement of Changes in Equity": 1,
+          "Statement of Comprehensive Income": 2,
+          "Statement of Financial Position": 1,
+          "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)": 1
+        }
+      },
+      "mapping_metrics": {
+        "template_field_id_coverage_rate": 0.8828,
+        "confirmed_tag_coverage_rate": 0.0,
+        "unmapped_rows": 17,
+        "unmapped_rate": 0.1172,
+        "mapping_source_counts": {
+          "none": 17,
+          "template_field_id": 128
+        },
+        "recurring_template_field_id_concepts": [
+          {
+            "key": "ssmt-mpers:OtherBalancesWithRelatedParties",
+            "count": 8
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReportExplanatory",
+            "count": 8
+          },
+          {
+            "key": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+            "count": 7
+          },
+          {
+            "key": "ifrs-smes:ProfitLoss",
+            "count": 6
+          },
+          {
+            "key": "ifrs-smes:Equity",
+            "count": 5
+          },
+          {
+            "key": "ssmt-mpers:OtherCurrentAssets",
+            "count": 5
+          },
+          {
+            "key": "ifrs-smes:CashAndCashEquivalents",
+            "count": 4
+          },
+          {
+            "key": "ssmt:CashAndBankBalances",
+            "count": 4
+          },
+          {
+            "key": "ifrs-smes:RetainedEarningsMember",
+            "count": 3
+          },
+          {
+            "key": "ssmt:DisclosureOfDirectorsReceivedOrBecomeEntitledToReceiveOtherBenefitsByReasonOfContractMadeByCompanyOrRelatedCorporation",
+            "count": 3
+          },
+          {
+            "key": "ssmt:NameOfFirstDirectorWhoSignedStatementByDirectors",
+            "count": 3
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Assets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentAssets",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:CurrentLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:EquityAndLiabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:Liabilities",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:ProfitLossBeforeTax",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:PurchasesOfGoodsRelatedPartyTransactions",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:RetainedEarnings",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "count": 2
+          },
+          {
+            "key": "ifrs-smes:TradeAndOtherCurrentReceivables",
+            "count": 2
+          },
+          {
+            "key": "ssmt-mpers:CashFlowsFromUsedInOperations",
+            "count": 2
+          }
+        ],
+        "guardrail_sensitive_mappings": {
+          "biological_assets": 0,
+          "trade_and_other_current_receivables": 2
+        },
+        "broad_concept_candidates": {
+          "total_assets": 0,
+          "total_liabilities": 0,
+          "total_equity": 0,
+          "profit_loss": 8,
+          "revenue": 0
+        }
+      },
+      "data_quality_metrics": {
+        "duplicate_label_count": 34,
+        "duplicate_label_rate": 0.2345,
+        "duplicate_label_value_count": 5,
+        "duplicate_label_value_rate": 0.0345,
+        "suspicious_signed_value_count": 15,
+        "suspicious_signed_value_rate": 0.1034,
+        "possible_current_prior_year_confusion_count": 0,
+        "rows_with_company_name_like_labels": 1,
+        "rows_with_total_or_subtotal_labels": 22,
+        "keyword_counts": {
+          "cash_bank": 14,
+          "receivable": 6,
+          "payable": 0,
+          "equity": 6
+        }
+      },
+      "xbrl_metrics": {
+        "status": "not_requested"
+      },
+      "arelle_metrics": {
+        "status": "not_requested"
+      },
+      "samples": {
+        "duplicate_label_groups": [
+          {
+            "key": "bank balances",
+            "count": 4
+          },
+          {
+            "key": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "key": "retained profits rm",
+            "count": 3
+          },
+          {
+            "key": "total rm",
+            "count": 3
+          },
+          {
+            "key": "(decrease)/ increase in trade and other receivables",
+            "count": 2
+          },
+          {
+            "key": "(increase) / decrease in trade and other payables",
+            "count": 2
+          },
+          {
+            "key": "amount due from directors",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalent at beginning of the year",
+            "count": 2
+          },
+          {
+            "key": "cash and cash equivalent at the end of the year",
+            "count": 2
+          },
+          {
+            "key": "disclosure of auditor's report to members",
+            "count": 2
+          }
+        ],
+        "duplicate_label_value_groups": [
+          {
+            "key": "bank balances|81",
+            "count": 2
+          },
+          {
+            "key": "bank balances|821",
+            "count": 2
+          },
+          {
+            "key": "loss for the financial year|(2,686)",
+            "count": 2
+          },
+          {
+            "key": "loss for the financial year|(7,086)",
+            "count": 2
+          },
+          {
+            "key": "name of first director who signed statement by directors|ooi boon beng",
+            "count": 2
+          }
+        ],
+        "unmapped_rows": [
+          {
+            "label": "Decrease in amount due from Directors",
+            "value": "142,326",
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "FINANCIAL RISK MANAGEMENT OBJECTIVES AND POLICIES",
+            "value": "The Company\u2019s financial risk management policy seeks to ensure that adequate financial resources are available for the development of the Company\u2019s businesses whilst managing its liquidity and credit risks. Financial risks management is carried out through risk reviews, internal control system and the Company operates clearly defined guidelines that are approved by the Board.\n\nFinancial instruments such as trade receivables, trade and other payables arise directly from the Company\u2019s operation. The main risks arising from financial instruments are liquidity and credit risks. The policies for controlling these risks, where applicable, are set out below :-\n\n(i) Liquidity Risks\n\nThe Company actively manages its debts maturity profile, operating cash flows and the availability of funding so as to ensure that all refinancing, repayment and funding needs are met. As part of its overall prudent liquidity management, the Company endeavors to maintain sufficient levels of cash or cash convertible investments to meet its working capital requirements.\n\n(ii) Credit Risks\n\nThe Company controls its credit risk by the application of the credit approvals, limits and monitoring procedures. Credit evaluations are performed on all customers requiring credit over a certain amount and strictly limiting the Company\u2019s associations to business partners with high credit worthiness. Trade receivables are monitored on and on going basis. Generally the Company does not require collateral in respect of its financial assets.",
+            "statement_type": "Notes - Significant Accounting Policies"
+          },
+          {
+            "label": "Air conditioner",
+            "value": "16,890",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Computer System - Hardware",
+            "value": "93,252",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Computer System - Software",
+            "value": "20,707",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Electrical Lightings",
+            "value": "11,064",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Office Equipments Renovation",
+            "value": "6,815",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Signboard",
+            "value": "8,110",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Telephone System",
+            "value": "20,187",
+            "statement_type": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)"
+          },
+          {
+            "label": "Other receivables",
+            "value": "119,700",
+            "statement_type": "Notes - Information on Companies"
+          }
+        ],
+        "suspicious_signed_rows": [
+          {
+            "label": "CORPORATE INFORMATION",
+            "value": "DIRECTORS\nOoi Boon Beng [Managing Director]\nUng Ming Xian (f)\n\nSECRETARIES\nLee Yong Cieh (BC/L/1886)\nLow Sook Fun (MAICSA7079195)\n\nREGISTERED OFFICE\nA-3-3, Plaza Bukit Jalil (Aurora Place)\nNo. 1, Persiaran Bukit Jalil\nBandar Bukit Jalil\n57000 Kuala Lumpur\nW.P Kuala Lumpur",
+            "previous_value": null,
+            "statement_type": "Notes - Corporate Information"
+          },
+          {
+            "label": "FINANCIAL RESULTS",
+            "value": "Loss after taxation RM (2,686)\nRetained profits brought forward RM 73,909\nRetained profits carried forward RM 71,223\n\nThere were no material transfers to or from reserves or provisions during the financial year other than those disclosed in the financial statements.\n\nIn the opinion of the Directors, the results of the operations of the Company during the financial year have not been substantially affected by any item, transaction, or event of a material and unusual nature.",
+            "previous_value": null,
+            "statement_type": "Directors Report"
+          },
+          {
+            "label": "NUMBER OF EMPLOYEES AND REGISTERED OFFICE",
+            "value": "The average number of employees in the Company for the financial year ended 31 December 2024 were 2 (2023 : 2). The registered office address of the Company is located at A-3-3, Plaza Bukit Jalil (Aurora Place), No. 1, Persiaran Bukit Jalil, Bandar Bukit Jalil, 57000 Kuala Lumpur.",
+            "previous_value": null,
+            "statement_type": "Auditors Report"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(2,686)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(7,086)",
+            "previous_value": null,
+            "statement_type": "Statement of Comprehensive Income"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(7,086)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Loss for the financial year",
+            "value": "(2,686)",
+            "previous_value": null,
+            "statement_type": "Statement of Changes in Equity"
+          },
+          {
+            "label": "Loss before taxation",
+            "value": "(2,686)",
+            "previous_value": null,
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "Loss before taxation",
+            "value": "(8,163)",
+            "previous_value": null,
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          },
+          {
+            "label": "(Decrease)/ Increase in trade and other receivables",
+            "value": "(127,800)",
+            "previous_value": null,
+            "statement_type": "Statement of Cash Flows (Indirect Method)"
+          }
+        ]
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "total_jobs_analyzed": 7,
+    "total_rows": 938,
+    "average_template_field_coverage": 0.8673,
+    "average_confirmed_tag_coverage": 0.0,
+    "average_blank_statement_type_rate": 0.0,
+    "average_unmapped_rate": 0.1327,
+    "average_duplicate_label_rate": 0.2337,
+    "average_suspicious_sign_rate": 0.1907,
+    "jobs_with_xbrl_audit": 0,
+    "jobs_with_arelle_baseline": 0
+  },
+  "risk_summary": {
+    "jobs_with_high_unmapped_rate": [],
+    "jobs_with_high_duplicate_rate": [
+      18,
+      19
+    ],
+    "jobs_with_high_suspicious_sign_rate": [
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      23
+    ],
+    "jobs_with_low_template_coverage": [],
+    "jobs_with_missing_blank_statement_types": [],
+    "jobs_that_should_not_be_used_as_benchmark": []
+  },
+  "recommended_next_step": "Feature #13I Side-by-side text/table-first extraction prototype, no production cutover"
+}

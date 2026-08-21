@@ -1,0 +1,74 @@
+{
+  "feature": "18F-G-A",
+  "generated_at": "2026-07-21T15:05:26.692845+00:00",
+  "status": "implemented_awaiting_manual_quality_smoke",
+  "button_text_changes": [
+    {
+      "previous": "Run live Supervisor reviews for all",
+      "current": "Run Supervisor reviews for all"
+    },
+    {
+      "previous": "Run live Supervisor review",
+      "current": "Run Supervisor review"
+    }
+  ],
+  "previous_workflow": [
+    "initial_mapping_suggestion",
+    "supervisor_review",
+    "human_accept_or_reject"
+  ],
+  "new_workflow": [
+    "initial_mapping_suggestion",
+    "supervisor_review",
+    "optional_explicit_supervisor_guided_remap",
+    "separate_revised_suggestion",
+    "human_accept_or_reject"
+  ],
+  "manual_action_label": "Re-run mapping with Supervisor feedback",
+  "eligibility": {
+    "eligible": [
+      "disagree",
+      "prefer_alternative_candidate",
+      "request_better_candidate",
+      "needs_human_review_with_concrete_mapping_issue"
+    ],
+    "ineligible": [
+      "agree",
+      "missing_review",
+      "pending_or_failed_review",
+      "unsafe_or_invalid_response",
+      "skipped_or_blocked_review",
+      "retry_limit_reached",
+      "accepted_or_rejected_initial_suggestion"
+    ]
+  },
+  "persistence_decision": {
+    "mode": "dedicated_revision_table",
+    "table": "supervisor_guided_mapping_revisions",
+    "migration": "migrations/013_add_supervisor_guided_mapping_revisions.sql",
+    "reason": "Durable retry enforcement requires a separate record and the original suggestion must remain immutable."
+  },
+  "retry_policy": {
+    "default_max_retries": 1,
+    "durable": true,
+    "automatic_rerun": false,
+    "mapper_to_supervisor_recursion": false,
+    "supervisor_to_mapper_recursion": false
+  },
+  "verification": {
+    "focused_correction_tests": 14,
+    "supervisor_pattern_tests": 117,
+    "llm_mapper_tests": 34,
+    "user_isolation_tests": 18,
+    "admin_tests": 9,
+    "frontend_tests": 26,
+    "frontend_build": "passed",
+    "full_backend_tests": 1182
+  },
+  "recommended_next_feature": {
+    "manual_gate": "Run one approved eligible suggestion through the manual correction UI and inspect the separate revision.",
+    "if_smoke_succeeds": "#18F-G-B - Integrate conditional Supervisor-guided remapping into the production orchestration design",
+    "if_quality_is_weak": "#18F-G-A-hotfix-1 - Tighten the Supervisor feedback payload and remapping prompt",
+    "persistence_status": "resolved_with_dedicated_revision_table"
+  }
+}

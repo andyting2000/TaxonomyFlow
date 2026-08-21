@@ -1,0 +1,120 @@
+{
+  "feature": "18F-G-D-hotfix-1",
+  "generated_at": "2026-07-25T15:42:36+08:00",
+  "result": "pass",
+  "read_only_replay": {
+    "jobs": [
+      59,
+      60,
+      61
+    ],
+    "external_supervisor_calls": 0,
+    "external_mapper_calls": 0,
+    "database_mutations": 0,
+    "automatic_reviews": 0,
+    "automatic_remaps": 0,
+    "auto_apply": 0,
+    "auto_accept": 0,
+    "auto_reject": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "xbrl_generation": 0,
+    "arelle_runs": 0
+  },
+  "plan_safety_summaries": [
+    {
+      "job_id": 59,
+      "planning_live_calls": 0,
+      "auto_review_calls": 0,
+      "auto_remap_calls": 0,
+      "external_calls": 0,
+      "supervisor_calls": 0,
+      "mapper_calls": 0,
+      "automatic_reviews": 0,
+      "automatic_remaps": 0,
+      "auto_apply_count": 0,
+      "auto_accept_count": 0,
+      "auto_reject_count": 0,
+      "confirmed_tag_id_mutations": 0,
+      "final_mapping_mutations": 0,
+      "human_review_required": true,
+      "requires_human_review_count": 50,
+      "safe_for_auto_apply_count": 0,
+      "estimated_live_calls": 0,
+      "estimated_manual_live_calls_if_all_eligible_selected": 10,
+      "eligible_over_manual_batch_limit": 6
+    },
+    {
+      "job_id": 60,
+      "planning_live_calls": 0,
+      "auto_review_calls": 0,
+      "auto_remap_calls": 0,
+      "external_calls": 0,
+      "supervisor_calls": 0,
+      "mapper_calls": 0,
+      "automatic_reviews": 0,
+      "automatic_remaps": 0,
+      "auto_apply_count": 0,
+      "auto_accept_count": 0,
+      "auto_reject_count": 0,
+      "confirmed_tag_id_mutations": 0,
+      "final_mapping_mutations": 0,
+      "human_review_required": true,
+      "requires_human_review_count": 50,
+      "safe_for_auto_apply_count": 0,
+      "estimated_live_calls": 0,
+      "estimated_manual_live_calls_if_all_eligible_selected": 10,
+      "eligible_over_manual_batch_limit": 5
+    },
+    {
+      "job_id": 61,
+      "planning_live_calls": 0,
+      "auto_review_calls": 0,
+      "auto_remap_calls": 0,
+      "external_calls": 0,
+      "supervisor_calls": 0,
+      "mapper_calls": 0,
+      "automatic_reviews": 0,
+      "automatic_remaps": 0,
+      "auto_apply_count": 0,
+      "auto_accept_count": 0,
+      "auto_reject_count": 0,
+      "confirmed_tag_id_mutations": 0,
+      "final_mapping_mutations": 0,
+      "human_review_required": true,
+      "requires_human_review_count": 50,
+      "safe_for_auto_apply_count": 0,
+      "estimated_live_calls": 0,
+      "estimated_manual_live_calls_if_all_eligible_selected": 10,
+      "eligible_over_manual_batch_limit": 5
+    }
+  ],
+  "all_plan_safety_invariants_pass": true,
+  "verification": {
+    "focused_backend": {
+      "command": "python -B -m unittest tests.test_supervisor_queue_actionability tests.test_supervisor_review_api -v",
+      "passed": 19,
+      "status": "passed"
+    },
+    "targeted_supervisor_mapping_ownership_regression": {
+      "command": "python -B -m unittest tests.test_supervisor_queue_actionability tests.test_supervisor_orchestration_policy tests.test_supervisor_mapping_orchestrator tests.test_supervisor_guided_mapping_correction tests.test_supervisor_production_review tests.test_supervisor_review_api tests.test_supervisor_review_persistence tests.test_supervisor_mapping_review tests.test_supervisor_llm_client tests.test_llm_taxonomy_mapping tests.test_user_isolation_filings -v",
+      "passed": 188,
+      "status": "passed"
+    },
+    "frontend": {
+      "command": "cd frontend; npm run test:auth",
+      "passed": 30,
+      "status": "passed"
+    },
+    "frontend_build": {
+      "command": "cd frontend; npm run build",
+      "modules_transformed": 1586,
+      "status": "passed"
+    },
+    "full_backend": {
+      "command": "python -B -m unittest discover -s tests -p \"test_*.py\" -v",
+      "passed": 1249,
+      "status": "passed"
+    }
+  }
+}

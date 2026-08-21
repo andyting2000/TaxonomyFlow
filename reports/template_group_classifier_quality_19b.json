@@ -1,0 +1,76 @@
+{
+  "feature_id": "19B-resume",
+  "generated_on": "2026-07-31",
+  "status": "PASS",
+  "canonical_registry": {
+    "source": "taxonomy/template_group_registry_mpers_2022_v1.json",
+    "version": "mpers-2022-v1",
+    "semantic_hash": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+    "template_count": 24
+  },
+  "verification": {
+    "focused_tests_passed": 33,
+    "affected_tests_passed": 264,
+    "full_backend_tests_passed": 1375
+  },
+  "report_id": "template_group_classifier_quality_19b",
+  "title": "Template Group Classifier Quality #19B",
+  "evidence": {
+    "metrics": {
+      "obvious_primary_accuracy": 1.0,
+      "presentation_variant_accuracy": 1.0,
+      "narrative_false_positives": 0,
+      "notes_parent_container_accuracy": 1,
+      "notes_content_conservation": 1,
+      "dropped_content_count": 0,
+      "deterministic_coverage": 0.9444444444444444,
+      "llm_fallback_fixture_coverage": 1,
+      "exact_template_group_accuracy": 1.0,
+      "multiple_template_detection": 1,
+      "ambiguous_or_unassigned_fixture_rate": 0.05555555555555555,
+      "invalid_response_rejection": 1,
+      "unknown_id_rejection": 1,
+      "mapping_mutations": 0
+    },
+    "required_gates": {
+      "obvious_primary_accuracy_100_percent": true,
+      "presentation_variant_accuracy_100_percent": true,
+      "narrative_false_positives_zero": true,
+      "notes_parent_container_only_100_percent": true,
+      "730000_not_notes_container": true,
+      "740000_issued_capital": true,
+      "750000_related_party_transactions": true,
+      "notes_content_conservation_100_percent": true,
+      "dropped_content_zero": true,
+      "unknown_template_ids_accepted_zero": true,
+      "invalid_structured_responses_accepted_zero": true,
+      "mapping_mutations_zero": true
+    },
+    "note_semantic_cases": [
+      {
+        "fixture": "R",
+        "expected_code": "730000",
+        "predicted_code": "730000",
+        "passed": true
+      },
+      {
+        "fixture": "S",
+        "expected_code": "740000",
+        "predicted_code": "740000",
+        "passed": true
+      },
+      {
+        "fixture": "T",
+        "expected_code": "750000",
+        "predicted_code": "750000",
+        "passed": true
+      }
+    ],
+    "contextual_note_passed": true,
+    "multiple_template_passed": true,
+    "unknown_note_outcome": "unassigned",
+    "llm_fixture_only": true,
+    "live_provider_calls": 0
+  },
+  "decision": "All fixture quality gates pass."
+}

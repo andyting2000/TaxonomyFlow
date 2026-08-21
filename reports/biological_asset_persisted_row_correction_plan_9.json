@@ -1,0 +1,30 @@
+{
+  "feature": "11K",
+  "job_id": 9,
+  "mode": "dry_run_only",
+  "read_only": true,
+  "database_modified": false,
+  "apply_supported": false,
+  "candidate_count": 0,
+  "expected_count_from_11j_guardrail_report": 34,
+  "candidate_count_matches_11j_skipped_rows": false,
+  "rows_by_current_template_field_id": {},
+  "selection_criteria": [
+    "row belongs to selected job_id",
+    "template_field_id is ssmt-mpers:CurrentBiologicalAssets or ssmt-mpers:NoncurrentBiologicalAssets, including equivalent unprefixed local names",
+    "extracted_label does not satisfy biological-asset guardrail evidence terms"
+  ],
+  "proposed_future_correction": {
+    "clear_template_field_id": true,
+    "assign_replacement_concept": false,
+    "preserve_extracted_label_value": true,
+    "preserve_confirmed_tag_id": true,
+    "requires_exact_id_guarded_apply_script": true,
+    "apply_in_this_feature": false
+  },
+  "candidates": [],
+  "next_step_options": [
+    "Approve an exact-ID guarded apply script for these candidate rows.",
+    "Skip database correction and move to the next mapping-quality issue such as ifrs-smes:TradeAndOtherCurrentReceivables."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "feature": "18F-E",
+  "safety_ui_requirements": [
+    "advisory only",
+    "human review required",
+    "dry-run only",
+    "no auto-apply",
+    "no confirmed_tag_id mutation",
+    "no final mapping mutation"
+  ],
+  "no_mutation_guarantee": {
+    "persistence_endpoint_calls": 0,
+    "ai_suggestion_writes": 0,
+    "mapping_mutation_calls": 0,
+    "confirmed_tag_id_automation": false
+  },
+  "safety_violation_handling": "Blocks candidate-row rendering when response counters report mutations or a candidate reports safe_for_auto_apply=true or requires_human_review=false.",
+  "forbidden_ui_actions": [
+    "Apply",
+    "Accept",
+    "Confirm",
+    "Save Mapping",
+    "Auto-map"
+  ],
+  "external_calls": false,
+  "production_enablement": false
+}

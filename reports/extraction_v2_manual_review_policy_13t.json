@@ -1,0 +1,131 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-13T01:15:00.260065+00:00",
+    "feature": "13T",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "script": "scripts/build_extraction_v2_manual_review_queue.py",
+    "report_type": "manual_review_policy",
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_manual_review_policy_13t.json"
+  },
+  "input_reports": {
+    "cleaned_candidates": "reports\\extraction_v2_cleaned_candidates_13s.json",
+    "duplicate_report": "reports\\extraction_v2_duplicate_conflict_13s.json",
+    "readiness_report": "reports\\extraction_v2_mapping_readiness_after_13s.json",
+    "quality_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_candidate_quality_13r.json",
+    "reference_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\reference_xbrl_report_20260511T082343Z.json"
+  },
+  "final_13q_benchmark_still_successful": true,
+  "feature_13r_baseline_remains_valid": true,
+  "feature_13s_cleaned_report_is_input": true,
+  "gate_status_definitions": {
+    "auto_mappable_candidate": "High-readiness fact/text candidate with strong evidence and no conflict/manual-review blockers.",
+    "suggest_mapping_only": "Usable candidate that may receive mapping suggestions but requires human confirmation before XBRL generation.",
+    "manual_review_required": "Candidate or conflict group must be reviewed before any mapping attempt.",
+    "blocked_from_mapping": "Candidate must not enter automatic mapping.",
+    "reference_only_or_context": "Contextual heading/metadata/narrative support; not a mapped fact."
+  },
+  "manual_review_reason_definitions": {
+    "duplicate_conflicting_values": "Same case/label has multiple value variants; no value can be chosen automatically.",
+    "duplicate_same_label_value": "Same label/value appears more than once and should be reviewed for evidence/context.",
+    "exact_duplicate_suppressed": "Candidate was suppressed as an exact duplicate in the #13S cleaned report.",
+    "date_or_year_label": "Candidate label is a pure date, year, or generic period label.",
+    "year_header_row": "Candidate appears to be a year/period header row rather than a fact.",
+    "heading_like_numeric_fact": "Numeric row has a heading-like label and may need total/subtotal or section policy.",
+    "weak_label": "Candidate label is missing, too short, generic, or otherwise weak.",
+    "weak_text_block_label": "Text block has weak or missing label evidence.",
+    "missing_statement_section": "Candidate has no statement_section.",
+    "ambiguous_statement_section": "Candidate section is generic or questionable for mapping.",
+    "non_numeric_numeric_value": "Numeric candidate value is not numeric.",
+    "sign_uncertainty": "Negative or dash/zero values require sign/normalization policy.",
+    "current_prior_uncertainty": "Current/prior values or year context are incomplete or uncertain.",
+    "subtotal_total_uncertainty": "Total/subtotal meaning requires policy or confirmation.",
+    "text_block_boundary_uncertainty": "Text block may be too short, too long, heading-only, or poorly bounded.",
+    "section_mismatch": "Candidate row type appears inconsistent with its statement section.",
+    "cleaned_downgraded_candidate": "Candidate was downgraded during #13S cleanup.",
+    "suppressed_candidate": "Candidate is retained only in audit trail and must not enter automatic mapping.",
+    "not_ready_candidate": "Candidate readiness is not_ready or otherwise unsafe for mapping.",
+    "requires_manual_mapping_confirmation": "Mapping suggestions are allowed only with later human confirmation."
+  },
+  "reviewer_decision_options": [
+    "confirm_candidate_for_mapping",
+    "correct_label",
+    "correct_value",
+    "correct_previous_value",
+    "correct_row_type",
+    "correct_section",
+    "mark_as_metadata",
+    "suppress_candidate",
+    "split_text_block",
+    "merge_text_block",
+    "keep_for_context_only",
+    "reject_candidate",
+    "manual_taxonomy_mapping_required"
+  ],
+  "conflict_group_decision_options": [
+    "choose_one_candidate",
+    "keep_multiple_as_detail_rows",
+    "mark_all_as_context_only",
+    "reject_all",
+    "require_aggregation_policy",
+    "require_dimension_policy",
+    "require_manual_taxonomy_mapping"
+  ],
+  "mapping_candidate_input_contract": {
+    "allowed_gate_statuses_for_13u": [
+      "auto_mappable_candidate",
+      "suggest_mapping_only"
+    ],
+    "suggest_mapping_only_requires_confirmation": true,
+    "blocked_gate_statuses_for_automatic_mapping": [
+      "manual_review_required",
+      "blocked_from_mapping",
+      "reference_only_or_context"
+    ],
+    "required_fields_for_13u": [
+      "candidate_id",
+      "case_id",
+      "label",
+      "value",
+      "previous_value",
+      "text",
+      "row_type",
+      "statement_section",
+      "confidence_or_readiness_score",
+      "gate_status",
+      "requires_confirmation",
+      "warning_flags",
+      "source_provenance",
+      "page_number",
+      "duplicate_conflict_group_status"
+    ],
+    "rules": [
+      "Do not include suppressed candidates in auto mapping input.",
+      "Do not include downgraded metadata/year/date candidates in auto mapping input.",
+      "Do not include conflict-review candidates in auto mapping input unless future human confirmation exists.",
+      "Do not map manual_review_required, blocked_from_mapping, or reference_only_or_context candidates automatically."
+    ]
+  },
+  "limitations": [
+    "This is not taxonomy mapping.",
+    "This is not XBRL generation.",
+    "This does not prove production readiness.",
+    "Reference XML is not sent to any model.",
+    "No DB mutation, live model call, benchmark rerun, UI/API implementation, or production cutover is performed."
+  ],
+  "conflict_group_policy": {
+    "preserve_all_conflicting_candidates": true,
+    "choose_winner_automatically": false,
+    "blocks_auto_mapping_by_default": true,
+    "conflict_group_count": 45
+  },
+  "recommended_next_feature": "Feature #13U - Manual-review queue UI/API planning before mapping cutover."
+}

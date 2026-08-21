@@ -1,0 +1,909 @@
+{
+  "feature": "13G revised",
+  "title": "Extraction and Mapping Architecture Audit + Modern OpenAI-Only Redesign Plan",
+  "date": "2026-05-05",
+  "scope": "Planning and audit only. No production extraction, mapping, XBRL generation, Arelle, frontend, backend route, database schema, or job-data behavior changed.",
+  "scope_guard": {
+    "no_production_code_changed": true,
+    "allowed_changed_files": [
+      "reports/extraction_mapping_architecture_audit_13g.json",
+      "reports/extraction_mapping_architecture_audit_13g.md",
+      "tests/test_extraction_mapping_architecture_report.py",
+      "feature_list.json",
+      "PROGRESS.md"
+    ],
+    "job_9_policy": "Job 9 is downgraded to a smoke-test regression sample only and must not be used as the primary benchmark or ground truth for the next architecture."
+  },
+  "inspected_sources": [
+    "README.md",
+    "feature_list.json",
+    "PROGRESS.md",
+    "services/smart_ai_processor.py",
+    "services/stage1_classifier.py",
+    "services/prompts/stage2_prompt_builder.py",
+    "services/xbrl_template_service.py",
+    "services/semantic_matcher.py",
+    "services/openai_provider.py",
+    "services/xbrl_generator.py",
+    "services/xbrl_validator.py",
+    "services/arelle_validator.py",
+    "tasks.py",
+    "routers/filings.py",
+    "database.py",
+    "mpers_templates.json",
+    "reports/openai_embedding_migration_plan.json",
+    "reports/openai_embedding_source_discovery.json",
+    "reports/openai_embedding_generation_20260505T135131Z.json"
+  ],
+  "current_architecture": {
+    "upload_and_job_creation": {
+      "summary": "routers/filings.py accepts PDF uploads, creates a FilingJob row, stores the uploaded PDF path, and starts process_pdf_task asynchronously.",
+      "code_references": [
+        "routers/filings.py:38",
+        "routers/filings.py:70",
+        "database.py:136",
+        "database.py:160",
+        "database.py:180"
+      ],
+      "created_records": [
+        "filing_jobs",
+        "financial_statement_pages",
+        "extracted_data_items"
+      ]
+    },
+    "pdf_processing_orchestration": {
+      "summary": "tasks.py process_pdf_task opens an async session and delegates PDF processing to SmartAIProcessor.process_pdf.",
+      "code_references": [
+        "tasks.py:170",
+        "tasks.py:206",
+        "services/smart_ai_processor.py:333"
+      ]
+    },
+    "page_classification": {
+      "summary": "SmartAIProcessor first tries text/layout heading classification. If that fails, Stage1Classifier calls the OpenAI vision path when MODEL_PROVIDER=openai. Legacy Hugging Face client construction remains outside OpenAI mode only.",
+      "code_references": [
+        "services/smart_ai_processor.py:597",
+        "services/smart_ai_processor.py:614",
+        "services/smart_ai_processor.py:1826",
+        "services/stage1_classifier.py:23",
+        "services/stage1_classifier.py:178"
+      ]
+    },
+    "stage_2_extraction": {
+      "summary": "For each classified page, SmartAIProcessor builds a multi-template Stage 2 prompt, calls OpenAI text extraction when native text quality is sufficient, then falls back to region VLM and whole-page VLM extraction. The prompt asks the model to extract values and assign template_code/concept_id in one step.",
+      "code_references": [
+        "services/smart_ai_processor.py:557",
+        "services/smart_ai_processor.py:653",
+        "services/smart_ai_processor.py:1900",
+        "services/smart_ai_processor.py:2143",
+        "services/prompts/stage2_prompt_builder.py:13",
+        "services/prompts/stage2_prompt_builder.py:129"
+      ],
+      "output_shape": [
+        "template_code",
+        "section_location",
+        "concept_id",
+        "label",
+        "value",
+        "year",
+        "level",
+        "required"
+      ]
+    },
+    "template_and_concept_matching": {
+      "summary": "The current mapping path first accepts a model-supplied concept_id if it belongs to the selected template and passes narrow guardrails. If not, it uses XBRLTemplateService.find_matching_concept_hybrid, which currently behaves as string/template matching in OpenAI mode because live Hugging Face embeddings are disabled and the new semantic_embeddings store is not yet used by production matching.",
+      "code_references": [
+        "services/smart_ai_processor.py:1958",
+        "services/smart_ai_processor.py:2070",
+        "services/xbrl_template_service.py:160",
+        "services/xbrl_template_service.py:356",
+        "services/xbrl_template_service.py:414",
+        "services/semantic_matcher.py:13"
+      ],
+      "embedding_state": {
+        "legacy_columns": [
+          "mbrs_taxonomy_tags.embedding vector(1752)",
+          "xml_template_fields.embedding vector(1752)"
+        ],
+        "new_shadow_store": "semantic_embeddings contains OpenAI text-embedding-3-large vectors for template_service_concept records, but production matcher behavior is unchanged.",
+        "latest_backfill_finding": "reports/openai_embedding_generation_20260505T135131Z.json reported 1313 source records and would_generate=0 after full backfill."
+      }
+    },
+    "persistence": {
+      "summary": "Extracted rows persist page linkage, extracted_label, extracted_value, confidence, statement_type, template_field_id, confirmed_tag_id, review flags, current/previous-year values, and validation warning flags. The model does not persist bounding boxes, source text spans, or table-cell coordinates.",
+      "code_references": [
+        "database.py:180",
+        "database.py:193",
+        "database.py:198",
+        "services/smart_ai_processor.py:823"
+      ]
+    },
+    "xbrl_generation": {
+      "summary": "XBRL generation loads reviewed rows with either confirmed_tag_id or template_field_id, and download generation can include unreviewed rows. confirmed_tag_id takes precedence; otherwise template_field_id becomes the XBRL concept name. Guardrails are rechecked before fact creation.",
+      "code_references": [
+        "services/xbrl_generator.py:72",
+        "services/xbrl_generator.py:106",
+        "services/xbrl_generator.py:322",
+        "services/xbrl_generator.py:378",
+        "routers/filings.py:614",
+        "routers/filings.py:634"
+      ]
+    },
+    "validation": {
+      "summary": "xbrl_validator.py performs readiness validation and treats either confirmed_tag_id or template_field_id as mapping evidence. arelle_validator.py wraps deterministic Arelle CLI validation and local schemaRef handling; it is not an LLM tool-call loop.",
+      "code_references": [
+        "services/xbrl_validator.py:19",
+        "services/arelle_validator.py:110",
+        "services/arelle_validator.py:156"
+      ]
+    }
+  },
+  "instability_findings": [
+    {
+      "category": "page_classification_instability",
+      "code_locations": [
+        "services/smart_ai_processor.py:597",
+        "services/stage1_classifier.py:178"
+      ],
+      "why_unstable": "Classification uses a text heuristic first and OpenAI vision fallback only when text cues are insufficient. Pages with continuation sections, mixed statements, or weak headings can enter extraction with partial or wrong template context.",
+      "user_visible_symptom": "Rows appear under the wrong statement tab or remain unmatched because the wrong template list was supplied.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "text_extraction_instability",
+      "code_locations": [
+        "services/smart_ai_processor.py:1900"
+      ],
+      "why_unstable": "Native text is passed directly into a broad prompt that asks for extraction and template/concept assignment. Layout, columns, and table boundaries are not represented as a stable intermediate model.",
+      "user_visible_symptom": "Multi-year values can be missed, assigned to the wrong year, or duplicated when page text loses table shape.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "vision_extraction_instability",
+      "code_locations": [
+        "services/smart_ai_processor.py:2143"
+      ],
+      "why_unstable": "Region and whole-page VLM fallback handles both visual extraction and mapping context. Visual model output can vary across retries and lacks persisted source-cell evidence.",
+      "user_visible_symptom": "Inconsistent row counts, missing values, duplicated table rows, or changed concept assignments across runs.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "table_structure_loss",
+      "code_locations": [
+        "services/smart_ai_processor.py:1073",
+        "services/smart_ai_processor.py:1126",
+        "services/smart_ai_processor.py:1181"
+      ],
+      "why_unstable": "The current pipeline extracts text/layout blocks but does not persist a table candidate model with row, column, bbox, and source text spans before invoking LLM normalization.",
+      "user_visible_symptom": "Rows can look correct as text but lose column/year association in the review UI and XBRL facts.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": false,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "multi_year_column_confusion",
+      "code_locations": [
+        "services/prompts/stage2_prompt_builder.py:13",
+        "services/smart_ai_processor.py:759"
+      ],
+      "why_unstable": "Year assignment is model-provided and later cleaned only as scalar year metadata. There is no deterministic column model tying current/prior-year values to table headers.",
+      "user_visible_symptom": "Current-year and previous-year values may be swapped, omitted, or duplicated.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "subtotal_total_confusion",
+      "code_locations": [
+        "services/prompts/stage2_prompt_builder.py:13",
+        "services/smart_ai_processor.py:863"
+      ],
+      "why_unstable": "Extraction, calculation warning detection, and concept mapping happen after the model already emitted rows. There is no explicit row_type model separating line item, subtotal, total, note heading, and narrative rows before mapping.",
+      "user_visible_symptom": "Subtotals can map to broad total concepts or duplicated summary facts.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "negative_value_sign_confusion",
+      "code_locations": [
+        "services/prompts/stage2_prompt_builder.py:13",
+        "services/smart_ai_processor.py:759"
+      ],
+      "why_unstable": "The prompt instructs parentheses-as-negative, but normalization is not separated into a deterministic evidence-backed stage with raw_value, normalized_value, sign_source, and confidence.",
+      "user_visible_symptom": "Losses, contra-assets, or cash outflows can be stored with wrong sign or ambiguous formatting.",
+      "level": "implementation-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "statement_type_propagation_risk",
+      "code_locations": [
+        "services/smart_ai_processor.py:653",
+        "services/smart_ai_processor.py:823",
+        "services/xbrl_generator.py:378"
+      ],
+      "why_unstable": "statement_type depends on classification and template selection in the same extraction pass. Wrong template_code fallback can propagate into context selection for XBRL generation.",
+      "user_visible_symptom": "Facts may use an instant/duration context inconsistent with the source statement.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "extraction_mapping_coupling",
+      "code_locations": [
+        "services/prompts/stage2_prompt_builder.py:13",
+        "services/smart_ai_processor.py:1958"
+      ],
+      "why_unstable": "The model is asked to extract visible data and map to exact XBRL concept IDs at the same time. This makes it hard to distinguish extraction failure from mapping failure.",
+      "user_visible_symptom": "A row can look extracted but be silently attached to the wrong concept, making review and debugging harder.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": false,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "broad_concept_mapping",
+      "code_locations": [
+        "services/xbrl_template_service.py:356",
+        "services/xbrl_template_service.py:414",
+        "services/smart_ai_processor.py:2070"
+      ],
+      "why_unstable": "String/template matching can prefer broad concepts when source labels are short or company-specific. Existing biological asset and receivables guardrails are useful but narrow.",
+      "user_visible_symptom": "Specific rows can be mapped to broad summary concepts, producing misleading XBRL facts.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "lack_of_evidence_traceability",
+      "code_locations": [
+        "database.py:180"
+      ],
+      "why_unstable": "ExtractedDataItem stores page linkage and labels/values but not source text spans, table cell coordinates, bbox, or evidence excerpts.",
+      "user_visible_symptom": "Reviewers cannot easily verify why a value or mapping was chosen from the source document.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": false,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "lack_of_bounding_box_or_source_region",
+      "code_locations": [
+        "database.py:160",
+        "database.py:180"
+      ],
+      "why_unstable": "Page image paths are stored, but row-level source regions are not stored. Region VLM crops are transient.",
+      "user_visible_symptom": "The UI cannot highlight the exact source row/cell supporting an extracted fact.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": false,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "weak_confidence_model",
+      "code_locations": [
+        "services/smart_ai_processor.py:823",
+        "services/xbrl_template_service.py:414"
+      ],
+      "why_unstable": "Confidence is a mixture of model output, accepted LLM concept_id, and string/semantic score buckets. It is not calibrated against benchmark outcomes.",
+      "user_visible_symptom": "Rows may be marked reviewed/high-confidence even when evidence is thin.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "lack_of_multi_pdf_benchmark",
+      "code_locations": [
+        "PROGRESS.md"
+      ],
+      "why_unstable": "Prior Job 9 work was a smoke-test path and is not representative enough to drive architecture decisions.",
+      "user_visible_symptom": "Fixes can improve one sample while harming other statement formats.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "overfitting_to_smoke_jobs",
+      "code_locations": [
+        "PROGRESS.md"
+      ],
+      "why_unstable": "Job 9 duplicate/mapping observations are useful but too narrow. Designing around Job 9 alone would bias the pipeline toward arbitrary smoke-test data.",
+      "user_visible_symptom": "Regression risk on Job 11 and real customer-like filings.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "hard_to_debug_fallback_paths",
+      "code_locations": [
+        "services/smart_ai_processor.py:653",
+        "services/smart_ai_processor.py:1900",
+        "services/smart_ai_processor.py:2143"
+      ],
+      "why_unstable": "Text, region VLM, and whole-page VLM fallback paths can all produce the same final item shape without a persisted provenance model.",
+      "user_visible_symptom": "Two runs can differ but the review UI cannot explain which extraction route produced a row.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": "partial",
+      "suggests_replacement_architecture": true
+    },
+    {
+      "category": "taxonomy_validation_limitations",
+      "code_locations": [
+        "services/xbrl_validator.py:19",
+        "services/arelle_validator.py:156"
+      ],
+      "why_unstable": "Readiness validation and Arelle structural checks do not prove MBRS/FS-MPERS submission readiness or mapping correctness. Arelle reports structural issues but cannot infer correct mappings from source evidence.",
+      "user_visible_symptom": "A downloadable package can still require human review and mapping validation.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": false
+    },
+    {
+      "category": "human_review_gap",
+      "code_locations": [
+        "frontend/src/review-workspace.jsx",
+        "database.py:198"
+      ],
+      "why_unstable": "The current review flow can edit/save rows and confirmed_tag_id, but it does not yet expose top-k mapping suggestions, guardrail reasons, evidence snippets, or confidence rationale as first-class review objects.",
+      "user_visible_symptom": "Reviewers see extracted rows but lack enough context to confidently accept or reject mappings at scale.",
+      "level": "architecture-level",
+      "fixable_with_current_architecture": true,
+      "suggests_replacement_architecture": true
+    }
+  ],
+  "keep_replace_decisions": {
+    "keep": [
+      {
+        "component": "React /app review workflow",
+        "reason": "It provides the needed human review surface and should be extended later with evidence and top-k suggestions rather than replaced now."
+      },
+      {
+        "component": "services/openai_provider.py",
+        "reason": "It centralizes OpenAI text, vision, structured JSON, and embedding access with key redaction and testable helpers."
+      },
+      {
+        "component": "semantic_embeddings table",
+        "reason": "It supports provider-versioned OpenAI embeddings side-by-side with legacy vector(1752) columns and enables shadow comparison."
+      },
+      {
+        "component": "mpers_templates.json and XBRLTemplateService",
+        "reason": "They are the active local taxonomy/template source used by prompts, review, and current string/template matching."
+      },
+      {
+        "component": "Arelle wrapper",
+        "reason": "It is a deterministic validation/reporting layer and should remain separate from LLM mapping decisions."
+      },
+      {
+        "component": "mapping guardrails",
+        "reason": "Existing biological asset and receivables guardrails are useful examples of evidence-based automatic mapping controls."
+      }
+    ],
+    "replace_or_redesign": [
+      {
+        "component": "LLM prompt that combines extraction and concept mapping",
+        "reason": "It couples two failure modes and allows model-assigned concepts to enter the persistence path too early."
+      },
+      {
+        "component": "VLM-first or fallback-as-equivalent extraction",
+        "reason": "Vision should be used for scanned pages and ambiguous layout, not as an opaque equivalent to text/table extraction when native structure exists."
+      },
+      {
+        "component": "string-only automatic concept acceptance",
+        "reason": "It can map short or company-specific labels to broad concepts without enough evidence."
+      },
+      {
+        "component": "row persistence without source evidence",
+        "reason": "Industrial review and audit need source snippets, page regions, table column/year, and route provenance."
+      }
+    ]
+  },
+  "recommended_architecture": {
+    "name": "Hybrid industrial pipeline: text/table-first extraction, OpenAI structured normalization, embedding-assisted mapping suggestions, deterministic validation, and human acceptance",
+    "can_be_implemented_with_current_assets": true,
+    "required_assets": [
+      "OpenAI API key",
+      "local Python PDF/rendering tooling already present",
+      "mpers_templates.json",
+      "XBRLTemplateService",
+      "semantic_embeddings OpenAI backfill",
+      "existing database and review workflow",
+      "existing Arelle CLI wrapper"
+    ],
+    "layers": [
+      {
+        "layer": 1,
+        "name": "Document ingestion and evidence model",
+        "design": "Store raw PDF page metadata, native text, rendered image path when needed, page number, extraction route, source text snippets, and future bbox/table-cell coordinates."
+      },
+      {
+        "layer": 2,
+        "name": "Document structure detection",
+        "design": "Detect statement sections, notes, table boundaries, year columns, statement titles, and continuation pages. Use OpenAI only for ambiguous section/layout reasoning, outputting strict JSON."
+      },
+      {
+        "layer": 3,
+        "name": "Deterministic table candidate extraction",
+        "design": "Extract candidate rows before mapping: raw_label, raw_value, year, column_name, page_number, statement_section, source_text/evidence, route, and confidence."
+      },
+      {
+        "layer": 4,
+        "name": "OpenAI structured normalization",
+        "design": "Use OpenAI structured output to clean labels, normalize numbers, detect negative signs, classify row_type, identify totals/subtotals, and return confidence with a concise reasoning summary. Do not invent values."
+      },
+      {
+        "layer": 5,
+        "name": "Mapping candidate generation",
+        "design": "Generate top-k candidates using local template rules, string matching, and OpenAI embeddings from semantic_embeddings. Apply guardrails before any auto-acceptance."
+      },
+      {
+        "layer": 6,
+        "name": "Mapping decision policy",
+        "design": "Separate auto-accepted mappings, suggested mappings, unmapped rows, and guardrail-blocked rows. Store decision reasons and confidence. Preserve confirmed_tag_id as manual confirmation while considering a future accepted_mapping record."
+      },
+      {
+        "layer": 7,
+        "name": "XBRL generation",
+        "design": "Generate XBRL only from accepted mappings. Keep unmapped/suggested rows out of final XBRL unless manually confirmed or policy-accepted with evidence."
+      },
+      {
+        "layer": 8,
+        "name": "Validation and audit",
+        "design": "Run readiness validation, Arelle instance_baseline, and generated XBRL audit. Produce human-readable issue reports. Do not use Arelle as an automatic LLM remapping loop."
+      },
+      {
+        "layer": 9,
+        "name": "Human review loop",
+        "design": "Show extracted row, evidence, source page/region, top-k mapping suggestions, guardrail reason, confidence, and accept/reject/change mapping actions."
+      }
+    ]
+  },
+  "openai_api_usage_plan": {
+    "vision_model_usage": {
+      "use_for": [
+        "scanned/image-heavy pages",
+        "visual layout ambiguity",
+        "page/section classification when native text is weak",
+        "table-boundary reasoning when local extraction cannot recover structure"
+      ],
+      "do_not_use_for": [
+        "primary extraction engine when native text/table extraction is adequate",
+        "direct final concept assignment without local candidate validation"
+      ]
+    },
+    "text_model_usage": {
+      "use_for": [
+        "strict JSON section classification from text evidence",
+        "structured row normalization",
+        "negative/bracket sign interpretation with evidence",
+        "row_type classification",
+        "concise reasoning summaries for review"
+      ],
+      "constraints": [
+        "extract only visible values",
+        "do not invent missing rows",
+        "do not map to XBRL taxonomy inside extraction prompts",
+        "schema-validate every response"
+      ]
+    },
+    "embeddings_usage": {
+      "use_for": [
+        "embedding query for normalized row text plus statement context",
+        "nearest-neighbor search against semantic_embeddings",
+        "top-k mapping suggestions",
+        "shadow comparison before production cutover"
+      ],
+      "do_not_use_for": [
+        "destructive replacement of legacy vector columns",
+        "automatic low-confidence final mapping"
+      ]
+    },
+    "structured_output_schemas": {
+      "DocumentSection": [
+        "section_id",
+        "statement_code",
+        "title",
+        "page_numbers",
+        "confidence",
+        "evidence_text"
+      ],
+      "TableCandidate": [
+        "table_id",
+        "page_number",
+        "section_id",
+        "header_rows",
+        "year_columns",
+        "source_region",
+        "confidence"
+      ],
+      "ExtractedFinancialRow": [
+        "row_id",
+        "raw_label",
+        "raw_value",
+        "year",
+        "column_name",
+        "page_number",
+        "statement_section",
+        "source_text",
+        "source_region",
+        "extraction_route"
+      ],
+      "NormalizedFinancialRow": [
+        "row_id",
+        "clean_label",
+        "normalized_value",
+        "raw_value",
+        "sign",
+        "sign_source",
+        "year",
+        "row_type",
+        "confidence",
+        "reasoning_summary"
+      ],
+      "MappingCandidate": [
+        "row_id",
+        "concept_id",
+        "template_code",
+        "concept_label",
+        "score",
+        "method",
+        "guardrail_status",
+        "evidence_match_summary"
+      ],
+      "MappingDecision": [
+        "row_id",
+        "decision",
+        "accepted_concept_id",
+        "decision_reason",
+        "decided_by",
+        "requires_human_review"
+      ],
+      "ValidationIssue": [
+        "issue_id",
+        "severity",
+        "stage",
+        "message",
+        "affected_rows",
+        "suggested_next_action"
+      ]
+    },
+    "reliability_controls": [
+      "strict JSON/schema validation",
+      "bounded retries for model transport or schema errors",
+      "evidence requirement for every extracted row",
+      "no-invention rule in prompts and validators",
+      "deterministic table/text fallback before vision",
+      "confidence thresholds calibrated on a multi-PDF benchmark",
+      "manual review threshold for low/medium confidence or guardrail-blocked mappings"
+    ]
+  },
+  "arelle_position": {
+    "should_llm_call_arelle_directly_now": false,
+    "recommendation": "Arelle should remain deterministic validation and reporting now. Do not build an agentic LLM auto-fix or auto-remap loop yet.",
+    "safe_later_use": [
+      "LLM summarizes Arelle issues into product-friendly categories",
+      "LLM links Arelle messages to affected facts or templates when evidence is available",
+      "LLM proposes remediation categories for a human reviewer"
+    ],
+    "never_automate_without_human_approval": [
+      "DB remapping",
+      "XBRL fact deletion",
+      "taxonomy concept substitution",
+      "dimension/context synthesis",
+      "automatic generated-XBRL rewrites based only on LLM interpretation of Arelle messages"
+    ],
+    "no_agentic_auto_fix_yet": true
+  },
+  "option_comparison": [
+    {
+      "option": "Option 1: Keep current VLM+LLM mixed pipeline and patch it",
+      "stability": "medium-low",
+      "cost": "medium",
+      "speed": "medium",
+      "implementation_complexity": "low",
+      "debuggability": "low",
+      "mapping_accuracy_potential": "medium",
+      "evidence_traceability": "low",
+      "mbrs_mpers_suitability": "limited",
+      "assessment": "Useful only for short-term bug fixes. It does not address extraction/mapping coupling or evidence traceability."
+    },
+    {
+      "option": "Option 2: Text-first / table-first extraction with OpenAI normalization",
+      "stability": "high for text-native PDFs",
+      "cost": "low-medium",
+      "speed": "high",
+      "implementation_complexity": "medium",
+      "debuggability": "high",
+      "mapping_accuracy_potential": "medium-high",
+      "evidence_traceability": "high if source spans are stored",
+      "mbrs_mpers_suitability": "strong for standard filings",
+      "assessment": "Strong base, but needs a fallback for scanned or layout-complex pages."
+    },
+    {
+      "option": "Option 3: OpenAI vision-first extraction for all pages",
+      "stability": "medium",
+      "cost": "high",
+      "speed": "low-medium",
+      "implementation_complexity": "medium",
+      "debuggability": "medium-low",
+      "mapping_accuracy_potential": "medium",
+      "evidence_traceability": "medium unless bbox/source evidence is added",
+      "mbrs_mpers_suitability": "acceptable for scanned pages, wasteful for native PDFs",
+      "assessment": "Simple to reason about at the API level but too costly and opaque as the default."
+    },
+    {
+      "option": "Option 4: Hybrid industrial pipeline",
+      "stability": "high",
+      "cost": "controlled",
+      "speed": "high for native PDFs, acceptable for fallback pages",
+      "implementation_complexity": "medium-high",
+      "debuggability": "high",
+      "mapping_accuracy_potential": "high",
+      "evidence_traceability": "high",
+      "mbrs_mpers_suitability": "best fit",
+      "assessment": "Recommended. It separates extraction, normalization, mapping suggestions, mapping decisions, validation, and human review."
+    }
+  ],
+  "migration_plan": {
+    "recommended_next_implementation_feature": "Feature #13H Multi-PDF extraction benchmark harness",
+    "phases": [
+      {
+        "phase": 0,
+        "name": "Architecture approval and benchmark dataset definition",
+        "objective": "Approve the separation of extraction, normalization, mapping candidates, decisions, and validation.",
+        "likely_files": [
+          "reports/*",
+          "README.md",
+          "feature_list.json",
+          "PROGRESS.md"
+        ],
+        "risks": [
+          "Architecture churn before benchmark agreement"
+        ],
+        "success_criteria": [
+          "Benchmark PDFs and metrics are defined",
+          "Job 9 explicitly remains smoke-only"
+        ],
+        "verification_commands": [
+          "python -B -m json.tool reports/extraction_mapping_architecture_audit_13g.json"
+        ],
+        "rollback_strategy": "No production changes; archive the plan if not accepted."
+      },
+      {
+        "phase": 1,
+        "name": "Multi-PDF benchmark harness",
+        "objective": "Create reproducible extraction/mapping metrics across representative PDFs/jobs before changing the pipeline.",
+        "likely_files": [
+          "scripts/*benchmark*.py",
+          "tests/test_*benchmark*.py",
+          "reports/*"
+        ],
+        "risks": [
+          "Insufficient representative documents",
+          "Metric definitions that reward coverage over correctness"
+        ],
+        "success_criteria": [
+          "3-5 PDFs/jobs measured",
+          "Row, value, year, sign, statement_type, mapping, XBRL, and validation metrics reported"
+        ],
+        "verification_commands": [
+          "python -B scripts/extraction_metrics.py --jobs <ids>",
+          "python -B -m unittest tests.test_*benchmark* -v"
+        ],
+        "rollback_strategy": "Benchmark scripts are read-only and can be disabled without touching production."
+      },
+      {
+        "phase": 2,
+        "name": "New extraction prototype side-by-side",
+        "objective": "Run text/table-first candidate extraction beside current production output without DB cutover.",
+        "likely_files": [
+          "services/*prototype*.py",
+          "scripts/*shadow*.py",
+          "tests/test_*shadow*.py"
+        ],
+        "risks": [
+          "Prototype accidentally writes to production tables"
+        ],
+        "success_criteria": [
+          "Side-by-side report compares current vs prototype rows",
+          "No production job behavior changes"
+        ],
+        "verification_commands": [
+          "python -B scripts/<shadow_extraction>.py --job <id> --no-write"
+        ],
+        "rollback_strategy": "Keep prototype behind script/flag only."
+      },
+      {
+        "phase": 3,
+        "name": "OpenAI structured normalization prototype",
+        "objective": "Normalize candidate rows with strict JSON schemas and no taxonomy mapping.",
+        "likely_files": [
+          "services/openai_provider.py",
+          "services/prompts/*",
+          "tests/test_*normalization*.py"
+        ],
+        "risks": [
+          "Prompt drift",
+          "Schema mismatch"
+        ],
+        "success_criteria": [
+          "Normalized rows retain source evidence",
+          "Sign/year/row_type accuracy improves against benchmark"
+        ],
+        "verification_commands": [
+          "python -B -m unittest tests.test_*normalization* -v"
+        ],
+        "rollback_strategy": "Disable normalization feature flag and retain current extraction path."
+      },
+      {
+        "phase": 4,
+        "name": "Mapping candidate generation using OpenAI embeddings",
+        "objective": "Use semantic_embeddings for top-k suggestions in shadow mode only.",
+        "likely_files": [
+          "services/semantic_matcher.py",
+          "services/xbrl_template_service.py",
+          "scripts/*mapping_shadow*.py",
+          "tests/test_*semantic*"
+        ],
+        "risks": [
+          "Broad mappings scored too highly",
+          "Embedding quality uncalibrated"
+        ],
+        "success_criteria": [
+          "Top-1/top-5 agreement measured",
+          "Guardrail-blocked candidates reported",
+          "No auto-commit"
+        ],
+        "verification_commands": [
+          "python -B scripts/<mapping_shadow>.py --jobs <ids>"
+        ],
+        "rollback_strategy": "Keep production matcher unchanged and ignore shadow suggestions."
+      },
+      {
+        "phase": 5,
+        "name": "React review suggestions, no auto-commit",
+        "objective": "Expose evidence and top-k suggestions to reviewers without changing automatic mapping policy.",
+        "likely_files": [
+          "frontend/src/review-workspace.jsx",
+          "frontend/src/api.js",
+          "routers/filings.py"
+        ],
+        "risks": [
+          "UI clutter",
+          "Review workflow confusion"
+        ],
+        "success_criteria": [
+          "Reviewer can accept/reject/change suggestions",
+          "confirmed_tag_id remains manual confirmation"
+        ],
+        "verification_commands": [
+          "npm run build",
+          "python -B -m unittest discover -s tests -p \"test_*.py\" -v"
+        ],
+        "rollback_strategy": "Hide suggestion UI behind a feature flag."
+      },
+      {
+        "phase": 6,
+        "name": "XBRL generation from accepted mappings only",
+        "objective": "Tighten generation policy so only accepted/confirmed mappings create final facts.",
+        "likely_files": [
+          "services/xbrl_generator.py",
+          "services/xbrl_validator.py",
+          "tests/test_*xbrl*"
+        ],
+        "risks": [
+          "Lower fact coverage until review workflow catches up"
+        ],
+        "success_criteria": [
+          "Generated fact count is explainable",
+          "Every fact has row/evidence traceability"
+        ],
+        "verification_commands": [
+          "python -B -m unittest tests.test_xbrl_validator_semantics -v"
+        ],
+        "rollback_strategy": "Retain current generator path behind a compatibility flag during transition."
+      },
+      {
+        "phase": 7,
+        "name": "Gradual production cutover behind feature flag",
+        "objective": "Run the new pipeline for selected PDFs/jobs after benchmark acceptance.",
+        "likely_files": [
+          "config.py",
+          "services/smart_ai_processor.py",
+          "tasks.py"
+        ],
+        "risks": [
+          "Unexpected worker/runtime regressions"
+        ],
+        "success_criteria": [
+          "Benchmark metrics outperform current pipeline",
+          "Rollback flag works"
+        ],
+        "verification_commands": [
+          "python -B -m unittest discover -s tests -p \"test_*.py\" -v"
+        ],
+        "rollback_strategy": "Switch feature flag back to current production pipeline."
+      },
+      {
+        "phase": 8,
+        "name": "Arelle-assisted issue summarization, not auto-fix",
+        "objective": "Summarize deterministic Arelle reports for reviewers without automatic remapping or DB mutation.",
+        "likely_files": [
+          "services/arelle_validator.py",
+          "services/openai_provider.py",
+          "frontend/src/*"
+        ],
+        "risks": [
+          "Users may overtrust summaries"
+        ],
+        "success_criteria": [
+          "Arelle remains source of truth",
+          "LLM summary is explicitly advisory"
+        ],
+        "verification_commands": [
+          "python -B -m unittest tests.test_*arelle* -v"
+        ],
+        "rollback_strategy": "Disable summaries and show raw deterministic reports."
+      }
+    ]
+  },
+  "benchmark_plan": {
+    "job_9_policy": "Job 9 is not the primary benchmark. It may remain only as a smoke-test regression sample because its original data was arbitrary and earlier duplicate groups are not safe as architecture ground truth.",
+    "minimum_dataset": [
+      "standard financial statement PDF",
+      "complex table PDF",
+      "notes-heavy PDF",
+      "scanned or image-heavy PDF if available",
+      "one real or near-real customer-like PDF"
+    ],
+    "recommended_jobs": [
+      "Job 11 where OpenAI extraction completed and Review Workspace displayed rows",
+      "new representative jobs created from the benchmark PDFs",
+      "Job 9 only as smoke-test regression"
+    ],
+    "metrics": [
+      "page classification accuracy",
+      "rows extracted",
+      "values extracted correctly",
+      "year/column correctness",
+      "sign correctness",
+      "statement_type correctness",
+      "template_field_id coverage",
+      "unmapped rows",
+      "duplicate labels",
+      "duplicate label+value rows",
+      "mapping top-1 agreement",
+      "mapping top-5 agreement",
+      "human review burden",
+      "generated XBRL fact count",
+      "Arelle instance_baseline result",
+      "generated XBRL audit issues"
+    ],
+    "success_condition": "Architecture changes should improve correctness and traceability across multiple PDFs, not just increase fact count or optimize one smoke job."
+  },
+  "risks": [
+    {
+      "risk": "Moving directly to semantic matcher cutover without a benchmark could increase broad mappings.",
+      "mitigation": "Run shadow top-k comparison before auto-acceptance."
+    },
+    {
+      "risk": "Vision-first extraction could increase cost and lower debuggability.",
+      "mitigation": "Use native text/table extraction first and reserve vision for scanned or ambiguous pages."
+    },
+    {
+      "risk": "Arelle output could be misused as an automatic remapping signal.",
+      "mitigation": "Keep Arelle deterministic and advisory; require human approval for mapping changes."
+    },
+    {
+      "risk": "Fact coverage can drop when generation is restricted to accepted mappings.",
+      "mitigation": "Introduce accepted/suggested/unmapped states and benchmark review burden before production cutover."
+    }
+  ],
+  "next_feature_recommendation": {
+    "feature": "Feature #13H Multi-PDF extraction benchmark harness",
+    "reason": "The architecture audit finds the next safest step is benchmark measurement, not another production pipeline change. A multi-PDF benchmark harness is required before side-by-side extraction or semantic matcher cutover can be judged."
+  }
+}

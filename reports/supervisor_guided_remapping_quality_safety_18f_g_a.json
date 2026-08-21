@@ -1,0 +1,60 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-closeout",
+  "generated_at": "2026-07-23T17:15:35.0228288+08:00",
+  "status": "passed",
+  "database_evidence": {
+    "completed_revision_count": 5,
+    "distinct_parent_suggestion_count": 5,
+    "attempt_one_count": 5,
+    "initial_suggestion_status_suggested_count": 5,
+    "initial_qname_matches_recorded_original_count": 5,
+    "source_row_template_field_id_null_count": 5,
+    "source_row_confirmed_tag_id_null_count": 5,
+    "source_row_is_reviewed_false_count": 5,
+    "requires_human_review_true_count": 5,
+    "safe_for_auto_apply_false_count": 5
+  },
+  "mutation_evidence": {
+    "initial_suggestion_mutations_observed": 0,
+    "confirmed_tag_id_mutations_observed": 0,
+    "final_template_mapping_mutations_observed": 0,
+    "automatic_accepts_observed": 0,
+    "automatic_rejects_observed": 0,
+    "recursive_supervisor_mapper_loops_observed": 0
+  },
+  "retry_limit_evidence": {
+    "tested_revision_id": "3ad77b95-1de1-4166-91b4-4c94c337784c",
+    "second_attempt_result": "SupervisorGuidedCorrectionRetryLimit",
+    "provider_called": false,
+    "count_before": 1,
+    "count_after": 1,
+    "existing_revision_hash_unchanged": true,
+    "database_unique_index": "idx_supervisor_guided_revisions_parent(parent_suggestion_id, correction_attempt)",
+    "passed": true
+  },
+  "payload_safety": {
+    "auditor_xml_allowed": false,
+    "parsed_auditor_xbrl_facts_allowed": false,
+    "benchmark_gold_qname_allowed": false,
+    "target_answer_allowed": false,
+    "evaluation_correctness_label_allowed": false,
+    "runtime_raw_payload_persisted": false,
+    "verification_basis": "The correction payload builder uses an allowlist, forbidden fields fail closed, and the focused payload safety tests passed. Raw provider payloads are intentionally not persisted, so historical payload reconstruction is not claimed."
+  },
+  "verification": [
+    {
+      "command": "python -B -m unittest tests.test_supervisor_guided_mapping_correction -v",
+      "result": "passed",
+      "tests": 14
+    },
+    {
+      "check": "read-only PostgreSQL revision and source-row audit",
+      "result": "passed"
+    },
+    {
+      "check": "bounded second-attempt service call with provider sentinel",
+      "result": "passed"
+    }
+  ],
+  "production_auto_apply_approved": false
+}

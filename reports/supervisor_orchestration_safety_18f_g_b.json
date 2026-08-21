@@ -1,0 +1,70 @@
+{
+  "feature_id": "18F-G-B",
+  "generated_at": "2026-07-23T17:40:13.8298379+08:00",
+  "status": "passed",
+  "feature_flags": {
+    "SUPERVISOR_ORCHESTRATION_ENABLED": false,
+    "SUPERVISOR_ORCHESTRATION_DEFAULT_MODE": "manual",
+    "SUPERVISOR_ORCHESTRATION_AUTO_ELIGIBILITY": true,
+    "SUPERVISOR_ORCHESTRATION_AUTO_REVIEW": false,
+    "SUPERVISOR_ORCHESTRATION_AUTO_REMAP": false,
+    "SUPERVISOR_ORCHESTRATION_ADMIN_ONLY": true,
+    "SUPERVISOR_ORCHESTRATION_MAX_BATCH_SIZE": 10,
+    "SUPERVISOR_ORCHESTRATION_MAX_REMAP_RETRIES": 1,
+    "SUPERVISOR_ORCHESTRATION_MIN_RISK": "medium",
+    "SUPERVISOR_ORCHESTRATION_MAX_CONCURRENT_LIVE_CALLS": 2,
+    "SUPERVISOR_ORCHESTRATION_CONFIDENCE_THRESHOLD": 0.85,
+    "SUPERVISOR_ORCHESTRATION_PER_ROW_TIMEOUT_SECONDS": 120
+  },
+  "unsafe_configuration_fail_closed": [
+    "default mode other than manual",
+    "auto review enabled",
+    "auto remap enabled",
+    "more than one remap retry",
+    "invalid risk threshold"
+  ],
+  "planning_safety": {
+    "external_calls": 0,
+    "database_writes": 0,
+    "supervisor_calls": 0,
+    "mapper_calls": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "auto_accepts": 0,
+    "auto_rejects": 0,
+    "requires_human_review": true,
+    "safe_for_auto_apply": false
+  },
+  "execution_controls": {
+    "explicit_manual_request_required": true,
+    "batch_confirmation_remains_in_existing_ui": true,
+    "max_batch_size": 10,
+    "execution_strategy": "existing sequential batch path",
+    "effective_concurrency": 1,
+    "configured_concurrency_ceiling": 2,
+    "per_row_timeout_seconds": 120,
+    "provider_retries_added": 0,
+    "maximum_correction_attempts": 1,
+    "estimated_manual_live_calls_exposed_before_batch": true,
+    "partial_review_failure_isolation": "Existing review service persists a failed review and continues unrelated suggestions.",
+    "remap_failure_isolation": "Existing correction service preserves the initial suggestion and review; failed attempt state remains audit-visible and no completed revised mapping is applied."
+  },
+  "payload_boundaries": {
+    "auditor_xml_allowed": false,
+    "parsed_auditor_xbrl_facts_allowed": false,
+    "benchmark_gold_qname_allowed": false,
+    "target_answer_allowed": false,
+    "evaluation_label_allowed": false
+  },
+  "verification": {
+    "changed_file_compilation": "passed",
+    "policy_tests": 11,
+    "orchestrator_tests": 14,
+    "supervisor_regression_tests": 143,
+    "mapping_ownership_api_regression_tests": 83,
+    "full_backend_tests": 1234,
+    "full_backend_status": "passed"
+  },
+  "production_defaults_enabled": false,
+  "auto_apply_approved": false
+}

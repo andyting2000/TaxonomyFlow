@@ -1,0 +1,430 @@
+{
+  "run_metadata": {
+    "feature": "17D-B-hotfix-6",
+    "generated_at": "2026-06-17T13:10:53Z",
+    "source_review_feature": "17D-B",
+    "source_review_mode": "live",
+    "external_llm_called_by_this_script": false,
+    "auditor_xml_sent_externally": false,
+    "parsed_xml_facts_sent_externally": false,
+    "target_gold_answers_sent_externally": false,
+    "evaluation_labels_sent_externally": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "confirmed_tag_id_automated": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "production_integration_ready": false,
+    "production_integration_recommendation": "defer_17d_c_until_threshold_simulation_is_reviewed_and_live_retested",
+    "source_reports": {
+      "review": "reports/supervisor_live_review_17d_b.json",
+      "predictions": "reports/golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "concept_playbook": "reports/fs_mpers_concept_playbook_17d_pre.json"
+    }
+  },
+  "metrics": {
+    "cash_flow_candidate_count": 8,
+    "cash_flow_relaxable_count": 4,
+    "cash_flow_relaxed_correct_count": 4,
+    "cash_flow_false_safe_accept_count": 0
+  },
+  "cash_flow_relaxable_cases": [
+    {
+      "row": {
+        "label": "Cash from operating activities",
+        "value": "38156",
+        "previous_value": "52088",
+        "statement_type": "Statement of Cash Flows",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 16,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:51:51"
+      },
+      "mapper_selection": {
+        "status": "suggested",
+        "selected_template_field_id": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "selected_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "confidence": 0.85,
+        "confidence_tier": "medium",
+        "reason": "Strong label semantic match and statement context alignment with ifrs-smes:CashFlowsFromUsedInOperatingActivities, supported by few-shot patterns."
+      },
+      "supervisor_review": {
+        "review_decision": "agree",
+        "risk_level": "low",
+        "reason": "The selected concept ifrs-smes:CashFlowsFromUsedInOperatingActivities matches the row label 'Cash from operating activities' in the context of a Statement of Cash Flows. The concept card evidence supports this mapping with common extracted labels including 'Cash from operating activities'.",
+        "issues": [],
+        "recommended_action": "accept",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "agree",
+          "original_risk_level": "low",
+          "original_recommended_action": "accept",
+          "original_safe_to_accept": true,
+          "normalized_review_decision": "agree",
+          "normalized_risk_level": "low",
+          "normalized_recommended_action": "accept",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "correct_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "mapper_selected_template_field_id": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "mapper_selected_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "mapper_has_prediction": true,
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "supervisor_agreed": true,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": true
+      },
+      "original_safe_to_accept": false,
+      "calibrated_safe_to_accept": true,
+      "classification": "relaxable_cash_flow_same_family",
+      "relaxation_labels": [
+        "blocked_by_low_mapper_confidence_only",
+        "relaxable_cash_flow_same_family",
+        "relaxable_exact_alias_strong_evidence"
+      ],
+      "calibration_reason": "strict_local_evidence_passed_threshold_simulation",
+      "calibration_guardrails_passed": [
+        "mapper_correct",
+        "selected_equals_gold",
+        "statement_family_matches",
+        "candidate_evidence_available",
+        "concept_card_available",
+        "strong_concept_card",
+        "exact_or_near_alias"
+      ],
+      "calibration_guardrails_failed": [],
+      "evidence": {
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "selected_equals_gold": true,
+        "statement_family_matches": true,
+        "candidate_evidence_available": true,
+        "concept_card_available": true,
+        "strong_concept_card": true,
+        "exact_or_near_alias": true,
+        "alias_similarity": 1.0,
+        "alias_label": "Cash from operating activities",
+        "hard_issues": [],
+        "non_fact_like": false,
+        "mapper_omission": false,
+        "cash_flow_same_family": true,
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "low_mapper_confidence_reason": true,
+        "selected_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "correct_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities"
+      }
+    },
+    {
+      "row": {
+        "label": "Net (decrease) / increase in cash and cash equivalents",
+        "value": "-1406",
+        "previous_value": "9000",
+        "statement_type": "Statement of Cash Flows",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 16,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:55:55"
+      },
+      "mapper_selection": {
+        "status": "suggested",
+        "selected_template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "selected_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "confidence": 0.89,
+        "confidence_tier": "high",
+        "reason": "Strong label match and alignment with few-shot examples support this mapping; value pattern and context are consistent."
+      },
+      "supervisor_review": {
+        "review_decision": "agree",
+        "risk_level": "low",
+        "reason": "The selected concept matches the row label and statement type, supported by few-shot examples and concept card evidence.",
+        "issues": [],
+        "recommended_action": "accept",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "agree",
+          "original_risk_level": "low",
+          "original_recommended_action": "accept",
+          "original_safe_to_accept": true,
+          "normalized_review_decision": "agree",
+          "normalized_risk_level": "low",
+          "normalized_recommended_action": "accept",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "mapper_selected_template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "mapper_selected_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "mapper_has_prediction": true,
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "supervisor_agreed": true,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": true
+      },
+      "original_safe_to_accept": false,
+      "calibrated_safe_to_accept": true,
+      "classification": "relaxable_cash_flow_same_family",
+      "relaxation_labels": [
+        "blocked_by_low_mapper_confidence_only",
+        "relaxable_cash_flow_same_family",
+        "relaxable_exact_alias_strong_evidence"
+      ],
+      "calibration_reason": "strict_local_evidence_passed_threshold_simulation",
+      "calibration_guardrails_passed": [
+        "mapper_correct",
+        "selected_equals_gold",
+        "statement_family_matches",
+        "candidate_evidence_available",
+        "concept_card_available",
+        "strong_concept_card",
+        "exact_or_near_alias"
+      ],
+      "calibration_guardrails_failed": [],
+      "evidence": {
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "selected_equals_gold": true,
+        "statement_family_matches": true,
+        "candidate_evidence_available": true,
+        "concept_card_available": true,
+        "strong_concept_card": true,
+        "exact_or_near_alias": true,
+        "alias_similarity": 1.0,
+        "alias_label": "Net increase (decrease) in cash and cash equivalents",
+        "hard_issues": [],
+        "non_fact_like": false,
+        "mapper_omission": false,
+        "cash_flow_same_family": true,
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "low_mapper_confidence_reason": true,
+        "selected_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents"
+      }
+    },
+    {
+      "row": {
+        "label": "Bank balances",
+        "value": "13232",
+        "previous_value": "14638",
+        "statement_type": "Statement of Cash Flows",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 16,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:58:58"
+      },
+      "mapper_selection": {
+        "status": "suggested",
+        "selected_template_field_id": "ssmt:CashAndBankBalances",
+        "selected_concept_qname": "ssmt:CashAndBankBalances",
+        "confidence": 0.86,
+        "confidence_tier": "medium",
+        "reason": "The candidate concept 'ssmt:CashAndBankBalances' has a deterministic phrase containment match with high score (0.86) and aligns semantically with 'Bank balances' as a core component of cash and cash equivalents. Multiple few-shot examples confirm this mapping in both Statement of Cash Flows and Statement of Financial Position contexts."
+      },
+      "supervisor_review": {
+        "review_decision": "agree",
+        "risk_level": "low",
+        "reason": "The selected concept 'ssmt:CashAndBankBalances' is supported by both candidate and concept-card evidence, aligning with 'Bank balances' in the Statement of Cash Flows context.",
+        "issues": [],
+        "recommended_action": "accept",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "agree",
+          "original_risk_level": "low",
+          "original_recommended_action": "accept",
+          "original_safe_to_accept": true,
+          "normalized_review_decision": "agree",
+          "normalized_risk_level": "low",
+          "normalized_recommended_action": "accept",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt:CashAndBankBalances",
+        "correct_concept_qname": "ssmt:CashAndBankBalances",
+        "mapper_selected_template_field_id": "ssmt:CashAndBankBalances",
+        "mapper_selected_concept_qname": "ssmt:CashAndBankBalances",
+        "mapper_has_prediction": true,
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "supervisor_agreed": true,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": true
+      },
+      "original_safe_to_accept": false,
+      "calibrated_safe_to_accept": true,
+      "classification": "relaxable_cash_flow_same_family",
+      "relaxation_labels": [
+        "blocked_by_low_mapper_confidence_only",
+        "relaxable_cash_flow_same_family",
+        "relaxable_exact_alias_strong_evidence"
+      ],
+      "calibration_reason": "strict_local_evidence_passed_threshold_simulation",
+      "calibration_guardrails_passed": [
+        "mapper_correct",
+        "selected_equals_gold",
+        "statement_family_matches",
+        "candidate_evidence_available",
+        "concept_card_available",
+        "strong_concept_card",
+        "exact_or_near_alias"
+      ],
+      "calibration_guardrails_failed": [],
+      "evidence": {
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "selected_equals_gold": true,
+        "statement_family_matches": true,
+        "candidate_evidence_available": true,
+        "concept_card_available": true,
+        "strong_concept_card": true,
+        "exact_or_near_alias": true,
+        "alias_similarity": 1.0,
+        "alias_label": "Bank balances",
+        "hard_issues": [],
+        "non_fact_like": false,
+        "mapper_omission": false,
+        "cash_flow_same_family": true,
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "low_mapper_confidence_reason": true,
+        "selected_concept_qname": "ssmt:CashAndBankBalances",
+        "correct_concept_qname": "ssmt:CashAndBankBalances"
+      }
+    },
+    {
+      "row": {
+        "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+        "value": "-1567",
+        "previous_value": "-215",
+        "statement_type": "Statement of Cash Flows",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 10,
+        "source_case_id": "case_006",
+        "extracted_row_id": "case_006:candidate:40:40"
+      },
+      "mapper_selection": {
+        "status": "suggested",
+        "selected_template_field_id": "ifrs-smes:CashAndCashEquivalents",
+        "selected_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "confidence": 0.95,
+        "confidence_tier": "high",
+        "reason": "The extracted label 'CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)' closely matches the candidate concept 'Cash and cash equivalents at end of period' in meaning and terminology. The statement type aligns (Statement of Cash Flows), and the few-shot examples consistently map similar labels to ifrs-smes:CashAndCashEquivalents. The presence of '(NOTE 9)' does not alter the financial fact mapping. Deterministic method 'exact_alias_match' supports this with a high score of 0.97."
+      },
+      "supervisor_review": {
+        "review_decision": "agree",
+        "risk_level": "low",
+        "reason": "The mapper's selection of 'ifrs-smes:CashAndCashEquivalents' is supported by strong evidence from the candidates, concept cards, and few-shot examples. The label 'CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)' closely matches the concept 'Cash and cash equivalents at end of period', and the statement type 'Statement of Cash Flows' aligns with the expected statement family.",
+        "issues": [],
+        "recommended_action": "accept",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "agree",
+          "original_risk_level": "low",
+          "original_recommended_action": "accept",
+          "original_safe_to_accept": true,
+          "normalized_review_decision": "agree",
+          "normalized_risk_level": "low",
+          "normalized_recommended_action": "accept",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_fact_row_cannot_be_safe_accept"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:CashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "mapper_selected_template_field_id": "ifrs-smes:CashAndCashEquivalents",
+        "mapper_selected_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "mapper_has_prediction": true,
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "supervisor_agreed": true,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": true
+      },
+      "original_safe_to_accept": false,
+      "calibrated_safe_to_accept": true,
+      "classification": "relaxable_cash_flow_same_family",
+      "relaxation_labels": [
+        "relaxable_cash_flow_same_family",
+        "relaxable_exact_alias_strong_evidence"
+      ],
+      "calibration_reason": "strict_local_evidence_passed_threshold_simulation",
+      "calibration_guardrails_passed": [
+        "mapper_correct",
+        "selected_equals_gold",
+        "statement_family_matches",
+        "candidate_evidence_available",
+        "concept_card_available",
+        "strong_concept_card",
+        "exact_or_near_alias"
+      ],
+      "calibration_guardrails_failed": [],
+      "evidence": {
+        "mapper_correct": true,
+        "mapper_wrong": false,
+        "selected_equals_gold": true,
+        "statement_family_matches": true,
+        "candidate_evidence_available": true,
+        "concept_card_available": true,
+        "strong_concept_card": true,
+        "exact_or_near_alias": true,
+        "alias_similarity": 1.0,
+        "alias_label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+        "hard_issues": [],
+        "non_fact_like": false,
+        "mapper_omission": false,
+        "cash_flow_same_family": true,
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "low_mapper_confidence_reason": false,
+        "selected_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:CashAndCashEquivalents"
+      }
+    }
+  ],
+  "cash_flow_non_relaxable_cases": [],
+  "recommendation": "Cash-flow relaxation should remain evaluation-only until a bounded live rerun confirms zero false safe accepts."
+}

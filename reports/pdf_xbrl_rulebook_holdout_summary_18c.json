@@ -1,0 +1,1768 @@
+{
+  "run_metadata": {
+    "feature": "18C",
+    "generated_at": "2026-06-18T13:39:28Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "leave_one_out": {
+      "pdf_observations": 782,
+      "replay_predictions": 63,
+      "coverage_rate": 0.0806,
+      "active_rule_predictions": 19,
+      "active_rule_coverage_rate": 0.0243,
+      "active_rule_qname_value_matches": 18,
+      "active_rule_false_positive_count": 1,
+      "active_rule_precision_on_evaluable": 0.9474,
+      "exact_qname_value_period_matches": 38,
+      "qname_value_matches": 40,
+      "false_positive_count": 23,
+      "not_evaluable_count": 0,
+      "precision_on_evaluable": 0.6349,
+      "strong_rule_predictions": 17,
+      "strong_rule_qname_value_matches": 16,
+      "strong_rule_false_positive_count": 1,
+      "strong_rule_precision": 0.9412,
+      "usable_rule_predictions": 2,
+      "usable_rule_qname_value_matches": 2,
+      "usable_rule_false_positive_count": 0,
+      "usable_rule_precision": 1.0,
+      "review_required_rule_predictions": 44,
+      "review_required_rule_qname_value_matches": 22,
+      "review_required_rule_false_positive_count": 22,
+      "review_required_rule_precision": 0.5,
+      "no_rule_match_count": 719,
+      "evaluation_status_counts": {
+        "exact_qname_value_period_match": 38,
+        "not_evaluable": 719,
+        "qname_exists_but_value_mismatch": 5,
+        "qname_value_match_period_uncertain": 2,
+        "value_exists_but_different_qname": 18
+      },
+      "replay_confidence_counts": {
+        "no_rule_match": 719,
+        "review_required_rule_match": 44,
+        "strong_rule_match": 17,
+        "usable_rule_match": 2
+      },
+      "fold_count": 5,
+      "holdout_samples": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    "folds": [
+      {
+        "holdout_sample": "case_001",
+        "train_sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "train_sample_count": 4,
+        "active_rules_built": 10,
+        "strong_rules_built": 2,
+        "usable_rules_built": 8,
+        "review_required_rules_built": 8,
+        "pdf_observations_in_holdout": 142,
+        "pdf_observations": 142,
+        "replay_predictions": 15,
+        "coverage_rate": 0.1056,
+        "active_rule_predictions": 4,
+        "active_rule_coverage_rate": 0.0282,
+        "active_rule_qname_value_matches": 4,
+        "active_rule_false_positive_count": 0,
+        "active_rule_precision_on_evaluable": 1.0,
+        "exact_qname_value_period_matches": 9,
+        "qname_value_matches": 11,
+        "false_positive_count": 4,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": 0.7333,
+        "strong_rule_predictions": 2,
+        "strong_rule_qname_value_matches": 2,
+        "strong_rule_false_positive_count": 0,
+        "strong_rule_precision": 1.0,
+        "usable_rule_predictions": 2,
+        "usable_rule_qname_value_matches": 2,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": 1.0,
+        "review_required_rule_predictions": 11,
+        "review_required_rule_qname_value_matches": 7,
+        "review_required_rule_false_positive_count": 4,
+        "review_required_rule_precision": 0.6364,
+        "no_rule_match_count": 127,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "exact_qname_value_period_match": 9,
+          "not_evaluable": 127,
+          "qname_exists_but_value_mismatch": 2,
+          "qname_value_match_period_uncertain": 2,
+          "value_exists_but_different_qname": 2
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 127,
+          "review_required_rule_match": 11,
+          "strong_rule_match": 2,
+          "usable_rule_match": 2
+        },
+        "active_rules_used": 2,
+        "unused_active_rules": [
+          "18B-R0014-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+          "18B-R0116-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+          "18B-R0150-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+          "18B-R0151-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+          "18B-R0164-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+          "18B-R0167-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit",
+          "18B-R0170-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+          "18B-R0193-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits"
+        ],
+        "labels_covered_by_rules": [
+          {
+            "normalized_label": "trade and other payables",
+            "count": 4
+          },
+          {
+            "normalized_label": "total current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "gross profit",
+            "count": 2
+          },
+          {
+            "normalized_label": "staff costs",
+            "count": 2
+          },
+          {
+            "normalized_label": "add other income",
+            "count": 2
+          },
+          {
+            "normalized_label": "total operating expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 1
+          }
+        ],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "tax expense",
+            "count": 17
+          },
+          {
+            "normalized_label": "epf contribution",
+            "count": 4
+          },
+          {
+            "normalized_label": "director s fee",
+            "count": 4
+          },
+          {
+            "normalized_label": "rental of office",
+            "count": 4
+          },
+          {
+            "normalized_label": "dr ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash at bank",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets discussion",
+            "count": 2
+          },
+          {
+            "normalized_label": "share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "retained profits accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total shareholders equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities draft wie",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "other operating costs",
+            "count": 2
+          },
+          {
+            "normalized_label": "profit loss from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total comprehensive profit loss for the year period",
+            "count": 2
+          },
+          {
+            "normalized_label": "comprehensive loss for the period",
+            "count": 2
+          },
+          {
+            "normalized_label": "comprehensive profit for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "operating profit loss before working capital changes",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 2
+          },
+          {
+            "normalized_label": "increase in amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "net cash from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from investing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "net increase in cash and cash equivalents",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of year period",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at end of period",
+            "count": 2
+          },
+          {
+            "normalized_label": "expenses not deductible for tax purposes",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other payables",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [
+          {
+            "sample_id": "case_001",
+            "pdf_label": "Increase in other payables and accruals",
+            "pdf_value": "61983",
+            "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "matched_xbrl_qname": null,
+            "evaluation_status": "qname_exists_but_value_mismatch",
+            "error_reason": "predicted qname exists but no matching value/period fact was found"
+          },
+          {
+            "sample_id": "case_001",
+            "pdf_label": "Increase in other payables and accruals",
+            "pdf_value": "1398",
+            "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "matched_xbrl_qname": null,
+            "evaluation_status": "qname_exists_but_value_mismatch",
+            "error_reason": "predicted qname exists but no matching value/period fact was found"
+          },
+          {
+            "sample_id": "case_001",
+            "pdf_label": "Other payables and accruals",
+            "pdf_value": "63381",
+            "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "matched_xbrl_qname": "ssmt-mpers:CurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_001",
+            "pdf_label": "Other payables and accruals",
+            "pdf_value": "1398",
+            "predicted_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+            "matched_xbrl_qname": "ssmt-mpers:CurrentNontradeAccruals",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          }
+        ],
+        "top_missed_labels": [
+          {
+            "normalized_label": "tax expense",
+            "count": 17
+          },
+          {
+            "normalized_label": "epf contribution",
+            "count": 4
+          },
+          {
+            "normalized_label": "director s fee",
+            "count": 4
+          },
+          {
+            "normalized_label": "rental of office",
+            "count": 4
+          },
+          {
+            "normalized_label": "dr ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash at bank",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets discussion",
+            "count": 2
+          },
+          {
+            "normalized_label": "share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "retained profits accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total shareholders equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities draft wie",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "other operating costs",
+            "count": 2
+          },
+          {
+            "normalized_label": "profit loss from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total comprehensive profit loss for the year period",
+            "count": 2
+          },
+          {
+            "normalized_label": "comprehensive loss for the period",
+            "count": 2
+          },
+          {
+            "normalized_label": "comprehensive profit for the year",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "holdout_sample": "case_002",
+        "train_sample_ids": [
+          "case_001",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "train_sample_count": 4,
+        "active_rules_built": 7,
+        "strong_rules_built": 2,
+        "usable_rules_built": 5,
+        "review_required_rules_built": 5,
+        "pdf_observations_in_holdout": 183,
+        "pdf_observations": 183,
+        "replay_predictions": 13,
+        "coverage_rate": 0.071,
+        "active_rule_predictions": 4,
+        "active_rule_coverage_rate": 0.0219,
+        "active_rule_qname_value_matches": 4,
+        "active_rule_false_positive_count": 0,
+        "active_rule_precision_on_evaluable": 1.0,
+        "exact_qname_value_period_matches": 11,
+        "qname_value_matches": 11,
+        "false_positive_count": 2,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": 0.8462,
+        "strong_rule_predictions": 4,
+        "strong_rule_qname_value_matches": 4,
+        "strong_rule_false_positive_count": 0,
+        "strong_rule_precision": 1.0,
+        "usable_rule_predictions": 0,
+        "usable_rule_qname_value_matches": 0,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": null,
+        "review_required_rule_predictions": 9,
+        "review_required_rule_qname_value_matches": 7,
+        "review_required_rule_false_positive_count": 2,
+        "review_required_rule_precision": 0.7778,
+        "no_rule_match_count": 170,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "exact_qname_value_period_match": 11,
+          "not_evaluable": 170,
+          "value_exists_but_different_qname": 2
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 170,
+          "review_required_rule_match": 9,
+          "strong_rule_match": 4
+        },
+        "active_rules_used": 2,
+        "unused_active_rules": [
+          "18B-R0065-director-s-remuneration-ssmt-mpers-directorsremuneration",
+          "18B-R0163-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+          "18B-R0180-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+          "18B-R0185-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+          "18B-R0213-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits"
+        ],
+        "labels_covered_by_rules": [
+          {
+            "normalized_label": "trade and other payables",
+            "count": 4
+          },
+          {
+            "normalized_label": "total current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "add other income",
+            "count": 2
+          },
+          {
+            "normalized_label": "directors remuneration",
+            "count": 2
+          },
+          {
+            "normalized_label": "total operating expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 1
+          }
+        ],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "tax expense",
+            "count": 16
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 6
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 4
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "normalized_label": "1 1",
+            "count": 4
+          },
+          {
+            "normalized_label": "term loan interests",
+            "count": 4
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 3
+          },
+          {
+            "normalized_label": "accumulated losses carried forward",
+            "count": 2
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian f man kan 5 000 de the",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "term loan r discussione",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director a",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current liabilities w",
+            "count": 2
+          },
+          {
+            "normalized_label": "term loan on",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "other operating expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss for the financial year draft for discussion",
+            "count": 2
+          },
+          {
+            "normalized_label": "operating profit loss before working capital changes",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other payables",
+            "count": 2
+          },
+          {
+            "normalized_label": "net cash from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from investing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "repayment of term loan",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [
+          {
+            "sample_id": "case_002",
+            "pdf_label": "Other payables",
+            "pdf_value": "75621",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_002",
+            "pdf_label": "Other payables",
+            "pdf_value": "66390",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          }
+        ],
+        "top_missed_labels": [
+          {
+            "normalized_label": "tax expense",
+            "count": 16
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 6
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 4
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "normalized_label": "1 1",
+            "count": 4
+          },
+          {
+            "normalized_label": "term loan interests",
+            "count": 4
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 3
+          },
+          {
+            "normalized_label": "accumulated losses carried forward",
+            "count": 2
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian f man kan 5 000 de the",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "term loan r discussione",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director a",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current liabilities w",
+            "count": 2
+          },
+          {
+            "normalized_label": "term loan on",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "holdout_sample": "case_003",
+        "train_sample_ids": [
+          "case_001",
+          "case_002",
+          "case_004",
+          "case_005"
+        ],
+        "train_sample_count": 4,
+        "active_rules_built": 9,
+        "strong_rules_built": 2,
+        "usable_rules_built": 7,
+        "review_required_rules_built": 9,
+        "pdf_observations_in_holdout": 151,
+        "pdf_observations": 151,
+        "replay_predictions": 16,
+        "coverage_rate": 0.106,
+        "active_rule_predictions": 2,
+        "active_rule_coverage_rate": 0.0132,
+        "active_rule_qname_value_matches": 1,
+        "active_rule_false_positive_count": 1,
+        "active_rule_precision_on_evaluable": 0.5,
+        "exact_qname_value_period_matches": 7,
+        "qname_value_matches": 7,
+        "false_positive_count": 9,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": 0.4375,
+        "strong_rule_predictions": 2,
+        "strong_rule_qname_value_matches": 1,
+        "strong_rule_false_positive_count": 1,
+        "strong_rule_precision": 0.5,
+        "usable_rule_predictions": 0,
+        "usable_rule_qname_value_matches": 0,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": null,
+        "review_required_rule_predictions": 14,
+        "review_required_rule_qname_value_matches": 6,
+        "review_required_rule_false_positive_count": 8,
+        "review_required_rule_precision": 0.4286,
+        "no_rule_match_count": 135,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "exact_qname_value_period_match": 7,
+          "not_evaluable": 135,
+          "qname_exists_but_value_mismatch": 3,
+          "value_exists_but_different_qname": 6
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 135,
+          "review_required_rule_match": 14,
+          "strong_rule_match": 2
+        },
+        "active_rules_used": 1,
+        "unused_active_rules": [
+          "18B-R0018-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+          "18B-R0119-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+          "18B-R0160-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+          "18B-R0161-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+          "18B-R0176-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+          "18B-R0178-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit",
+          "18B-R0181-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+          "18B-R0208-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits"
+        ],
+        "labels_covered_by_rules": [
+          {
+            "normalized_label": "trade and other payables",
+            "count": 4
+          },
+          {
+            "normalized_label": "total current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "add other income",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 2
+          },
+          {
+            "normalized_label": "total operating expenses",
+            "count": 2
+          }
+        ],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "tax expense",
+            "count": 12
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 5
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "normalized_label": "deposits",
+            "count": 3
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xin f",
+            "count": 2
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 2
+          },
+          {
+            "normalized_label": "investments",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due from directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "retained profits unselected",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "other operating expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "equipment expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss for the financial year draft for",
+            "count": 2
+          },
+          {
+            "normalized_label": "operating loss before working capital changes",
+            "count": 2
+          },
+          {
+            "normalized_label": "decrease in amount due from directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "net cash from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from investing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from financing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "net increase in cash and cash equivalent",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalent at beginning of the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalent at the end of the year",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Add : Other income",
+            "pdf_value": "8430",
+            "predicted_qname": "ifrs-smes:OtherIncome",
+            "matched_xbrl_qname": null,
+            "evaluation_status": "qname_exists_but_value_mismatch",
+            "error_reason": "predicted qname exists but no matching value/period fact was found"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Total current assets",
+            "pdf_value": "154021",
+            "predicted_qname": "ifrs-smes:CurrentAssets",
+            "matched_xbrl_qname": null,
+            "evaluation_status": "qname_exists_but_value_mismatch",
+            "error_reason": "predicted qname exists but no matching value/period fact was found"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "TOTAL OPERATING EXPENSES",
+            "pdf_value": "35186",
+            "predicted_qname": "ifrs-smes:OtherExpenseByFunction",
+            "matched_xbrl_qname": null,
+            "evaluation_status": "qname_exists_but_value_mismatch",
+            "error_reason": "predicted qname exists but no matching value/period fact was found"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Total current liabilities",
+            "pdf_value": "800",
+            "predicted_qname": "ifrs-smes:CurrentLiabilities",
+            "matched_xbrl_qname": "ssmt-mpers:CurrentNontradeAccruals",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Total current liabilities",
+            "pdf_value": "11900",
+            "predicted_qname": "ifrs-smes:CurrentLiabilities",
+            "matched_xbrl_qname": "ssmt-mpers:CurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Total liabilities",
+            "pdf_value": "12800",
+            "predicted_qname": "ifrs-smes:Liabilities",
+            "matched_xbrl_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Total liabilities",
+            "pdf_value": "11900",
+            "predicted_qname": "ifrs-smes:Liabilities",
+            "matched_xbrl_qname": "ssmt-mpers:CurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Other payables",
+            "pdf_value": "0",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ifrs-smes:InvestmentProperty",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_003",
+            "pdf_label": "Other payables",
+            "pdf_value": "7100",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          }
+        ],
+        "top_missed_labels": [
+          {
+            "normalized_label": "tax expense",
+            "count": 12
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 5
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "loss for the financial year",
+            "count": 4
+          },
+          {
+            "normalized_label": "deposits",
+            "count": 3
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xin f",
+            "count": 2
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 2
+          },
+          {
+            "normalized_label": "investments",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due from directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "retained profits unselected",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "other operating expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "equipment expenses",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "holdout_sample": "case_004",
+        "train_sample_ids": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_005"
+        ],
+        "train_sample_count": 4,
+        "active_rules_built": 9,
+        "strong_rules_built": 2,
+        "usable_rules_built": 7,
+        "review_required_rules_built": 9,
+        "pdf_observations_in_holdout": 116,
+        "pdf_observations": 116,
+        "replay_predictions": 6,
+        "coverage_rate": 0.0517,
+        "active_rule_predictions": 2,
+        "active_rule_coverage_rate": 0.0172,
+        "active_rule_qname_value_matches": 2,
+        "active_rule_false_positive_count": 0,
+        "active_rule_precision_on_evaluable": 1.0,
+        "exact_qname_value_period_matches": 2,
+        "qname_value_matches": 2,
+        "false_positive_count": 4,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": 0.3333,
+        "strong_rule_predictions": 2,
+        "strong_rule_qname_value_matches": 2,
+        "strong_rule_false_positive_count": 0,
+        "strong_rule_precision": 1.0,
+        "usable_rule_predictions": 0,
+        "usable_rule_qname_value_matches": 0,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": null,
+        "review_required_rule_predictions": 4,
+        "review_required_rule_qname_value_matches": 0,
+        "review_required_rule_false_positive_count": 4,
+        "review_required_rule_precision": 0.0,
+        "no_rule_match_count": 110,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "exact_qname_value_period_match": 2,
+          "not_evaluable": 110,
+          "value_exists_but_different_qname": 4
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 110,
+          "review_required_rule_match": 4,
+          "strong_rule_match": 2
+        },
+        "active_rules_used": 1,
+        "unused_active_rules": [
+          "18B-R0016-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+          "18B-R0127-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+          "18B-R0168-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+          "18B-R0169-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+          "18B-R0186-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+          "18B-R0189-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit",
+          "18B-R0191-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+          "18B-R0220-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits"
+        ],
+        "labels_covered_by_rules": [
+          {
+            "normalized_label": "total current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other payables",
+            "count": 2
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 2
+          }
+        ],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "tax expense",
+            "count": 14
+          },
+          {
+            "normalized_label": "loss for the financial year",
+            "count": 6
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "auditor s remuneration",
+            "count": 4
+          },
+          {
+            "normalized_label": "research and development expenditure written off",
+            "count": 4
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian f",
+            "count": 2
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "other deposits",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total deferred liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other payables",
+            "count": 2
+          },
+          {
+            "normalized_label": "increase in amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "net cash from to operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from investing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from financing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "net increase decrease in cash and cash equivalents",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at end of period",
+            "count": 2
+          },
+          {
+            "normalized_label": "addition",
+            "count": 2
+          },
+          {
+            "normalized_label": "at beginning and end of the year",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [
+          {
+            "sample_id": "case_004",
+            "pdf_label": "Decrease in property, plant and equipment",
+            "pdf_value": "0",
+            "predicted_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+            "matched_xbrl_qname": "ifrs-smes:Revenue",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_004",
+            "pdf_label": "Decrease in property, plant and equipment",
+            "pdf_value": "161320",
+            "predicted_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+            "matched_xbrl_qname": "ifrs-smes:OtherAdjustmentsToReconcileProfitLoss",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_004",
+            "pdf_label": "Other payables and accruals",
+            "pdf_value": "44300",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_004",
+            "pdf_label": "Other payables and accruals",
+            "pdf_value": "33900",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          }
+        ],
+        "top_missed_labels": [
+          {
+            "normalized_label": "tax expense",
+            "count": 14
+          },
+          {
+            "normalized_label": "loss for the financial year",
+            "count": 6
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "auditor s remuneration",
+            "count": 4
+          },
+          {
+            "normalized_label": "research and development expenditure written off",
+            "count": 4
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian f",
+            "count": 2
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "other deposits",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total deferred liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "holdout_sample": "case_005",
+        "train_sample_ids": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004"
+        ],
+        "train_sample_count": 4,
+        "active_rules_built": 7,
+        "strong_rules_built": 4,
+        "usable_rules_built": 3,
+        "review_required_rules_built": 6,
+        "pdf_observations_in_holdout": 190,
+        "pdf_observations": 190,
+        "replay_predictions": 13,
+        "coverage_rate": 0.0684,
+        "active_rule_predictions": 7,
+        "active_rule_coverage_rate": 0.0368,
+        "active_rule_qname_value_matches": 7,
+        "active_rule_false_positive_count": 0,
+        "active_rule_precision_on_evaluable": 1.0,
+        "exact_qname_value_period_matches": 9,
+        "qname_value_matches": 9,
+        "false_positive_count": 4,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": 0.6923,
+        "strong_rule_predictions": 7,
+        "strong_rule_qname_value_matches": 7,
+        "strong_rule_false_positive_count": 0,
+        "strong_rule_precision": 1.0,
+        "usable_rule_predictions": 0,
+        "usable_rule_qname_value_matches": 0,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": null,
+        "review_required_rule_predictions": 6,
+        "review_required_rule_qname_value_matches": 2,
+        "review_required_rule_false_positive_count": 4,
+        "review_required_rule_precision": 0.3333,
+        "no_rule_match_count": 177,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "exact_qname_value_period_match": 9,
+          "not_evaluable": 177,
+          "value_exists_but_different_qname": 4
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 177,
+          "review_required_rule_match": 6,
+          "strong_rule_match": 7
+        },
+        "active_rules_used": 3,
+        "unused_active_rules": [
+          "18B-R0017-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+          "18B-R0138-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+          "18B-R0178-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+          "18B-R0197-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit"
+        ],
+        "labels_covered_by_rules": [
+          {
+            "normalized_label": "trade and other payables",
+            "count": 4
+          },
+          {
+            "normalized_label": "gross profit",
+            "count": 3
+          },
+          {
+            "normalized_label": "total current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "other income",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 2
+          }
+        ],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "tax expense",
+            "count": 11
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 6
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 5
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 5
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "term loan",
+            "count": 4
+          },
+          {
+            "normalized_label": "audit fee",
+            "count": 4
+          },
+          {
+            "normalized_label": "prior year",
+            "count": 3
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian f",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets discussion",
+            "count": 2
+          },
+          {
+            "normalized_label": "share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current liabilities toachat",
+            "count": 2
+          },
+          {
+            "normalized_label": "in",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "depreciation",
+            "count": 2
+          },
+          {
+            "normalized_label": "other operating expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "staff costs",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "operating loss before working capital changes",
+            "count": 2
+          },
+          {
+            "normalized_label": "trade and other payables",
+            "count": 2
+          },
+          {
+            "normalized_label": "increase in amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash from operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash flows from investing activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "term loans repayments",
+            "count": 2
+          },
+          {
+            "normalized_label": "net decrease increase in cash and cash equivalents",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [
+          {
+            "sample_id": "case_005",
+            "pdf_label": "Other payables and accruals clean",
+            "pdf_value": "146856",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:NoncurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_005",
+            "pdf_label": "Other payables and accruals clean",
+            "pdf_value": "135966",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:NoncurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_005",
+            "pdf_label": "Other payables",
+            "pdf_value": "140156",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          },
+          {
+            "sample_id": "case_005",
+            "pdf_label": "Other payables",
+            "pdf_value": "129266",
+            "predicted_qname": "ssmt-mpers:CurrentNontradePayables",
+            "matched_xbrl_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+            "evaluation_status": "value_exists_but_different_qname",
+            "error_reason": "same value/period exists under a different qname"
+          }
+        ],
+        "top_missed_labels": [
+          {
+            "normalized_label": "tax expense",
+            "count": 11
+          },
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 6
+          },
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 5
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 5
+          },
+          {
+            "normalized_label": "bank balances",
+            "count": 4
+          },
+          {
+            "normalized_label": "term loan",
+            "count": 4
+          },
+          {
+            "normalized_label": "audit fee",
+            "count": 4
+          },
+          {
+            "normalized_label": "prior year",
+            "count": 3
+          },
+          {
+            "normalized_label": "ooi boon beng",
+            "count": 2
+          },
+          {
+            "normalized_label": "ung ming xian f",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current assets",
+            "count": 2
+          },
+          {
+            "normalized_label": "total assets discussion",
+            "count": 2
+          },
+          {
+            "normalized_label": "share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated losses",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to directors",
+            "count": 2
+          },
+          {
+            "normalized_label": "total non current liabilities toachat",
+            "count": 2
+          },
+          {
+            "normalized_label": "in",
+            "count": 2
+          },
+          {
+            "normalized_label": "total equity and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "depreciation",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "recommendation": {
+      "recommended_action": "expand_rulebook_first",
+      "recommended_next_feature": "Feature #18D-A - Expand deterministic rulebook using review-required patterns / better context.",
+      "basis": {
+        "holdout_coverage_rate": 0.0243,
+        "holdout_precision_on_evaluable": 0.9474,
+        "holdout_active_rule_coverage_rate": 0.0243,
+        "holdout_active_rule_precision_on_evaluable": 0.9474,
+        "holdout_overall_coverage_rate": 0.0806,
+        "holdout_overall_precision_on_evaluable": 0.6349,
+        "holdout_replay_predictions": 63,
+        "holdout_active_rule_predictions": 19,
+        "holdout_false_positive_count": 1
+      }
+    },
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  }
+}

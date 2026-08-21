@@ -1,0 +1,4120 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-11T09:05:46.658021+00:00",
+    "script": "scripts/run_extraction_v2.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "openai_used": false,
+    "limit_pages": null,
+    "cases_dir": "benchmark_cases",
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_report_20260511T090546Z.json"
+  },
+  "pipeline_name": "Industrial Extraction Pipeline v2",
+  "pipeline_stages": [
+    "document_ingestion",
+    "native_text_extraction",
+    "layout_or_table_heuristics",
+    "row_type_classification",
+    "numeric_fact_normalization",
+    "text_block_grouping",
+    "provenance_capture",
+    "report_generation"
+  ],
+  "aggregate_metrics": {
+    "total_cases_processed": 7,
+    "total_pdfs_processed": 7,
+    "total_candidate_rows": 122,
+    "numeric_fact_count": 36,
+    "comparative_numeric_fact_count": 3,
+    "text_block_count": 0,
+    "metadata_count": 0,
+    "heading_count": 82,
+    "subtotal_or_total_count": 1,
+    "unknown_count": 0,
+    "row_type_counts": {
+      "comparative_numeric_fact": 3,
+      "heading": 82,
+      "numeric_fact": 36,
+      "subtotal_or_total": 1
+    },
+    "warning_counts": {
+      "low_confidence_table_row": 40,
+      "no_candidates_detected": 6,
+      "no_numeric_facts_detected": 6,
+      "no_text_blocks_detected": 7,
+      "no_value_detected": 82,
+      "page_10_no_native_text_detected": 6,
+      "page_11_no_native_text_detected": 6,
+      "page_12_no_native_text_detected": 6,
+      "page_13_no_native_text_detected": 6,
+      "page_14_no_native_text_detected": 6,
+      "page_15_no_native_text_detected": 6,
+      "page_16_no_native_text_detected": 5,
+      "page_17_no_native_text_detected": 5,
+      "page_18_no_native_text_detected": 5,
+      "page_19_no_native_text_detected": 5,
+      "page_1_no_native_text_detected": 6,
+      "page_20_no_native_text_detected": 5,
+      "page_21_no_native_text_detected": 5,
+      "page_22_no_native_text_detected": 5,
+      "page_23_no_native_text_detected": 4,
+      "page_24_no_native_text_detected": 3,
+      "page_25_no_native_text_detected": 2,
+      "page_26_no_native_text_detected": 1,
+      "page_2_no_native_text_detected": 6,
+      "page_3_no_native_text_detected": 6,
+      "page_4_no_native_text_detected": 6,
+      "page_5_no_native_text_detected": 6,
+      "page_6_no_native_text_detected": 6,
+      "page_7_no_native_text_detected": 6,
+      "page_8_no_native_text_detected": 6,
+      "page_9_no_native_text_detected": 6,
+      "possible_duplicate": 90,
+      "possible_sign_issue": 6
+    }
+  },
+  "case_reports": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "case_dir": "benchmark_cases/001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 3,
+      "candidate_count": 122,
+      "row_type_counts": {
+        "comparative_numeric_fact": 3,
+        "heading": 82,
+        "numeric_fact": 36,
+        "subtotal_or_total": 1
+      },
+      "warning_counts": {
+        "low_confidence_table_row": 40,
+        "no_text_blocks_detected": 1,
+        "no_value_detected": 82,
+        "possible_duplicate": 90,
+        "possible_sign_issue": 6
+      },
+      "warnings": [
+        "no_text_blocks_detected"
+      ],
+      "candidates": [
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": null,
+          "label": "BIZAID FY2025",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BIZAID FY2025",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 3,
+            "text_snippet": "BIZAID FY2025"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "Statement of Financial Position As At 31/12/2025",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "Statement of Financial Position As At 31/12/2025",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 4,
+            "text_snippet": "Statement of Financial Position As At 31/12/2025"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "This Year",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "This Year",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 5,
+            "text_snippet": "This Year"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "FIXED ASSETS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "FIXED ASSETS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 7,
+            "text_snippet": "FIXED ASSETS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "FIXED ASSETS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "FIXED ASSETS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 9,
+            "text_snippet": "FIXED ASSETS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "FURNITURE &FITTINGS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "FURNITURE &FITTINGS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 11,
+            "text_snippet": "FURNITURE &FITTINGS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "FURNITURE &FITTINGS",
+          "value": "13306",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "FURNITURE &FITTINGS 13,306.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 11,
+            "text_snippet": "FURNITURE &FITTINGS 13,306.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 15,
+            "text_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+          "value": "-13305",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS -13,305.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_sign_issue",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 15,
+            "text_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS -13,305.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "GOOD WILL",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "GOOD WILL",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 19,
+            "text_snippet": "GOOD WILL"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "GOOD WILL",
+          "value": "2464003",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "GOOD WILL 2,464,003.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 19,
+            "text_snippet": "GOOD WILL 2,464,003.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. AMORTIZATION. GOOD WILL",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. AMORTIZATION. GOOD WILL",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 22,
+            "text_snippet": "ACCUM. AMORTIZATION. GOOD WILL"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. AMORTIZATION. GOOD WILL",
+          "value": "-2464002",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. AMORTIZATION. GOOD WILL -2,464,002.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 22,
+            "text_snippet": "ACCUM. AMORTIZATION. GOOD WILL -2,464,002.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "COMPUTER HARDWARE",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "COMPUTER HARDWARE",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 25,
+            "text_snippet": "COMPUTER HARDWARE"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "COMPUTER HARDWARE",
+          "value": "549576",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "COMPUTER HARDWARE 549,576.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 25,
+            "text_snippet": "COMPUTER HARDWARE 549,576.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 28,
+            "text_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+          "value": "-549575",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE -549,575.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_sign_issue",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 28,
+            "text_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE -549,575.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "OFFICE EQUIPMENT",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "OFFICE EQUIPMENT",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 31,
+            "text_snippet": "OFFICE EQUIPMENT"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "OFFICE EQUIPMENT",
+          "value": "5246",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "OFFICE EQUIPMENT 5,246.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 31,
+            "text_snippet": "OFFICE EQUIPMENT 5,246.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 35,
+            "text_snippet": "ACCUM. DEPRN. OFFICE EQUIPMENT"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+          "value": "-4872.61",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. OFFICE EQUIPMENT -4,872.61",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_sign_issue",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 35,
+            "text_snippet": "ACCUM. DEPRN. OFFICE EQUIPMENT -4,872.61"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "COMPUTER SOFTWARE",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "COMPUTER SOFTWARE",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 39,
+            "text_snippet": "COMPUTER SOFTWARE"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "COMPUTER SOFTWARE",
+          "value": "153802.5",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "COMPUTER SOFTWARE 153,802.50",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 39,
+            "text_snippet": "COMPUTER SOFTWARE 153,802.50"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 42,
+            "text_snippet": "ACCUM. DEPRN. COMPUTER SOFTWARE"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+          "value": "-146860.83",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCUM. DEPRN. COMPUTER SOFTWARE -146,860.83",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_sign_issue",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 42,
+            "text_snippet": "ACCUM. DEPRN. COMPUTER SOFTWARE -146,860.83"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CURRENT ASSETS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CURRENT ASSETS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 48,
+            "text_snippet": "CURRENT ASSETS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CURRENT ASSET",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CURRENT ASSET",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 50,
+            "text_snippet": "CURRENT ASSET"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CASH AT BANK",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CASH AT BANK",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 52,
+            "text_snippet": "CASH AT BANK"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CIMB",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CIMB",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 54,
+            "text_snippet": "CIMB"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "CIMB",
+          "value": "33812.79",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CIMB 33,812.79",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 54,
+            "text_snippet": "CIMB 33,812.79"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "DEPOSIT & PREPAYMENT",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "DEPOSIT & PREPAYMENT",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 60,
+            "text_snippet": "DEPOSIT & PREPAYMENT"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CAR PARK- TWIN PAVILLION",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CAR PARK- TWIN PAVILLION",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 62,
+            "text_snippet": "CAR PARK- TWIN PAVILLION"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "CAR PARK- TWIN PAVILLION",
+          "value": "180",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CAR PARK- TWIN PAVILLION 180.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 62,
+            "text_snippet": "CAR PARK- TWIN PAVILLION 180.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "PASS CARD- TWIN PAVILION",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "PASS CARD- TWIN PAVILION",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 66,
+            "text_snippet": "PASS CARD- TWIN PAVILION"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "PASS CARD- TWIN PAVILION",
+          "value": "100",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "PASS CARD- TWIN PAVILION 100.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 66,
+            "text_snippet": "PASS CARD- TWIN PAVILION 100.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "TRADE DEBTORS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "TRADE DEBTORS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 88,
+            "text_snippet": "TRADE DEBTORS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CEO CORPORATE SERVICES SDN. BHD.",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CEO CORPORATE SERVICES SDN. BHD.",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 90,
+            "text_snippet": "CEO CORPORATE SERVICES SDN. BHD."
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "CEO CORPORATE SERVICES SDN. BHD",
+          "value": "756",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CEO CORPORATE SERVICES SDN. BHD. 756.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 90,
+            "text_snippet": "CEO CORPORATE SERVICES SDN. BHD. 756.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-A001",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-A001",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 93,
+            "text_snippet": "ACT-A001"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ADISS CONSULTANTS SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ADISS CONSULTANTS SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 94,
+            "text_snippet": "ADISS CONSULTANTS SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ADISS CONSULTANTS SDN BHD",
+          "value": "1080",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ADISS CONSULTANTS SDN BHD 1,080.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 94,
+            "text_snippet": "ADISS CONSULTANTS SDN BHD 1,080.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-A003",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-A003",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 97,
+            "text_snippet": "ACT-A003"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "AMK CORPORATION SERVICES SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "AMK CORPORATION SERVICES SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 98,
+            "text_snippet": "AMK CORPORATION SERVICES SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "AMK CORPORATION SERVICES SDN BHD",
+          "value": "475.2",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "AMK CORPORATION SERVICES SDN BHD 475.20",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 98,
+            "text_snippet": "AMK CORPORATION SERVICES SDN BHD 475.20"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-A005",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-A005",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 101,
+            "text_snippet": "ACT-A005"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 102,
+            "text_snippet": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+          "value": "972",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD 972.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 102,
+            "text_snippet": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD 972.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-A009",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-A009",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 105,
+            "text_snippet": "ACT-A009"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ASIAN SECRETS SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ASIAN SECRETS SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 106,
+            "text_snippet": "ASIAN SECRETS SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ASIAN SECRETS SDN BHD",
+          "value": "4800",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ASIAN SECRETS SDN BHD 4,800.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 106,
+            "text_snippet": "ASIAN SECRETS SDN BHD 4,800.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-B001",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-B001",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 109,
+            "text_snippet": "ACT-B001"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 110,
+            "text_snippet": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+          "value": "1512",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD 1,512.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 110,
+            "text_snippet": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD 1,512.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-B004",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-B004",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 113,
+            "text_snippet": "ACT-B004"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "BEZLIFE MARKETING SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BEZLIFE MARKETING SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 114,
+            "text_snippet": "BEZLIFE MARKETING SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "BEZLIFE MARKETING SDN BHD",
+          "value": "13000",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BEZLIFE MARKETING SDN BHD 13,000.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 114,
+            "text_snippet": "BEZLIFE MARKETING SDN BHD 13,000.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-B005",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-B005",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 117,
+            "text_snippet": "ACT-B005"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "BBS TRUST INT'L LIMITED",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BBS TRUST INT'L LIMITED",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 118,
+            "text_snippet": "BBS TRUST INT'L LIMITED"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "BBS TRUST INT'L LIMITED",
+          "value": "438.48",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BBS TRUST INT'L LIMITED 438.48",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 118,
+            "text_snippet": "BBS TRUST INT'L LIMITED 438.48"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-C004",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-C004",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 121,
+            "text_snippet": "ACT-C004"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CORPSEC SERVICES SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CORPSEC SERVICES SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 122,
+            "text_snippet": "CORPSEC SERVICES SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "CORPSEC SERVICES SDN BHD",
+          "value": "864",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CORPSEC SERVICES SDN BHD 864.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 122,
+            "text_snippet": "CORPSEC SERVICES SDN BHD 864.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-G001",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-G001",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 125,
+            "text_snippet": "ACT-G001"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "GEMCO MANAGEMENT SERVICES SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 126,
+            "text_snippet": "GEMCO MANAGEMENT SERVICES SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+          "value": "10368",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "GEMCO MANAGEMENT SERVICES SDN BHD 10,368.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 126,
+            "text_snippet": "GEMCO MANAGEMENT SERVICES SDN BHD 10,368.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-I003",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-I003",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 129,
+            "text_snippet": "ACT-I003"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "INFO HOUSE (M) SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "INFO HOUSE (M) SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 130,
+            "text_snippet": "INFO HOUSE (M) SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "INFO HOUSE (M) SDN BHD",
+          "value": "8300",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "INFO HOUSE (M) SDN BHD 8,300.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 130,
+            "text_snippet": "INFO HOUSE (M) SDN BHD 8,300.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-K002",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-K002",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 133,
+            "text_snippet": "ACT-K002"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "KINGDOM ADVISORY SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "KINGDOM ADVISORY SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 134,
+            "text_snippet": "KINGDOM ADVISORY SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "KINGDOM ADVISORY SDN BHD",
+          "value": "2365.2",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "KINGDOM ADVISORY SDN BHD 2,365.20",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 134,
+            "text_snippet": "KINGDOM ADVISORY SDN BHD 2,365.20"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-M001",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-M001",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 137,
+            "text_snippet": "ACT-M001"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "MALAYSIAN RESOURCES CORPORATION BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "MALAYSIAN RESOURCES CORPORATION BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 138,
+            "text_snippet": "MALAYSIAN RESOURCES CORPORATION BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "MALAYSIAN RESOURCES CORPORATION BHD",
+          "value": "4320",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "MALAYSIAN RESOURCES CORPORATION BHD 4,320.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 138,
+            "text_snippet": "MALAYSIAN RESOURCES CORPORATION BHD 4,320.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-P002",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-P002",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 141,
+            "text_snippet": "ACT-P002"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "PERMODALAN NASIONAL BERHAD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "PERMODALAN NASIONAL BERHAD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 142,
+            "text_snippet": "PERMODALAN NASIONAL BERHAD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "PERMODALAN NASIONAL BERHAD",
+          "value": "139320",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "PERMODALAN NASIONAL BERHAD 139,320.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 142,
+            "text_snippet": "PERMODALAN NASIONAL BERHAD 139,320.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-Q002",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-Q002",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 144,
+            "text_snippet": "ACT-Q002"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "QINETICS MSP SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "QINETICS MSP SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 145,
+            "text_snippet": "QINETICS MSP SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 1,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "QINETICS MSP SDN BHD",
+          "value": "8500",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "QINETICS MSP SDN BHD 8,500.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 1,
+            "line_number": 145,
+            "text_snippet": "QINETICS MSP SDN BHD 8,500.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "BIZAID FY2025",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BIZAID FY2025",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 3,
+            "text_snippet": "BIZAID FY2025"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "Statement of Financial Position As At 31/12/2025",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "Statement of Financial Position As At 31/12/2025",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 4,
+            "text_snippet": "Statement of Financial Position As At 31/12/2025"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "This Year",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "This Year",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 5,
+            "text_snippet": "This Year"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-R003",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-R003",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 7,
+            "text_snippet": "ACT-R003"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "RAHSIA HERBAL SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "RAHSIA HERBAL SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 8,
+            "text_snippet": "RAHSIA HERBAL SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "RAHSIA HERBAL SDN BHD",
+          "value": "300",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "RAHSIA HERBAL SDN BHD 300.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 8,
+            "text_snippet": "RAHSIA HERBAL SDN BHD 300.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-S001",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-S001",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 11,
+            "text_snippet": "ACT-S001"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "SIN THYE MANAGEMENT SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SIN THYE MANAGEMENT SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 12,
+            "text_snippet": "SIN THYE MANAGEMENT SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "SIN THYE MANAGEMENT SDN BHD",
+          "value": "10368",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SIN THYE MANAGEMENT SDN BHD 10,368.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 12,
+            "text_snippet": "SIN THYE MANAGEMENT SDN BHD 10,368.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-V002",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-V002",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 15,
+            "text_snippet": "ACT-V002"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "VR CORPORATE ADVISORY SDN. BHD.",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "VR CORPORATE ADVISORY SDN. BHD.",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 16,
+            "text_snippet": "VR CORPORATE ADVISORY SDN. BHD."
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "VR CORPORATE ADVISORY SDN. BHD",
+          "value": "330",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "VR CORPORATE ADVISORY SDN. BHD. 330.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 16,
+            "text_snippet": "VR CORPORATE ADVISORY SDN. BHD. 330.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-Y001",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-Y001",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 19,
+            "text_snippet": "ACT-Y001"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "YTL CORPORATION BERHAD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "YTL CORPORATION BERHAD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 20,
+            "text_snippet": "YTL CORPORATION BERHAD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "YTL CORPORATION BERHAD",
+          "value": "14256",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "YTL CORPORATION BERHAD 14,256.00",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 20,
+            "text_snippet": "YTL CORPORATION BERHAD 14,256.00"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACT-Y002",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACT-Y002",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 23,
+            "text_snippet": "ACT-Y002"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "YONGDA CORPORATE CONSULTANTS SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "YONGDA CORPORATE CONSULTANTS SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 24,
+            "text_snippet": "YONGDA CORPORATE CONSULTANTS SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "YONGDA CORPORATE CONSULTANTS SDN BHD",
+          "value": "1747.44",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "YONGDA CORPORATE CONSULTANTS SDN BHD 1,747.44",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 24,
+            "text_snippet": "YONGDA CORPORATE CONSULTANTS SDN BHD 1,747.44"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CURRENT LIABILITIES",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CURRENT LIABILITIES",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 29,
+            "text_snippet": "CURRENT LIABILITIES"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CURRENT LIABILITIES",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CURRENT LIABILITIES",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 31,
+            "text_snippet": "CURRENT LIABILITIES"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCRUAL",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCRUAL",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 33,
+            "text_snippet": "ACCRUAL"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "ACCRUAL",
+          "value": "86.65",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "ACCRUAL 86.65",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 33,
+            "text_snippet": "ACCRUAL 86.65"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "SERVICE TAX ACCOUNT",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SERVICE TAX ACCOUNT",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 69,
+            "text_snippet": "SERVICE TAX ACCOUNT"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "SERVICE TAX ACCOUNT",
+          "value": "17116.13",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SERVICE TAX ACCOUNT 17,116.13",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 69,
+            "text_snippet": "SERVICE TAX ACCOUNT 17,116.13"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "NET CURRENT ASSETS",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "NET CURRENT ASSETS",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 73,
+            "text_snippet": "NET CURRENT ASSETS"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "subtotal_or_total",
+          "statement_section": "Statement of Financial Position",
+          "label": "NET CURRENT ASSETS",
+          "value": "-47432.31",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "NET CURRENT ASSETS -47,432.31",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_sign_issue",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 73,
+            "text_snippet": "NET CURRENT ASSETS -47,432.31"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "FINANCED BY",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "FINANCED BY",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 76,
+            "text_snippet": "FINANCED BY"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CAPITAL",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CAPITAL",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 77,
+            "text_snippet": "CAPITAL"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "CAPITAL",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "CAPITAL",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 79,
+            "text_snippet": "CAPITAL"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "SHARE PREMIUM",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SHARE PREMIUM",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 81,
+            "text_snippet": "SHARE PREMIUM"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "SHARE PREMIUM",
+          "value": "3939661.59",
+          "previous_value": null,
+          "current_year": 2025,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SHARE PREMIUM 3,939,661.59",
+          "confidence": 0.68,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 81,
+            "text_snippet": "SHARE PREMIUM 3,939,661.59"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "SHARE CAPITAL",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "SHARE CAPITAL",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 84,
+            "text_snippet": "SHARE CAPITAL"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "INFOHOUSE (I.T) SDN BHD",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "INFOHOUSE (I.T) SDN BHD",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 86,
+            "text_snippet": "INFOHOUSE (I.T) SDN BHD"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 90,
+            "text_snippet": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 2,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "comparative_numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "value": "-1839510",
+          "previous_value": "4585.68",
+          "current_year": 2025,
+          "prior_year": 2001,
+          "text": null,
+          "source_snippet": "TOTAL PROFIT & LOSS (PREVIOUS YEAR) -1,839,510.00 4585.68",
+          "confidence": 0.78,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 2,
+            "line_number": 90,
+            "text_snippet": "TOTAL PROFIT & LOSS (PREVIOUS YEAR) -1,839,510.00 4585.68"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "BIZAID FY2025",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "BIZAID FY2025",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 3,
+            "text_snippet": "BIZAID FY2025"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "Statement of Financial Position As At 31/12/2025",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "Statement of Financial Position As At 31/12/2025",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 4,
+            "text_snippet": "Statement of Financial Position As At 31/12/2025"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "This Year",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "This Year",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 5,
+            "text_snippet": "This Year"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "comparative_numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "This Year",
+          "value": "112796",
+          "previous_value": "-281.19",
+          "current_year": 2025,
+          "prior_year": 2012,
+          "text": null,
+          "source_snippet": "This Year 112,796.00 -281.19",
+          "confidence": 0.78,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_sign_issue",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 5,
+            "text_snippet": "This Year 112,796.00 -281.19"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "RETAINED EARNING",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "RETAINED EARNING",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 53,
+            "text_snippet": "RETAINED EARNING"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_text",
+          "row_type": "heading",
+          "statement_section": "Statement of Financial Position",
+          "label": "PROFIT/(LOSS)",
+          "value": null,
+          "previous_value": null,
+          "current_year": null,
+          "prior_year": null,
+          "text": null,
+          "source_snippet": "PROFIT/(LOSS)",
+          "confidence": 0.48,
+          "warnings": [
+            "no_value_detected",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 54,
+            "text_snippet": "PROFIT/(LOSS)"
+          }
+        },
+        {
+          "case_id": "001-bizaid-synthetic",
+          "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "page_number": 3,
+          "extraction_method": "native_table_heuristic",
+          "row_type": "comparative_numeric_fact",
+          "statement_section": "Statement of Financial Position",
+          "label": "PROFIT/(LOSS)",
+          "value": "160538.2",
+          "previous_value": "-400.2",
+          "current_year": 2025,
+          "prior_year": 2024,
+          "text": null,
+          "source_snippet": "PROFIT/(LOSS) 160,538.20 -400.20",
+          "confidence": 0.78,
+          "warnings": [
+            "low_confidence_table_row",
+            "possible_duplicate"
+          ],
+          "provenance": {
+            "page_number": 3,
+            "line_number": 54,
+            "text_snippet": "PROFIT/(LOSS) 160,538.20 -400.20"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "case_dir": "benchmark_cases/002-bezlife-marketing",
+      "source_pdf": "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 26,
+      "candidate_count": 0,
+      "row_type_counts": {},
+      "warning_counts": {
+        "no_candidates_detected": 1,
+        "no_numeric_facts_detected": 1,
+        "no_text_blocks_detected": 1,
+        "page_10_no_native_text_detected": 1,
+        "page_11_no_native_text_detected": 1,
+        "page_12_no_native_text_detected": 1,
+        "page_13_no_native_text_detected": 1,
+        "page_14_no_native_text_detected": 1,
+        "page_15_no_native_text_detected": 1,
+        "page_16_no_native_text_detected": 1,
+        "page_17_no_native_text_detected": 1,
+        "page_18_no_native_text_detected": 1,
+        "page_19_no_native_text_detected": 1,
+        "page_1_no_native_text_detected": 1,
+        "page_20_no_native_text_detected": 1,
+        "page_21_no_native_text_detected": 1,
+        "page_22_no_native_text_detected": 1,
+        "page_23_no_native_text_detected": 1,
+        "page_24_no_native_text_detected": 1,
+        "page_25_no_native_text_detected": 1,
+        "page_26_no_native_text_detected": 1,
+        "page_2_no_native_text_detected": 1,
+        "page_3_no_native_text_detected": 1,
+        "page_4_no_native_text_detected": 1,
+        "page_5_no_native_text_detected": 1,
+        "page_6_no_native_text_detected": 1,
+        "page_7_no_native_text_detected": 1,
+        "page_8_no_native_text_detected": 1,
+        "page_9_no_native_text_detected": 1
+      },
+      "warnings": [
+        "page_1_no_native_text_detected",
+        "page_2_no_native_text_detected",
+        "page_3_no_native_text_detected",
+        "page_4_no_native_text_detected",
+        "page_5_no_native_text_detected",
+        "page_6_no_native_text_detected",
+        "page_7_no_native_text_detected",
+        "page_8_no_native_text_detected",
+        "page_9_no_native_text_detected",
+        "page_10_no_native_text_detected",
+        "page_11_no_native_text_detected",
+        "page_12_no_native_text_detected",
+        "page_13_no_native_text_detected",
+        "page_14_no_native_text_detected",
+        "page_15_no_native_text_detected",
+        "page_16_no_native_text_detected",
+        "page_17_no_native_text_detected",
+        "page_18_no_native_text_detected",
+        "page_19_no_native_text_detected",
+        "page_20_no_native_text_detected",
+        "page_21_no_native_text_detected",
+        "page_22_no_native_text_detected",
+        "page_23_no_native_text_detected",
+        "page_24_no_native_text_detected",
+        "page_25_no_native_text_detected",
+        "page_26_no_native_text_detected",
+        "no_numeric_facts_detected",
+        "no_text_blocks_detected",
+        "no_candidates_detected"
+      ],
+      "candidates": []
+    },
+    {
+      "case_id": "003-fine-batik",
+      "case_dir": "benchmark_cases/003-fine-batik",
+      "source_pdf": "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 25,
+      "candidate_count": 0,
+      "row_type_counts": {},
+      "warning_counts": {
+        "no_candidates_detected": 1,
+        "no_numeric_facts_detected": 1,
+        "no_text_blocks_detected": 1,
+        "page_10_no_native_text_detected": 1,
+        "page_11_no_native_text_detected": 1,
+        "page_12_no_native_text_detected": 1,
+        "page_13_no_native_text_detected": 1,
+        "page_14_no_native_text_detected": 1,
+        "page_15_no_native_text_detected": 1,
+        "page_16_no_native_text_detected": 1,
+        "page_17_no_native_text_detected": 1,
+        "page_18_no_native_text_detected": 1,
+        "page_19_no_native_text_detected": 1,
+        "page_1_no_native_text_detected": 1,
+        "page_20_no_native_text_detected": 1,
+        "page_21_no_native_text_detected": 1,
+        "page_22_no_native_text_detected": 1,
+        "page_23_no_native_text_detected": 1,
+        "page_24_no_native_text_detected": 1,
+        "page_25_no_native_text_detected": 1,
+        "page_2_no_native_text_detected": 1,
+        "page_3_no_native_text_detected": 1,
+        "page_4_no_native_text_detected": 1,
+        "page_5_no_native_text_detected": 1,
+        "page_6_no_native_text_detected": 1,
+        "page_7_no_native_text_detected": 1,
+        "page_8_no_native_text_detected": 1,
+        "page_9_no_native_text_detected": 1
+      },
+      "warnings": [
+        "page_1_no_native_text_detected",
+        "page_2_no_native_text_detected",
+        "page_3_no_native_text_detected",
+        "page_4_no_native_text_detected",
+        "page_5_no_native_text_detected",
+        "page_6_no_native_text_detected",
+        "page_7_no_native_text_detected",
+        "page_8_no_native_text_detected",
+        "page_9_no_native_text_detected",
+        "page_10_no_native_text_detected",
+        "page_11_no_native_text_detected",
+        "page_12_no_native_text_detected",
+        "page_13_no_native_text_detected",
+        "page_14_no_native_text_detected",
+        "page_15_no_native_text_detected",
+        "page_16_no_native_text_detected",
+        "page_17_no_native_text_detected",
+        "page_18_no_native_text_detected",
+        "page_19_no_native_text_detected",
+        "page_20_no_native_text_detected",
+        "page_21_no_native_text_detected",
+        "page_22_no_native_text_detected",
+        "page_23_no_native_text_detected",
+        "page_24_no_native_text_detected",
+        "page_25_no_native_text_detected",
+        "no_numeric_facts_detected",
+        "no_text_blocks_detected",
+        "no_candidates_detected"
+      ],
+      "candidates": []
+    },
+    {
+      "case_id": "004-info-house",
+      "case_dir": "benchmark_cases/004-info-house",
+      "source_pdf": "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 23,
+      "candidate_count": 0,
+      "row_type_counts": {},
+      "warning_counts": {
+        "no_candidates_detected": 1,
+        "no_numeric_facts_detected": 1,
+        "no_text_blocks_detected": 1,
+        "page_10_no_native_text_detected": 1,
+        "page_11_no_native_text_detected": 1,
+        "page_12_no_native_text_detected": 1,
+        "page_13_no_native_text_detected": 1,
+        "page_14_no_native_text_detected": 1,
+        "page_15_no_native_text_detected": 1,
+        "page_16_no_native_text_detected": 1,
+        "page_17_no_native_text_detected": 1,
+        "page_18_no_native_text_detected": 1,
+        "page_19_no_native_text_detected": 1,
+        "page_1_no_native_text_detected": 1,
+        "page_20_no_native_text_detected": 1,
+        "page_21_no_native_text_detected": 1,
+        "page_22_no_native_text_detected": 1,
+        "page_23_no_native_text_detected": 1,
+        "page_2_no_native_text_detected": 1,
+        "page_3_no_native_text_detected": 1,
+        "page_4_no_native_text_detected": 1,
+        "page_5_no_native_text_detected": 1,
+        "page_6_no_native_text_detected": 1,
+        "page_7_no_native_text_detected": 1,
+        "page_8_no_native_text_detected": 1,
+        "page_9_no_native_text_detected": 1
+      },
+      "warnings": [
+        "page_1_no_native_text_detected",
+        "page_2_no_native_text_detected",
+        "page_3_no_native_text_detected",
+        "page_4_no_native_text_detected",
+        "page_5_no_native_text_detected",
+        "page_6_no_native_text_detected",
+        "page_7_no_native_text_detected",
+        "page_8_no_native_text_detected",
+        "page_9_no_native_text_detected",
+        "page_10_no_native_text_detected",
+        "page_11_no_native_text_detected",
+        "page_12_no_native_text_detected",
+        "page_13_no_native_text_detected",
+        "page_14_no_native_text_detected",
+        "page_15_no_native_text_detected",
+        "page_16_no_native_text_detected",
+        "page_17_no_native_text_detected",
+        "page_18_no_native_text_detected",
+        "page_19_no_native_text_detected",
+        "page_20_no_native_text_detected",
+        "page_21_no_native_text_detected",
+        "page_22_no_native_text_detected",
+        "page_23_no_native_text_detected",
+        "no_numeric_facts_detected",
+        "no_text_blocks_detected",
+        "no_candidates_detected"
+      ],
+      "candidates": []
+    },
+    {
+      "case_id": "005-jconnector",
+      "case_dir": "benchmark_cases/005-jconnector",
+      "source_pdf": "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 22,
+      "candidate_count": 0,
+      "row_type_counts": {},
+      "warning_counts": {
+        "no_candidates_detected": 1,
+        "no_numeric_facts_detected": 1,
+        "no_text_blocks_detected": 1,
+        "page_10_no_native_text_detected": 1,
+        "page_11_no_native_text_detected": 1,
+        "page_12_no_native_text_detected": 1,
+        "page_13_no_native_text_detected": 1,
+        "page_14_no_native_text_detected": 1,
+        "page_15_no_native_text_detected": 1,
+        "page_16_no_native_text_detected": 1,
+        "page_17_no_native_text_detected": 1,
+        "page_18_no_native_text_detected": 1,
+        "page_19_no_native_text_detected": 1,
+        "page_1_no_native_text_detected": 1,
+        "page_20_no_native_text_detected": 1,
+        "page_21_no_native_text_detected": 1,
+        "page_22_no_native_text_detected": 1,
+        "page_2_no_native_text_detected": 1,
+        "page_3_no_native_text_detected": 1,
+        "page_4_no_native_text_detected": 1,
+        "page_5_no_native_text_detected": 1,
+        "page_6_no_native_text_detected": 1,
+        "page_7_no_native_text_detected": 1,
+        "page_8_no_native_text_detected": 1,
+        "page_9_no_native_text_detected": 1
+      },
+      "warnings": [
+        "page_1_no_native_text_detected",
+        "page_2_no_native_text_detected",
+        "page_3_no_native_text_detected",
+        "page_4_no_native_text_detected",
+        "page_5_no_native_text_detected",
+        "page_6_no_native_text_detected",
+        "page_7_no_native_text_detected",
+        "page_8_no_native_text_detected",
+        "page_9_no_native_text_detected",
+        "page_10_no_native_text_detected",
+        "page_11_no_native_text_detected",
+        "page_12_no_native_text_detected",
+        "page_13_no_native_text_detected",
+        "page_14_no_native_text_detected",
+        "page_15_no_native_text_detected",
+        "page_16_no_native_text_detected",
+        "page_17_no_native_text_detected",
+        "page_18_no_native_text_detected",
+        "page_19_no_native_text_detected",
+        "page_20_no_native_text_detected",
+        "page_21_no_native_text_detected",
+        "page_22_no_native_text_detected",
+        "no_numeric_facts_detected",
+        "no_text_blocks_detected",
+        "no_candidates_detected"
+      ],
+      "candidates": []
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "case_dir": "benchmark_cases/006-Rahsia-Herbal",
+      "source_pdf": "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 24,
+      "candidate_count": 0,
+      "row_type_counts": {},
+      "warning_counts": {
+        "no_candidates_detected": 1,
+        "no_numeric_facts_detected": 1,
+        "no_text_blocks_detected": 1,
+        "page_10_no_native_text_detected": 1,
+        "page_11_no_native_text_detected": 1,
+        "page_12_no_native_text_detected": 1,
+        "page_13_no_native_text_detected": 1,
+        "page_14_no_native_text_detected": 1,
+        "page_15_no_native_text_detected": 1,
+        "page_16_no_native_text_detected": 1,
+        "page_17_no_native_text_detected": 1,
+        "page_18_no_native_text_detected": 1,
+        "page_19_no_native_text_detected": 1,
+        "page_1_no_native_text_detected": 1,
+        "page_20_no_native_text_detected": 1,
+        "page_21_no_native_text_detected": 1,
+        "page_22_no_native_text_detected": 1,
+        "page_23_no_native_text_detected": 1,
+        "page_24_no_native_text_detected": 1,
+        "page_2_no_native_text_detected": 1,
+        "page_3_no_native_text_detected": 1,
+        "page_4_no_native_text_detected": 1,
+        "page_5_no_native_text_detected": 1,
+        "page_6_no_native_text_detected": 1,
+        "page_7_no_native_text_detected": 1,
+        "page_8_no_native_text_detected": 1,
+        "page_9_no_native_text_detected": 1
+      },
+      "warnings": [
+        "page_1_no_native_text_detected",
+        "page_2_no_native_text_detected",
+        "page_3_no_native_text_detected",
+        "page_4_no_native_text_detected",
+        "page_5_no_native_text_detected",
+        "page_6_no_native_text_detected",
+        "page_7_no_native_text_detected",
+        "page_8_no_native_text_detected",
+        "page_9_no_native_text_detected",
+        "page_10_no_native_text_detected",
+        "page_11_no_native_text_detected",
+        "page_12_no_native_text_detected",
+        "page_13_no_native_text_detected",
+        "page_14_no_native_text_detected",
+        "page_15_no_native_text_detected",
+        "page_16_no_native_text_detected",
+        "page_17_no_native_text_detected",
+        "page_18_no_native_text_detected",
+        "page_19_no_native_text_detected",
+        "page_20_no_native_text_detected",
+        "page_21_no_native_text_detected",
+        "page_22_no_native_text_detected",
+        "page_23_no_native_text_detected",
+        "page_24_no_native_text_detected",
+        "no_numeric_facts_detected",
+        "no_text_blocks_detected",
+        "no_candidates_detected"
+      ],
+      "candidates": []
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "case_dir": "benchmark_cases/007-Shield-Plus",
+      "source_pdf": "benchmark_cases/007-Shield-Plus/Shield-Plus.pdf",
+      "reference_available": true,
+      "reference_path": "benchmark_cases/007-Shield-Plus/Shield-Plus.xml",
+      "reference_type": "xml",
+      "status": "ok",
+      "stages": [
+        "document_ingestion",
+        "native_text_extraction",
+        "layout_or_table_heuristics",
+        "row_type_classification",
+        "numeric_fact_normalization",
+        "text_block_grouping",
+        "provenance_capture",
+        "report_generation"
+      ],
+      "pages_analyzed": 15,
+      "candidate_count": 0,
+      "row_type_counts": {},
+      "warning_counts": {
+        "no_candidates_detected": 1,
+        "no_numeric_facts_detected": 1,
+        "no_text_blocks_detected": 1,
+        "page_10_no_native_text_detected": 1,
+        "page_11_no_native_text_detected": 1,
+        "page_12_no_native_text_detected": 1,
+        "page_13_no_native_text_detected": 1,
+        "page_14_no_native_text_detected": 1,
+        "page_15_no_native_text_detected": 1,
+        "page_1_no_native_text_detected": 1,
+        "page_2_no_native_text_detected": 1,
+        "page_3_no_native_text_detected": 1,
+        "page_4_no_native_text_detected": 1,
+        "page_5_no_native_text_detected": 1,
+        "page_6_no_native_text_detected": 1,
+        "page_7_no_native_text_detected": 1,
+        "page_8_no_native_text_detected": 1,
+        "page_9_no_native_text_detected": 1
+      },
+      "warnings": [
+        "page_1_no_native_text_detected",
+        "page_2_no_native_text_detected",
+        "page_3_no_native_text_detected",
+        "page_4_no_native_text_detected",
+        "page_5_no_native_text_detected",
+        "page_6_no_native_text_detected",
+        "page_7_no_native_text_detected",
+        "page_8_no_native_text_detected",
+        "page_9_no_native_text_detected",
+        "page_10_no_native_text_detected",
+        "page_11_no_native_text_detected",
+        "page_12_no_native_text_detected",
+        "page_13_no_native_text_detected",
+        "page_14_no_native_text_detected",
+        "page_15_no_native_text_detected",
+        "no_numeric_facts_detected",
+        "no_text_blocks_detected",
+        "no_candidates_detected"
+      ],
+      "candidates": []
+    }
+  ],
+  "sample_candidates": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": null,
+      "label": "BIZAID FY2025",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "BIZAID FY2025",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 3,
+        "text_snippet": "BIZAID FY2025"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "Statement of Financial Position As At 31/12/2025",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "Statement of Financial Position As At 31/12/2025",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 4,
+        "text_snippet": "Statement of Financial Position As At 31/12/2025"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "This Year",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "This Year",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 5,
+        "text_snippet": "This Year"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "FIXED ASSETS",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "FIXED ASSETS",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 7,
+        "text_snippet": "FIXED ASSETS"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "FIXED ASSETS",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "FIXED ASSETS",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 9,
+        "text_snippet": "FIXED ASSETS"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "FURNITURE &FITTINGS",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "FURNITURE &FITTINGS",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 11,
+        "text_snippet": "FURNITURE &FITTINGS"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "FURNITURE &FITTINGS",
+      "value": "13306",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "FURNITURE &FITTINGS 13,306.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 11,
+        "text_snippet": "FURNITURE &FITTINGS 13,306.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 15,
+        "text_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+      "value": "-13305",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS -13,305.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_sign_issue",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 15,
+        "text_snippet": "ACCUM. DEPRN. FURNITURE &FITTINGS -13,305.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "GOOD WILL",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "GOOD WILL",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 19,
+        "text_snippet": "GOOD WILL"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "GOOD WILL",
+      "value": "2464003",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "GOOD WILL 2,464,003.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 19,
+        "text_snippet": "GOOD WILL 2,464,003.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. AMORTIZATION. GOOD WILL",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. AMORTIZATION. GOOD WILL",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 22,
+        "text_snippet": "ACCUM. AMORTIZATION. GOOD WILL"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. AMORTIZATION. GOOD WILL",
+      "value": "-2464002",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. AMORTIZATION. GOOD WILL -2,464,002.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 22,
+        "text_snippet": "ACCUM. AMORTIZATION. GOOD WILL -2,464,002.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "COMPUTER HARDWARE",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "COMPUTER HARDWARE",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 25,
+        "text_snippet": "COMPUTER HARDWARE"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "COMPUTER HARDWARE",
+      "value": "549576",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "COMPUTER HARDWARE 549,576.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 25,
+        "text_snippet": "COMPUTER HARDWARE 549,576.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 28,
+        "text_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+      "value": "-549575",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE -549,575.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_sign_issue",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 28,
+        "text_snippet": "ACCUM. DEPRN. COMPUTER HARDWARE -549,575.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "OFFICE EQUIPMENT",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "OFFICE EQUIPMENT",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 31,
+        "text_snippet": "OFFICE EQUIPMENT"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_table_heuristic",
+      "row_type": "numeric_fact",
+      "statement_section": "Statement of Financial Position",
+      "label": "OFFICE EQUIPMENT",
+      "value": "5246",
+      "previous_value": null,
+      "current_year": 2025,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "OFFICE EQUIPMENT 5,246.00",
+      "confidence": 0.68,
+      "warnings": [
+        "low_confidence_table_row",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 31,
+        "text_snippet": "OFFICE EQUIPMENT 5,246.00"
+      }
+    },
+    {
+      "case_id": "001-bizaid-synthetic",
+      "source_pdf": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "page_number": 1,
+      "extraction_method": "native_text",
+      "row_type": "heading",
+      "statement_section": "Statement of Financial Position",
+      "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+      "value": null,
+      "previous_value": null,
+      "current_year": null,
+      "prior_year": null,
+      "text": null,
+      "source_snippet": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+      "confidence": 0.48,
+      "warnings": [
+        "no_value_detected",
+        "possible_duplicate"
+      ],
+      "provenance": {
+        "page_number": 1,
+        "line_number": 35,
+        "text_snippet": "ACCUM. DEPRN. OFFICE EQUIPMENT"
+      }
+    }
+  ],
+  "limitations": [
+    "Benchmark-only v2 extraction; no production cutover.",
+    "Native text/table heuristics are deterministic and intentionally conservative.",
+    "No DB writes, XBRL generation, Arelle validation, API calls, UI upload, or production mapping are performed."
+  ]
+}

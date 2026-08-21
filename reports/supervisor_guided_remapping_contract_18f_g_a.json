@@ -1,0 +1,71 @@
+{
+  "feature": "18F-G-A",
+  "generated_at": "2026-07-21T15:05:26.692845+00:00",
+  "endpoint": {
+    "method": "POST",
+    "path": "/api/v1/filings/jobs/{job_id}/suggestions/{suggestion_id}/remap-with-supervisor-feedback",
+    "ownership_required": true,
+    "admin_only_default": true
+  },
+  "supporting_endpoints": [
+    "GET /api/v1/filings/jobs/{job_id}/supervisor-mapper-feedback/capabilities",
+    "GET /api/v1/filings/jobs/{job_id}/supervisor-guided-mapping-revisions"
+  ],
+  "feedback_payload_allowed": [
+    "production_row_label",
+    "normalized_label",
+    "row_value",
+    "period",
+    "statement_family",
+    "section_block",
+    "row_role",
+    "note_boundary",
+    "initial_mapping_suggestion",
+    "current_ranked_candidates",
+    "supervisor_decision",
+    "supervisor_reason",
+    "supervisor_issues",
+    "supervisor_alternatives",
+    "supervisor_preferred_candidate",
+    "sanitized_concept_card_evidence",
+    "do_not_confuse_guidance"
+  ],
+  "feedback_payload_prohibited": [
+    "auditor_xml",
+    "paired_auditor_xbrl_facts",
+    "parsed_xml_facts",
+    "benchmark_gold_qnames",
+    "target_correct_qname",
+    "target_correct_template_field_id",
+    "gold_answers",
+    "evaluation_labels"
+  ],
+  "prompt_rules": [
+    "Supervisor feedback is advisory and may be wrong.",
+    "Reconsider the original mapping independently.",
+    "Choose only from supplied candidates.",
+    "Return null when evidence remains insufficient.",
+    "Return strict JSON only."
+  ],
+  "revision_fields": [
+    "parent_suggestion_id",
+    "supervisor_review_id",
+    "correction_attempt",
+    "correction_source",
+    "original_suggested_qname",
+    "revised_suggested_qname",
+    "supervisor_decision",
+    "reason",
+    "addressed_supervisor_issues",
+    "remaining_ambiguities",
+    "requires_human_review",
+    "safe_for_auto_apply",
+    "created_at"
+  ],
+  "response_sections": [
+    "initial_suggestion",
+    "supervisor_review",
+    "revised_suggestion",
+    "safety"
+  ]
+}

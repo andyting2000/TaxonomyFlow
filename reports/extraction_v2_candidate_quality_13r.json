@@ -1,0 +1,4613 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-12T15:29:28.832727+00:00",
+    "feature": "13R",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "report_type": "candidate_quality",
+    "script": "scripts/analyze_extraction_v2_candidate_quality.py",
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_candidate_quality_13r.json"
+  },
+  "input_reports": {
+    "v2_report": "reports\\extraction_v2_report_20260512T144014Z.json",
+    "comparison_report": "reports\\v2_reference_comparison_20260512T145407Z.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json",
+    "closeout_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\huggingface_qwen_benchmark_closeout_13q.json"
+  },
+  "final_13q_benchmark_still_successful": true,
+  "aggregate_candidate_counts": {
+    "total_candidates": 940,
+    "candidate_type_distribution": {
+      "comparative_numeric_fact": 37,
+      "heading": 129,
+      "metadata": 10,
+      "numeric_fact": 542,
+      "subtotal_or_total": 76,
+      "text_block": 146
+    },
+    "source_distribution": {
+      "huggingface": 818,
+      "native_only": 122
+    },
+    "readiness_distribution": {
+      "high": 337,
+      "low": 146,
+      "medium": 318,
+      "not_ready": 139
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "total_candidates": 122,
+      "numeric_candidates": 40,
+      "text_block_candidates": 0,
+      "huggingface_candidates": 0,
+      "native_only_candidates": 122,
+      "openai_candidates": 0,
+      "reference_facts": 552,
+      "reference_numeric_facts": 487,
+      "reference_text_blocks": 37,
+      "candidate_quality_score": 11.5,
+      "mapping_readiness_score": 11.5,
+      "high_readiness_count": 2,
+      "medium_readiness_count": 37,
+      "low_readiness_count": 1,
+      "not_ready_count": 82,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 38
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 15
+        },
+        {
+          "issue": "exact_duplicate_same_page",
+          "count": 6
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 5
+        },
+        {
+          "issue": "generic_period_label",
+          "count": 4
+        },
+        {
+          "issue": "missing_statement_section",
+          "count": 1
+        },
+        {
+          "issue": "amount_with_weak_label",
+          "count": 1
+        },
+        {
+          "issue": "year_header_row_extracted_as_fact",
+          "count": 1
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 38
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 15
+        },
+        {
+          "issue": "exact_duplicate_same_page",
+          "count": 6
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 5
+        },
+        {
+          "issue": "generic_period_label",
+          "count": 4
+        },
+        {
+          "issue": "missing_statement_section",
+          "count": 1
+        },
+        {
+          "issue": "amount_with_weak_label",
+          "count": 1
+        },
+        {
+          "issue": "year_header_row_extracted_as_fact",
+          "count": 1
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "this year",
+          "count": 4
+        },
+        {
+          "label": "furniture fittings",
+          "count": 1
+        },
+        {
+          "label": "accum deprn furniture fittings",
+          "count": 1
+        },
+        {
+          "label": "good will",
+          "count": 1
+        },
+        {
+          "label": "accum amortization good will",
+          "count": 1
+        },
+        {
+          "label": "computer hardware",
+          "count": 1
+        },
+        {
+          "label": "accum deprn computer hardware",
+          "count": 1
+        },
+        {
+          "label": "office equipment",
+          "count": 1
+        },
+        {
+          "label": "accum deprn office equipment",
+          "count": 1
+        },
+        {
+          "label": "computer software",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_numeric_cleanup_first"
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "total_candidates": 115,
+      "numeric_candidates": 89,
+      "text_block_candidates": 24,
+      "huggingface_candidates": 115,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 413,
+      "reference_numeric_facts": 339,
+      "reference_text_blocks": 43,
+      "candidate_quality_score": 81.0,
+      "mapping_readiness_score": 81.0,
+      "high_readiness_count": 64,
+      "medium_readiness_count": 43,
+      "low_readiness_count": 6,
+      "not_ready_count": 2,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "amount_format_normalization",
+          "count": 63
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 55
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 42
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 15
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 12
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 10
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 8
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 6
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 4
+        },
+        {
+          "issue": "too_short_label",
+          "count": 4
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 55
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 42
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 15
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 12
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 10
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 8
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 6
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 4
+        },
+        {
+          "issue": "too_short_label",
+          "count": 4
+        },
+        {
+          "issue": "enumeration_only_label",
+          "count": 4
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "c",
+          "count": 1
+        },
+        {
+          "label": "d",
+          "count": 1
+        },
+        {
+          "label": "e",
+          "count": 1
+        },
+        {
+          "label": "f",
+          "count": 1
+        },
+        {
+          "label": "turnover",
+          "count": 1
+        },
+        {
+          "label": "less taxation",
+          "count": 1
+        },
+        {
+          "label": "accruals",
+          "count": 1
+        },
+        {
+          "label": "sales",
+          "count": 1
+        },
+        {
+          "label": "purchases",
+          "count": 1
+        },
+        {
+          "label": "gross profit",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_text_block_cleanup_first"
+    },
+    {
+      "case_id": "003-fine-batik",
+      "total_candidates": 189,
+      "numeric_candidates": 158,
+      "text_block_candidates": 28,
+      "huggingface_candidates": 189,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 427,
+      "reference_numeric_facts": 352,
+      "reference_text_blocks": 44,
+      "candidate_quality_score": 72.7,
+      "mapping_readiness_score": 72.7,
+      "high_readiness_count": 85,
+      "medium_readiness_count": 69,
+      "low_readiness_count": 32,
+      "not_ready_count": 3,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "amount_format_normalization",
+          "count": 119
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 77
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 30
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 29
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 28
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 26
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 19
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 16
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 12
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 9
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 77
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 30
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 29
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 28
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 26
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 19
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 16
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 12
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 9
+        },
+        {
+          "issue": "generic_statement_section",
+          "count": 7
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "renovation",
+          "count": 2
+        },
+        {
+          "label": "ooi boon beng bought",
+          "count": 1
+        },
+        {
+          "label": "ooi boon beng sold",
+          "count": 1
+        },
+        {
+          "label": "turnover",
+          "count": 1
+        },
+        {
+          "label": "less taxation",
+          "count": 1
+        },
+        {
+          "label": "signboard",
+          "count": 1
+        },
+        {
+          "label": "costs computer software",
+          "count": 1
+        },
+        {
+          "label": "costs shop equipment",
+          "count": 1
+        },
+        {
+          "label": "costs renovation",
+          "count": 1
+        },
+        {
+          "label": "costs signboard",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_numeric_cleanup_first"
+    },
+    {
+      "case_id": "004-info-house",
+      "total_candidates": 150,
+      "numeric_candidates": 99,
+      "text_block_candidates": 34,
+      "huggingface_candidates": 150,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 414,
+      "reference_numeric_facts": 338,
+      "reference_text_blocks": 45,
+      "candidate_quality_score": 58.9,
+      "mapping_readiness_score": 58.9,
+      "high_readiness_count": 46,
+      "medium_readiness_count": 58,
+      "low_readiness_count": 29,
+      "not_ready_count": 17,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "amount_format_normalization",
+          "count": 59
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 43
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 29
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 19
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 16
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 14
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 12
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 12
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 11
+        },
+        {
+          "issue": "generic_statement_section",
+          "count": 10
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 43
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 29
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 19
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 16
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 14
+        },
+        {
+          "issue": "duplicate_label_value_same_case",
+          "count": 12
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 12
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 11
+        },
+        {
+          "issue": "generic_statement_section",
+          "count": 10
+        },
+        {
+          "issue": "too_short_label",
+          "count": 6
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "(blank)",
+          "count": 3
+        },
+        {
+          "label": "as at 31 12 23",
+          "count": 2
+        },
+        {
+          "label": "as at 31 12 24",
+          "count": 2
+        },
+        {
+          "label": "deposits",
+          "count": 2
+        },
+        {
+          "label": "ooi boon beng",
+          "count": 1
+        },
+        {
+          "label": "a",
+          "count": 1
+        },
+        {
+          "label": "b",
+          "count": 1
+        },
+        {
+          "label": "c",
+          "count": 1
+        },
+        {
+          "label": "d",
+          "count": 1
+        },
+        {
+          "label": "e",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_manual_review_policy"
+    },
+    {
+      "case_id": "005-jconnector",
+      "total_candidates": 134,
+      "numeric_candidates": 90,
+      "text_block_candidates": 29,
+      "huggingface_candidates": 134,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 400,
+      "reference_numeric_facts": 323,
+      "reference_text_blocks": 46,
+      "candidate_quality_score": 63.5,
+      "mapping_readiness_score": 63.5,
+      "high_readiness_count": 49,
+      "medium_readiness_count": 52,
+      "low_readiness_count": 18,
+      "not_ready_count": 15,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "amount_format_normalization",
+          "count": 53
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 36
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 24
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 19
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 18
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 17
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 16
+        },
+        {
+          "issue": "date_only_label",
+          "count": 15
+        },
+        {
+          "issue": "amount_with_weak_label",
+          "count": 15
+        },
+        {
+          "issue": "year_header_row_extracted_as_fact",
+          "count": 15
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 36
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 24
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 19
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 18
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 17
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 16
+        },
+        {
+          "issue": "date_only_label",
+          "count": 15
+        },
+        {
+          "issue": "amount_with_weak_label",
+          "count": 15
+        },
+        {
+          "issue": "year_header_row_extracted_as_fact",
+          "count": 15
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 11
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "as at 31 12 2023",
+          "count": 6
+        },
+        {
+          "label": "as at 31 12 2024",
+          "count": 6
+        },
+        {
+          "label": "as at 31 12 2022",
+          "count": 3
+        },
+        {
+          "label": "ooi boon beng bought",
+          "count": 1
+        },
+        {
+          "label": "ooi boon beng sold",
+          "count": 1
+        },
+        {
+          "label": "c",
+          "count": 1
+        },
+        {
+          "label": "d",
+          "count": 1
+        },
+        {
+          "label": "e",
+          "count": 1
+        },
+        {
+          "label": "f",
+          "count": 1
+        },
+        {
+          "label": "taxation",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_candidate_cleanup_first"
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "total_candidates": 146,
+      "numeric_candidates": 126,
+      "text_block_candidates": 14,
+      "huggingface_candidates": 146,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 421,
+      "reference_numeric_facts": 345,
+      "reference_text_blocks": 46,
+      "candidate_quality_score": 66.8,
+      "mapping_readiness_score": 66.8,
+      "high_readiness_count": 68,
+      "medium_readiness_count": 31,
+      "low_readiness_count": 41,
+      "not_ready_count": 6,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "amount_format_normalization",
+          "count": 94
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 42
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 42
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 29
+        },
+        {
+          "issue": "amount_with_weak_label",
+          "count": 27
+        },
+        {
+          "issue": "year_header_row_extracted_as_fact",
+          "count": 27
+        },
+        {
+          "issue": "date_only_label",
+          "count": 25
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 16
+        },
+        {
+          "issue": "generic_statement_section",
+          "count": 13
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 11
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 42
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 42
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 29
+        },
+        {
+          "issue": "amount_with_weak_label",
+          "count": 27
+        },
+        {
+          "issue": "year_header_row_extracted_as_fact",
+          "count": 27
+        },
+        {
+          "issue": "date_only_label",
+          "count": 25
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 16
+        },
+        {
+          "issue": "generic_statement_section",
+          "count": 13
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 11
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 10
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "as at 31 12 2023",
+          "count": 15
+        },
+        {
+          "label": "as at 31 12 2024",
+          "count": 10
+        },
+        {
+          "label": "prior year",
+          "count": 2
+        },
+        {
+          "label": "c",
+          "count": 1
+        },
+        {
+          "label": "d",
+          "count": 1
+        },
+        {
+          "label": "e",
+          "count": 1
+        },
+        {
+          "label": "f",
+          "count": 1
+        },
+        {
+          "label": "accumulated losses",
+          "count": 1
+        },
+        {
+          "label": "turnover",
+          "count": 1
+        },
+        {
+          "label": "depreciation",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_manual_review_policy"
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "total_candidates": 84,
+      "numeric_candidates": 53,
+      "text_block_candidates": 17,
+      "huggingface_candidates": 84,
+      "native_only_candidates": 0,
+      "openai_candidates": 0,
+      "reference_facts": 474,
+      "reference_numeric_facts": 406,
+      "reference_text_blocks": 43,
+      "candidate_quality_score": 52.2,
+      "mapping_readiness_score": 52.2,
+      "high_readiness_count": 23,
+      "medium_readiness_count": 28,
+      "low_readiness_count": 19,
+      "not_ready_count": 14,
+      "top_candidate_quality_issues": [
+        {
+          "issue": "amount_format_normalization",
+          "count": 35
+        },
+        {
+          "issue": "parentheses_negative_value",
+          "count": 26
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 18
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 12
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 11
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 10
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 8
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 7
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 6
+        },
+        {
+          "issue": "empty_label",
+          "count": 4
+        }
+      ],
+      "top_mapping_blockers": [
+        {
+          "issue": "parentheses_negative_value",
+          "count": 26
+        },
+        {
+          "issue": "duplicate_label_conflicting_values",
+          "count": 18
+        },
+        {
+          "issue": "suspicious_negative_value",
+          "count": 12
+        },
+        {
+          "issue": "heading_like_numeric_fact",
+          "count": 11
+        },
+        {
+          "issue": "comparative_value_under_numeric_type",
+          "count": 10
+        },
+        {
+          "issue": "weak_text_block_label",
+          "count": 8
+        },
+        {
+          "issue": "identical_current_previous_values",
+          "count": 7
+        },
+        {
+          "issue": "dash_or_zero_value",
+          "count": 6
+        },
+        {
+          "issue": "empty_label",
+          "count": 4
+        },
+        {
+          "issue": "generic_statement_section",
+          "count": 3
+        }
+      ],
+      "top_labels_needing_cleanup": [
+        {
+          "label": "(blank)",
+          "count": 4
+        },
+        {
+          "label": "revenue",
+          "count": 2
+        },
+        {
+          "label": "capital deficiency",
+          "count": 1
+        },
+        {
+          "label": "capital deficiency and liabilities",
+          "count": 1
+        },
+        {
+          "label": "at 1 january 2023",
+          "count": 1
+        },
+        {
+          "label": "at 31 december 2023",
+          "count": 1
+        },
+        {
+          "label": "at 31 december 2024",
+          "count": 1
+        },
+        {
+          "label": "net decrease increase in cash and cash equivalents",
+          "count": 1
+        },
+        {
+          "label": "cash and cash equivalents at beginning of year",
+          "count": 1
+        },
+        {
+          "label": "deposit",
+          "count": 1
+        }
+      ],
+      "ready_for_mapping_prototype": "needs_numeric_cleanup_first"
+    }
+  ],
+  "quality_issue_counts": {
+    "amount_format_normalization": 423,
+    "amount_with_weak_label": 47,
+    "comparative_value_under_numeric_type": 263,
+    "dash_or_zero_value": 123,
+    "date_only_label": 44,
+    "duplicate_label_conflicting_values": 141,
+    "duplicate_label_value_same_case": 64,
+    "empty_label": 7,
+    "enumeration_only_label": 18,
+    "exact_duplicate_same_page": 6,
+    "generic_period_label": 6,
+    "generic_statement_section": 44,
+    "heading_like_numeric_fact": 120,
+    "identical_current_previous_values": 62,
+    "missing_statement_section": 1,
+    "non_numeric_value": 7,
+    "numeric_under_narrative_section": 6,
+    "parentheses_negative_value": 135,
+    "short_text_block": 9,
+    "suspicious_negative_value": 67,
+    "text_under_numeric_section": 6,
+    "too_short_label": 18,
+    "weak_text_block_label": 65,
+    "year_header_row_extracted_as_fact": 47
+  },
+  "quality_issue_category_counts": {
+    "comparative_quality": 372,
+    "duplicate_quality": 211,
+    "label_pollution": 50,
+    "label_quality": 163,
+    "mapping_readiness": 47,
+    "numeric_quality": 755,
+    "section_quality": 57,
+    "text_block_quality": 74
+  },
+  "top_issue_categories": [
+    {
+      "category": "numeric_quality",
+      "count": 755
+    },
+    {
+      "category": "comparative_quality",
+      "count": 372
+    },
+    {
+      "category": "duplicate_quality",
+      "count": 211
+    },
+    {
+      "category": "label_quality",
+      "count": 163
+    },
+    {
+      "category": "text_block_quality",
+      "count": 74
+    },
+    {
+      "category": "section_quality",
+      "count": 57
+    },
+    {
+      "category": "label_pollution",
+      "count": 50
+    },
+    {
+      "category": "mapping_readiness",
+      "count": 47
+    }
+  ],
+  "top_suspicious_labels": [
+    {
+      "label": "as at 31 12 2023",
+      "count": 21
+    },
+    {
+      "label": "as at 31 12 2024",
+      "count": 16
+    },
+    {
+      "label": "(blank)",
+      "count": 7
+    },
+    {
+      "label": "turnover",
+      "count": 5
+    },
+    {
+      "label": "this year",
+      "count": 4
+    },
+    {
+      "label": "c",
+      "count": 4
+    },
+    {
+      "label": "d",
+      "count": 4
+    },
+    {
+      "label": "e",
+      "count": 4
+    },
+    {
+      "label": "f",
+      "count": 4
+    },
+    {
+      "label": "penalties",
+      "count": 4
+    },
+    {
+      "label": "less taxation",
+      "count": 3
+    },
+    {
+      "label": "accruals",
+      "count": 3
+    },
+    {
+      "label": "as at 31 12 2022",
+      "count": 3
+    },
+    {
+      "label": "sales",
+      "count": 2
+    },
+    {
+      "label": "purchases",
+      "count": 2
+    },
+    {
+      "label": "gross profit",
+      "count": 2
+    },
+    {
+      "label": "ooi boon beng bought",
+      "count": 2
+    },
+    {
+      "label": "ooi boon beng sold",
+      "count": 2
+    },
+    {
+      "label": "renovation",
+      "count": 2
+    },
+    {
+      "label": "insurance",
+      "count": 2
+    },
+    {
+      "label": "as at 31 12 23",
+      "count": 2
+    },
+    {
+      "label": "disposal",
+      "count": 2
+    },
+    {
+      "label": "as at 31 12 24",
+      "count": 2
+    },
+    {
+      "label": "deposits",
+      "count": 2
+    },
+    {
+      "label": "prior year",
+      "count": 2
+    }
+  ],
+  "top_duplicate_labels": [
+    {
+      "label": "as at 31 12 2023",
+      "count": 21
+    },
+    {
+      "label": "loss for the financial year",
+      "count": 18
+    },
+    {
+      "label": "loss before taxation",
+      "count": 16
+    },
+    {
+      "label": "as at 31 12 2024",
+      "count": 16
+    },
+    {
+      "label": "bank balances",
+      "count": 6
+    },
+    {
+      "label": "charges for the year",
+      "count": 5
+    },
+    {
+      "label": "fixed assets",
+      "count": 4
+    },
+    {
+      "label": "current liabilities",
+      "count": 4
+    },
+    {
+      "label": "capital",
+      "count": 4
+    },
+    {
+      "label": "gross profit",
+      "count": 4
+    },
+    {
+      "label": "term loan",
+      "count": 4
+    },
+    {
+      "label": "bizaid fy2025",
+      "count": 3
+    },
+    {
+      "label": "statement of financial position as at 31 12 2025",
+      "count": 3
+    },
+    {
+      "label": "this year",
+      "count": 3
+    },
+    {
+      "label": "as at 31st december 2022",
+      "count": 3
+    },
+    {
+      "label": "as at 31st december 2023",
+      "count": 3
+    },
+    {
+      "label": "as at 31st december 2024",
+      "count": 3
+    },
+    {
+      "label": "as at 31 december 2022",
+      "count": 3
+    },
+    {
+      "label": "as at 31 december 2023",
+      "count": 3
+    },
+    {
+      "label": "as at 31 december 2024",
+      "count": 3
+    },
+    {
+      "label": "total",
+      "count": 3
+    },
+    {
+      "label": "as at 31 12 2022",
+      "count": 3
+    },
+    {
+      "label": "accumulated loss rm",
+      "count": 3
+    },
+    {
+      "label": "total rm",
+      "count": 3
+    },
+    {
+      "label": "profit loss from operating activities",
+      "count": 2
+    }
+  ],
+  "top_near_duplicate_labels": [
+    {
+      "normalized_label": "asat31122023",
+      "count": 21
+    },
+    {
+      "normalized_label": "asat31122024",
+      "count": 16
+    },
+    {
+      "normalized_label": "lossforthefinancialyear",
+      "count": 14
+    },
+    {
+      "normalized_label": "lossbeforetaxation",
+      "count": 12
+    },
+    {
+      "normalized_label": "sharecapital",
+      "count": 9
+    },
+    {
+      "normalized_label": "turnover",
+      "count": 7
+    },
+    {
+      "normalized_label": "propertyplantandequipment",
+      "count": 7
+    },
+    {
+      "normalized_label": "bankbalances",
+      "count": 7
+    },
+    {
+      "normalized_label": "totalcurrentliabilities",
+      "count": 6
+    },
+    {
+      "normalized_label": "otherincome",
+      "count": 6
+    },
+    {
+      "normalized_label": "auditorsremuneration",
+      "count": 6
+    },
+    {
+      "normalized_label": "totaloperatingexpenses",
+      "count": 6
+    },
+    {
+      "normalized_label": "chargesfortheyear",
+      "count": 6
+    },
+    {
+      "normalized_label": "totalcurrentassets",
+      "count": 5
+    },
+    {
+      "normalized_label": "totalassets",
+      "count": 5
+    },
+    {
+      "normalized_label": "otherpayablesandaccruals",
+      "count": 5
+    },
+    {
+      "normalized_label": "totalequityandliabilities",
+      "count": 5
+    },
+    {
+      "normalized_label": "grossprofit",
+      "count": 5
+    },
+    {
+      "normalized_label": "expensesnotdeductiblefortaxpurposes",
+      "count": 5
+    },
+    {
+      "normalized_label": "secretarialfee",
+      "count": 5
+    },
+    {
+      "normalized_label": "lossfromoperatingactivities",
+      "count": 5
+    },
+    {
+      "normalized_label": "directorsremuneration",
+      "count": 5
+    },
+    {
+      "normalized_label": "thisyear",
+      "count": 4
+    },
+    {
+      "normalized_label": "c",
+      "count": 4
+    },
+    {
+      "normalized_label": "d",
+      "count": 4
+    }
+  ],
+  "top_section_problems": [
+    {
+      "issue": "generic_statement_section",
+      "count": 44
+    },
+    {
+      "issue": "numeric_under_narrative_section",
+      "count": 6
+    },
+    {
+      "issue": "text_under_numeric_section",
+      "count": 6
+    },
+    {
+      "issue": "missing_statement_section",
+      "count": 1
+    }
+  ],
+  "numeric_quality_summary": {
+    "numeric_candidate_count": 655,
+    "missing_value_count": 0,
+    "non_numeric_value_count": 7,
+    "date_or_year_value_as_amount_count": 0,
+    "parentheses_negative_count": 135,
+    "dash_or_zero_count": 123,
+    "amount_format_normalization_count": 423,
+    "suspicious_negative_count": 67
+  },
+  "text_block_quality_summary": {
+    "text_block_count": 146,
+    "short_text_block_count": 9,
+    "long_text_block_count": 0,
+    "heading_only_text_block_count": 0,
+    "weak_text_block_label_count": 65,
+    "cases_missing_text_block_signal": [
+      "001-bizaid-synthetic"
+    ]
+  },
+  "source_quality_summary": {
+    "source_distribution": {
+      "huggingface": 818,
+      "native_only": 122
+    },
+    "huggingface_candidate_count": 818,
+    "native_only_candidate_count": 122,
+    "openai_candidate_count": 0,
+    "unknown_source_candidate_count": 0
+  },
+  "reference_overlap_summary": {
+    "reference_total_facts": 3101,
+    "reference_concepts_count": 293,
+    "rough_label_concept_overlap_count": 109,
+    "top_reference_concepts_not_represented_in_v2": [
+      {
+        "concept": "ssmt-mpers:EquityBalanceRestated",
+        "count": 96
+      },
+      {
+        "concept": "ifrs-smes:ComprehensiveIncome",
+        "count": 96
+      },
+      {
+        "concept": "ssmt-mpers:ImpactOfChangeInAccountingStandards",
+        "count": 73
+      },
+      {
+        "concept": "ssmt-mpers:AmountOfSharesOutstanding",
+        "count": 32
+      },
+      {
+        "concept": "ssmt-mpers:OtherChangesInNumberOfSharesOutstandingDuringPeriod",
+        "count": 16
+      },
+      {
+        "concept": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+        "count": 16
+      },
+      {
+        "concept": "ssmt-mpers:OtherChangesInAmountOfSharesOutstanding",
+        "count": 16
+      },
+      {
+        "concept": "ifrs-smes:AmountsPayableRelatedPartyTransactions",
+        "count": 15
+      },
+      {
+        "concept": "ifrs-smes:InvestmentProperty",
+        "count": 14
+      },
+      {
+        "concept": "ssmt-mpers:InvestmentInSubisidiaries",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:InvestmentsInJointVentures",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentReceivables",
+        "count": 14
+      },
+      {
+        "concept": "ssmt-mpers:OtherNoncurrentAssets",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentAssets",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:RetainedEarnings",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:OtherReserves",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:EquityAttributableToOwnersOfParent",
+        "count": 14
+      },
+      {
+        "concept": "ssmt-mpers:OtherComponentsOfEquity",
+        "count": 14
+      },
+      {
+        "concept": "ssmt-mpers:NoncurrentBorrowings",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentProvisionsForEmployeeBenefits",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentPayables",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentLiabilities",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:ShorttermBorrowings",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+        "count": 14
+      },
+      {
+        "concept": "ifrs-smes:Land",
+        "count": 14
+      }
+    ],
+    "top_v2_labels_not_found_in_reference": [
+      {
+        "candidate_label": "As at 31/12/2023",
+        "count": 21
+      },
+      {
+        "candidate_label": "As at 31/12/2024",
+        "count": 16
+      },
+      {
+        "candidate_label": "Loss for the financial year",
+        "count": 13
+      },
+      {
+        "candidate_label": "Turnover",
+        "count": 7
+      },
+      {
+        "candidate_label": "Charges for the year",
+        "count": 6
+      },
+      {
+        "candidate_label": "Expenses not deductible for tax purposes",
+        "count": 5
+      },
+      {
+        "candidate_label": "Total Operating Expenses",
+        "count": 5
+      },
+      {
+        "candidate_label": "This Year",
+        "count": 4
+      },
+      {
+        "candidate_label": "(c)",
+        "count": 4
+      },
+      {
+        "candidate_label": "(d)",
+        "count": 4
+      },
+      {
+        "candidate_label": "(e)",
+        "count": 4
+      },
+      {
+        "candidate_label": "(f)",
+        "count": 4
+      },
+      {
+        "candidate_label": "Statutory audit",
+        "count": 4
+      },
+      {
+        "candidate_label": "Tax expenses for the year",
+        "count": 4
+      },
+      {
+        "candidate_label": "Bank charges",
+        "count": 4
+      },
+      {
+        "candidate_label": "Penalties",
+        "count": 4
+      },
+      {
+        "candidate_label": "Printing and stationeries",
+        "count": 4
+      },
+      {
+        "candidate_label": "Secretarial fee",
+        "count": 4
+      },
+      {
+        "candidate_label": "Taxation fee",
+        "count": 4
+      },
+      {
+        "candidate_label": "Accumulated losses carried forward",
+        "count": 4
+      },
+      {
+        "candidate_label": "Term loan",
+        "count": 4
+      },
+      {
+        "candidate_label": "BIZAID FY2025",
+        "count": 3
+      },
+      {
+        "candidate_label": "Accumulated losses brought forward",
+        "count": 3
+      },
+      {
+        "candidate_label": "Directors' Benefits Description",
+        "count": 3
+      },
+      {
+        "candidate_label": "Directors' Interests Description",
+        "count": 3
+      }
+    ],
+    "likely_extraction_misses": [
+      {
+        "concept": "ssmt-mpers:EquityBalanceRestated",
+        "count": 96,
+        "best_v2_label_overlap": 0.167
+      },
+      {
+        "concept": "ssmt-mpers:ImpactOfChangeInAccountingStandards",
+        "count": 73,
+        "best_v2_label_overlap": 0.143
+      },
+      {
+        "concept": "ssmt-mpers:AmountOfSharesOutstanding",
+        "count": 32,
+        "best_v2_label_overlap": 0.167
+      },
+      {
+        "concept": "ssmt-mpers:OtherChangesInNumberOfSharesOutstandingDuringPeriod",
+        "count": 16,
+        "best_v2_label_overlap": 0.182
+      },
+      {
+        "concept": "ssmt-mpers:OtherChangesInAmountOfSharesOutstanding",
+        "count": 16,
+        "best_v2_label_overlap": 0.143
+      },
+      {
+        "concept": "ifrs-smes:AmountsPayableRelatedPartyTransactions",
+        "count": 15,
+        "best_v2_label_overlap": 0.125
+      },
+      {
+        "concept": "ifrs-smes:InvestmentProperty",
+        "count": 14,
+        "best_v2_label_overlap": 0.143
+      },
+      {
+        "concept": "ssmt-mpers:InvestmentInSubisidiaries",
+        "count": 14,
+        "best_v2_label_overlap": 0.0
+      },
+      {
+        "concept": "ssmt-mpers:OtherNoncurrentAssets",
+        "count": 14,
+        "best_v2_label_overlap": 0.167
+      },
+      {
+        "concept": "ssmt-mpers:OtherComponentsOfEquity",
+        "count": 14,
+        "best_v2_label_overlap": 0.167
+      }
+    ],
+    "likely_label_normalization_issues": [
+      {
+        "concept": "ifrs-smes:ComprehensiveIncome",
+        "count": 96,
+        "best_v2_label_overlap": 0.25
+      },
+      {
+        "concept": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+        "count": 16,
+        "best_v2_label_overlap": 0.231
+      },
+      {
+        "concept": "ifrs-smes:InvestmentsInJointVentures",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentReceivables",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentAssets",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      },
+      {
+        "concept": "ifrs-smes:RetainedEarnings",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      },
+      {
+        "concept": "ifrs-smes:OtherReserves",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      },
+      {
+        "concept": "ifrs-smes:EquityAttributableToOwnersOfParent",
+        "count": 14,
+        "best_v2_label_overlap": 0.222
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentPayables",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      },
+      {
+        "concept": "ifrs-smes:NoncurrentLiabilities",
+        "count": 14,
+        "best_v2_label_overlap": 0.2
+      }
+    ],
+    "likely_structural_taxonomy_concepts": [],
+    "limitation": "This is rough offline overlap only and is not final taxonomy mapping accuracy."
+  },
+  "candidate_samples_with_issues": [
+    {
+      "candidate_id": "001-bizaid-synthetic:1:0",
+      "candidate": {
+        "index": 0,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "heading",
+        "label": "BIZAID FY2025",
+        "value": null,
+        "previous_value": null,
+        "statement_section": null,
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "missing_statement_section",
+          "category": "section_quality",
+          "severity": "medium",
+          "message": "Candidate has no statement_section.",
+          "field": "statement_section"
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:1",
+      "candidate": {
+        "index": 1,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "heading",
+        "label": "Statement of Financial Position As At 31/12/2025",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:2",
+      "candidate": {
+        "index": 2,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "heading",
+        "label": "This Year",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "generic_period_label",
+          "category": "label_pollution",
+          "severity": "high",
+          "message": "Candidate label is a generic period header.",
+          "field": "label"
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:3",
+      "candidate": {
+        "index": 3,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "heading",
+        "label": "FIXED ASSETS",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "exact_duplicate_same_page",
+          "category": "duplicate_quality",
+          "severity": "medium",
+          "message": "Exact duplicate candidate appears on the same page."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:4",
+      "candidate": {
+        "index": 4,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "heading",
+        "label": "FIXED ASSETS",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "exact_duplicate_same_page",
+          "category": "duplicate_quality",
+          "severity": "medium",
+          "message": "Exact duplicate candidate appears on the same page."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:6",
+      "candidate": {
+        "index": 6,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "FURNITURE &FITTINGS",
+        "value": "13306",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:8",
+      "candidate": {
+        "index": 8,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+        "value": "-13305",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:10",
+      "candidate": {
+        "index": 10,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "GOOD WILL",
+        "value": "2464003",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:12",
+      "candidate": {
+        "index": 12,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ACCUM. AMORTIZATION. GOOD WILL",
+        "value": "-2464002",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:14",
+      "candidate": {
+        "index": 14,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "COMPUTER HARDWARE",
+        "value": "549576",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:16",
+      "candidate": {
+        "index": 16,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+        "value": "-549575",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:18",
+      "candidate": {
+        "index": 18,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "OFFICE EQUIPMENT",
+        "value": "5246",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:20",
+      "candidate": {
+        "index": 20,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+        "value": "-4872.61",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:22",
+      "candidate": {
+        "index": 22,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "COMPUTER SOFTWARE",
+        "value": "153802.5",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:24",
+      "candidate": {
+        "index": 24,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+        "value": "-146860.83",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:29",
+      "candidate": {
+        "index": 29,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "CIMB",
+        "value": "33812.79",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:32",
+      "candidate": {
+        "index": 32,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "CAR PARK- TWIN PAVILLION",
+        "value": "180",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:34",
+      "candidate": {
+        "index": 34,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "PASS CARD- TWIN PAVILION",
+        "value": "100",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:37",
+      "candidate": {
+        "index": 37,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "CEO CORPORATE SERVICES SDN. BHD",
+        "value": "756",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:40",
+      "candidate": {
+        "index": 40,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ADISS CONSULTANTS SDN BHD",
+        "value": "1080",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:43",
+      "candidate": {
+        "index": 43,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "AMK CORPORATION SERVICES SDN BHD",
+        "value": "475.2",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:46",
+      "candidate": {
+        "index": 46,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+        "value": "972",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:49",
+      "candidate": {
+        "index": 49,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "ASIAN SECRETS SDN BHD",
+        "value": "4800",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:52",
+      "candidate": {
+        "index": 52,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+        "value": "1512",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:55",
+      "candidate": {
+        "index": 55,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "BEZLIFE MARKETING SDN BHD",
+        "value": "13000",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:58",
+      "candidate": {
+        "index": 58,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "BBS TRUST INT'L LIMITED",
+        "value": "438.48",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:61",
+      "candidate": {
+        "index": 61,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "CORPSEC SERVICES SDN BHD",
+        "value": "864",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:64",
+      "candidate": {
+        "index": 64,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+        "value": "10368",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:67",
+      "candidate": {
+        "index": 67,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "INFO HOUSE (M) SDN BHD",
+        "value": "8300",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:70",
+      "candidate": {
+        "index": 70,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "KINGDOM ADVISORY SDN BHD",
+        "value": "2365.2",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:73",
+      "candidate": {
+        "index": 73,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "MALAYSIAN RESOURCES CORPORATION BHD",
+        "value": "4320",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:76",
+      "candidate": {
+        "index": 76,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "PERMODALAN NASIONAL BERHAD",
+        "value": "139320",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:1:79",
+      "candidate": {
+        "index": 79,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 1,
+        "row_type": "numeric_fact",
+        "label": "QINETICS MSP SDN BHD",
+        "value": "8500",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:80",
+      "candidate": {
+        "index": 80,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "BIZAID FY2025",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:81",
+      "candidate": {
+        "index": 81,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "Statement of Financial Position As At 31/12/2025",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:82",
+      "candidate": {
+        "index": 82,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "This Year",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "generic_period_label",
+          "category": "label_pollution",
+          "severity": "high",
+          "message": "Candidate label is a generic period header.",
+          "field": "label"
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:85",
+      "candidate": {
+        "index": 85,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "RAHSIA HERBAL SDN BHD",
+        "value": "300",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:88",
+      "candidate": {
+        "index": 88,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "SIN THYE MANAGEMENT SDN BHD",
+        "value": "10368",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:91",
+      "candidate": {
+        "index": 91,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "VR CORPORATE ADVISORY SDN. BHD",
+        "value": "330",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:94",
+      "candidate": {
+        "index": 94,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "YTL CORPORATION BERHAD",
+        "value": "14256",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:97",
+      "candidate": {
+        "index": 97,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "YONGDA CORPORATE CONSULTANTS SDN BHD",
+        "value": "1747.44",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:98",
+      "candidate": {
+        "index": 98,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "CURRENT LIABILITIES",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "exact_duplicate_same_page",
+          "category": "duplicate_quality",
+          "severity": "medium",
+          "message": "Exact duplicate candidate appears on the same page."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:99",
+      "candidate": {
+        "index": 99,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "CURRENT LIABILITIES",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "exact_duplicate_same_page",
+          "category": "duplicate_quality",
+          "severity": "medium",
+          "message": "Exact duplicate candidate appears on the same page."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:101",
+      "candidate": {
+        "index": 101,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "ACCRUAL",
+        "value": "86.65",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:103",
+      "candidate": {
+        "index": 103,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "SERVICE TAX ACCOUNT",
+        "value": "17116.13",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:105",
+      "candidate": {
+        "index": 105,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "subtotal_or_total",
+        "label": "NET CURRENT ASSETS",
+        "value": "-47432.31",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:107",
+      "candidate": {
+        "index": 107,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "CAPITAL",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "exact_duplicate_same_page",
+          "category": "duplicate_quality",
+          "severity": "medium",
+          "message": "Exact duplicate candidate appears on the same page."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:108",
+      "candidate": {
+        "index": 108,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "heading",
+        "label": "CAPITAL",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "exact_duplicate_same_page",
+          "category": "duplicate_quality",
+          "severity": "medium",
+          "message": "Exact duplicate candidate appears on the same page."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:2:110",
+      "candidate": {
+        "index": 110,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 2,
+        "row_type": "numeric_fact",
+        "label": "SHARE PREMIUM",
+        "value": "3939661.59",
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:3:115",
+      "candidate": {
+        "index": 115,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 3,
+        "row_type": "heading",
+        "label": "BIZAID FY2025",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:3:116",
+      "candidate": {
+        "index": 116,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 3,
+        "row_type": "heading",
+        "label": "Statement of Financial Position As At 31/12/2025",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:3:117",
+      "candidate": {
+        "index": 117,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 3,
+        "row_type": "heading",
+        "label": "This Year",
+        "value": null,
+        "previous_value": null,
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_text"
+      },
+      "issues": [
+        {
+          "code": "generic_period_label",
+          "category": "label_pollution",
+          "severity": "high",
+          "message": "Candidate label is a generic period header.",
+          "field": "label"
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:3:118",
+      "candidate": {
+        "index": 118,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 3,
+        "row_type": "comparative_numeric_fact",
+        "label": "This Year",
+        "value": "112796",
+        "previous_value": "-281.19",
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "generic_period_label",
+          "category": "label_pollution",
+          "severity": "high",
+          "message": "Candidate label is a generic period header.",
+          "field": "label"
+        },
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "amount_with_weak_label",
+          "category": "mapping_readiness",
+          "severity": "high",
+          "message": "Amount row has weak label evidence."
+        },
+        {
+          "code": "year_header_row_extracted_as_fact",
+          "category": "comparative_quality",
+          "severity": "high",
+          "message": "Period header row appears to be extracted as a fact."
+        }
+      ],
+      "readiness": "low"
+    },
+    {
+      "candidate_id": "001-bizaid-synthetic:3:121",
+      "candidate": {
+        "index": 121,
+        "case_id": "001-bizaid-synthetic",
+        "page_number": 3,
+        "row_type": "comparative_numeric_fact",
+        "label": "PROFIT/(LOSS)",
+        "value": "160538.2",
+        "previous_value": "-400.2",
+        "statement_section": "Statement of Financial Position",
+        "extraction_method": "native_table_heuristic"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:122",
+      "candidate": {
+        "index": 122,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "numeric_fact",
+        "label": "Profit after taxation",
+        "value": "103,550",
+        "previous_value": "",
+        "statement_section": "FINANCIAL RESULTS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:123",
+      "candidate": {
+        "index": 123,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "numeric_fact",
+        "label": "Accumulated losses brought forward",
+        "value": "(3,097)",
+        "previous_value": "",
+        "statement_section": "FINANCIAL RESULTS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:124",
+      "candidate": {
+        "index": 124,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "numeric_fact",
+        "label": "Retained profits carried forward",
+        "value": "100,453",
+        "previous_value": "",
+        "statement_section": "FINANCIAL RESULTS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:125",
+      "candidate": {
+        "index": 125,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "DIRECTORS' REPORT",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:126",
+      "candidate": {
+        "index": 126,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "PRINCIPAL ACTIVITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:127",
+      "candidate": {
+        "index": 127,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "FINANCIAL RESULTS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:128",
+      "candidate": {
+        "index": 128,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "FINANCIAL RESULTS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:129",
+      "candidate": {
+        "index": 129,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "DIVIDEND",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:130",
+      "candidate": {
+        "index": 130,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "SHARE CAPITAL",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "short_text_block",
+          "category": "text_block_quality",
+          "severity": "medium",
+          "message": "Text block is short and may be a heading or line fragment.",
+          "field": "text"
+        },
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:3:131",
+      "candidate": {
+        "index": 131,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 3,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "DIRECTORS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:5:135",
+      "candidate": {
+        "index": 135,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 5,
+        "row_type": "text_block",
+        "label": "(c)",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "OTHER STATUTORY INFORMATION ON THE FINANCIAL STATEMENTS - Continued",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "too_short_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is too short.",
+          "field": "label"
+        },
+        {
+          "code": "enumeration_only_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is only an enumeration marker.",
+          "field": "label"
+        },
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:5:136",
+      "candidate": {
+        "index": 136,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 5,
+        "row_type": "text_block",
+        "label": "(d)",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "OTHER STATUTORY INFORMATION ON THE FINANCIAL STATEMENTS - Continued",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "too_short_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is too short.",
+          "field": "label"
+        },
+        {
+          "code": "enumeration_only_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is only an enumeration marker.",
+          "field": "label"
+        },
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:5:137",
+      "candidate": {
+        "index": 137,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 5,
+        "row_type": "text_block",
+        "label": "(e)",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "OTHER STATUTORY INFORMATION ON THE FINANCIAL STATEMENTS - Continued",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "too_short_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is too short.",
+          "field": "label"
+        },
+        {
+          "code": "enumeration_only_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is only an enumeration marker.",
+          "field": "label"
+        },
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:5:138",
+      "candidate": {
+        "index": 138,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 5,
+        "row_type": "text_block",
+        "label": "(f)",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "OTHER STATUTORY INFORMATION ON THE FINANCIAL STATEMENTS - Continued",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "too_short_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is too short.",
+          "field": "label"
+        },
+        {
+          "code": "enumeration_only_label",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Candidate label is only an enumeration marker.",
+          "field": "label"
+        },
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:5:139",
+      "candidate": {
+        "index": 139,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 5,
+        "row_type": "text_block",
+        "label": "",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "NUMBER OF EMPLOYEES AND REGISTERED OFFICE",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "weak_text_block_label",
+          "category": "text_block_quality",
+          "severity": "low",
+          "message": "Text block has weak or missing label.",
+          "field": "label"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:141",
+      "candidate": {
+        "index": 141,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Other receivables",
+        "value": "174,804",
+        "previous_value": "-",
+        "statement_section": "ASSETS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        },
+        {
+          "code": "generic_statement_section",
+          "category": "section_quality",
+          "severity": "low",
+          "message": "Candidate statement_section is too generic.",
+          "field": "statement_section"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:142",
+      "candidate": {
+        "index": 142,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Cash at bank",
+        "value": "39,820",
+        "previous_value": "300",
+        "statement_section": "ASSETS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        },
+        {
+          "code": "generic_statement_section",
+          "category": "section_quality",
+          "severity": "low",
+          "message": "Candidate statement_section is too generic.",
+          "field": "statement_section"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:143",
+      "candidate": {
+        "index": 143,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "subtotal_or_total",
+        "label": "Total current assets",
+        "value": "214,624",
+        "previous_value": "300",
+        "statement_section": "ASSETS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "generic_statement_section",
+          "category": "section_quality",
+          "severity": "low",
+          "message": "Candidate statement_section is too generic.",
+          "field": "statement_section"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:144",
+      "candidate": {
+        "index": 144,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "subtotal_or_total",
+        "label": "TOTAL ASSETS",
+        "value": "214,624",
+        "previous_value": "300",
+        "statement_section": "ASSETS",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "generic_statement_section",
+          "category": "section_quality",
+          "severity": "low",
+          "message": "Candidate statement_section is too generic.",
+          "field": "statement_section"
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:145",
+      "candidate": {
+        "index": 145,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Share capital",
+        "value": "100",
+        "previous_value": "100",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "identical_current_previous_values",
+          "category": "comparative_quality",
+          "severity": "low",
+          "message": "Current and previous values are identical."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:146",
+      "candidate": {
+        "index": 146,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Retained profits / (Accumulated losses)",
+        "value": "100,453",
+        "previous_value": "(3,097)",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:147",
+      "candidate": {
+        "index": 147,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "subtotal_or_total",
+        "label": "Total shareholders' equity",
+        "value": "100,553",
+        "previous_value": "(2,997)",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:148",
+      "candidate": {
+        "index": 148,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Other payables and accruals",
+        "value": "63,381",
+        "previous_value": "1,398",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:149",
+      "candidate": {
+        "index": 149,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Amount due to director",
+        "value": "25,998",
+        "previous_value": "1,899",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:150",
+      "candidate": {
+        "index": 150,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "numeric_fact",
+        "label": "Provision for taxation",
+        "value": "24,692",
+        "previous_value": "-",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:151",
+      "candidate": {
+        "index": 151,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "subtotal_or_total",
+        "label": "Total current liabilities",
+        "value": "114,071",
+        "previous_value": "3,297",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:13:152",
+      "candidate": {
+        "index": 152,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 13,
+        "row_type": "subtotal_or_total",
+        "label": "TOTAL EQUITY AND LIABILITIES",
+        "value": "214,624",
+        "previous_value": "300",
+        "statement_section": "EQUITY AND LIABILITIES",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:153",
+      "candidate": {
+        "index": 153,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Turnover",
+        "value": "884,596",
+        "previous_value": "-",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:154",
+      "candidate": {
+        "index": 154,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Less : Cost of sales",
+        "value": "(338,646)",
+        "previous_value": "-",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:155",
+      "candidate": {
+        "index": 155,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Gross profit",
+        "value": "545,950",
+        "previous_value": "-",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:156",
+      "candidate": {
+        "index": 156,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Staff costs",
+        "value": "50,612",
+        "previous_value": "-",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:157",
+      "candidate": {
+        "index": 157,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Other operating costs",
+        "value": "367,236",
+        "previous_value": "3,097",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:158",
+      "candidate": {
+        "index": 158,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Profit / (Loss) from operating activities",
+        "value": "128,102",
+        "previous_value": "(3,097)",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:159",
+      "candidate": {
+        "index": 159,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Add : Other income",
+        "value": "140",
+        "previous_value": "-",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:160",
+      "candidate": {
+        "index": 160,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Profit / (Loss) before taxation",
+        "value": "128,242",
+        "previous_value": "(3,097)",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        },
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:161",
+      "candidate": {
+        "index": 161,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Less : Taxation",
+        "value": "(24,692)",
+        "previous_value": "-",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "heading_like_numeric_fact",
+          "category": "label_quality",
+          "severity": "medium",
+          "message": "Heading-like label was classified as a numeric fact.",
+          "field": "label"
+        },
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "medium"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:14:162",
+      "candidate": {
+        "index": 162,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 14,
+        "row_type": "numeric_fact",
+        "label": "Total comprehensive profit / (loss) for the year / period",
+        "value": "103,550",
+        "previous_value": "(3,097)",
+        "statement_section": "Statement of Comprehensive Income",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "comparative_value_under_numeric_type",
+          "category": "comparative_quality",
+          "severity": "medium",
+          "message": "Candidate has previous_value but row_type is numeric_fact."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:165",
+      "candidate": {
+        "index": 165,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Accumulated Losses/Retained Profits as at 29 December 2022",
+        "value": "-",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "dash_or_zero_value",
+          "category": "numeric_quality",
+          "severity": "low",
+          "message": "Dash or zero value needs normalization policy."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:167",
+      "candidate": {
+        "index": 167,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Comprehensive loss for the period",
+        "value": "(3,097)",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:169",
+      "candidate": {
+        "index": 169,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Accumulated Losses/Retained Profits as at 31 December 2023",
+        "value": "(3,097)",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:170",
+      "candidate": {
+        "index": 170,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Total as at 31 December 2023",
+        "value": "(2,997)",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "parentheses_negative_value",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Parentheses negative value needs sign preservation."
+        },
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        },
+        {
+          "code": "suspicious_negative_value",
+          "category": "numeric_quality",
+          "severity": "medium",
+          "message": "Negative value appears under a label that may normally be positive."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:171",
+      "candidate": {
+        "index": 171,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Comprehensive profit for the year",
+        "value": "103,550",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:173",
+      "candidate": {
+        "index": 173,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Accumulated Losses/Retained Profits as at 31 December 2024",
+        "value": "100,453",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:15:174",
+      "candidate": {
+        "index": 174,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 15,
+        "row_type": "numeric_fact",
+        "label": "Total as at 31 December 2024",
+        "value": "100,553",
+        "previous_value": "",
+        "statement_section": "Statement of Changes in Equity",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "amount_format_normalization",
+          "category": "numeric_quality",
+          "severity": "info",
+          "message": "Amount contains currency/comma formatting."
+        }
+      ],
+      "readiness": "high"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:22:178",
+      "candidate": {
+        "index": 178,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 22,
+        "row_type": "heading",
+        "label": "3. USE OF ESTIMATES AND ACCOUNTING JUDGEMENTS",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "NOTES TO THE FINANCIAL STATEMENTS \u2013 31 DECEMBER 2024 (Continued)",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "not_ready"
+    },
+    {
+      "candidate_id": "002-bezlife-marketing:22:179",
+      "candidate": {
+        "index": 179,
+        "case_id": "002-bezlife-marketing",
+        "page_number": 22,
+        "row_type": "text_block",
+        "label": "3. USE OF ESTIMATES AND ACCOUNTING JUDGEMENTS",
+        "value": "",
+        "previous_value": "",
+        "statement_section": "NOTES TO THE FINANCIAL STATEMENTS \u2013 31 DECEMBER 2024 (Continued)",
+        "extraction_method": "huggingface_vision_fallback"
+      },
+      "issues": [
+        {
+          "code": "duplicate_label_value_same_case",
+          "category": "duplicate_quality",
+          "severity": "low",
+          "message": "Duplicate label/value appears within the same case."
+        }
+      ],
+      "readiness": "medium"
+    }
+  ],
+  "limitations": [
+    "Heuristic analysis only; scores are provisional and are not final mapping accuracy.",
+    "Reference report is used only for offline comparison and is not sent to any model.",
+    "No benchmark rerun, model call, DB mutation, XBRL generation, Arelle validation, UI upload, or production cutover is performed."
+  ],
+  "closeout_context": {
+    "full_hf_benchmark_successful": true,
+    "openai_used": false,
+    "recommended_next_feature": "Feature #13R - Candidate quality and mapping readiness analysis before production cutover"
+  }
+}

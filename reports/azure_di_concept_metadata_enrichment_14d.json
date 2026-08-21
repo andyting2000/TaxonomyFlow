@@ -1,0 +1,2055 @@
+{
+  "run_metadata": {
+    "feature": "14D",
+    "generated_at": "2026-05-19T10:00:01Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "final_mapping_approved": false,
+    "real_human_approval_recorded": false,
+    "production_mapping_approval_produced": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_metadata_enrichment_v2_14d",
+    "report_type": "azure_di_concept_metadata_enrichment_v2",
+    "script": "scripts/refine_azure_di_mapping_candidates_14d.py",
+    "output_path": "reports\\azure_di_concept_metadata_enrichment_14d.json"
+  },
+  "input_reports": {
+    "mapping_report": "reports\\azure_di_mapping_candidates_14a.json",
+    "confidence_report": "reports\\azure_di_mapping_confidence_14a.json",
+    "gap_report": "reports\\azure_di_mapping_gap_analysis_14a.json",
+    "review_queue": "reports\\azure_di_manual_mapping_review_queue_14b.json",
+    "decisions_report": "reports\\azure_di_reviewed_mapping_decisions_14c.json",
+    "handoff_report": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json",
+    "baseline_14c_eligibility": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_xbrl_eligibility_summary_14c.json",
+    "template_file": "mpers_templates.json"
+  },
+  "source_feature_chain": [
+    "13X",
+    "13Y",
+    "13Z",
+    "14A",
+    "14B",
+    "14C",
+    "14D"
+  ],
+  "concept_sources_used": {
+    "mpers_templates.json": 923,
+    "reference_report_concept_inventory": 23
+  },
+  "concept_count": 946,
+  "alias_count": 4655,
+  "base_14a_alias_count": 3625,
+  "curated_alias_count": 1030,
+  "curated_aliases_by_group": {
+    "accounting_policies_text_v2": 74,
+    "administrative_expenses_v2": 1,
+    "amortisation_spelling_v2": 19,
+    "bank_overdraft_unsecured_v2": 4,
+    "cash_and_bank_balances_v2": 37,
+    "depreciation_abbreviations_v2": 15,
+    "director_account_v2": 35,
+    "directors_report_text_v2": 6,
+    "notes_text_v2": 9,
+    "payables_plural_v2": 232,
+    "ppe_abbreviations_v2": 29,
+    "profit_loss_v2": 312,
+    "receivables_plural_v2": 240,
+    "share_capital_v2": 2,
+    "statement_by_directors_text_v2": 5,
+    "tax_expense_v2": 10
+  },
+  "base_14a_unresolved_alias_count": 2,
+  "unresolved_alias_count": 0,
+  "unresolved_aliases": [],
+  "numeric_concept_count": 656,
+  "text_block_concept_count": 148,
+  "concept_families": {
+    "accounting_policies": 56,
+    "basis_of_preparation": 2,
+    "cash_and_overdraft": 6,
+    "cash_flows": 10,
+    "changes_in_equity": 5,
+    "comprehensive_income": 168,
+    "corporate_information": 1,
+    "directors_report": 1,
+    "expenses": 1,
+    "financial_instruments": 2,
+    "financial_position": 191,
+    "notes": 73,
+    "other_comprehensive_income": 1,
+    "payables": 4,
+    "profit_loss": 4,
+    "receivables": 5,
+    "retained_earnings": 2,
+    "share_capital": 2,
+    "statement_by_directors": 19,
+    "statutory_declaration": 1,
+    "tax": 1,
+    "unknown": 391
+  },
+  "blocker_diagnosis": {
+    "non_approved_count": 45,
+    "decision_type_counts": {
+      "defer_mapping": 6,
+      "request_alias_enrichment": 24,
+      "blocked_from_xbrl": 3,
+      "require_manual_taxonomy_mapping": 12
+    },
+    "workflow_status_counts": {
+      "needs_confirmation": 6,
+      "needs_alias_or_metadata_enrichment": 24,
+      "blocked_from_xbrl": 3,
+      "needs_human_concept_choice": 12
+    },
+    "confidence_tier_counts": {
+      "low": 26,
+      "none": 3,
+      "medium": 16
+    },
+    "row_type_counts": {
+      "text_block": 27,
+      "numeric_fact": 1,
+      "comparative_numeric_fact": 14,
+      "subtotal_or_total": 3
+    },
+    "blocker_counts": {
+      "confirmation_candidate_below_medium_confidence": 2,
+      "simulate_confirm_medium_not_enabled": 6,
+      "alias_enrichment_needed": 24,
+      "generic_or_weak_label": 2,
+      "blocker:row_type_or_concept_type_mismatch": 1,
+      "concept_type_mismatch_blocks_xbrl": 1,
+      "row_type_or_concept_type_mismatch": 1,
+      "ambiguous_multiple_suggestions": 12
+    },
+    "top_labels_needing_alias_enrichment": [
+      {
+        "mapping_input_id": "13V-MAP-0004",
+        "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-dei:DisclosureOfFinancialStatementsPreparationForCurrentSubmission",
+        "top_concept_label": "DisclosureOfFinancialStatementsPreparationForCurrentSubmission"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0005",
+        "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+        "top_concept_label": "Disclosure of share capital [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0007",
+        "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0008",
+        "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfFinancialInstrumentsMeasuredAtAmortisedCostExplanatory",
+        "top_concept_label": "Disclosure of financial instrument measured at amortised cost [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0010",
+        "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0011",
+        "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0012",
+        "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0013",
+        "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0014",
+        "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0015",
+        "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNoncurrentAssetsHeldForSaleAndDiscontinuedOperationsExplanatory",
+        "top_concept_label": "Disclosure of non-current assets or disposal groups classified as held for sale [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0016",
+        "label": "Notes to the Financial Statements: (ii) any contingent liability of the Company which has arisen",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0017",
+        "label": "Notes to the Financial Statements: (d) No contingent or other liability has become enforceable or",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+        "top_concept_label": "Disclosure of contingent assets and contingent liabilities [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0018",
+        "label": "Notes to the Financial Statements: (e) At the date of this report, the Directors are",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+        "top_concept_label": "Disclosure of auditor's report to members [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0019",
+        "label": "Notes to the Financial Statements: (i) the results of the operations of the Company during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0020",
+        "label": "Notes to the Financial Statements: (ii) there has not arisen in the interval between the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0021",
+        "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0028",
+        "label": "Amount due to director",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:StateWhereAuditFirmIsLocated",
+        "top_concept_label": "State"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0039",
+        "label": "Increase in director's account",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ifrs-smes:Cash",
+        "top_concept_label": "Cash"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0045",
+        "label": "Notes to the Financial Statements: The financial statements have been prepared in compliance with the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of authorisation of financial statements [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0048",
+        "label": "Notes to the Financial Statements: (ii) to exchange financial assets or financial liabilities with another",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+        "top_concept_label": "Disclosure of contingent assets and contingent liabilities [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0049",
+        "label": "Notes to the Financial Statements: Transaction costs of an equity transaction are accounted for as",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+        "top_concept_label": "Disclosure of impairment of assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0050",
+        "label": "Notes to the Financial Statements: For the purpose of subsequent measurement, the Company classifies financial",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+        "top_concept_label": "Disclosure of impairment of assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0051",
+        "label": "Notes to the Financial Statements: For short-term other receivable, where the effect of discounting is",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherComprehensiveIncomeExplanatory",
+        "top_concept_label": "Disclosure of other comprehensive income [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0053",
+        "label": "9. Bank Overdraft -Unsecured: The bank overdraft represents the surplus of unpresented cheques over",
+        "row_type": "text_block",
+        "statement_section": "9. Bank Overdraft -Unsecured",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfCashAndCashEquivalentsExplanatory",
+        "top_concept_label": "Disclosure of cash and cash equivalents [text block]"
+      }
+    ],
+    "top_labels_needing_concept_metadata_enrichment": [
+      {
+        "mapping_input_id": "13V-MAP-0004",
+        "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-dei:DisclosureOfFinancialStatementsPreparationForCurrentSubmission",
+        "top_concept_label": "DisclosureOfFinancialStatementsPreparationForCurrentSubmission"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0005",
+        "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+        "top_concept_label": "Disclosure of share capital [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0007",
+        "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0008",
+        "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfFinancialInstrumentsMeasuredAtAmortisedCostExplanatory",
+        "top_concept_label": "Disclosure of financial instrument measured at amortised cost [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0010",
+        "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0011",
+        "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0012",
+        "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0013",
+        "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0014",
+        "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0015",
+        "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNoncurrentAssetsHeldForSaleAndDiscontinuedOperationsExplanatory",
+        "top_concept_label": "Disclosure of non-current assets or disposal groups classified as held for sale [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0006",
+        "label": "- Owners of the Company",
+        "row_type": "numeric_fact",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "generic_or_weak_label"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0023",
+        "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+        "row_type": "text_block",
+        "statement_section": "Statutory Declaration",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "blocker:row_type_or_concept_type_mismatch",
+          "concept_type_mismatch_blocks_xbrl",
+          "row_type_or_concept_type_mismatch"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0052",
+        "label": "no par value",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "generic_or_weak_label"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      }
+    ],
+    "top_ambiguous_concept_groups": [
+      {
+        "mapping_input_id": "13V-MAP-0024",
+        "label": "Other receivable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:TradeAndOtherReceivables",
+        "top_concept_label": "Trade and other receivables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0026",
+        "label": "Accumulated loss",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:IncreaseDecreaseInRetainedEarnings",
+        "top_concept_label": "Total increase (decrease) in retained earnings"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0027",
+        "label": "Other payable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:TradeAndOtherPayables",
+        "top_concept_label": "Trade and other payables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0029",
+        "label": "Bank overdraft - unsecured",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:BankOverdraftsClassifiedAsCashEquivalents",
+        "top_concept_label": "Bank overdrafts"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0031",
+        "label": "Loss before tax",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLossBeforeTax",
+        "top_concept_label": "Profit (loss) before tax, from continuing operations"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0033",
+        "label": "Loss after tax and representing total comprehensive loss for the year",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLoss",
+        "top_concept_label": "Total Profit (Loss)"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0034",
+        "label": "Loss attributable to: Owners of the Company",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ComprehensiveIncome",
+        "top_concept_label": "Comprehensive income"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0035",
+        "label": "Other comprehensive income for the year",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:OtherComprehensiveIncome",
+        "top_concept_label": "Other comprehensive income"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0036",
+        "label": "Loss before tax and working capital changes",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLossBeforeTax",
+        "top_concept_label": "Profit (loss) before tax, from continuing operations"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0037",
+        "label": "Decrease in receivable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+        "top_concept_label": "Adjustments for decrease (increase) in other operating receivables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0038",
+        "label": "Decrease in payable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:OtherCurrentPayables",
+        "top_concept_label": "Total other current payables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0046",
+        "label": "Basis of Preparation: The financial statements of the Company have been prepared using",
+        "row_type": "text_block",
+        "statement_section": "Basis of Preparation",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfBasisOfPreparationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of basis of preparation of financial statements [text block]"
+      }
+    ],
+    "top_text_block_mapping_blockers": [
+      {
+        "mapping_input_id": "13V-MAP-0003",
+        "label": "Notes to the Financial Statements: The Company is principally engaged in the business as insurance",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "low",
+        "blockers": [
+          "confirmation_candidate_below_medium_confidence",
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of authorisation of financial statements [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0004",
+        "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-dei:DisclosureOfFinancialStatementsPreparationForCurrentSubmission",
+        "top_concept_label": "DisclosureOfFinancialStatementsPreparationForCurrentSubmission"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0005",
+        "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+        "top_concept_label": "Disclosure of share capital [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0007",
+        "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0008",
+        "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfFinancialInstrumentsMeasuredAtAmortisedCostExplanatory",
+        "top_concept_label": "Disclosure of financial instrument measured at amortised cost [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0010",
+        "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0011",
+        "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0012",
+        "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0013",
+        "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0014",
+        "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0015",
+        "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNoncurrentAssetsHeldForSaleAndDiscontinuedOperationsExplanatory",
+        "top_concept_label": "Disclosure of non-current assets or disposal groups classified as held for sale [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0016",
+        "label": "Notes to the Financial Statements: (ii) any contingent liability of the Company which has arisen",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0017",
+        "label": "Notes to the Financial Statements: (d) No contingent or other liability has become enforceable or",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+        "top_concept_label": "Disclosure of contingent assets and contingent liabilities [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0018",
+        "label": "Notes to the Financial Statements: (e) At the date of this report, the Directors are",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+        "top_concept_label": "Disclosure of auditor's report to members [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0019",
+        "label": "Notes to the Financial Statements: (i) the results of the operations of the Company during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0020",
+        "label": "Notes to the Financial Statements: (ii) there has not arisen in the interval between the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0021",
+        "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0022",
+        "label": "Notes to the Financial Statements: STATEMENT BY DIRECTORS PURSUANT TO SECTION 251(2) OF THE COMPANIES",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ssmt:DisclosureOfStatementByDirectorsExplanatory",
+        "top_concept_label": "Disclosure of Statement by Directors [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0023",
+        "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+        "row_type": "text_block",
+        "statement_section": "Statutory Declaration",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "blocker:row_type_or_concept_type_mismatch",
+          "concept_type_mismatch_blocks_xbrl",
+          "row_type_or_concept_type_mismatch"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0045",
+        "label": "Notes to the Financial Statements: The financial statements have been prepared in compliance with the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of authorisation of financial statements [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0046",
+        "label": "Basis of Preparation: The financial statements of the Company have been prepared using",
+        "row_type": "text_block",
+        "statement_section": "Basis of Preparation",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfBasisOfPreparationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of basis of preparation of financial statements [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0047",
+        "label": "4.1 Contributed Share Capital: Ordinary shares issued that carry no put option and no",
+        "row_type": "text_block",
+        "statement_section": "4.1 Contributed Share Capital",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "low",
+        "blockers": [
+          "confirmation_candidate_below_medium_confidence",
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+        "top_concept_label": "Disclosure of share capital [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0048",
+        "label": "Notes to the Financial Statements: (ii) to exchange financial assets or financial liabilities with another",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+        "top_concept_label": "Disclosure of contingent assets and contingent liabilities [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0049",
+        "label": "Notes to the Financial Statements: Transaction costs of an equity transaction are accounted for as",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+        "top_concept_label": "Disclosure of impairment of assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0050",
+        "label": "Notes to the Financial Statements: For the purpose of subsequent measurement, the Company classifies financial",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+        "top_concept_label": "Disclosure of impairment of assets [text block]"
+      }
+    ],
+    "top_numeric_mapping_blockers": [
+      {
+        "mapping_input_id": "13V-MAP-0006",
+        "label": "- Owners of the Company",
+        "row_type": "numeric_fact",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "generic_or_weak_label"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0024",
+        "label": "Other receivable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:TradeAndOtherReceivables",
+        "top_concept_label": "Trade and other receivables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0026",
+        "label": "Accumulated loss",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:IncreaseDecreaseInRetainedEarnings",
+        "top_concept_label": "Total increase (decrease) in retained earnings"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0027",
+        "label": "Other payable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:TradeAndOtherPayables",
+        "top_concept_label": "Trade and other payables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0028",
+        "label": "Amount due to director",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:StateWhereAuditFirmIsLocated",
+        "top_concept_label": "State"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0029",
+        "label": "Bank overdraft - unsecured",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:BankOverdraftsClassifiedAsCashEquivalents",
+        "top_concept_label": "Bank overdrafts"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0030",
+        "label": "Administration expenses",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:AdministrativeExpense",
+        "top_concept_label": "Administrative expenses"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0031",
+        "label": "Loss before tax",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLossBeforeTax",
+        "top_concept_label": "Profit (loss) before tax, from continuing operations"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0032",
+        "label": "Tax expense",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "top_concept_label": "Tax expense"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0033",
+        "label": "Loss after tax and representing total comprehensive loss for the year",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLoss",
+        "top_concept_label": "Total Profit (Loss)"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0034",
+        "label": "Loss attributable to: Owners of the Company",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ComprehensiveIncome",
+        "top_concept_label": "Comprehensive income"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0035",
+        "label": "Other comprehensive income for the year",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:OtherComprehensiveIncome",
+        "top_concept_label": "Other comprehensive income"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0036",
+        "label": "Loss before tax and working capital changes",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLossBeforeTax",
+        "top_concept_label": "Profit (loss) before tax, from continuing operations"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0037",
+        "label": "Decrease in receivable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+        "top_concept_label": "Adjustments for decrease (increase) in other operating receivables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0038",
+        "label": "Decrease in payable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:OtherCurrentPayables",
+        "top_concept_label": "Total other current payables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0039",
+        "label": "Increase in director's account",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ifrs-smes:Cash",
+        "top_concept_label": "Cash"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0040",
+        "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:CashAndCashEquivalents",
+        "top_concept_label": "Cash and cash equivalents at end of period"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0052",
+        "label": "no par value",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "generic_or_weak_label"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      }
+    ],
+    "top_no_safe_labels": [
+      {
+        "mapping_input_id": "13V-MAP-0006",
+        "label": "- Owners of the Company",
+        "row_type": "numeric_fact",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "generic_or_weak_label"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0023",
+        "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+        "row_type": "text_block",
+        "statement_section": "Statutory Declaration",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "blocker:row_type_or_concept_type_mismatch",
+          "concept_type_mismatch_blocks_xbrl",
+          "row_type_or_concept_type_mismatch"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0052",
+        "label": "no par value",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "generic_or_weak_label"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      }
+    ],
+    "labels_improved_from_13z_to_14a_but_unapproved": [
+      {
+        "mapping_input_id": "13V-MAP-0024",
+        "label": "Other receivable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:TradeAndOtherReceivables",
+        "top_concept_label": "Trade and other receivables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0026",
+        "label": "Accumulated loss",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ssmt-mpers:IncreaseDecreaseInRetainedEarnings",
+        "top_concept_label": "Total increase (decrease) in retained earnings"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0027",
+        "label": "Other payable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:TradeAndOtherPayables",
+        "top_concept_label": "Trade and other payables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0029",
+        "label": "Bank overdraft - unsecured",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Financial Position",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:BankOverdraftsClassifiedAsCashEquivalents",
+        "top_concept_label": "Bank overdrafts"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0031",
+        "label": "Loss before tax",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLossBeforeTax",
+        "top_concept_label": "Profit (loss) before tax, from continuing operations"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0033",
+        "label": "Loss after tax and representing total comprehensive loss for the year",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLoss",
+        "top_concept_label": "Total Profit (Loss)"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0034",
+        "label": "Loss attributable to: Owners of the Company",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ComprehensiveIncome",
+        "top_concept_label": "Comprehensive income"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0035",
+        "label": "Other comprehensive income for the year",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:OtherComprehensiveIncome",
+        "top_concept_label": "Other comprehensive income"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0036",
+        "label": "Loss before tax and working capital changes",
+        "row_type": "subtotal_or_total",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:ProfitLossBeforeTax",
+        "top_concept_label": "Profit (loss) before tax, from continuing operations"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0037",
+        "label": "Decrease in receivable",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "require_manual_taxonomy_mapping",
+        "workflow_status": "needs_human_concept_choice",
+        "confidence_tier": "medium",
+        "blockers": [
+          "ambiguous_multiple_suggestions"
+        ],
+        "top_concept": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+        "top_concept_label": "Adjustments for decrease (increase) in other operating receivables"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0003",
+        "label": "Notes to the Financial Statements: The Company is principally engaged in the business as insurance",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "low",
+        "blockers": [
+          "confirmation_candidate_below_medium_confidence",
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of authorisation of financial statements [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0022",
+        "label": "Notes to the Financial Statements: STATEMENT BY DIRECTORS PURSUANT TO SECTION 251(2) OF THE COMPANIES",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ssmt:DisclosureOfStatementByDirectorsExplanatory",
+        "top_concept_label": "Disclosure of Statement by Directors [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0030",
+        "label": "Administration expenses",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:AdministrativeExpense",
+        "top_concept_label": "Administrative expenses"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0032",
+        "label": "Tax expense",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Comprehensive Income",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "top_concept_label": "Tax expense"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0040",
+        "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+        "row_type": "comparative_numeric_fact",
+        "statement_section": "Statement of Cash Flows",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "medium",
+        "blockers": [
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:CashAndCashEquivalents",
+        "top_concept_label": "Cash and cash equivalents at end of period"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0047",
+        "label": "4.1 Contributed Share Capital: Ordinary shares issued that carry no put option and no",
+        "row_type": "text_block",
+        "statement_section": "4.1 Contributed Share Capital",
+        "decision_type": "defer_mapping",
+        "workflow_status": "needs_confirmation",
+        "confidence_tier": "low",
+        "blockers": [
+          "confirmation_candidate_below_medium_confidence",
+          "simulate_confirm_medium_not_enabled"
+        ],
+        "top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+        "top_concept_label": "Disclosure of share capital [text block]"
+      }
+    ],
+    "candidate_labels_that_may_be_context_only": [
+      {
+        "mapping_input_id": "13V-MAP-0004",
+        "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-dei:DisclosureOfFinancialStatementsPreparationForCurrentSubmission",
+        "top_concept_label": "DisclosureOfFinancialStatementsPreparationForCurrentSubmission"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0005",
+        "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+        "top_concept_label": "Disclosure of share capital [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0007",
+        "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0008",
+        "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfFinancialInstrumentsMeasuredAtAmortisedCostExplanatory",
+        "top_concept_label": "Disclosure of financial instrument measured at amortised cost [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0010",
+        "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+        "top_concept_label": "Disclosure of non-adjusting events after the end of reporting period [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0011",
+        "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0012",
+        "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0013",
+        "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0014",
+        "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+        "top_concept_label": "Disclosure of other current assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0015",
+        "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfNoncurrentAssetsHeldForSaleAndDiscontinuedOperationsExplanatory",
+        "top_concept_label": "Disclosure of non-current assets or disposal groups classified as held for sale [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0016",
+        "label": "Notes to the Financial Statements: (ii) any contingent liability of the Company which has arisen",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0017",
+        "label": "Notes to the Financial Statements: (d) No contingent or other liability has become enforceable or",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+        "top_concept_label": "Disclosure of contingent assets and contingent liabilities [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0018",
+        "label": "Notes to the Financial Statements: (e) At the date of this report, the Directors are",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+        "top_concept_label": "Disclosure of auditor's report to members [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0019",
+        "label": "Notes to the Financial Statements: (i) the results of the operations of the Company during",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0020",
+        "label": "Notes to the Financial Statements: (ii) there has not arisen in the interval between the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0021",
+        "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_concept_label": "Disclosure of Director's Report [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0023",
+        "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+        "row_type": "text_block",
+        "statement_section": "Statutory Declaration",
+        "decision_type": "blocked_from_xbrl",
+        "workflow_status": "blocked_from_xbrl",
+        "confidence_tier": "none",
+        "blockers": [
+          "blocker:row_type_or_concept_type_mismatch",
+          "concept_type_mismatch_blocks_xbrl",
+          "row_type_or_concept_type_mismatch"
+        ],
+        "top_concept": null,
+        "top_concept_label": null
+      },
+      {
+        "mapping_input_id": "13V-MAP-0045",
+        "label": "Notes to the Financial Statements: The financial statements have been prepared in compliance with the",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+        "top_concept_label": "Disclosure of authorisation of financial statements [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0048",
+        "label": "Notes to the Financial Statements: (ii) to exchange financial assets or financial liabilities with another",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+        "top_concept_label": "Disclosure of contingent assets and contingent liabilities [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0049",
+        "label": "Notes to the Financial Statements: Transaction costs of an equity transaction are accounted for as",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+        "top_concept_label": "Disclosure of impairment of assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0050",
+        "label": "Notes to the Financial Statements: For the purpose of subsequent measurement, the Company classifies financial",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+        "top_concept_label": "Disclosure of impairment of assets [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0051",
+        "label": "Notes to the Financial Statements: For short-term other receivable, where the effect of discounting is",
+        "row_type": "text_block",
+        "statement_section": "Notes to the Financial Statements",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfOtherComprehensiveIncomeExplanatory",
+        "top_concept_label": "Disclosure of other comprehensive income [text block]"
+      },
+      {
+        "mapping_input_id": "13V-MAP-0053",
+        "label": "9. Bank Overdraft -Unsecured: The bank overdraft represents the surplus of unpresented cheques over",
+        "row_type": "text_block",
+        "statement_section": "9. Bank Overdraft -Unsecured",
+        "decision_type": "request_alias_enrichment",
+        "workflow_status": "needs_alias_or_metadata_enrichment",
+        "confidence_tier": "low",
+        "blockers": [
+          "alias_enrichment_needed"
+        ],
+        "top_concept": "ssmt-mpers:DisclosureOfCashAndCashEquivalentsExplanatory",
+        "top_concept_label": "Disclosure of cash and cash equivalents [text block]"
+      }
+    ]
+  },
+  "metadata_limitations": [
+    "Enrichment v2 is deterministic and attaches aliases only to existing local/reference-inventory qnames.",
+    "No fake concept qnames are created.",
+    "Reference report, when provided, is used only as offline concept inventory and not as a direct answer key.",
+    "No Azure DI, Hugging Face, OpenAI, embeddings, semantic matcher, DB, XBRL, or Arelle path is used."
+  ]
+}

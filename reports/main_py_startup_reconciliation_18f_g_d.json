@@ -1,0 +1,61 @@
+{
+  "feature_id": "18F-G-D-runtime-blocker-1",
+  "report": "main_py_startup_reconciliation",
+  "generated_at": "2026-07-25T23:08:00+08:00",
+  "confirmed_defect": {
+    "classification": "A_main_py_self_import_duplicate_module_startup_issue",
+    "before": "python main.py executed main.py as __main__, then uvicorn.run(\"main:app\") imported the same file as main.",
+    "evidence": {
+      "imported_main_file": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\main.py",
+      "same_module": false,
+      "same_app": false,
+      "namespace_app_matches_imported": false
+    },
+    "risks": [
+      "Distinct FastAPI app instances",
+      "Repeated module-level initialization",
+      "Confusing runtime identity and diagnostics",
+      "Potentially different import resolution if cwd or sys.path differs"
+    ],
+    "direct_cause_of_stale_live_endpoint": false,
+    "reason_not_direct_cause": "The exact 127.0.0.1:8001 smoke endpoint was owned by an older separate uvicorn process."
+  },
+  "reconciliation": {
+    "selected_design": "Keep python main.py and pass the already-created FastAPI app object to uvicorn.",
+    "before": {
+      "target": "main:app",
+      "reload": "settings.debug"
+    },
+    "after": {
+      "target": "app object",
+      "reload": false
+    },
+    "workers": "not configured",
+    "app_factory": false,
+    "business_logic_changed": false
+  },
+  "runtime_marker": {
+    "name": "APP_RUNTIME_REVISION",
+    "value": "18F-G-D-hotfix-1+",
+    "health_exposed": true,
+    "startup_log_includes": [
+      "pid",
+      "cwd",
+      "python_executable",
+      "main_module_path",
+      "filings_module_path",
+      "actionability_module_path",
+      "orchestrator_module_path"
+    ],
+    "sensitive_data_exposed": false
+  },
+  "tests": {
+    "module": "tests.test_runtime_startup_provenance",
+    "tests_run": 5,
+    "result": "passed",
+    "full_backend_tests_run": 1254,
+    "full_backend_result": "passed"
+  },
+  "canonical_start_command": ".\\.venv\\Scripts\\python.exe main.py",
+  "post_restart_requirement": "The externally restarted process must expose runtime_revision=18F-G-D-hotfix-1+ and the canonical orchestration OpenAPI fields before the live smoke resumes."
+}

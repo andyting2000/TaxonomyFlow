@@ -1,0 +1,41 @@
+{
+  "run_metadata": {
+    "feature": "17D-B-hotfix-5",
+    "generated_at": "2026-06-17T13:10:52Z",
+    "source_review_feature": "17D-B",
+    "source_review_mode": "live",
+    "external_llm_called_by_this_script": false,
+    "auditor_xml_sent_externally": false,
+    "parsed_xml_facts_sent_externally": false,
+    "target_gold_answers_sent_externally": false,
+    "evaluation_labels_sent_externally": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "confirmed_tag_id_automated": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "production_integration_ready": false,
+    "production_integration_recommendation": "defer_17d_c_until_calibrated_guardrails_are_reviewed_and_optionally_live_retested",
+    "source_reports": {
+      "review": "reports/supervisor_live_review_17d_b.json",
+      "predictions": "reports/golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "concept_playbook": "reports/fs_mpers_concept_playbook_17d_pre.json"
+    }
+  },
+  "metrics": {
+    "broad_substitute_total": 0,
+    "before_classification_counts": {},
+    "calibrated_classification_counts": {},
+    "true_broad_substitute_risk": 0,
+    "over_triggered_broad_substitute": 0,
+    "acceptable_total_or_subtotal_line": 0,
+    "same_family_total_label": 0,
+    "exact_total_concept_match": 0,
+    "cannot_determine": 0
+  },
+  "before_after_classification": [],
+  "over_triggered_broad_substitute_examples": [],
+  "true_broad_substitute_risk_examples": [],
+  "acceptable_total_or_subtotal_examples": [],
+  "recommendation": "Use calibrated broad_substitute categories in the next live limited rerun; do not remove the issue type."
+}

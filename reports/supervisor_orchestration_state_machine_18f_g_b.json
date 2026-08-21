@@ -1,0 +1,68 @@
+{
+  "feature_id": "18F-G-B",
+  "generated_at": "2026-07-23T17:40:13.8298379+08:00",
+  "state_groups": {
+    "mapping": [
+      "mapping_suggested",
+      "mapping_no_safe_candidate",
+      "mapping_failed"
+    ],
+    "supervisor_eligibility": [
+      "supervisor_not_evaluated",
+      "supervisor_not_eligible",
+      "supervisor_eligible",
+      "supervisor_blocked"
+    ],
+    "supervisor_execution": [
+      "supervisor_pending",
+      "supervisor_running",
+      "supervisor_completed",
+      "supervisor_failed",
+      "supervisor_skipped"
+    ],
+    "remapping_eligibility": [
+      "remapping_not_evaluated",
+      "remapping_not_eligible",
+      "remapping_available",
+      "remapping_retry_exhausted",
+      "remapping_blocked"
+    ],
+    "remapping_execution": [
+      "remapping_not_started",
+      "remapping_running",
+      "revision_created",
+      "revision_no_safe_mapping",
+      "remapping_failed"
+    ],
+    "human_workflow": [
+      "human_review_pending",
+      "human_accepted",
+      "human_rejected"
+    ]
+  },
+  "manual_transition_path": [
+    "mapping_suggested -> supervisor_eligible",
+    "supervisor_eligible -> supervisor_pending after explicit request",
+    "supervisor_pending -> supervisor_running",
+    "supervisor_running -> supervisor_completed or supervisor_failed",
+    "supervisor_completed -> remapping_available or remapping_not_eligible",
+    "remapping_available -> remapping_running after explicit request",
+    "remapping_running -> revision_created, revision_no_safe_mapping, or remapping_failed",
+    "revision state -> human_review_pending",
+    "human_review_pending -> human_accepted or human_rejected after explicit human action"
+  ],
+  "hard_invalid_transitions": [
+    "supervisor_completed -> remapping_running without remapping_available and explicit action",
+    "revision_created -> human_accepted without explicit human action",
+    "human_review_pending -> confirmed_tag_id",
+    "remapping_retry_exhausted -> remapping_running",
+    "supervisor_blocked -> supervisor_running",
+    "human_accepted or human_rejected -> remapping_running"
+  ],
+  "failure_states": {
+    "supervisor_failed": "Initial suggestion remains available; remapping is blocked.",
+    "remapping_failed": "Initial suggestion and completed review remain; no completed revised mapping is treated as valid.",
+    "optional_orchestration_failure": "Filing remains REVIEW and unrelated suggestions remain usable."
+  },
+  "implementation": "services/supervisor_orchestration_policy.py"
+}

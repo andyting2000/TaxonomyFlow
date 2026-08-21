@@ -1,0 +1,874 @@
+{
+  "feature_id": "19B-blocker-1",
+  "generated_on": "2026-07-31",
+  "status": "PASS",
+  "canonical_source_of_truth": "taxonomy/template_group_registry_mpers_2022_v1.json",
+  "registry_id": "template_group_registry_mpers_2022_v1",
+  "semantic_inventory_version": "mpers-2022-v1",
+  "source_taxonomy_version": "SSMxT_2022v1.0",
+  "registry_file_sha256": "4fe4dd11f5e33ca1b70233b3927ad971d709c0773e863c4b53ff2789c612ea28",
+  "semantic_inventory_sha256": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+  "report_id": "template_group_inventory_reconciliation_19b_blocker_1",
+  "decision": {
+    "pass": true,
+    "feature_19b_may_resume": true,
+    "feature_19b_status": "pending",
+    "recommended_next_feature": "19B-resume - Resume section and note-subsection classification using the canonical 24-template registry"
+  },
+  "inventory": {
+    "expected_count": 24,
+    "actual_count": 24,
+    "complete_24_code_audit": true,
+    "discrepancy_counts": {
+      "ambiguous_semantics": 2,
+      "exact_match": 4,
+      "materially_incorrect_name": 2,
+      "structural_container_conflict": 1,
+      "user_friendly_alias": 10,
+      "wording_difference_only": 5
+    },
+    "non_exact_comparison_count": 20,
+    "semantic_or_structural_correction_count": 5,
+    "runtime_display_labels_changed": [
+      "120000",
+      "130000",
+      "210000",
+      "210100",
+      "220000",
+      "220100",
+      "310000",
+      "310100",
+      "320000",
+      "320100",
+      "410000",
+      "710000",
+      "720000",
+      "730000",
+      "740000",
+      "750000"
+    ]
+  },
+  "authority_order": [
+    {
+      "rank": 1,
+      "authority": "bundled_official_taxonomy_role",
+      "scope": "role URI, role ID, and official semantic definition"
+    },
+    {
+      "rank": 2,
+      "authority": "bundled_presentation_role_structure",
+      "scope": "presentation role, hierarchy, and concept semantics"
+    },
+    {
+      "rank": 3,
+      "authority": "canonical_repository_registry",
+      "scope": "versioned repository metadata derived from the bundled taxonomy"
+    },
+    {
+      "rank": 4,
+      "authority": "user_display_label",
+      "scope": "product wording that must not override official semantics"
+    },
+    {
+      "rank": 5,
+      "authority": "aliases",
+      "scope": "legacy lookup compatibility only"
+    }
+  ],
+  "durable_identity_fields": [
+    "code",
+    "role_uri"
+  ],
+  "resolution_730000": {
+    "final_semantics": "Notes - List of notes",
+    "template_kind": "note_list",
+    "structural_role": "leaf_template",
+    "presentation_root": "ssmt-mpers:DisclosureOfNotesAndOtherExplanatoryInformationAbstract",
+    "concept_count": 83,
+    "notes_parent_is_separate": true,
+    "legacy_name_is_non_classifying_alias": true,
+    "rule": "730000 is the official generic note-disclosure list role. The code-less notes_container is the Review Workspace parent."
+  },
+  "resolution_740000": {
+    "final_semantics": "Notes - Issued capital",
+    "user_display_name": "Issued Capital Note",
+    "legacy_wrong_name": "Notes - Information on Companies",
+    "code_and_role_uri_unchanged": true
+  },
+  "resolution_750000": {
+    "final_semantics": "Notes - Related party transactions",
+    "user_display_name": "Related Party Transactions",
+    "legacy_wrong_name": "Notes - Reports",
+    "code_and_role_uri_unchanged": true
+  },
+  "other_reconciled_codes": [
+    {
+      "code": "120000",
+      "classification": "wording_difference_only",
+      "canonical_name": "Disclosure - Directors report",
+      "user_display_name": "Directors' Report"
+    },
+    {
+      "code": "120100",
+      "classification": "wording_difference_only",
+      "canonical_name": "Disclosure - Statement by directors",
+      "user_display_name": "Statement by Directors"
+    },
+    {
+      "code": "120200",
+      "classification": "wording_difference_only",
+      "canonical_name": "Disclosure - Director business review",
+      "user_display_name": "Director Business Review"
+    },
+    {
+      "code": "130000",
+      "classification": "wording_difference_only",
+      "canonical_name": "Disclosure - Auditors report to members",
+      "user_display_name": "Auditors' Report to Members"
+    },
+    {
+      "code": "210000",
+      "classification": "ambiguous_semantics",
+      "canonical_name": "Statement of financial position, by current/non-current method",
+      "user_display_name": "Statement of Financial Position (Current/Non-Current Method)"
+    },
+    {
+      "code": "210100",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Sub-classification of assets, liabilities and equity, by current/non-current method",
+      "user_display_name": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current Method)"
+    },
+    {
+      "code": "220000",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Statement of financial position, by order of liquidity method",
+      "user_display_name": "Statement of Financial Position (Order of Liquidity Method)"
+    },
+    {
+      "code": "220100",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Sub-classification of assets, liabilities and equity, by order of liquidity method",
+      "user_display_name": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity Method)"
+    },
+    {
+      "code": "310000",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Statement of profit or loss, by function of expense",
+      "user_display_name": "Statement of Profit or Loss (Function of Expense)"
+    },
+    {
+      "code": "310100",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Analysis of profit or loss, by function of expense",
+      "user_display_name": "Analysis of Profit or Loss (Function of Expense)"
+    },
+    {
+      "code": "320000",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Statement of profit or loss, by nature of expense",
+      "user_display_name": "Statement of Profit or Loss (Nature of Expense)"
+    },
+    {
+      "code": "320100",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Analysis of profit or loss, by nature of expense",
+      "user_display_name": "Analysis of Profit or Loss (Nature of Expense)"
+    },
+    {
+      "code": "410000",
+      "classification": "ambiguous_semantics",
+      "canonical_name": "Statement of Comprehensive Income - Net of tax",
+      "user_display_name": "Statement of Comprehensive Income (Net of Tax)"
+    },
+    {
+      "code": "420000",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Statement of Comprehensive Income - Before tax",
+      "user_display_name": "Statement of Comprehensive Income (Before Tax)"
+    },
+    {
+      "code": "510000",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Statement of cash flows, direct method",
+      "user_display_name": "Statement of Cash Flows (Direct Method)"
+    },
+    {
+      "code": "520000",
+      "classification": "user_friendly_alias",
+      "canonical_name": "Statement of cash flows, indirect method",
+      "user_display_name": "Statement of Cash Flows (Indirect Method)"
+    },
+    {
+      "code": "720000",
+      "classification": "wording_difference_only",
+      "canonical_name": "Notes - Summary of significant accounting policies",
+      "user_display_name": "Summary of Significant Accounting Policies"
+    }
+  ],
+  "runtime_loader": {
+    "service": "services/xbrl_template_service.py",
+    "registry_validation_fails_closed": true,
+    "exact_membership_and_concepts_remain_in": "mpers_templates.json",
+    "official_semantics_exposed_separately": true,
+    "user_display_labels_exposed_separately": true,
+    "legacy_names_exposed_as_aliases": true
+  },
+  "structural_navigation_nodes": [
+    {
+      "id": "notes_container",
+      "display_name": "Notes to Financial Statements",
+      "node_kind": "structural_navigation_container",
+      "taxonomy_template_group": false,
+      "template_code": null,
+      "role_uri": null,
+      "classification_outcome": "container_only",
+      "children_may_reference_template_groups": true,
+      "provenance": "Repository Review Workspace navigation requirement; deliberately separate from the official 24-role taxonomy inventory."
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "checks": [
+      {
+        "check": "code_set_equality",
+        "passed": true,
+        "runtime_count": 24,
+        "registry_count": 24,
+        "missing_from_registry": [],
+        "extra_in_registry": []
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "020000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "020000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "020000",
+        "passed": true,
+        "concept_count": 35
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "020000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-020000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "120000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "120000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "120000",
+        "passed": true,
+        "concept_count": 22
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "120000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-120000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "120100",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "120100",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "120100",
+        "passed": true,
+        "concept_count": 27
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "120100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-120100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "120200",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "120200",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "120200",
+        "passed": true,
+        "concept_count": 8
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "120200",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-120200.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "130000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "130000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "130000",
+        "passed": true,
+        "concept_count": 15
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "130000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-130000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "210000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "210000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "210000",
+        "passed": true,
+        "concept_count": 50
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "210000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-210000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "210000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "210100",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "210100",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "210100",
+        "passed": true,
+        "concept_count": 229
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "210100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-210100.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "210100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200200.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "220000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "220000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "220000",
+        "passed": true,
+        "concept_count": 37
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "220000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-220000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "220000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "220100",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "220100",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "220100",
+        "passed": true,
+        "concept_count": 161
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "220100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-220100.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "220100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200200.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "310000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "310000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "310000",
+        "passed": true,
+        "concept_count": 25
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "310000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-310000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "310000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "310100",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "310100",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "310100",
+        "passed": true,
+        "concept_count": 122
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "310100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-310100.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "310100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300200.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "320000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "320000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "320000",
+        "passed": true,
+        "concept_count": 24
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "320000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-320000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "320000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "320100",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "320100",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "320100",
+        "passed": true,
+        "concept_count": 116
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "320100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-320100.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "320100",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300200.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "410000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "410000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "410000",
+        "passed": true,
+        "concept_count": 19
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "410000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-410000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "410000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-400100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "420000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "420000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "420000",
+        "passed": true,
+        "concept_count": 22
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "420000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-420000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "420000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-400100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "510000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "510000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "510000",
+        "passed": true,
+        "concept_count": 58
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "510000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-510000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "510000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-500100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "520000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "520000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "520000",
+        "passed": true,
+        "concept_count": 84
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "520000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-520000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "520000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-500100.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "610000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "610000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "610000",
+        "passed": true,
+        "concept_count": 35
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "610000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-610000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "610000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-610000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "620000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "620000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "620000",
+        "passed": true,
+        "concept_count": 11
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "620000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-620000.xml",
+        "passed": true
+      },
+      {
+        "check": "calculation_linkbase_references",
+        "code": "620000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-620000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "710000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "710000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "710000",
+        "passed": true,
+        "concept_count": 4
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "710000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-710000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "720000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "720000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "720000",
+        "passed": true,
+        "concept_count": 51
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "720000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-720000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "730000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "730000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "730000",
+        "passed": true,
+        "concept_count": 83
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "730000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-730000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "740000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "740000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "740000",
+        "passed": true,
+        "concept_count": 31
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "740000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-740000.xml",
+        "passed": true
+      },
+      {
+        "check": "runtime_role_uri",
+        "code": "750000",
+        "passed": true
+      },
+      {
+        "check": "official_role_definition",
+        "code": "750000",
+        "passed": true
+      },
+      {
+        "check": "concept_membership",
+        "code": "750000",
+        "passed": true,
+        "concept_count": 44
+      },
+      {
+        "check": "presentation_linkbase_references",
+        "code": "750000",
+        "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-750000.xml",
+        "passed": true
+      },
+      {
+        "check": "taxonomy_version_consistency",
+        "passed": true,
+        "registry_version": "SSMxT_2022v1.0",
+        "runtime_extracted_from": "SSMxT_2022v1.zip"
+      }
+    ],
+    "registry_id": "template_group_registry_mpers_2022_v1",
+    "semantic_inventory_version": "mpers-2022-v1",
+    "source_taxonomy_version": "SSMxT_2022v1.0",
+    "template_count": 24,
+    "semantic_inventory_sha256": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4"
+  },
+  "test_evidence": [
+    "Focused canonical registry tests passed: 25 tests in 0.119s.",
+    "Targeted template service, mapping, Review Workspace API, ownership, document structure, taxonomy metadata, and XBRL validation regressions passed: 110 tests in 13.277s.",
+    "Frontend authenticated helper and Review Workspace source regressions passed: 30 tests.",
+    "Frontend production build passed: 1,586 modules transformed.",
+    "Full backend discovery passed: 1,342 tests in 44.413s.",
+    "Changed Python files passed py_compile."
+  ]
+}

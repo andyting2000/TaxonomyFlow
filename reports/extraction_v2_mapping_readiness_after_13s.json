@@ -1,0 +1,1424 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-12T16:00:18.632678+00:00",
+    "feature": "13S",
+    "script": "scripts/resolve_extraction_v2_duplicates.py",
+    "report_type": "mapping_readiness_after_13s",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_model": false,
+    "benchmark_rerun": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_mapping_readiness_after_13s.json"
+  },
+  "readiness_comparison": {
+    "before": {
+      "high": 337,
+      "low": 146,
+      "medium": 318,
+      "not_ready": 139
+    },
+    "after": {
+      "high": 337,
+      "low": 99,
+      "medium": 318,
+      "not_ready": 183
+    },
+    "delta": {
+      "high": 0,
+      "low": -47,
+      "medium": 0,
+      "not_ready": 44
+    }
+  },
+  "issue_comparison": {
+    "duplicate_label_conflicting_values": {
+      "before": 141,
+      "after": 141,
+      "delta": 0
+    },
+    "duplicate_label_value_same_case": {
+      "before": 64,
+      "after": 58,
+      "delta": -6
+    },
+    "heading_like_numeric_fact": {
+      "before": 120,
+      "after": 119,
+      "delta": -1
+    },
+    "date_only_label": {
+      "before": 44,
+      "after": 44,
+      "delta": 0
+    },
+    "year_header_row_extracted_as_fact": {
+      "before": 47,
+      "after": 0,
+      "delta": -47
+    },
+    "comparative_value_under_numeric_type": {
+      "before": 263,
+      "after": 0,
+      "delta": -263
+    }
+  },
+  "overall_mapping_readiness_classification": "needs_manual_duplicate_review",
+  "per_case": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "original_candidate_count": 122,
+      "cleaned_candidate_count": 119,
+      "suppressed_candidates": 3,
+      "downgraded_candidates": 1,
+      "converted_comparative_candidates": 0,
+      "conflict_review_candidates": 0,
+      "manual_review_candidates": 0,
+      "before_readiness_counts": {
+        "high": 2,
+        "medium": 37,
+        "low": 1,
+        "not_ready": 82
+      },
+      "after_readiness_counts": {
+        "high": 2,
+        "medium": 37,
+        "low": 0,
+        "not_ready": 80
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_label_cleanup"
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "original_candidate_count": 115,
+      "cleaned_candidate_count": 115,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 52,
+      "conflict_review_candidates": 6,
+      "manual_review_candidates": 1,
+      "before_readiness_counts": {
+        "high": 64,
+        "medium": 43,
+        "low": 6,
+        "not_ready": 2
+      },
+      "after_readiness_counts": {
+        "high": 64,
+        "medium": 43,
+        "low": 6,
+        "not_ready": 2
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_manual_duplicate_review"
+    },
+    {
+      "case_id": "003-fine-batik",
+      "original_candidate_count": 189,
+      "cleaned_candidate_count": 189,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 68,
+      "conflict_review_candidates": 28,
+      "manual_review_candidates": 3,
+      "before_readiness_counts": {
+        "high": 85,
+        "medium": 69,
+        "low": 32,
+        "not_ready": 3
+      },
+      "after_readiness_counts": {
+        "high": 85,
+        "medium": 69,
+        "low": 32,
+        "not_ready": 3
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_manual_duplicate_review"
+    },
+    {
+      "case_id": "004-info-house",
+      "original_candidate_count": 150,
+      "cleaned_candidate_count": 150,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 4,
+      "converted_comparative_candidates": 36,
+      "conflict_review_candidates": 25,
+      "manual_review_candidates": 2,
+      "before_readiness_counts": {
+        "high": 46,
+        "medium": 58,
+        "low": 29,
+        "not_ready": 17
+      },
+      "after_readiness_counts": {
+        "high": 46,
+        "medium": 58,
+        "low": 25,
+        "not_ready": 21
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_manual_duplicate_review"
+    },
+    {
+      "case_id": "005-jconnector",
+      "original_candidate_count": 134,
+      "cleaned_candidate_count": 134,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 15,
+      "converted_comparative_candidates": 35,
+      "conflict_review_candidates": 3,
+      "manual_review_candidates": 3,
+      "before_readiness_counts": {
+        "high": 49,
+        "medium": 52,
+        "low": 18,
+        "not_ready": 15
+      },
+      "after_readiness_counts": {
+        "high": 49,
+        "medium": 52,
+        "low": 3,
+        "not_ready": 30
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_manual_duplicate_review"
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "original_candidate_count": 146,
+      "cleaned_candidate_count": 146,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 27,
+      "converted_comparative_candidates": 37,
+      "conflict_review_candidates": 15,
+      "manual_review_candidates": 3,
+      "before_readiness_counts": {
+        "high": 68,
+        "medium": 31,
+        "low": 41,
+        "not_ready": 6
+      },
+      "after_readiness_counts": {
+        "high": 68,
+        "medium": 31,
+        "low": 14,
+        "not_ready": 33
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_manual_duplicate_review"
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "original_candidate_count": 84,
+      "cleaned_candidate_count": 84,
+      "suppressed_candidates": 0,
+      "downgraded_candidates": 0,
+      "converted_comparative_candidates": 10,
+      "conflict_review_candidates": 18,
+      "manual_review_candidates": 0,
+      "before_readiness_counts": {
+        "high": 23,
+        "medium": 28,
+        "low": 19,
+        "not_ready": 14
+      },
+      "after_readiness_counts": {
+        "high": 23,
+        "medium": 28,
+        "low": 19,
+        "not_ready": 14
+      },
+      "ready_for_mapping_prototype_after_13s": "needs_manual_duplicate_review"
+    }
+  ],
+  "after_13s_readiness_report": {
+    "run_metadata": {
+      "generated_at": "2026-05-12T16:00:18.631678+00:00",
+      "feature": "13R",
+      "read_only": true,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "ui_upload_required": false,
+      "xbrl_generated": false,
+      "arelle_validation_run": false,
+      "live_huggingface_calls_made": false,
+      "live_openai_calls_made": false,
+      "reference_xml_sent_to_model": false,
+      "benchmark_rerun": false,
+      "report_type": "mapping_readiness",
+      "script": "scripts/analyze_extraction_v2_candidate_quality.py"
+    },
+    "input_reports": {
+      "v2_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\extraction_v2_cleaned_candidates_13s.json",
+      "comparison_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\v2_reference_comparison_20260512T145407Z.json",
+      "reference_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\reference_xbrl_report_20260511T082343Z.json"
+    },
+    "readiness_assessment": {
+      "overall_status": "promising_but_not_production_ready",
+      "assessment": "#13Q benchmark succeeded and Extraction v2 plus Hugging Face Qwen now produces useful numeric and text-block candidates. Candidate normalization, duplicate control, section confidence, and mapping readiness gates are needed before production cutover.",
+      "production_ready": false,
+      "mapping_pipeline_ready": false,
+      "xbrl_generation_validated": false,
+      "arelle_validation_passed": false
+    },
+    "aggregate_readiness_counts": {
+      "high": 337,
+      "low": 99,
+      "medium": 318,
+      "not_ready": 183
+    },
+    "per_case_readiness": [
+      {
+        "case_id": "001-bizaid-synthetic",
+        "total_candidates": 119,
+        "numeric_candidates": 39,
+        "text_block_candidates": 0,
+        "huggingface_candidates": 0,
+        "native_only_candidates": 119,
+        "openai_candidates": 0,
+        "reference_facts": 552,
+        "reference_numeric_facts": 487,
+        "reference_text_blocks": 37,
+        "candidate_quality_score": 11.8,
+        "mapping_readiness_score": 11.8,
+        "high_readiness_count": 2,
+        "medium_readiness_count": 37,
+        "low_readiness_count": 0,
+        "not_ready_count": 80,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 37
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 9
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 5
+          },
+          {
+            "issue": "generic_period_label",
+            "count": 4
+          },
+          {
+            "issue": "missing_statement_section",
+            "count": 1
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 37
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 9
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 5
+          },
+          {
+            "issue": "generic_period_label",
+            "count": 4
+          },
+          {
+            "issue": "missing_statement_section",
+            "count": 1
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "this year",
+            "count": 4
+          },
+          {
+            "label": "furniture fittings",
+            "count": 1
+          },
+          {
+            "label": "accum deprn furniture fittings",
+            "count": 1
+          },
+          {
+            "label": "good will",
+            "count": 1
+          },
+          {
+            "label": "accum amortization good will",
+            "count": 1
+          },
+          {
+            "label": "computer hardware",
+            "count": 1
+          },
+          {
+            "label": "accum deprn computer hardware",
+            "count": 1
+          },
+          {
+            "label": "office equipment",
+            "count": 1
+          },
+          {
+            "label": "accum deprn office equipment",
+            "count": 1
+          },
+          {
+            "label": "computer software",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_numeric_cleanup_first"
+      },
+      {
+        "case_id": "002-bezlife-marketing",
+        "total_candidates": 115,
+        "numeric_candidates": 89,
+        "text_block_candidates": 24,
+        "huggingface_candidates": 115,
+        "native_only_candidates": 0,
+        "openai_candidates": 0,
+        "reference_facts": 413,
+        "reference_numeric_facts": 339,
+        "reference_text_blocks": 43,
+        "candidate_quality_score": 81.0,
+        "mapping_readiness_score": 81.0,
+        "high_readiness_count": 64,
+        "medium_readiness_count": 43,
+        "low_readiness_count": 6,
+        "not_ready_count": 2,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "amount_format_normalization",
+            "count": 63
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 42
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 15
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 12
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 10
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 8
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 6
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 4
+          },
+          {
+            "issue": "too_short_label",
+            "count": 4
+          },
+          {
+            "issue": "enumeration_only_label",
+            "count": 4
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "dash_or_zero_value",
+            "count": 42
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 15
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 12
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 10
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 8
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 6
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 4
+          },
+          {
+            "issue": "too_short_label",
+            "count": 4
+          },
+          {
+            "issue": "enumeration_only_label",
+            "count": 4
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 4
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "c",
+            "count": 1
+          },
+          {
+            "label": "d",
+            "count": 1
+          },
+          {
+            "label": "e",
+            "count": 1
+          },
+          {
+            "label": "f",
+            "count": 1
+          },
+          {
+            "label": "turnover",
+            "count": 1
+          },
+          {
+            "label": "less taxation",
+            "count": 1
+          },
+          {
+            "label": "accruals",
+            "count": 1
+          },
+          {
+            "label": "sales",
+            "count": 1
+          },
+          {
+            "label": "purchases",
+            "count": 1
+          },
+          {
+            "label": "gross profit",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_text_block_cleanup_first"
+      },
+      {
+        "case_id": "003-fine-batik",
+        "total_candidates": 189,
+        "numeric_candidates": 158,
+        "text_block_candidates": 28,
+        "huggingface_candidates": 189,
+        "native_only_candidates": 0,
+        "openai_candidates": 0,
+        "reference_facts": 427,
+        "reference_numeric_facts": 352,
+        "reference_text_blocks": 44,
+        "candidate_quality_score": 72.7,
+        "mapping_readiness_score": 72.7,
+        "high_readiness_count": 85,
+        "medium_readiness_count": 69,
+        "low_readiness_count": 32,
+        "not_ready_count": 3,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "amount_format_normalization",
+            "count": 119
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 30
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 29
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 28
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 26
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 19
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 16
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 12
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 9
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 7
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "parentheses_negative_value",
+            "count": 30
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 29
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 28
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 26
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 19
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 16
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 12
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 9
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 7
+          },
+          {
+            "issue": "non_numeric_value",
+            "count": 6
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "renovation",
+            "count": 2
+          },
+          {
+            "label": "ooi boon beng bought",
+            "count": 1
+          },
+          {
+            "label": "ooi boon beng sold",
+            "count": 1
+          },
+          {
+            "label": "turnover",
+            "count": 1
+          },
+          {
+            "label": "less taxation",
+            "count": 1
+          },
+          {
+            "label": "signboard",
+            "count": 1
+          },
+          {
+            "label": "costs computer software",
+            "count": 1
+          },
+          {
+            "label": "costs shop equipment",
+            "count": 1
+          },
+          {
+            "label": "costs renovation",
+            "count": 1
+          },
+          {
+            "label": "costs signboard",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_numeric_cleanup_first"
+      },
+      {
+        "case_id": "004-info-house",
+        "total_candidates": 150,
+        "numeric_candidates": 95,
+        "text_block_candidates": 34,
+        "huggingface_candidates": 150,
+        "native_only_candidates": 0,
+        "openai_candidates": 0,
+        "reference_facts": 414,
+        "reference_numeric_facts": 338,
+        "reference_text_blocks": 45,
+        "candidate_quality_score": 57.9,
+        "mapping_readiness_score": 57.9,
+        "high_readiness_count": 46,
+        "medium_readiness_count": 58,
+        "low_readiness_count": 25,
+        "not_ready_count": 21,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "amount_format_normalization",
+            "count": 57
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 29
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 19
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 16
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 14
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 12
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 12
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 11
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 10
+          },
+          {
+            "issue": "too_short_label",
+            "count": 6
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 29
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 19
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 16
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 14
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 12
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 12
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 11
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 10
+          },
+          {
+            "issue": "too_short_label",
+            "count": 6
+          },
+          {
+            "issue": "enumeration_only_label",
+            "count": 6
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "(blank)",
+            "count": 3
+          },
+          {
+            "label": "as at 31 12 23",
+            "count": 2
+          },
+          {
+            "label": "as at 31 12 24",
+            "count": 2
+          },
+          {
+            "label": "deposits",
+            "count": 2
+          },
+          {
+            "label": "ooi boon beng",
+            "count": 1
+          },
+          {
+            "label": "a",
+            "count": 1
+          },
+          {
+            "label": "b",
+            "count": 1
+          },
+          {
+            "label": "c",
+            "count": 1
+          },
+          {
+            "label": "d",
+            "count": 1
+          },
+          {
+            "label": "e",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_manual_review_policy"
+      },
+      {
+        "case_id": "005-jconnector",
+        "total_candidates": 134,
+        "numeric_candidates": 75,
+        "text_block_candidates": 29,
+        "huggingface_candidates": 134,
+        "native_only_candidates": 0,
+        "openai_candidates": 0,
+        "reference_facts": 400,
+        "reference_numeric_facts": 323,
+        "reference_text_blocks": 46,
+        "candidate_quality_score": 59.0,
+        "mapping_readiness_score": 59.0,
+        "high_readiness_count": 49,
+        "medium_readiness_count": 52,
+        "low_readiness_count": 3,
+        "not_ready_count": 30,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "amount_format_normalization",
+            "count": 40
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 19
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 18
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 18
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 17
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 16
+          },
+          {
+            "issue": "date_only_label",
+            "count": 15
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 11
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 9
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 7
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "dash_or_zero_value",
+            "count": 19
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 18
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 18
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 17
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 16
+          },
+          {
+            "issue": "date_only_label",
+            "count": 15
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 11
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 9
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 7
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 5
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "as at 31 12 2023",
+            "count": 6
+          },
+          {
+            "label": "as at 31 12 2024",
+            "count": 6
+          },
+          {
+            "label": "as at 31 12 2022",
+            "count": 3
+          },
+          {
+            "label": "ooi boon beng bought",
+            "count": 1
+          },
+          {
+            "label": "ooi boon beng sold",
+            "count": 1
+          },
+          {
+            "label": "c",
+            "count": 1
+          },
+          {
+            "label": "d",
+            "count": 1
+          },
+          {
+            "label": "e",
+            "count": 1
+          },
+          {
+            "label": "f",
+            "count": 1
+          },
+          {
+            "label": "taxation",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_candidate_cleanup_first"
+      },
+      {
+        "case_id": "006-Rahsia-Herbal",
+        "total_candidates": 146,
+        "numeric_candidates": 99,
+        "text_block_candidates": 14,
+        "huggingface_candidates": 146,
+        "native_only_candidates": 0,
+        "openai_candidates": 0,
+        "reference_facts": 421,
+        "reference_numeric_facts": 345,
+        "reference_text_blocks": 46,
+        "candidate_quality_score": 59.4,
+        "mapping_readiness_score": 59.4,
+        "high_readiness_count": 68,
+        "medium_readiness_count": 31,
+        "low_readiness_count": 14,
+        "not_ready_count": 33,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "amount_format_normalization",
+            "count": 75
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 42
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 28
+          },
+          {
+            "issue": "date_only_label",
+            "count": 25
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 15
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 13
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 10
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 10
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 7
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 6
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 42
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 28
+          },
+          {
+            "issue": "date_only_label",
+            "count": 25
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 15
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 13
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 10
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 10
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 7
+          },
+          {
+            "issue": "duplicate_label_value_same_case",
+            "count": 6
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 5
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "as at 31 12 2023",
+            "count": 15
+          },
+          {
+            "label": "as at 31 12 2024",
+            "count": 10
+          },
+          {
+            "label": "prior year",
+            "count": 2
+          },
+          {
+            "label": "c",
+            "count": 1
+          },
+          {
+            "label": "d",
+            "count": 1
+          },
+          {
+            "label": "e",
+            "count": 1
+          },
+          {
+            "label": "f",
+            "count": 1
+          },
+          {
+            "label": "accumulated losses",
+            "count": 1
+          },
+          {
+            "label": "turnover",
+            "count": 1
+          },
+          {
+            "label": "depreciation",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_manual_review_policy"
+      },
+      {
+        "case_id": "007-Shield-Plus",
+        "total_candidates": 84,
+        "numeric_candidates": 53,
+        "text_block_candidates": 17,
+        "huggingface_candidates": 84,
+        "native_only_candidates": 0,
+        "openai_candidates": 0,
+        "reference_facts": 474,
+        "reference_numeric_facts": 406,
+        "reference_text_blocks": 43,
+        "candidate_quality_score": 52.2,
+        "mapping_readiness_score": 52.2,
+        "high_readiness_count": 23,
+        "medium_readiness_count": 28,
+        "low_readiness_count": 19,
+        "not_ready_count": 14,
+        "top_candidate_quality_issues": [
+          {
+            "issue": "amount_format_normalization",
+            "count": 35
+          },
+          {
+            "issue": "parentheses_negative_value",
+            "count": 26
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 18
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 12
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 11
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 8
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 7
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 6
+          },
+          {
+            "issue": "empty_label",
+            "count": 4
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 3
+          }
+        ],
+        "top_mapping_blockers": [
+          {
+            "issue": "parentheses_negative_value",
+            "count": 26
+          },
+          {
+            "issue": "duplicate_label_conflicting_values",
+            "count": 18
+          },
+          {
+            "issue": "suspicious_negative_value",
+            "count": 12
+          },
+          {
+            "issue": "heading_like_numeric_fact",
+            "count": 11
+          },
+          {
+            "issue": "weak_text_block_label",
+            "count": 8
+          },
+          {
+            "issue": "identical_current_previous_values",
+            "count": 7
+          },
+          {
+            "issue": "dash_or_zero_value",
+            "count": 6
+          },
+          {
+            "issue": "empty_label",
+            "count": 4
+          },
+          {
+            "issue": "generic_statement_section",
+            "count": 3
+          },
+          {
+            "issue": "non_numeric_value",
+            "count": 1
+          }
+        ],
+        "top_labels_needing_cleanup": [
+          {
+            "label": "(blank)",
+            "count": 4
+          },
+          {
+            "label": "revenue",
+            "count": 2
+          },
+          {
+            "label": "capital deficiency",
+            "count": 1
+          },
+          {
+            "label": "capital deficiency and liabilities",
+            "count": 1
+          },
+          {
+            "label": "at 1 january 2023",
+            "count": 1
+          },
+          {
+            "label": "at 31 december 2023",
+            "count": 1
+          },
+          {
+            "label": "at 31 december 2024",
+            "count": 1
+          },
+          {
+            "label": "net decrease increase in cash and cash equivalents",
+            "count": 1
+          },
+          {
+            "label": "cash and cash equivalents at beginning of year",
+            "count": 1
+          },
+          {
+            "label": "deposit",
+            "count": 1
+          }
+        ],
+        "ready_for_mapping_prototype": "needs_numeric_cleanup_first"
+      }
+    ],
+    "mapping_readiness_gates": [
+      {
+        "gate": "Candidate validity gate",
+        "checks": [
+          "numeric candidates must have numeric values",
+          "text blocks must have sufficient text",
+          "labels must not be empty",
+          "pure year/date rows must not be treated as facts"
+        ]
+      },
+      {
+        "gate": "Duplicate conflict gate",
+        "checks": [
+          "duplicate label/value rows need evidence for detail rows",
+          "duplicate labels with conflicting values require review or aggregation policy"
+        ]
+      },
+      {
+        "gate": "Section confidence gate",
+        "checks": [
+          "candidate should have a reasonable statement_section",
+          "missing or generic section lowers readiness"
+        ]
+      },
+      {
+        "gate": "Year/context gate",
+        "checks": [
+          "current/prior values should be assigned consistently",
+          "year headers must not become facts"
+        ]
+      },
+      {
+        "gate": "Sign gate",
+        "checks": [
+          "negative values should preserve original evidence",
+          "sign normalization must not happen silently"
+        ]
+      },
+      {
+        "gate": "Text-block gate",
+        "checks": [
+          "text blocks should not be over-split into single-line fragments",
+          "text blocks should not be merged across unrelated sections"
+        ]
+      },
+      {
+        "gate": "Mapping confidence gate",
+        "checks": [
+          "no automatic mapping for weak labels or generic headings",
+          "manual review is required for low-confidence mapping"
+        ]
+      }
+    ],
+    "blocker_list": [
+      {
+        "issue": "amount_format_normalization",
+        "count": 389
+      },
+      {
+        "issue": "duplicate_label_conflicting_values",
+        "count": 141
+      },
+      {
+        "issue": "parentheses_negative_value",
+        "count": 128
+      },
+      {
+        "issue": "dash_or_zero_value",
+        "count": 122
+      },
+      {
+        "issue": "heading_like_numeric_fact",
+        "count": 119
+      },
+      {
+        "issue": "weak_text_block_label",
+        "count": 65
+      },
+      {
+        "issue": "identical_current_previous_values",
+        "count": 62
+      },
+      {
+        "issue": "suspicious_negative_value",
+        "count": 60
+      },
+      {
+        "issue": "duplicate_label_value_same_case",
+        "count": 58
+      },
+      {
+        "issue": "generic_statement_section",
+        "count": 44
+      },
+      {
+        "issue": "date_only_label",
+        "count": 44
+      },
+      {
+        "issue": "too_short_label",
+        "count": 18
+      },
+      {
+        "issue": "enumeration_only_label",
+        "count": 18
+      },
+      {
+        "issue": "short_text_block",
+        "count": 9
+      },
+      {
+        "issue": "non_numeric_value",
+        "count": 7
+      },
+      {
+        "issue": "empty_label",
+        "count": 7
+      },
+      {
+        "issue": "generic_period_label",
+        "count": 6
+      },
+      {
+        "issue": "numeric_under_narrative_section",
+        "count": 6
+      },
+      {
+        "issue": "text_under_numeric_section",
+        "count": 6
+      },
+      {
+        "issue": "missing_statement_section",
+        "count": 1
+      }
+    ],
+    "candidate_cleanup_recommendations": {
+      "safe_deterministic_cleanup_candidates": [
+        "Remove or reclassify pure date labels extracted as numeric facts.",
+        "Reclassify pure year/date rows as metadata or heading, not facts.",
+        "Normalize whitespace, punctuation, currency symbols, commas, dashes, and parentheses negatives.",
+        "Suppress empty candidates and keep empty candidate pages as processed benchmark evidence."
+      ],
+      "needs_conservative_heuristics": [
+        "Infer current/prior years only from nearby table headers with explicit evidence.",
+        "Apply subtotal versus total classification with section-aware heuristics.",
+        "Handle duplicate label conflicts with an explicit review or aggregation policy.",
+        "Use nearby headings for section inheritance when statement_section is missing.",
+        "Tune text-block grouping so narrative disclosures are not split line by line or merged across sections."
+      ],
+      "needs_mapping_stage_design": [
+        "Match labels to taxonomy concepts only after candidate validity gates pass.",
+        "Separate detail rows from summary concepts before mapping.",
+        "Define sign policy and concept-specific guardrails before value normalization changes.",
+        "Keep dimensions and aggregation decisions in the mapping stage, not extraction cleanup."
+      ],
+      "needs_manual_review": [
+        "Review duplicate labels with conflicting values.",
+        "Review weak labels attached to numeric values.",
+        "Review ambiguous labels that could map to multiple taxonomy concepts.",
+        "Review suspicious negative values and possible current/prior reversal cases."
+      ]
+    },
+    "recommended_next_feature": "Feature #13S - Extraction v2 duplicate and conflict control before mapping.",
+    "limitations": [
+      "Readiness scores are heuristic and conservative.",
+      "This report does not perform taxonomy mapping.",
+      "This report does not generate XBRL or run Arelle validation.",
+      "Hugging Face candidates are not guaranteed correct without review."
+    ]
+  },
+  "recommended_next_feature": "Feature #13T - Manual-review policy and conflict surfacing for mapping candidates.",
+  "limitations": [
+    "Post-13S readiness is based on cleaned benchmark candidates only.",
+    "Conflicting values remain visible and unresolved by design.",
+    "No taxonomy mapping, XBRL generation, Arelle validation, DB mutation, live model call, or production cutover is performed."
+  ]
+}

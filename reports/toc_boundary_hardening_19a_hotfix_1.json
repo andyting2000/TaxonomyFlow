@@ -1,0 +1,71 @@
+{
+  "report_id": "toc_boundary_hardening_19a_hotfix_1",
+  "feature_id": "19A-hotfix-1",
+  "generated_on": "2026-08-07",
+  "status": "PASS",
+  "live_job_65_smoke_status": "NOT_RERUN",
+  "original_defect": {
+    "source": "previously processed Job 65 artifact and supplied defect evidence",
+    "observed_toc_entries": "approximately 50",
+    "false_positive_classes": [
+      "corporate body content after the INDEX",
+      "address and company-information lines",
+      "body headings from later pages",
+      "lines without a credible trailing printed-page reference"
+    ],
+    "impact": "False entries created false section boundaries and contributed to approximately 81% unassigned evidence."
+  },
+  "root_cause": [
+    "TOC detection admitted independently strong pages outside the single physical INDEX block.",
+    "Entry extraction retained weak/unparsed lines and lacked a reusable title-quality gate.",
+    "Block termination did not stop reliably after consecutive non-entry content."
+  ],
+  "changes": {
+    "block_selection": "Select the strongest explicit INDEX/CONTENTS seed and expand only through credible adjacent continuation pages.",
+    "block_end": "Stop entry collection after two consecutive non-entry lines while retaining raw document evidence outside the TOC entry list.",
+    "entry_requirements": [
+      "credible non-fragment title",
+      "valid trailing Arabic or Roman printed-page reference",
+      "valid range start",
+      "no address, company number, contact/account, date, section-marker, numeric-only, or stop-word-only title"
+    ],
+    "diagnostics": [
+      "toc_block_start_page",
+      "toc_block_end_page",
+      "termination_reason",
+      "toc_candidates_outside_bounded_block"
+    ]
+  },
+  "job_65_style_fixture_result": {
+    "fixture": "tests/fixtures/toc_aware/fixture_k_real_pdf_job65_regression.json",
+    "toc_pages": [1],
+    "toc_entry_count": 9,
+    "suspicious_toc_entry_count": 0,
+    "false_body_entries_retained": 0,
+    "expected_entries_retained": 9
+  },
+  "regression_coverage": [
+    "tests.test_toc_block_boundary",
+    "tests.test_toc_entry_quality",
+    "tests.test_document_section_grouping_real_pdf_regression",
+    "tests.test_real_pdf_smoke_report"
+  ],
+  "verification": {
+    "focused_19a_tests_passed": 65,
+    "downstream_19b_19c_tests_passed": 61,
+    "affected_extraction_task_ownership_api_tests_passed": 118,
+    "full_backend_tests_passed": 1420,
+    "application_import_routes": 89,
+    "canonical_registry_templates": 24,
+    "canonical_registry_errors": 0,
+    "failures": 0
+  },
+  "safety": {
+    "provider_calls": 0,
+    "database_mutations": 0,
+    "mapping_mutations": 0,
+    "frontend_changes": 0,
+    "xbrl_or_arelle_runs": 0
+  },
+  "decision": "The deterministic TOC boundary and entry-quality hotfix passes fixture and backend regression verification. Reprocess the real Job 65 PDF before claiming a live-document pass."
+}

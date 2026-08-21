@@ -1,0 +1,1577 @@
+{
+  "run_metadata": {
+    "feature": "17D-B-hotfix-5",
+    "generated_at": "2026-06-17T13:10:52Z",
+    "source_review_feature": "17D-B",
+    "source_review_mode": "live",
+    "external_llm_called_by_this_script": false,
+    "auditor_xml_sent_externally": false,
+    "parsed_xml_facts_sent_externally": false,
+    "target_gold_answers_sent_externally": false,
+    "evaluation_labels_sent_externally": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "confirmed_tag_id_automated": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "production_integration_ready": false,
+    "production_integration_recommendation": "defer_17d_c_until_calibrated_guardrails_are_reviewed_and_optionally_live_retested",
+    "source_reports": {
+      "review": "reports/supervisor_live_review_17d_b.json",
+      "predictions": "reports/golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "concept_playbook": "reports/fs_mpers_concept_playbook_17d_pre.json"
+    }
+  },
+  "metrics": {
+    "total_reviewed": 29,
+    "mapper_omission_count": 10,
+    "mapper_outcome_counts": {
+      "mapper_rejected_but_gold_exists": 10,
+      "mapper_selected_correct_concept": 19
+    },
+    "supervisor_agreed_with_omission_count": 0,
+    "supervisor_caught_omission_count": 10,
+    "numeric_fact_like_omission_count": 10,
+    "omissions_with_plausible_candidates_count": 8
+  },
+  "mapper_omission_examples": [
+    {
+      "row": {
+        "label": "TOTAL ASSETS DISCUSSION)",
+        "value": "849320",
+        "previous_value": "881489",
+        "statement_type": "Statement of Financial Position",
+        "row_type": "subtotal_or_total",
+        "page_number": 13,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:20:20"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'TOTAL ASSETS DISCUSSION)' appears to be a section header or textual annotation rather than a financial data item. It does not semantically match any of the candidate concepts with sufficient specificity or accuracy. The presence of 'DISCUSSION' suggests it is not a quantitative financial fact but possibly a narrative section. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The row has a numeric value and matches a known fact label pattern, but contains 'DISCUSSION)' which suggests it might not be a fact.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The label 'TOTAL ASSETS DISCUSSION)' appears to be a section header or narrative rather than a financial fact, but numeric value and statement type suggest it could be a fact."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "non_fact_row_cannot_be_safe_accept",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:Assets",
+        "correct_concept_qname": "ifrs-smes:Assets",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 0,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "current_decision_acceptable_for_evaluation"
+    },
+    {
+      "row": {
+        "label": "Total liabilities D Por current Fral to",
+        "value": "1799698",
+        "previous_value": null,
+        "statement_type": "Statement of Financial Position",
+        "row_type": "subtotal_or_total",
+        "page_number": 13,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:30:30"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Total liabilities D Por current Fral to' appears corrupted or malformed and does not clearly match any specific liability concept. Although 'Current tax liabilities' and 'Current liabilities' are present in candidates, the label does not semantically align with sufficient clarity to justify a mapping. The few-shot examples show mappings for clean, interpretable labels and do not support mapping ambiguous or corrupted text. Per guardrails, prefer null when label meaning is unclear or does not exactly fit."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "high",
+        "reason": "The label is ambiguous and corrupted, but plausible liability concepts exist in candidates.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The label is corrupted or malformed and does not clearly match any specific concept, but numeric fact context remains plausible."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "high",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "high",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:Liabilities",
+        "correct_concept_qname": "ifrs-smes:Liabilities",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 4,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Depreciation",
+        "value": "21449",
+        "previous_value": "21712",
+        "statement_type": "Statement of Comprehensive Income",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 14,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:35:35"
+      },
+      "mapper_selection": {
+        "status": "rejected_precheck",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": null,
+        "reason": "rejected_generic_label"
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "Mapper rejected a plausible numeric fact without strong evidence or candidates.",
+        "issues": [
+          {
+            "type": "no_supporting_evidence",
+            "description": "Mapper rejected a plausible numeric fact without strong evidence or candidates."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+        "correct_concept_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 0,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "current_decision_acceptable_for_evaluation"
+    },
+    {
+      "row": {
+        "label": "Decrease / (Increase) in trade and other receivables",
+        "value": "9314",
+        "previous_value": "-1243",
+        "statement_type": "Statement of Cash Flows",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 16,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:48:48"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Decrease / (Increase) in trade and other receivables' relates to changes in receivables, which aligns with an indirect cash flow adjustment. Although a few-shot example shows a correct mapping to 'ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable', this concept is absent from the candidate_concepts list. The available candidates are either asset line items (e.g., current receivables) or broader summary concepts, not movement/contra concepts required for cash flow adjustments. Mapping to a balance sheet concept like 'TradeAndOtherReceivables' would be semantically incorrect as it represents a balance, not a change. Despite high lexical similarity, no candidate represents the correct XBRL concept for the change in receivables within the Statement of Cash Flows. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "disagree",
+        "risk_level": "medium",
+        "reason": "The mapper rejected the mapping because the exact concept was not in the candidate list, but a matching concept card exists.",
+        "issues": [
+          {
+            "type": "candidate_not_supported",
+            "description": "The mapper rejected the mapping, but a plausible concept exists in the retrieved concept cards that matches the row label and statement type."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "disagree",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "disagree",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+        "correct_concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 7,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Other receivables",
+        "value": "11850",
+        "previous_value": "7339",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 21,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:65:65"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Other receivables' lacks specificity to map confidently to any candidate concept. Although several candidates contain similar phrasing, none exactly match the semantic scope of the target label without overgeneralization. The guardrail_context warns against broad substitutions, particularly for summary concepts like ssmt-mpers:OtherCurrentReceivables or ssmt-mpers:OtherReceivables, and the absence of 'trade' or 'current' in the label weakens alignment with ifrs-smes concepts. The few-shot examples show mappings to more specific nontrade receivables, but that concept is absent in candidates. Thus, no safe mapping exists."
+      },
+      "supervisor_review": {
+        "review_decision": "disagree",
+        "risk_level": "medium",
+        "reason": "The mapper rejected the mapping due to lack of a safe and specific match among the candidates.",
+        "issues": [
+          {
+            "type": "weak_label_match",
+            "description": "Mapper rejected the mapping due to lack of specificity and absence of exact match among candidates."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "disagree",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "disagree",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+        "correct_concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 8,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Other payables",
+        "value": "140156",
+        "previous_value": "129266",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 21,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:72:72"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Other payables' lacks specificity to map confidently to any candidate concept. Although several candidates contain similar phrasing, all carry broader or more specific contextual meanings (e.g., trade-related, current/non-current, or due-to-related classifications) that are not fully supported by the target label. The guardrail warnings highlight substitution risks, particularly with summary or context-specific concepts. The few-shot examples show mappings for similar labels but involve concepts not present in the candidate list (e.g., ssmt-mpers:OtherCurrentNontradePayables), and per rules, a substitute should not be selected by analogy. Given the absence of an exact semantic fit and the risks of overgeneralization, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "high",
+        "reason": "The mapper rejected the mapping due to",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The row label 'Other payables' is ambiguous and lacks specificity, making it difficult to confidently map to a candidate concept without additional context."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "high",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "high",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:OtherNoncurrentNontradePayables",
+        "correct_concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 8,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Depreciation of property, plant and equipment",
+        "value": "21449",
+        "previous_value": "21712",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 22,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:76:76"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.3,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Depreciation of property, plant and equipment' refers to depreciation expense, but none of the candidate concepts explicitly represent depreciation. The closest candidates relate to property, plant and equipment balances, acquisitions, disposals, or impairment, but not depreciation expense. The statement type is 'Notes to the Financial Statements', which may include detailed breakdowns, but no candidate concept matches the semantic meaning of depreciation. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The mapper rejected the row, and while there's a plausible concept (ifrs-smes:DepreciationPropertyPlantAndEquipment) in the retrieved concept cards that matches the label and statement type, its quality is weak and lacks strong evidence.",
+        "issues": [
+          {
+            "type": "no_supporting_evidence",
+            "description": "Mapper omission risk: plausible numeric fact context with no safe mapping returned."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "correct_concept_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 7,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "TOTAL OPERATING EXPENSES FOLAViceRal",
+        "value": "194450",
+        "previous_value": "178517",
+        "statement_type": "Statement of Comprehensive Income",
+        "row_type": "subtotal_or_total",
+        "page_number": 24,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:115:115"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.3,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'TOTAL OPERATING EXPENSES FOLAViceRal' appears to be a corrupted or malformed version of 'TOTAL OPERATING EXPENSES', possibly with OCR or data extraction error ('FOLAViceRal' is likely noise). While 'Total other expenses' from the candidate concepts shares a general expense family, it does not semantically match 'Operating Expenses' which typically include cost of sales and other core operational costs. The few-shot examples map 'TOTAL OPERATING EXPENSES' to 'ifrs-smes:OtherExpenseByFunction', but those cases had higher label similarity and clean labels. Given the label corruption and lack of strong semantic alignment with 'OtherExpense', confidence is low. No candidate concept is a safe fit."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The label is noisy but the top candidate ifrs-smes:OtherExpenseByFunction is supported by concept-card evidence and few-shot examples.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The label 'TOTAL OPERATING EXPENSES FOLAViceRal' is noisy and the mapper rejected the top suggestion ifrs-smes:OtherExpenseByFunction."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+        "correct_concept_qname": "ifrs-smes:OtherExpenseByFunction",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 2,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Other payable",
+        "value": "1300",
+        "previous_value": "2244",
+        "statement_type": "Statement of Financial Position",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 7,
+        "source_case_id": "case_006",
+        "extracted_row_id": "case_006:candidate:16:16"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Other payable' lacks sufficient specificity to match any candidate concept with confidence. Although several candidates contain 'Other Payables' in their labels, they are either broader summary concepts (e.g., total other current payables) or include additional qualifiers (e.g., related parties, non-current) not present in the extracted label. The guardrail warnings highlight broad-substitution risks for all candidates, and no candidate provides an exact semantic fit. The statement type is Statement of Financial Position, but none of the candidates align precisely with a standalone 'Other payable' item without overgeneralizing. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "high",
+        "reason": "The mapper rejected the mapping due to lack of specificity in the label and no exact match among candidates.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The extracted label lacks specificity and the candidates are either broader or include additional qualifiers."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "high",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "high",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:CurrentNontradePayables",
+        "correct_concept_qname": "ssmt-mpers:CurrentNontradePayables",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 5,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Accruals",
+        "value": "1300",
+        "previous_value": "1600",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 15,
+        "source_case_id": "case_006",
+        "extracted_row_id": "case_006:candidate:43:43"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.5,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Accruals' matches multiple candidate concepts with the same label but different classifications (current, noncurrent, other). The statement type is 'Notes to the Financial Statements', which does not clearly align with any specific liquidity-based classification in the candidate concepts. Without additional context to distinguish whether the accruals are current, noncurrent, or other, and given the guardrail to avoid forcing a selection when concepts are close but not an exact semantic fit, the safest choice is to return null."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The mapper correctly rejected the candidates due to ambiguity in the classification context. The label 'Accruals' is associated with multiple candidate concepts with different classifications.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The mapper rejected the candidates due to ambiguity in classification context (current, noncurrent, other). The candidates are plausible but lack specific context to distinguish between them."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+        "correct_concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 3,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    }
+  ],
+  "supervisor_agreed_with_omission_examples": [],
+  "supervisor_caught_omission_examples": [
+    {
+      "row": {
+        "label": "TOTAL ASSETS DISCUSSION)",
+        "value": "849320",
+        "previous_value": "881489",
+        "statement_type": "Statement of Financial Position",
+        "row_type": "subtotal_or_total",
+        "page_number": 13,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:20:20"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'TOTAL ASSETS DISCUSSION)' appears to be a section header or textual annotation rather than a financial data item. It does not semantically match any of the candidate concepts with sufficient specificity or accuracy. The presence of 'DISCUSSION' suggests it is not a quantitative financial fact but possibly a narrative section. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The row has a numeric value and matches a known fact label pattern, but contains 'DISCUSSION)' which suggests it might not be a fact.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The label 'TOTAL ASSETS DISCUSSION)' appears to be a section header or narrative rather than a financial fact, but numeric value and statement type suggest it could be a fact."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "non_fact_row_cannot_be_safe_accept",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:Assets",
+        "correct_concept_qname": "ifrs-smes:Assets",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 0,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "current_decision_acceptable_for_evaluation"
+    },
+    {
+      "row": {
+        "label": "Total liabilities D Por current Fral to",
+        "value": "1799698",
+        "previous_value": null,
+        "statement_type": "Statement of Financial Position",
+        "row_type": "subtotal_or_total",
+        "page_number": 13,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:30:30"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Total liabilities D Por current Fral to' appears corrupted or malformed and does not clearly match any specific liability concept. Although 'Current tax liabilities' and 'Current liabilities' are present in candidates, the label does not semantically align with sufficient clarity to justify a mapping. The few-shot examples show mappings for clean, interpretable labels and do not support mapping ambiguous or corrupted text. Per guardrails, prefer null when label meaning is unclear or does not exactly fit."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "high",
+        "reason": "The label is ambiguous and corrupted, but plausible liability concepts exist in candidates.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The label is corrupted or malformed and does not clearly match any specific concept, but numeric fact context remains plausible."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "high",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "high",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:Liabilities",
+        "correct_concept_qname": "ifrs-smes:Liabilities",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 4,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Depreciation",
+        "value": "21449",
+        "previous_value": "21712",
+        "statement_type": "Statement of Comprehensive Income",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 14,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:35:35"
+      },
+      "mapper_selection": {
+        "status": "rejected_precheck",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": null,
+        "reason": "rejected_generic_label"
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "Mapper rejected a plausible numeric fact without strong evidence or candidates.",
+        "issues": [
+          {
+            "type": "no_supporting_evidence",
+            "description": "Mapper rejected a plausible numeric fact without strong evidence or candidates."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+        "correct_concept_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 0,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "current_decision_acceptable_for_evaluation"
+    },
+    {
+      "row": {
+        "label": "Decrease / (Increase) in trade and other receivables",
+        "value": "9314",
+        "previous_value": "-1243",
+        "statement_type": "Statement of Cash Flows",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 16,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:48:48"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Decrease / (Increase) in trade and other receivables' relates to changes in receivables, which aligns with an indirect cash flow adjustment. Although a few-shot example shows a correct mapping to 'ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable', this concept is absent from the candidate_concepts list. The available candidates are either asset line items (e.g., current receivables) or broader summary concepts, not movement/contra concepts required for cash flow adjustments. Mapping to a balance sheet concept like 'TradeAndOtherReceivables' would be semantically incorrect as it represents a balance, not a change. Despite high lexical similarity, no candidate represents the correct XBRL concept for the change in receivables within the Statement of Cash Flows. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "disagree",
+        "risk_level": "medium",
+        "reason": "The mapper rejected the mapping because the exact concept was not in the candidate list, but a matching concept card exists.",
+        "issues": [
+          {
+            "type": "candidate_not_supported",
+            "description": "The mapper rejected the mapping, but a plausible concept exists in the retrieved concept cards that matches the row label and statement type."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "disagree",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "disagree",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+        "correct_concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 7,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Other receivables",
+        "value": "11850",
+        "previous_value": "7339",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 21,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:65:65"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Other receivables' lacks specificity to map confidently to any candidate concept. Although several candidates contain similar phrasing, none exactly match the semantic scope of the target label without overgeneralization. The guardrail_context warns against broad substitutions, particularly for summary concepts like ssmt-mpers:OtherCurrentReceivables or ssmt-mpers:OtherReceivables, and the absence of 'trade' or 'current' in the label weakens alignment with ifrs-smes concepts. The few-shot examples show mappings to more specific nontrade receivables, but that concept is absent in candidates. Thus, no safe mapping exists."
+      },
+      "supervisor_review": {
+        "review_decision": "disagree",
+        "risk_level": "medium",
+        "reason": "The mapper rejected the mapping due to lack of a safe and specific match among the candidates.",
+        "issues": [
+          {
+            "type": "weak_label_match",
+            "description": "Mapper rejected the mapping due to lack of specificity and absence of exact match among candidates."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "disagree",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "disagree",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+        "correct_concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 8,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Other payables",
+        "value": "140156",
+        "previous_value": "129266",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 21,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:72:72"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Other payables' lacks specificity to map confidently to any candidate concept. Although several candidates contain similar phrasing, all carry broader or more specific contextual meanings (e.g., trade-related, current/non-current, or due-to-related classifications) that are not fully supported by the target label. The guardrail warnings highlight substitution risks, particularly with summary or context-specific concepts. The few-shot examples show mappings for similar labels but involve concepts not present in the candidate list (e.g., ssmt-mpers:OtherCurrentNontradePayables), and per rules, a substitute should not be selected by analogy. Given the absence of an exact semantic fit and the risks of overgeneralization, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "high",
+        "reason": "The mapper rejected the mapping due to",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The row label 'Other payables' is ambiguous and lacks specificity, making it difficult to confidently map to a candidate concept without additional context."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "high",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "high",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:OtherNoncurrentNontradePayables",
+        "correct_concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 8,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Depreciation of property, plant and equipment",
+        "value": "21449",
+        "previous_value": "21712",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 22,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:76:76"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.3,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Depreciation of property, plant and equipment' refers to depreciation expense, but none of the candidate concepts explicitly represent depreciation. The closest candidates relate to property, plant and equipment balances, acquisitions, disposals, or impairment, but not depreciation expense. The statement type is 'Notes to the Financial Statements', which may include detailed breakdowns, but no candidate concept matches the semantic meaning of depreciation. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The mapper rejected the row, and while there's a plausible concept (ifrs-smes:DepreciationPropertyPlantAndEquipment) in the retrieved concept cards that matches the label and statement type, its quality is weak and lacks strong evidence.",
+        "issues": [
+          {
+            "type": "no_supporting_evidence",
+            "description": "Mapper omission risk: plausible numeric fact context with no safe mapping returned."
+          }
+        ],
+        "recommended_action": "request_better_candidate",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "request_better_candidate",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "correct_concept_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 7,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "TOTAL OPERATING EXPENSES FOLAViceRal",
+        "value": "194450",
+        "previous_value": "178517",
+        "statement_type": "Statement of Comprehensive Income",
+        "row_type": "subtotal_or_total",
+        "page_number": 24,
+        "source_case_id": "case_005",
+        "extracted_row_id": "case_005:candidate:115:115"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.3,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'TOTAL OPERATING EXPENSES FOLAViceRal' appears to be a corrupted or malformed version of 'TOTAL OPERATING EXPENSES', possibly with OCR or data extraction error ('FOLAViceRal' is likely noise). While 'Total other expenses' from the candidate concepts shares a general expense family, it does not semantically match 'Operating Expenses' which typically include cost of sales and other core operational costs. The few-shot examples map 'TOTAL OPERATING EXPENSES' to 'ifrs-smes:OtherExpenseByFunction', but those cases had higher label similarity and clean labels. Given the label corruption and lack of strong semantic alignment with 'OtherExpense', confidence is low. No candidate concept is a safe fit."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The label is noisy but the top candidate ifrs-smes:OtherExpenseByFunction is supported by concept-card evidence and few-shot examples.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The label 'TOTAL OPERATING EXPENSES FOLAViceRal' is noisy and the mapper rejected the top suggestion ifrs-smes:OtherExpenseByFunction."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+        "correct_concept_qname": "ifrs-smes:OtherExpenseByFunction",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 2,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Other payable",
+        "value": "1300",
+        "previous_value": "2244",
+        "statement_type": "Statement of Financial Position",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 7,
+        "source_case_id": "case_006",
+        "extracted_row_id": "case_006:candidate:16:16"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.0,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Other payable' lacks sufficient specificity to match any candidate concept with confidence. Although several candidates contain 'Other Payables' in their labels, they are either broader summary concepts (e.g., total other current payables) or include additional qualifiers (e.g., related parties, non-current) not present in the extracted label. The guardrail warnings highlight broad-substitution risks for all candidates, and no candidate provides an exact semantic fit. The statement type is Statement of Financial Position, but none of the candidates align precisely with a standalone 'Other payable' item without overgeneralizing. Therefore, no safe mapping can be made."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "high",
+        "reason": "The mapper rejected the mapping due to lack of specificity in the label and no exact match among candidates.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The extracted label lacks specificity and the candidates are either broader or include additional qualifiers."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "decrease",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "high",
+          "original_recommended_action": "request_better_candidate",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "high",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:CurrentNontradePayables",
+        "correct_concept_qname": "ssmt-mpers:CurrentNontradePayables",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 5,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    },
+    {
+      "row": {
+        "label": "Accruals",
+        "value": "1300",
+        "previous_value": "1600",
+        "statement_type": "Notes to the Financial Statements",
+        "row_type": "comparative_numeric_fact",
+        "page_number": 15,
+        "source_case_id": "case_006",
+        "extracted_row_id": "case_006:candidate:43:43"
+      },
+      "mapper_selection": {
+        "status": "rejected",
+        "selected_template_field_id": null,
+        "selected_concept_qname": null,
+        "confidence": 0.5,
+        "confidence_tier": "low",
+        "reason": "The extracted label 'Accruals' matches multiple candidate concepts with the same label but different classifications (current, noncurrent, other). The statement type is 'Notes to the Financial Statements', which does not clearly align with any specific liquidity-based classification in the candidate concepts. Without additional context to distinguish whether the accruals are current, noncurrent, or other, and given the guardrail to avoid forcing a selection when concepts are close but not an exact semantic fit, the safest choice is to return null."
+      },
+      "supervisor_review": {
+        "review_decision": "needs_human_review",
+        "risk_level": "medium",
+        "reason": "The mapper correctly rejected the candidates due to ambiguity in the classification context. The label 'Accruals' is associated with multiple candidate concepts with different classifications.",
+        "issues": [
+          {
+            "type": "ambiguous_label",
+            "description": "The mapper rejected the candidates due to ambiguity in classification context (current, noncurrent, other). The candidates are plausible but lack specific context to distinguish between them."
+          }
+        ],
+        "recommended_action": "keep_for_human_review",
+        "confidence_adjustment": "keep",
+        "safe_to_accept": false,
+        "normalization_diagnostics": {
+          "changed": true,
+          "original_review_decision": "needs_human_review",
+          "original_risk_level": "medium",
+          "original_recommended_action": "keep_for_human_review",
+          "original_safe_to_accept": false,
+          "normalized_review_decision": "needs_human_review",
+          "normalized_risk_level": "medium",
+          "normalized_recommended_action": "keep_for_human_review",
+          "normalized_safe_to_accept": false,
+          "normalization_reasons": [
+            "non_agree_cannot_be_safe_accept",
+            "medium_or_high_risk_cannot_be_safe_accept",
+            "recommended_action_not_accept_cannot_be_safe_accept",
+            "ambiguous_label_requires_human_review",
+            "issue_type_requires_human_review",
+            "mapper_confidence_below_safe_threshold"
+          ]
+        }
+      },
+      "local_scoring": {
+        "correct_template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+        "correct_concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+        "mapper_selected_template_field_id": null,
+        "mapper_selected_concept_qname": null,
+        "mapper_has_prediction": false,
+        "mapper_correct": false,
+        "mapper_wrong": false,
+        "supervisor_agreed": false,
+        "supervisor_safe_to_accept": false,
+        "false_agree": false,
+        "false_safe_accept": false,
+        "false_disagree": false,
+        "wrong_mapper_mapping_caught": false,
+        "wrong_mapper_mapping_missed": false,
+        "correct_mapping_unnecessarily_blocked": false
+      },
+      "mapper_outcome": "mapper_rejected_but_gold_exists",
+      "is_mapper_omission": true,
+      "numeric_fact_like": true,
+      "plausible_candidate_count": 3,
+      "supervisor_agreed_with_omission": false,
+      "supervisor_caught_omission": true,
+      "recommended_supervisor_decision": "needs_human_review_or_request_better_candidate"
+    }
+  ],
+  "recommendation": "Prompt future live Supervisor runs to treat rejected/no-predicted numeric fact-like rows with plausible candidates as human-review/request-better-candidate cases."
+}

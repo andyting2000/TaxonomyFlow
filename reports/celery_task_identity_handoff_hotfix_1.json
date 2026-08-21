@@ -1,0 +1,106 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-blocker-1-hotfix-1",
+  "generated_at": "2026-07-23",
+  "status": "implemented_automated_verification_complete_manual_retest_pending",
+  "observed_failure": {
+    "job_id": 54,
+    "celery_received_task_id": "1eb01232-6766-4085-9e73-499b36db976b",
+    "persistent_loop_observed_task_id": null,
+    "exception": "ValueError: task_id must not be empty. Got None instead.",
+    "azure_di_submit_started": false,
+    "filing_status_after_failure": "PROCESSING",
+    "celery_outcome_before_fix": "SUCCESS with an error dictionary"
+  },
+  "root_cause": {
+    "classification": "confirmed_issue",
+    "description": "Celery Task.request is thread/context-local. process_pdf_task passed the bound Task object into the dedicated persistent asyncio loop thread, where Task.request.id was unavailable. task.update_state then delegated a null task ID to the Celery backend and aborted before Azure DI.",
+    "introduced_by": "The worker-scoped persistent event-loop handoff exposed the pre-existing assumption that a bound Celery Task request proxy could be used from another thread.",
+    "persistent_loop_reverted": false
+  },
+  "design_before": {
+    "task_thread": "Called process_pdf_job_async(self, job_id).",
+    "loop_thread": "Read task.request.id and called task.update_state from the foreign thread.",
+    "fatal_result": "Returned success=false dictionary, allowing Celery to record SUCCESS.",
+    "job_cleanup": "No wrapper cleanup existed for exceptions before Azure DI's own failure handler."
+  },
+  "design_after": {
+    "task_identity_handoff": "process_pdf_task reads and validates self.request.id synchronously before handoff, then passes the immutable string as celery_task_id.",
+    "async_contract": "process_pdf_job_async, _run_azure_di_pdf_processing, and _run_legacy_pdf_processing receive celery_task_id and never access Task.request or Task.update_state.",
+    "progress_strategy": "update_celery_task_state calls Celery result_backend.store_result with the explicit task ID. Any backend exception is logged and returns false; extraction continues. Azure DI's existing Redis and FilingJob progress paths remain authoritative for application status.",
+    "fatal_cleanup": "mark_pdf_job_failed runs on the persistent owner loop, uses celery_db_manager, changes only PROCESSING jobs to ERROR, stores a stable bracketed error code plus safe message, and writes ERROR progress to Redis where possible.",
+    "terminal_status_guard": "REVIEW and COMPLETED jobs are never downgraded by wrapper cleanup. Optional post-extraction mapping failures therefore retain persisted rows and REVIEW.",
+    "celery_final_state": "Fatal main-processing errors are re-raised as PdfProcessingTaskError after cleanup, so Celery records FAILURE rather than SUCCESS with an error dictionary."
+  },
+  "stable_error_codes": [
+    "celery_task_identity_missing",
+    "celery_pdf_task_execution_failed",
+    "pdf_processing_failed"
+  ],
+  "automated_evidence": {
+    "task_identity_tests": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_celery_task_identity_handoff -v",
+      "result": "passed",
+      "tests": 9,
+      "exact_job_54_regression_covered": true,
+      "azure_mock_invoked_with_explicit_id": true,
+      "progress_failure_nonfatal": true,
+      "missing_id_fails_before_processing": true,
+      "processing_job_moved_to_error": true,
+      "review_job_preserved": true,
+      "fatal_task_raises": true
+    },
+    "persistent_loop_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_celery_async_resource_lifecycle -v",
+      "result": "passed",
+      "tests": 5
+    },
+    "azure_di_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest discover -s tests -p \"test_*azure*di*.py\" -v",
+      "result": "passed",
+      "tests": 213
+    },
+    "focused_celery_mapping_ranked_critical_regressions": {
+      "result": "passed",
+      "tests": 71
+    },
+    "full_backend_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest discover -s tests -p \"test_*.py\" -v",
+      "result": "passed",
+      "tests": 1198,
+      "runtime_seconds": 37.74
+    }
+  },
+  "job_54_handling": {
+    "automatic_repair_tool_added": false,
+    "recommended_action": "Use the existing application workflow to delete Job 54 or safely mark it ERROR. Do not retain it as PROCESSING. After deploying this hotfix and fully restarting Celery, upload INFO House once as a new filing.",
+    "database_mutated_during_hotfix": false
+  },
+  "manual_retest": {
+    "status": "pending_user_run",
+    "steps": [
+      "Restart the backend.",
+      "Stop all Celery workers and restart one clean worker.",
+      "Confirm no stale worker remains.",
+      "Delete or mark Job 54 ERROR through the existing workflow.",
+      "Upload INFO House once.",
+      "Confirm logs show a non-null captured task ID and the same loop-thread task ID.",
+      "Confirm Azure DI submission starts and extracted rows are persisted.",
+      "Confirm final FilingJob status is REVIEW.",
+      "Confirm no task_id-empty, different-loop, or asyncpg protocol-state error occurs.",
+      "Resume the Bezlife, Fine Batik, and INFO House sequential smoke."
+    ]
+  },
+  "safety": {
+    "live_azure_di_called": false,
+    "external_llm_called": false,
+    "database_mutated": false,
+    "azure_di_algorithm_changed": false,
+    "mapping_algorithm_changed": false,
+    "supervisor_changed": false,
+    "frontend_changed": false,
+    "auto_apply": false,
+    "confirmed_tag_id_mutated": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  }
+}

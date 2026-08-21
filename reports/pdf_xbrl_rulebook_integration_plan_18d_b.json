@@ -1,0 +1,82 @@
+{
+  "run_metadata": {
+    "feature": "18D-B",
+    "generated_at": "2026-06-21T09:04:51Z",
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "recommended_action": "start_offline_mock_integration",
+    "recommended_next_feature": "Feature #18D-C - Deterministic rulebook mapper service, offline/mock only",
+    "feature_18d_c_offline_mapper_service_justified": true,
+    "production_integration_now_justified": false,
+    "auto_apply_approved": false,
+    "confirmed_tag_id_automation_approved": false,
+    "safe_candidate_count": 10,
+    "active_rule_precision_on_evaluable": 0.9302,
+    "active_rule_coverage_rate": 0.055,
+    "coverage_remains_low": true,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "design": {
+    "deterministic_first_position": "Rulebook runs before the LLM mapper as a deterministic candidate generator.",
+    "production_candidate_behavior": "Production candidates may produce deterministic suggestions but still cannot auto-apply.",
+    "advisory_candidate_behavior": "Advisory rules can boost or rank candidates and require human or Supervisor review.",
+    "review_only_behavior": "Review-only rules should not be auto-selected and can only provide ranking evidence.",
+    "llm_supervisor_focus": "LLM and Supervisor review should focus on exceptions, conflicts, and unmapped rows.",
+    "persistence_boundary": "Persist rulebook output as mapping suggestion evidence, not as final mapping state.",
+    "no_auto_apply_boundaries": [
+      "Rulebook output must not set confirmed_tag_id.",
+      "Rulebook output must not auto-accept or auto-apply a mapping.",
+      "Rulebook output must be persisted only as mapping suggestion evidence.",
+      "Human review remains final for accepted mappings.",
+      "Supervisor or LLM review can focus on exceptions, conflicts, and unmapped rows."
+    ]
+  },
+  "future_phases": [
+    {
+      "feature": "Feature #18D-C",
+      "scope": "deterministic rulebook mapper service, offline/mock only",
+      "auto_apply_allowed": false
+    },
+    {
+      "feature": "Feature #18D-D",
+      "scope": "backend API/reporting integration as advisory suggestions only",
+      "auto_apply_allowed": false
+    },
+    {
+      "feature": "Feature #18D-E",
+      "scope": "UI display of deterministic rulebook suggestions",
+      "auto_apply_allowed": false
+    },
+    {
+      "feature": "Feature #18D-F",
+      "scope": "production rulebook feature flag and monitoring",
+      "auto_apply_allowed": false
+    },
+    {
+      "feature": "Later explicit approval only",
+      "scope": "no auto-apply unless a later feature explicitly approves it",
+      "auto_apply_allowed": false
+    }
+  ]
+}

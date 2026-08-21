@@ -1,0 +1,108 @@
+{
+  "run_metadata": {
+    "feature": "18F-C",
+    "generated_at": "2026-06-25T01:18:27Z",
+    "calibration_summary_report": "reports\\hybrid_candidate_calibration_summary_18f_b.json",
+    "recommended_profile_report": "reports\\hybrid_candidate_calibration_recommended_profile_18f_b.json",
+    "offline_only": true,
+    "design_only": true,
+    "dry_run_scaffold_only": true,
+    "ui_changed": false,
+    "api_changed": false,
+    "database_mutated": false,
+    "production_persistence_enabled": false,
+    "production_mapper_integrated": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "external_llm_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "why_advisory_integration_is_justified": {
+    "recommended_profile": "balanced",
+    "candidate_coverage_rate": 0.6036,
+    "top1_precision_if_evaluable": 0.8,
+    "top3_recall_if_evaluable": 0.5825,
+    "top5_recall_if_evaluable": 0.5825,
+    "high_or_critical_candidate_ratio": 0.2574,
+    "critical_candidate_count": 0,
+    "safe_for_auto_apply_count": 0,
+    "requires_human_review_count": 983,
+    "total_candidate_count": 983,
+    "rows_with_at_least_1_candidate": 472,
+    "rows_with_at_least_3_candidates": 172,
+    "no_candidate_rows": 310,
+    "risk_distribution": {
+      "high": 253,
+      "low": 336,
+      "medium": 394
+    },
+    "candidate_quality_score": 65.4744,
+    "backend_advisory_integration_justified": true,
+    "reason": "Balanced preserves >=60% coverage, keeps top-1 precision >=0.75, and controls high/critical risk without critical candidates."
+  },
+  "why_production_integration_is_not_enabled": [
+    "safe_for_auto_apply_count remains 0",
+    "all 983 balanced-profile candidates require human review",
+    "top3/top5 recall is useful but not sufficient for final mapping",
+    "310 rows still have no candidate under the balanced profile",
+    "candidate evidence has not been exposed through ownership-gated backend API tests yet"
+  ],
+  "phases": [
+    {
+      "phase": "18F-C",
+      "status": "complete_after_this_feature",
+      "scope": "design reports, advisory contract, safe config defaults, dry-run service/schema scaffold, safety tests"
+    },
+    {
+      "phase": "18F-D",
+      "status": "recommended_next",
+      "scope": "implement dry-run backend ranked-candidate advisory API behind disabled feature flag"
+    },
+    {
+      "phase": "18F-E",
+      "status": "future",
+      "scope": "optional persistence design and migration for advisory candidate snapshots only"
+    },
+    {
+      "phase": "18F-F",
+      "status": "future",
+      "scope": "review-workflow/UI consumption of advisory candidates, still no auto-apply"
+    },
+    {
+      "phase": "later_separate_approval",
+      "status": "not_approved",
+      "scope": "any final mapping mutation, confirmed_tag_id automation, auto-accept, or XBRL generation behavior"
+    }
+  ],
+  "recommended_next_feature": "Feature #18F-D - Implement dry-run backend ranked-candidate advisory API behind disabled feature flag",
+  "fallback_recommendations": {
+    "if_schema_boundary_is_unclear": "Feature #18F-C-hotfix-1 - Split advisory contract from persistence contract",
+    "if_backend_integration_is_premature": "Feature #18E-F-A-3 - Improve candidate coverage before backend integration"
+  },
+  "safety": {
+    "advisory_only": true,
+    "dry_run_only": true,
+    "persistence_enabled": false,
+    "auto_apply_enabled": false,
+    "auto_accept_enabled": false,
+    "auto_reject_enabled": false,
+    "safe_for_auto_apply_always_false": true,
+    "requires_human_review_always_true": true,
+    "confirmed_tag_id_mutation_allowed": false,
+    "final_mapping_mutation_allowed": false,
+    "ai_mapping_suggestion_mutation_allowed": false,
+    "external_llm_called": false,
+    "supervisor_called": false,
+    "qwen_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generation_allowed": false,
+    "arelle_run_allowed": false
+  }
+}

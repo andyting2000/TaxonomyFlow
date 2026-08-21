@@ -1,0 +1,1457 @@
+{
+  "run_metadata": {
+    "feature": "14A",
+    "generated_at": "2026-05-19T08:34:12Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "final_mapping_approved": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_mapping_refinement_14a",
+    "report_type": "azure_di_mapping_refinement_comparison",
+    "script": "scripts/refine_azure_di_mapping_candidates_14a.py",
+    "output_path": "reports\\azure_di_mapping_refinement_comparison_14a.json"
+  },
+  "input_reports": {
+    "handoff_report": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "baseline_mapping_report": "reports\\azure_di_mapping_candidates_13z.json",
+    "baseline_confidence_report": "reports\\azure_di_mapping_confidence_13z.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json",
+    "template_file": "mpers_templates.json"
+  },
+  "before_13z_status_counts": {
+    "low_confidence_suggestion": 24,
+    "no_safe_suggestion": 4,
+    "ambiguous_multiple_suggestions": 16,
+    "medium_confidence_suggestion": 9
+  },
+  "after_14a_status_counts": {
+    "medium_confidence_suggestion": 7,
+    "low_confidence_suggestion": 26,
+    "no_safe_suggestion": 3,
+    "ambiguous_multiple_suggestions": 12,
+    "high_confidence_suggestion": 5
+  },
+  "before_13z_confidence_tier_counts": {
+    "low": 24,
+    "none": 20,
+    "medium": 9
+  },
+  "after_14a_confidence_tier_counts": {
+    "medium": 7,
+    "low": 26,
+    "none": 15,
+    "high": 5
+  },
+  "confidence_distribution_change": {
+    "ambiguous_multiple_suggestions": {
+      "before": 16,
+      "after": 12,
+      "delta": -4
+    },
+    "high_confidence_suggestion": {
+      "before": 0,
+      "after": 5,
+      "delta": 5
+    },
+    "low_confidence_suggestion": {
+      "before": 24,
+      "after": 26,
+      "delta": 2
+    },
+    "medium_confidence_suggestion": {
+      "before": 9,
+      "after": 7,
+      "delta": -2
+    },
+    "no_safe_suggestion": {
+      "before": 4,
+      "after": 3,
+      "delta": -1
+    }
+  },
+  "labels_improved_or_changed": [
+    {
+      "mapping_input_id": "13V-MAP-0001",
+      "label": "Notes to the Financial Statements: The Directors hereby submit their report and the audited financial",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.7569
+    },
+    {
+      "mapping_input_id": "13V-MAP-0002",
+      "label": "Notes to the Financial Statements: The Directors in office during the financial year and during",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.7434
+    },
+    {
+      "mapping_input_id": "13V-MAP-0003",
+      "label": "Notes to the Financial Statements: The Company is principally engaged in the business as insurance",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+      "after_score": 0.4481
+    },
+    {
+      "mapping_input_id": "13V-MAP-0004",
+      "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+      "after_top_concept": "ssmt-dei:DisclosureOfFinancialStatementsPreparationForCurrentSubmission",
+      "after_score": 0.4575
+    },
+    {
+      "mapping_input_id": "13V-MAP-0005",
+      "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ifrs-smes:DisclosureOfClassesOfShareCapitalExplanatory",
+      "after_top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+      "after_score": 0.4907
+    },
+    {
+      "mapping_input_id": "13V-MAP-0007",
+      "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+      "after_score": 0.4573
+    },
+    {
+      "mapping_input_id": "13V-MAP-0008",
+      "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfFinancialInstrumentsMeasuredAtAmortisedCostExplanatory",
+      "after_score": 0.4568
+    },
+    {
+      "mapping_input_id": "13V-MAP-0009",
+      "label": "Notes to the Financial Statements: According to the Register of Directors' Shareholdings required to be",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.7285
+    },
+    {
+      "mapping_input_id": "13V-MAP-0010",
+      "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfNonAdjustingEventsAfterEndOfReportingPeriodExplanatory",
+      "after_score": 0.4539
+    },
+    {
+      "mapping_input_id": "13V-MAP-0012",
+      "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.3852
+    },
+    {
+      "mapping_input_id": "13V-MAP-0013",
+      "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+      "after_score": 0.487
+    },
+    {
+      "mapping_input_id": "13V-MAP-0014",
+      "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfOtherCurrentAssetsExplanatory",
+      "after_score": 0.474
+    },
+    {
+      "mapping_input_id": "13V-MAP-0015",
+      "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfNoncurrentAssetsHeldForSaleAndDiscontinuedOperationsExplanatory",
+      "after_score": 0.4344
+    },
+    {
+      "mapping_input_id": "13V-MAP-0016",
+      "label": "Notes to the Financial Statements: (ii) any contingent liability of the Company which has arisen",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.3956
+    },
+    {
+      "mapping_input_id": "13V-MAP-0017",
+      "label": "Notes to the Financial Statements: (d) No contingent or other liability has become enforceable or",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+      "after_score": 0.4733
+    },
+    {
+      "mapping_input_id": "13V-MAP-0018",
+      "label": "Notes to the Financial Statements: (e) At the date of this report, the Directors are",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfAuditorsReportToMembersExplanatory",
+      "after_score": 0.464
+    },
+    {
+      "mapping_input_id": "13V-MAP-0019",
+      "label": "Notes to the Financial Statements: (i) the results of the operations of the Company during",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.4158
+    },
+    {
+      "mapping_input_id": "13V-MAP-0021",
+      "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+      "row_type": "text_block",
+      "before_status": "no_safe_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": null,
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.4502
+    },
+    {
+      "mapping_input_id": "13V-MAP-0022",
+      "label": "Notes to the Financial Statements: STATEMENT BY DIRECTORS PURSUANT TO SECTION 251(2) OF THE COMPANIES",
+      "row_type": "text_block",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfStatementByDirectorsExplanatory",
+      "after_score": 0.7747
+    },
+    {
+      "mapping_input_id": "13V-MAP-0024",
+      "label": "Other receivable",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:OtherLiabilities",
+      "after_top_concept": "ifrs-smes:TradeAndOtherReceivables",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0025",
+      "label": "Contributed share capital",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "high_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:CashSettledShareBasedPaymentLiability",
+      "after_top_concept": "ssmt-mpers:CapitalFromOrdinaryShares",
+      "after_score": 0.9158
+    },
+    {
+      "mapping_input_id": "13V-MAP-0026",
+      "label": "Accumulated loss",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:ReversalOfImpairmentLossForOtherAssets",
+      "after_top_concept": "ssmt-mpers:IncreaseDecreaseInRetainedEarnings",
+      "after_score": 0.873
+    },
+    {
+      "mapping_input_id": "13V-MAP-0027",
+      "label": "Other payable",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:OtherLiabilities",
+      "after_top_concept": "ifrs-smes:TradeAndOtherPayables",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0029",
+      "label": "Bank overdraft - unsecured",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:CurrentUnsecuredBankLoansReceivedAndCurrentPortionOfNoncurrentUnsecuredBankLoansReceived",
+      "after_top_concept": "ifrs-smes:BankOverdraftsClassifiedAsCashEquivalents",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0030",
+      "label": "Administration expenses",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ifrs-smes:ComprehensiveIncome",
+      "after_top_concept": "ifrs-smes:AdministrativeExpense",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0031",
+      "label": "Loss before tax",
+      "row_type": "subtotal_or_total",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:AggregateProfitLossBeforeTax",
+      "after_top_concept": "ifrs-smes:ProfitLossBeforeTax",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0033",
+      "label": "Loss after tax and representing total comprehensive loss for the year",
+      "row_type": "subtotal_or_total",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:AggregateProfitLossBeforeTax",
+      "after_top_concept": "ifrs-smes:ProfitLoss",
+      "after_score": 0.8395
+    },
+    {
+      "mapping_input_id": "13V-MAP-0034",
+      "label": "Loss attributable to: Owners of the Company",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+      "after_top_concept": "ifrs-smes:ComprehensiveIncome",
+      "after_score": 0.7007
+    },
+    {
+      "mapping_input_id": "13V-MAP-0035",
+      "label": "Other comprehensive income for the year",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ifrs-smes:OtherComprehensiveIncome",
+      "after_top_concept": "ifrs-smes:OtherComprehensiveIncome",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0036",
+      "label": "Loss before tax and working capital changes",
+      "row_type": "subtotal_or_total",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt:CashAndBankBalances",
+      "after_top_concept": "ifrs-smes:ProfitLossBeforeTax",
+      "after_score": 0.895
+    },
+    {
+      "mapping_input_id": "13V-MAP-0037",
+      "label": "Decrease in receivable",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "after_top_concept": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+      "after_score": 0.631
+    },
+    {
+      "mapping_input_id": "13V-MAP-0038",
+      "label": "Decrease in payable",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "after_top_concept": "ssmt-mpers:OtherCurrentPayables",
+      "after_score": 0.6036
+    },
+    {
+      "mapping_input_id": "13V-MAP-0039",
+      "label": "Increase in director's account",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "after_top_concept": "ifrs-smes:Cash",
+      "after_score": 0.528
+    },
+    {
+      "mapping_input_id": "13V-MAP-0041",
+      "label": "Corporate Information: The Company is a private company incorporated and domiciled in",
+      "row_type": "text_block",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "high_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_score": 0.8019
+    },
+    {
+      "mapping_input_id": "13V-MAP-0042",
+      "label": "Corporate Information: The registered office of the Company is located at Wisma",
+      "row_type": "text_block",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "high_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_score": 0.8066
+    },
+    {
+      "mapping_input_id": "13V-MAP-0043",
+      "label": "Corporate Information: The address of the principal place of business of the",
+      "row_type": "text_block",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "high_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_score": 0.8022
+    },
+    {
+      "mapping_input_id": "13V-MAP-0044",
+      "label": "Corporate Information: The financial statements were authorised for issue by the Director",
+      "row_type": "text_block",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "high_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfCorporateInformationExplanatory",
+      "after_score": 0.7996
+    },
+    {
+      "mapping_input_id": "13V-MAP-0045",
+      "label": "Notes to the Financial Statements: The financial statements have been prepared in compliance with the",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfAuthorisationOfFinancialStatementsExplanatory",
+      "after_score": 0.4464
+    },
+    {
+      "mapping_input_id": "13V-MAP-0047",
+      "label": "4.1 Contributed Share Capital: Ordinary shares issued that carry no put option and no",
+      "row_type": "text_block",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DescriptionOfAccountingPolicyForPreferenceShareCapitalExplanatory",
+      "after_top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+      "after_score": 0.4705
+    },
+    {
+      "mapping_input_id": "13V-MAP-0048",
+      "label": "Notes to the Financial Statements: (ii) to exchange financial assets or financial liabilities with another",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfContingentAssetsAndContingentLiabilitiesExplanatory",
+      "after_score": 0.5109
+    },
+    {
+      "mapping_input_id": "13V-MAP-0049",
+      "label": "Notes to the Financial Statements: Transaction costs of an equity transaction are accounted for as",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+      "after_score": 0.422
+    },
+    {
+      "mapping_input_id": "13V-MAP-0050",
+      "label": "Notes to the Financial Statements: For the purpose of subsequent measurement, the Company classifies financial",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfImpairmentOfAssetsExplanatory",
+      "after_score": 0.4504
+    },
+    {
+      "mapping_input_id": "13V-MAP-0051",
+      "label": "Notes to the Financial Statements: For short-term other receivable, where the effect of discounting is",
+      "row_type": "text_block",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfOtherComprehensiveIncomeExplanatory",
+      "after_score": 0.4524
+    },
+    {
+      "mapping_input_id": "13V-MAP-0053",
+      "label": "9. Bank Overdraft -Unsecured: The bank overdraft represents the surplus of unpresented cheques over",
+      "row_type": "text_block",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DisclosureOfCashAndCashEquivalentsExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfCashAndCashEquivalentsExplanatory",
+      "after_score": 0.4175
+    }
+  ],
+  "labels_unchanged": [
+    {
+      "mapping_input_id": "13V-MAP-0006",
+      "label": "- Owners of the Company",
+      "row_type": "numeric_fact",
+      "before_status": "no_safe_suggestion",
+      "after_status": "no_safe_suggestion",
+      "before_top_concept": null,
+      "after_top_concept": null,
+      "after_score": null
+    },
+    {
+      "mapping_input_id": "13V-MAP-0011",
+      "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.4327
+    },
+    {
+      "mapping_input_id": "13V-MAP-0020",
+      "label": "Notes to the Financial Statements: (ii) there has not arisen in the interval between the",
+      "row_type": "text_block",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+      "after_score": 0.4145
+    },
+    {
+      "mapping_input_id": "13V-MAP-0023",
+      "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+      "row_type": "text_block",
+      "before_status": "no_safe_suggestion",
+      "after_status": "no_safe_suggestion",
+      "before_top_concept": null,
+      "after_top_concept": null,
+      "after_score": null
+    },
+    {
+      "mapping_input_id": "13V-MAP-0028",
+      "label": "Amount due to director",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "low_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt:StateWhereAuditFirmIsLocated",
+      "after_top_concept": "ssmt:StateWhereAuditFirmIsLocated",
+      "after_score": 0.5014
+    },
+    {
+      "mapping_input_id": "13V-MAP-0032",
+      "label": "Tax expense",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "after_top_concept": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0040",
+      "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "medium_confidence_suggestion",
+      "before_top_concept": "ifrs-smes:CashAndCashEquivalents",
+      "after_top_concept": "ifrs-smes:CashAndCashEquivalents",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0046",
+      "label": "Basis of Preparation: The financial statements of the Company have been prepared using",
+      "row_type": "text_block",
+      "before_status": "ambiguous_multiple_suggestions",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:DisclosureOfBasisOfPreparationOfFinancialStatementsExplanatory",
+      "after_top_concept": "ssmt-mpers:DisclosureOfBasisOfPreparationOfFinancialStatementsExplanatory",
+      "after_score": 0.8465
+    },
+    {
+      "mapping_input_id": "13V-MAP-0052",
+      "label": "no par value",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "no_safe_suggestion",
+      "after_status": "no_safe_suggestion",
+      "before_top_concept": null,
+      "after_top_concept": null,
+      "after_score": null
+    }
+  ],
+  "labels_worsened": [
+    {
+      "mapping_input_id": "13V-MAP-0031",
+      "label": "Loss before tax",
+      "row_type": "subtotal_or_total",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ssmt-mpers:AggregateProfitLossBeforeTax",
+      "after_top_concept": "ifrs-smes:ProfitLossBeforeTax",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0035",
+      "label": "Other comprehensive income for the year",
+      "row_type": "comparative_numeric_fact",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "ambiguous_multiple_suggestions",
+      "before_top_concept": "ifrs-smes:OtherComprehensiveIncome",
+      "after_top_concept": "ifrs-smes:OtherComprehensiveIncome",
+      "after_score": 1.0
+    },
+    {
+      "mapping_input_id": "13V-MAP-0047",
+      "label": "4.1 Contributed Share Capital: Ordinary shares issued that carry no put option and no",
+      "row_type": "text_block",
+      "before_status": "medium_confidence_suggestion",
+      "after_status": "low_confidence_suggestion",
+      "before_top_concept": "ssmt-mpers:DescriptionOfAccountingPolicyForPreferenceShareCapitalExplanatory",
+      "after_top_concept": "ifrs-smes:DisclosureOfShareCapitalReservesAndOtherEquityInterestExplanatory",
+      "after_score": 0.4705
+    }
+  ],
+  "diagnostic": {
+    "why_high_confidence_was_zero": [
+      "Baseline aliases were mostly generated from raw taxonomy labels and local names, so common annual-report labels often matched only by weak token overlap.",
+      "Text-block candidates often carried broad section labels such as Notes to the Financial Statements, hiding Directors' Report, accounting policy, and note-specific intent.",
+      "Several numeric labels had multiple nearby taxonomy concepts and needed curated local aliases plus statement-family hints to separate candidates.",
+      "The baseline required a strong score gap before high confidence; close concept scores were surfaced as ambiguous by design."
+    ],
+    "baseline_status_counts": {
+      "low_confidence_suggestion": 24,
+      "no_safe_suggestion": 4,
+      "ambiguous_multiple_suggestions": 16,
+      "medium_confidence_suggestion": 9
+    },
+    "baseline_blocker_counts": {
+      "multiple_close_concept_matches": 16,
+      "requires_confirmation": 6,
+      "row_type_or_concept_type_mismatch": 2,
+      "no_local_metadata_match_above_threshold": 1,
+      "generic_or_weak_label": 1
+    },
+    "top_low_confidence_labels": [
+      {
+        "mapping_input_id": "13V-MAP-0001",
+        "label": "Notes to the Financial Statements: The Directors hereby submit their report and the audited financial",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4639,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0002",
+        "label": "Notes to the Financial Statements: The Directors in office during the financial year and during",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4504,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0003",
+        "label": "Notes to the Financial Statements: The Company is principally engaged in the business as insurance",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.3901,
+        "blockers": [
+          "requires_confirmation"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0004",
+        "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4107,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0005",
+        "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ifrs-smes:DisclosureOfClassesOfShareCapitalExplanatory",
+        "top_score": 0.4924,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0007",
+        "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4337,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0008",
+        "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4213,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0009",
+        "label": "Notes to the Financial Statements: According to the Register of Directors' Shareholdings required to be",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4355,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0010",
+        "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4081,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0011",
+        "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4327,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0012",
+        "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.3988,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0013",
+        "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4135,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0014",
+        "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4067,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0015",
+        "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4121,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0016",
+        "label": "Notes to the Financial Statements: (ii) any contingent liability of the Company which has arisen",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.4079,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0017",
+        "label": "Notes to the Financial Statements: (d) No contingent or other liability has become enforceable or",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4535,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0018",
+        "label": "Notes to the Financial Statements: (e) At the date of this report, the Directors are",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4646,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0019",
+        "label": "Notes to the Financial Statements: (i) the results of the operations of the Company during",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.4276,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0020",
+        "label": "Notes to the Financial Statements: (ii) there has not arisen in the interval between the",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4145,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0028",
+        "label": "Amount due to director",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:StateWhereAuditFirmIsLocated",
+        "top_score": 0.4444,
+        "blockers": []
+      }
+    ],
+    "top_ambiguous_labels": [
+      {
+        "mapping_input_id": "13V-MAP-0022",
+        "label": "Notes to the Financial Statements: STATEMENT BY DIRECTORS PURSUANT TO SECTION 251(2) OF THE COMPANIES",
+        "row_type": "text_block",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.6052,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0024",
+        "label": "Other receivable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:OtherLiabilities",
+        "top_score": 0.7567,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0025",
+        "label": "Contributed share capital",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:CashSettledShareBasedPaymentLiability",
+        "top_score": 0.6668,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0026",
+        "label": "Accumulated loss",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:ReversalOfImpairmentLossForOtherAssets",
+        "top_score": 0.6427,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0027",
+        "label": "Other payable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:OtherLiabilities",
+        "top_score": 0.7567,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0029",
+        "label": "Bank overdraft - unsecured",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:CurrentUnsecuredBankLoansReceivedAndCurrentPortionOfNoncurrentUnsecuredBankLoansReceived",
+        "top_score": 0.6068,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0030",
+        "label": "Administration expenses",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:ComprehensiveIncome",
+        "top_score": 0.6884,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0033",
+        "label": "Loss after tax and representing total comprehensive loss for the year",
+        "row_type": "subtotal_or_total",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:AggregateProfitLossBeforeTax",
+        "top_score": 0.7703,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0034",
+        "label": "Loss attributable to: Owners of the Company",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "top_score": 0.8481,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0036",
+        "label": "Loss before tax and working capital changes",
+        "row_type": "subtotal_or_total",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt:CashAndBankBalances",
+        "top_score": 0.6919,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0037",
+        "label": "Decrease in receivable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "top_score": 0.7025,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0038",
+        "label": "Decrease in payable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "top_score": 0.6883,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0039",
+        "label": "Increase in director's account",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "top_score": 0.69,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0046",
+        "label": "Basis of Preparation: The financial statements of the Company have been prepared using",
+        "row_type": "text_block",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:DisclosureOfBasisOfPreparationOfFinancialStatementsExplanatory",
+        "top_score": 0.7335,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0051",
+        "label": "Notes to the Financial Statements: For short-term other receivable, where the effect of discounting is",
+        "row_type": "text_block",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.6459,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0053",
+        "label": "9. Bank Overdraft -Unsecured: The bank overdraft represents the surplus of unpresented cheques over",
+        "row_type": "text_block",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:DisclosureOfCashAndCashEquivalentsExplanatory",
+        "top_score": 0.5975,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      }
+    ],
+    "top_no_safe_labels": [
+      {
+        "mapping_input_id": "13V-MAP-0006",
+        "label": "- Owners of the Company",
+        "row_type": "numeric_fact",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "no_local_metadata_match_above_threshold"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0021",
+        "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+        "row_type": "text_block",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "row_type_or_concept_type_mismatch"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0023",
+        "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+        "row_type": "text_block",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "row_type_or_concept_type_mismatch"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0052",
+        "label": "no par value",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "generic_or_weak_label"
+        ]
+      }
+    ],
+    "top_text_block_labels_with_weak_matches": [
+      {
+        "mapping_input_id": "13V-MAP-0001",
+        "label": "Notes to the Financial Statements: The Directors hereby submit their report and the audited financial",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4639,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0002",
+        "label": "Notes to the Financial Statements: The Directors in office during the financial year and during",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4504,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0003",
+        "label": "Notes to the Financial Statements: The Company is principally engaged in the business as insurance",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.3901,
+        "blockers": [
+          "requires_confirmation"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0004",
+        "label": "Notes to the Financial Statements: All material transfers to or from reserves and provisions during",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4107,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0005",
+        "label": "Notes to the Financial Statements: There were no changes in the contributed share capital of",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ifrs-smes:DisclosureOfClassesOfShareCapitalExplanatory",
+        "top_score": 0.4924,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0007",
+        "label": "Notes to the Financial Statements: Since the end of the previous financial year, no Director",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4337,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0008",
+        "label": "Notes to the Financial Statements: Neither during nor at the end of the financial year",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4213,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0009",
+        "label": "Notes to the Financial Statements: According to the Register of Directors' Shareholdings required to be",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4355,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0010",
+        "label": "Notes to the Financial Statements: No dividend was paid since the end of the previous",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4081,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0011",
+        "label": "Notes to the Financial Statements: There was no indemnity given to or insurance effected for",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4327,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0012",
+        "label": "Notes to the Financial Statements: (i) to ascertain that proper action had been taken in",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.3988,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0013",
+        "label": "Notes to the Financial Statements: (ii) to ensure that any current assets, which were unlikely",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4135,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0014",
+        "label": "Notes to the Financial Statements: (ii) which would render the values attributed to current assets",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4067,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0015",
+        "label": "Notes to the Financial Statements: (iii) which have arisen which would render adherence to the",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4121,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0016",
+        "label": "Notes to the Financial Statements: (ii) any contingent liability of the Company which has arisen",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.4079,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0017",
+        "label": "Notes to the Financial Statements: (d) No contingent or other liability has become enforceable or",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+        "top_score": 0.4535,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0018",
+        "label": "Notes to the Financial Statements: (e) At the date of this report, the Directors are",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4646,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0019",
+        "label": "Notes to the Financial Statements: (i) the results of the operations of the Company during",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+        "top_score": 0.4276,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0020",
+        "label": "Notes to the Financial Statements: (ii) there has not arisen in the interval between the",
+        "row_type": "text_block",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:DisclosureOfDirectorsReportExplanatory",
+        "top_score": 0.4145,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0021",
+        "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+        "row_type": "text_block",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "row_type_or_concept_type_mismatch"
+        ]
+      }
+    ],
+    "top_numeric_labels_with_weak_matches": [
+      {
+        "mapping_input_id": "13V-MAP-0006",
+        "label": "- Owners of the Company",
+        "row_type": "numeric_fact",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "no_local_metadata_match_above_threshold"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0024",
+        "label": "Other receivable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:OtherLiabilities",
+        "top_score": 0.7567,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0025",
+        "label": "Contributed share capital",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:CashSettledShareBasedPaymentLiability",
+        "top_score": 0.6668,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0026",
+        "label": "Accumulated loss",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:ReversalOfImpairmentLossForOtherAssets",
+        "top_score": 0.6427,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0027",
+        "label": "Other payable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:OtherLiabilities",
+        "top_score": 0.7567,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0028",
+        "label": "Amount due to director",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "low_confidence_suggestion",
+        "top_concept": "ssmt:StateWhereAuditFirmIsLocated",
+        "top_score": 0.4444,
+        "blockers": []
+      },
+      {
+        "mapping_input_id": "13V-MAP-0029",
+        "label": "Bank overdraft - unsecured",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:CurrentUnsecuredBankLoansReceivedAndCurrentPortionOfNoncurrentUnsecuredBankLoansReceived",
+        "top_score": 0.6068,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0030",
+        "label": "Administration expenses",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:ComprehensiveIncome",
+        "top_score": 0.6884,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0033",
+        "label": "Loss after tax and representing total comprehensive loss for the year",
+        "row_type": "subtotal_or_total",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt-mpers:AggregateProfitLossBeforeTax",
+        "top_score": 0.7703,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0034",
+        "label": "Loss attributable to: Owners of the Company",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "top_score": 0.8481,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0036",
+        "label": "Loss before tax and working capital changes",
+        "row_type": "subtotal_or_total",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ssmt:CashAndBankBalances",
+        "top_score": 0.6919,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0037",
+        "label": "Decrease in receivable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "top_score": 0.7025,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0038",
+        "label": "Decrease in payable",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "top_score": 0.6883,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0039",
+        "label": "Increase in director's account",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "ambiguous_multiple_suggestions",
+        "top_concept": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "top_score": 0.69,
+        "blockers": [
+          "multiple_close_concept_matches"
+        ]
+      },
+      {
+        "mapping_input_id": "13V-MAP-0052",
+        "label": "no par value",
+        "row_type": "comparative_numeric_fact",
+        "mapping_status": "no_safe_suggestion",
+        "top_concept": null,
+        "top_score": null,
+        "blockers": [
+          "generic_or_weak_label"
+        ]
+      }
+    ],
+    "concept_families_missing_or_weak": {
+      "unresolved_alias_count": 2,
+      "unresolved_alias_groups": [
+        "principal_activity",
+        "director_account"
+      ],
+      "text_block_concept_count": 148,
+      "numeric_concept_count": 656
+    }
+  },
+  "cautionary_notes": [
+    "Higher confidence remains a suggested-only signal, not final mapping approval.",
+    "No XBRL generation or Arelle validation was performed.",
+    "Ambiguous and no-safe records remain review signals, not failures."
+  ],
+  "recommended_next_feature": "Feature #14B - Manual mapping review workflow if ambiguous mappings remain dominant.",
+  "source_feature_chain": [
+    "13X",
+    "13Y",
+    "13Z",
+    "14A"
+  ]
+}

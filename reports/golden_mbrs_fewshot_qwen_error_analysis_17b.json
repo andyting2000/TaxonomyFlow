@@ -1,0 +1,2532 @@
+{
+  "run_metadata": {
+    "feature": "17B",
+    "generated_at": "2026-06-07T09:11:03Z",
+    "report_only": true,
+    "database_mutated": false,
+    "production_filing_jobs_mutated": false,
+    "production_extraction_changed": false,
+    "qwen_production_prompt_changed": false,
+    "react_ui_changed": false,
+    "admin_user_management_changed": false,
+    "auto_apply_mappings": false,
+    "confirmed_tag_id_set": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "live_llm_requested": true,
+    "external_llm_called": true,
+    "qwen_status": "completed",
+    "auditor_xml_sent_to_external_provider": false,
+    "parsed_xml_facts_sent_to_external_provider": false,
+    "target_gold_answers_sent_to_external_provider": false,
+    "target_correct_qnames_sent_to_external_provider": false,
+    "target_correct_template_fields_sent_to_external_provider": false,
+    "evaluation_labels_sent_to_external_provider": false,
+    "external_qwen_payload_policy": "holdout extracted row context plus locally retrieved candidate concepts plus selected training-case few-shot examples only",
+    "split": {
+      "train_cases": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004"
+      ],
+      "holdout_cases": [
+        "case_005",
+        "case_006"
+      ]
+    }
+  },
+  "strict_scoring_rows": 29,
+  "fewshot_qwen": {
+    "wrong_concept": 0,
+    "no_prediction": 10,
+    "candidate_missing": 7,
+    "hallucinated_concept_rejected": 0,
+    "invalid_response": 0,
+    "low_confidence_suggestion": 0,
+    "correct_but_not_high_confidence": 2,
+    "top_confused_concepts": [],
+    "accuracy_by_statement_type": [
+      {
+        "group": "Statement of Financial Position",
+        "rows": 10,
+        "correct": 7,
+        "accuracy": 0.7,
+        "no_prediction": 3,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Statement of Cash Flows",
+        "rows": 9,
+        "correct": 8,
+        "accuracy": 0.8889,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Statement of Comprehensive Income",
+        "rows": 6,
+        "correct": 4,
+        "accuracy": 0.6667,
+        "no_prediction": 2,
+        "wrong_concept": 0
+      },
+      {
+        "group": "Notes to the Financial Statements",
+        "rows": 4,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 4,
+        "wrong_concept": 0
+      }
+    ],
+    "accuracy_by_label_family": [
+      {
+        "group": "bank balances",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at beginning of year",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "decrease increase in cash and cash equivalents",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "gross profit",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "accruals",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "assets discussion",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at end of year note 9",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash and cash equivalents at the end of year",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "cash from operating activities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "current assets",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "current liabilities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "decrease increase in trade and other receivables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "depreciation",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "depreciation of property plant and equipment",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "equity",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "equity and liabilities",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "liabilities d por current fral to",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "non current assets",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "operating expenses folaviceral",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other income",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other payable",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other payables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "other receivables",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      },
+      {
+        "group": "property plant and equipment",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "revenue",
+        "rows": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      }
+    ],
+    "accuracy_by_confidence_tier": [
+      {
+        "group": "high",
+        "rows": 17,
+        "correct": 17,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "low",
+        "rows": 9,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 9,
+        "wrong_concept": 0
+      },
+      {
+        "group": "medium",
+        "rows": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "no_prediction": 0,
+        "wrong_concept": 0
+      },
+      {
+        "group": "none",
+        "rows": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "no_prediction": 1,
+        "wrong_concept": 0
+      }
+    ]
+  },
+  "ambiguous_alignments": [
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:10:10",
+      "extracted_label": "Accumulated losses brought forward",
+      "extracted_value": "-3097",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:12:12",
+      "extracted_label": "Dr Ooi Boon Beng",
+      "extracted_value": "70",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:13:13",
+      "extracted_label": "Ung Ming Xian",
+      "extracted_value": "30",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:14:14",
+      "extracted_label": "Other receivables",
+      "extracted_value": "0",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:15:15",
+      "extracted_label": "Cash at bank",
+      "extracted_value": "39820",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:17:17",
+      "extracted_label": "TOTAL ASSETS DISCUSSION",
+      "extracted_value": "214624",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:18:18",
+      "extracted_label": "Share capital",
+      "extracted_value": "100",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:19:19",
+      "extracted_label": "Retained profits / (Accumulated losses)",
+      "extracted_value": "100453",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:20:20",
+      "extracted_label": "Total shareholders' equity",
+      "extracted_value": "100553",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:21:21",
+      "extracted_label": "Other payables and accruals",
+      "extracted_value": "63381",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:22:22",
+      "extracted_label": "Amount due to director",
+      "extracted_value": "25998",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:23:23",
+      "extracted_label": "Provision for taxation",
+      "extracted_value": "24692",
+      "statement_type": "Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:26:26",
+      "extracted_label": "Turnover",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:27:27",
+      "extracted_label": "Less : Cost of sales",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:29:29",
+      "extracted_label": "Staff costs",
+      "extracted_value": "50612",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:34:34",
+      "extracted_label": "Less : Taxation",
+      "extracted_value": "-24692",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:35:35",
+      "extracted_label": "Total comprehensive profit / (loss) for the year / period",
+      "extracted_value": "103550",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:36:36",
+      "extracted_label": "Comprehensive loss for the period",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:38:38",
+      "extracted_label": "Cash flows from operating activities Profit / (Loss) before taxation",
+      "extracted_value": "128242",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:39:39",
+      "extracted_label": "Operating profit / ( loss) before working capital changes",
+      "extracted_value": "128242",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:40:40",
+      "extracted_label": "Increase other receivables",
+      "extracted_value": "-174804",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:41:41",
+      "extracted_label": "Increase in amount due to director",
+      "extracted_value": "24099",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:42:42",
+      "extracted_label": "Increase in other payables and accruals",
+      "extracted_value": "61983",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:44:44",
+      "extracted_label": "Cash flows from investing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:47:47",
+      "extracted_label": "Cash and cash equivalents at beginning of year / period",
+      "extracted_value": "300",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:48:48",
+      "extracted_label": "Cash and cash equivalents at end of year / period",
+      "extracted_value": "39820",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:52:52",
+      "extracted_label": "Tax expenses for the year",
+      "extracted_value": "24692",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:54:54",
+      "extracted_label": "Other payables",
+      "extracted_value": "62681",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:53:53",
+      "extracted_label": "At beginning and end of the financial year / period",
+      "extracted_value": "100",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:57:57",
+      "extracted_label": "EPF Contribution",
+      "extracted_value": "897",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:59:59",
+      "extracted_label": "Rental of office",
+      "extracted_value": "69120",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:60:60",
+      "extracted_label": "EPF Contribution",
+      "extracted_value": "897",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:61:61",
+      "extracted_label": "EIS Contribution",
+      "extracted_value": "5",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:63:63",
+      "extracted_label": "SOCSO Contribution",
+      "extracted_value": "81",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:64:64",
+      "extracted_label": "Accounting fee",
+      "extracted_value": "12000",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:66:66",
+      "extracted_label": "Advertisement",
+      "extracted_value": "16860",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:68:68",
+      "extracted_label": "Commission paid",
+      "extracted_value": "33231",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:69:69",
+      "extracted_label": "Computer rental fee",
+      "extracted_value": "5400",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:70:70",
+      "extracted_label": "Commissioner for oaths",
+      "extracted_value": "30",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:71:71",
+      "extracted_label": "Director's fee",
+      "extracted_value": "94000",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:73:73",
+      "extracted_label": "Membership fee",
+      "extracted_value": "1100",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:74:74",
+      "extracted_label": "Payroll fee",
+      "extracted_value": "2400",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:75:75",
+      "extracted_label": "Penalties",
+      "extracted_value": "4",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:76:76",
+      "extracted_label": "Printing and stationeries FOR DISCUSSION",
+      "extracted_value": "33",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:77:77",
+      "extracted_label": "Rental of office",
+      "extracted_value": "69120",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:80:80",
+      "extracted_label": "Taxation fee",
+      "extracted_value": "350",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:82:82",
+      "extracted_label": "Upkeep of office equipment",
+      "extracted_value": "2700",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_001",
+      "extracted_row_id": "case_001:candidate:84:84",
+      "extracted_label": "Web building fee",
+      "extracted_value": "33779",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:9:9",
+      "extracted_label": "Loss after taxation",
+      "extracted_value": "-25287",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:10:10",
+      "extracted_label": "Accumulated losses carried forward",
+      "extracted_value": "-367321",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:12:12",
+      "extracted_label": "Ooi Boon Beng",
+      "extracted_value": "0",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:13:13",
+      "extracted_label": "Ung Ming Xian (f) MAN kan 5,000 DE THE",
+      "extracted_value": "0",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:16:16",
+      "extracted_label": "Trade receivables",
+      "extracted_value": "0",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:17:17",
+      "extracted_label": "Other receivables and deposits",
+      "extracted_value": "13362",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:22:22",
+      "extracted_label": "Accumulated losses",
+      "extracted_value": "-392608",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:24:24",
+      "extracted_label": "Term loan R DISCUSSIONE",
+      "extracted_value": "656479",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:27:27",
+      "extracted_label": "Other payables and accruals fprables",
+      "extracted_value": "109307",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:28:28",
+      "extracted_label": "Term loan on",
+      "extracted_value": "68432",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:29:29",
+      "extracted_label": "Provision for taxation",
+      "extracted_value": "1725",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:33:33",
+      "extracted_label": "Turnover 56,984 :unselected:",
+      "extracted_value": "6715",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:41:41",
+      "extracted_label": "Less : Taxation",
+      "extracted_value": "-1725",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:42:42",
+      "extracted_label": "Loss for the financial year DRAFT FOR DISCUSSION",
+      "extracted_value": "-25287",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:43:43",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:44:44",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:47:47",
+      "extracted_label": "Depreciation of property, plant and equipment",
+      "extracted_value": "28203",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:53:53",
+      "extracted_label": "Taxation paid",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:54:54",
+      "extracted_label": "Cash flows from investing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:62:62",
+      "extracted_label": "Addition",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:63:63",
+      "extracted_label": "Disposal",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:64:64",
+      "extracted_label": "Charges",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:67:67",
+      "extracted_label": "Other receivables",
+      "extracted_value": "0",
+      "statement_type": "8. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:68:68",
+      "extracted_label": "Other deposits",
+      "extracted_value": "1112",
+      "statement_type": "8. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:69:69",
+      "extracted_label": "Tax refundable",
+      "extracted_value": "12250",
+      "statement_type": "8. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:70:70",
+      "extracted_label": "At beginning and end of the year",
+      "extracted_value": "100000",
+      "statement_type": "8. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:74:74",
+      "extracted_label": "DRATET DUE",
+      "extracted_value": "68432",
+      "statement_type": "8. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:76:76",
+      "extracted_label": "Accuals",
+      "extracted_value": "33686",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:78:78",
+      "extracted_label": "Depreciation of property, plant equipment",
+      "extracted_value": "28203",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:79:79",
+      "extracted_label": "Directors' remuneration",
+      "extracted_value": "48000",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:82:82",
+      "extracted_label": "Loss before taxation :selected: (77,641)",
+      "extracted_value": "-23562",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:84:84",
+      "extracted_label": "Non-taxable income",
+      "extracted_value": "9456",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:87:87",
+      "extracted_label": "Tax expenses for the year",
+      "extracted_value": "1725",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:88:88",
+      "extracted_label": "Sales P& RPOSE",
+      "extracted_value": "56984",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:89:89",
+      "extracted_label": "Purchases",
+      "extracted_value": "3950",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:95:95",
+      "extracted_label": "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+      "extracted_value": "-23562",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:97:97",
+      "extracted_label": "BR&SE 28,203",
+      "extracted_value": "28203",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:98:98",
+      "extracted_label": "Accounting fee",
+      "extracted_value": "1200",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:104:104",
+      "extracted_label": "Director's remuneration",
+      "extracted_value": "48000",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_002",
+      "extracted_row_id": "case_002:candidate:113:113",
+      "extracted_label": "Taxation processing fee",
+      "extracted_value": "600",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:12:12",
+      "extracted_label": "Ooi Boon Beng",
+      "extracted_value": "95000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:13:13",
+      "extracted_label": "Ung Ming Xin (f)",
+      "extracted_value": "5000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:14:14",
+      "extracted_label": "Property, plant and equipment",
+      "extracted_value": "2",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:15:15",
+      "extracted_label": "Investments",
+      "extracted_value": "30000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:16:16",
+      "extracted_label": "Total non-current assets",
+      "extracted_value": "30002",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:17:17",
+      "extracted_label": "Trade receivables",
+      "extracted_value": "32400",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:19:19",
+      "extracted_label": "Amount due from directors",
+      "extracted_value": "0",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:23:23",
+      "extracted_label": "Retained profits :unselected:",
+      "extracted_value": "71223",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:25:25",
+      "extracted_label": "Amount due to directors",
+      "extracted_value": "12000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:26:26",
+      "extracted_label": "Total non current liabilities",
+      "extracted_value": "12000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:27:27",
+      "extracted_label": "Other payables and accruals",
+      "extracted_value": "800",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:28:28",
+      "extracted_label": "Total current liabilities",
+      "extracted_value": "800",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:29:29",
+      "extracted_label": "Total liabilities",
+      "extracted_value": "12800",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:37:37",
+      "extracted_label": "(Less) / Add : Taxation",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:38:38",
+      "extracted_label": "Loss for the financial year DRAFT FOR",
+      "extracted_value": "-2686",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:39:39",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:40:40",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:43:43",
+      "extracted_label": "Operating loss before working capital changes",
+      "extracted_value": "-2686",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:46:46",
+      "extracted_label": "Decrease in amount due from Directors",
+      "extracted_value": "142326",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:48:48",
+      "extracted_label": "Cash flows from investing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:49:49",
+      "extracted_label": "Cash flows from financing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:55:55",
+      "extracted_label": "Addition",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:56:56",
+      "extracted_label": "Disposal",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:58:58",
+      "extracted_label": "Current charges",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:59:59",
+      "extracted_label": "As at 31/12/23 1 1",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:60:60",
+      "extracted_label": "As at 31/12/24 1 1 PURPOSE",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:61:61",
+      "extracted_label": "Unquoted shares at cost",
+      "extracted_value": "30000",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:66:66",
+      "extracted_label": "Other payables",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:63:63",
+      "extracted_label": "Deposits",
+      "extracted_value": "1000",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:65:65",
+      "extracted_label": "At beginning and end of the year",
+      "extracted_value": "100000",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:67:67",
+      "extracted_label": "Deposits",
+      "extracted_value": "800",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:64:64",
+      "extracted_label": "Prepayments",
+      "extracted_value": "100",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:68:68",
+      "extracted_label": "Auditors' remuneration",
+      "extracted_value": "800",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:77:77",
+      "extracted_label": "Over provision for taxation prior year",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:78:78",
+      "extracted_label": "Tax expenses for the year",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:71:71",
+      "extracted_label": "Provision based on these financial statements",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:72:72",
+      "extracted_label": "Over provision in prior year",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:79:79",
+      "extracted_label": "Professional fees",
+      "extracted_value": "32400",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:82:82",
+      "extracted_label": "Audit fees",
+      "extracted_value": "800",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:85:85",
+      "extracted_label": "Director's salaries",
+      "extracted_value": "34000",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_003",
+      "extracted_row_id": "case_003:candidate:92:92",
+      "extracted_label": "LOSS FOR THE YEAR",
+      "extracted_value": "-2686",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:9:9",
+      "extracted_label": "Loss after taxation",
+      "extracted_value": "-9915",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:10:10",
+      "extracted_label": "Accumulated losses brought forward",
+      "extracted_value": "-393318",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:12:12",
+      "extracted_label": "Ooi Boon Beng",
+      "extracted_value": "0",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:13:13",
+      "extracted_label": "Ung Ming Xian (f)",
+      "extracted_value": "0",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:14:14",
+      "extracted_label": "Property, plant and equipment",
+      "extracted_value": "2",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:15:15",
+      "extracted_label": "Total non-current assets",
+      "extracted_value": "2",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:16:16",
+      "extracted_label": "Other deposits",
+      "extracted_value": "2000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:20:20",
+      "extracted_label": "Share capital",
+      "extracted_value": "100000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:21:21",
+      "extracted_label": "Accumulated losses",
+      "extracted_value": "-403233",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:23:23",
+      "extracted_label": "Amount due to directors",
+      "extracted_value": "261493",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:24:24",
+      "extracted_label": "Total deferred liabilities",
+      "extracted_value": "261493",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:25:25",
+      "extracted_label": "Other payables and accruals",
+      "extracted_value": "44300",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:29:29",
+      "extracted_label": "Turnover",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:32:32",
+      "extracted_label": "Loss before taxation",
+      "extracted_value": "-9915",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:33:33",
+      "extracted_label": "Less : Taxation",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:34:34",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "-9915",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:35:35",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:36:36",
+      "extracted_label": "Loss for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Changes in Equity",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:37:37",
+      "extracted_label": "Cash flows from operating activities Loss before taxation",
+      "extracted_value": "-188217",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:38:38",
+      "extracted_label": "Decrease in property, plant and equipment",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:43:43",
+      "extracted_label": "Cash flows from investing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:44:44",
+      "extracted_label": "Cash flows from financing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:49:49",
+      "extracted_label": "Addition",
+      "extracted_value": "0",
+      "statement_type": "6. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:52:52",
+      "extracted_label": "At beginning and end of the year",
+      "extracted_value": "100000",
+      "statement_type": "6. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:50:50",
+      "extracted_label": "Charges for the year",
+      "extracted_value": "0",
+      "statement_type": "6. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:51:51",
+      "extracted_label": "1 1",
+      "extracted_value": "2",
+      "statement_type": "6. Amount Due To Director",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:56:56",
+      "extracted_label": "Loss before taxation",
+      "extracted_value": "-9915",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:53:53",
+      "extracted_label": "Auditor's remuneration",
+      "extracted_value": "600",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:55:55",
+      "extracted_label": "Research and development expenditure written off",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:59:59",
+      "extracted_label": "Tax expenses for the year",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:60:60",
+      "extracted_label": "TURNOVER",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:61:61",
+      "extracted_label": "Auditor's remuneration",
+      "extracted_value": "600",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:62:62",
+      "extracted_label": "Bank charges",
+      "extracted_value": "1",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:66:66",
+      "extracted_label": "Research and development expenditure written off",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_004",
+      "extracted_row_id": "case_004:candidate:71:71",
+      "extracted_label": "LOSS FOR THE YEAR",
+      "extracted_value": "-9915",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:10:10",
+      "extracted_label": "Accumulated losses brought forward",
+      "extracted_value": "-1018209",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:12:12",
+      "extracted_label": "Ooi Boon Beng",
+      "extracted_value": "0",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:13:13",
+      "extracted_label": "Ung Ming Xian (f)",
+      "extracted_value": "1",
+      "statement_type": "Directors Report",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:16:16",
+      "extracted_label": "Trade receivables JE",
+      "extracted_value": "13825",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:17:17",
+      "extracted_label": "Other receivables and deposits",
+      "extracted_value": "13850",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:21:21",
+      "extracted_label": "Share capital",
+      "extracted_value": "100000",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:22:22",
+      "extracted_label": "Accumulated Losses",
+      "extracted_value": "-1156406",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:24:24",
+      "extracted_label": "Term loan",
+      "extracted_value": "426344",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:25:25",
+      "extracted_label": "Amount due to directors",
+      "extracted_value": "1292972",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:27:27",
+      "extracted_label": "Other payables and accruals clean",
+      "extracted_value": "146856",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:28:28",
+      "extracted_label": "Term loan",
+      "extracted_value": "39554",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:32:32",
+      "extracted_label": "Turnover",
+      "extracted_value": "103832",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 3,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:37:37",
+      "extracted_label": "Staff costs",
+      "extracted_value": "4155",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:40:40",
+      "extracted_label": "Loss before taxation",
+      "extracted_value": "-138197",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:41:41",
+      "extracted_label": "Less : Taxation DRAFT F\u00c5Cate",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:45:45",
+      "extracted_label": "Cash flows from operating activities Loss before taxation",
+      "extracted_value": "-138197",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:46:46",
+      "extracted_label": "Adjustments for :- Depreciation of property, plant and equipment",
+      "extracted_value": "21449",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:52:52",
+      "extracted_label": "Cash flows from investing activities",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:59:59",
+      "extracted_label": "Addition",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:60:60",
+      "extracted_label": "Disposal",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:62:62",
+      "extracted_label": "Prior year",
+      "extracted_value": "-47",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:66:66",
+      "extracted_label": "Utilities deposits",
+      "extracted_value": "2000",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:73:73",
+      "extracted_label": "Accruals",
+      "extracted_value": "6700",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:71:71",
+      "extracted_label": "cal- og atunshown",
+      "extracted_value": "39554",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:78:78",
+      "extracted_label": "Loss before taxation",
+      "extracted_value": "-138917",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:74:74",
+      "extracted_label": "Audit fee",
+      "extracted_value": "700",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:75:75",
+      "extracted_label": "Directors' remuneration",
+      "extracted_value": "72000",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:82:82",
+      "extracted_label": "Tax expenses for the financial year",
+      "extracted_value": "0",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:83:83",
+      "extracted_label": "Sales",
+      "extracted_value": "103832",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:84:84",
+      "extracted_label": "Add : Purchases",
+      "extracted_value": "47589",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:85:85",
+      "extracted_label": "Less: Closing stocks",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:89:89",
+      "extracted_label": "OR",
+      "extracted_value": "4155",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:90:90",
+      "extracted_label": "Audit fee",
+      "extracted_value": "700",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 4,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:105:105",
+      "extracted_label": "Telephone & fax charges",
+      "extracted_value": "40",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:107:107",
+      "extracted_label": "Upkeep computer :unselected:",
+      "extracted_value": "300",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 2,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:116:116",
+      "extracted_label": "LOSS FOR THE YEAR",
+      "extracted_value": "-138197",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:9:9",
+      "extracted_label": "Siah Teong Ban",
+      "extracted_value": "1",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:10:10",
+      "extracted_label": "Lee Ah Kim",
+      "extracted_value": "1",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:11:11",
+      "extracted_label": "Other receivable",
+      "extracted_value": "400",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:12:12",
+      "extracted_label": "Total Asset",
+      "extracted_value": "400",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:13:13",
+      "extracted_label": "Contributed share capital",
+      "extracted_value": "2",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:14:14",
+      "extracted_label": "Accumulated loss",
+      "extracted_value": "-194548",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:15:15",
+      "extracted_label": "Capital Deficiency",
+      "extracted_value": "-194546",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:17:17",
+      "extracted_label": "Amount due to director",
+      "extracted_value": "192079",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:18:18",
+      "extracted_label": "Bank overdraft - unsecured",
+      "extracted_value": "1567",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:20:20",
+      "extracted_label": "Capital Deficiency and Liabilities",
+      "extracted_value": "400",
+      "statement_type": "Statement of Financial Position",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:23:23",
+      "extracted_label": "Loss before tax",
+      "extracted_value": "-13171",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:24:24",
+      "extracted_label": "Tax expense",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:25:25",
+      "extracted_label": "Loss after tax and representing total comprehensive loss for the year",
+      "extracted_value": "-13171",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:26:26",
+      "extracted_label": "Loss attributable to: Owners of the Company",
+      "extracted_value": "-13171",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:28:28",
+      "extracted_label": "Net loss for the year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:29:29",
+      "extracted_label": "Other comprehensive income for the year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:31:31",
+      "extracted_label": "Net loss for the year",
+      "extracted_value": "0",
+      "statement_type": "Statement of Comprehensive Income",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:34:34",
+      "extracted_label": "Loss before tax and working capital changes",
+      "extracted_value": "-13171",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:35:35",
+      "extracted_label": "Decrease in receivable",
+      "extracted_value": "0",
+      "statement_type": "Statement of Cash Flows",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:41:41",
+      "extracted_label": "Deposit",
+      "extracted_value": "400",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": true
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:42:42",
+      "extracted_label": "no par value 2",
+      "extracted_value": "2",
+      "statement_type": "Notes to the Financial Statements",
+      "reason": "multiple_plausible_reference_facts",
+      "candidate_fact_count": 5,
+      "current_prior_ambiguity": false
+    }
+  ]
+}

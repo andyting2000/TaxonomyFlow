@@ -1,0 +1,99 @@
+# Initial Mapping Quality 19C
+
+- Status: **PASS**
+- Generated: `2026-08-05T09:39:46Z`
+- Recall At 1: `1.0`
+- Recall At 3: `1.0`
+- Recall At 5: `1.0`
+- Recall At 8: `1.0`
+- Mean Reciprocal Rank: `1.0`
+- Exact Initial Mapping Accuracy: `0.8333`
+- Quality Gate: `true`
+
+## Evidence
+
+```json
+{
+  "feature": "19C",
+  "generated_at": "2026-08-05T09:39:46Z",
+  "status": "PASS",
+  "insertion_point": "Azure DI normalization -> #19A structure -> #19B classification -> #19C advisory artifact; legacy production mapping remains separate",
+  "changed_files": [
+    "config.py",
+    ".env.example",
+    ".env.docker.example",
+    "schemas.py",
+    "services/section_aware_taxonomy_concept_cards.py",
+    "services/section_aware_row_mapping_eligibility.py",
+    "services/section_aware_mapping_context_builder.py",
+    "services/section_aware_taxonomy_candidate_retriever.py",
+    "services/section_aware_candidate_scoring.py",
+    "services/section_aware_initial_mapping_llm.py",
+    "services/section_aware_initial_mapping.py",
+    "services/azure_di_production_extraction.py",
+    "routers/filings.py",
+    "tests/fixtures/section_aware_mapping/fixtures_19c.json",
+    "tests/section_aware_mapping_test_support.py",
+    "tests/test_section_aware_concept_cards.py",
+    "tests/test_section_aware_row_mapping_eligibility.py",
+    "tests/test_section_aware_mapping_context_builder.py",
+    "tests/test_section_aware_taxonomy_candidate_retriever.py",
+    "tests/test_section_aware_initial_mapping_llm.py",
+    "tests/test_initial_mapping_payload_boundary.py",
+    "tests/test_initial_mapping_artifact.py",
+    "tests/test_initial_mapping_api.py",
+    "tests/test_toc_aware_initial_mapping_integration.py",
+    "tests/test_initial_mapping_quality_report.py",
+    "tests/test_auth_backend_foundation.py",
+    "scripts/evaluate_section_aware_initial_mapping_19c.py",
+    "docs/toc_aware_template_native_pipeline.md",
+    "reports/section_aware_candidate_retrieval_19c.json",
+    "reports/section_aware_candidate_retrieval_19c.md",
+    "reports/bounded_initial_mapping_19c.json",
+    "reports/bounded_initial_mapping_19c.md",
+    "reports/initial_mapping_quality_19c.json",
+    "reports/initial_mapping_quality_19c.md",
+    "reports/initial_mapping_safety_19c.json",
+    "reports/initial_mapping_safety_19c.md",
+    "feature_list.json",
+    "PROGRESS.md"
+  ],
+  "feature_flags": {
+    "TOC_AWARE_TAXONOMY_CANDIDATE_RETRIEVAL_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_PERSISTENCE_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_LIVE_LLM_ENABLED": false,
+    "TOC_AWARE_INITIAL_MAPPING_MODE": "deterministic_only",
+    "TOC_AWARE_INITIAL_MAPPING_MAX_CANDIDATES": 8,
+    "TOC_AWARE_INITIAL_MAPPING_MAX_ROWS_PER_JOB": 5000,
+    "TOC_AWARE_INITIAL_MAPPING_ROW_TIMEOUT_SECONDS": 120,
+    "TOC_AWARE_INITIAL_MAPPING_MAX_CONCURRENT_CALLS": 1,
+    "TOC_AWARE_INITIAL_MAPPING_MIN_CANDIDATE_SCORE": 0.0
+  },
+  "registry_hash": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+  "concept_inventory_hash": "5b648a0ac86614dfa8f63c767273a91ae63aad6164e68b9fdcfc849b2a960205",
+  "taxonomy_version": "SSMxT_2022v1.0",
+  "verification": {
+    "focused_19c_tests": 31,
+    "full_backend_tests": 1406,
+    "live_provider_calls": 0
+  },
+  "recommended_next_feature": "Feature #19D - Populate advisory #19C mappings directly into editable template draft fields without creating final mappings.",
+  "report_type": "initial_mapping_quality_19c",
+  "summary": {
+    "recall_at_1": 1.0,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "recall_at_8": 1.0,
+    "mean_reciprocal_rank": 1.0,
+    "exact_initial_mapping_accuracy": 0.8333,
+    "quality_gate": true
+  },
+  "quality_gates": {
+    "candidate_recall_at_k_minimum": 0.9,
+    "exact_initial_mapping_accuracy_minimum": 0.8
+  },
+  "retrieval_and_mapping_reported_separately": true,
+  "expected_qnames_are_fixture_only_and_never_enter_prompts": true
+}
+```

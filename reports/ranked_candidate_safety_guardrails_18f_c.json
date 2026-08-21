@@ -1,0 +1,101 @@
+{
+  "run_metadata": {
+    "feature": "18F-C",
+    "generated_at": "2026-06-25T01:18:27Z",
+    "calibration_summary_report": "reports\\hybrid_candidate_calibration_summary_18f_b.json",
+    "recommended_profile_report": "reports\\hybrid_candidate_calibration_recommended_profile_18f_b.json",
+    "offline_only": true,
+    "design_only": true,
+    "dry_run_scaffold_only": true,
+    "ui_changed": false,
+    "api_changed": false,
+    "database_mutated": false,
+    "production_persistence_enabled": false,
+    "production_mapper_integrated": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "external_llm_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "guardrails": {
+    "feature_disabled_by_default": true,
+    "dry_run_only": true,
+    "persistence_forced_false": true,
+    "admin_only_by_default": true,
+    "balanced_profile_default": true,
+    "safe_for_auto_apply_always_false": true,
+    "requires_human_review_always_true": true,
+    "recommended_action_never_accept_apply_confirm": true,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "external_calls": 0,
+    "xbrl_generation": 0,
+    "arelle_runs": 0
+  },
+  "failure_modes": [
+    {
+      "failure": "feature flag disabled",
+      "behavior": "capabilities show disabled; generation fails closed"
+    },
+    {
+      "failure": "invalid profile",
+      "behavior": "safe RankedCandidateAdvisoryError"
+    },
+    {
+      "failure": "missing local report/input",
+      "behavior": "safe RankedCandidateAdvisoryError"
+    },
+    {
+      "failure": "persistence flag accidentally true",
+      "behavior": "effective allow_persistence remains false"
+    },
+    {
+      "failure": "unsupported mode",
+      "behavior": "effective mode remains dry_run"
+    },
+    {
+      "failure": "candidate with unsafe flags",
+      "behavior": "schema validation rejects or serializer forces safe values"
+    }
+  ],
+  "test_expectations": [
+    "disabled default fails closed",
+    "invalid profile fails closed",
+    "missing input report fails closed",
+    "max candidates per row is enforced",
+    "response contains no confirmed_tag_id mutation field",
+    "schema rejects unsafe candidate flags",
+    "service source contains no external call path"
+  ],
+  "residual_risk": [
+    "Backend API wiring still needs ownership and admin/feature-flag enforcement in #18F-D.",
+    "Persistence remains intentionally deferred.",
+    "Balanced profile still leaves 310 no-candidate rows and top3/top5 recall of 0.5825."
+  ],
+  "safety": {
+    "advisory_only": true,
+    "dry_run_only": true,
+    "persistence_enabled": false,
+    "auto_apply_enabled": false,
+    "auto_accept_enabled": false,
+    "auto_reject_enabled": false,
+    "safe_for_auto_apply_always_false": true,
+    "requires_human_review_always_true": true,
+    "confirmed_tag_id_mutation_allowed": false,
+    "final_mapping_mutation_allowed": false,
+    "ai_mapping_suggestion_mutation_allowed": false,
+    "external_llm_called": false,
+    "supervisor_called": false,
+    "qwen_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generation_allowed": false,
+    "arelle_run_allowed": false
+  }
+}

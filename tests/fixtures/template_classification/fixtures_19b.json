@@ -1,0 +1,158 @@
+{
+  "schema_version": "19B-fixtures-v1",
+  "fixtures": {
+    "A": {
+      "name": "obvious_primary_statements",
+      "cases": [
+        {
+          "canonical_section_type": "statement_of_changes_in_equity",
+          "title": "Statement of Changes in Equity",
+          "context": [],
+          "expected_code": "610000"
+        },
+        {
+          "canonical_section_type": "statement_of_financial_position",
+          "title": "Statement of Financial Position",
+          "context": ["Current assets", "Non-current liabilities"],
+          "expected_code": "210000"
+        },
+        {
+          "canonical_section_type": "income_statement",
+          "title": "Statement of Profit or Loss",
+          "context": ["Revenue", "Cost of sales", "Gross profit"],
+          "expected_code": "310000"
+        },
+        {
+          "canonical_section_type": "statement_of_cash_flows",
+          "title": "Statement of Cash Flows",
+          "context": ["Profit before tax", "Adjustments for depreciation"],
+          "expected_code": "520000"
+        }
+      ]
+    },
+    "B": {
+      "name": "narrative_only_primary_sections",
+      "canonical_section_types": [
+        "directors_report",
+        "statement_by_directors",
+        "statutory_declaration",
+        "independent_auditors_report",
+        "company_information"
+      ]
+    },
+    "C": {
+      "name": "numbered_child_notes",
+      "headings": [
+        "1. CORPORATE INFORMATION",
+        "2. SIGNIFICANT ACCOUNTING POLICIES",
+        "3(a) ISSUED CAPITAL"
+      ]
+    },
+    "D": {
+      "name": "one_note_spanning_multiple_pages",
+      "heading": "4. ISSUED CAPITAL",
+      "pages": [10, 11, 12]
+    },
+    "E": {
+      "name": "multiple_notes_on_one_page",
+      "headings": [
+        "5. ISSUED CAPITAL",
+        "6. RELATED PARTY TRANSACTIONS"
+      ],
+      "page": 13
+    },
+    "F": {
+      "name": "combined_note_multiple_templates",
+      "heading": "7. CORPORATE INFORMATION AND ISSUED CAPITAL",
+      "expected_codes": ["710000", "740000"]
+    },
+    "G": {
+      "name": "generic_note_requiring_context",
+      "heading": "8. OTHER INFORMATION",
+      "context": ["Balances with related parties"],
+      "expected_code": "750000"
+    },
+    "H": {
+      "name": "unknown_note",
+      "heading": "9. SEGMENT REPORTING",
+      "expected_outcome": "unassigned"
+    },
+    "I": {
+      "name": "ocr_noisy_heading",
+      "heading": "N0TE 10 - ISSUED CAPITAI",
+      "context": ["ordinary shares issued and fully paid"],
+      "expected_code": "740000"
+    },
+    "J": {
+      "name": "table_continuation_boundary",
+      "first_heading": "11. ISSUED CAPITAL",
+      "next_heading": "12. RELATED PARTY TRANSACTIONS",
+      "table_pages": [15, 16]
+    },
+    "K": {
+      "name": "method_qualified_primary_statement",
+      "canonical_section_type": "statement_of_financial_position",
+      "title": "Statement of Financial Position by Order of Liquidity Method",
+      "context": ["Assets and liabilities are presented in order of liquidity"],
+      "expected_code": "220000"
+    },
+    "L": {
+      "name": "tax_qualified_presentation_variant",
+      "canonical_section_type": "statement_of_comprehensive_income",
+      "title": "Statement of Comprehensive Income - Before Tax",
+      "context": ["Other comprehensive income before tax"],
+      "expected_code": "420000"
+    },
+    "M": {
+      "name": "invalid_llm_template_id",
+      "response": {
+        "outcome": "matched",
+        "assignments": [
+          {
+            "template_group_id": "999999",
+            "confidence": 0.9,
+            "evidence": ["invented ID"]
+          }
+        ],
+        "alternative_template_group_ids": [],
+        "requires_human_review": false,
+        "reason": "invalid"
+      }
+    },
+    "N": {
+      "name": "invalid_structured_response",
+      "response": "not-json"
+    },
+    "O": {
+      "name": "registry_hash_invalidates_artifact",
+      "stale_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "P": {
+      "name": "source_19a_artifact_missing",
+      "job_id": 9019
+    },
+    "Q": {
+      "name": "feature_disabled",
+      "flags": {
+        "classification": false,
+        "persistence": false,
+        "live_llm": false
+      }
+    },
+    "R": {
+      "name": "list_of_notes_taxonomy_leaf",
+      "heading": "13. LIST OF NOTES",
+      "expected_code": "730000"
+    },
+    "S": {
+      "name": "issued_capital_note",
+      "heading": "14. ISSUED CAPITAL",
+      "expected_code": "740000"
+    },
+    "T": {
+      "name": "related_party_transactions_note",
+      "heading": "15. RELATED PARTY TRANSACTIONS",
+      "expected_code": "750000"
+    }
+  }
+}

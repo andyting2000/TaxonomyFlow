@@ -1,0 +1,51 @@
+{
+  "fixture_id": "job68-candidate-context-overflow",
+  "source": "Minimized from the first Job 68 normalized-candidate row that exceeded the 19C row-context character limit; company-specific values are replaced.",
+  "row": {
+    "source_row_id": "job68-row-context-overflow",
+    "label": "Turnover",
+    "normalized_label": "turnover",
+    "row_type": "numeric_fact",
+    "current_value": "1",
+    "prior_value": "1",
+    "current_year": 2025,
+    "prior_year": 2024,
+    "page_number": 14,
+    "table_id": "table:5",
+    "table_headers": [],
+    "column_headers": [],
+    "provenance": {
+      "source": "normalized_azure_di_candidate",
+      "table_index": 5,
+      "row_index": 2
+    }
+  },
+  "section": {
+    "section_id": "section-6",
+    "subsection_id": null,
+    "section_title": "Statement of Comprehensive Income",
+    "canonical_section_type": "statement_of_comprehensive_income",
+    "classification_outcome": "matched",
+    "template_group_ids": [
+      "420000"
+    ],
+    "statement_families": [
+      "comprehensive_income"
+    ]
+  },
+  "limits": {
+    "max_characters": 12000,
+    "max_siblings": 4,
+    "max_ancestors": 3,
+    "max_descendants": 3,
+    "max_candidate_cards": 8,
+    "max_nearby_paragraphs": 2
+  },
+  "legacy_failure": {
+    "exception_class": "ValueError",
+    "safe_exception_message": "Row mapping context cannot fit the configured character limit",
+    "failing_function": "services.section_aware_mapping_context_builder._trim_to_character_limit",
+    "candidate_count": 8,
+    "residual_characters": 12455
+  }
+}

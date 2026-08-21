@@ -1,0 +1,339 @@
+{
+  "feature": "18F-G-D-hotfix-1",
+  "generated_at": "2026-07-25T15:42:36+08:00",
+  "result": "pass",
+  "before": {
+    "backend": {
+      "eligible": 46,
+      "high": 13,
+      "medium": 33,
+      "not_eligible": 81,
+      "already_reviewed": 23,
+      "remapping_executable": 1,
+      "revision_completed": 5
+    },
+    "frontend": {
+      "eligible": 2,
+      "high": 0,
+      "medium": 2,
+      "not_eligible": 128,
+      "already_reviewed": 23,
+      "remapping_executable": 1,
+      "revision_completed": 5
+    },
+    "difference": {
+      "eligible": 44,
+      "high": 13,
+      "medium": 31,
+      "not_eligible": -47,
+      "already_reviewed": 0,
+      "remapping_executable": 0,
+      "revision_completed": 0
+    },
+    "remapping_contract": {
+      "plan_available": 3,
+      "frontend_visible": 3,
+      "endpoint_executable": 1,
+      "plan_endpoint_difference": 2
+    }
+  },
+  "after": {
+    "backend": {
+      "total": 150,
+      "eligible": 46,
+      "review_executable": 46,
+      "batch_review_executable": 46,
+      "bounded_batch_selected": 30,
+      "high": 13,
+      "medium": 33,
+      "not_eligible": 81,
+      "already_reviewed": 23,
+      "remapping_executable": 1,
+      "revision_completed": 5
+    },
+    "frontend_derived": {
+      "total": 150,
+      "eligible": 46,
+      "review_executable": 46,
+      "batch_review_executable": 46,
+      "bounded_batch_selected": 30,
+      "high": 13,
+      "medium": 33,
+      "not_eligible": 81,
+      "already_reviewed": 23,
+      "remapping_executable": 1,
+      "revision_completed": 5
+    },
+    "difference": {
+      "total": 0,
+      "eligible": 0,
+      "review_executable": 0,
+      "batch_review_executable": 0,
+      "bounded_batch_selected": 0,
+      "high": 0,
+      "medium": 0,
+      "not_eligible": 0,
+      "already_reviewed": 0,
+      "remapping_executable": 0,
+      "revision_completed": 0
+    },
+    "remapping_contract": {
+      "plan_eligible": 1,
+      "plan_executable": 1,
+      "frontend_visible": 1,
+      "endpoint_predicate_executable": 1,
+      "all_differences_zero": true
+    }
+  },
+  "separate_actionability_counts": {
+    "policy_eligible": 46,
+    "supervisor_review_executable": 46,
+    "remapping_eligible": 1,
+    "remapping_executable": 1
+  },
+  "pass_requirement": {
+    "categories": [
+      "eligible",
+      "high",
+      "medium",
+      "already_reviewed",
+      "revision_completed",
+      "remapping_executable",
+      "not_eligible"
+    ],
+    "all_differences_zero": true
+  },
+  "jobs": [
+    {
+      "job_id": 59,
+      "company_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_status": "REVIEW",
+      "backend": {
+        "total": 50,
+        "eligible": 16,
+        "review_executable": 16,
+        "batch_review_executable": 16,
+        "bounded_batch_selected": 10,
+        "high": 4,
+        "medium": 12,
+        "not_eligible": 24,
+        "already_reviewed": 10,
+        "remapping_executable": 0,
+        "revision_completed": 3
+      },
+      "frontend_derived": {
+        "total": 50,
+        "eligible": 16,
+        "review_executable": 16,
+        "batch_review_executable": 16,
+        "bounded_batch_selected": 10,
+        "high": 4,
+        "medium": 12,
+        "not_eligible": 24,
+        "already_reviewed": 10,
+        "remapping_executable": 0,
+        "revision_completed": 3
+      },
+      "difference": {
+        "total": 0,
+        "eligible": 0,
+        "review_executable": 0,
+        "batch_review_executable": 0,
+        "bounded_batch_selected": 0,
+        "high": 0,
+        "medium": 0,
+        "not_eligible": 0,
+        "already_reviewed": 0,
+        "remapping_executable": 0,
+        "revision_completed": 0
+      },
+      "all_count_differences_zero": true,
+      "bounded_batch_limit": 10,
+      "item_invariants_pass": true,
+      "safety_summary": {
+        "planning_live_calls": 0,
+        "auto_review_calls": 0,
+        "auto_remap_calls": 0,
+        "external_calls": 0,
+        "supervisor_calls": 0,
+        "mapper_calls": 0,
+        "automatic_reviews": 0,
+        "automatic_remaps": 0,
+        "auto_apply_count": 0,
+        "auto_accept_count": 0,
+        "auto_reject_count": 0,
+        "confirmed_tag_id_mutations": 0,
+        "final_mapping_mutations": 0,
+        "human_review_required": true,
+        "requires_human_review_count": 50,
+        "safe_for_auto_apply_count": 0,
+        "estimated_live_calls": 0,
+        "estimated_manual_live_calls_if_all_eligible_selected": 10,
+        "eligible_over_manual_batch_limit": 6
+      }
+    },
+    {
+      "job_id": 60,
+      "company_name": "FINE BATIK SDN. BHD.",
+      "job_status": "REVIEW",
+      "backend": {
+        "total": 50,
+        "eligible": 15,
+        "review_executable": 15,
+        "batch_review_executable": 15,
+        "bounded_batch_selected": 10,
+        "high": 5,
+        "medium": 10,
+        "not_eligible": 32,
+        "already_reviewed": 3,
+        "remapping_executable": 0,
+        "revision_completed": 1
+      },
+      "frontend_derived": {
+        "total": 50,
+        "eligible": 15,
+        "review_executable": 15,
+        "batch_review_executable": 15,
+        "bounded_batch_selected": 10,
+        "high": 5,
+        "medium": 10,
+        "not_eligible": 32,
+        "already_reviewed": 3,
+        "remapping_executable": 0,
+        "revision_completed": 1
+      },
+      "difference": {
+        "total": 0,
+        "eligible": 0,
+        "review_executable": 0,
+        "batch_review_executable": 0,
+        "bounded_batch_selected": 0,
+        "high": 0,
+        "medium": 0,
+        "not_eligible": 0,
+        "already_reviewed": 0,
+        "remapping_executable": 0,
+        "revision_completed": 0
+      },
+      "all_count_differences_zero": true,
+      "bounded_batch_limit": 10,
+      "item_invariants_pass": true,
+      "safety_summary": {
+        "planning_live_calls": 0,
+        "auto_review_calls": 0,
+        "auto_remap_calls": 0,
+        "external_calls": 0,
+        "supervisor_calls": 0,
+        "mapper_calls": 0,
+        "automatic_reviews": 0,
+        "automatic_remaps": 0,
+        "auto_apply_count": 0,
+        "auto_accept_count": 0,
+        "auto_reject_count": 0,
+        "confirmed_tag_id_mutations": 0,
+        "final_mapping_mutations": 0,
+        "human_review_required": true,
+        "requires_human_review_count": 50,
+        "safe_for_auto_apply_count": 0,
+        "estimated_live_calls": 0,
+        "estimated_manual_live_calls_if_all_eligible_selected": 10,
+        "eligible_over_manual_batch_limit": 5
+      }
+    },
+    {
+      "job_id": 61,
+      "company_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "job_status": "REVIEW",
+      "backend": {
+        "total": 50,
+        "eligible": 15,
+        "review_executable": 15,
+        "batch_review_executable": 15,
+        "bounded_batch_selected": 10,
+        "high": 4,
+        "medium": 11,
+        "not_eligible": 25,
+        "already_reviewed": 10,
+        "remapping_executable": 1,
+        "revision_completed": 1
+      },
+      "frontend_derived": {
+        "total": 50,
+        "eligible": 15,
+        "review_executable": 15,
+        "batch_review_executable": 15,
+        "bounded_batch_selected": 10,
+        "high": 4,
+        "medium": 11,
+        "not_eligible": 25,
+        "already_reviewed": 10,
+        "remapping_executable": 1,
+        "revision_completed": 1
+      },
+      "difference": {
+        "total": 0,
+        "eligible": 0,
+        "review_executable": 0,
+        "batch_review_executable": 0,
+        "bounded_batch_selected": 0,
+        "high": 0,
+        "medium": 0,
+        "not_eligible": 0,
+        "already_reviewed": 0,
+        "remapping_executable": 0,
+        "revision_completed": 0
+      },
+      "all_count_differences_zero": true,
+      "bounded_batch_limit": 10,
+      "item_invariants_pass": true,
+      "safety_summary": {
+        "planning_live_calls": 0,
+        "auto_review_calls": 0,
+        "auto_remap_calls": 0,
+        "external_calls": 0,
+        "supervisor_calls": 0,
+        "mapper_calls": 0,
+        "automatic_reviews": 0,
+        "automatic_remaps": 0,
+        "auto_apply_count": 0,
+        "auto_accept_count": 0,
+        "auto_reject_count": 0,
+        "confirmed_tag_id_mutations": 0,
+        "final_mapping_mutations": 0,
+        "human_review_required": true,
+        "requires_human_review_count": 50,
+        "safe_for_auto_apply_count": 0,
+        "estimated_live_calls": 0,
+        "estimated_manual_live_calls_if_all_eligible_selected": 10,
+        "eligible_over_manual_batch_limit": 5
+      }
+    }
+  ],
+  "verification": {
+    "focused_backend": {
+      "command": "python -B -m unittest tests.test_supervisor_queue_actionability tests.test_supervisor_review_api -v",
+      "passed": 19,
+      "status": "passed"
+    },
+    "targeted_supervisor_mapping_ownership_regression": {
+      "command": "python -B -m unittest tests.test_supervisor_queue_actionability tests.test_supervisor_orchestration_policy tests.test_supervisor_mapping_orchestrator tests.test_supervisor_guided_mapping_correction tests.test_supervisor_production_review tests.test_supervisor_review_api tests.test_supervisor_review_persistence tests.test_supervisor_mapping_review tests.test_supervisor_llm_client tests.test_llm_taxonomy_mapping tests.test_user_isolation_filings -v",
+      "passed": 188,
+      "status": "passed"
+    },
+    "frontend": {
+      "command": "cd frontend; npm run test:auth",
+      "passed": 30,
+      "status": "passed"
+    },
+    "frontend_build": {
+      "command": "cd frontend; npm run build",
+      "modules_transformed": 1586,
+      "status": "passed"
+    },
+    "full_backend": {
+      "command": "python -B -m unittest discover -s tests -p \"test_*.py\" -v",
+      "passed": 1249,
+      "status": "passed"
+    }
+  }
+}

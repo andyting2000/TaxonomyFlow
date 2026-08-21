@@ -1,0 +1,60 @@
+{
+  "feature_id": "18F-G-C",
+  "generated_at": "2026-07-23T14:35:12.926815+00:00",
+  "status": "complete",
+  "calibration_sample": {
+    "total_suggestions": 150,
+    "eligible": 47,
+    "eligibility_rate": 0.3133,
+    "high_priority": 13,
+    "medium_priority": 34
+  },
+  "frontend_flag": {
+    "name": "VITE_SHOW_SUPERVISOR_ORCHESTRATION_QUEUE",
+    "default": false,
+    "security_control": false,
+    "backend_authoritative": true
+  },
+  "placement": "Compact queue summary inside AI Mapping Suggestions",
+  "endpoints_consumed": [
+    "GET /api/v1/filings/jobs/{job_id}/supervisor-orchestration/capabilities",
+    "GET /api/v1/filings/jobs/{job_id}/supervisor-orchestration/plan"
+  ],
+  "summary_fields": [
+    "total suggestions",
+    "eligible",
+    "high priority",
+    "medium priority",
+    "already reviewed",
+    "remapping available",
+    "revisions completed",
+    "blocked",
+    "not eligible"
+  ],
+  "filters": [
+    "all",
+    "eligible unreviewed",
+    "high priority",
+    "medium priority",
+    "already reviewed",
+    "remapping available",
+    "revision completed",
+    "not eligible"
+  ],
+  "manual_actions": {
+    "single_supervisor_review": true,
+    "bounded_batch_review": true,
+    "guided_remapping": true,
+    "automatic_action": false
+  },
+  "verification": {
+    "frontend_tests": "npm run test:auth passed 30 tests",
+    "frontend_build": "npm run build passed; 1,586 modules transformed",
+    "focused_backend": "orchestration policy/orchestrator/review API passed 46 tests",
+    "supervisor_discovery": "152 tests passed",
+    "mapping_ownership_admin": "69 tests passed",
+    "full_backend": "1,243 tests passed in 32.062 seconds",
+    "app_import": "app_import_ok 81"
+  },
+  "recommended_next_feature": "Feature #18F-G-D - Run end-to-end Supervisor orchestration queue smoke and UX calibration"
+}

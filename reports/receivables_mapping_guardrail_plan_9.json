@@ -1,0 +1,613 @@
+{
+  "classification_summary": {
+    "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy": 15,
+    "likely_valid_receivable_summary": 3
+  },
+  "database_modified": false,
+  "duplicate_group_evidence": {
+    "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+    "contextRef": "asof_20241231_SeparateMember",
+    "count": 18,
+    "unitRef": "MYR"
+  },
+  "feature": "11M",
+  "full_mbrs_validation_claimed": false,
+  "generated_xbrl_modified": false,
+  "guardrail_recommendation": {
+    "aggregation_or_dimension_policy_needed": true,
+    "block_automatic_detail_row_mapping": true,
+    "code_changes_justified_next": true,
+    "existing_job_9_persisted_row_recommendation": "If a future guardrail is approved, create a dry-run exact-row plan for affected job 9 rows; clear only automatic template_field_id for rows that fail the guardrail, preserve label/value/statement_type/confirmed_tag_id, and assign no replacement concept.",
+    "invent_replacement_concepts": false,
+    "leave_concept_unchanged_for_summary_rows": true,
+    "manual_confirmation_for_company_like_labels": true,
+    "recommended_11N_scope": "Add a receivables guardrail/high-confidence rule for company/customer detail labels and prepare a dry-run persisted-row correction plan only after the guardrail design is accepted.",
+    "require_high_confidence": true
+  },
+  "job_id": 9,
+  "mapping_behavior_changed": false,
+  "mode": "read_only_planning",
+  "planning_answers": {
+    "aggregation_or_dimension_problem": true,
+    "are_repeated_facts_summary_detail_or_incorrect": "The job 9 repeated facts are primarily customer/company-like detail rows and OTHER DEBTOR detail rows, not a single receivables summary line. They should not be emitted repeatedly with the same concept/context/unit without manual confirmation, aggregation, or dimensional policy.",
+    "existing_persisted_job_9_rows": "If a future guardrail is approved, create a dry-run exact-row plan for affected job 9 rows; clear only automatic template_field_id for rows that fail the guardrail, preserve label/value/statement_type/confirmed_tag_id, and assign no replacement concept.",
+    "manual_confirmation_when_label_looks_like_company_or_customer": true,
+    "should_block_automatic_detail_row_mapping": true,
+    "should_require_high_confidence_only": true
+  },
+  "read_only": true,
+  "row_count": 18,
+  "rows": [
+    {
+      "classification": "likely_valid_receivable_summary",
+      "classification_reason": "Label explicitly describes a receivable/debtor summary line.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "OTHER DEBTOR - IH(I.T)",
+      "extracted_value": "48,552.00",
+      "generated_value": "48552.00",
+      "item_id": "102e52f6-128a-4df3-a0e3-ecce84443513",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": false,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "allow automatic mapping only when high-confidence summary evidence exists",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "CORPSEC SERVICES SDN BHD",
+      "extracted_value": "864.00",
+      "generated_value": "864.00",
+      "item_id": "28f6863e-f183-4cc0-ad1f-8dd84c9c2dc0",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "ASIAN SECRETS SDN BHD",
+      "extracted_value": "4,800.00",
+      "generated_value": "4800.00",
+      "item_id": "304ee8c1-5e4c-4526-ad41-030bac0cdcad",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "MALAYSIAN RESOURCES CORPORATION BHD",
+      "extracted_value": "4,320.00",
+      "generated_value": "4320.00",
+      "item_id": "41ecf65a-e5f6-4868-b757-7354d40cd77e",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "PERMODALAN NASIONAL BERHAD",
+      "extracted_value": "139,320.00",
+      "generated_value": "139320.00",
+      "item_id": "4edab752-d38a-4e10-ba1d-a87fd64ce4b3",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "KINGDOM ADVISORY SDN BHD",
+      "extracted_value": "2,365.20",
+      "generated_value": "2365.20",
+      "item_id": "5532d0ac-9618-4046-bb03-cce4a0ea787a",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "INFO HOUSE (M) SDN BHD",
+      "extracted_value": "8,300.00",
+      "generated_value": "8300.00",
+      "item_id": "58b0af2e-493f-4212-9873-c422b26c7e6a",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+      "extracted_value": "1,512.00",
+      "generated_value": "1512.00",
+      "item_id": "634493c4-bdd9-457c-b004-0928c300ae9a",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_summary",
+      "classification_reason": "Label explicitly describes a receivable/debtor summary line.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "OTHER DEBTOR - RH",
+      "extracted_value": "2,700.00",
+      "generated_value": "2700.00",
+      "item_id": "84138f4e-8313-43ef-8031-dc84f5e48048",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": false,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "allow automatic mapping only when high-confidence summary evidence exists",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "ADISS CONSULTANTS SDN BHD",
+      "extracted_value": "1,080.00",
+      "generated_value": "1080.00",
+      "item_id": "86fbe7ae-2c9c-42fe-ac17-b295b003d768",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "BBS TRUST INT'L LIMITED",
+      "extracted_value": "438.48",
+      "generated_value": "438.48",
+      "item_id": "91a0dfda-c0e2-41f3-9c47-f2af573f4fb2",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "CEO CORPORATE SERVICES SDN. BHD.",
+      "extracted_value": "756.00",
+      "generated_value": "756.00",
+      "item_id": "b473acd8-bd03-4920-9446-9eb60a58ddb4",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+      "extracted_value": "972.00",
+      "generated_value": "972.00",
+      "item_id": "b585f55d-f11c-4bbc-9288-6970206981f3",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "BEZLIFE MARKETING SDN BHD",
+      "extracted_value": "13,000.00",
+      "generated_value": "13000.00",
+      "item_id": "bc3578cd-a6e6-467e-9504-7bc3acf27a19",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+      "extracted_value": "10,368.00",
+      "generated_value": "10368.00",
+      "item_id": "c556e150-1a3b-4bbb-a769-a91bb089bc1b",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_summary",
+      "classification_reason": "Label explicitly describes a receivable/debtor summary line.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "OTHER DEBTOR - AS",
+      "extracted_value": "133,279.62",
+      "generated_value": "133279.62",
+      "item_id": "d975d208-bc7f-40d1-9701-b167147cdfa3",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": false,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "allow automatic mapping only when high-confidence summary evidence exists",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "QINETICS MSP SDN BHD",
+      "extracted_value": "8,500.00",
+      "generated_value": "8500.00",
+      "item_id": "e79c58f0-ae87-4ebd-add3-90488bc6d8e9",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    },
+    {
+      "classification": "likely_valid_receivable_detail_but_needs_dimension_or_aggregation_policy",
+      "classification_reason": "Label looks like a customer/company detail row; it may be receivable detail, but should not become repeated same-context summary facts without manual confirmation or an aggregation/dimension policy.",
+      "confirmed_tag_id": null,
+      "contextRef": "asof_20241231_SeparateMember",
+      "current_template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "duplicate_group_membership": {
+        "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+        "contextRef": "asof_20241231_SeparateMember",
+        "count": 18,
+        "unitRef": "MYR"
+      },
+      "extracted_label": "AMK CORPORATION SERVICES SDN BHD",
+      "extracted_value": "475.20",
+      "generated_value": "475.20",
+      "item_id": "f2b6d4ea-b0c1-4a30-a25e-68e48a81c70a",
+      "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+      "page_number": 1,
+      "proposed_action": {
+        "assign_replacement_concept": false,
+        "manual_review_required": true,
+        "preserve_extracted_label": true,
+        "preserve_extracted_value": true,
+        "recommended_future_behavior": "require manual confirmation or aggregation/dimension policy before generating repeated same-context facts",
+        "replacement_concept_id": null
+      },
+      "resolved_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "resolved_concept_label": "Trade and other current receivables",
+      "statement_type": "Statement of Financial Position",
+      "unitRef": "MYR"
+    }
+  ],
+  "sign_normalization_deferred": true,
+  "source_label_summary": {
+    "company_or_customer_like_count": 15,
+    "explicit_receivable_summary_count": 3,
+    "non_receivable_evidence_count": 0
+  },
+  "source_reports": {
+    "generated_instance_audit_report": "reports\\generated_instance_audit_report_9.json",
+    "generated_instance_quality_triage_report": "reports\\generated_instance_quality_triage_report_9.json",
+    "mapping_sign_policy_fix_design": "reports\\mapping_sign_policy_fix_design_9.json"
+  },
+  "target_concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+  "xbrl_path": "uploads\\xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl"
+}

@@ -1,0 +1,4196 @@
+{
+  "run_metadata": {
+    "feature": "17D-pre",
+    "generated_at": "2026-06-08T02:16:43Z",
+    "external_llm_called": false,
+    "local_only": true
+  },
+  "samples": [
+    {
+      "sample_label": "contributed share capital",
+      "row": {
+        "label": "contributed share capital",
+        "value": "1000",
+        "statement_type": "Statement of Financial Position"
+      },
+      "candidate_count": 2,
+      "retrieved_card_count": 2,
+      "top_concept_qnames": [
+        "ifrs-smes:Equity",
+        "ifrs-smes:EquityAndLiabilities"
+      ],
+      "row_semantic_families": [
+        "equity",
+        "share_capital"
+      ],
+      "expected_semantic_families": [
+        "equity",
+        "share_capital"
+      ],
+      "matching_concept_card_available": true,
+      "missing_relevant_concept_card": false,
+      "missing_reason": null,
+      "available_matching_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:EquityAndLiabilities",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "canonical_label": "Equity and liabilities",
+          "statement_families_observed": [
+            "Statement of Financial Position",
+            "Amount Due To Director"
+          ],
+          "common_extracted_labels": [
+            "TOTAL EQUITY AND LIABILITIES",
+            "TOTAL EQUITY AND LIABILITIES DRAFT WIE"
+          ],
+          "normalized_label_patterns": [
+            "total equity and liabilities",
+            "total equity and liabilities draft wie"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "capital deficiency",
+            "equity",
+            "owners equity"
+          ],
+          "semantic_families": [
+            "broad_subtotal",
+            "equity",
+            "liability"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position",
+            "Amount Due To Director"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:CurrentAssets",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Capital Deficiency and Liabilities",
+                "Total Asset"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:Assets",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Total Asset"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Capital Deficiency and Liabilities"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 5,
+          "quality": "strong"
+        },
+        {
+          "concept_qname": "ifrs-smes:Equity",
+          "template_field_id": "ifrs-smes:Equity",
+          "canonical_label": "Equity at beginning of period",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Total equity"
+          ],
+          "normalized_label_patterns": [
+            "total equity"
+          ],
+          "accounting_synonyms": [
+            "capital deficiency",
+            "equity",
+            "owners equity",
+            "shareholders equity"
+          ],
+          "semantic_families": [
+            "equity"
+          ],
+          "typical_value_nature": "negative",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:EquityBalanceRestated",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 12,
+              "example_labels": [
+                "Accumulated Losses",
+                "Accumulated loss",
+                "Accumulated losses"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:RetainedEarnings",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 8,
+              "example_labels": [
+                "Accumulated Losses",
+                "Accumulated loss",
+                "Accumulated losses"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:EquityAttributableToOwnersOfParent",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Capital Deficiency",
+                "Total shareholders' equity"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 4,
+          "quality": "moderate"
+        }
+      ],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:Equity",
+          "template_field_id": "ifrs-smes:Equity",
+          "canonical_label": "Equity at beginning of period",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Total equity"
+          ],
+          "normalized_label_patterns": [
+            "total equity"
+          ],
+          "accounting_synonyms": [
+            "capital deficiency",
+            "equity",
+            "owners equity",
+            "shareholders equity"
+          ],
+          "semantic_families": [
+            "equity"
+          ],
+          "typical_value_nature": "negative",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:EquityBalanceRestated",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 12,
+              "example_labels": [
+                "Accumulated Losses",
+                "Accumulated loss",
+                "Accumulated losses"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:RetainedEarnings",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 8,
+              "example_labels": [
+                "Accumulated Losses",
+                "Accumulated loss",
+                "Accumulated losses"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:EquityAttributableToOwnersOfParent",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Capital Deficiency",
+                "Total shareholders' equity"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 4,
+          "quality": "moderate",
+          "retrieval_score": 11.9903,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "equity",
+              "liability"
+            ],
+            "candidate_family_overlap": [],
+            "row_semantic_families": [
+              "equity",
+              "share_capital"
+            ],
+            "expected_semantic_families": [
+              "equity",
+              "share_capital"
+            ],
+            "card_semantic_families": [
+              "equity"
+            ],
+            "row_family_overlap": [
+              "equity"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.2162,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.3,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.15,
+            "support_boost": 0.08
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:EquityAndLiabilities",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "canonical_label": "Equity and liabilities",
+          "statement_families_observed": [
+            "Statement of Financial Position",
+            "Amount Due To Director"
+          ],
+          "common_extracted_labels": [
+            "TOTAL EQUITY AND LIABILITIES",
+            "TOTAL EQUITY AND LIABILITIES DRAFT WIE"
+          ],
+          "normalized_label_patterns": [
+            "total equity and liabilities",
+            "total equity and liabilities draft wie"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "capital deficiency",
+            "equity",
+            "owners equity"
+          ],
+          "semantic_families": [
+            "broad_subtotal",
+            "equity",
+            "liability"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position",
+            "Amount Due To Director"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:CurrentAssets",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Capital Deficiency and Liabilities",
+                "Total Asset"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:Assets",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Total Asset"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Capital Deficiency and Liabilities"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 5,
+          "quality": "strong",
+          "retrieval_score": 9.7091,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "equity",
+              "liability"
+            ],
+            "candidate_family_overlap": [],
+            "row_semantic_families": [
+              "equity",
+              "share_capital"
+            ],
+            "expected_semantic_families": [
+              "equity",
+              "share_capital"
+            ],
+            "card_semantic_families": [
+              "broad_subtotal",
+              "equity",
+              "liability"
+            ],
+            "row_family_overlap": [
+              "equity"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.2553,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.3,
+            "penalties": {
+              "broad_subtotal_for_specific_label": 2.5
+            },
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.3,
+            "support_boost": 0.1
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": [
+        {
+          "retrieval_score": 2.8019,
+          "extracted_label": "TOTAL EQUITY AND LIABILITIES",
+          "statement_type": "Statement of Financial Position",
+          "mapped_concept_qname": "ifrs-smes:EquityAndLiabilities",
+          "mapped_template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "source_case_id": "case_002",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 2.8019,
+          "extracted_label": "TOTAL EQUITY AND LIABILITIES",
+          "statement_type": "Statement of Financial Position",
+          "mapped_concept_qname": "ifrs-smes:EquityAndLiabilities",
+          "mapped_template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "source_case_id": "case_003",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 2.8019,
+          "extracted_label": "TOTAL EQUITY AND LIABILITIES",
+          "statement_type": "Statement of Financial Position",
+          "mapped_concept_qname": "ifrs-smes:EquityAndLiabilities",
+          "mapped_template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "source_case_id": "case_004",
+          "evidence_reason": "clear_high_evidence_alignment"
+        }
+      ]
+    },
+    {
+      "sample_label": "bank overdraft",
+      "row": {
+        "label": "bank overdraft",
+        "value": "1000",
+        "statement_type": "Statement of Financial Position"
+      },
+      "candidate_count": 3,
+      "retrieved_card_count": 2,
+      "top_concept_qnames": [
+        "ssmt:CashAndBankBalances",
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "row_semantic_families": [
+        "liability",
+        "overdraft"
+      ],
+      "expected_semantic_families": [
+        "overdraft"
+      ],
+      "matching_concept_card_available": false,
+      "missing_relevant_concept_card": true,
+      "missing_reason": "no_matching_concept_card_available_in_local_playbook",
+      "available_matching_concept_cards": [],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ssmt:CashAndBankBalances",
+          "template_field_id": "ssmt:CashAndBankBalances",
+          "canonical_label": "Total cash and cash equivalents",
+          "statement_families_observed": [
+            "Statement of Financial Position",
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Bank balances"
+          ],
+          "normalized_label_patterns": [
+            "bank balances"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "bank overdraft",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents",
+            "overdraft",
+            "secured overdraft"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position",
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:BalancesWithBanks",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash at bank"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:Cash",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash at bank"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at end of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 8,
+          "quality": "strong",
+          "retrieval_score": 10.4531,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "overdraft"
+            ],
+            "expected_semantic_families": [
+              "overdraft"
+            ],
+            "card_semantic_families": [
+              "cash"
+            ],
+            "row_family_overlap": [],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.4444,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.125,
+            "penalties": {
+              "cash_bank_mismatch": 1.5
+            },
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.3,
+            "support_boost": 0.16
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+          "template_field_id": "ifrs-smes:CashAndCashEquivalents",
+          "canonical_label": "Cash and cash equivalents at end of period",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Cash and cash equivalents at beginning of year",
+            "Cash and cash equivalents at the end of year",
+            "Cash and cash equivalent at beginning of the year",
+            "Cash and cash equivalent at the end of the year",
+            "Cash and cash equivalents at beginning of the year"
+          ],
+          "normalized_label_patterns": [
+            "cash and cash equivalents at beginning of year",
+            "cash and cash equivalents at the end of year",
+            "cash and cash equivalent at beginning of the year",
+            "cash and cash equivalent at the end of the year",
+            "cash and cash equivalents at beginning of the year"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005",
+            "case_006"
+          ],
+          "support_count": 10,
+          "quality": "strong",
+          "retrieval_score": 9.7596,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "overdraft"
+            ],
+            "expected_semantic_families": [
+              "overdraft"
+            ],
+            "card_semantic_families": [
+              "cash"
+            ],
+            "row_family_overlap": [],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.3077,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.25,
+            "penalties": {
+              "cash_bank_mismatch": 1.5
+            },
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.3,
+            "support_boost": 0.2
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": []
+    },
+    {
+      "sample_label": "other receivable",
+      "row": {
+        "label": "other receivable",
+        "value": "1000",
+        "statement_type": "Statement of Financial Position"
+      },
+      "candidate_count": 2,
+      "retrieved_card_count": 2,
+      "top_concept_qnames": [
+        "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+        "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable"
+      ],
+      "row_semantic_families": [
+        "asset",
+        "receivable"
+      ],
+      "expected_semantic_families": [
+        "receivable"
+      ],
+      "matching_concept_card_available": true,
+      "missing_relevant_concept_card": false,
+      "missing_reason": null,
+      "available_matching_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "canonical_label": "Adjustments for decrease (increase) in trade accounts receivable",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Decrease in trade and other receivables",
+            "(Decrease)/ Increase in trade and other receivables",
+            "Decrease / (Increase) in trade and other receivables"
+          ],
+          "normalized_label_patterns": [
+            "decrease increase in trade and other receivables",
+            "decrease in trade and other receivables"
+          ],
+          "accounting_synonyms": [
+            "amount due from",
+            "amount due to",
+            "creditor",
+            "debtor",
+            "other payable",
+            "other receivable",
+            "payable",
+            "payables"
+          ],
+          "semantic_families": [
+            "asset",
+            "receivable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_005"
+          ],
+          "support_count": 3,
+          "quality": "moderate"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "canonical_label": "Other current non-trade receivables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other receivables"
+          ],
+          "normalized_label_patterns": [
+            "other receivables"
+          ],
+          "accounting_synonyms": [
+            "amount due from",
+            "amount due to",
+            "creditor",
+            "debtor",
+            "other payable",
+            "other receivable",
+            "payable",
+            "payables"
+          ],
+          "semantic_families": [
+            "asset",
+            "receivable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:ChangesInEquity",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:NoncurrentProvisionsForEmployeeBenefits",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_003",
+            "case_005"
+          ],
+          "support_count": 2,
+          "quality": "moderate"
+        }
+      ],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "canonical_label": "Other current non-trade receivables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other receivables"
+          ],
+          "normalized_label_patterns": [
+            "other receivables"
+          ],
+          "accounting_synonyms": [
+            "amount due from",
+            "amount due to",
+            "creditor",
+            "debtor",
+            "other payable",
+            "other receivable",
+            "payable",
+            "payables"
+          ],
+          "semantic_families": [
+            "asset",
+            "receivable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:ChangesInEquity",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:NoncurrentProvisionsForEmployeeBenefits",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_003",
+            "case_005"
+          ],
+          "support_count": 2,
+          "quality": "moderate",
+          "retrieval_score": 14.79,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "asset",
+              "receivable"
+            ],
+            "candidate_family_overlap": [
+              "receivable"
+            ],
+            "row_semantic_families": [
+              "asset",
+              "receivable"
+            ],
+            "expected_semantic_families": [
+              "receivable"
+            ],
+            "card_semantic_families": [
+              "asset",
+              "receivable"
+            ],
+            "row_family_overlap": [
+              "receivable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.1667,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.15,
+            "support_boost": 0.04
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "canonical_label": "Adjustments for decrease (increase) in trade accounts receivable",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Decrease in trade and other receivables",
+            "(Decrease)/ Increase in trade and other receivables",
+            "Decrease / (Increase) in trade and other receivables"
+          ],
+          "normalized_label_patterns": [
+            "decrease increase in trade and other receivables",
+            "decrease in trade and other receivables"
+          ],
+          "accounting_synonyms": [
+            "amount due from",
+            "amount due to",
+            "creditor",
+            "debtor",
+            "other payable",
+            "other receivable",
+            "payable",
+            "payables"
+          ],
+          "semantic_families": [
+            "asset",
+            "receivable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_005"
+          ],
+          "support_count": 3,
+          "quality": "moderate",
+          "retrieval_score": 14.3373,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "asset",
+              "receivable"
+            ],
+            "candidate_family_overlap": [
+              "receivable"
+            ],
+            "row_semantic_families": [
+              "asset",
+              "receivable"
+            ],
+            "expected_semantic_families": [
+              "receivable"
+            ],
+            "card_semantic_families": [
+              "asset",
+              "receivable"
+            ],
+            "row_family_overlap": [
+              "receivable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.5818,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.3333,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.15,
+            "support_boost": 0.06
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": [
+        {
+          "retrieval_score": 3.35,
+          "extracted_label": "Other receivables",
+          "statement_type": "Notes to the Financial Statements",
+          "mapped_concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "mapped_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "source_case_id": "case_003",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.35,
+          "extracted_label": "Other receivables",
+          "statement_type": "Notes to the Financial Statements",
+          "mapped_concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "mapped_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "source_case_id": "case_005",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 2.5136,
+          "extracted_label": "Decrease in trade and other receivables",
+          "statement_type": "Statement of Cash Flows",
+          "mapped_concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "mapped_template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "source_case_id": "case_002",
+          "evidence_reason": "clear_high_evidence_alignment"
+        }
+      ]
+    },
+    {
+      "sample_label": "other payable",
+      "row": {
+        "label": "other payable",
+        "value": "1000",
+        "statement_type": "Statement of Financial Position"
+      },
+      "candidate_count": 6,
+      "retrieved_card_count": 5,
+      "top_concept_qnames": [
+        "ssmt-mpers:CurrentNontradePayables",
+        "ssmt-mpers:OtherCurrentNontradePayables",
+        "ssmt-mpers:OtherNoncurrentNontradePayables",
+        "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+        "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable"
+      ],
+      "row_semantic_families": [
+        "liability",
+        "payable"
+      ],
+      "expected_semantic_families": [
+        "payable"
+      ],
+      "matching_concept_card_available": true,
+      "missing_relevant_concept_card": false,
+      "missing_reason": null,
+      "available_matching_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "canonical_label": "Adjustments for increase (decrease) in other operating payables",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in other payables and accruals",
+            "Increase / (Decrease) in trade and other payables"
+          ],
+          "normalized_label_patterns": [
+            "increase in other payables and accruals",
+            "increase decrease in trade and other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "administration expenses",
+            "administrative expenses",
+            "amount due from"
+          ],
+          "semantic_families": [
+            "accrual",
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_002",
+            "case_004"
+          ],
+          "support_count": 2,
+          "quality": "moderate"
+        },
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "canonical_label": "Adjustments for increase (decrease) in trade accounts payable",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in amount due to director"
+          ],
+          "normalized_label_patterns": [
+            "increase in amount due to director"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_004"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:CurrentNontradePayables",
+          "canonical_label": "Total current non-trade payables",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Other payable"
+          ],
+          "normalized_label_patterns": [
+            "other payable"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Increase in other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_006"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "canonical_label": "Other current non-trade payables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other payables"
+          ],
+          "normalized_label_patterns": [
+            "other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:NoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:OtherNoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:OtherReserves",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Other payables"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "template_field_id": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "canonical_label": "Other non-current liabilities",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Amount due to director a"
+          ],
+          "normalized_label_patterns": [
+            "amount due to director a"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due to",
+            "creditor",
+            "other payable"
+          ],
+          "semantic_families": [
+            "broad_subtotal",
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        }
+      ],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:CurrentNontradePayables",
+          "canonical_label": "Total current non-trade payables",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Other payable"
+          ],
+          "normalized_label_patterns": [
+            "other payable"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Increase in other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_006"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 18.206,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "expected_semantic_families": [
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 1.0,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.12,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "canonical_label": "Other current non-trade payables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other payables"
+          ],
+          "normalized_label_patterns": [
+            "other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:NoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:OtherNoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:OtherReserves",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Other payables"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 14.606,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "expected_semantic_families": [
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.12,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:OtherNoncurrentNontradePayables",
+          "canonical_label": "Other non-current non-trade payables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other payables"
+          ],
+          "normalized_label_patterns": [
+            "other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_005"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 14.606,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "expected_semantic_families": [
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.12,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "canonical_label": "Adjustments for increase (decrease) in other operating payables",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in other payables and accruals",
+            "Increase / (Decrease) in trade and other payables"
+          ],
+          "normalized_label_patterns": [
+            "increase in other payables and accruals",
+            "increase decrease in trade and other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "administration expenses",
+            "administrative expenses",
+            "amount due from"
+          ],
+          "semantic_families": [
+            "accrual",
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_002",
+            "case_004"
+          ],
+          "support_count": 2,
+          "quality": "moderate",
+          "retrieval_score": 14.175,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "expected_semantic_families": [
+              "payable"
+            ],
+            "card_semantic_families": [
+              "accrual",
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.5,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.2,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.15,
+            "support_boost": 0.04
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "canonical_label": "Adjustments for increase (decrease) in trade accounts payable",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in amount due to director"
+          ],
+          "normalized_label_patterns": [
+            "increase in amount due to director"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_004"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 13.7793,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "expected_semantic_families": [
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.3099,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.24,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": [
+        {
+          "retrieval_score": 4.2,
+          "extracted_label": "Other payable",
+          "statement_type": "Statement of Financial Position",
+          "mapped_concept_qname": "ssmt-mpers:CurrentNontradePayables",
+          "mapped_template_field_id": "ssmt-mpers:CurrentNontradePayables",
+          "source_case_id": "case_006",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.2,
+          "extracted_label": "Other payables",
+          "statement_type": "Notes to the Financial Statements",
+          "mapped_concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+          "mapped_template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "source_case_id": "case_002",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.2,
+          "extracted_label": "Other payables",
+          "statement_type": "Notes to the Financial Statements",
+          "mapped_concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+          "mapped_template_field_id": "ssmt-mpers:OtherNoncurrentNontradePayables",
+          "source_case_id": "case_005",
+          "evidence_reason": "clear_high_evidence_alignment"
+        }
+      ]
+    },
+    {
+      "sample_label": "accruals",
+      "row": {
+        "label": "accruals",
+        "value": "1000",
+        "statement_type": "Statement of Financial Position"
+      },
+      "candidate_count": 7,
+      "retrieved_card_count": 5,
+      "top_concept_qnames": [
+        "ssmt-mpers:CurrentNontradeAccruals",
+        "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+        "ssmt-mpers:CurrentNontradePayables",
+        "ssmt-mpers:OtherCurrentNontradePayables",
+        "ssmt-mpers:OtherNoncurrentNontradePayables"
+      ],
+      "row_semantic_families": [
+        "accrual",
+        "liability"
+      ],
+      "expected_semantic_families": [
+        "accrual",
+        "payable"
+      ],
+      "matching_concept_card_available": true,
+      "missing_relevant_concept_card": false,
+      "missing_reason": null,
+      "available_matching_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "canonical_label": "Adjustments for increase (decrease) in other operating payables",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in other payables and accruals",
+            "Increase / (Decrease) in trade and other payables"
+          ],
+          "normalized_label_patterns": [
+            "increase in other payables and accruals",
+            "increase decrease in trade and other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "administration expenses",
+            "administrative expenses",
+            "amount due from"
+          ],
+          "semantic_families": [
+            "accrual",
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_002",
+            "case_004"
+          ],
+          "support_count": 2,
+          "quality": "moderate"
+        },
+        {
+          "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+          "template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+          "canonical_label": "Accruals",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Accruals"
+          ],
+          "normalized_label_patterns": [
+            "accruals"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables"
+          ],
+          "semantic_families": [
+            "accrual",
+            "liability"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Increase in other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 5,
+              "example_labels": [
+                "Audit fees",
+                "Auditors' remuneration",
+                "Deposits"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 5,
+              "example_labels": [
+                "Audit fees",
+                "Auditors' remuneration",
+                "Deposits"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_006"
+          ],
+          "support_count": 2,
+          "quality": "moderate"
+        },
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+          "canonical_label": "Adjustments for increase (decrease) in trade accounts payable",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in amount due to director"
+          ],
+          "normalized_label_patterns": [
+            "increase in amount due to director"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_004"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:CurrentNontradePayables",
+          "canonical_label": "Total current non-trade payables",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Other payable"
+          ],
+          "normalized_label_patterns": [
+            "other payable"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Increase in other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_006"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "canonical_label": "Other current non-trade payables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other payables"
+          ],
+          "normalized_label_patterns": [
+            "other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:NoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:OtherNoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:OtherReserves",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Other payables"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        }
+      ],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+          "template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+          "canonical_label": "Accruals",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Accruals"
+          ],
+          "normalized_label_patterns": [
+            "accruals"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables"
+          ],
+          "semantic_families": [
+            "accrual",
+            "liability"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Increase in other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 5,
+              "example_labels": [
+                "Audit fees",
+                "Auditors' remuneration",
+                "Deposits"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 5,
+              "example_labels": [
+                "Audit fees",
+                "Auditors' remuneration",
+                "Deposits"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_006"
+          ],
+          "support_count": 2,
+          "quality": "moderate",
+          "retrieval_score": 17.7733,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "accrual",
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "accrual"
+            ],
+            "row_semantic_families": [
+              "accrual",
+              "liability"
+            ],
+            "expected_semantic_families": [
+              "accrual",
+              "payable"
+            ],
+            "card_semantic_families": [
+              "accrual",
+              "liability"
+            ],
+            "row_family_overlap": [
+              "accrual"
+            ],
+            "phrase_match_score": 1.0,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.1111,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.15,
+            "support_boost": 0.04
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "canonical_label": "Adjustments for increase (decrease) in other operating payables",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Increase in other payables and accruals",
+            "Increase / (Decrease) in trade and other payables"
+          ],
+          "normalized_label_patterns": [
+            "increase in other payables and accruals",
+            "increase decrease in trade and other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "administration expenses",
+            "administrative expenses",
+            "amount due from"
+          ],
+          "semantic_families": [
+            "accrual",
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_002",
+            "case_004"
+          ],
+          "support_count": 2,
+          "quality": "moderate",
+          "retrieval_score": 16.2211,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "accrual",
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "accrual",
+              "payable"
+            ],
+            "row_semantic_families": [
+              "accrual",
+              "liability"
+            ],
+            "expected_semantic_families": [
+              "accrual",
+              "payable"
+            ],
+            "card_semantic_families": [
+              "accrual",
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "accrual",
+              "payable"
+            ],
+            "phrase_match_score": 0.75,
+            "label_similarity": 0.3404,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.1852,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.15,
+            "support_boost": 0.04
+          }
+        },
+        {
+          "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:CurrentNontradePayables",
+          "canonical_label": "Total current non-trade payables",
+          "statement_families_observed": [
+            "Statement of Financial Position"
+          ],
+          "common_extracted_labels": [
+            "Other payable"
+          ],
+          "normalized_label_patterns": [
+            "other payable"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Increase in other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Audit fees",
+                "Deposits",
+                "Other payables and accruals"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_006"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 14.3105,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "accrual",
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "accrual",
+              "liability"
+            ],
+            "expected_semantic_families": [
+              "accrual",
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.2857,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1111,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "canonical_label": "Other current non-trade payables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other payables"
+          ],
+          "normalized_label_patterns": [
+            "other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:NoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:OtherNoncurrentPayables",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Other payables"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:OtherReserves",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Other payables"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 13.8079,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "accrual",
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "accrual",
+              "liability"
+            ],
+            "expected_semantic_families": [
+              "accrual",
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.3636,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.1111,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+          "template_field_id": "ssmt-mpers:OtherNoncurrentNontradePayables",
+          "canonical_label": "Other non-current non-trade payables",
+          "statement_families_observed": [
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "Other payables"
+          ],
+          "normalized_label_patterns": [
+            "other payables"
+          ],
+          "accounting_synonyms": [
+            "accrual",
+            "accruals",
+            "accrued expenses",
+            "accrued liabilities",
+            "accrued payables",
+            "amount due from",
+            "amount due to",
+            "creditor"
+          ],
+          "semantic_families": [
+            "liability",
+            "payable"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_005"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 13.8079,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "accrual",
+              "broad_subtotal",
+              "liability",
+              "payable"
+            ],
+            "candidate_family_overlap": [
+              "payable"
+            ],
+            "row_semantic_families": [
+              "accrual",
+              "liability"
+            ],
+            "expected_semantic_families": [
+              "accrual",
+              "payable"
+            ],
+            "card_semantic_families": [
+              "liability",
+              "payable"
+            ],
+            "row_family_overlap": [
+              "payable"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.3636,
+            "synonym_match": true,
+            "statement_type_compatible": false,
+            "concept_family_similarity": 0.1111,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": [
+        {
+          "retrieval_score": 3.35,
+          "extracted_label": "Accruals",
+          "statement_type": "Notes to the Financial Statements",
+          "mapped_concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+          "mapped_template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+          "source_case_id": "case_001",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.35,
+          "extracted_label": "Accruals",
+          "statement_type": "Notes to the Financial Statements",
+          "mapped_concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+          "mapped_template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+          "source_case_id": "case_006",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 2.7714,
+          "extracted_label": "Other payable",
+          "statement_type": "Statement of Financial Position",
+          "mapped_concept_qname": "ssmt-mpers:CurrentNontradePayables",
+          "mapped_template_field_id": "ssmt-mpers:CurrentNontradePayables",
+          "source_case_id": "case_006",
+          "evidence_reason": "clear_high_evidence_alignment"
+        }
+      ]
+    },
+    {
+      "sample_label": "cash and cash equivalents",
+      "row": {
+        "label": "cash and cash equivalents",
+        "value": "1000",
+        "statement_type": "Statement of Cash Flows"
+      },
+      "candidate_count": 5,
+      "retrieved_card_count": 5,
+      "top_concept_qnames": [
+        "ifrs-smes:CashAndCashEquivalents",
+        "ssmt:CashAndBankBalances",
+        "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "ifrs-smes:CashFlowsFromUsedInFinancingActivities"
+      ],
+      "row_semantic_families": [
+        "cash"
+      ],
+      "expected_semantic_families": [
+        "cash"
+      ],
+      "matching_concept_card_available": true,
+      "missing_relevant_concept_card": false,
+      "missing_reason": null,
+      "available_matching_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+          "template_field_id": "ifrs-smes:CashAndCashEquivalents",
+          "canonical_label": "Cash and cash equivalents at end of period",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Cash and cash equivalents at beginning of year",
+            "Cash and cash equivalents at the end of year",
+            "Cash and cash equivalent at beginning of the year",
+            "Cash and cash equivalent at the end of the year",
+            "Cash and cash equivalents at beginning of the year"
+          ],
+          "normalized_label_patterns": [
+            "cash and cash equivalents at beginning of year",
+            "cash and cash equivalents at the end of year",
+            "cash and cash equivalent at beginning of the year",
+            "cash and cash equivalent at the end of the year",
+            "cash and cash equivalents at beginning of the year"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005",
+            "case_006"
+          ],
+          "support_count": 10,
+          "quality": "strong"
+        },
+        {
+          "concept_qname": "ssmt:CashAndBankBalances",
+          "template_field_id": "ssmt:CashAndBankBalances",
+          "canonical_label": "Total cash and cash equivalents",
+          "statement_families_observed": [
+            "Statement of Financial Position",
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Bank balances"
+          ],
+          "normalized_label_patterns": [
+            "bank balances"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "bank overdraft",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents",
+            "overdraft",
+            "secured overdraft"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position",
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:BalancesWithBanks",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash at bank"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:Cash",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash at bank"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at end of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 8,
+          "quality": "strong"
+        },
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "canonical_label": "Net increase (decrease) in cash and cash equivalents",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Net (decrease) / increase in cash and cash equivalents",
+            "Net increase in cash and cash equivalents",
+            "Net increase in cash and cash equivalent",
+            "Net increase / (decrease) in cash and cash equivalents",
+            "NET (DECREASE) INCREASE IN CASH AND CASH EQUIVALENTS"
+          ],
+          "normalized_label_patterns": [
+            "net decrease increase in cash and cash equivalents",
+            "net increase in cash and cash equivalents",
+            "net increase in cash and cash equivalent",
+            "net increase decrease in cash and cash equivalents"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005",
+            "case_006"
+          ],
+          "support_count": 6,
+          "quality": "strong"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "template_field_id": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "canonical_label": "Net cash flows from (used in) operating activities",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Net cash from operating activities",
+            "Net cash from / (to) operating activities",
+            "Cash from operating activities"
+          ],
+          "normalized_label_patterns": [
+            "net cash from operating activities",
+            "net cash from to operating activities",
+            "cash from operating activities"
+          ],
+          "accounting_synonyms": [
+            "administration expenses",
+            "administrative expenses",
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents",
+            "operating expenses"
+          ],
+          "semantic_families": [
+            "cash",
+            "cash_flow"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 5,
+          "quality": "strong"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "template_field_id": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "canonical_label": "Net cash flows from (used in) financing activities",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Net cash to investing activities"
+          ],
+          "normalized_label_patterns": [
+            "net cash to investing activities"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash",
+            "cash_flow"
+          ],
+          "typical_value_nature": "negative",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Cash flows from financing activities",
+                "Cash flows from investing activities",
+                "Decrease in property, plant and equipment"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Cash flows from financing activities",
+                "Cash flows from investing activities",
+                "Decrease in property, plant and equipment"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IntangibleAssetsOtherThanGoodwill",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Loss for the financial year"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        }
+      ],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+          "template_field_id": "ifrs-smes:CashAndCashEquivalents",
+          "canonical_label": "Cash and cash equivalents at end of period",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Cash and cash equivalents at beginning of year",
+            "Cash and cash equivalents at the end of year",
+            "Cash and cash equivalent at beginning of the year",
+            "Cash and cash equivalent at the end of the year",
+            "Cash and cash equivalents at beginning of the year"
+          ],
+          "normalized_label_patterns": [
+            "cash and cash equivalents at beginning of year",
+            "cash and cash equivalents at the end of year",
+            "cash and cash equivalent at beginning of the year",
+            "cash and cash equivalent at the end of the year",
+            "cash and cash equivalents at beginning of the year"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005",
+            "case_006"
+          ],
+          "support_count": 10,
+          "quality": "strong",
+          "retrieval_score": 17.2045,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "cash"
+            ],
+            "expected_semantic_families": [
+              "cash"
+            ],
+            "card_semantic_families": [
+              "cash"
+            ],
+            "row_family_overlap": [
+              "cash"
+            ],
+            "phrase_match_score": 1.0,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1818,
+            "penalties": {
+              "do_not_confuse_penalty": 1.5
+            },
+            "do_not_confuse_penalty": 1.5,
+            "quality_boost": 0.3,
+            "support_boost": 0.2
+          }
+        },
+        {
+          "concept_qname": "ssmt:CashAndBankBalances",
+          "template_field_id": "ssmt:CashAndBankBalances",
+          "canonical_label": "Total cash and cash equivalents",
+          "statement_families_observed": [
+            "Statement of Financial Position",
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Bank balances"
+          ],
+          "normalized_label_patterns": [
+            "bank balances"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "bank overdraft",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents",
+            "overdraft",
+            "secured overdraft"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Financial Position",
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:BalancesWithBanks",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash at bank"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:Cash",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash at bank"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at end of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 8,
+          "quality": "strong",
+          "retrieval_score": 16.3873,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "cash"
+            ],
+            "expected_semantic_families": [
+              "cash"
+            ],
+            "card_semantic_families": [
+              "cash"
+            ],
+            "row_family_overlap": [
+              "cash"
+            ],
+            "phrase_match_score": 0.75,
+            "label_similarity": 1.0,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.0909,
+            "penalties": {
+              "do_not_confuse_penalty": 1.5
+            },
+            "do_not_confuse_penalty": 1.5,
+            "quality_boost": 0.3,
+            "support_boost": 0.16
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "canonical_label": "Net increase (decrease) in cash and cash equivalents",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Net (decrease) / increase in cash and cash equivalents",
+            "Net increase in cash and cash equivalents",
+            "Net increase in cash and cash equivalent",
+            "Net increase / (decrease) in cash and cash equivalents",
+            "NET (DECREASE) INCREASE IN CASH AND CASH EQUIVALENTS"
+          ],
+          "normalized_label_patterns": [
+            "net decrease increase in cash and cash equivalents",
+            "net increase in cash and cash equivalents",
+            "net increase in cash and cash equivalent",
+            "net increase decrease in cash and cash equivalents"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period",
+                "Cash and cash equivalents at end of year / period"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Cash and cash equivalents at beginning of year / period"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005",
+            "case_006"
+          ],
+          "support_count": 6,
+          "quality": "strong",
+          "retrieval_score": 16.0715,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "cash"
+            ],
+            "expected_semantic_families": [
+              "cash"
+            ],
+            "card_semantic_families": [
+              "cash"
+            ],
+            "row_family_overlap": [
+              "cash"
+            ],
+            "phrase_match_score": 0.75,
+            "label_similarity": 0.7576,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1818,
+            "penalties": {
+              "do_not_confuse_penalty": 1.5
+            },
+            "do_not_confuse_penalty": 1.5,
+            "quality_boost": 0.3,
+            "support_boost": 0.12
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "template_field_id": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "canonical_label": "Net cash flows from (used in) operating activities",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Net cash from operating activities",
+            "Net cash from / (to) operating activities",
+            "Cash from operating activities"
+          ],
+          "normalized_label_patterns": [
+            "net cash from operating activities",
+            "net cash from to operating activities",
+            "cash from operating activities"
+          ],
+          "accounting_synonyms": [
+            "administration expenses",
+            "administrative expenses",
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents",
+            "operating expenses"
+          ],
+          "semantic_families": [
+            "cash",
+            "cash_flow"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [],
+          "guardrail_notes": [],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 5,
+          "quality": "strong",
+          "retrieval_score": 13.4591,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "cash"
+            ],
+            "expected_semantic_families": [
+              "cash"
+            ],
+            "card_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "row_family_overlap": [
+              "cash"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.4727,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.2273,
+            "penalties": {
+              "cash_flow_substitute": 1.5
+            },
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.3,
+            "support_boost": 0.1
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "template_field_id": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "canonical_label": "Net cash flows from (used in) financing activities",
+          "statement_families_observed": [
+            "Statement of Cash Flows"
+          ],
+          "common_extracted_labels": [
+            "Net cash to investing activities"
+          ],
+          "normalized_label_patterns": [
+            "net cash to investing activities"
+          ],
+          "accounting_synonyms": [
+            "bank balances",
+            "cash",
+            "cash and cash equivalents",
+            "cash at bank",
+            "cash equivalents"
+          ],
+          "semantic_families": [
+            "cash",
+            "cash_flow"
+          ],
+          "typical_value_nature": "negative",
+          "common_sections": [
+            "Statement of Cash Flows"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:CashEquivalents",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Cash flows from financing activities",
+                "Cash flows from investing activities",
+                "Decrease in property, plant and equipment"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 6,
+              "example_labels": [
+                "Cash flows from financing activities",
+                "Cash flows from investing activities",
+                "Decrease in property, plant and equipment"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:IntangibleAssetsOtherThanGoodwill",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Loss for the financial year"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_002"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 13.0145,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "candidate_family_overlap": [
+              "cash"
+            ],
+            "row_semantic_families": [
+              "cash"
+            ],
+            "expected_semantic_families": [
+              "cash"
+            ],
+            "card_semantic_families": [
+              "cash",
+              "cash_flow"
+            ],
+            "row_family_overlap": [
+              "cash"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.4211,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.2273,
+            "penalties": {
+              "cash_flow_substitute": 1.5
+            },
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": [
+        {
+          "retrieval_score": 4.0152,
+          "extracted_label": "Net increase in cash and cash equivalents",
+          "statement_type": "Statement of Cash Flows",
+          "mapped_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "mapped_template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "source_case_id": "case_001",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.9769,
+          "extracted_label": "Net increase in cash and cash equivalent",
+          "statement_type": "Statement of Cash Flows",
+          "mapped_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "mapped_template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "source_case_id": "case_003",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.9493,
+          "extracted_label": "Cash and cash equivalents at the end of year",
+          "statement_type": "Statement of Cash Flows",
+          "mapped_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+          "mapped_template_field_id": "ifrs-smes:CashAndCashEquivalents",
+          "source_case_id": "case_002",
+          "evidence_reason": "clear_high_evidence_alignment"
+        }
+      ]
+    },
+    {
+      "sample_label": "tax expense",
+      "row": {
+        "label": "tax expense",
+        "value": "1000",
+        "statement_type": "Statement of Comprehensive Income"
+      },
+      "candidate_count": 0,
+      "retrieved_card_count": 0,
+      "top_concept_qnames": [],
+      "row_semantic_families": [
+        "expense",
+        "tax"
+      ],
+      "expected_semantic_families": [
+        "tax"
+      ],
+      "matching_concept_card_available": false,
+      "missing_relevant_concept_card": true,
+      "missing_reason": "no_matching_concept_card_available_in_local_playbook",
+      "available_matching_concept_cards": [],
+      "retrieved_concept_cards": [],
+      "retrieved_fewshot_examples": []
+    },
+    {
+      "sample_label": "administrative expenses",
+      "row": {
+        "label": "administrative expenses",
+        "value": "1000",
+        "statement_type": "Statement of Comprehensive Income"
+      },
+      "candidate_count": 4,
+      "retrieved_card_count": 4,
+      "top_concept_qnames": [
+        "ifrs-smes:OtherExpenseByFunction",
+        "ssmt-mpers:AdjustmentsForDepreciationExpense",
+        "ifrs-smes:WagesAndSalaries",
+        "ifrs-smes:EmployeeBenefitsExpense"
+      ],
+      "row_semantic_families": [
+        "administrative_expense",
+        "expense"
+      ],
+      "expected_semantic_families": [
+        "administrative_expense",
+        "expense"
+      ],
+      "matching_concept_card_available": true,
+      "missing_relevant_concept_card": false,
+      "missing_reason": null,
+      "available_matching_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:OtherExpenseByFunction",
+          "template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "canonical_label": "Total other expenses",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income",
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "TOTAL OPERATING EXPENSES",
+            "Other operating costs",
+            "TOTAL OPERATING EXPENSES FOLAViceRal"
+          ],
+          "normalized_label_patterns": [
+            "total operating expenses",
+            "other operating costs",
+            "total operating expenses folaviceral"
+          ],
+          "accounting_synonyms": [
+            "administration expenses",
+            "administrative expenses",
+            "operating expenses",
+            "other expenses"
+          ],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Comprehensive Income",
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Tax expense"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:OtherRevenue",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Tax expense"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 6,
+          "quality": "strong"
+        },
+        {
+          "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+          "template_field_id": "ifrs-smes:EmployeeBenefitsExpense",
+          "canonical_label": "Employee benefits expense",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income"
+          ],
+          "common_extracted_labels": [
+            "Equipment expenses"
+          ],
+          "normalized_label_patterns": [
+            "equipment expenses"
+          ],
+          "accounting_synonyms": [],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "zero",
+          "common_sections": [
+            "Statement of Comprehensive Income"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:ComprehensiveIncome",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "(Less) / Add : Taxation",
+                "Computer rental fee",
+                "Less : Taxation"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:RevenueFromRenderingOfServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 3,
+              "example_labels": [
+                "Membership fee",
+                "Research and development expenditure written off"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:FeeAndCommissionIncome",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 3,
+              "example_labels": [
+                "(Less) / Add : Taxation",
+                "Less : Taxation"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_003"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ifrs-smes:WagesAndSalaries",
+          "template_field_id": "ifrs-smes:WagesAndSalaries",
+          "canonical_label": "Wages, salaries and others",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income"
+          ],
+          "common_extracted_labels": [
+            "Salaries"
+          ],
+          "normalized_label_patterns": [
+            "salaries"
+          ],
+          "accounting_synonyms": [],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Comprehensive Income"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "OR",
+                "Staff costs"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:FinanceIncome",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Penalties"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:NoncurrentLiabilities",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Penalties"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_001"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        },
+        {
+          "concept_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+          "template_field_id": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+          "canonical_label": "Adjustment for depreciation",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income"
+          ],
+          "common_extracted_labels": [
+            "Depreciation"
+          ],
+          "normalized_label_patterns": [
+            "depreciation"
+          ],
+          "accounting_synonyms": [
+            "depreciation",
+            "depreciation expense"
+          ],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Comprehensive Income"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Adjustments for :- Depreciation of property, plant and equipment",
+                "BR&SE 28,203",
+                "Depreciation of property, plant and equipment"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_005"
+          ],
+          "support_count": 1,
+          "quality": "weak"
+        }
+      ],
+      "retrieved_concept_cards": [
+        {
+          "concept_qname": "ifrs-smes:OtherExpenseByFunction",
+          "template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "canonical_label": "Total other expenses",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income",
+            "Notes to the Financial Statements"
+          ],
+          "common_extracted_labels": [
+            "TOTAL OPERATING EXPENSES",
+            "Other operating costs",
+            "TOTAL OPERATING EXPENSES FOLAViceRal"
+          ],
+          "normalized_label_patterns": [
+            "total operating expenses",
+            "other operating costs",
+            "total operating expenses folaviceral"
+          ],
+          "accounting_synonyms": [
+            "administration expenses",
+            "administrative expenses",
+            "operating expenses",
+            "other expenses"
+          ],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Comprehensive Income",
+            "Notes to the Financial Statements"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Tax expense"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:OtherRevenue",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Tax expense"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts."
+          ],
+          "source_case_ids": [
+            "case_001",
+            "case_002",
+            "case_003",
+            "case_004",
+            "case_005"
+          ],
+          "support_count": 6,
+          "quality": "strong",
+          "retrieval_score": 15.112,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "expense"
+            ],
+            "candidate_family_overlap": [
+              "expense"
+            ],
+            "row_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "expected_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "card_semantic_families": [
+              "expense"
+            ],
+            "row_family_overlap": [
+              "expense"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.5957,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1579,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.3,
+            "support_boost": 0.12
+          }
+        },
+        {
+          "concept_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+          "template_field_id": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+          "canonical_label": "Adjustment for depreciation",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income"
+          ],
+          "common_extracted_labels": [
+            "Depreciation"
+          ],
+          "normalized_label_patterns": [
+            "depreciation"
+          ],
+          "accounting_synonyms": [
+            "depreciation",
+            "depreciation expense"
+          ],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Comprehensive Income"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "Adjustments for :- Depreciation of property, plant and equipment",
+                "BR&SE 28,203",
+                "Depreciation of property, plant and equipment"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_005"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 14.6453,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "expense"
+            ],
+            "candidate_family_overlap": [
+              "expense"
+            ],
+            "row_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "expected_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "card_semantic_families": [
+              "expense"
+            ],
+            "row_family_overlap": [
+              "expense"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.5424,
+            "synonym_match": true,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1579,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:WagesAndSalaries",
+          "template_field_id": "ifrs-smes:WagesAndSalaries",
+          "canonical_label": "Wages, salaries and others",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income"
+          ],
+          "common_extracted_labels": [
+            "Salaries"
+          ],
+          "normalized_label_patterns": [
+            "salaries"
+          ],
+          "accounting_synonyms": [],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "positive",
+          "common_sections": [
+            "Statement of Comprehensive Income"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 2,
+              "example_labels": [
+                "OR",
+                "Staff costs"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:FinanceIncome",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Penalties"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:NoncurrentLiabilities",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 1,
+              "example_labels": [
+                "Penalties"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_001"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 13.4899,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "expense"
+            ],
+            "candidate_family_overlap": [
+              "expense"
+            ],
+            "row_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "expected_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "card_semantic_families": [
+              "expense"
+            ],
+            "row_family_overlap": [
+              "expense"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.2581,
+            "synonym_match": false,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1579,
+            "penalties": {},
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        },
+        {
+          "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+          "template_field_id": "ifrs-smes:EmployeeBenefitsExpense",
+          "canonical_label": "Employee benefits expense",
+          "statement_families_observed": [
+            "Statement of Comprehensive Income"
+          ],
+          "common_extracted_labels": [
+            "Equipment expenses"
+          ],
+          "normalized_label_patterns": [
+            "equipment expenses"
+          ],
+          "accounting_synonyms": [],
+          "semantic_families": [
+            "expense"
+          ],
+          "typical_value_nature": "zero",
+          "common_sections": [
+            "Statement of Comprehensive Income"
+          ],
+          "do_not_confuse_with": [
+            {
+              "concept_qname": "ifrs-smes:ComprehensiveIncome",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 4,
+              "example_labels": [
+                "(Less) / Add : Taxation",
+                "Computer rental fee",
+                "Less : Taxation"
+              ]
+            },
+            {
+              "concept_qname": "ifrs-smes:RevenueFromRenderingOfServices",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 3,
+              "example_labels": [
+                "Membership fee",
+                "Research and development expenditure written off"
+              ]
+            },
+            {
+              "concept_qname": "ssmt-mpers:FeeAndCommissionIncome",
+              "reason": "appeared_together_in_ambiguous_alignment",
+              "ambiguous_count": 3,
+              "example_labels": [
+                "(Less) / Add : Taxation",
+                "Less : Taxation"
+              ]
+            }
+          ],
+          "guardrail_notes": [
+            "Do not choose this card solely by value match when labels also fit listed do_not_confuse concepts.",
+            "Weak card: only one strong gold example supports this concept."
+          ],
+          "source_case_ids": [
+            "case_003"
+          ],
+          "support_count": 1,
+          "quality": "weak",
+          "retrieval_score": 10.8991,
+          "score_breakdown": {
+            "candidate_exact_match": true,
+            "candidate_semantic_families": [
+              "expense"
+            ],
+            "candidate_family_overlap": [
+              "expense"
+            ],
+            "row_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "expected_semantic_families": [
+              "administrative_expense",
+              "expense"
+            ],
+            "card_semantic_families": [
+              "expense"
+            ],
+            "row_family_overlap": [
+              "expense"
+            ],
+            "phrase_match_score": 0.0,
+            "label_similarity": 0.5854,
+            "synonym_match": false,
+            "statement_type_compatible": true,
+            "concept_family_similarity": 0.1579,
+            "penalties": {
+              "over_specific_wrong_expense": 3.0
+            },
+            "do_not_confuse_penalty": 0.0,
+            "quality_boost": 0.0,
+            "support_boost": 0.02
+          }
+        }
+      ],
+      "retrieved_fewshot_examples": [
+        {
+          "retrieval_score": 3.6915,
+          "extracted_label": "TOTAL OPERATING EXPENSES",
+          "statement_type": "Statement of Comprehensive Income",
+          "mapped_concept_qname": "ifrs-smes:OtherExpenseByFunction",
+          "mapped_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "source_case_id": "case_001",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.6915,
+          "extracted_label": "TOTAL OPERATING EXPENSES",
+          "statement_type": "Statement of Comprehensive Income",
+          "mapped_concept_qname": "ifrs-smes:OtherExpenseByFunction",
+          "mapped_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "source_case_id": "case_002",
+          "evidence_reason": "clear_high_evidence_alignment"
+        },
+        {
+          "retrieval_score": 3.6915,
+          "extracted_label": "TOTAL OPERATING EXPENSES",
+          "statement_type": "Statement of Comprehensive Income",
+          "mapped_concept_qname": "ifrs-smes:OtherExpenseByFunction",
+          "mapped_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "source_case_id": "case_003",
+          "evidence_reason": "clear_high_evidence_alignment"
+        }
+      ]
+    }
+  ]
+}

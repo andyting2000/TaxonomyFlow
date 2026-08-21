@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxonomyFlow</title>
+    {% if app_css_url %}
+    <link rel="stylesheet" href="{{ app_css_url }}">
+    {% endif %}
+</head>
+<body>
+    <div id="root">
+        <main style="font-family: Inter, system-ui, sans-serif; padding: 2rem; max-width: 56rem; margin: 0 auto;">
+            <p style="font-size: 0.875rem; font-weight: 600; color: #2563eb; text-transform: uppercase; letter-spacing: 0.08em;">TaxonomyFlow</p>
+            <h1 style="font-size: 2rem; margin: 0.75rem 0;">React shell build required</h1>
+            <p style="font-size: 1rem; line-height: 1.6; color: #475569;">
+                The new React application shell lives in <code>frontend/</code>. Run
+                <code>npm install</code> and <code>npm run dev</code> in that directory for local development,
+                or <code>npm run build</code> to serve the built shell from <code>/app</code>.
+            </p>
+            <p style="margin-top: 1rem;">
+                <a href="/" style="color: #2563eb; font-weight: 600;">Open the legacy dashboard</a>
+            </p>
+        </main>
+    </div>
+    {% if app_js_url %}
+    <script type="module" src="{{ app_js_url }}"></script>
+    {% endif %}
+</body>
+</html>

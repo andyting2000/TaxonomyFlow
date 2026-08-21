@@ -1,0 +1,337 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-blocker-2-live-closeout",
+  "generated_at": "2026-07-23T03:25:11.2422119+00:00",
+  "evaluation_mode": "read_only_live_evidence_audit",
+  "overall_status": "passed_with_documented_sequence_protocol_deviation",
+  "passed": true,
+  "operational_ingestion_celery_blocker_closed": true,
+  "implementation_changed": false,
+  "summary": {
+    "jobs_reviewed": 3,
+    "filing_jobs_in_review": 3,
+    "jobs_with_nonzero_rows": 3,
+    "celery_success_results": 3,
+    "results_with_date_done": 3,
+    "results_with_final_payload": 3,
+    "results_remaining_progress": 0,
+    "jobs_stuck_processing": 0,
+    "duplicate_page_groups": 0,
+    "exact_same_page_duplicate_row_groups": 0,
+    "distinct_worker_pids": 1,
+    "distinct_worker_event_loop_ids": 1,
+    "optional_mapping_failures": 0,
+    "azure_di_normalization_fallback_warnings": 1
+  },
+  "jobs": [
+    {
+      "sequence_position": 1,
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "registration_number": "202201047805",
+      "filing_id": 59,
+      "job_id": 59,
+      "source_pdf_filename": "3c0d76d7324f43c38ab546b57caaa7b7.pdf",
+      "celery_task_uuid": "a4a27040-c6e1-45f8-8acb-c4bad0ee7d95",
+      "worker_pid": 15452,
+      "worker_event_loop_id": 122218384,
+      "uploaded_at": "2026-07-23T03:02:27.717997+00:00",
+      "started_at": "2026-07-23T03:02:28.171485+00:00",
+      "completed_at": "2026-07-23T03:11:41.910863+00:00",
+      "duration_seconds": 553.739378,
+      "filing_job_status": "REVIEW",
+      "filing_job_progress": 100,
+      "page_count": 26,
+      "distinct_page_number_count": 26,
+      "extracted_row_count": 76,
+      "ai_mapping_status": "completed",
+      "payload_ai_suggestion_count": 9,
+      "persisted_ai_suggestion_records": 50,
+      "persisted_suggestion_status_counts": {
+        "suggested": 9,
+        "rejected": 41
+      },
+      "celery_final_state": "SUCCESS",
+      "celery_date_done": "2026-07-23T03:11:41.911363+00:00",
+      "celery_traceback": null,
+      "optional_stage": null,
+      "optional_stage_status": null,
+      "optional_stage_error_code": null,
+      "warnings": [],
+      "final_result_payload": {
+        "status": "completed",
+        "job_id": 59,
+        "message": "Azure Document Intelligence processing complete: 76 rows across 26 pages.",
+        "success": true,
+        "filing_status": "REVIEW",
+        "extracted_row_count": 76,
+        "ai_mapping_status": "completed",
+        "ai_suggestion_count": 9,
+        "warnings": [],
+        "worker_event_loop_id": 122218384,
+        "celery_task_id": "a4a27040-c6e1-45f8-8acb-c4bad0ee7d95",
+        "worker_pid": 15452,
+        "started_at": "2026-07-23T03:02:28.171485+00:00",
+        "completed_at": "2026-07-23T03:11:41.910863+00:00",
+        "final_celery_state": "SUCCESS"
+      },
+      "assertion_status": "passed"
+    },
+    {
+      "sequence_position": 2,
+      "filing_name": "FINE BATIK SDN. BHD.",
+      "registration_number": "200401035264",
+      "filing_id": 60,
+      "job_id": 60,
+      "source_pdf_filename": "05600ad9fb2649dd8fac33439805286d.pdf",
+      "celery_task_uuid": "204ff4ae-9e21-441d-8df3-ebfe5e275a0b",
+      "worker_pid": 15452,
+      "worker_event_loop_id": 122218384,
+      "uploaded_at": "2026-07-23T03:02:57.846005+00:00",
+      "started_at": "2026-07-23T03:02:58.843504+00:00",
+      "completed_at": "2026-07-23T03:11:49.867850+00:00",
+      "duration_seconds": 531.024346,
+      "filing_job_status": "REVIEW",
+      "filing_job_progress": 100,
+      "page_count": 25,
+      "distinct_page_number_count": 25,
+      "extracted_row_count": 107,
+      "ai_mapping_status": "completed",
+      "payload_ai_suggestion_count": 13,
+      "persisted_ai_suggestion_records": 50,
+      "persisted_suggestion_status_counts": {
+        "suggested": 13,
+        "rejected": 37
+      },
+      "celery_final_state": "SUCCESS",
+      "celery_date_done": "2026-07-23T03:11:49.867850+00:00",
+      "celery_traceback": null,
+      "optional_stage": null,
+      "optional_stage_status": null,
+      "optional_stage_error_code": null,
+      "warnings": [
+        {
+          "code": "azure_di_text_block_normalization_timeout",
+          "message": "Text block normalization timed out; table candidates were used."
+        }
+      ],
+      "final_result_payload": {
+        "status": "completed",
+        "job_id": 60,
+        "message": "Azure Document Intelligence processing complete: 107 rows across 25 pages. Warning: text block normalization timed out; table candidates were used.",
+        "success": true,
+        "filing_status": "REVIEW",
+        "extracted_row_count": 107,
+        "ai_mapping_status": "completed",
+        "ai_suggestion_count": 13,
+        "warnings": [
+          {
+            "code": "azure_di_text_block_normalization_timeout",
+            "message": "Text block normalization timed out; table candidates were used."
+          }
+        ],
+        "worker_event_loop_id": 122218384,
+        "celery_task_id": "204ff4ae-9e21-441d-8df3-ebfe5e275a0b",
+        "worker_pid": 15452,
+        "started_at": "2026-07-23T03:02:58.843504+00:00",
+        "completed_at": "2026-07-23T03:11:49.867850+00:00",
+        "final_celery_state": "SUCCESS"
+      },
+      "assertion_status": "passed"
+    },
+    {
+      "sequence_position": 3,
+      "filing_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "registration_number": "199201022159",
+      "filing_id": 61,
+      "job_id": 61,
+      "source_pdf_filename": "f33b123fc8d1445fb72a2627d4bbf25d.pdf",
+      "celery_task_uuid": "050873a6-b198-4d81-bde6-1b03ff63b135",
+      "worker_pid": 15452,
+      "worker_event_loop_id": 122218384,
+      "uploaded_at": "2026-07-23T03:03:23.774320+00:00",
+      "started_at": "2026-07-23T03:03:24.971334+00:00",
+      "completed_at": "2026-07-23T03:12:14.228989+00:00",
+      "duration_seconds": 529.257655,
+      "filing_job_status": "REVIEW",
+      "filing_job_progress": 100,
+      "page_count": 23,
+      "distinct_page_number_count": 23,
+      "extracted_row_count": 83,
+      "ai_mapping_status": "completed",
+      "payload_ai_suggestion_count": 13,
+      "persisted_ai_suggestion_records": 50,
+      "persisted_suggestion_status_counts": {
+        "suggested": 13,
+        "rejected": 37
+      },
+      "celery_final_state": "SUCCESS",
+      "celery_date_done": "2026-07-23T03:12:14.228989+00:00",
+      "celery_traceback": null,
+      "optional_stage": null,
+      "optional_stage_status": null,
+      "optional_stage_error_code": null,
+      "warnings": [],
+      "final_result_payload": {
+        "status": "completed",
+        "job_id": 61,
+        "message": "Azure Document Intelligence processing complete: 83 rows across 23 pages.",
+        "success": true,
+        "filing_status": "REVIEW",
+        "extracted_row_count": 83,
+        "ai_mapping_status": "completed",
+        "ai_suggestion_count": 13,
+        "warnings": [],
+        "worker_event_loop_id": 122218384,
+        "celery_task_id": "050873a6-b198-4d81-bde6-1b03ff63b135",
+        "worker_pid": 15452,
+        "started_at": "2026-07-23T03:03:24.971334+00:00",
+        "completed_at": "2026-07-23T03:12:14.228989+00:00",
+        "final_celery_state": "SUCCESS"
+      },
+      "assertion_status": "passed"
+    }
+  ],
+  "terminal_state_observation": {
+    "first_observed_at": "2026-07-23T03:22:45.432808+00:00",
+    "second_observed_at": "2026-07-23T03:23:33.045439+00:00",
+    "observation_interval_seconds": 47.612631,
+    "records_unchanged": true,
+    "records": [
+      {
+        "job_id": 59,
+        "celery_task_uuid": "a4a27040-c6e1-45f8-8acb-c4bad0ee7d95",
+        "first_state": "SUCCESS",
+        "second_state": "SUCCESS",
+        "first_date_done": "2026-07-23T03:11:41.911363+00:00",
+        "second_date_done": "2026-07-23T03:11:41.911363+00:00",
+        "first_raw_record_sha256": "e479b57f4604377e942c5ce43015e70b8626d1ac8f6704ed5b8ade3be6557960",
+        "second_raw_record_sha256": "e479b57f4604377e942c5ce43015e70b8626d1ac8f6704ed5b8ade3be6557960"
+      },
+      {
+        "job_id": 60,
+        "celery_task_uuid": "204ff4ae-9e21-441d-8df3-ebfe5e275a0b",
+        "first_state": "SUCCESS",
+        "second_state": "SUCCESS",
+        "first_date_done": "2026-07-23T03:11:49.867850+00:00",
+        "second_date_done": "2026-07-23T03:11:49.867850+00:00",
+        "first_raw_record_sha256": "18b204f79a2c9dd4094fb78b3c2397ce4abf342d7041e4b7ca1b00e2c651403a",
+        "second_raw_record_sha256": "18b204f79a2c9dd4094fb78b3c2397ce4abf342d7041e4b7ca1b00e2c651403a"
+      },
+      {
+        "job_id": 61,
+        "celery_task_uuid": "050873a6-b198-4d81-bde6-1b03ff63b135",
+        "first_state": "SUCCESS",
+        "second_state": "SUCCESS",
+        "first_date_done": "2026-07-23T03:12:14.228989+00:00",
+        "second_date_done": "2026-07-23T03:12:14.228989+00:00",
+        "first_raw_record_sha256": "137e197ef383786b974aa2548d76f65585571099e74c00ee97aaf22ce5d44019",
+        "second_raw_record_sha256": "137e197ef383786b974aa2548d76f65585571099e74c00ee97aaf22ce5d44019"
+      }
+    ],
+    "late_progress_detected": false,
+    "success_to_progress_transition_detected": false,
+    "failure_to_progress_transition_detected": false,
+    "duplicate_terminal_write_detected": false,
+    "history_limit": "Redis retains one current task record per UUID, so historical duplicate writes cannot be reconstructed. The unchanged hashes and focused terminal-guard regression provide the available evidence."
+  },
+  "worker_evidence": {
+    "celery_node": "celery@GIGABYTE",
+    "worker_pid": 15452,
+    "worker_started_at": "2026-07-23T02:54:47.1980606+00:00",
+    "tasks_py_last_modified_at": "2026-07-23T02:45:53.9504765+00:00",
+    "worker_started_after_current_tasks_code": true,
+    "process_pdf_tasks_reported_by_worker": 3,
+    "pool_implementation": "celery.concurrency.thread:TaskPool",
+    "pool_max_concurrency": 4,
+    "responding_worker_nodes": 1,
+    "active_tasks_after_smoke": 0,
+    "reserved_tasks_after_smoke": 0,
+    "scheduled_tasks_after_smoke": 0,
+    "worker_restart_between_jobs_detected": false,
+    "same_worker_pid_all_jobs": true,
+    "same_worker_event_loop_all_jobs": true
+  },
+  "assertions": {
+    "all_filing_jobs_review": true,
+    "all_extracted_row_counts_positive": true,
+    "all_celery_results_success": true,
+    "all_date_done_present": true,
+    "all_final_payloads_present": true,
+    "all_final_payloads_success_true": true,
+    "all_final_payloads_filing_status_review": true,
+    "all_final_payloads_include_required_observability": true,
+    "no_successful_task_remains_progress": true,
+    "no_late_progress_observed": true,
+    "no_null_task_id_observed": true,
+    "no_celery_traceback_observed": true,
+    "no_filing_or_ai_error_observed": true,
+    "no_cross_loop_error_observed": true,
+    "no_asyncpg_protocol_state_error_observed": true,
+    "no_redis_cross_loop_error_observed": true,
+    "no_job_stuck_processing": true,
+    "no_duplicate_pages": true,
+    "no_exact_same_page_duplicate_rows": true,
+    "fine_batik_did_not_prevent_info_house_completion": true,
+    "third_job_completed_azure_di_normally": true,
+    "no_worker_restart_required": true
+  },
+  "optional_mapping_failure_behavior": {
+    "exercised": false,
+    "reason": "All three jobs completed AI mapping. Fine Batik emitted an Azure DI text-block normalization timeout fallback warning, not an optional AI mapping failure.",
+    "fine_batik_fallback_preserved_review_and_rows": true,
+    "next_job_completed_normally": true
+  },
+  "sequence_evidence": {
+    "intended_order": [
+      "Bezlife",
+      "Fine Batik",
+      "INFO House"
+    ],
+    "observed_start_order_matches_intended": true,
+    "strict_wait_for_terminal_before_next_upload": false,
+    "execution_mode": "overlapping_concurrent_tasks_on_one_worker_and_persistent_event_loop",
+    "deviation": "Fine Batik started before Bezlife completed, and INFO House started before either prior task completed.",
+    "impact": "The strict serial-upload protocol was not exercised. The run instead provides stronger concurrent reuse evidence; all three tasks completed on the same worker PID and event loop, and Info House completed after Fine Batik without contamination."
+  },
+  "verification": {
+    "targeted_tests": [
+      {
+        "command": "python -B -m unittest tests.test_celery_terminal_state_finalization -v",
+        "tests_run": 11,
+        "result": "passed"
+      },
+      {
+        "command": "python -B -m unittest tests.test_celery_task_identity_handoff -v",
+        "tests_run": 9,
+        "result": "passed"
+      },
+      {
+        "command": "python -B -m unittest tests.test_celery_async_resource_lifecycle -v",
+        "tests_run": 5,
+        "result": "passed"
+      }
+    ],
+    "total_targeted_tests": 25,
+    "full_backend_suite_run": false,
+    "full_backend_suite_reason": "No implementation code changed.",
+    "persisted_backend_worker_log_available": false,
+    "error_signature_evidence_basis": "Null FilingJob/AI errors, null Celery tracebacks, stable terminal payloads, one live worker node, and focused lifecycle/task-identity regressions."
+  },
+  "safety": {
+    "database_or_job_mutation_by_closeout": false,
+    "extraction_algorithm_changed": false,
+    "mapping_algorithm_changed": false,
+    "supervisor_workflow_changed": false,
+    "frontend_changed": false,
+    "confirmed_tag_id_mutated": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "external_provider_call_initiated_by_closeout": false,
+    "note": "The three already-completed manual smoke jobs used the configured production extraction and mapping workflow. This closeout only read retained PostgreSQL, Redis, process, and Celery inspection evidence and ran local focused tests."
+  },
+  "conclusion": {
+    "result": "pass",
+    "reason": "All three fresh jobs reached REVIEW with nonzero rows and retained explicit Celery SUCCESS records containing date_done and complete final payloads. No live task remained PROGRESS, terminal record hashes remained unchanged across two reads, and worker/task identity plus persistent-loop evidence stayed stable.",
+    "strict_serial_sequence_caveat": "Uploads overlapped rather than waiting for each previous task to finish. This does not invalidate the explicit terminal-state pass, but strict serial timing was not verified.",
+    "recommended_next_feature": "Feature #18F-G-A-quality-smoke-closeout - Validate five Supervisor-guided mapping revisions"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "run_metadata": {
+    "feature": "13Z",
+    "generated_at": "2026-05-19T08:02:50Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "final_mapping_approved": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "report_type": "azure_di_mapping_gap_analysis",
+    "script": "scripts/generate_azure_di_mapping_candidates_13z.py",
+    "output_path": "reports\\azure_di_mapping_gap_analysis_13z.json"
+  },
+  "input_reports": {
+    "handoff_report": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json"
+  },
+  "labels_with_no_safe_suggestion": [
+    {
+      "mapping_input_id": "13V-MAP-0006",
+      "label": "- Owners of the Company",
+      "row_type": "numeric_fact",
+      "statement_section": "Notes to the Financial Statements",
+      "blockers": [
+        "no_local_metadata_match_above_threshold"
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0021",
+      "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+      "row_type": "text_block",
+      "statement_section": "Notes to the Financial Statements",
+      "blockers": [
+        "row_type_or_concept_type_mismatch"
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0023",
+      "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+      "row_type": "text_block",
+      "statement_section": "Statutory Declaration",
+      "blockers": [
+        "row_type_or_concept_type_mismatch"
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0052",
+      "label": "no par value",
+      "row_type": "comparative_numeric_fact",
+      "statement_section": "Notes to the Financial Statements",
+      "blockers": [
+        "generic_or_weak_label"
+      ]
+    }
+  ],
+  "row_types_with_weak_mapping_coverage": {
+    "text_block": 29,
+    "numeric_fact": 1,
+    "comparative_numeric_fact": 12,
+    "subtotal_or_total": 2
+  },
+  "sections_with_weakest_mapping_coverage": [
+    {
+      "section": "Notes to the Financial Statements",
+      "count": 28
+    },
+    {
+      "section": "Statement of Financial Position",
+      "count": 6
+    },
+    {
+      "section": "Statement of Cash Flows",
+      "count": 4
+    },
+    {
+      "section": "Statement of Comprehensive Income",
+      "count": 3
+    },
+    {
+      "section": "Statutory Declaration",
+      "count": 1
+    },
+    {
+      "section": "Basis of Preparation",
+      "count": 1
+    },
+    {
+      "section": "9. Bank Overdraft -Unsecured",
+      "count": 1
+    }
+  ],
+  "concept_metadata_limitations": [
+    "Reference report was used only as an offline concept inventory fallback, not as a direct answer key."
+  ],
+  "text_block_concept_gaps": {
+    "no_safe_text_block_count": 2,
+    "limitation": "Narrative mapping depends on local text-block concept labels; no LLM or semantic matcher was used."
+  },
+  "numeric_concept_gaps": {
+    "no_safe_numeric_count": 2,
+    "limitation": "Numeric mapping does not infer dimensions, periods, aggregation, or sign policy."
+  },
+  "recommended_next_feature": "Feature #14A - Text-block concept matching refinement if narrative mapping is weak.",
+  "limitations": [
+    "Deterministic local metadata suggestions only; no final mapping is approved.",
+    "No semantic matcher, embeddings, LLM, Azure DI, Hugging Face, OpenAI, DB mutation, XBRL generation, or Arelle validation is used.",
+    "Reference report, when provided, is used only as offline concept inventory/gap context and not as a direct answer key."
+  ]
+}

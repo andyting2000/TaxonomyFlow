@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Example schema for the representative 7-PDF extraction and mapping benchmark set. Do not put private PDF paths or customer data in this repository file.",
+  "privacy_policy": {
+    "contains_private_pdfs": false,
+    "contains_real_customer_data": false,
+    "local_copy_expected": "Use benchmark_manifest.local.json locally and do not commit it if it contains private names, paths, or job IDs."
+  },
+  "benchmark_command_template": "python -B scripts/benchmark_extraction_mapping.py --jobs <job_ids> --markdown",
+  "cases": [
+    {
+      "case_id": "standard_text_native_01",
+      "category": "standard_text_native",
+      "description": "Clear text-native PDF with ordinary financial statement structure.",
+      "file_name_placeholder": "standard_text_native_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "primary_benchmark",
+      "is_smoke_test": false,
+      "is_primary_benchmark": true,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "native selectable text",
+        "clear statement headings",
+        "normal statement of financial position and notes layout"
+      ],
+      "expected_risks": [
+        "baseline extraction quality",
+        "statement_type propagation",
+        "ordinary template_field_id coverage"
+      ],
+      "notes": "Include if at least one text-native PDF is available.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <standard_text_native_job_id> --markdown"
+    },
+    {
+      "case_id": "ocr_clean_01",
+      "category": "ocr_clean",
+      "description": "OCR/scanned PDF with clear readable text.",
+      "file_name_placeholder": "ocr_clean_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "ocr_benchmark",
+      "is_smoke_test": false,
+      "is_primary_benchmark": true,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "scanned or OCR-heavy",
+        "clear text after OCR",
+        "limited skew or blur"
+      ],
+      "expected_risks": [
+        "OCR text quality",
+        "vision fallback routing",
+        "row/value completeness"
+      ],
+      "notes": "Useful because the user's seven PDFs are mostly OCR/scanned or OCR-heavy.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <ocr_clean_job_id> --markdown"
+    },
+    {
+      "case_id": "ocr_poor_quality_01",
+      "category": "ocr_poor_quality",
+      "description": "Scanned PDF with blur, skew, shadows, small text, or inconsistent OCR.",
+      "file_name_placeholder": "ocr_poor_quality_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "ocr_benchmark",
+      "is_smoke_test": false,
+      "is_primary_benchmark": false,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "poor scan quality",
+        "skewed or blurry text",
+        "OCR errors likely"
+      ],
+      "expected_risks": [
+        "vision fallback reliability",
+        "missing rows",
+        "wrong signs or values due OCR artifacts"
+      ],
+      "notes": "Treat as OCR stress evidence, not the only success criterion.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <ocr_poor_quality_job_id> --markdown"
+    },
+    {
+      "case_id": "complex_table_01",
+      "category": "complex_table",
+      "description": "Dense tables, multiple year columns, subtotals/totals, or continuation pages.",
+      "file_name_placeholder": "complex_table_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "primary_benchmark",
+      "is_smoke_test": false,
+      "is_primary_benchmark": true,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "dense rows",
+        "multiple year columns",
+        "subtotals and totals",
+        "possible continuation pages"
+      ],
+      "expected_risks": [
+        "multi-year column confusion",
+        "subtotal/total confusion",
+        "table structure loss"
+      ],
+      "notes": "High priority because #13G identified table structure loss as an architecture risk.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <complex_table_job_id> --markdown"
+    },
+    {
+      "case_id": "notes_heavy_01",
+      "category": "notes_heavy",
+      "description": "Many notes, schedules, company-name-like rows, receivables/payables/details.",
+      "file_name_placeholder": "notes_heavy_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "primary_benchmark",
+      "is_smoke_test": false,
+      "is_primary_benchmark": true,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "notes and schedules",
+        "company-name-like detail rows",
+        "receivables or payables breakdowns"
+      ],
+      "expected_risks": [
+        "broad receivables/payables mapping",
+        "company-name detail rows",
+        "mapping guardrail pressure"
+      ],
+      "notes": "Useful for measuring whether guardrails prevent broad summary mappings.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <notes_heavy_job_id> --markdown"
+    },
+    {
+      "case_id": "customer_like_01",
+      "category": "customer_like",
+      "description": "Closest to the expected real customer upload pattern.",
+      "file_name_placeholder": "customer_like_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "holdout",
+      "is_smoke_test": false,
+      "is_primary_benchmark": true,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "near-real customer-like formatting",
+        "representative company filing",
+        "complete enough to assess review burden"
+      ],
+      "expected_risks": [
+        "realistic extraction coverage",
+        "review burden",
+        "end-to-end suitability"
+      ],
+      "notes": "Keep as holdout if possible. Do not use the same pages as few-shot examples unless clearly moved out of evaluation.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <customer_like_job_id> --markdown"
+    },
+    {
+      "case_id": "edge_case_01",
+      "category": "edge_case",
+      "description": "Unusual formatting, messy layout, mixed language, mixed scan/text, or otherwise difficult file.",
+      "file_name_placeholder": "edge_case_01.pdf",
+      "uploaded_job_id": null,
+      "job_role": "benchmark_candidate",
+      "benchmark_role": "stress_edge",
+      "is_smoke_test": false,
+      "is_primary_benchmark": false,
+      "is_holdout": true,
+      "is_few_shot_candidate": false,
+      "pdf_characteristics": [
+        "unusual layout",
+        "mixed scan/text",
+        "formatting edge case"
+      ],
+      "expected_risks": [
+        "fallback routing",
+        "layout ambiguity",
+        "non-representative failure modes"
+      ],
+      "notes": "Use as stress evidence only. Do not make this the main success criterion.",
+      "ground_truth_status": "not_started",
+      "benchmark_command": "python -B scripts/benchmark_extraction_mapping.py --jobs <edge_case_job_id> --markdown"
+    }
+  ]
+}

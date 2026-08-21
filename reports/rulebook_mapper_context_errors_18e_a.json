@@ -1,0 +1,1240 @@
+{
+  "run_metadata": {
+    "feature": "18E-A",
+    "generated_at": "2026-06-21T10:33:35Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "hardened_rulebook": "reports/pdf_xbrl_rulebook_hardening_18d_b.json",
+    "include_samples": [],
+    "exclude_samples": [],
+    "include_outlier": false,
+    "debug_label": null,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "auto_applied": false,
+    "confirmed_tag_id_mutated": false
+  },
+  "summary": {
+    "false_positive_count": 68,
+    "not_evaluable_count": 17,
+    "evaluation_status_counts": {
+      "ambiguous_xbrl_support": 17,
+      "exact_qname_value_period_match": 107,
+      "not_evaluable": 586,
+      "qname_exists_but_value_mismatch": 25,
+      "qname_value_match_period_uncertain": 4,
+      "value_exists_but_different_qname": 43
+    },
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false,
+      "auto_applied": false,
+      "confirmed_tag_id_mutated": false
+    }
+  },
+  "errors": [
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:34:34:current",
+      "pdf_label": "Less : Taxation",
+      "pdf_value": "-24692",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:80:80:current",
+      "pdf_label": "Taxation fee",
+      "pdf_value": "350",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:35:35:current",
+      "pdf_label": "Total comprehensive profit / (loss) for the year / period",
+      "pdf_value": "103550",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-comprehensive-profit-loss-for-the-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:35:35:prior",
+      "pdf_label": "Total comprehensive profit / (loss) for the year / period",
+      "pdf_value": "-3097",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-comprehensive-profit-loss-for-the-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:24:24:current",
+      "pdf_label": "Total current liabilities",
+      "pdf_value": "114071",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-current-liabilities-currentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:20:20:current",
+      "pdf_label": "Total shareholders' equity",
+      "pdf_value": "100553",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-shareholders-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:20:20:prior",
+      "pdf_label": "Total shareholders' equity",
+      "pdf_value": "-2997",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-shareholders-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review",
+        "total_semantics_required"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:21:21:current",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "63381",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:21:21:prior",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "1398",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:54:54:current",
+      "pdf_label": "Other payables",
+      "pdf_value": "62681",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:54:54:prior",
+      "pdf_label": "Other payables",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:42:42:current",
+      "pdf_label": "Loss for the financial year DRAFT FOR DISCUSSION",
+      "pdf_value": "-25287",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-draft-for-discus-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:42:42:prior",
+      "pdf_label": "Loss for the financial year DRAFT FOR DISCUSSION",
+      "pdf_value": "-77641",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-draft-for-discus-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:95:95:current",
+      "pdf_label": "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+      "pdf_value": "-23562",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-draft-refinar-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:95:95:prior",
+      "pdf_label": "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+      "pdf_value": "-77641",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-draft-refinar-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:93:93:current",
+      "pdf_label": "Other income",
+      "pdf_value": "60",
+      "predicted_qname": "ifrs-smes:OtherIncome",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-other-income-otherincome",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:93:93:prior",
+      "pdf_label": "Other income",
+      "pdf_value": "10",
+      "predicted_qname": "ifrs-smes:OtherIncome",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-other-income-otherincome",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:112:112:current",
+      "pdf_label": "Taxation fee zaplatilade fel",
+      "pdf_value": "200",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:112:112:prior",
+      "pdf_label": "Taxation fee zaplatilade fel",
+      "pdf_value": "250",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:113:113:current",
+      "pdf_label": "Taxation processing fee",
+      "pdf_value": "600",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:41:41:current",
+      "pdf_label": "Less : Taxation",
+      "pdf_value": "-1725",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:114:114:current",
+      "pdf_label": "Term loan interests",
+      "pdf_value": "33168",
+      "predicted_qname": "ifrs-smes:FinanceCosts",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-term-loan-interests-financecosts",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:114:114:prior",
+      "pdf_label": "Term loan interests",
+      "pdf_value": "35186",
+      "predicted_qname": "ifrs-smes:FinanceCosts",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-term-loan-interests-financecosts",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:23:23:current",
+      "pdf_label": "Total equity",
+      "pdf_value": "-292608",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:23:23:prior",
+      "pdf_label": "Total equity",
+      "pdf_value": "-267321",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:75:75:current",
+      "pdf_label": "Other payables",
+      "pdf_value": "75621",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:75:75:prior",
+      "pdf_label": "Other payables",
+      "pdf_value": "66390",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:16:16:current",
+      "pdf_label": "Trade receivables",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:16:16:prior",
+      "pdf_label": "Trade receivables",
+      "pdf_value": "6913",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:17:17:prior",
+      "pdf_label": "Other receivables and deposits",
+      "pdf_value": "44399",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:67:67:current",
+      "pdf_label": "Other receivables",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:35:35:prior",
+      "pdf_label": "Add : Other income",
+      "pdf_value": "8430",
+      "predicted_qname": "ifrs-smes:OtherIncome",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18B-R0011-add-other-income-ifrs-smes-otherincome",
+      "blocking_reasons": [
+        "hardened_rule_requires_review",
+        "known_false_positive_risk"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:38:38:current",
+      "pdf_label": "Loss for the financial year DRAFT FOR",
+      "pdf_value": "-2686",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-draft-for-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:38:38:prior",
+      "pdf_label": "Loss for the financial year DRAFT FOR",
+      "pdf_value": "-7086",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-draft-for-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:92:92:current",
+      "pdf_label": "LOSS FOR THE YEAR",
+      "pdf_value": "-2686",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:92:92:prior",
+      "pdf_label": "LOSS FOR THE YEAR",
+      "pdf_value": "-8163",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:31:31:prior",
+      "pdf_label": "Turnover",
+      "pdf_value": "18000",
+      "predicted_qname": "ifrs-smes:Revenue",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-revenue-revenue",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:37:37:current",
+      "pdf_label": "(Less) / Add : Taxation",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:37:37:prior",
+      "pdf_label": "(Less) / Add : Taxation",
+      "pdf_value": "1077",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:88:88:current",
+      "pdf_label": "Taxation fee",
+      "pdf_value": "200",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:88:88:prior",
+      "pdf_label": "Taxation fee",
+      "pdf_value": "250",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:22:22:current",
+      "pdf_label": "TOTAL ASSETS",
+      "pdf_value": "184023",
+      "predicted_qname": "ifrs-smes:Assets",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-assets-assets",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:21:21:current",
+      "pdf_label": "Total current assets",
+      "pdf_value": "154021",
+      "predicted_qname": "ifrs-smes:CurrentAssets",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18B-R0202-total-current-assets-ifrs-smes-currentassets",
+      "blocking_reasons": [
+        "hardened_rule_requires_review",
+        "generic_label_requires_review",
+        "known_false_positive_risk"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:28:28:current",
+      "pdf_label": "Total current liabilities",
+      "pdf_value": "800",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-current-liabilities-currentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:28:28:prior",
+      "pdf_label": "Total current liabilities",
+      "pdf_value": "11900",
+      "predicted_qname": "ifrs-smes:CurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-current-liabilities-currentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:24:24:current",
+      "pdf_label": "Total equity",
+      "pdf_value": "171223",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:24:24:prior",
+      "pdf_label": "Total equity",
+      "pdf_value": "173909",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:30:30:current",
+      "pdf_label": "TOTAL EQUITY AND LIABILITIES",
+      "pdf_value": "184023",
+      "predicted_qname": "ifrs-smes:EquityAndLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-and-liabilities-equityandliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:29:29:current",
+      "pdf_label": "Total liabilities",
+      "pdf_value": "12800",
+      "predicted_qname": "ifrs-smes:Liabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-liabilities-liabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:29:29:prior",
+      "pdf_label": "Total liabilities",
+      "pdf_value": "11900",
+      "predicted_qname": "ifrs-smes:Liabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-liabilities-liabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:26:26:current",
+      "pdf_label": "Total non current liabilities",
+      "pdf_value": "12000",
+      "predicted_qname": "ifrs-smes:NoncurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-non-current-liabilities-noncurrentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:26:26:prior",
+      "pdf_label": "Total non current liabilities",
+      "pdf_value": "12000",
+      "predicted_qname": "ifrs-smes:NoncurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-non-current-liabilities-noncurrentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:91:91:current",
+      "pdf_label": "TOTAL OPERATING EXPENSES",
+      "pdf_value": "35186",
+      "predicted_qname": "ifrs-smes:OtherExpenseByFunction",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18B-R0218-total-operating-expenses-ifrs-smes-otherexpensebyfunction",
+      "blocking_reasons": [
+        "hardened_rule_requires_review",
+        "generic_label_requires_review",
+        "known_false_positive_risk"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:27:27:current",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "800",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:27:27:prior",
+      "pdf_label": "Other payables and accruals",
+      "pdf_value": "11900",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:66:66:current",
+      "pdf_label": "Other payables",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:66:66:prior",
+      "pdf_label": "Other payables",
+      "pdf_value": "7100",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:17:17:current",
+      "pdf_label": "Trade receivables",
+      "pdf_value": "32400",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:17:17:prior",
+      "pdf_label": "Trade receivables",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:18:18:current",
+      "pdf_label": "Other receivables, deposits and prepayments",
+      "pdf_value": "120800",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:18:18:prior",
+      "pdf_label": "Other receivables, deposits and prepayments",
+      "pdf_value": "25400",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:62:62:current",
+      "pdf_label": "Other receivables",
+      "pdf_value": "119700",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:62:62:prior",
+      "pdf_label": "Other receivables",
+      "pdf_value": "24300",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-receivables-tradeandothercurrentreceivables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:34:34:current",
+      "pdf_label": "Loss for the financial year",
+      "pdf_value": "-9915",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:34:34:prior",
+      "pdf_label": "Loss for the financial year",
+      "pdf_value": "-188217",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-financial-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:33:33:current",
+      "pdf_label": "Less : Taxation",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:33:33:prior",
+      "pdf_label": "Less : Taxation",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:22:22:current",
+      "pdf_label": "Total equity",
+      "pdf_value": "-303233",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:22:22:prior",
+      "pdf_label": "Total equity",
+      "pdf_value": "-293318",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:116:116:current",
+      "pdf_label": "LOSS FOR THE YEAR",
+      "pdf_value": "-138197",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:116:116:prior",
+      "pdf_label": "LOSS FOR THE YEAR",
+      "pdf_value": "-104646",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-loss-for-the-year-profitloss",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:41:41:current",
+      "pdf_label": "Less : Taxation DRAFT F\u00c5Cate",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:41:41:prior",
+      "pdf_label": "Less : Taxation DRAFT F\u00c5Cate",
+      "pdf_value": "0",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-tax-expense-incometaxexpensecontinuingoperations",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:23:23:current",
+      "pdf_label": "Total equity",
+      "pdf_value": "-1056406",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:23:23:prior",
+      "pdf_label": "Total equity",
+      "pdf_value": "-918209",
+      "predicted_qname": "ifrs-smes:Equity",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-equity-equity",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "ambiguous_xbrl_support",
+      "error_reason": "multiple matching facts for predicted qname/value/period"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:26:26:current",
+      "pdf_label": "Total non current liabilities toachat",
+      "pdf_value": "1719316",
+      "predicted_qname": "ifrs-smes:NoncurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-non-current-liabilities-toachat-noncurrentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:26:26:prior",
+      "pdf_label": "Total non current liabilities toachat",
+      "pdf_value": "1624178",
+      "predicted_qname": "ifrs-smes:NoncurrentLiabilities",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-total-non-current-liabilities-toachat-noncurrentliabilities",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:27:27:current",
+      "pdf_label": "Other payables and accruals clean",
+      "pdf_value": "146856",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:27:27:prior",
+      "pdf_label": "Other payables and accruals clean",
+      "pdf_value": "135966",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:72:72:current",
+      "pdf_label": "Other payables",
+      "pdf_value": "140156",
+      "predicted_qname": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence_bucket": "review_required",
+      "matched_rule_id": "18E-A-context-trade-and-other-payables-tradeandothercurrentpayables",
+      "blocking_reasons": [
+        "context_optimized_candidate_requires_review",
+        "context_rule_not_advisory_safe",
+        "low_context_confidence_requires_review",
+        "non_main_statement_context_requires_review",
+        "notes_context_requires_review"
+      ],
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname"
+    }
+  ]
+}

@@ -1,0 +1,1266 @@
+{
+  "run_metadata": {
+    "feature": "18E-B-3",
+    "generated_at": "2026-06-23T10:56:35Z",
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "feature": "18E-B-3",
+    "memory_entry_count": 23,
+    "entry_count_by_statement_family": {
+      "cash_flow": 11,
+      "changes_in_equity": 1,
+      "financial_position": 10,
+      "income_statement": 1
+    },
+    "entry_count_by_qname": {
+      "ifrs-smes:Assets": 1,
+      "ifrs-smes:CashAndCashEquivalents": 6,
+      "ifrs-smes:CashFlowsFromUsedInFinancingActivities": 1,
+      "ifrs-smes:CashFlowsFromUsedInInvestingActivities": 1,
+      "ifrs-smes:CashFlowsFromUsedInOperatingActivities": 1,
+      "ifrs-smes:CurrentAssets": 1,
+      "ifrs-smes:CurrentLiabilities": 1,
+      "ifrs-smes:EquityAndLiabilities": 1,
+      "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents": 2,
+      "ifrs-smes:IssuedCapital": 1,
+      "ifrs-smes:Liabilities": 1,
+      "ifrs-smes:NoncurrentAssets": 1,
+      "ifrs-smes:NoncurrentLiabilities": 1,
+      "ifrs-smes:OtherIncome": 1,
+      "ifrs-smes:ProfitLoss": 1,
+      "ifrs-smes:PropertyPlantAndEquipment": 1,
+      "ifrs-smes:RetainedEarnings": 1
+    },
+    "entry_count_by_confidence_tier": {
+      "format_memory_review_required": 4,
+      "format_memory_strong": 11,
+      "format_memory_usable": 8
+    },
+    "safe_for_auto_apply_count": 0,
+    "requires_human_review_count": 23,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "format_memory_entries": [
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-bank-balances-cashandcashequivalents",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "canonical_position": "cash_flow:cash_flow_reconciliation:component:bank balances",
+      "normalized_label_pattern": "bank balances",
+      "label_aliases": [
+        "bank balances"
+      ],
+      "observed_labels": [
+        {
+          "label": "Bank balances",
+          "count": 8
+        }
+      ],
+      "sample_support_count": 4,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:CashAndCashEquivalents",
+      "preferred_concept_label": "Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_reconciliation",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 0,
+        "period_uncertain_match_evidence": 8,
+        "previous_template_evidence": 8,
+        "row_order_evidence": 8
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-cash-and-cash-equivalents-at-beginning-of-year-cashandcashequivalents",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "canonical_position": "cash_flow:cash_flow_reconciliation:component:cash and cash equivalents at beginning of year",
+      "normalized_label_pattern": "cash and cash equivalents at beginning of year",
+      "label_aliases": [
+        "cash and cash equivalents at beginning of year"
+      ],
+      "observed_labels": [
+        {
+          "label": "Cash and cash equivalents at beginning of year",
+          "count": 4
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_002",
+        "case_005"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:CashAndCashEquivalents",
+      "preferred_concept_label": "Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_reconciliation",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 0,
+        "period_uncertain_match_evidence": 4,
+        "previous_template_evidence": 4,
+        "row_order_evidence": 4
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-cash-and-cash-equivalents-at-end-of-period-cashandcashequivalents",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "canonical_position": "cash_flow:cash_flow_reconciliation:component:cash and cash equivalents at end of period",
+      "normalized_label_pattern": "cash and cash equivalents at end of period",
+      "label_aliases": [
+        "cash and cash equivalents at end of period"
+      ],
+      "observed_labels": [
+        {
+          "label": "Cash and cash equivalents at end of year / period",
+          "count": 2
+        },
+        {
+          "label": "Cash and cash equivalents at end of the year",
+          "count": 2
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_001",
+        "case_004"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:CashAndCashEquivalents",
+      "preferred_concept_label": "Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_reconciliation",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 0,
+        "period_uncertain_match_evidence": 4,
+        "previous_template_evidence": 4,
+        "row_order_evidence": 4
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-cash-and-cash-equivalents-at-the-end-of-year-cashandcashequivalents",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "canonical_position": "cash_flow:cash_flow_reconciliation:component:cash and cash equivalents at the end of year",
+      "normalized_label_pattern": "cash and cash equivalents at the end of year",
+      "label_aliases": [
+        "cash and cash equivalents at the end of year"
+      ],
+      "observed_labels": [
+        {
+          "label": "Cash and cash equivalents at the end of year",
+          "count": 4
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_002",
+        "case_005"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:CashAndCashEquivalents",
+      "preferred_concept_label": "Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_reconciliation",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 0,
+        "period_uncertain_match_evidence": 4,
+        "previous_template_evidence": 4,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-cash-flows-from-financing-activities-cashflowsfromusedinfinancingactivities",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_financing",
+      "canonical_position": "cash_flow:cash_flow_financing:heading:cash flows from financing activities",
+      "normalized_label_pattern": "cash flows from financing activities",
+      "label_aliases": [
+        "cash flows from financing activities"
+      ],
+      "observed_labels": [
+        {
+          "label": "Cash flows from financing activities",
+          "count": 4
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_003",
+        "case_004"
+      ],
+      "expected_row_role": "heading",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashFlowsFromUsedInFinancingActivities"
+      ],
+      "preferred_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+      "preferred_concept_label": "Cash Flows From Used In Financing Activities",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_financing",
+        "row_role": "heading",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 4,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 4,
+        "row_order_evidence": 4
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-cash-flows-from-investing-activities-cashflowsfromusedininvestingactivities",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_investing",
+      "canonical_position": "cash_flow:cash_flow_investing:heading:cash flows from investing activities",
+      "normalized_label_pattern": "cash flows from investing activities",
+      "label_aliases": [
+        "cash flows from investing activities"
+      ],
+      "observed_labels": [
+        {
+          "label": "Cash flows from investing activities",
+          "count": 10
+        }
+      ],
+      "sample_support_count": 5,
+      "sample_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "heading",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashFlowsFromUsedInInvestingActivities"
+      ],
+      "preferred_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+      "preferred_concept_label": "Cash Flows From Used In Investing Activities",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_investing",
+        "row_role": "heading",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 10,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 10,
+        "row_order_evidence": 10
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-net-cash-from-operating-activities-cashflowsfromusedinoperatingactivities",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "canonical_position": "cash_flow:cash_flow_operating:subtotal:net cash from operating activities",
+      "normalized_label_pattern": "net cash from operating activities",
+      "label_aliases": [
+        "net cash from operating activities"
+      ],
+      "observed_labels": [
+        {
+          "label": "Net cash from operating activities",
+          "count": 5
+        }
+      ],
+      "sample_support_count": 3,
+      "sample_ids": [
+        "case_001",
+        "case_002",
+        "case_003"
+      ],
+      "expected_row_role": "subtotal",
+      "expected_qname_candidates": [
+        "ifrs-smes:CashFlowsFromUsedInOperatingActivities"
+      ],
+      "preferred_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "preferred_concept_label": "Cash Flows From Used In Operating Activities",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_operating",
+        "row_role": "subtotal",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 5,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 5,
+        "row_order_evidence": 5
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cash_flow-net-decrease-increase-in-cash-and-cash-equivalen-increasedecreaseincashandcashequivalents",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "canonical_position": "cash_flow:cash_flow_reconciliation:subtotal:net decrease increase in cash and cash equivalents",
+      "normalized_label_pattern": "net decrease increase in cash and cash equivalents",
+      "label_aliases": [
+        "net decrease increase in cash and cash equivalents"
+      ],
+      "observed_labels": [
+        {
+          "label": "Net (decrease) / increase in cash and cash equivalents",
+          "count": 4
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_002",
+        "case_005"
+      ],
+      "expected_row_role": "subtotal",
+      "expected_qname_candidates": [
+        "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "preferred_concept_label": "Increase Decrease In Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_reconciliation",
+        "row_role": "subtotal",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 4,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 4,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cf-cash-equivalent-beginning",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "section_blocks": [
+        "cash_flow_reconciliation",
+        "cash_flow_other"
+      ],
+      "canonical_position": "cash_flow_cash_equivalent_beginning",
+      "normalized_label_pattern": "cash and cash equivalent at beginning of the year",
+      "label_aliases": [
+        "cash and cash equivalent at beginning of the year",
+        "cash and cash equivalent at beginning of year"
+      ],
+      "observed_labels": [
+        {
+          "label": "cash and cash equivalent at beginning of the year",
+          "count": 0
+        },
+        {
+          "label": "cash and cash equivalent at beginning of year",
+          "count": 0
+        }
+      ],
+      "sample_support_count": 0,
+      "sample_ids": [],
+      "expected_row_role": "component",
+      "row_roles": [
+        "component"
+      ],
+      "expected_qname_candidates": [
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:CashAndCashEquivalents",
+      "preferred_concept_label": "Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_blocks": [
+          "cash_flow_reconciliation",
+          "cash_flow_other"
+        ],
+        "row_roles": [
+          "component"
+        ],
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 24,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 24,
+        "row_order_evidence": 0,
+        "structural_alias_evidence": true
+      },
+      "confidence_tier": "format_memory_review_required",
+      "false_positive_risk_notes": [
+        "structural_alias_requires_label_and_context_agreement"
+      ],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cf-cash-equivalent-ending",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "section_blocks": [
+        "cash_flow_reconciliation",
+        "cash_flow_other"
+      ],
+      "canonical_position": "cash_flow_cash_equivalent_ending",
+      "normalized_label_pattern": "cash and cash equivalent at the end of the year",
+      "label_aliases": [
+        "cash and cash equivalent at the end of the year",
+        "cash and cash equivalent at end of year"
+      ],
+      "observed_labels": [
+        {
+          "label": "cash and cash equivalent at the end of the year",
+          "count": 0
+        },
+        {
+          "label": "cash and cash equivalent at end of year",
+          "count": 0
+        }
+      ],
+      "sample_support_count": 0,
+      "sample_ids": [],
+      "expected_row_role": "component",
+      "row_roles": [
+        "component"
+      ],
+      "expected_qname_candidates": [
+        "ifrs-smes:CashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:CashAndCashEquivalents",
+      "preferred_concept_label": "Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_blocks": [
+          "cash_flow_reconciliation",
+          "cash_flow_other"
+        ],
+        "row_roles": [
+          "component"
+        ],
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 24,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 24,
+        "row_order_evidence": 0,
+        "structural_alias_evidence": true
+      },
+      "confidence_tier": "format_memory_review_required",
+      "false_positive_risk_notes": [
+        "structural_alias_requires_label_and_context_agreement"
+      ],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-cf-net-change-cash-equivalent",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_reconciliation",
+      "section_blocks": [
+        "cash_flow_reconciliation",
+        "cash_flow_other"
+      ],
+      "canonical_position": "cash_flow_net_change_cash_equivalent",
+      "normalized_label_pattern": "net increase in cash and cash equivalent",
+      "label_aliases": [
+        "net increase in cash and cash equivalent",
+        "net decrease in cash and cash equivalent",
+        "net increase decrease in cash and cash equivalent",
+        "net decrease increase in cash and cash equivalent"
+      ],
+      "observed_labels": [
+        {
+          "label": "net increase in cash and cash equivalent",
+          "count": 0
+        },
+        {
+          "label": "net decrease in cash and cash equivalent",
+          "count": 0
+        },
+        {
+          "label": "net increase decrease in cash and cash equivalent",
+          "count": 0
+        },
+        {
+          "label": "net decrease increase in cash and cash equivalent",
+          "count": 0
+        }
+      ],
+      "sample_support_count": 0,
+      "sample_ids": [],
+      "expected_row_role": "subtotal",
+      "row_roles": [
+        "subtotal",
+        "total"
+      ],
+      "expected_qname_candidates": [
+        "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents"
+      ],
+      "preferred_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "preferred_concept_label": "Increase Decrease In Cash And Cash Equivalents",
+      "required_context_conditions": {
+        "statement_family": "cash_flow",
+        "section_blocks": [
+          "cash_flow_reconciliation",
+          "cash_flow_other"
+        ],
+        "row_roles": [
+          "subtotal",
+          "total"
+        ],
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 8,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 8,
+        "row_order_evidence": 0,
+        "structural_alias_evidence": true
+      },
+      "confidence_tier": "format_memory_review_required",
+      "false_positive_risk_notes": [
+        "structural_alias_requires_label_and_context_agreement"
+      ],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-changes_in_equity-loss-for-the-financial-year-profitloss",
+      "statement_family": "changes_in_equity",
+      "section_block": "changes_in_equity",
+      "canonical_position": "changes_in_equity:changes_in_equity:component:loss for the financial year",
+      "normalized_label_pattern": "loss for the financial year",
+      "label_aliases": [
+        "loss for the financial year"
+      ],
+      "observed_labels": [
+        {
+          "label": "Loss for the financial year",
+          "count": 11
+        }
+      ],
+      "sample_support_count": 3,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:ProfitLoss"
+      ],
+      "preferred_qname": "ifrs-smes:ProfitLoss",
+      "preferred_concept_label": "Profit Loss",
+      "required_context_conditions": {
+        "statement_family": "changes_in_equity",
+        "section_block": "changes_in_equity",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 0,
+        "period_uncertain_match_evidence": 11,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 11
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-accumulated-losses-retainedearnings",
+      "statement_family": "financial_position",
+      "section_block": "equity",
+      "canonical_position": "financial_position:equity:component:accumulated losses",
+      "normalized_label_pattern": "accumulated losses",
+      "label_aliases": [
+        "accumulated losses"
+      ],
+      "observed_labels": [
+        {
+          "label": "Accumulated losses",
+          "count": 4
+        },
+        {
+          "label": "Accumulated Losses",
+          "count": 2
+        }
+      ],
+      "sample_support_count": 3,
+      "sample_ids": [
+        "case_002",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:RetainedEarnings"
+      ],
+      "preferred_qname": "ifrs-smes:RetainedEarnings",
+      "preferred_concept_label": "Retained Earnings",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "equity",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 6,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 6,
+        "row_order_evidence": 6
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-property-plant-and-equipment-propertyplantandequipment",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "canonical_position": "financial_position:non_current_assets:component:property plant and equipment",
+      "normalized_label_pattern": "property plant and equipment",
+      "label_aliases": [
+        "property plant and equipment"
+      ],
+      "observed_labels": [
+        {
+          "label": "Property, plant and equipment",
+          "count": 8
+        }
+      ],
+      "sample_support_count": 4,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:PropertyPlantAndEquipment"
+      ],
+      "preferred_qname": "ifrs-smes:PropertyPlantAndEquipment",
+      "preferred_concept_label": "Property Plant And Equipment",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "non_current_assets",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 8,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-share-capital-issuedcapital",
+      "statement_family": "financial_position",
+      "section_block": "equity",
+      "canonical_position": "financial_position:equity:component:share capital",
+      "normalized_label_pattern": "share capital",
+      "label_aliases": [
+        "share capital"
+      ],
+      "observed_labels": [
+        {
+          "label": "Share capital",
+          "count": 4
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:IssuedCapital"
+      ],
+      "preferred_qname": "ifrs-smes:IssuedCapital",
+      "preferred_concept_label": "Issued Capital",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "equity",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 4,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 4,
+        "row_order_evidence": 4
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-total-assets-assets",
+      "statement_family": "financial_position",
+      "section_block": "assets",
+      "canonical_position": "financial_position:assets:total:total assets",
+      "normalized_label_pattern": "total assets",
+      "label_aliases": [
+        "total assets"
+      ],
+      "observed_labels": [
+        {
+          "label": "TOTAL ASSETS",
+          "count": 5
+        }
+      ],
+      "sample_support_count": 3,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004"
+      ],
+      "expected_row_role": "total",
+      "expected_qname_candidates": [
+        "ifrs-smes:Assets"
+      ],
+      "preferred_qname": "ifrs-smes:Assets",
+      "preferred_concept_label": "Assets",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "assets",
+        "row_role": "total",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 5,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-total-current-assets-currentassets",
+      "statement_family": "financial_position",
+      "section_block": "current_assets",
+      "canonical_position": "financial_position:current_assets:total:total current assets",
+      "normalized_label_pattern": "total current assets",
+      "label_aliases": [
+        "total current assets"
+      ],
+      "observed_labels": [
+        {
+          "label": "Total current assets",
+          "count": 7
+        }
+      ],
+      "sample_support_count": 4,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "total",
+      "expected_qname_candidates": [
+        "ifrs-smes:CurrentAssets"
+      ],
+      "preferred_qname": "ifrs-smes:CurrentAssets",
+      "preferred_concept_label": "Current Assets",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "current_assets",
+        "row_role": "total",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 7,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-total-current-liabilities-currentliabilities",
+      "statement_family": "financial_position",
+      "section_block": "current_liabilities",
+      "canonical_position": "financial_position:current_liabilities:total:total current liabilities",
+      "normalized_label_pattern": "total current liabilities",
+      "label_aliases": [
+        "total current liabilities"
+      ],
+      "observed_labels": [
+        {
+          "label": "Total current liabilities",
+          "count": 4
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_002",
+        "case_004"
+      ],
+      "expected_row_role": "total",
+      "expected_qname_candidates": [
+        "ifrs-smes:CurrentLiabilities"
+      ],
+      "preferred_qname": "ifrs-smes:CurrentLiabilities",
+      "preferred_concept_label": "Current Liabilities",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "current_liabilities",
+        "row_role": "total",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 4,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-total-equity-and-liabilities-equityandliabilities",
+      "statement_family": "financial_position",
+      "section_block": "equity_and_liabilities",
+      "canonical_position": "financial_position:equity_and_liabilities:total:total equity and liabilities",
+      "normalized_label_pattern": "total equity and liabilities",
+      "label_aliases": [
+        "total equity and liabilities"
+      ],
+      "observed_labels": [
+        {
+          "label": "TOTAL EQUITY AND LIABILITIES",
+          "count": 7
+        }
+      ],
+      "sample_support_count": 4,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "total",
+      "expected_qname_candidates": [
+        "ifrs-smes:EquityAndLiabilities"
+      ],
+      "preferred_qname": "ifrs-smes:EquityAndLiabilities",
+      "preferred_concept_label": "Equity And Liabilities",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "equity_and_liabilities",
+        "row_role": "total",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 7,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 7
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-total-liabilities-liabilities",
+      "statement_family": "financial_position",
+      "section_block": "liabilities",
+      "canonical_position": "financial_position:liabilities:total:total liabilities",
+      "normalized_label_pattern": "total liabilities",
+      "label_aliases": [
+        "total liabilities"
+      ],
+      "observed_labels": [
+        {
+          "label": "Total Liabilities",
+          "count": 2
+        },
+        {
+          "label": "Total liabilities",
+          "count": 2
+        }
+      ],
+      "sample_support_count": 2,
+      "sample_ids": [
+        "case_002",
+        "case_004"
+      ],
+      "expected_row_role": "total",
+      "expected_qname_candidates": [
+        "ifrs-smes:Liabilities"
+      ],
+      "preferred_qname": "ifrs-smes:Liabilities",
+      "preferred_concept_label": "Liabilities",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "liabilities",
+        "row_role": "total",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 4,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_usable",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-financial_position-total-non-current-assets-noncurrentassets",
+      "statement_family": "financial_position",
+      "section_block": "non_current_assets",
+      "canonical_position": "financial_position:non_current_assets:total:total non current assets",
+      "normalized_label_pattern": "total non current assets",
+      "label_aliases": [
+        "total non current assets"
+      ],
+      "observed_labels": [
+        {
+          "label": "Total non-current assets",
+          "count": 8
+        }
+      ],
+      "sample_support_count": 4,
+      "sample_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ],
+      "expected_row_role": "total",
+      "expected_qname_candidates": [
+        "ifrs-smes:NoncurrentAssets"
+      ],
+      "preferred_qname": "ifrs-smes:NoncurrentAssets",
+      "preferred_concept_label": "Noncurrent Assets",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_block": "non_current_assets",
+        "row_role": "total",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 8,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-income_statement-add-other-income-otherincome",
+      "statement_family": "income_statement",
+      "section_block": "other_income",
+      "canonical_position": "income_statement:other_income:component:add other income",
+      "normalized_label_pattern": "add other income",
+      "label_aliases": [
+        "add other income"
+      ],
+      "observed_labels": [
+        {
+          "label": "Add : Other income",
+          "count": 5
+        }
+      ],
+      "sample_support_count": 3,
+      "sample_ids": [
+        "case_001",
+        "case_002",
+        "case_003"
+      ],
+      "expected_row_role": "component",
+      "expected_qname_candidates": [
+        "ifrs-smes:OtherIncome"
+      ],
+      "preferred_qname": "ifrs-smes:OtherIncome",
+      "preferred_concept_label": "Other Income",
+      "required_context_conditions": {
+        "statement_family": "income_statement",
+        "section_block": "other_income",
+        "row_role": "component",
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 5,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 0,
+        "row_order_evidence": 0
+      },
+      "confidence_tier": "format_memory_strong",
+      "false_positive_risk_notes": [],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    },
+    {
+      "memory_entry_id": "18E-B3-format-sfp-total-deferred-liabilities",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "section_blocks": [
+        "non_current_liabilities"
+      ],
+      "canonical_position": "sfp_total_noncurrent_liabilities",
+      "normalized_label_pattern": "total deferred liabilities",
+      "label_aliases": [
+        "total deferred liabilities"
+      ],
+      "observed_labels": [
+        {
+          "label": "total deferred liabilities",
+          "count": 0
+        }
+      ],
+      "sample_support_count": 0,
+      "sample_ids": [],
+      "expected_row_role": "total",
+      "row_roles": [
+        "total",
+        "subtotal"
+      ],
+      "expected_qname_candidates": [
+        "ifrs-smes:NoncurrentLiabilities"
+      ],
+      "preferred_qname": "ifrs-smes:NoncurrentLiabilities",
+      "preferred_concept_label": "Noncurrent Liabilities",
+      "required_context_conditions": {
+        "statement_family": "financial_position",
+        "section_blocks": [
+          "non_current_liabilities"
+        ],
+        "row_roles": [
+          "total",
+          "subtotal"
+        ],
+        "is_main_statement": true,
+        "is_notes_context": false
+      },
+      "blocking_conditions": [
+        "format_memory_candidate_requires_review"
+      ],
+      "source_evidence": {
+        "exact_match_evidence": 2,
+        "period_uncertain_match_evidence": 0,
+        "previous_template_evidence": 2,
+        "row_order_evidence": 0,
+        "structural_alias_evidence": true
+      },
+      "confidence_tier": "format_memory_review_required",
+      "false_positive_risk_notes": [
+        "structural_alias_requires_label_and_context_agreement"
+      ],
+      "safe_for_auto_apply": false,
+      "requires_human_review": true
+    }
+  ]
+}

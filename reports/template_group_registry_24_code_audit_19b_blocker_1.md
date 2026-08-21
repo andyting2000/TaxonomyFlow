@@ -1,0 +1,42 @@
+# Canonical template registry: complete 24-code audit
+
+Status: **PASS**
+
+- Records: 24 / 24
+- Non-exact comparisons: 20
+- Semantic/structural corrections: 5
+- Registry semantic hash: `16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4`
+- Runtime inventory SHA-256: `892024b5869ba983acde86dbf0e940f78dcb35459422455f21e8935da19c6e5a`
+- Official role XSD SHA-256: `145bf4a40885bf2f6145121b805161ee94fb177150cd2fea200e91d0e825872a`
+
+| Code | Old runtime/UI label | Official role definition | Canonical name | New display label | Kind | Structural role | Concepts | Presentation refs | Calculation refs | Aliases | Classification |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 020000 | Scope of Filing | [020000] Scope of filing | Scope of filing | Scope of Filing | declaration | leaf_template | 35 | 1 | 0 | Statutory Declaration | exact_match |
+| 120000 | Directors Report | [120000] Disclosure - Directors report | Disclosure - Directors report | Directors' Report | report | leaf_template | 22 | 1 | 0 | Directors Report | wording_difference_only |
+| 120100 | Statement by Directors | [120100] Disclosure - Statement by directors | Disclosure - Statement by directors | Statement by Directors | declaration | leaf_template | 27 | 1 | 0 |  | wording_difference_only |
+| 120200 | Director Business Review | [120200] Disclosure - Director business review | Disclosure - Director business review | Director Business Review | report | leaf_template | 8 | 1 | 0 |  | wording_difference_only |
+| 130000 | Auditors Report | [130000] Disclosure - Auditors report to members | Disclosure - Auditors report to members | Auditors' Report to Members | report | leaf_template | 15 | 1 | 0 | Auditors Report, Audit Information, Independent Auditors' Report | wording_difference_only |
+| 210000 | Statement of Financial Position | [210000] Statement of financial position, by current/non-current method | Statement of financial position, by current/non-current method | Statement of Financial Position (Current/Non-Current Method) | primary_statement | leaf_template | 50 | 1 | 1 | Statement of Financial Position, Statement of Financial Position - Current/Non-Current | ambiguous_semantics |
+| 210100 | Sub-classification of Assets, Liabilities and Equity (Current/Non-Current) | [210100] Sub-classification of assets, liabilities and equity, by current/non-current method | Sub-classification of assets, liabilities and equity, by current/non-current method | Sub-classification of Assets, Liabilities and Equity (Current/Non-Current Method) | primary_statement | leaf_template | 229 | 1 | 1 | Sub-classification of Assets, Liabilities and Equity (Current/Non-Current), Sub-classification - Current/Non-Current | user_friendly_alias |
+| 220000 | Statement of Financial Position (Order of Liquidity) | [220000] Statement of financial position, by order of liquidity method | Statement of financial position, by order of liquidity method | Statement of Financial Position (Order of Liquidity Method) | primary_statement | leaf_template | 37 | 1 | 1 | Statement of Financial Position (Order of Liquidity), Statement of Financial Position - Order of Liquidity | user_friendly_alias |
+| 220100 | Sub-classification of Assets, Liabilities and Equity (Order of Liquidity) | [220100] Sub-classification of assets, liabilities and equity, by order of liquidity method | Sub-classification of assets, liabilities and equity, by order of liquidity method | Sub-classification of Assets, Liabilities and Equity (Order of Liquidity Method) | primary_statement | leaf_template | 161 | 1 | 1 | Sub-classification of Assets, Liabilities and Equity (Order of Liquidity), Sub-classification - Order of Liquidity | user_friendly_alias |
+| 310000 | Statement of Profit or Loss (By Function) | [310000] Statement of profit or loss, by function of expense | Statement of profit or loss, by function of expense | Statement of Profit or Loss (Function of Expense) | primary_statement | leaf_template | 25 | 1 | 1 | Statement of Profit or Loss (By Function), Statement of Profit or Loss - By Function | user_friendly_alias |
+| 310100 | Analysis of Profit or Loss (By Function) | [310100] Analysis of profit or loss, by function of expense | Analysis of profit or loss, by function of expense | Analysis of Profit or Loss (Function of Expense) | primary_statement | leaf_template | 122 | 1 | 1 | Analysis of Profit or Loss (By Function), Analysis of Profit or Loss - By Function | user_friendly_alias |
+| 320000 | Statement of Profit or Loss (By Nature) | [320000] Statement of profit or loss, by nature of expense | Statement of profit or loss, by nature of expense | Statement of Profit or Loss (Nature of Expense) | primary_statement | leaf_template | 24 | 1 | 1 | Statement of Profit or Loss (By Nature), Statement of Profit or Loss - By Nature | user_friendly_alias |
+| 320100 | Analysis of Profit or Loss (By Nature) | [320100] Analysis of profit or loss, by nature of expense | Analysis of profit or loss, by nature of expense | Analysis of Profit or Loss (Nature of Expense) | primary_statement | leaf_template | 116 | 1 | 1 | Analysis of Profit or Loss (By Nature), Analysis of Profit or Loss - By Nature | user_friendly_alias |
+| 410000 | Statement of Comprehensive Income | [410000] Statement of Comprehensive Income - Net of tax | Statement of Comprehensive Income - Net of tax | Statement of Comprehensive Income (Net of Tax) | primary_statement | leaf_template | 19 | 1 | 1 | Statement of Comprehensive Income | ambiguous_semantics |
+| 420000 | Statement of Comprehensive Income (Before Tax) | [420000] Statement of Comprehensive Income - Before tax | Statement of Comprehensive Income - Before tax | Statement of Comprehensive Income (Before Tax) | primary_statement | leaf_template | 22 | 1 | 1 |  | user_friendly_alias |
+| 510000 | Statement of Cash Flows (Direct Method) | [510000] Statement of cash flows, direct method | Statement of cash flows, direct method | Statement of Cash Flows (Direct Method) | primary_statement | leaf_template | 58 | 1 | 1 | Statement of Cash Flows - Direct Method, Statement of Cash Flows - Direct | user_friendly_alias |
+| 520000 | Statement of Cash Flows (Indirect Method) | [520000] Statement of cash flows, indirect method | Statement of cash flows, indirect method | Statement of Cash Flows (Indirect Method) | primary_statement | leaf_template | 84 | 1 | 1 | Statement of Cash Flows - Indirect Method, Statement of Cash Flows - Indirect | user_friendly_alias |
+| 610000 | Statement of Changes in Equity | [610000] Statement of Changes in Equity | Statement of Changes in Equity | Statement of Changes in Equity | primary_statement | leaf_template | 35 | 1 | 1 |  | exact_match |
+| 620000 | Statement of Retained Earnings | [620000] Statement of Retained Earnings | Statement of Retained Earnings | Statement of Retained Earnings | primary_statement | leaf_template | 11 | 1 | 1 |  | exact_match |
+| 710000 | Notes - Corporate Information | [710000] Notes - Corporate information | Notes - Corporate information | Corporate Information Note | note_disclosure | leaf_template | 4 | 1 | 0 | Notes - Corporate Information | exact_match |
+| 720000 | Notes - Significant Accounting Policies | [720000] Notes - Summary of significant accounting policies | Notes - Summary of significant accounting policies | Summary of Significant Accounting Policies | note_disclosure | leaf_template | 51 | 1 | 0 | Notes - Significant Accounting Policies, Significant Accounting Policies | wording_difference_only |
+| 730000 | Notes to Financial Statements | [730000] Notes - List of notes | Notes - List of notes | Notes - List of Notes | note_list | leaf_template | 83 | 1 | 0 | Notes to Financial Statements | structural_container_conflict |
+| 740000 | Notes - Information on Companies | [740000] Notes - Issued capital | Notes - Issued capital | Issued Capital Note | note_disclosure | leaf_template | 31 | 1 | 0 | Share Capital, Notes - Information on Companies | materially_incorrect_name |
+| 750000 | Notes - Reports | [750000] Notes - Related party transactions | Notes - Related party transactions | Related Party Transactions | note_disclosure | leaf_template | 44 | 1 | 0 | Related Parties, Notes - Reports | materially_incorrect_name |
+
+Each JSON audit record additionally contains the role URI/ID, exact
+presentation and calculation linkbase references, existing navigation label,
+concept-membership hash, classification metadata, provenance, and compatibility
+policy.

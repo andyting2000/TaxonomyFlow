@@ -1,0 +1,96 @@
+{
+  "feature": "18F-G-D",
+  "resume_feature": "18F-G-D-resume",
+  "generated_at": "2026-07-28T10:54:40+08:00",
+  "result": "passed",
+  "capabilities": {
+    "enabled": true,
+    "available": true,
+    "authorized": true,
+    "mode": "manual",
+    "auto_review": false,
+    "auto_remap": false,
+    "max_batch_size": 10
+  },
+  "read_only_verification": {
+    "planning_and_refresh_methods": [
+      "GET"
+    ],
+    "planning_live_calls": 0,
+    "external_calls": 0,
+    "supervisor_calls": 0,
+    "mapper_calls": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "safe_for_auto_apply_count": 0
+  },
+  "explicit_manual_actions": {
+    "supervisor_review_posts": 1,
+    "supervisor_provider_calls_expected": 1,
+    "supervisor_review_created": 1,
+    "guided_remap_posts": 1,
+    "mapper_provider_calls_expected": 1,
+    "guided_revisions_created": 1,
+    "batch_posts": 0,
+    "accept_posts": 0,
+    "reject_posts": 0
+  },
+  "persisted_advisory_writes": {
+    "supervisor_review_id": "8ae6346b-cac7-461d-aa37-488f2b992ae9",
+    "guided_revision_id": "7ff47465-09df-422c-8a1d-fae7de36ecbd",
+    "review_status": "completed",
+    "revision_status": "completed",
+    "requires_human_review": true,
+    "safe_for_auto_apply": false
+  },
+  "prohibited_mutations": {
+    "automatic_reviews": 0,
+    "automatic_remaps": 0,
+    "automatic_accepts": 0,
+    "automatic_rejects": 0,
+    "auto_apply": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "initial_suggestion_mutations": 0,
+    "recursive_supervisor_mapper_loops": 0,
+    "uncontrolled_batch_calls": 0,
+    "xbrl_generation_calls": 0,
+    "arelle_calls": 0
+  },
+  "external_data_safety": {
+    "auditor_xml_sent": false,
+    "parsed_auditor_facts_sent": false,
+    "benchmark_gold_answers_sent": false,
+    "target_correct_qnames_sent": false,
+    "evaluation_labels_sent": false,
+    "approved_runtime_row_context_only": true,
+    "regression_test_evidence": [
+      "test_payload_builder_excludes_forbidden_benchmark_and_xml_keys",
+      "test_forbidden_gold_or_evaluation_fields_fail_closed",
+      "test_feedback_payload_is_whitelisted_and_prompt_is_strict_advisory_json"
+    ]
+  },
+  "failure_and_stale_state_evidence": {
+    "plan_failure_fails_closed": true,
+    "unauthorized_job_hidden": true,
+    "stale_review_rejected": true,
+    "human_terminal_review_rejected": true,
+    "retry_exhaustion_blocks_second_mapper_call": true,
+    "rejected_mapper_correction_blocked": true,
+    "unsafe_frontend_contract_fails_closed": true
+  },
+  "service_and_pipeline_safety": {
+    "service_lifecycle_actions": 0,
+    "pdf_uploads": 0,
+    "azure_di_calls": 0,
+    "xbrl_generation_calls": 0,
+    "arelle_calls": 0
+  },
+  "tests": {
+    "targeted_backend_passed": 109,
+    "frontend_passed": 30,
+    "frontend_build": "not_run_no_frontend_change",
+    "full_backend": "not_run_no_implementation_change"
+  },
+  "safety_decision": "Passed. Only the two explicit advisory actions called providers and persisted advisory evidence; no mapping or human-decision mutation occurred."
+}

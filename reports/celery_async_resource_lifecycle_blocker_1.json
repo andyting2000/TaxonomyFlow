@@ -1,0 +1,110 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-blocker-1",
+  "generated_at": "2026-07-22",
+  "status": "implemented_automated_verification_complete_manual_smoke_pending",
+  "finding": {
+    "classification": "confirmed_issue",
+    "severity": "critical",
+    "root_cause": "The Windows Celery thread pool invoked get_or_create_event_loop from different task threads. Each thread could create and install a different event loop, while the process-global Celery AsyncEngine/session factory and Redis async client remained initialized against an earlier loop. A later task could therefore check out asyncpg connections or await Redis futures owned by another loop.",
+    "not_azure_di_limit": true,
+    "observed_errors": [
+      "got Future attached to a different loop",
+      "asyncpg InternalClientError: got result for unknown protocol state 3"
+    ]
+  },
+  "lifecycle_before": {
+    "task_execution": "A stopped or newly created event loop was selected from the calling Celery thread and run_until_complete executed the task coroutine.",
+    "database": "A process-global pooled Celery AsyncEngine/session factory survived across task-thread event loops.",
+    "redis": "A process-global async Redis client survived across task-thread event loops.",
+    "overlap_risk": "Windows worker_concurrency=4 allowed different task threads to replace the module-level loop reference while shared async resources remained bound to an earlier loop."
+  },
+  "lifecycle_after": {
+    "strategy": "Option A - worker-scoped persistent event loop",
+    "task_execution": "One dedicated daemon thread runs one asyncio event loop continuously per Celery worker process. Celery task threads submit coroutines with asyncio.run_coroutine_threadsafe.",
+    "database": "The Celery-specific pooled AsyncEngine and async session factory are created on the persistent worker loop, record process/loop ownership, reject incompatible-loop reuse, and are disposed on that loop during worker shutdown.",
+    "redis": "The async Redis client is initialized on the persistent worker loop, records process/loop ownership, refuses reuse by replacing an incompatible client context, and is closed on the owner loop during worker shutdown.",
+    "fastapi_resource_separation": "Celery task stages continue to receive Celery manager sessions explicitly. The FastAPI global engine is not selected for extraction, persistence, mapping suggestions, or XBRL task execution.",
+    "task_overlap_decision": "Task submissions may overlap, but all async work and shared async resources execute on the same event loop. Separate SQLAlchemy sessions remain per task; no concurrency=1 workaround is required."
+  },
+  "diagnostics": {
+    "logged_fields": [
+      "process_id",
+      "loop_id",
+      "thread_id",
+      "db_engine_loop_id",
+      "redis_client_loop_id",
+      "job_id",
+      "task_id"
+    ],
+    "credentials_logged": false,
+    "database_url_logged": false
+  },
+  "mapping_suggestion_failure_isolation": {
+    "extraction_status": "REVIEW remains preserved after successful row persistence",
+    "mapping_status": "failed",
+    "error_metadata": "Existing ai_mapping_last_error_message now carries a stable bracketed error code. Loop mismatch and asyncpg protocol-state errors use async_resource_loop_mismatch.",
+    "fine_batik_impact": "The Job 51 behavior remains intentionally isolated: its 107 persisted rows and REVIEW status are retained if advisory mapping suggestions fail. The failure is recorded separately and does not dispose, replace, or poison the worker-loop database resources used by Job 52 or Job 53."
+  },
+  "automated_evidence": {
+    "focused_lifecycle_tests": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_celery_async_resource_lifecycle -v",
+      "result": "passed",
+      "tests": 5,
+      "sequential_jobs": 3,
+      "job_2_mapping_failure_isolated": true,
+      "job_3_reached_review": true,
+      "cross_loop_error_count": 0,
+      "asyncpg_protocol_state_error_count": 0
+    },
+    "azure_di_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest discover -s tests -p \"test_*azure*di*.py\" -v",
+      "result": "passed",
+      "tests": 213
+    },
+    "mapping_ranked_and_ownership_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_llm_taxonomy_mapping tests.test_ranked_candidate_advisory_api tests.test_ranked_candidate_backend_integration_design tests.test_user_isolation_filings -v",
+      "result": "passed",
+      "tests": 76
+    },
+    "critical_path_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_critical_path_baseline -v",
+      "result": "passed",
+      "tests": 10
+    },
+    "full_backend_regressions": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest discover -s tests -p \"test_*.py\" -v",
+      "result": "passed",
+      "tests": 1189,
+      "runtime_seconds": 35.887
+    }
+  },
+  "manual_retest": {
+    "status": "pending_user_run",
+    "worker_restart_required_before_test": true,
+    "restart_between_filings": false,
+    "filings": [
+      "Bezlife",
+      "Fine Batik",
+      "INFO House"
+    ],
+    "checks": [
+      "All three jobs reach REVIEW without restarting Celery between jobs.",
+      "All three jobs persist more than zero extracted rows.",
+      "Mapping suggestions complete or fail independently without changing REVIEW.",
+      "The third job submits to Azure DI normally.",
+      "Worker logs contain no different-loop or asyncpg unknown-protocol-state error."
+    ]
+  },
+  "safety": {
+    "live_azure_di_called": false,
+    "external_llm_called": false,
+    "database_mutated": false,
+    "mapping_algorithm_changed": false,
+    "supervisor_workflow_changed": false,
+    "frontend_changed": false,
+    "auto_apply": false,
+    "confirmed_tag_id_mutated": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  }
+}

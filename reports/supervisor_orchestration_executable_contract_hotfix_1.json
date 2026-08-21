@@ -1,0 +1,330 @@
+{
+  "feature": "18F-G-D-hotfix-1",
+  "generated_at": "2026-07-25T15:42:36+08:00",
+  "result": "pass",
+  "backend_is_canonical": true,
+  "review_contract": {
+    "policy_eligible": "structural/local policy classification is eligible",
+    "executable": "feature enabled, authorized, non-terminal, unconfirmed, no existing review/revision, and policy eligible",
+    "batch_executable": "same canonical predicate as single review"
+  },
+  "remapping_contract": {
+    "selected_option": "A",
+    "description": "Guided remapping requires status suggested and a concrete original qname.",
+    "mapper_abstention": "Rejected rows may receive Supervisor review but are not advertised as remapping executable."
+  },
+  "aggregate_counts": {
+    "policy_eligible": 46,
+    "review_executable": 46,
+    "batch_review_executable": 46,
+    "remapping_eligible": 1,
+    "remapping_executable": 1
+  },
+  "reviewed_or_remap_relevant_rows": [
+    {
+      "job_id": 59,
+      "suggestion_id": "e6f4a35a-29ca-41b1-b244-7ae287ba7630",
+      "row_label": "Rental of office",
+      "mapper_status": "rejected",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "concrete_suggestion_required",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "09cad642-1871-4eee-b1d5-b04bb6d1e9e6",
+      "row_label": "Profit / (Loss) before taxation",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_retry_exhausted",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "correction_retry_limit_reached",
+      "revision_completed": true
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "9f5b310d-4b6f-4b4e-82fe-2d488554f769",
+      "row_label": "Tax expenses for the year",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_retry_exhausted",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "correction_retry_limit_reached",
+      "revision_completed": true
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "c1128e1c-e6ca-480b-a95b-0bdf1f00278c",
+      "row_label": "Cash flows from investing activities",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "38feda38-bec0-427e-a28d-f5d258adb081",
+      "row_label": "Cash and cash equivalents at beginning of year / period",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "08ee5eb7-abcb-489f-be83-820d76369eaa",
+      "row_label": "Cash and cash equivalents at end of year / period",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "35940459-d520-463a-8eaa-466aa3c4516c",
+      "row_label": "Net cash from operating activities",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "790e39da-f6dc-42a7-9b2b-8d0b6a1e52fd",
+      "row_label": "Add : Other income",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "681f1ed0-721f-4a26-8a67-ef275cb5811a",
+      "row_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 59,
+      "suggestion_id": "6c67617e-f6e4-4cf3-b3c2-e483fe682f75",
+      "row_label": "Share capital",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_retry_exhausted",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "correction_retry_limit_reached",
+      "revision_completed": true
+    },
+    {
+      "job_id": 60,
+      "suggestion_id": "a2e9c2d7-e610-47a0-9fcb-4fe39550392d",
+      "row_label": "Net (decrease) / increase in cash and cash equivalents",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 60,
+      "suggestion_id": "38b4306a-0fae-47b6-af5a-ead713204c39",
+      "row_label": "Cash flows from investing activities",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_retry_exhausted",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "correction_retry_limit_reached",
+      "revision_completed": true
+    },
+    {
+      "job_id": 60,
+      "suggestion_id": "144bcaa2-a328-42f4-a133-49905aa6411d",
+      "row_label": "Trade receivables",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "c3d67b79-9543-4018-9dd1-85e7c60d56f2",
+      "row_label": "Tax expenses for the year",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_retry_exhausted",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "correction_retry_limit_reached",
+      "revision_completed": true
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "2e430d37-3180-4065-9d53-4d01bdd0fcb3",
+      "row_label": "Deposits",
+      "mapper_status": "rejected",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "concrete_suggestion_required",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "4b373675-5dab-44db-a6a9-3fb1451ae87a",
+      "row_label": "At beginning and end of the year",
+      "mapper_status": "rejected",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "concrete_suggestion_required",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "dec2b3a8-c05b-49c7-b947-c2c48a36f194",
+      "row_label": "Net cash from operating activities",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "3aaa0b65-1f26-4b93-84b7-7f847d67f087",
+      "row_label": "Bank balances",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "9c392e31-b8eb-4a91-8508-83be0d669442",
+      "row_label": "Cash and cash equivalent at beginning of the year",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "2dbac64f-0f42-45f2-ae7e-9975ebff2cbf",
+      "row_label": "Cash flows from financing activities",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "021ce101-7096-44b1-b905-d0d08a15d11a",
+      "row_label": "Net increase in cash and cash equivalent",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "52d8e2e5-9804-45fd-8b20-d80af50571ed",
+      "row_label": "Add : Other income",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_available",
+      "remapping_eligible": true,
+      "remapping_executable": true,
+      "block_reason": null,
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "92fc48ca-7694-4d5b-8eaf-3dcc1adf3895",
+      "row_label": "Total non-current assets",
+      "mapper_status": "suggested",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "supervisor_agreed",
+      "revision_completed": false
+    }
+  ],
+  "previously_misadvertised_rows": [
+    {
+      "job_id": 59,
+      "suggestion_id": "e6f4a35a-29ca-41b1-b244-7ae287ba7630",
+      "row_label": "Rental of office",
+      "mapper_status": "rejected",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "concrete_suggestion_required",
+      "revision_completed": false
+    },
+    {
+      "job_id": 61,
+      "suggestion_id": "2e430d37-3180-4065-9d53-4d01bdd0fcb3",
+      "row_label": "Deposits",
+      "mapper_status": "rejected",
+      "remapping_eligibility": "remapping_not_eligible",
+      "remapping_eligible": false,
+      "remapping_executable": false,
+      "block_reason": "concrete_suggestion_required",
+      "revision_completed": false
+    }
+  ],
+  "all_advertised_actions_match_known_endpoint_preconditions": true,
+  "verification": {
+    "focused_backend": {
+      "command": "python -B -m unittest tests.test_supervisor_queue_actionability tests.test_supervisor_review_api -v",
+      "passed": 19,
+      "status": "passed"
+    },
+    "targeted_supervisor_mapping_ownership_regression": {
+      "command": "python -B -m unittest tests.test_supervisor_queue_actionability tests.test_supervisor_orchestration_policy tests.test_supervisor_mapping_orchestrator tests.test_supervisor_guided_mapping_correction tests.test_supervisor_production_review tests.test_supervisor_review_api tests.test_supervisor_review_persistence tests.test_supervisor_mapping_review tests.test_supervisor_llm_client tests.test_llm_taxonomy_mapping tests.test_user_isolation_filings -v",
+      "passed": 188,
+      "status": "passed"
+    },
+    "frontend": {
+      "command": "cd frontend; npm run test:auth",
+      "passed": 30,
+      "status": "passed"
+    },
+    "frontend_build": {
+      "command": "cd frontend; npm run build",
+      "modules_transformed": 1586,
+      "status": "passed"
+    },
+    "full_backend": {
+      "command": "python -B -m unittest discover -s tests -p \"test_*.py\" -v",
+      "passed": 1249,
+      "status": "passed"
+    }
+  }
+}

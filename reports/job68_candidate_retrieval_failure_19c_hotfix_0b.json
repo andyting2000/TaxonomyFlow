@@ -1,0 +1,129 @@
+{
+  "analysis_status": "PASS",
+  "feature": "19C-hotfix-0b",
+  "job_id": 68,
+  "source_evidence": {
+    "structure_artifact": "uploads/document-structures/job_68/structure_19a_v4.json",
+    "classification_artifact": "uploads/document-structures/job_68/template_classification_19b_v1.json",
+    "execution_status_artifact": "uploads/document-structures/job_68/pipeline_execution_status.json",
+    "persisted_rows": 76,
+    "structure_rows": 76,
+    "joined_rows": 76,
+    "safe_config_match": true
+  },
+  "observed_production_failure": {
+    "retrieval_status": "failed",
+    "retrieval_reason": "candidate_retrieval_failed",
+    "mapping_build_status": "skipped",
+    "persistence_status": "skipped",
+    "writer_invoked": false,
+    "initial_mapping_artifact_present": false
+  },
+  "exact_exception": {
+    "exception_class": "ValueError",
+    "safe_exception_message": "Row mapping context cannot fit the configured character limit",
+    "throwing_function": "services.section_aware_mapping_context_builder._trim_to_character_limit",
+    "caller": "services.section_aware_mapping_context_builder.build_section_aware_mapping_context",
+    "production_boundary": "services.section_aware_initial_mapping.build_document_initial_mapping"
+  },
+  "first_triggering_input_in_original_normalized_order": {
+    "source_row_id": "f77723f8-9bb8-4748-bd2c-dbff4889bd9f",
+    "original_candidate_id": "filing_job_68:candidate:26:26",
+    "label": "Turnover",
+    "row_type": "numeric_fact",
+    "azure_page_number": 14,
+    "section_id": "section-6",
+    "subsection_id": null,
+    "classification_outcome": "matched",
+    "template_group_ids": ["420000"],
+    "statement_families": ["comprehensive_income"],
+    "candidate_count": 8,
+    "legacy_residual_characters": 12455,
+    "configured_character_limit": 12000,
+    "source_values_reported": false
+  },
+  "root_cause": {
+    "failure_scope": "row_local",
+    "eligible_rows_with_initial_context_over_limit": 25,
+    "rows_resolved_by_legacy_trimmer": 15,
+    "rows_failed_by_legacy_trimmer": 10,
+    "description": "The trimmer removed neighboring text and selected optional card fields but never removed repeated deterministic score-reason strings. Ten otherwise valid 420000 row contexts therefore remained above 12000 characters and the former outer try/except collapsed the entire retrieval stage.",
+    "not_caused_by": [
+      "19A range projection",
+      "19B unassigned outcomes",
+      "registry linkage",
+      "concept inventory availability",
+      "candidate scoring",
+      "candidate sorting",
+      "artifact serialization",
+      "atomic publication",
+      "provider configuration"
+    ]
+  },
+  "job68_edge_case_audit": {
+    "section_id_absent_rows": 26,
+    "context_ids_absent_from_current_classification": 0,
+    "classification_outcomes_by_row": {
+      "matched": 25,
+      "ambiguous": 10,
+      "unassigned": 36,
+      "narrative_only": 5,
+      "container_only": 0
+    },
+    "empty_template_group_rows": 51,
+    "multiple_template_group_rows": 0,
+    "missing_labels": 0,
+    "both_current_and_prior_values_null": 0,
+    "duplicate_row_ids": 0,
+    "duplicate_or_competing_label_conflicts": 4,
+    "parent_reference_rows": 0,
+    "inventory_cards": 923,
+    "cards_missing_datatype": 0,
+    "cards_missing_period_type": 0,
+    "finding": "Missing/unassigned/ambiguous/narrative section scope safely produced non-eligible rows; none caused the exception. No duplicate identity, missing label/value pair, missing card datatype/period metadata, multiple group, or unknown current classification ID was present."
+  },
+  "fix": {
+    "context_change": "Trim redundant local_candidate_score.reasons before dropping candidate identity, score, rank, or Top-K visibility.",
+    "row_isolation": "Convert unexpected row preparation/scoring/context errors into retrieval_failed with no selected concept and continue independent rows.",
+    "systemic_boundary": "Registry, concept inventory/index, upstream identity/hash, source identity, and row-limit failures remain stage-fatal.",
+    "ranking_semantics_changed": false
+  },
+  "post_fix_read_only_job68_replay": {
+    "status": "completed",
+    "total_rows": 76,
+    "rows_structurally_skipped": 51,
+    "rows_eligible": 25,
+    "rows_attempted": 25,
+    "rows_successful": 25,
+    "rows_with_zero_safe_candidates": 0,
+    "rows_failed_locally": 0,
+    "stage_fatal_error_count": 0,
+    "decision_counts": {
+      "mapped": 2,
+      "ambiguous": 15,
+      "abstain": 8,
+      "structural_only": 51
+    },
+    "provider_calls": 0,
+    "persistence_invoked": false
+  },
+  "production_post_fix_status": "NOT_RERUN",
+  "expected_fresh_run": {
+    "19C_candidate_retrieval": "completed",
+    "19C_mapping_build": "completed",
+    "19C_persistence": "completed",
+    "artifact": "initial_mapping_19c_v1.json"
+  },
+  "safety": {
+    "existing_mapping_suggestion_mutations": 0,
+    "template_field_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "provider_calls": 0,
+    "recursive_retries": 0,
+    "xbrl_generation_count": 0,
+    "arelle_runs": 0,
+    "auditor_xml_used": false,
+    "benchmark_gold_used": false
+  }
+}

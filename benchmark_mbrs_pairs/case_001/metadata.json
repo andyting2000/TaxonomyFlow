@@ -1,0 +1,10 @@
+{
+  "source_case_dir": "benchmark_cases/001-bezlife-marketing",
+  "source_case_id": "001-bezlife-marketing",
+  "azure_di_normalized_extraction_status": "available",
+  "azure_di_capture_report": "reports/golden_mbrs_azure_di_capture_case_001_17a.json",
+  "azure_di_normalized_extraction_report": "reports/golden_mbrs_case_001_17a_extraction_v2_report_13y.json",
+  "azure_di_capture_run_id": "golden_mbrs_17a_case_001",
+  "azure_di_capture_generated_at": "2026-06-01T11:55:19Z",
+  "reference_xml_external_provider_policy": "local_only"
+}

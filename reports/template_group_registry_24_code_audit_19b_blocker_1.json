@@ -1,0 +1,1839 @@
+{
+  "feature_id": "19B-blocker-1",
+  "generated_on": "2026-07-31",
+  "status": "PASS",
+  "canonical_source_of_truth": "taxonomy/template_group_registry_mpers_2022_v1.json",
+  "registry_id": "template_group_registry_mpers_2022_v1",
+  "semantic_inventory_version": "mpers-2022-v1",
+  "source_taxonomy_version": "SSMxT_2022v1.0",
+  "registry_file_sha256": "4fe4dd11f5e33ca1b70233b3927ad971d709c0773e863c4b53ff2789c612ea28",
+  "semantic_inventory_sha256": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+  "report_id": "template_group_registry_24_code_audit_19b_blocker_1",
+  "expected_count": 24,
+  "actual_count": 24,
+  "discrepancy_counts": {
+    "ambiguous_semantics": 2,
+    "exact_match": 4,
+    "materially_incorrect_name": 2,
+    "structural_container_conflict": 1,
+    "user_friendly_alias": 10,
+    "wording_difference_only": 5
+  },
+  "non_exact_comparison_count": 20,
+  "semantic_or_structural_correction_count": 5,
+  "runtime_inventory_sha256": "892024b5869ba983acde86dbf0e940f78dcb35459422455f21e8935da19c6e5a",
+  "official_role_xsd_sha256": "145bf4a40885bf2f6145121b805161ee94fb177150cd2fea200e91d0e825872a",
+  "records": [
+    {
+      "template_group_id": "020000",
+      "code": "020000",
+      "current_runtime_name": "Scope of Filing",
+      "current_runtime_description": "Scope of Filing",
+      "raw_extracted_description": "Template 020000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-020000",
+      "official_role_definition": "[020000] Scope of filing",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-020000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-020000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-020000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Scope of Filing",
+      "existing_navigation_label": "Scope of Filing",
+      "aliases": [
+        "Statutory Declaration"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/020000/concepts",
+        "concept_count": 35,
+        "ordered_concept_ids_sha256": "4802b85a51a4e7c3885e5fa6ba2649790c9188af5489bfb88e35eb3507d11772"
+      },
+      "template_kind": "declaration",
+      "structural_role": "leaf_template",
+      "statement_family": "scope",
+      "canonical_name": "Scope of filing",
+      "user_display_name": "Scope of Filing",
+      "normalized_name": "scope_of_filing",
+      "discrepancy_classification": "exact_match",
+      "classification_enabled": false,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "scope_of_filing",
+          "statutory_declaration"
+        ],
+        "positive_title_indicators": [
+          "scope of filing",
+          "statutory declaration"
+        ],
+        "exclusion_indicators": [
+          "statement of financial position",
+          "notes to the financial statements"
+        ],
+        "narrative_container_behavior": "narrative_only_for_19b",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "120000",
+      "code": "120000",
+      "current_runtime_name": "Directors Report",
+      "current_runtime_description": "Directors Report",
+      "raw_extracted_description": "Template 120000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-120000",
+      "official_role_definition": "[120000] Disclosure - Directors report",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-120000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-120000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-120000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Directors Report",
+      "existing_navigation_label": "Directors Report",
+      "aliases": [
+        "Directors Report"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/120000/concepts",
+        "concept_count": 22,
+        "ordered_concept_ids_sha256": "2960a6f34e806f001a6b12419b3921b188ff1a9612ae2d48b34ec2006d903e80"
+      },
+      "template_kind": "report",
+      "structural_role": "leaf_template",
+      "statement_family": "directors_report",
+      "canonical_name": "Disclosure - Directors report",
+      "user_display_name": "Directors' Report",
+      "normalized_name": "disclosure_directors_report",
+      "discrepancy_classification": "wording_difference_only",
+      "classification_enabled": false,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "directors_report"
+        ],
+        "positive_title_indicators": [
+          "directors' report",
+          "directors report"
+        ],
+        "exclusion_indicators": [
+          "statement by directors",
+          "independent auditors' report"
+        ],
+        "narrative_container_behavior": "narrative_only_for_19b",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Directors Report"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "120100",
+      "code": "120100",
+      "current_runtime_name": "Statement by Directors",
+      "current_runtime_description": "Statement by Directors",
+      "raw_extracted_description": "Template 120100",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-120100",
+      "official_role_definition": "[120100] Disclosure - Statement by directors",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-120100",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-120100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-120100"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Statement by Directors",
+      "existing_navigation_label": "Statement by Directors",
+      "aliases": [],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/120100/concepts",
+        "concept_count": 27,
+        "ordered_concept_ids_sha256": "c98974fc94565528ec7b24b41a3683de01a05f82e7803b8d545de65e664fdf16"
+      },
+      "template_kind": "declaration",
+      "structural_role": "leaf_template",
+      "statement_family": "statement_by_directors",
+      "canonical_name": "Disclosure - Statement by directors",
+      "user_display_name": "Statement by Directors",
+      "normalized_name": "disclosure_statement_by_directors",
+      "discrepancy_classification": "wording_difference_only",
+      "classification_enabled": false,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_by_directors"
+        ],
+        "positive_title_indicators": [
+          "statement by directors"
+        ],
+        "exclusion_indicators": [
+          "directors' report",
+          "auditors' report"
+        ],
+        "narrative_container_behavior": "narrative_only_for_19b",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "120200",
+      "code": "120200",
+      "current_runtime_name": "Director Business Review",
+      "current_runtime_description": "Director Business Review",
+      "raw_extracted_description": "Template 120200",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-120200",
+      "official_role_definition": "[120200] Disclosure - Director business review",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-120200",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-120200.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-120200"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Director Business Review",
+      "existing_navigation_label": "Director Business Review",
+      "aliases": [],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/120200/concepts",
+        "concept_count": 8,
+        "ordered_concept_ids_sha256": "f0a7ba59b6e3d7f1e04d03b93423f65e324086ae106e220122e191afab419736"
+      },
+      "template_kind": "report",
+      "structural_role": "leaf_template",
+      "statement_family": "director_business_review",
+      "canonical_name": "Disclosure - Director business review",
+      "user_display_name": "Director Business Review",
+      "normalized_name": "disclosure_director_business_review",
+      "discrepancy_classification": "wording_difference_only",
+      "classification_enabled": false,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "director_business_review"
+        ],
+        "positive_title_indicators": [
+          "director business review",
+          "directors' business review"
+        ],
+        "exclusion_indicators": [
+          "statement by directors",
+          "directors' report"
+        ],
+        "narrative_container_behavior": "narrative_only_for_19b",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "130000",
+      "code": "130000",
+      "current_runtime_name": "Auditors Report",
+      "current_runtime_description": "Auditors Report",
+      "raw_extracted_description": "Template 130000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-130000",
+      "official_role_definition": "[130000] Disclosure - Auditors report to members",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-130000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-130000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-130000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Auditors Report",
+      "existing_navigation_label": "Auditors Report",
+      "aliases": [
+        "Auditors Report",
+        "Audit Information",
+        "Independent Auditors' Report"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/130000/concepts",
+        "concept_count": 15,
+        "ordered_concept_ids_sha256": "aa696d9118651e551b44305960207687231dd498ece272b93ed4d43f0ad89399"
+      },
+      "template_kind": "report",
+      "structural_role": "leaf_template",
+      "statement_family": "auditors_report",
+      "canonical_name": "Disclosure - Auditors report to members",
+      "user_display_name": "Auditors' Report to Members",
+      "normalized_name": "disclosure_auditors_report_to_members",
+      "discrepancy_classification": "wording_difference_only",
+      "classification_enabled": false,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "auditors_report"
+        ],
+        "positive_title_indicators": [
+          "independent auditors' report",
+          "auditors' report to members"
+        ],
+        "exclusion_indicators": [
+          "directors' report",
+          "statement by directors"
+        ],
+        "narrative_container_behavior": "narrative_only_for_19b",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Auditors Report",
+          "Audit Information"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "210000",
+      "code": "210000",
+      "current_runtime_name": "Statement of Financial Position",
+      "current_runtime_description": "Statement of Financial Position",
+      "raw_extracted_description": "Template 210000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-210000",
+      "official_role_definition": "[210000] Statement of financial position, by current/non-current method",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-210000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-210000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200100x"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200100"
+        }
+      ],
+      "existing_ui_label": "Statement of Financial Position",
+      "existing_navigation_label": "Statement of Financial Position",
+      "aliases": [
+        "Statement of Financial Position",
+        "Statement of Financial Position - Current/Non-Current"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/210000/concepts",
+        "concept_count": 50,
+        "ordered_concept_ids_sha256": "e6d8753362edd666a418039a3ff5fa358b0f27bc6a813eca96f0487116fb3461"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "financial_position",
+      "canonical_name": "Statement of financial position, by current/non-current method",
+      "user_display_name": "Statement of Financial Position (Current/Non-Current Method)",
+      "normalized_name": "statement_of_financial_position_current_noncurrent",
+      "discrepancy_classification": "ambiguous_semantics",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_financial_position"
+        ],
+        "positive_title_indicators": [
+          "statement of financial position",
+          "balance sheet",
+          "current assets",
+          "non-current liabilities"
+        ],
+        "exclusion_indicators": [
+          "order of liquidity"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Financial Position",
+          "Statement of Financial Position - Current/Non-Current"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "210100",
+      "code": "210100",
+      "current_runtime_name": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+      "current_runtime_description": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+      "raw_extracted_description": "Template 210100",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-210100",
+      "official_role_definition": "[210100] Sub-classification of assets, liabilities and equity, by current/non-current method",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-210100",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-210100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200200x"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200200.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200200"
+        }
+      ],
+      "existing_ui_label": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+      "existing_navigation_label": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+      "aliases": [
+        "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+        "Sub-classification - Current/Non-Current"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/210100/concepts",
+        "concept_count": 229,
+        "ordered_concept_ids_sha256": "75e03d8b91805ef46d57539bda72f18bc161527971f4a704669c32d46a4b5fd4"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "financial_position",
+      "canonical_name": "Sub-classification of assets, liabilities and equity, by current/non-current method",
+      "user_display_name": "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current Method)",
+      "normalized_name": "subclassification_assets_liabilities_equity_current_noncurrent",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_detail",
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "sub-classification of assets, liabilities and equity",
+          "property, plant and equipment",
+          "trade and other receivables"
+        ],
+        "exclusion_indicators": [
+          "order of liquidity"
+        ],
+        "narrative_container_behavior": "detail_role",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Sub-classification of Assets, Liabilities and Equity (Current/Non-Current)",
+          "Sub-classification - Current/Non-Current"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "220000",
+      "code": "220000",
+      "current_runtime_name": "Statement of Financial Position (Order of Liquidity)",
+      "current_runtime_description": "Statement of Financial Position (Order of Liquidity)",
+      "raw_extracted_description": "Template 220000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-220000",
+      "official_role_definition": "[220000] Statement of financial position, by order of liquidity method",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-220000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-220000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200100y"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200100"
+        }
+      ],
+      "existing_ui_label": "Statement of Financial Position (Order of Liquidity)",
+      "existing_navigation_label": "Statement of Financial Position (Order of Liquidity)",
+      "aliases": [
+        "Statement of Financial Position (Order of Liquidity)",
+        "Statement of Financial Position - Order of Liquidity"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/220000/concepts",
+        "concept_count": 37,
+        "ordered_concept_ids_sha256": "f1c41561a25e88cc99e91e33e61ea246797950ffaf3cc2769657fcad550b6aac"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "financial_position",
+      "canonical_name": "Statement of financial position, by order of liquidity method",
+      "user_display_name": "Statement of Financial Position (Order of Liquidity Method)",
+      "normalized_name": "statement_of_financial_position_order_of_liquidity",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_financial_position"
+        ],
+        "positive_title_indicators": [
+          "statement of financial position",
+          "order of liquidity",
+          "liquidity presentation"
+        ],
+        "exclusion_indicators": [
+          "current assets",
+          "non-current assets"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Financial Position (Order of Liquidity)",
+          "Statement of Financial Position - Order of Liquidity"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "220100",
+      "code": "220100",
+      "current_runtime_name": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+      "current_runtime_description": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+      "raw_extracted_description": "Template 220100",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-220100",
+      "official_role_definition": "[220100] Sub-classification of assets, liabilities and equity, by order of liquidity method",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-220100",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-220100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200200y"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-200200.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-200200"
+        }
+      ],
+      "existing_ui_label": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+      "existing_navigation_label": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+      "aliases": [
+        "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+        "Sub-classification - Order of Liquidity"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/220100/concepts",
+        "concept_count": 161,
+        "ordered_concept_ids_sha256": "4baac89803a641e2a36f71102d6e94863f786c41bb1a36b3d267d4cb31642af1"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "financial_position",
+      "canonical_name": "Sub-classification of assets, liabilities and equity, by order of liquidity method",
+      "user_display_name": "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity Method)",
+      "normalized_name": "subclassification_assets_liabilities_equity_order_of_liquidity",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_detail",
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "sub-classification of assets, liabilities and equity",
+          "order of liquidity"
+        ],
+        "exclusion_indicators": [
+          "current/non-current method"
+        ],
+        "narrative_container_behavior": "detail_role",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Sub-classification of Assets, Liabilities and Equity (Order of Liquidity)",
+          "Sub-classification - Order of Liquidity"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "310000",
+      "code": "310000",
+      "current_runtime_name": "Statement of Profit or Loss (By Function)",
+      "current_runtime_description": "Statement of Profit or Loss (By Function)",
+      "raw_extracted_description": "Template 310000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-310000",
+      "official_role_definition": "[310000] Statement of profit or loss, by function of expense",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-310000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-310000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300100x"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300100"
+        }
+      ],
+      "existing_ui_label": "Statement of Profit or Loss (By Function)",
+      "existing_navigation_label": "Statement of Profit or Loss (By Function)",
+      "aliases": [
+        "Statement of Profit or Loss (By Function)",
+        "Statement of Profit or Loss - By Function"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/310000/concepts",
+        "concept_count": 25,
+        "ordered_concept_ids_sha256": "e7e44a89cd2fff94413a71913ad6d73375bb209e7809e0006be67451c9b1a956"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "profit_or_loss",
+      "canonical_name": "Statement of profit or loss, by function of expense",
+      "user_display_name": "Statement of Profit or Loss (Function of Expense)",
+      "normalized_name": "statement_of_profit_or_loss_function_of_expense",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_profit_or_loss"
+        ],
+        "positive_title_indicators": [
+          "statement of profit or loss",
+          "cost of sales",
+          "gross profit",
+          "by function"
+        ],
+        "exclusion_indicators": [
+          "by nature",
+          "employee benefits expense"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Profit or Loss (By Function)",
+          "Statement of Profit or Loss - By Function"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "310100",
+      "code": "310100",
+      "current_runtime_name": "Analysis of Profit or Loss (By Function)",
+      "current_runtime_description": "Analysis of Profit or Loss (By Function)",
+      "raw_extracted_description": "Template 310100",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-310100",
+      "official_role_definition": "[310100] Analysis of profit or loss, by function of expense",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-310100",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-310100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300200x"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300200.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300200"
+        }
+      ],
+      "existing_ui_label": "Analysis of Profit or Loss (By Function)",
+      "existing_navigation_label": "Analysis of Profit or Loss (By Function)",
+      "aliases": [
+        "Analysis of Profit or Loss (By Function)",
+        "Analysis of Profit or Loss - By Function"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/310100/concepts",
+        "concept_count": 122,
+        "ordered_concept_ids_sha256": "308b1b3bbfac91c4937283a170661a34c9c5ce597cd11bfdb22395f48399de17"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "profit_or_loss",
+      "canonical_name": "Analysis of profit or loss, by function of expense",
+      "user_display_name": "Analysis of Profit or Loss (Function of Expense)",
+      "normalized_name": "analysis_of_profit_or_loss_function_of_expense",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_detail",
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "analysis of profit or loss",
+          "employee benefit expense",
+          "other expenses by function"
+        ],
+        "exclusion_indicators": [
+          "other expenses by nature"
+        ],
+        "narrative_container_behavior": "detail_role",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Analysis of Profit or Loss (By Function)",
+          "Analysis of Profit or Loss - By Function"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "320000",
+      "code": "320000",
+      "current_runtime_name": "Statement of Profit or Loss (By Nature)",
+      "current_runtime_description": "Statement of Profit or Loss (By Nature)",
+      "raw_extracted_description": "Template 320000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-320000",
+      "official_role_definition": "[320000] Statement of profit or loss, by nature of expense",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-320000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-320000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300100y"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300100"
+        }
+      ],
+      "existing_ui_label": "Statement of Profit or Loss (By Nature)",
+      "existing_navigation_label": "Statement of Profit or Loss (By Nature)",
+      "aliases": [
+        "Statement of Profit or Loss (By Nature)",
+        "Statement of Profit or Loss - By Nature"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/320000/concepts",
+        "concept_count": 24,
+        "ordered_concept_ids_sha256": "89095691e61f73e0f3b3e0c446e0121e1eee119583405d5bc94cc44402c9e5db"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "profit_or_loss",
+      "canonical_name": "Statement of profit or loss, by nature of expense",
+      "user_display_name": "Statement of Profit or Loss (Nature of Expense)",
+      "normalized_name": "statement_of_profit_or_loss_nature_of_expense",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_profit_or_loss"
+        ],
+        "positive_title_indicators": [
+          "statement of profit or loss",
+          "by nature",
+          "employee benefits expense",
+          "depreciation expense"
+        ],
+        "exclusion_indicators": [
+          "cost of sales",
+          "gross profit",
+          "by function"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Profit or Loss (By Nature)",
+          "Statement of Profit or Loss - By Nature"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "320100",
+      "code": "320100",
+      "current_runtime_name": "Analysis of Profit or Loss (By Nature)",
+      "current_runtime_description": "Analysis of Profit or Loss (By Nature)",
+      "raw_extracted_description": "Template 320100",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-320100",
+      "official_role_definition": "[320100] Analysis of profit or loss, by nature of expense",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-320100",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-320100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300200y"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-300200.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-300200"
+        }
+      ],
+      "existing_ui_label": "Analysis of Profit or Loss (By Nature)",
+      "existing_navigation_label": "Analysis of Profit or Loss (By Nature)",
+      "aliases": [
+        "Analysis of Profit or Loss (By Nature)",
+        "Analysis of Profit or Loss - By Nature"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/320100/concepts",
+        "concept_count": 116,
+        "ordered_concept_ids_sha256": "c517c74912e8d201be9c8392b916a7274a367af0a0acfa70af5a91eb43e6c706"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "profit_or_loss",
+      "canonical_name": "Analysis of profit or loss, by nature of expense",
+      "user_display_name": "Analysis of Profit or Loss (Nature of Expense)",
+      "normalized_name": "analysis_of_profit_or_loss_nature_of_expense",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_detail",
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "analysis of profit or loss",
+          "employee benefit expense",
+          "other expenses by nature"
+        ],
+        "exclusion_indicators": [
+          "other expenses by function"
+        ],
+        "narrative_container_behavior": "detail_role",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Analysis of Profit or Loss (By Nature)",
+          "Analysis of Profit or Loss - By Nature"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "410000",
+      "code": "410000",
+      "current_runtime_name": "Statement of Comprehensive Income",
+      "current_runtime_description": "Statement of Comprehensive Income",
+      "raw_extracted_description": "Template 410000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-410000",
+      "official_role_definition": "[410000] Statement of Comprehensive Income - Net of tax",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-410000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-410000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-400100x"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-400100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-400100"
+        }
+      ],
+      "existing_ui_label": "Statement of Comprehensive Income",
+      "existing_navigation_label": "Statement of Comprehensive Income",
+      "aliases": [
+        "Statement of Comprehensive Income"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/410000/concepts",
+        "concept_count": 19,
+        "ordered_concept_ids_sha256": "3b8226aa445ecd865e0e73466089d38cea56fef86ae6d5176b8946d95c9d19d9"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "comprehensive_income",
+      "canonical_name": "Statement of Comprehensive Income - Net of tax",
+      "user_display_name": "Statement of Comprehensive Income (Net of Tax)",
+      "normalized_name": "statement_of_comprehensive_income_net_of_tax",
+      "discrepancy_classification": "ambiguous_semantics",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_comprehensive_income"
+        ],
+        "positive_title_indicators": [
+          "statement of comprehensive income",
+          "net of tax",
+          "other comprehensive income"
+        ],
+        "exclusion_indicators": [
+          "before tax"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Comprehensive Income"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "420000",
+      "code": "420000",
+      "current_runtime_name": "Statement of Comprehensive Income (Before Tax)",
+      "current_runtime_description": "Statement of Comprehensive Income (Before Tax)",
+      "raw_extracted_description": "Template 420000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-420000",
+      "official_role_definition": "[420000] Statement of Comprehensive Income - Before tax",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-420000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-420000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-400100y"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-400100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-400100"
+        }
+      ],
+      "existing_ui_label": "Statement of Comprehensive Income (Before Tax)",
+      "existing_navigation_label": "Statement of Comprehensive Income (Before Tax)",
+      "aliases": [],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/420000/concepts",
+        "concept_count": 22,
+        "ordered_concept_ids_sha256": "f3f4a0a938ffa7a88d75e3c49fdc1ad2be053f8dc1f9c83d1fa837b611d74077"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "comprehensive_income",
+      "canonical_name": "Statement of Comprehensive Income - Before tax",
+      "user_display_name": "Statement of Comprehensive Income (Before Tax)",
+      "normalized_name": "statement_of_comprehensive_income_before_tax",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_comprehensive_income"
+        ],
+        "positive_title_indicators": [
+          "statement of comprehensive income",
+          "before tax"
+        ],
+        "exclusion_indicators": [
+          "net of tax"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "510000",
+      "code": "510000",
+      "current_runtime_name": "Statement of Cash Flows (Direct Method)",
+      "current_runtime_description": "Statement of Cash Flows (Direct Method)",
+      "raw_extracted_description": "Template 510000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-510000",
+      "official_role_definition": "[510000] Statement of cash flows, direct method",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-510000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-510000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-500100x"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-500100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-500100"
+        }
+      ],
+      "existing_ui_label": "Statement of Cash Flows (Direct Method)",
+      "existing_navigation_label": "Statement of Cash Flows (Direct Method)",
+      "aliases": [
+        "Statement of Cash Flows - Direct Method",
+        "Statement of Cash Flows - Direct"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/510000/concepts",
+        "concept_count": 58,
+        "ordered_concept_ids_sha256": "7e8b60566fa95ef4758f557970df9b6d1f69ee1ce12fd21eff177ddf5fbcf17a"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "cash_flows",
+      "canonical_name": "Statement of cash flows, direct method",
+      "user_display_name": "Statement of Cash Flows (Direct Method)",
+      "normalized_name": "statement_of_cash_flows_direct_method",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_cash_flows"
+        ],
+        "positive_title_indicators": [
+          "statement of cash flows",
+          "direct method",
+          "receipts from customers",
+          "payments to suppliers"
+        ],
+        "exclusion_indicators": [
+          "profit before tax",
+          "adjustments for"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Cash Flows - Direct Method",
+          "Statement of Cash Flows - Direct"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "520000",
+      "code": "520000",
+      "current_runtime_name": "Statement of Cash Flows (Indirect Method)",
+      "current_runtime_description": "Statement of Cash Flows (Indirect Method)",
+      "raw_extracted_description": "Template 520000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-520000",
+      "official_role_definition": "[520000] Statement of cash flows, indirect method",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-520000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-520000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-500100y"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-500100.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-500100"
+        }
+      ],
+      "existing_ui_label": "Statement of Cash Flows (Indirect Method)",
+      "existing_navigation_label": "Statement of Cash Flows (Indirect Method)",
+      "aliases": [
+        "Statement of Cash Flows - Indirect Method",
+        "Statement of Cash Flows - Indirect"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/520000/concepts",
+        "concept_count": 84,
+        "ordered_concept_ids_sha256": "89418e172e552dedaac2c417ca39010d7b20fd98800069d2262c8d06172588df"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "cash_flows",
+      "canonical_name": "Statement of cash flows, indirect method",
+      "user_display_name": "Statement of Cash Flows (Indirect Method)",
+      "normalized_name": "statement_of_cash_flows_indirect_method",
+      "discrepancy_classification": "user_friendly_alias",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_cash_flows"
+        ],
+        "positive_title_indicators": [
+          "statement of cash flows",
+          "indirect method",
+          "profit before tax",
+          "adjustments for"
+        ],
+        "exclusion_indicators": [
+          "receipts from customers",
+          "payments to suppliers"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Statement of Cash Flows - Indirect Method",
+          "Statement of Cash Flows - Indirect"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "610000",
+      "code": "610000",
+      "current_runtime_name": "Statement of Changes in Equity",
+      "current_runtime_description": "Statement of Changes in Equity",
+      "raw_extracted_description": "Template 610000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-610000",
+      "official_role_definition": "[610000] Statement of Changes in Equity",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-610000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-610000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-610000"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-610000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-610000"
+        }
+      ],
+      "existing_ui_label": "Statement of Changes in Equity",
+      "existing_navigation_label": "Statement of Changes in Equity",
+      "aliases": [],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/610000/concepts",
+        "concept_count": 35,
+        "ordered_concept_ids_sha256": "434a5f42ba88b794ccad291bdde64b9ddedb9690e61f660dfc1ed4aa7e572100"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "changes_in_equity",
+      "canonical_name": "Statement of Changes in Equity",
+      "user_display_name": "Statement of Changes in Equity",
+      "normalized_name": "statement_of_changes_in_equity",
+      "discrepancy_classification": "exact_match",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_changes_in_equity"
+        ],
+        "positive_title_indicators": [
+          "statement of changes in equity",
+          "share capital",
+          "retained earnings"
+        ],
+        "exclusion_indicators": [
+          "statement of retained earnings"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "620000",
+      "code": "620000",
+      "current_runtime_name": "Statement of Retained Earnings",
+      "current_runtime_description": "Statement of Retained Earnings",
+      "raw_extracted_description": "Template 620000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-620000",
+      "official_role_definition": "[620000] Statement of Retained Earnings",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-620000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-620000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-620000"
+        }
+      ],
+      "calculation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/cal_ssmt-fs-mpers_2022-12-31_role-620000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-620000"
+        }
+      ],
+      "existing_ui_label": "Statement of Retained Earnings",
+      "existing_navigation_label": "Statement of Retained Earnings",
+      "aliases": [],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/620000/concepts",
+        "concept_count": 11,
+        "ordered_concept_ids_sha256": "3fc14c9a76487cd5dd1a4f2450aba0fc5626eadbfbde215085b9d8158879c8c4"
+      },
+      "template_kind": "primary_statement",
+      "structural_role": "leaf_template",
+      "statement_family": "changes_in_equity",
+      "canonical_name": "Statement of Retained Earnings",
+      "user_display_name": "Statement of Retained Earnings",
+      "normalized_name": "statement_of_retained_earnings",
+      "discrepancy_classification": "exact_match",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": false,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "statement_of_retained_earnings"
+        ],
+        "positive_title_indicators": [
+          "statement of retained earnings",
+          "retained earnings at beginning of period"
+        ],
+        "exclusion_indicators": [
+          "statement of changes in equity"
+        ],
+        "narrative_container_behavior": "numeric_primary_statement",
+        "primary_deterministic_classification_allowed": true,
+        "note_subsection_classification_allowed": false,
+        "multiple_assignments_allowed": false
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "710000",
+      "code": "710000",
+      "current_runtime_name": "Notes - Corporate Information",
+      "current_runtime_description": "Notes - Corporate Information",
+      "raw_extracted_description": "Template 710000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-710000",
+      "official_role_definition": "[710000] Notes - Corporate information",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-710000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-710000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-710000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Notes - Corporate Information",
+      "existing_navigation_label": "Notes - Corporate Information",
+      "aliases": [
+        "Notes - Corporate Information"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/710000/concepts",
+        "concept_count": 4,
+        "ordered_concept_ids_sha256": "18ea76ff9adfa6a29f16a34e35b7bc52bef2139bbb42a139975bcf9aac6c077d"
+      },
+      "template_kind": "note_disclosure",
+      "structural_role": "leaf_template",
+      "statement_family": "corporate_information",
+      "canonical_name": "Notes - Corporate information",
+      "user_display_name": "Corporate Information Note",
+      "normalized_name": "notes_corporate_information",
+      "discrepancy_classification": "exact_match",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "corporate information",
+          "date of incorporation",
+          "principal activities"
+        ],
+        "exclusion_indicators": [
+          "issued capital",
+          "related party transactions"
+        ],
+        "narrative_container_behavior": "note_disclosure",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Notes - Corporate Information"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "720000",
+      "code": "720000",
+      "current_runtime_name": "Notes - Significant Accounting Policies",
+      "current_runtime_description": "Notes - Significant Accounting Policies",
+      "raw_extracted_description": "Template 720000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-720000",
+      "official_role_definition": "[720000] Notes - Summary of significant accounting policies",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-720000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-720000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-720000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Notes - Significant Accounting Policies",
+      "existing_navigation_label": "Notes - Significant Accounting Policies",
+      "aliases": [
+        "Notes - Significant Accounting Policies",
+        "Significant Accounting Policies"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/720000/concepts",
+        "concept_count": 51,
+        "ordered_concept_ids_sha256": "359e3f21a9b0ad4c7058d221f3b42481e92aea4a613374f284e8dc632b548470"
+      },
+      "template_kind": "note_disclosure",
+      "structural_role": "leaf_template",
+      "statement_family": "accounting_policies",
+      "canonical_name": "Notes - Summary of significant accounting policies",
+      "user_display_name": "Summary of Significant Accounting Policies",
+      "normalized_name": "notes_summary_significant_accounting_policies",
+      "discrepancy_classification": "wording_difference_only",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "summary of significant accounting policies",
+          "significant accounting policies",
+          "basis of preparation",
+          "revenue recognition"
+        ],
+        "exclusion_indicators": [
+          "corporate information",
+          "issued capital",
+          "related party transactions"
+        ],
+        "narrative_container_behavior": "note_disclosure",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Notes - Significant Accounting Policies",
+          "Significant Accounting Policies"
+        ],
+        "persisted_reference_policy": "Resolve by code or role URI first; never migrate or reassign mappings by a human-readable label."
+      }
+    },
+    {
+      "template_group_id": "730000",
+      "code": "730000",
+      "current_runtime_name": "Notes to Financial Statements",
+      "current_runtime_description": "Notes to Financial Statements",
+      "raw_extracted_description": "Template 730000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-730000",
+      "official_role_definition": "[730000] Notes - List of notes",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-730000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-730000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-730000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Notes to Financial Statements",
+      "existing_navigation_label": "Notes to Financial Statements",
+      "aliases": [
+        "Notes to Financial Statements"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/730000/concepts",
+        "concept_count": 83,
+        "ordered_concept_ids_sha256": "e36fce0b1f4f9bc830f6040d54082a764feb61434c1ab69e33a25f447453eed8",
+        "presentation_root": "ssmt-mpers:DisclosureOfNotesAndOtherExplanatoryInformationAbstract"
+      },
+      "template_kind": "note_list",
+      "structural_role": "leaf_template",
+      "statement_family": "notes",
+      "canonical_name": "Notes - List of notes",
+      "user_display_name": "Notes - List of Notes",
+      "normalized_name": "notes_list_of_notes",
+      "discrepancy_classification": "structural_container_conflict",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "other note disclosures",
+          "list of notes"
+        ],
+        "exclusion_indicators": [
+          "notes to financial statements",
+          "notes to the financial statements",
+          "corporate information",
+          "significant accounting policies",
+          "issued capital",
+          "related party transactions"
+        ],
+        "narrative_container_behavior": "official_generic_note_role_not_notes_parent",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd",
+        "resolution": "The presentation role is an official generic note-disclosure list rooted at DisclosureOfNotesAndOtherExplanatoryInformationAbstract. The Review Workspace Notes parent is the separate code-less notes_container node."
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Notes to Financial Statements"
+        ],
+        "legacy_alias_classification_eligible": false,
+        "persisted_reference_policy": "Resolve historical persisted rows named Notes to Financial Statements to code 730000 for grouping only; do not use that alias to classify the Notes parent and do not mutate the persisted mapping."
+      }
+    },
+    {
+      "template_group_id": "740000",
+      "code": "740000",
+      "current_runtime_name": "Notes - Information on Companies",
+      "current_runtime_description": "Notes - Information on Companies",
+      "raw_extracted_description": "Template 740000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-740000",
+      "official_role_definition": "[740000] Notes - Issued capital",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-740000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-740000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-740000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Notes - Information on Companies",
+      "existing_navigation_label": "Notes - Information on Companies",
+      "aliases": [
+        "Share Capital",
+        "Notes - Information on Companies"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/740000/concepts",
+        "concept_count": 31,
+        "ordered_concept_ids_sha256": "542abf8658a37b22cc418c2efa490edce3ca4cbb4b5d708f6e01c9fc35322e63"
+      },
+      "template_kind": "note_disclosure",
+      "structural_role": "leaf_template",
+      "statement_family": "notes",
+      "canonical_name": "Notes - Issued capital",
+      "user_display_name": "Issued Capital Note",
+      "normalized_name": "notes_issued_capital",
+      "discrepancy_classification": "materially_incorrect_name",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "issued capital",
+          "share capital",
+          "ordinary shares",
+          "issued and fully paid"
+        ],
+        "exclusion_indicators": [
+          "related party transactions",
+          "corporate information"
+        ],
+        "narrative_container_behavior": "note_disclosure",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd",
+        "concept_evidence": "ifrs-smes:DisclosureOfClassesOfShareCapitalExplanatory - Disclosure of issued capital [text block]"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Notes - Information on Companies"
+        ],
+        "legacy_alias_classification_eligible": false,
+        "persisted_reference_policy": "Resolve the wrong historical display name to code 740000 for compatibility only; preserve code/role identity and never mutate or reassign a confirmed mapping by name."
+      }
+    },
+    {
+      "template_group_id": "750000",
+      "code": "750000",
+      "current_runtime_name": "Notes - Reports",
+      "current_runtime_description": "Notes - Reports",
+      "raw_extracted_description": "Template 750000",
+      "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-750000",
+      "official_role_definition": "[750000] Notes - Related party transactions",
+      "role_id": "ssmt-fs-mpers_2022-12-31_role-750000",
+      "presentation_linkbase_references": [
+        {
+          "path": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-750000.xml",
+          "role_uri": "http://xbrl.ssm.com.my/role/ssm/rol_ssmt-fs-mpers_2022-12-31/ssmt-fs-mpers_2022-12-31_role-750000"
+        }
+      ],
+      "calculation_linkbase_references": [],
+      "existing_ui_label": "Notes - Reports",
+      "existing_navigation_label": "Notes - Reports",
+      "aliases": [
+        "Related Parties",
+        "Notes - Reports"
+      ],
+      "concept_membership": {
+        "source": "mpers_templates.json#/templates/750000/concepts",
+        "concept_count": 44,
+        "ordered_concept_ids_sha256": "a52bcc981df3edbfdc8bb1dc877820f503e249ceed128ffa0840092085036c7b"
+      },
+      "template_kind": "note_disclosure",
+      "structural_role": "leaf_template",
+      "statement_family": "notes",
+      "canonical_name": "Notes - Related party transactions",
+      "user_display_name": "Related Party Transactions",
+      "normalized_name": "notes_related_party_transactions",
+      "discrepancy_classification": "materially_incorrect_name",
+      "classification_enabled": true,
+      "mapping_enabled": true,
+      "allows_multiple_source_sections": true,
+      "classification_metadata": {
+        "expected_source_section_types": [
+          "note_subsection"
+        ],
+        "positive_title_indicators": [
+          "related party transactions",
+          "related parties",
+          "key management personnel compensation",
+          "balances with related parties"
+        ],
+        "exclusion_indicators": [
+          "issued capital",
+          "directors' report",
+          "auditors' report"
+        ],
+        "narrative_container_behavior": "note_disclosure",
+        "primary_deterministic_classification_allowed": false,
+        "note_subsection_classification_allowed": true,
+        "multiple_assignments_allowed": true
+      },
+      "source_taxonomy_version": "SSMxT_2022v1.0",
+      "provenance": {
+        "runtime_inventory": "mpers_templates.json",
+        "role_xsd": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/rol_ssmt-fs-mpers_2022-12-31.xsd",
+        "concept_evidence": "ifrs-smes:DisclosureOfTransactionsBetweenRelatedPartiesExplanatory - Disclosure of related parties [text block]"
+      },
+      "compatibility": {
+        "deprecated": false,
+        "replacement_code": null,
+        "durable_identifiers": [
+          "code",
+          "role_uri"
+        ],
+        "legacy_name_aliases": [
+          "Notes - Reports"
+        ],
+        "legacy_alias_classification_eligible": false,
+        "persisted_reference_policy": "Resolve the wrong historical display name to code 750000 for compatibility only; preserve code/role identity and never mutate or reassign a confirmed mapping by name."
+      }
+    }
+  ]
+}

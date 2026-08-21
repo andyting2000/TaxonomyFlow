@@ -1,0 +1,108 @@
+{
+  "run_metadata": {
+    "feature": "14B",
+    "generated_at": "2026-05-19T08:53:36Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "final_mapping_approved": false,
+    "automatic_winner_selection_for_ambiguous_suggestions": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_manual_mapping_review_14b",
+    "report_type": "azure_di_mapping_review_policy",
+    "script": "scripts/build_azure_di_manual_mapping_review_14b.py",
+    "output_path": "reports\\azure_di_mapping_review_policy_14b.json"
+  },
+  "input_reports": {
+    "mapping_report": "reports\\azure_di_mapping_candidates_14a.json",
+    "confidence_report": "reports\\azure_di_mapping_confidence_14a.json",
+    "gap_report": "reports\\azure_di_mapping_gap_analysis_14a.json"
+  },
+  "workflow_status_definitions": {
+    "ready_for_review_approval": "High or strong medium suggestions that may be approved only by a human reviewer.",
+    "needs_human_concept_choice": "Ambiguous suggestions where a reviewer must choose a concept, reject all, or require policy.",
+    "needs_confirmation": "Suggest-only or confirmation-required candidates that cannot proceed without explicit reviewer confirmation.",
+    "needs_alias_or_metadata_enrichment": "Weak/no-safe candidates where labels are understandable but aliases or concept metadata are insufficient.",
+    "blocked_from_xbrl": "Records with weak evidence, unsafe gates, concept type conflicts, or no safe concept; they must not enter XBRL.",
+    "context_only": "Useful review context or notes-only evidence, not a mapped fact."
+  },
+  "priority_definitions": {
+    "critical": "Concept type mismatch, blocked_from_xbrl, or material numeric ambiguity/no-safe status.",
+    "high": "Ambiguous suggestions, low-confidence numeric facts, subtotal/total uncertainty, or confirmation-required numeric candidates.",
+    "medium": "Medium suggestions, suggest-only text blocks, or text-block concept uncertainty.",
+    "low": "Context-only records, no-safe narrative context, or alias enrichment candidates with low XBRL impact."
+  },
+  "reviewer_decision_option_definitions": {
+    "approve_alternative_concept": "Allowed manual review decision option; modeled for future workflow only.",
+    "approve_suggested_concept": "Allowed manual review decision option; modeled for future workflow only.",
+    "choose_one_concept": "Allowed manual review decision option; modeled for future workflow only.",
+    "correct_label_and_approve": "Allowed manual review decision option; modeled for future workflow only.",
+    "correct_section_and_approve": "Allowed manual review decision option; modeled for future workflow only.",
+    "defer_mapping": "Allowed manual review decision option; modeled for future workflow only.",
+    "keep_for_context_only": "Allowed manual review decision option; modeled for future workflow only.",
+    "keep_for_notes_only": "Allowed manual review decision option; modeled for future workflow only.",
+    "keep_multiple_concepts_as_detail_rows": "Allowed manual review decision option; modeled for future workflow only.",
+    "manual_taxonomy_search_required": "Allowed manual review decision option; modeled for future workflow only.",
+    "mark_as_context_only": "Allowed manual review decision option; modeled for future workflow only.",
+    "mark_as_unmappable": "Allowed manual review decision option; modeled for future workflow only.",
+    "merge_candidate": "Allowed manual review decision option; modeled for future workflow only.",
+    "reject_all_suggestions": "Allowed manual review decision option; modeled for future workflow only.",
+    "reject_mapping": "Allowed manual review decision option; modeled for future workflow only.",
+    "request_alias_enrichment": "Allowed manual review decision option; modeled for future workflow only.",
+    "request_concept_metadata_enrichment": "Allowed manual review decision option; modeled for future workflow only.",
+    "require_aggregation_policy": "Allowed manual review decision option; modeled for future workflow only.",
+    "require_dimension_policy": "Allowed manual review decision option; modeled for future workflow only.",
+    "require_manual_taxonomy_mapping": "Allowed manual review decision option; modeled for future workflow only.",
+    "split_candidate": "Allowed manual review decision option; modeled for future workflow only."
+  },
+  "required_evidence_for_approval": [
+    "mapping_input_id and source_candidate_id traceability",
+    "source label/text/value evidence",
+    "chosen concept qname and label",
+    "row type and concept type compatibility",
+    "statement section compatibility or reviewer override rationale",
+    "reviewer identity, timestamp, decision, and notes in a future workflow"
+  ],
+  "future_approved_mapping_handoff_rules": [
+    "Only reviewer-approved mappings can enter a future approved mapping handoff.",
+    "High-confidence suggestions still require human approval.",
+    "Suggest-only mappings require explicit confirmation.",
+    "Ambiguous mappings require explicit concept choice or rejection.",
+    "No-safe mappings require manual taxonomy mapping or enrichment before approval.",
+    "Rejected, context-only, and deferred mappings are not XBRL eligible."
+  ],
+  "blocked_rules": [
+    "Concept type mismatch remains blocked until corrected by a reviewer.",
+    "No automatic winner selection is allowed for ambiguous suggestions.",
+    "No XBRL can be generated from #14B reports."
+  ],
+  "audit_requirements": [
+    "Preserve Azure DI source candidate provenance.",
+    "Preserve mapping_input_id and source_candidate_id.",
+    "Preserve source suggestions and reviewer decision trail.",
+    "Record all label, section, and concept corrections."
+  ],
+  "non_goals": [
+    "No final mapping approval in #14B.",
+    "No DB, API, or UI implementation.",
+    "No XBRL generation or Arelle validation.",
+    "No production semantic matcher call.",
+    "No live provider or model calls."
+  ]
+}

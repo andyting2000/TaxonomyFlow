@@ -1,0 +1,2179 @@
+{
+  "run_metadata": {
+    "feature": "13Z",
+    "generated_at": "2026-05-19T08:02:50Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "final_mapping_approved": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "report_type": "azure_di_mapping_confidence",
+    "script": "scripts/generate_azure_di_mapping_candidates_13z.py",
+    "output_path": "reports\\azure_di_mapping_confidence_13z.json"
+  },
+  "input_reports": {
+    "handoff_report": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "reference_report": "reports\\reference_xbrl_report_20260511T082343Z.json"
+  },
+  "confidence_tier_counts": {
+    "low": 24,
+    "none": 20,
+    "medium": 9
+  },
+  "status_counts": {
+    "low_confidence_suggestion": 24,
+    "no_safe_suggestion": 4,
+    "ambiguous_multiple_suggestions": 16,
+    "medium_confidence_suggestion": 9
+  },
+  "auto_mappable_vs_suggest_only_distribution": {
+    "auto_mappable_candidate": {
+      "low_confidence_suggestion": 23,
+      "no_safe_suggestion": 4,
+      "ambiguous_multiple_suggestions": 11,
+      "medium_confidence_suggestion": 4
+    },
+    "suggest_mapping_only": {
+      "low_confidence_suggestion": 1,
+      "ambiguous_multiple_suggestions": 5,
+      "medium_confidence_suggestion": 5
+    }
+  },
+  "requires_confirmation_count": 11,
+  "ambiguous_multiple_suggestion_count": 16,
+  "no_safe_suggestion_count": 4,
+  "text_block_mapping_summary": {
+    "low_confidence_suggestion": 23,
+    "no_safe_suggestion": 2,
+    "ambiguous_multiple_suggestions": 4,
+    "medium_confidence_suggestion": 5
+  },
+  "numeric_mapping_summary": {
+    "comparative_numeric_fact": {
+      "ambiguous_multiple_suggestions": 10,
+      "low_confidence_suggestion": 1,
+      "medium_confidence_suggestion": 3,
+      "no_safe_suggestion": 1
+    },
+    "numeric_fact": {
+      "no_safe_suggestion": 1
+    },
+    "subtotal_or_total": {
+      "medium_confidence_suggestion": 1,
+      "ambiguous_multiple_suggestions": 2
+    }
+  },
+  "section_compatibility_summary": {
+    "section_match": 46,
+    "section_not_matched": 3
+  },
+  "top_high_confidence_suggestions": [],
+  "top_ambiguous_labels": [
+    {
+      "mapping_input_id": "13V-MAP-0022",
+      "label": "Notes to the Financial Statements: STATEMENT BY DIRECTORS PURSUANT TO SECTION 251(2) OF THE COMPANIES",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt:DisclosureOfDirectorsReportExplanatory",
+          "concept_label": "Disclosure of Director's Report [text block]",
+          "concept_type": "text_block",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.6052,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3262,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt:DateOfFinancialStatementsApprovedByBoardOfDirectors",
+          "concept_label": "Date of financial statements approved by Board of Directors",
+          "concept_type": "string_or_metadata",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": false,
+          "score": 0.555,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.519,
+            "token_overlap": 0.125,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": false,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt:DateOfFinancialStatementsAndReportsOfDirectorsAndAuditorsLaidInAnnualGeneralMeeting",
+          "concept_label": "Date of financial statements and reports of the directors and auditors (if applicable) laid in annual general meeting",
+          "concept_type": "string_or_metadata",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": false,
+          "score": 0.5346,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4766,
+            "token_overlap": 0.0769,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": false,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt:NumberOfDirectorsSigningDirectorsReport",
+          "concept_label": "Number of directors signing Director's report",
+          "concept_type": "string_or_metadata",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": false,
+          "score": 0.5117,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3194,
+            "token_overlap": 0.1111,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": false,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt:DisclosureOfDirectorsReceivedOrBecomeEntitledToReceiveOtherBenefitsByReasonOfContractMadeByCompanyOrRelatedCorporation",
+          "concept_label": "Disclosure of directors received or become entitled to receive other benefits by reason of contract made by company or related corporation",
+          "concept_type": "string_or_metadata",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": false,
+          "score": 0.5073,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3629,
+            "token_overlap": 0.0588,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": false,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0024",
+      "label": "Other receivable",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:OtherLiabilities",
+          "concept_label": "Other liabilities",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7567,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6667,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherCurrentLiabilities",
+          "concept_label": "Other current liabilities",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7293,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6341,
+            "token_overlap": 0.25,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherAssets",
+          "concept_label": "Other assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7233,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:InvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+          "concept_label": "Other investments",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7203,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4848,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:NoncurrentInvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+          "concept_label": "Other investments",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7203,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4848,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0025",
+      "label": "Contributed share capital",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:CashSettledShareBasedPaymentLiability",
+          "concept_label": "Cash-settled share-based payment liability",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6668,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4776,
+            "token_overlap": 0.125,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:CurrentCashSettledShareBasedPaymentLiability",
+          "concept_label": "Cash-settled share-based payment liability",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6668,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4776,
+            "token_overlap": 0.125,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseThroughSharebasedPaymentTransactions",
+          "concept_label": "Increase (decrease) through share-based payment transactions, equity",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6228,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.2889,
+            "token_overlap": 0.1,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:EquityComponentOfPreferenceShares",
+          "concept_label": "Equity component of preference shares",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6174,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3871,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:IssueOfEquity",
+          "concept_label": "Issuance of shares",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6144,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3721,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0026",
+      "label": "Accumulated loss",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:ReversalOfImpairmentLossForOtherAssets",
+          "concept_label": "Reversal of impairment loss on other assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6427,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3051,
+            "token_overlap": 0.1667,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:ImpairmentLossRecognisedInProfitOrLossIntangibleAssetsOtherThanGoodwill",
+          "concept_label": "(Reversal of)/Impairment loss on intangible assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6379,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.2812,
+            "token_overlap": 0.1667,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:ProfitLossAttributableToOtherComponentsOfEquity",
+          "concept_label": "Profit (loss), attributable to equity other components",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6115,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.1791,
+            "token_overlap": 0.1429,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CurrentTaxAssets",
+          "concept_label": "Current tax assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6106,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3529,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CurrentTaxAssetsCurrent",
+          "concept_label": "Current tax assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6106,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3529,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0027",
+      "label": "Other payable",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:OtherLiabilities",
+          "concept_label": "Other liabilities",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7567,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6667,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherAssets",
+          "concept_label": "Other assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7513,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.64,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:InvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+          "concept_label": "Other investments",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7167,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4667,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:NoncurrentInvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+          "concept_label": "Other investments",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7167,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4667,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:OtherIntangibleAssets",
+          "concept_label": "Other intangible assets",
+          "concept_type": "numeric",
+          "statement_family": "financial_position",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7136,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5556,
+            "token_overlap": 0.25,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0029",
+      "label": "Bank overdraft - unsecured",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:CurrentUnsecuredBankLoansReceivedAndCurrentPortionOfNoncurrentUnsecuredBankLoansReceived",
+          "concept_label": "Unsecured bank loans",
+          "concept_type": "numeric",
+          "statement_family": "unknown",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6068,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4091,
+            "token_overlap": 0.5,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:NoncurrentPortionOfNoncurrentUnsecuredBankLoansReceived",
+          "concept_label": "Unsecured bank loans",
+          "concept_type": "numeric",
+          "statement_family": "unknown",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6068,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4091,
+            "token_overlap": 0.5,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:UnsecuredBankLoansReceived",
+          "concept_label": "Unsecured bank loans",
+          "concept_type": "numeric",
+          "statement_family": "unknown",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6068,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4091,
+            "token_overlap": 0.5,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:CurrentPortionOfNoncurrentUnsecuredOtherBankLoansReceived",
+          "concept_label": "Other unsecured bank facilities",
+          "concept_type": "numeric",
+          "statement_family": "unknown",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.5945,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4727,
+            "token_overlap": 0.4,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherNoncurrentUnsecuredBankLoans",
+          "concept_label": "Other unsecured bank facilities",
+          "concept_type": "numeric",
+          "statement_family": "unknown",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.5945,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4727,
+            "token_overlap": 0.4,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0030",
+      "label": "Administration expenses",
+      "suggestions": [
+        {
+          "concept_qname": "ifrs-smes:ComprehensiveIncome",
+          "concept_label": "Comprehensive income",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6884,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3256,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:AdministrativeExpense",
+          "concept_label": "Administrative expenses",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6259,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.913,
+            "token_overlap": 0.3333,
+            "alias_match": false,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherExpensesRecognisedForTransactionsWithRelatedParties",
+          "concept_label": "Other expenses",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.5623,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5946,
+            "token_overlap": 0.3333,
+            "alias_match": false,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:EmployeeShareBasedPayment",
+          "concept_label": "Share option expenses",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.5589,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6818,
+            "token_overlap": 0.25,
+            "alias_match": false,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:KeyManagementPersonnelCompensationSharebasedPayment",
+          "concept_label": "Share option expenses",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.5589,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6818,
+            "token_overlap": 0.25,
+            "alias_match": false,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0033",
+      "label": "Loss after tax and representing total comprehensive loss for the year",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:AggregateProfitLossBeforeTax",
+          "concept_label": "Total profit(loss) before tax",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7703,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.433,
+            "token_overlap": 0.375,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+          "concept_label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7588,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3974,
+            "token_overlap": 0.3571,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax",
+          "concept_label": "Total other comprehensive income that will be reclassified to profit or loss, net of tax",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7536,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3718,
+            "token_overlap": 0.3571,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+          "concept_label": "Total other comprehensive income that will not be reclassified to profit or loss, before tax",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7508,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3875,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax",
+          "concept_label": "Total other comprehensive income that will not be reclassified to profit or loss, net of tax",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7458,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3625,
+            "token_overlap": 0.3333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0034",
+      "label": "Loss attributable to: Owners of the Company",
+      "suggestions": [
+        {
+          "concept_qname": "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+          "concept_label": "Profit (loss), attributable to owners of parent",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.8481,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.7907,
+            "token_overlap": 0.6,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "concept_label": "Comprehensive income, attributable to owners of parent",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7997,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6737,
+            "token_overlap": 0.5,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:ProfitLossAttributableToNoncontrollingInterests",
+          "concept_label": "Profit (loss), attributable to non-controlling interests",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7251,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5684,
+            "token_overlap": 0.2857,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "concept_label": "Comprehensive income, attributable to non-controlling interests",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7112,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4808,
+            "token_overlap": 0.3,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:LossOnRevaluationOfFinancialInstruments",
+          "concept_label": "Loss on revaluation",
+          "concept_type": "numeric",
+          "statement_family": "comprehensive_income",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6681,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3279,
+            "token_overlap": 0.25,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0036",
+      "label": "Loss before tax and working capital changes",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt:CashAndBankBalances",
+          "concept_label": "Total cash and cash equivalents",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6919,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4054,
+            "token_overlap": 0.0833,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+          "concept_label": "Net increase (decrease) in cash and cash equivalents before effect of exchange rate changes",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6629,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3939,
+            "token_overlap": 0.1765,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "concept_label": "Net cash flows from (used in) operating activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6548,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3956,
+            "token_overlap": 0.1429,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "concept_label": "Net cash flows from (used in) financing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6504,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3736,
+            "token_overlap": 0.1429,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "concept_label": "Net cash flows from (used in) investing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.646,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3516,
+            "token_overlap": 0.1429,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches",
+            "subtotal_or_total_requires_policy_confirmation"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0037",
+      "label": "Decrease in receivable",
+      "suggestions": [
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "concept_label": "Net increase (decrease) in cash and cash equivalents",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.7025,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5,
+            "token_overlap": 0.25,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "concept_label": "Net cash flows from (used in) investing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6756,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4,
+            "token_overlap": 0.2222,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "concept_label": "Net cash flows from (used in) operating activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6756,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4,
+            "token_overlap": 0.2222,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "concept_label": "Net cash flows from (used in) financing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6698,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3714,
+            "token_overlap": 0.2222,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:OtherCashAndCashEquivalents",
+          "concept_label": "Other cash and cash equivalents",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6512,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3774,
+            "token_overlap": 0.1429,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0038",
+      "label": "Decrease in payable",
+      "suggestions": [
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "concept_label": "Net increase (decrease) in cash and cash equivalents",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6883,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4638,
+            "token_overlap": 0.2222,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "concept_label": "Net cash flows from (used in) operating activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6676,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3881,
+            "token_overlap": 0.2,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "concept_label": "Net cash flows from (used in) financing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6616,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3582,
+            "token_overlap": 0.2,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "concept_label": "Net cash flows from (used in) investing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6557,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3284,
+            "token_overlap": 0.2,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:OtherCashAndCashEquivalents",
+          "concept_label": "Other cash and cash equivalents",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6432,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.36,
+            "token_overlap": 0.125,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0039",
+      "label": "Increase in director's account",
+      "suggestions": [
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+          "concept_label": "Net increase (decrease) in cash and cash equivalents",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.69,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5,
+            "token_overlap": 0.2,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+          "concept_label": "Net cash flows from (used in) investing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6675,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4103,
+            "token_overlap": 0.1818,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+          "concept_label": "Net cash flows from (used in) financing activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6624,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3846,
+            "token_overlap": 0.1818,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+          "concept_label": "Net cash flows from (used in) operating activities",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6572,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.359,
+            "token_overlap": 0.1818,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+          "concept_label": "Net increase (decrease) in cash and cash equivalents before effect of exchange rate changes",
+          "concept_type": "numeric",
+          "statement_family": "cash_flows",
+          "is_numeric_concept": true,
+          "is_text_block_concept": false,
+          "score": 0.6473,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3697,
+            "token_overlap": 0.1333,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0046",
+      "label": "Basis of Preparation: The financial statements of the Company have been prepared using",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:DisclosureOfBasisOfPreparationOfFinancialStatementsExplanatory",
+          "concept_label": "Disclosure of basis of preparation of financial statements [text block]",
+          "concept_type": "text_block",
+          "statement_family": "accounting_policies",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.7335,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.6104,
+            "token_overlap": 0.2857,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DescriptionOfAccountingPolicyForBasisOfPresentationOfFinancialStatementsExplanatory",
+          "concept_label": "Description of accounting policy for basis of preparation of financial statements [text block]",
+          "concept_type": "text_block",
+          "statement_family": "accounting_policies",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.7018,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.5311,
+            "token_overlap": 0.2222,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DescriptionOfAccountingPolicyForBasisOfConsolidationExplanatory",
+          "concept_label": "Description of accounting policy for basis of consolidation [text block]",
+          "concept_type": "text_block",
+          "statement_family": "accounting_policies",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.6166,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.2581,
+            "token_overlap": 0.1,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DescriptionOfAccountingPolicyForOtherSignificantAccountingPoliciesRelevantToUnderstandingOfFinancialStatementsExplanatory",
+          "concept_label": "Description of other significant accounting policies relevant to understanding of financial statements [text block]",
+          "concept_type": "text_block",
+          "statement_family": "accounting_policies",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.6147,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3737,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DescriptionOfAccountingPolicyForSegmentReportingExplanatory",
+          "concept_label": "Description of accounting policy for segment reporting [text block]",
+          "concept_type": "text_block",
+          "statement_family": "accounting_policies",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.6093,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.3467,
+            "token_overlap": 0.0,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0051",
+      "label": "Notes to the Financial Statements: For short-term other receivable, where the effect of discounting is",
+      "suggestions": [
+        {
+          "concept_qname": "ssmt-mpers:DisclosureOfTradeAndOtherReceivablesExplanatory",
+          "concept_label": "Disclosure of trade and other receivables [text block]",
+          "concept_type": "text_block",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.6459,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.4211,
+            "token_overlap": 0.087,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DisclosureOfTradeAndOtherPayablesExplanatory",
+          "concept_label": "Disclosure of trade and other payables [text block]",
+          "concept_type": "text_block",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.6306,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.349,
+            "token_overlap": 0.0833,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DisclosureOfOtherLongTermEmploymentBenefitsExplanatory",
+          "concept_label": "Disclosure of other long-term employment benefits [text block]",
+          "concept_type": "text_block",
+          "statement_family": "unknown",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.486,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.2375,
+            "token_overlap": 0.1538,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt:DisclosureOfDirectorsReceivedOrBecomeEntitledToReceiveOtherBenefitsByReasonOfContractMadeByCompanyOrRelatedCorporation",
+          "concept_label": "Disclosure of directors received or become entitled to receive other benefits by reason of contract made by company or related corporation",
+          "concept_type": "string_or_metadata",
+          "statement_family": "notes",
+          "is_numeric_concept": false,
+          "is_text_block_concept": false,
+          "score": 0.4836,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.2521,
+            "token_overlap": 0.0526,
+            "alias_match": true,
+            "section_match": true,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": false,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        },
+        {
+          "concept_qname": "ssmt-mpers:DisclosureOfOtherReservesExplanatory",
+          "concept_label": "Disclosure of other reserves [text block]",
+          "concept_type": "text_block",
+          "statement_family": "unknown",
+          "is_numeric_concept": false,
+          "is_text_block_concept": true,
+          "score": 0.4774,
+          "confidence_tier": "medium",
+          "evidence": {
+            "exact_match": false,
+            "label_similarity": 0.2734,
+            "token_overlap": 0.0909,
+            "alias_match": true,
+            "section_match": false,
+            "section_family_mismatch": false,
+            "row_type_match": true,
+            "concept_type_match": true,
+            "penalties": []
+          },
+          "warnings": [
+            "multiple_close_concept_matches"
+          ],
+          "mapping_decision_status": "suggested_only",
+          "source": "deterministic_local_metadata"
+        }
+      ]
+    }
+  ],
+  "top_no_safe_labels": [
+    {
+      "mapping_input_id": "13V-MAP-0006",
+      "label": "- Owners of the Company",
+      "row_type": "numeric_fact",
+      "blockers": [
+        "no_local_metadata_match_above_threshold"
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0021",
+      "label": "Notes to the Financial Statements: This report was approved by the Board of Directors on",
+      "row_type": "text_block",
+      "blockers": [
+        "row_type_or_concept_type_mismatch"
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0023",
+      "label": "Statutory Declaration: No. A-1, Jalan S.321/37 Damansara Utama (,, Ti ... >",
+      "row_type": "text_block",
+      "blockers": [
+        "row_type_or_concept_type_mismatch"
+      ]
+    },
+    {
+      "mapping_input_id": "13V-MAP-0052",
+      "label": "no par value",
+      "row_type": "comparative_numeric_fact",
+      "blockers": [
+        "generic_or_weak_label"
+      ]
+    }
+  ],
+  "limitations": [
+    "Deterministic local metadata suggestions only; no final mapping is approved.",
+    "No semantic matcher, embeddings, LLM, Azure DI, Hugging Face, OpenAI, DB mutation, XBRL generation, or Arelle validation is used.",
+    "Reference report, when provided, is used only as offline concept inventory/gap context and not as a direct answer key."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "F_no_toc",
+  "pages": [
+    {"page_number": 1, "height": 1000, "lines": [{"content": "ANNUAL REPORT 2026", "page_number": 1}]},
+    {"page_number": 2, "height": 1000, "lines": [
+      {"content": "STATEMENT OF FINANCIAL POSITION", "page_number": 2, "polygon": [{"x": 1, "y": 60}]},
+      {"content": "Cash and bank balances 1,234", "page_number": 2, "polygon": [{"x": 1, "y": 300}]}
+    ]}
+  ],
+  "paragraphs": [],
+  "tables": [],
+  "table_cells": [],
+  "lines": []
+}

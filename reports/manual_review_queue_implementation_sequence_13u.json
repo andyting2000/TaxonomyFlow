@@ -1,0 +1,159 @@
+{
+  "dependencies": [
+    "#13Q full Hugging Face Qwen benchmark",
+    "#13R quality/readiness analysis",
+    "#13S duplicate/conflict cleanup",
+    "#13T manual-review policy and queue reports"
+  ],
+  "future_acceptance_criteria": [
+    "Mapping handoff can be regenerated from review batch state.",
+    "No suppressed, blocked, reference/context, or unresolved conflict candidates enter mapping.",
+    "Reviewer decisions are auditable and reversible before production cutover.",
+    "API/UI implementation preserves existing auth and user isolation."
+  ],
+  "metadata": {
+    "api_routes_implemented": false,
+    "arelle_validation_run": false,
+    "benchmark_rerun": false,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "feature": "13U",
+    "frontend_code_modified": false,
+    "generated_at": "2026-05-13T03:56:35Z",
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "migration_created": false,
+    "production_behavior_changed": false,
+    "read_only": true,
+    "reference_xml_sent_to_model": false,
+    "ui_implemented": false,
+    "xbrl_generated": false
+  },
+  "planning_inputs": {
+    "manual_review_policy": "reports\\extraction_v2_manual_review_policy_13t.json",
+    "manual_review_queue": "reports\\extraction_v2_manual_review_queue_13t.json",
+    "mapping_gate_report": "reports\\extraction_v2_mapping_candidate_gate_13t.json"
+  },
+  "queue_summary": {
+    "allowed_into_mapping_candidate_generation": 411,
+    "auto_mappable_candidate": 231,
+    "blocked_from_mapping": 10,
+    "conflict_group_count": 45,
+    "excluded_from_automatic_mapping": 529,
+    "manual_review_queue_items": 709,
+    "manual_review_required": 336,
+    "priority_distribution": {
+      "critical": 92,
+      "high": 232,
+      "low": 311,
+      "medium": 74
+    },
+    "reference_only_or_context": 183,
+    "requires_confirmation": 180,
+    "suggest_mapping_only": 180,
+    "total_cleaned_candidates": 937,
+    "total_original_candidates": 940
+  },
+  "recommended_next_feature": "Feature #13V - Report-based mapping handoff contract with no DB mutation.",
+  "risks_and_mitigations": [
+    {
+      "mitigation": "Require evidence preview, conflict context, and reversible audit decisions.",
+      "risk": "reviewer choosing wrong candidate"
+    },
+    {
+      "mitigation": "Track blocked counts and allow suggest-only review paths before hard rejection.",
+      "risk": "blocking too many candidates"
+    },
+    {
+      "mitigation": "Enforce handoff gates and unresolved-conflict blocks before mapping candidate generation.",
+      "risk": "allowing too many candidates into mapping"
+    },
+    {
+      "mitigation": "Prioritize critical numeric conflicts and allow case-level progress summaries.",
+      "risk": "conflict groups delaying mapping"
+    },
+    {
+      "mitigation": "Start with report-based handoff before migrations.",
+      "risk": "introducing DB schema too early"
+    },
+    {
+      "mitigation": "Implement dense MVP queue filters before advanced dashboards.",
+      "risk": "UI complexity"
+    },
+    {
+      "mitigation": "Record source type and keep batch import policy explicit.",
+      "risk": "mixing benchmark reports with production jobs"
+    },
+    {
+      "mitigation": "Store reviewer identity, timestamps, original values, corrected values, and decision history.",
+      "risk": "missing audit trail"
+    },
+    {
+      "mitigation": "Block unresolved manual-review and conflict statuses from handoff.",
+      "risk": "mapping before review decisions exist"
+    }
+  ],
+  "staged_roadmap": [
+    {
+      "acceptance_criteria": [
+        "No DB mutation",
+        "No taxonomy mapping",
+        "Suppressed/manual-review/reference-only candidates excluded",
+        "Suggest-only candidates marked requires_confirmation=true"
+      ],
+      "feature": "13V-data-contract",
+      "goal": "Produce a deterministic JSON handoff containing only allowed mapping inputs from #13T/#13U gates.",
+      "title": "Report-based mapping handoff contract with no DB mutation"
+    },
+    {
+      "acceptance_criteria": [
+        "No production cutover",
+        "No XBRL generation",
+        "Manual-review and conflict-blocked candidates remain excluded"
+      ],
+      "feature": "13W-mapping-v2-sandbox",
+      "goal": "Generate taxonomy mapping suggestions only for handoff-approved candidates.",
+      "title": "Mapping candidate generation v2 sandbox"
+    },
+    {
+      "acceptance_criteria": [
+        "Explicit migration plan",
+        "Audit trail preserved",
+        "Benchmark and production sources separated"
+      ],
+      "feature": "13X-manual-review-db-design",
+      "goal": "Design and review durable tables after report-based contracts are stable.",
+      "title": "Manual-review DB schema design before API/UI implementation"
+    },
+    {
+      "acceptance_criteria": [
+        "Authorization enforced",
+        "State transitions validated",
+        "Decision audit trail stored"
+      ],
+      "feature": "13Y-manual-review-api",
+      "goal": "Implement authenticated review batch, item, conflict, decision, and export endpoints.",
+      "title": "Manual-review API implementation"
+    },
+    {
+      "acceptance_criteria": [
+        "Queue filters and progress counts implemented",
+        "Conflict groups surfaced",
+        "Reviewer decisions captured safely"
+      ],
+      "feature": "13Z-manual-review-ui",
+      "goal": "Build the queue, detail, conflict, decision, and handoff preview workflow.",
+      "title": "Manual-review React queue UI"
+    },
+    {
+      "acceptance_criteria": [
+        "Reviewed mapping handoff exists",
+        "Mapping quality evidence available",
+        "Validation failures surfaced without production cutover"
+      ],
+      "feature": "later",
+      "goal": "Only after review and mapping candidate gates are stable, test downstream XBRL generation and validation.",
+      "title": "Mapping handoff integration, XBRL sandbox generation, and Arelle validation"
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "run_metadata": {
+    "feature": "17D-B-hotfix-5",
+    "generated_at": "2026-06-17T13:10:52Z",
+    "source_review_feature": "17D-B",
+    "source_review_mode": "live",
+    "external_llm_called_by_this_script": false,
+    "auditor_xml_sent_externally": false,
+    "parsed_xml_facts_sent_externally": false,
+    "target_gold_answers_sent_externally": false,
+    "evaluation_labels_sent_externally": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "confirmed_tag_id_automated": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "production_integration_ready": false,
+    "production_integration_recommendation": "defer_17d_c_until_calibrated_guardrails_are_reviewed_and_optionally_live_retested",
+    "source_reports": {
+      "review": "reports/supervisor_live_review_17d_b.json",
+      "predictions": "reports/golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "concept_playbook": "reports/fs_mpers_concept_playbook_17d_pre.json"
+    }
+  },
+  "metrics": {
+    "blocked_correct_mapping_count": 4,
+    "relaxable_candidates": 4,
+    "blocked_by_hard_issue": 0,
+    "relaxation_label_counts": {
+      "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute": 4,
+      "relaxation_candidate_exact_alias": 4,
+      "relaxation_candidate_strong_concept_card": 4
+    }
+  },
+  "relaxable_candidates_by_reason": {
+    "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute": [
+      {
+        "row": {
+          "label": "Cash from operating activities",
+          "value": "38156",
+          "previous_value": "52088",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:51:51"
+        },
+        "selected_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "correct_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Cash from operating activities",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "Net (decrease) / increase in cash and cash equivalents",
+          "value": "-1406",
+          "previous_value": "9000",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:55:55"
+        },
+        "selected_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Net increase (decrease) in cash and cash equivalents",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "Bank balances",
+          "value": "13232",
+          "previous_value": "14638",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:58:58"
+        },
+        "selected_concept_qname": "ssmt:CashAndBankBalances",
+        "correct_concept_qname": "ssmt:CashAndBankBalances",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Bank balances",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "value": "-1567",
+          "previous_value": "-215",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 10,
+          "source_case_id": "case_006",
+          "extracted_row_id": "case_006:candidate:40:40"
+        },
+        "selected_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      }
+    ],
+    "relaxation_candidate_exact_alias": [
+      {
+        "row": {
+          "label": "Cash from operating activities",
+          "value": "38156",
+          "previous_value": "52088",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:51:51"
+        },
+        "selected_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "correct_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Cash from operating activities",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "Net (decrease) / increase in cash and cash equivalents",
+          "value": "-1406",
+          "previous_value": "9000",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:55:55"
+        },
+        "selected_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Net increase (decrease) in cash and cash equivalents",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "Bank balances",
+          "value": "13232",
+          "previous_value": "14638",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:58:58"
+        },
+        "selected_concept_qname": "ssmt:CashAndBankBalances",
+        "correct_concept_qname": "ssmt:CashAndBankBalances",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Bank balances",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "value": "-1567",
+          "previous_value": "-215",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 10,
+          "source_case_id": "case_006",
+          "extracted_row_id": "case_006:candidate:40:40"
+        },
+        "selected_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      }
+    ],
+    "relaxation_candidate_strong_concept_card": [
+      {
+        "row": {
+          "label": "Cash from operating activities",
+          "value": "38156",
+          "previous_value": "52088",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:51:51"
+        },
+        "selected_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "correct_concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Cash from operating activities",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "Net (decrease) / increase in cash and cash equivalents",
+          "value": "-1406",
+          "previous_value": "9000",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:55:55"
+        },
+        "selected_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Net increase (decrease) in cash and cash equivalents",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "Bank balances",
+          "value": "13232",
+          "previous_value": "14638",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 16,
+          "source_case_id": "case_005",
+          "extracted_row_id": "case_005:candidate:58:58"
+        },
+        "selected_concept_qname": "ssmt:CashAndBankBalances",
+        "correct_concept_qname": "ssmt:CashAndBankBalances",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "Bank balances",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      },
+      {
+        "row": {
+          "label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "value": "-1567",
+          "previous_value": "-215",
+          "statement_type": "Statement of Cash Flows",
+          "row_type": "comparative_numeric_fact",
+          "page_number": 10,
+          "source_case_id": "case_006",
+          "extracted_row_id": "case_006:candidate:40:40"
+        },
+        "selected_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "correct_concept_qname": "ifrs-smes:CashAndCashEquivalents",
+        "relaxation_labels": [
+          "relaxation_candidate_blocked_only_by_overtriggered_broad_substitute",
+          "relaxation_candidate_exact_alias",
+          "relaxation_candidate_strong_concept_card"
+        ],
+        "hard_issues": [],
+        "relaxation_blockers": [],
+        "broad_substitute_calibration": "over_triggered_broad_substitute",
+        "alias_evidence": {
+          "best_alias_label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "best_alias_similarity": 1.0,
+          "exact_or_near_alias": true,
+          "mapper_reason_claims_exact_alias": false
+        },
+        "statement_family_matches": true,
+        "concept_card_available": true,
+        "candidate_evidence_available": true
+      }
+    ]
+  },
+  "blocked_by_hard_issue_examples": [],
+  "recommended_deterministic_relaxation_rules": [
+    "Never relax safe_to_accept when hard issues exist: candidate_not_supported, statement_family_mismatch, ambiguous_label, person_or_company_name, note_number, missing_concept_card, or no_supporting_evidence.",
+    "Consider future safe acceptance only when mapper prediction is locally correct in evaluation, selected concept equals local gold, statement family matches, candidate evidence supports the selected concept, and a strong concept card exists.",
+    "Treat total/subtotal rows separately: total-line same-family matches may be relaxable, but specific labels mapped to broad categories remain true broad risk.",
+    "Keep all production use suggestion-only until a separate approved integration feature and live retest."
+  ],
+  "recommendation": "A bounded live rerun is useful after prompt calibration to measure whether omissions and broad_substitute over-triggering decrease without introducing unsafe safe_accept."
+}

@@ -1,0 +1,104 @@
+{
+  "feature_id": "18F-G-A-hotfix-2",
+  "generated_at": "2026-07-23T08:50:21.5670815+00:00",
+  "status": "completed",
+  "scope": "frontend_correction_action_ux_only",
+  "implementation": {
+    "changed_files": [
+      "frontend/src/review-workspace.jsx",
+      "frontend/tests/auth_helpers.test.mjs"
+    ],
+    "backend_files_changed": [],
+    "mapping_logic_changed": false,
+    "supervisor_logic_changed": false,
+    "eligibility_policy_changed": false,
+    "persistence_changed": false,
+    "retry_limit_changed": false
+  },
+  "action_layout": {
+    "before": {
+      "primary_row": [
+        "Accept suggestion",
+        "Reject",
+        "Run Supervisor review"
+      ],
+      "correction_row": "A separate secondary row rendered only from showCorrectionAction and used the card's normal gap.",
+      "completed_attempt_status": "Visible only inside the correction-action conditional."
+    },
+    "after": {
+      "primary_row": [
+        "Accept suggestion",
+        "Reject",
+        "Run Supervisor review"
+      ],
+      "secondary_row": [
+        "Re-run mapping with Supervisor feedback",
+        "or Correction attempt N completed"
+      ],
+      "placement": "A separate compact action stack directly beneath the primary row.",
+      "alignment": "right",
+      "responsive_classes": [
+        "suggestion-action-stack space-y-1.5",
+        "suggestion-secondary-actions flex flex-wrap items-center justify-end gap-2"
+      ],
+      "empty_row_reserved_when_irrelevant": false,
+      "completed_attempt_uses_same_position": true,
+      "same_line_as_primary_actions": false
+    }
+  },
+  "confirmations": {
+    "single_supervisor_review_confirmation_removed": true,
+    "single_supervisor_remap_confirmation_removed": true,
+    "batch_supervisor_confirmation_retained": true,
+    "remaining_window_confirm_scope": "confirmBatchSupervisorRun used by Run Supervisor reviews for all"
+  },
+  "pending_and_duplicate_protection": {
+    "single_supervisor_review": {
+      "immediate_guard": "supervisorReviewPendingIds Set",
+      "duplicate_same_suggestion_rejected": true,
+      "button_disabled_from_state": true,
+      "loading_label": "Running Supervisor review...",
+      "success_refreshes_persisted_review": true,
+      "failure_restores_control_in_finally": true
+    },
+    "single_supervisor_remap": {
+      "immediate_guard": "supervisorCorrectionPendingIds Set",
+      "duplicate_same_suggestion_rejected": true,
+      "button_disabled_from_state": true,
+      "loading_label": "Re-running mapping...",
+      "success_renders_persisted_revision": true,
+      "failure_restores_control_in_finally": true
+    },
+    "backend_retry_limit_remains_authoritative": true,
+    "maximum_durable_attempts": 1
+  },
+  "safety": {
+    "supervisor_reviews_advisory": true,
+    "revisions_advisory": true,
+    "requires_human_review_enforced": true,
+    "safe_for_auto_apply_enforced_false": true,
+    "automatic_accepts": 0,
+    "automatic_rejects": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "recursive_supervisor_mapper_loop_added": false
+  },
+  "verification": {
+    "frontend_source_tests": {
+      "command": "npm run test:auth",
+      "tests_run": 26,
+      "result": "passed"
+    },
+    "frontend_build": {
+      "command": "npm run build",
+      "result": "passed",
+      "modules_transformed": 1585,
+      "note": "The first sandboxed build attempt could not traverse the Vite/esbuild path. The approved unsandboxed rerun passed."
+    },
+    "supervisor_backend_regressions": {
+      "command": "python -B -m unittest discover -s tests -p \"test_supervisor*.py\" -v",
+      "tests_run": 118,
+      "result": "passed"
+    }
+  }
+}

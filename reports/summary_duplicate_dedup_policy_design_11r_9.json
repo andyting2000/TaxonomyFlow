@@ -1,0 +1,424 @@
+{
+  "aggregation_implemented": false,
+  "current_job_9_state": {
+    "duplicate_concept_context_unit_groups": 12,
+    "expected_extracted_facts": 32,
+    "generated_facts": 39,
+    "identical_duplicate_fact_groups": 0,
+    "represented_expected_extracted_facts": 32,
+    "suspicious_signed_values": 12
+  },
+  "database_modified": false,
+  "deduplication_implemented": false,
+  "dimensions_implemented": false,
+  "feature": "11R",
+  "full_mbrs_validation_claimed": false,
+  "generated_xbrl_modified": false,
+  "groups": [
+    {
+      "aggregation_recommended": false,
+      "classification": "conflicting_summary_duplicate_requires_manual_review",
+      "classification_reason": "Values conflict across rows sharing one concept/context/unit.",
+      "concept": "ifrs-smes:CurrentLiabilities",
+      "concept_label": "Current liabilities",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "dimension_recommended": false,
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CURRENT LIABILITIES",
+        "Current liabilities"
+      ],
+      "extracted_values": [
+        "495,129.04",
+        "500.20"
+      ],
+      "future_handling_reason": "Do not choose automatically when values conflict.",
+      "labels_assessment": "mixed_summary_evidence",
+      "manual_review_required_before_implementation": true,
+      "normalized_values": [
+        "495129.04",
+        "500.20"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "proposed_future_selection_rule": {
+        "never_auto_choose_when": [
+          "values conflict",
+          "labels are ambiguous",
+          "one row appears to be subtotal and another appears to be total",
+          "deduplication would require sign normalization",
+          "deduplication would require aggregation or dimensions"
+        ],
+        "only_apply_when": [
+          "concept, contextRef, and unitRef are identical",
+          "rows are summary/heading duplicates, not detail schedules",
+          "all duplicate normalized values are identical",
+          "no row has conflicting manual confirmation evidence"
+        ],
+        "policy_status": "design_only_not_implemented",
+        "replacement_concepts": "never assign replacement concepts",
+        "selection_preferences": [
+          "prefer reviewed/manual-confirmed row if available",
+          "prefer exact summary label match over generic heading",
+          "prefer explicit total label over subtotal/detail label",
+          "prefer same value only when all duplicates are identical"
+        ]
+      },
+      "proposed_keep_item_id": null,
+      "proposed_suppress_item_ids": [],
+      "recommended_future_handling": "require_manual_confirmation_later",
+      "replacement_concept_recommended": false,
+      "safe_to_deduplicate_later": false,
+      "sign_normalization_recommended": false,
+      "source_item_ids": [
+        "7f31a139-3205-451f-9716-de1d06ac9c45",
+        "14a9c6f7-da65-4821-b112-eb2e0b54db92"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "extracted_label": "CURRENT LIABILITIES",
+          "extracted_value": "495,129.04",
+          "future_selection_rank": 4,
+          "future_selection_reason": "subtotal/current-section label is not preferred over total summary",
+          "generated_value": "495129.04",
+          "item_id": "7f31a139-3205-451f-9716-de1d06ac9c45",
+          "label_role": "subtotal",
+          "normalized_value": "495129.04",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentLiabilities"
+        },
+        {
+          "confirmed_tag_id": null,
+          "extracted_label": "Current liabilities",
+          "extracted_value": "500.20",
+          "future_selection_rank": 4,
+          "future_selection_reason": "subtotal/current-section label is not preferred over total summary",
+          "generated_value": "500.20",
+          "item_id": "14a9c6f7-da65-4821-b112-eb2e0b54db92",
+          "label_role": "subtotal",
+          "normalized_value": "500.20",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentLiabilities"
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "template_field_ids": [
+        "ifrs-smes:CurrentLiabilities"
+      ],
+      "unitRef": "MYR",
+      "values_are_conflicting": true,
+      "values_are_identical": false
+    },
+    {
+      "aggregation_recommended": false,
+      "classification": "subtotal_vs_total_ambiguous",
+      "classification_reason": "Values conflict and labels mix subtotal/current-section wording with total or heading evidence.",
+      "concept": "ifrs-smes:Liabilities",
+      "concept_label": "Liabilities",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "dimension_recommended": false,
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CURRENT LIABILITIES",
+        "Liabilities"
+      ],
+      "extracted_values": [
+        "495,129.04",
+        "-200,152.25"
+      ],
+      "future_handling_reason": "Do not choose automatically when values conflict and subtotal/total meaning is ambiguous.",
+      "labels_assessment": "subtotal_vs_total_or_heading_ambiguous",
+      "manual_review_required_before_implementation": true,
+      "normalized_values": [
+        "495129.04",
+        "-200152.25"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "proposed_future_selection_rule": {
+        "never_auto_choose_when": [
+          "values conflict",
+          "labels are ambiguous",
+          "one row appears to be subtotal and another appears to be total",
+          "deduplication would require sign normalization",
+          "deduplication would require aggregation or dimensions"
+        ],
+        "only_apply_when": [
+          "concept, contextRef, and unitRef are identical",
+          "rows are summary/heading duplicates, not detail schedules",
+          "all duplicate normalized values are identical",
+          "no row has conflicting manual confirmation evidence"
+        ],
+        "policy_status": "design_only_not_implemented",
+        "replacement_concepts": "never assign replacement concepts",
+        "selection_preferences": [
+          "prefer reviewed/manual-confirmed row if available",
+          "prefer exact summary label match over generic heading",
+          "prefer explicit total label over subtotal/detail label",
+          "prefer same value only when all duplicates are identical"
+        ]
+      },
+      "proposed_keep_item_id": null,
+      "proposed_suppress_item_ids": [],
+      "recommended_future_handling": "require_manual_confirmation_later",
+      "replacement_concept_recommended": false,
+      "safe_to_deduplicate_later": false,
+      "sign_normalization_recommended": false,
+      "source_item_ids": [
+        "4141ce81-811e-4365-95e9-c5616cc7d892",
+        "f2608d33-2490-45d4-9617-73c8dd487c54"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "extracted_label": "CURRENT LIABILITIES",
+          "extracted_value": "495,129.04",
+          "future_selection_rank": 4,
+          "future_selection_reason": "subtotal/current-section label is not preferred over total summary",
+          "generated_value": "495129.04",
+          "item_id": "4141ce81-811e-4365-95e9-c5616cc7d892",
+          "label_role": "subtotal",
+          "normalized_value": "495129.04",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities"
+        },
+        {
+          "confirmed_tag_id": null,
+          "extracted_label": "Liabilities",
+          "extracted_value": "-200,152.25",
+          "future_selection_rank": 3,
+          "future_selection_reason": "generic heading is lower confidence than exact or total label",
+          "generated_value": "-200152.25",
+          "item_id": "f2608d33-2490-45d4-9617-73c8dd487c54",
+          "label_role": "generic_heading",
+          "normalized_value": "-200152.25",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities"
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "template_field_ids": [
+        "ifrs-smes:Liabilities"
+      ],
+      "unitRef": "MYR",
+      "values_are_conflicting": true,
+      "values_are_identical": false
+    },
+    {
+      "aggregation_recommended": false,
+      "classification": "conflicting_summary_duplicate_requires_manual_review",
+      "classification_reason": "Values conflict across rows sharing one concept/context/unit.",
+      "concept": "ifrs-smes:RetainedEarnings",
+      "concept_label": "Retained earnings at beginning of period",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "dimension_recommended": false,
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+        "Retained earnings at beginning of period"
+      ],
+      "extracted_values": [
+        "-10,155,575.00",
+        "160,538.20"
+      ],
+      "future_handling_reason": "Do not choose automatically when values conflict.",
+      "labels_assessment": "mixed_summary_evidence",
+      "manual_review_required_before_implementation": true,
+      "normalized_values": [
+        "-10155575.00",
+        "160538.20"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "proposed_future_selection_rule": {
+        "never_auto_choose_when": [
+          "values conflict",
+          "labels are ambiguous",
+          "one row appears to be subtotal and another appears to be total",
+          "deduplication would require sign normalization",
+          "deduplication would require aggregation or dimensions"
+        ],
+        "only_apply_when": [
+          "concept, contextRef, and unitRef are identical",
+          "rows are summary/heading duplicates, not detail schedules",
+          "all duplicate normalized values are identical",
+          "no row has conflicting manual confirmation evidence"
+        ],
+        "policy_status": "design_only_not_implemented",
+        "replacement_concepts": "never assign replacement concepts",
+        "selection_preferences": [
+          "prefer reviewed/manual-confirmed row if available",
+          "prefer exact summary label match over generic heading",
+          "prefer explicit total label over subtotal/detail label",
+          "prefer same value only when all duplicates are identical"
+        ]
+      },
+      "proposed_keep_item_id": null,
+      "proposed_suppress_item_ids": [],
+      "recommended_future_handling": "require_manual_confirmation_later",
+      "replacement_concept_recommended": false,
+      "safe_to_deduplicate_later": false,
+      "sign_normalization_recommended": false,
+      "source_item_ids": [
+        "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+        "39fd347d-a660-45ae-b5eb-fa9047326ec6"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "extracted_label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "extracted_value": "-10,155,575.00",
+          "future_selection_rank": 2,
+          "future_selection_reason": "explicit total label is preferred over subtotal/detail label",
+          "generated_value": "-10155575.00",
+          "item_id": "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+          "label_role": "total",
+          "normalized_value": "-10155575.00",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings"
+        },
+        {
+          "confirmed_tag_id": null,
+          "extracted_label": "Retained earnings at beginning of period",
+          "extracted_value": "160,538.20",
+          "future_selection_rank": 1,
+          "future_selection_reason": "exact concept summary label is preferred over generic heading",
+          "generated_value": "160538.20",
+          "item_id": "39fd347d-a660-45ae-b5eb-fa9047326ec6",
+          "label_role": "exact_summary_label",
+          "normalized_value": "160538.20",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings"
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "template_field_ids": [
+        "ifrs-smes:RetainedEarnings"
+      ],
+      "unitRef": "MYR",
+      "values_are_conflicting": true,
+      "values_are_identical": false
+    }
+  ],
+  "job_id": 9,
+  "mapping_behavior_changed": false,
+  "mode": "read_only_design_and_dry_run_simulation",
+  "policy_answers": {
+    "any_values_conflicting": true,
+    "are_the_3_groups_safe_to_deduplicate_later": false,
+    "manual_review_required_before_implementation": true,
+    "safest_future_generator_level_rule": {
+      "never_auto_choose_when": [
+        "values conflict",
+        "labels are ambiguous",
+        "one row appears to be subtotal and another appears to be total",
+        "deduplication would require sign normalization",
+        "deduplication would require aggregation or dimensions"
+      ],
+      "only_apply_when": [
+        "concept, contextRef, and unitRef are identical",
+        "rows are summary/heading duplicates, not detail schedules",
+        "all duplicate normalized values are identical",
+        "no row has conflicting manual confirmation evidence"
+      ],
+      "policy_status": "design_only_not_implemented",
+      "replacement_concepts": "never assign replacement concepts",
+      "selection_preferences": [
+        "prefer reviewed/manual-confirmed row if available",
+        "prefer exact summary label match over generic heading",
+        "prefer explicit total label over subtotal/detail label",
+        "prefer same value only when all duplicates are identical"
+      ]
+    },
+    "sign_normalization_should_remain_deferred": true,
+    "tests_required_before_implementation": [
+      "identical summary duplicates keep one and suppress the rest",
+      "conflicting values are never auto-deduplicated",
+      "subtotal versus total ambiguity requires manual review",
+      "generic headings are not preferred over exact summary or total labels",
+      "confirmed/manual tag precedence is respected",
+      "no aggregation, dimensions, sign normalization, or replacement concepts are introduced"
+    ],
+    "which_rows_would_be_kept": {
+      "ifrs-smes:CurrentLiabilities": null,
+      "ifrs-smes:Liabilities": null,
+      "ifrs-smes:RetainedEarnings": null
+    },
+    "which_rows_would_be_suppressed": {
+      "ifrs-smes:CurrentLiabilities": [],
+      "ifrs-smes:Liabilities": [],
+      "ifrs-smes:RetainedEarnings": []
+    }
+  },
+  "policy_constraints": {
+    "do_not_aggregate_values": true,
+    "do_not_create_dimensions": true,
+    "do_not_implement_deduplication_in_11r": true,
+    "do_not_infer_replacement_concepts": true,
+    "do_not_mutate_persisted_rows": true,
+    "do_not_normalize_signs": true,
+    "do_not_remove_facts": true
+  },
+  "read_only": true,
+  "replacement_concepts_assigned": false,
+  "sign_normalization_implemented": false,
+  "source_reports": {
+    "duplicate_group_policy_plan_11q": "reports\\duplicate_group_policy_plan_11q_9.json",
+    "generated_instance_audit_report": "reports\\generated_instance_audit_report_9.json"
+  },
+  "summary": {
+    "classification_summary": {
+      "conflicting_summary_duplicate_requires_manual_review": 2,
+      "subtotal_vs_total_ambiguous": 1
+    },
+    "future_generator_deduplication_is_safe_now": false,
+    "manual_review_required_group_count": 3,
+    "manual_review_required_groups": [
+      "ifrs-smes:CurrentLiabilities",
+      "ifrs-smes:Liabilities",
+      "ifrs-smes:RetainedEarnings"
+    ],
+    "recommended_11s_scope": "Do not implement automatic summary de-duplication for these job 9 groups yet because all target groups have conflicting values or subtotal/total ambiguity. Feature #11S should either design a manual confirmation workflow for conflicting summary duplicates or move to the mapping-too-broad guardrail planning track.",
+    "recommended_future_handling_summary": {
+      "require_manual_confirmation_later": 3
+    },
+    "safe_for_future_generator_level_deduplication": [],
+    "safe_for_future_generator_level_deduplication_count": 0,
+    "sign_policy_remains_deferred": true,
+    "target_group_count": 3
+  },
+  "target_11q_classification": "likely_summary_duplicate_needs_dedup_policy",
+  "target_concepts": [
+    "ifrs-smes:CurrentLiabilities",
+    "ifrs-smes:Liabilities",
+    "ifrs-smes:RetainedEarnings"
+  ]
+}

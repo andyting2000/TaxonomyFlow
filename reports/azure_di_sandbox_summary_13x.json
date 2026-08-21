@@ -1,0 +1,68 @@
+{
+  "run_metadata": {
+    "feature": "13X",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_provider": false,
+    "reference_xml_sent_to_model": false,
+    "generated_at": "2026-05-19T06:16:16Z",
+    "report_type": "azure_di_sandbox_summary",
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_sandbox_summary_13x.json"
+  },
+  "input_reports": {
+    "extraction_report": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\azure_di_sandbox_extraction_v2_report_13x.json"
+  },
+  "summary": {
+    "total_azure_di_candidates": 317,
+    "total_mapping_handoff_eligible_candidates": 63,
+    "manual_review_count": 268,
+    "blocked_context_only_count": 239,
+    "top_warnings": [
+      {
+        "warning": "text_block_not_numeric",
+        "count": 46
+      },
+      {
+        "warning": "index_or_page_number_row_not_financial_fact",
+        "count": 8
+      }
+    ],
+    "quality_gates_skipped": false,
+    "quality_gate_limitations": [],
+    "ready_for_mapping_candidate_generation": true,
+    "recommended_next_feature": "Feature #13Y - Continue mapping candidate generation using Azure DI sandbox handoff candidates."
+  },
+  "non_goals_confirmed": {
+    "feature": "13X",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_provider": false,
+    "reference_xml_sent_to_model": false
+  }
+}

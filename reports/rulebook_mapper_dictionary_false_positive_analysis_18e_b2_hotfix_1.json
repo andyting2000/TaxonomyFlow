@@ -1,0 +1,2119 @@
+{
+  "run_metadata": {
+    "feature": "18E-B-2-hotfix-1",
+    "generated_at": "2026-06-21T13:37:19Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "hardened_rulebook": "reports\\pdf_xbrl_rulebook_hardening_18d_b.json",
+    "baseline_report": "reports\\rulebook_mapper_template_optimized_18e_b.json",
+    "pre_hotfix_report": "reports\\rulebook_mapper_dictionary_optimized_18e_b2.json",
+    "pre_hotfix_errors": "reports\\rulebook_mapper_dictionary_errors_18e_b2.json",
+    "include_samples": [],
+    "exclude_samples": [],
+    "include_outlier": false,
+    "debug_label": null,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "auto_applied": false,
+    "confirmed_tag_id_mutated": false
+  },
+  "summary": {
+    "pre_hotfix_new_false_positive_count": 75,
+    "pre_hotfix_error_report_false_positive_count": 162,
+    "root_cause_counts": [
+      {
+        "root_cause": "missing note-link confirmation",
+        "count": 31
+      },
+      {
+        "root_cause": "note-detail row incorrectly mapped to main-statement concept",
+        "count": 31
+      },
+      {
+        "root_cause": "note-detail tax reconciliation row mapped to P&L tax expense",
+        "count": 31
+      },
+      {
+        "root_cause": "subtotal/component confusion",
+        "count": 20
+      },
+      {
+        "root_cause": "row-order guessed too broadly",
+        "count": 19
+      },
+      {
+        "root_cause": "profit/loss subtotal vs final result confusion",
+        "count": 10
+      },
+      {
+        "root_cause": "unknown false-positive cause",
+        "count": 6
+      },
+      {
+        "root_cause": "value-only or weak-label candidate",
+        "count": 6
+      },
+      {
+        "root_cause": "equity row confusion",
+        "count": 3
+      }
+    ],
+    "by_normalized_label": [
+      {
+        "normalized_label": "tax expense",
+        "count": 35
+      },
+      {
+        "normalized_label": "bank charges",
+        "count": 6
+      },
+      {
+        "normalized_label": "other operating expenses",
+        "count": 6
+      },
+      {
+        "normalized_label": "loss from operating activities",
+        "count": 6
+      },
+      {
+        "normalized_label": "secretarial fee",
+        "count": 4
+      },
+      {
+        "normalized_label": "term loan",
+        "count": 4
+      },
+      {
+        "normalized_label": "other operating costs",
+        "count": 2
+      },
+      {
+        "normalized_label": "comprehensive profit for the year",
+        "count": 2
+      },
+      {
+        "normalized_label": "term loan on",
+        "count": 2
+      },
+      {
+        "normalized_label": "less operating expenses schedule ii",
+        "count": 2
+      },
+      {
+        "normalized_label": "loss from operating activities disatties",
+        "count": 2
+      },
+      {
+        "normalized_label": "property plant and equipment",
+        "count": 2
+      },
+      {
+        "normalized_label": "profit loss from operating activities",
+        "count": 1
+      },
+      {
+        "normalized_label": "loss for the financial year",
+        "count": 1
+      }
+    ],
+    "by_statement_family_section_qname": [
+      {
+        "statement_family": "notes",
+        "section_block": "notes_tax",
+        "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "count": 26
+      },
+      {
+        "statement_family": "income_statement",
+        "section_block": "administrative_expenses",
+        "predicted_qname": "ifrs-smes:AdministrativeExpense",
+        "count": 20
+      },
+      {
+        "statement_family": "income_statement",
+        "section_block": "profit_loss",
+        "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+        "count": 9
+      },
+      {
+        "statement_family": "financial_position",
+        "section_block": "non_current_liabilities",
+        "predicted_qname": "ifrs-smes:Borrowings",
+        "count": 6
+      },
+      {
+        "statement_family": "",
+        "section_block": "notes_tax",
+        "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "count": 5
+      },
+      {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_operating",
+        "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "count": 4
+      },
+      {
+        "statement_family": "changes_in_equity",
+        "section_block": "changes_in_equity",
+        "predicted_qname": "ifrs-smes:ComprehensiveIncome",
+        "count": 2
+      },
+      {
+        "statement_family": "cash_flow",
+        "section_block": "cash_flow_investing",
+        "predicted_qname": "ifrs-smes:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+        "count": 2
+      },
+      {
+        "statement_family": "changes_in_equity",
+        "section_block": "changes_in_equity",
+        "predicted_qname": "ifrs-smes:ProfitLoss",
+        "count": 1
+      }
+    ],
+    "by_candidate_family": [
+      {
+        "candidate_generation_method": "statement_concept_dictionary",
+        "dictionary_entry_id": "18E-B2-note-tax-expense",
+        "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "evaluation_status": "value_exists_but_different_qname",
+        "count": 14
+      },
+      {
+        "candidate_generation_method": "statement_concept_dictionary",
+        "dictionary_entry_id": "18E-B2-note-tax-expense",
+        "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "evaluation_status": "qname_exists_but_value_mismatch",
+        "count": 10
+      },
+      {
+        "candidate_generation_method": "row_order_alignment",
+        "dictionary_entry_id": "",
+        "predicted_qname": "ifrs-smes:AdministrativeExpense",
+        "evaluation_status": "predicted_qname_not_found_in_xbrl",
+        "count": 10
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_agreement",
+        "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+        "predicted_qname": "ifrs-smes:AdministrativeExpense",
+        "evaluation_status": "predicted_qname_not_found_in_xbrl",
+        "count": 9
+      },
+      {
+        "candidate_generation_method": "row_order_alignment",
+        "dictionary_entry_id": "",
+        "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+        "evaluation_status": "qname_exists_but_value_mismatch",
+        "count": 9
+      },
+      {
+        "candidate_generation_method": "statement_concept_dictionary",
+        "dictionary_entry_id": "18E-B2-note-tax-expense",
+        "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "evaluation_status": "predicted_qname_not_found_in_xbrl",
+        "count": 7
+      },
+      {
+        "candidate_generation_method": "statement_concept_dictionary",
+        "dictionary_entry_id": "18E-B2-sfp-borrowings",
+        "predicted_qname": "ifrs-smes:Borrowings",
+        "evaluation_status": "value_exists_but_different_qname",
+        "count": 6
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_agreement",
+        "dictionary_entry_id": "18E-B2-cf-operating",
+        "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "evaluation_status": "value_exists_but_different_qname",
+        "count": 3
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_conflict",
+        "dictionary_entry_id": "18E-B2-equity-comprehensive-income",
+        "predicted_qname": "ifrs-smes:ComprehensiveIncome",
+        "evaluation_status": "qname_exists_but_value_mismatch",
+        "count": 2
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_agreement",
+        "dictionary_entry_id": "18E-B2-cf-ppe-purchase",
+        "predicted_qname": "ifrs-smes:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+        "evaluation_status": "value_exists_but_different_qname",
+        "count": 2
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_agreement",
+        "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+        "predicted_qname": "ifrs-smes:AdministrativeExpense",
+        "evaluation_status": "value_exists_but_different_qname",
+        "count": 1
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_agreement",
+        "dictionary_entry_id": "18E-B2-cf-operating",
+        "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+        "evaluation_status": "qname_exists_but_value_mismatch",
+        "count": 1
+      },
+      {
+        "candidate_generation_method": "dictionary_row_order_agreement",
+        "dictionary_entry_id": "18E-B2-equity-profit-loss",
+        "predicted_qname": "ifrs-smes:ProfitLoss",
+        "evaluation_status": "qname_exists_but_value_mismatch",
+        "count": 1
+      }
+    ]
+  },
+  "false_positive_rows": [
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:9:9:current",
+      "pdf_label": "Profit after taxation",
+      "normalized_label": "tax expense",
+      "statement_family": null,
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:23:23:current",
+      "pdf_label": "Provision for taxation",
+      "normalized_label": "tax expense",
+      "statement_family": null,
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:30:30:current",
+      "pdf_label": "Other operating costs",
+      "normalized_label": "other operating costs",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-30-30-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:30:30:prior",
+      "pdf_label": "Other operating costs",
+      "normalized_label": "other operating costs",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-30-30-prior",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:31:31:current",
+      "pdf_label": "Profit / (Loss) from operating activities",
+      "normalized_label": "profit loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-31-31-current",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:37:37:current",
+      "pdf_label": "Comprehensive profit for the year",
+      "normalized_label": "comprehensive profit for the year",
+      "statement_family": "changes_in_equity",
+      "section_block": "changes_in_equity",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:ComprehensiveIncome",
+      "candidate_generation_method": "dictionary_row_order_conflict",
+      "dictionary_entry_id": "18E-B2-equity-comprehensive-income",
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-37-37-current",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "dictionary_row_order_conflict_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "equity row confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:37:37:prior",
+      "pdf_label": "Comprehensive profit for the year",
+      "normalized_label": "comprehensive profit for the year",
+      "statement_family": "changes_in_equity",
+      "section_block": "changes_in_equity",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:ComprehensiveIncome",
+      "candidate_generation_method": "dictionary_row_order_conflict",
+      "dictionary_entry_id": "18E-B2-equity-comprehensive-income",
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-37-37-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "dictionary_row_order_conflict_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "equity row confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:38:38:current",
+      "pdf_label": "Cash flows from operating activities Profit / (Loss) before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "row_role": "subtotal",
+      "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-cf-operating",
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-38-38-current",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "unknown false-positive cause"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:38:38:prior",
+      "pdf_label": "Cash flows from operating activities Profit / (Loss) before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "row_role": "subtotal",
+      "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-cf-operating",
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-38-38-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "unknown false-positive cause"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:49:49:current",
+      "pdf_label": "Profit / (Loss) before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:49:49:prior",
+      "pdf_label": "Profit / (Loss) before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:50:50:current",
+      "pdf_label": "Taxation at tax rates of - 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:50:50:prior",
+      "pdf_label": "Taxation at tax rates of - 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:52:52:current",
+      "pdf_label": "Tax expenses for the year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:67:67:current",
+      "pdf_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-67-67-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:67:67:prior",
+      "pdf_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-67-67-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:78:78:current",
+      "pdf_label": "Secretarial fee",
+      "normalized_label": "secretarial fee",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-78-78-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "pdf_row_id": "case_001:candidate:78:78:prior",
+      "pdf_label": "Secretarial fee",
+      "normalized_label": "secretarial fee",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_001-case_001-candidate-78-78-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:9:9:current",
+      "pdf_label": "Loss after taxation",
+      "normalized_label": "tax expense",
+      "statement_family": null,
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:28:28:current",
+      "pdf_label": "Term loan on",
+      "normalized_label": "term loan on",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:Borrowings",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-sfp-borrowings",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "value-only or weak-label candidate"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:28:28:prior",
+      "pdf_label": "Term loan on",
+      "normalized_label": "term loan on",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:Borrowings",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-sfp-borrowings",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "value-only or weak-label candidate"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:37:37:current",
+      "pdf_label": "Other operating expenses",
+      "normalized_label": "other operating expenses",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-37-37-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:37:37:prior",
+      "pdf_label": "Other operating expenses",
+      "normalized_label": "other operating expenses",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-37-37-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:38:38:current",
+      "pdf_label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-38-38-current",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:38:38:prior",
+      "pdf_label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-38-38-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:82:82:current",
+      "pdf_label": "Loss before taxation :selected: (77,641)",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:83:83:current",
+      "pdf_label": "Taxation at Malaysian rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:83:83:prior",
+      "pdf_label": "Taxation at Malaysian rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:91:91:current",
+      "pdf_label": "Less : OPERATING EXPENSES (SCHEDULE II)",
+      "normalized_label": "less operating expenses schedule ii",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-91-91-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:91:91:prior",
+      "pdf_label": "Less : OPERATING EXPENSES (SCHEDULE II)",
+      "normalized_label": "less operating expenses schedule ii",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-91-91-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:92:92:current",
+      "pdf_label": "LOSS FROM OPERATING ACTIVITIES DISATTIES",
+      "normalized_label": "loss from operating activities disatties",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-92-92-current",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:92:92:prior",
+      "pdf_label": "LOSS FROM OPERATING ACTIVITIES DISATTIES",
+      "normalized_label": "loss from operating activities disatties",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-92-92-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:100:100:current",
+      "pdf_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-100-100-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "pdf_row_id": "case_002:candidate:100:100:prior",
+      "pdf_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_002-case_002-candidate-100-100-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:9:9:current",
+      "pdf_label": "Loss after taxation",
+      "normalized_label": "tax expense",
+      "statement_family": null,
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:32:32:current",
+      "pdf_label": "Other operating expenses",
+      "normalized_label": "other operating expenses",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-32-32-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:32:32:prior",
+      "pdf_label": "Other operating expenses",
+      "normalized_label": "other operating expenses",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-32-32-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:34:34:current",
+      "pdf_label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-34-34-current",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:34:34:prior",
+      "pdf_label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-34-34-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:40:40:prior",
+      "pdf_label": "Loss for the financial year",
+      "normalized_label": "loss for the financial year",
+      "statement_family": "changes_in_equity",
+      "section_block": "changes_in_equity",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:ProfitLoss",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-equity-profit-loss",
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-40-40-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "equity row confusion",
+        "profit/loss subtotal vs final result confusion"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:74:74:current",
+      "pdf_label": "Taxation at statutory tax rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:74:74:prior",
+      "pdf_label": "Taxation at statutory tax rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:77:77:current",
+      "pdf_label": "Over provision for taxation prior year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:78:78:current",
+      "pdf_label": "Tax expenses for the year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:83:83:current",
+      "pdf_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-83-83-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_003",
+      "pdf_row_id": "case_003:candidate:83:83:prior",
+      "pdf_label": "Bank charges",
+      "normalized_label": "bank charges",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_003-case_003-candidate-83-83-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:9:9:current",
+      "pdf_label": "Loss after taxation",
+      "normalized_label": "tax expense",
+      "statement_family": null,
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:37:37:current",
+      "pdf_label": "Cash flows from operating activities Loss before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "row_role": "total",
+      "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-cf-operating",
+      "row_order_alignment_id": "18E-B2-row-order-case_004-case_004-candidate-37-37-current",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "unknown false-positive cause"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:38:38:current",
+      "pdf_label": "Decrease in property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_investing",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-cf-ppe-purchase",
+      "row_order_alignment_id": "18E-B2-row-order-case_004-case_004-candidate-38-38-current",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "unknown false-positive cause"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:38:38:prior",
+      "pdf_label": "Decrease in property, plant and equipment",
+      "normalized_label": "property plant and equipment",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_investing",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-cf-ppe-purchase",
+      "row_order_alignment_id": "18E-B2-row-order-case_004-case_004-candidate-38-38-prior",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "unknown false-positive cause"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:56:56:current",
+      "pdf_label": "Loss before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:56:56:prior",
+      "pdf_label": "Loss before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:57:57:current",
+      "pdf_label": "Taxation at statutory tax rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:57:57:prior",
+      "pdf_label": "Taxation at statutory tax rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:59:59:current",
+      "pdf_label": "Tax expenses for the year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:59:59:prior",
+      "pdf_label": "Tax expenses for the year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:68:68:current",
+      "pdf_label": "Taxation fee",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_004",
+      "pdf_row_id": "case_004:candidate:68:68:prior",
+      "pdf_label": "Taxation fee",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:24:24:current",
+      "pdf_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:Borrowings",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-sfp-borrowings",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "value-only or weak-label candidate"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:24:24:prior",
+      "pdf_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:Borrowings",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-sfp-borrowings",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "value-only or weak-label candidate"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:28:28:current",
+      "pdf_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:Borrowings",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-sfp-borrowings",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "value-only or weak-label candidate"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:28:28:prior",
+      "pdf_label": "Term loan",
+      "normalized_label": "term loan",
+      "statement_family": "financial_position",
+      "section_block": "non_current_liabilities",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:Borrowings",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-sfp-borrowings",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "value-only or weak-label candidate"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:36:36:current",
+      "pdf_label": "Other operating expenses",
+      "normalized_label": "other operating expenses",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-36-36-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:36:36:prior",
+      "pdf_label": "Other operating expenses",
+      "normalized_label": "other operating expenses",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-is-administrative-expenses",
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-36-36-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:38:38:current",
+      "pdf_label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-38-38-current",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:38:38:prior",
+      "pdf_label": "Loss from operating activities",
+      "normalized_label": "loss from operating activities",
+      "statement_family": "income_statement",
+      "section_block": "profit_loss",
+      "row_role": "component",
+      "predicted_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-38-38-prior",
+      "evaluation_status": "qname_exists_but_value_mismatch",
+      "error_reason": "predicted qname exists but no matching value/period fact was found",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "profit/loss subtotal vs final result confusion",
+        "row-order guessed too broadly"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:45:45:current",
+      "pdf_label": "Cash flows from operating activities Loss before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "cash_flow",
+      "section_block": "cash_flow_operating",
+      "row_role": "total",
+      "predicted_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "candidate_generation_method": "dictionary_row_order_agreement",
+      "dictionary_entry_id": "18E-B2-cf-operating",
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-45-45-current",
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "unknown false-positive cause"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:78:78:current",
+      "pdf_label": "Loss before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:78:78:prior",
+      "pdf_label": "Loss before taxation",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:79:79:current",
+      "pdf_label": "Taxation at statutory tax rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:79:79:prior",
+      "pdf_label": "Taxation at statutory tax rate of 15%",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:82:82:current",
+      "pdf_label": "Tax expenses for the financial year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:82:82:prior",
+      "pdf_label": "Tax expenses for the financial year",
+      "normalized_label": "tax expense",
+      "statement_family": "notes",
+      "section_block": "notes_tax",
+      "row_role": "note_detail",
+      "predicted_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "candidate_generation_method": "statement_concept_dictionary",
+      "dictionary_entry_id": "18E-B2-note-tax-expense",
+      "row_order_alignment_id": null,
+      "evaluation_status": "value_exists_but_different_qname",
+      "error_reason": "same value/period exists under a different qname",
+      "blocking_reasons": [
+        "dictionary_candidate_requires_review",
+        "dictionary_row_order_candidate_requires_review",
+        "notes_context_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "missing note-link confirmation",
+        "note-detail row incorrectly mapped to main-statement concept",
+        "note-detail tax reconciliation row mapped to P&L tax expense"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:103:103:current",
+      "pdf_label": "Secretarial fee",
+      "normalized_label": "secretarial fee",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-103-103-current",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    },
+    {
+      "sample_id": "case_005",
+      "pdf_row_id": "case_005:candidate:103:103:prior",
+      "pdf_label": "Secretarial fee",
+      "normalized_label": "secretarial fee",
+      "statement_family": "income_statement",
+      "section_block": "administrative_expenses",
+      "row_role": "component",
+      "predicted_qname": "ifrs-smes:AdministrativeExpense",
+      "candidate_generation_method": "row_order_alignment",
+      "dictionary_entry_id": null,
+      "row_order_alignment_id": "18E-B2-row-order-case_005-case_005-candidate-103-103-prior",
+      "evaluation_status": "predicted_qname_not_found_in_xbrl",
+      "error_reason": "predicted qname not present in local XBRL facts",
+      "blocking_reasons": [
+        "dictionary_row_order_candidate_requires_review",
+        "row_order_candidate_requires_review"
+      ],
+      "blocked_candidate_reasons": [],
+      "root_cause_categories": [
+        "row-order guessed too broadly",
+        "subtotal/component confusion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1162 @@
+{
+  "run_metadata": {
+    "feature": "18E-B",
+    "generated_at": "2026-06-21T11:00:16Z",
+    "read_only": true,
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "auto_applied": false,
+    "confirmed_tag_id_mutated": false
+  },
+  "summary": {
+    "feature": "18E-B",
+    "total_template_patterns": 28,
+    "supported_template_patterns": 20,
+    "unsupported_template_patterns": 8,
+    "template_observation_support_total": 164,
+    "pattern_family_counts": {
+      "any": 5,
+      "cash_flow": 10,
+      "financial_position": 7,
+      "income_statement": 6
+    },
+    "supported_pattern_family_counts": {
+      "any": 2,
+      "cash_flow": 6,
+      "financial_position": 6,
+      "income_statement": 6
+    },
+    "safe_for_auto_apply_count": 0,
+    "requires_human_review_count": 28,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false,
+      "auto_applied": false,
+      "confirmed_tag_id_mutated": false
+    }
+  },
+  "statement_template_patterns": [
+    {
+      "pattern_id": "18E-B-is-cost-of-sales",
+      "statement_family": "income_statement",
+      "section_blocks": [
+        "cost_of_sales"
+      ],
+      "label_any": [
+        "cost of sales",
+        "purchases"
+      ],
+      "target_qname": "ifrs-smes:CostOfSales",
+      "reason": "income_statement_cost_of_sales_template",
+      "target_concept_label": "Cost Of Sales",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 4,
+        "sample_support_count": 3,
+        "sample_ids": [
+          "case_001",
+          "case_002",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "revenue",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-is-gross-profit",
+      "statement_family": "income_statement",
+      "label_any": [
+        "gross profit",
+        "gross loss"
+      ],
+      "target_qname": "ifrs-smes:GrossProfit",
+      "reason": "income_statement_gross_profit_template",
+      "target_concept_label": "Gross Profit",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 8,
+        "sample_support_count": 3,
+        "sample_ids": [
+          "case_001",
+          "case_002",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "gross profit",
+            "count": 5
+          },
+          {
+            "normalized_label": "gross profit cleision",
+            "count": 2
+          },
+          {
+            "normalized_label": "gross profit pl",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-is-audit-fees",
+      "statement_family": "income_statement",
+      "label_any": [
+        "audit fee",
+        "audit fees",
+        "auditors remuneration",
+        "auditor s remuneration",
+        "auditors' remuneration"
+      ],
+      "target_qname": "ssmt-mpers:AuditorsRemuneration",
+      "reason": "income_statement_audit_fee_template",
+      "target_concept_label": "Auditors Remuneration",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 6,
+        "sample_support_count": 3,
+        "sample_ids": [
+          "case_001",
+          "case_003",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "auditors remuneration",
+            "count": 2
+          },
+          {
+            "normalized_label": "audit fees",
+            "count": 2
+          },
+          {
+            "normalized_label": "audit fee",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-is-directors-fees",
+      "statement_family": "income_statement",
+      "label_any": [
+        "director s fee",
+        "directors fee",
+        "directors fees"
+      ],
+      "target_qname": "ssmt-mpers:DirectorsFees",
+      "reason": "income_statement_directors_fee_template",
+      "target_concept_label": "Directors Fees",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 2,
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_001"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "director s fee",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-is-directors-remuneration",
+      "statement_family": "income_statement",
+      "label_any": [
+        "directors remuneration",
+        "director s remuneration",
+        "directors salaries",
+        "director s salaries",
+        "directors salary"
+      ],
+      "target_qname": "ssmt-mpers:DirectorsRemuneration",
+      "reason": "income_statement_directors_remuneration_template",
+      "target_concept_label": "Directors Remuneration",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 6,
+        "sample_support_count": 3,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "director s remuneration",
+            "count": 2
+          },
+          {
+            "normalized_label": "director s salaries",
+            "count": 2
+          },
+          {
+            "normalized_label": "directors salary",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-is-wages-and-salaries",
+      "statement_family": "income_statement",
+      "label_any": [
+        "staff costs",
+        "salaries",
+        "wages",
+        "epf contribution",
+        "socso contribution",
+        "eis contribution"
+      ],
+      "target_qname": "ifrs-smes:WagesAndSalaries",
+      "reason": "income_statement_staff_cost_template",
+      "target_concept_label": "Wages And Salaries",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 14,
+        "sample_support_count": 3,
+        "sample_ids": [
+          "case_001",
+          "case_003",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "staff costs",
+            "count": 4
+          },
+          {
+            "normalized_label": "epf contribution",
+            "count": 2
+          },
+          {
+            "normalized_label": "eis contribution",
+            "count": 2
+          },
+          {
+            "normalized_label": "salaries",
+            "count": 2
+          },
+          {
+            "normalized_label": "socso contribution",
+            "count": 2
+          },
+          {
+            "normalized_label": "director s salaries",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-share-capital",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "equity"
+      ],
+      "label_any": [
+        "share capital"
+      ],
+      "target_qname": "ifrs-smes:IssuedCapital",
+      "reason": "financial_position_share_capital_template",
+      "target_concept_label": "Issued Capital",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 4,
+        "sample_support_count": 2,
+        "sample_ids": [
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "share capital",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-retained-earnings",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "equity"
+      ],
+      "label_any": [
+        "accumulated losses",
+        "retained profits",
+        "retained earnings"
+      ],
+      "target_qname": "ifrs-smes:RetainedEarnings",
+      "reason": "financial_position_retained_earnings_template",
+      "target_concept_label": "Retained Earnings",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 8,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "accumulated losses",
+            "count": 6
+          },
+          {
+            "normalized_label": "retained profits unselected",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-current-accruals",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "current_liabilities"
+      ],
+      "label_any": [
+        "accruals"
+      ],
+      "target_qname": "ssmt-mpers:CurrentNontradeAccruals",
+      "reason": "financial_position_current_accruals_template",
+      "target_concept_label": "Current Nontrade Accruals",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 8,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "trade and other payables",
+            "count": 8
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-current-tax-liability",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "current_liabilities"
+      ],
+      "label_any": [
+        "provision for taxation",
+        "taxation"
+      ],
+      "target_qname": "ifrs-smes:CurrentTaxLiabilitiesCurrent",
+      "reason": "financial_position_current_tax_liability_template",
+      "target_concept_label": "Current Tax Liabilities Current",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 2,
+        "sample_support_count": 1,
+        "sample_ids": [
+          "case_002"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "tax expense",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-related-party-payable",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "current_liabilities",
+        "non_current_liabilities"
+      ],
+      "label_any": [
+        "amount due to director",
+        "amount due to directors",
+        "due to related parties"
+      ],
+      "target_qname": "ssmt-mpers:OtherCurrentPayablesDueToRelatedParties",
+      "reason": "financial_position_related_party_payable_template",
+      "target_concept_label": "Other Current Payables Due To Related Parties",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 8,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "amount due to directors",
+            "count": 6
+          },
+          {
+            "normalized_label": "amount due to director a",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-related-party-receivable",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "current_assets"
+      ],
+      "label_any": [
+        "amount due from director",
+        "amount due from directors",
+        "due from related parties"
+      ],
+      "target_qname": "ssmt-mpers:OtherCurrentReceivablesDueFromRelatedParties",
+      "reason": "financial_position_related_party_receivable_template",
+      "target_concept_label": "Other Current Receivables Due From Related Parties",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-fp-other-current-deposits",
+      "statement_family": "financial_position",
+      "section_blocks": [
+        "current_assets"
+      ],
+      "label_any": [
+        "deposits",
+        "other deposits"
+      ],
+      "target_qname": "ssmt-mpers:OtherCurrentNontradeDeposits",
+      "reason": "financial_position_deposits_template",
+      "target_concept_label": "Other Current Nontrade Deposits",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 8,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "trade and other receivables",
+            "count": 6
+          },
+          {
+            "normalized_label": "other deposits",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-operating-total",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_operating"
+      ],
+      "label_any": [
+        "net cash from operating activities",
+        "net cash from to operating activities",
+        "cash from operating activities"
+      ],
+      "target_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "reason": "cash_flow_operating_total_template",
+      "target_concept_label": "Cash Flows From Used In Operating Activities",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 10,
+        "sample_support_count": 5,
+        "sample_ids": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "net cash from operating activities",
+            "count": 6
+          },
+          {
+            "normalized_label": "net cash from to operating activities",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash from operating activities",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-investing-total",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_investing"
+      ],
+      "label_any": [
+        "cash flows from investing activities",
+        "net cash to investing activities",
+        "net cash from investing activities"
+      ],
+      "target_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+      "reason": "cash_flow_investing_total_template",
+      "target_concept_label": "Cash Flows From Used In Investing Activities",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 12,
+        "sample_support_count": 5,
+        "sample_ids": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "cash flows from investing activities",
+            "count": 10
+          },
+          {
+            "normalized_label": "net cash to investing activities",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-financing-total",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_financing"
+      ],
+      "label_any": [
+        "cash flows from financing activities",
+        "net cash from financing activities",
+        "net cash used in financing activities"
+      ],
+      "target_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+      "reason": "cash_flow_financing_total_template",
+      "target_concept_label": "Cash Flows From Used In Financing Activities",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 4,
+        "sample_support_count": 2,
+        "sample_ids": [
+          "case_003",
+          "case_004"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "cash flows from financing activities",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-cash-net-change",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_reconciliation"
+      ],
+      "label_any": [
+        "net increase in cash",
+        "net decrease in cash",
+        "net decrease increase in cash",
+        "net increase decrease in cash"
+      ],
+      "target_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "reason": "cash_flow_cash_change_template",
+      "target_concept_label": "Increase Decrease In Cash And Cash Equivalents",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 8,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_001",
+          "case_002",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "net decrease increase in cash and cash equivalents",
+            "count": 4
+          },
+          {
+            "normalized_label": "net increase in cash and cash equivalents",
+            "count": 2
+          },
+          {
+            "normalized_label": "net increase decrease in cash and cash equivalents",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-cash-equivalents",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_reconciliation"
+      ],
+      "label_any": [
+        "cash and cash equivalents at beginning",
+        "cash and cash equivalents at the beginning",
+        "cash and cash equivalents at end",
+        "cash and cash equivalents at the end",
+        "cash and cash equivalent at beginning",
+        "cash and cash equivalent at the end",
+        "bank balances"
+      ],
+      "target_qname": "ifrs-smes:CashAndCashEquivalents",
+      "reason": "cash_flow_cash_equivalents_reconciliation_template",
+      "target_concept_label": "Cash And Cash Equivalents",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 24,
+        "sample_support_count": 5,
+        "sample_ids": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "bank balances",
+            "count": 8
+          },
+          {
+            "normalized_label": "cash and cash equivalents at end of period",
+            "count": 4
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of year",
+            "count": 4
+          },
+          {
+            "normalized_label": "cash and cash equivalents at the end of year",
+            "count": 4
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of year period",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of the year",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-depreciation-adjustment",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_investing",
+        "cash_flow_operating",
+        "cash_flow_other"
+      ],
+      "label_any": [
+        "depreciation",
+        "depreciation of property plant and equipment",
+        "depreciation of property, plant and equipment"
+      ],
+      "target_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+      "reason": "cash_flow_depreciation_adjustment_template",
+      "target_concept_label": "Adjustments For Depreciation Expense",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 4,
+        "sample_support_count": 2,
+        "sample_ids": [
+          "case_002",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "property plant and equipment",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-receivables-adjustment",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_operating"
+      ],
+      "label_any": [
+        "trade and other receivables",
+        "trade receivables",
+        "other receivables",
+        "amount due from directors"
+      ],
+      "label_any_required": [
+        "increase",
+        "decrease"
+      ],
+      "target_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+      "reason": "cash_flow_receivables_working_capital_template",
+      "target_concept_label": "Adjustments For Decrease Increase In Trade Account Receivable",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-payables-adjustment",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_operating"
+      ],
+      "label_any": [
+        "trade and other payables",
+        "other payables",
+        "payables and accruals",
+        "amount due to director",
+        "amount due to directors"
+      ],
+      "label_any_required": [
+        "increase",
+        "decrease"
+      ],
+      "target_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAndOtherPayables",
+      "reason": "cash_flow_payables_working_capital_template",
+      "target_concept_label": "Adjustments For Increase Decrease In Trade And Other Payables",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-income-tax-paid",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_operating"
+      ],
+      "label_any": [
+        "taxation paid",
+        "income tax paid",
+        "tax paid"
+      ],
+      "target_qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+      "reason": "cash_flow_income_tax_paid_template",
+      "target_concept_label": "Income Taxes Paid Refund Classified As Operating Activities",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-cf-borrowing-repayment",
+      "statement_family": "cash_flow",
+      "section_blocks": [
+        "cash_flow_financing"
+      ],
+      "label_any": [
+        "repayment of term loan",
+        "repayment of borrowings",
+        "term loan repayment"
+      ],
+      "target_qname": "ifrs-smes:RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+      "reason": "cash_flow_borrowing_repayment_template",
+      "target_concept_label": "Repayments Of Borrowings Classified As Financing Activities",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-note-tax-expense",
+      "statement_family": null,
+      "section_blocks": [
+        "notes_tax"
+      ],
+      "label_any": [
+        "tax expense",
+        "income tax expense",
+        "charges for the year",
+        "provision based on these financial statements"
+      ],
+      "note_title_any": [
+        "tax",
+        "taxation"
+      ],
+      "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "reason": "note_linked_tax_expense_template",
+      "target_concept_label": "Income Tax Expense Continuing Operations",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-note-audit-fees",
+      "statement_family": null,
+      "section_blocks": [
+        "notes_detail",
+        "administrative_expenses"
+      ],
+      "label_any": [
+        "audit fee",
+        "auditors remuneration",
+        "auditor s remuneration"
+      ],
+      "target_qname": "ssmt-mpers:AuditorsRemuneration",
+      "reason": "note_linked_audit_fee_template",
+      "target_concept_label": "Auditors Remuneration",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 14,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_001",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "audit fee",
+            "count": 6
+          },
+          {
+            "normalized_label": "auditor s remuneration",
+            "count": 4
+          },
+          {
+            "normalized_label": "auditors remuneration",
+            "count": 2
+          },
+          {
+            "normalized_label": "audit fees",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-note-directors-remuneration",
+      "statement_family": null,
+      "section_blocks": [
+        "notes_detail",
+        "administrative_expenses"
+      ],
+      "label_any": [
+        "directors remuneration",
+        "director s remuneration",
+        "directors fees",
+        "directors fee"
+      ],
+      "target_qname": "ssmt-mpers:DirectorsRemuneration",
+      "reason": "note_linked_directors_remuneration_template",
+      "target_concept_label": "Directors Remuneration",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 10,
+        "sample_support_count": 4,
+        "sample_ids": [
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005"
+        ],
+        "top_observed_labels": [
+          {
+            "normalized_label": "directors remuneration",
+            "count": 4
+          },
+          {
+            "normalized_label": "director s remuneration",
+            "count": 2
+          },
+          {
+            "normalized_label": "directors fees",
+            "count": 2
+          },
+          {
+            "normalized_label": "directors fee",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "pattern_id": "18E-B-note-accruals",
+      "statement_family": null,
+      "section_blocks": [
+        "notes_payables",
+        "notes_detail"
+      ],
+      "label_any": [
+        "accruals"
+      ],
+      "note_title_any": [
+        "payable",
+        "accrual"
+      ],
+      "target_qname": "ssmt-mpers:CurrentNontradeAccruals",
+      "reason": "note_linked_accruals_template",
+      "target_concept_label": "Current Nontrade Accruals",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    },
+    {
+      "pattern_id": "18E-B-note-ppe-depreciation",
+      "statement_family": null,
+      "section_blocks": [
+        "notes_ppe",
+        "notes_detail"
+      ],
+      "label_any": [
+        "depreciation"
+      ],
+      "note_title_any": [
+        "property plant",
+        "property, plant"
+      ],
+      "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "reason": "note_linked_ppe_depreciation_template",
+      "target_concept_label": "Depreciation Property Plant And Equipment",
+      "candidate_source": "statement_template_pattern",
+      "confidence_bucket": "review_required",
+      "safe_for_auto_apply": false,
+      "requires_human_review": true,
+      "blocking_reasons": [
+        "statement_template_candidate_requires_review"
+      ],
+      "support": {
+        "observation_count": 0,
+        "sample_support_count": 0,
+        "sample_ids": [],
+        "top_observed_labels": []
+      }
+    }
+  ]
+}

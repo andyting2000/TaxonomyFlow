@@ -1,0 +1,151 @@
+{
+  "run_metadata": {
+    "feature": "14C",
+    "generated_at": "2026-05-19T09:24:00Z",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "final_mapping_approved": false,
+    "real_human_approval_recorded": false,
+    "production_mapping_approval_produced": false,
+    "semantic_matcher_called": false,
+    "production_semantic_matcher_called": false,
+    "embeddings_used": false,
+    "xbrl_generated": false,
+    "automatic_xbrl_generation": false,
+    "arelle_validation_run": false,
+    "azure_di_live_call_made": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "external_provider_calls": false,
+    "reference_xml_sent_to_model": false,
+    "reference_xml_sent_to_provider": false,
+    "run_id": "azure_di_reviewed_mapping_simulation_14c",
+    "report_type": "azure_di_xbrl_eligibility_summary",
+    "script": "scripts/simulate_azure_di_reviewed_mapping_decisions_14c.py",
+    "output_path": "reports\\azure_di_xbrl_eligibility_summary_14c.json"
+  },
+  "input_reports": {
+    "review_queue": "reports\\azure_di_manual_mapping_review_queue_14b.json",
+    "review_policy": "reports\\azure_di_mapping_review_policy_14b.json",
+    "handoff_contract": "reports\\azure_di_mapping_review_handoff_contract_14b.json"
+  },
+  "total_review_items": 53,
+  "simulated_approved_count": 8,
+  "xbrl_eligible_count": 8,
+  "xbrl_blocked_count": 45,
+  "deferred_count": 6,
+  "alias_enrichment_needed_count": 24,
+  "metadata_enrichment_needed_count": 0,
+  "manual_taxonomy_mapping_needed_count": 12,
+  "rejected_count": 0,
+  "context_only_count": 0,
+  "decision_type_counts": {
+    "approve_suggested_concept_simulated": 8,
+    "defer_mapping": 6,
+    "request_alias_enrichment": 24,
+    "blocked_from_xbrl": 3,
+    "require_manual_taxonomy_mapping": 12
+  },
+  "per_row_type_eligibility": {
+    "comparative_numeric_fact": {
+      "not_eligible": 14,
+      "eligible": 1
+    },
+    "numeric_fact": {
+      "not_eligible": 1
+    },
+    "subtotal_or_total": {
+      "not_eligible": 3
+    },
+    "text_block": {
+      "eligible": 7,
+      "not_eligible": 27
+    }
+  },
+  "per_workflow_status_eligibility": {
+    "blocked_from_xbrl": {
+      "not_eligible": 3
+    },
+    "needs_alias_or_metadata_enrichment": {
+      "not_eligible": 24
+    },
+    "needs_confirmation": {
+      "not_eligible": 6
+    },
+    "needs_human_concept_choice": {
+      "not_eligible": 12
+    },
+    "ready_for_review_approval": {
+      "eligible": 8
+    }
+  },
+  "per_confidence_tier_eligibility": {
+    "high": {
+      "eligible": 5
+    },
+    "low": {
+      "not_eligible": 26
+    },
+    "medium": {
+      "eligible": 3,
+      "not_eligible": 16
+    },
+    "none": {
+      "not_eligible": 3
+    }
+  },
+  "top_xbrl_blockers": [
+    {
+      "blocker": "alias_enrichment_needed",
+      "count": 24
+    },
+    {
+      "blocker": "ambiguous_multiple_suggestions",
+      "count": 12
+    },
+    {
+      "blocker": "simulate_confirm_medium_not_enabled",
+      "count": 6
+    },
+    {
+      "blocker": "confirmation_candidate_below_medium_confidence",
+      "count": 2
+    },
+    {
+      "blocker": "generic_or_weak_label",
+      "count": 2
+    },
+    {
+      "blocker": "blocker:row_type_or_concept_type_mismatch",
+      "count": 1
+    },
+    {
+      "blocker": "concept_type_mismatch_blocks_xbrl",
+      "count": 1
+    },
+    {
+      "blocker": "row_type_or_concept_type_mismatch",
+      "count": 1
+    }
+  ],
+  "why_xbrl_generation_is_still_not_allowed": [
+    "Every approval is simulated_only=true and human_approved=false.",
+    "No final production mapping approval exists.",
+    "Ambiguous, no-safe, blocked, and default confirmation-required records remain excluded.",
+    "This feature does not generate XBRL or run Arelle validation."
+  ],
+  "recommended_next_feature": "Feature #14D - Concept metadata enrichment v2 if simulation approves too few mappings.",
+  "limitations": [
+    "All decisions are simulated_only=true and human_approved=false.",
+    "No final production mapping approval occurs.",
+    "No XBRL is generated and no Arelle validation is run.",
+    "No live provider, model, embedding, semantic matcher, DB, API, or UI path is used."
+  ]
+}

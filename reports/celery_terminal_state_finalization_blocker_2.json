@@ -1,0 +1,217 @@
+{
+  "run_metadata": {
+    "feature": "18F-G-A-quality-smoke-blocker-2",
+    "generated_at": "2026-07-23T10:44:14.8260843+08:00",
+    "report_type": "celery_terminal_state_finalization_hotfix",
+    "live_provider_called": false,
+    "database_mutated": false,
+    "production_job_mutated": false
+  },
+  "live_evidence": {
+    "job_55": {
+      "filing_status": "REVIEW",
+      "extracted_rows": 83,
+      "ai_mapping_status": "completed",
+      "celery_task_id": "d7b1838e-52dd-4220-b39f-bda0366f4212",
+      "celery_result_before_hotfix": "PROGRESS",
+      "celery_progress_before_hotfix": 100,
+      "date_done_before_hotfix": null
+    },
+    "job_56": {
+      "filing_status": "REVIEW",
+      "extracted_rows": 63,
+      "ai_mapping_status": "completed",
+      "celery_task_id": "da711d85-d699-463e-befe-ae640653bf3c",
+      "celery_result_before_hotfix": "PROGRESS",
+      "celery_progress_before_hotfix": 100,
+      "date_done_before_hotfix": null
+    },
+    "control_jobs": {
+      "job_57_result": "SUCCESS",
+      "job_58_result": "SUCCESS"
+    }
+  },
+  "root_cause": {
+    "confirmed_repository_level_cause": "PDF task result lifecycle ownership was split. Async progress callbacks wrote PROGRESS directly through the explicit task ID, but no component owned terminalization or blocked later progress. Successful terminalization depended entirely on Celery's separate automatic tracer write after the synchronous task returned. Jobs 55 and 56 prove that dependency did not retain SUCCESS.",
+    "installed_celery_version": "5.6.3",
+    "pre_hotfix_ignore_result": false,
+    "automatic_success_expected": true,
+    "progress_callback_ordering": "Azure progress callback backend writes were synchronous and awaited before the async coroutine returned; there was no queued progress reporter to drain.",
+    "low_level_trigger_status": "The precise internal reason Celery's automatic mark_as_done write was absent or not retained for jobs 55 and 56 cannot be reconstructed because worker console logs were not persisted.",
+    "hypotheses_rejected_or_unproven": {
+      "ignore_result_prevented_automatic_success": false,
+      "result_backend_was_disabled": false,
+      "async_code_used_task_request_after_handoff": false,
+      "known_pending_progress_queue_survived_completion": false,
+      "live_success_was_proven_then_overwritten": false
+    }
+  },
+  "before_state_sequence": [
+    "Celery task received and task UUID captured in the task thread.",
+    "Async work submitted to the persistent worker event loop.",
+    "START/PROGRESS metadata written directly to the result backend with the explicit UUID.",
+    "Azure extraction, persistence, and optional mapping completed.",
+    "Final PROGRESS 100 written.",
+    "Async coroutine returned to the synchronous task.",
+    "Celery automatic mark_as_done was expected to write SUCCESS, but jobs 55 and 56 retained PROGRESS 100 with no date_done.",
+    "No terminal flag or transition guard existed."
+  ],
+  "after_state_sequence": [
+    "Celery task UUID is captured and validated before thread handoff.",
+    "One CeleryTaskStateReporter is created for the job/task UUID.",
+    "Reporter writes STARTED and all PROGRESS states synchronously under one lock.",
+    "Async processing returns a serializable filing/row/mapping outcome.",
+    "Reporter establishes terminal intent, which closes progress and waits for any in-flight synchronous write holding the lock.",
+    "Reporter explicitly writes exactly one SUCCESS or FAILURE using the same UUID.",
+    "The result backend creates date_done and retains the final result.",
+    "The synchronous task returns or re-raises only after terminal publication.",
+    "Celery automatic result storage is disabled for this task, preventing a second terminal owner.",
+    "Late progress is rejected and logged without a backend write."
+  ],
+  "terminal_state_guard": {
+    "component": "CeleryTaskStateReporter",
+    "task_identity": "Explicit immutable celery_task_id",
+    "thread_safety": "threading.RLock protects progress, terminal intent, terminal write, sequence, and diagnostics",
+    "progress_write_behavior": "Synchronous; failures remain warning-only",
+    "terminal_write_behavior": "Synchronous; exactly one terminal write is attempted and terminal backend errors are not silently treated as success",
+    "pending_progress_behavior": "No queue exists. Acquiring the terminal lock drains any currently executing synchronous progress write and blocks new progress.",
+    "late_progress_behavior": "Rejected once terminal intent or terminal state exists",
+    "forbidden_transitions": [
+      "SUCCESS to PROGRESS",
+      "FAILURE to PROGRESS",
+      "SUCCESS to FAILURE",
+      "FAILURE to SUCCESS",
+      "second terminal write"
+    ],
+    "diagnostics": [
+      "job_id",
+      "task_id",
+      "worker_pid",
+      "thread_id",
+      "event_loop_id when available",
+      "requested_state",
+      "sequence",
+      "timestamp",
+      "accepted",
+      "reason"
+    ]
+  },
+  "success_finalization": {
+    "owner": "CeleryTaskStateReporter",
+    "celery_automatic_result_storage": "disabled for app.tasks.process_pdf_task via ignore_result=true",
+    "final_state": "SUCCESS",
+    "date_done": "Created by the configured Celery result backend terminal write",
+    "payload_fields": [
+      "status",
+      "success",
+      "job_id",
+      "celery_task_id",
+      "filing_status",
+      "extracted_row_count",
+      "ai_mapping_status",
+      "ai_suggestion_count",
+      "warnings",
+      "optional_stage fields when applicable",
+      "worker_pid",
+      "worker_event_loop_id",
+      "started_at",
+      "completed_at",
+      "final_celery_state"
+    ]
+  },
+  "failure_finalization": {
+    "progress_closed_before_cleanup": true,
+    "filing_cleanup": "Still-PROCESSING jobs are moved to ERROR using the persistent-loop session manager; existing REVIEW/COMPLETED states remain preserved.",
+    "final_state": "FAILURE",
+    "final_result": "PdfProcessingTaskError with stable code and safe message",
+    "date_done": "Created by the configured Celery result backend terminal write",
+    "task_exception_re_raised": true
+  },
+  "optional_mapping_failure": {
+    "filing_status": "REVIEW",
+    "extracted_rows_preserved": true,
+    "ai_mapping_status": "failed",
+    "celery_final_state": "SUCCESS",
+    "payload_fields": {
+      "optional_stage": "mapping",
+      "optional_stage_status": "failed",
+      "optional_stage_error_code": "stable bracketed mapping error code",
+      "optional_stage_error_message": "AI mapping suggestions failed after extraction completed."
+    },
+    "rate_limit_behavior": "Uses rate_limited status, provider error type, safe provider message, and saved suggestion count."
+  },
+  "observability_retention": {
+    "database_migration_added": false,
+    "reason": "FilingJob has no suitable task lifecycle fields and a migration was not essential to correctness.",
+    "runtime_evidence": "Safe transition logs and terminal result payload retain task UUID, PID, timestamps, state, and loop/thread diagnostics for the immediate smoke.",
+    "limitation": "Result records still expire according to result_expires=3600; inspect them within the smoke window."
+  },
+  "changed_files": [
+    "tasks.py",
+    "schemas.py",
+    "services/azure_di_production_extraction.py",
+    "tests/test_celery_terminal_state_finalization.py",
+    "tests/test_celery_task_identity_handoff.py",
+    "tests/test_celery_async_resource_lifecycle.py",
+    "tests/test_azure_di_production_cutover.py",
+    "reports/celery_terminal_state_finalization_blocker_2.json",
+    "reports/celery_terminal_state_finalization_blocker_2.md",
+    "feature_list.json",
+    "PROGRESS.md"
+  ],
+  "test_evidence": {
+    "changed_file_py_compile": "passed",
+    "terminal_finalization_tests": {
+      "count": 11,
+      "status": "passed"
+    },
+    "task_identity_tests": {
+      "count": 9,
+      "status": "passed"
+    },
+    "async_resource_lifecycle_tests": {
+      "count": 5,
+      "status": "passed"
+    },
+    "focused_terminal_identity_lifecycle_timeout_tests": {
+      "count": 30,
+      "status": "passed"
+    },
+    "azure_mapping_baseline_ownership_regressions": {
+      "count": 95,
+      "status": "passed"
+    },
+    "full_backend_suite": {
+      "count": 1209,
+      "status": "passed",
+      "seconds": 39.332
+    },
+    "real_celery_backend_assertions": [
+      "SUCCESS has date_done and decodes the final payload",
+      "FAILURE has date_done and decodes an exception result"
+    ]
+  },
+  "manual_retest": {
+    "status": "pending_worker_restart_and_fresh_upload",
+    "old_jobs_rewritten": false,
+    "steps": [
+      "Restart backend and all Celery workers so the new task definition and reporter are loaded.",
+      "Upload a fresh PDF through the normal user workflow.",
+      "Capture the returned task UUID and inspect it before the one-hour result expiry.",
+      "Confirm FilingJob REVIEW, extracted rows greater than zero, terminal Celery SUCCESS, non-null date_done, and final payload fields.",
+      "Process multiple PDFs under the same worker PID and confirm every task terminalizes without a restart.",
+      "Resume the six-PDF Phase A closeout and only then select Supervisor-guided remapping cases."
+    ]
+  },
+  "safety": {
+    "azure_di_algorithm_changed": false,
+    "mapping_algorithm_changed": false,
+    "supervisor_changed": false,
+    "frontend_changed": false,
+    "auto_apply_added": false,
+    "confirmed_tag_id_mutated": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "recommended_next_feature": "Feature #18F-G-A-quality-smoke-closeout - Repeat the six-PDF live smoke and resume manual Supervisor-guided remapping selection only after Phase A passes"
+}

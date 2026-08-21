@@ -1,0 +1,51 @@
+{
+  "feature": "18F-G-A-hotfix-1",
+  "title": "Supervisor mock frontend control deprecation",
+  "status": "completed",
+  "generated_at": "2026-07-22T23:17:28+08:00",
+  "frontend_visibility_decision": {
+    "mock_single_control_rendered": false,
+    "mock_batch_control_rendered": false,
+    "live_single_control_label": "Run Supervisor review",
+    "live_batch_control_label": "Run Supervisor reviews for all",
+    "vite_mock_flag_default": false,
+    "vite_mock_flag": "VITE_SHOW_SUPERVISOR_MOCK_CONTROLS",
+    "flag_status": "Deprecated visibility setting retained in frontend/.env.example for configuration compatibility; application source no longer renders mock controls."
+  },
+  "backend_mock_behavior": {
+    "retained": true,
+    "explicit_mock_supported": true,
+    "omitted_mode_fallback": "mock",
+    "reason": "Backend tests and safe omitted-mode requests still require mock behavior."
+  },
+  "default_mode_explanation": {
+    "existing_setting": "SUPERVISOR_PRODUCTION_LIVE_DEFAULT_MODE=mock",
+    "actual_runtime_effect": "The setting is retained for legacy compatibility but does not select HTTP request mode. MappingSupervisorReviewRunRequest and MappingSupervisorReviewBatchRunRequest default omitted mode to mock directly.",
+    "regression_evidence": "An omitted-mode request persisted source=mock even when the legacy setting was patched to live.",
+    "safe_fallback_preserved": true,
+    "future_deprecation_recommendation": "During a separately scoped config cleanup, replace the misleading name with SUPERVISOR_DEFAULT_MODE=mock or remove the unused setting after compatibility review."
+  },
+  "live_request_verification": {
+    "single_ui_call": "onRunSupervisorReview(suggestion, live)",
+    "batch_ui_call": "onRunBatchSupervisorReviews(live)",
+    "handler_call": "runSupervisorReview(job.id, suggestion.id, { mode: normalizedMode })",
+    "api_serialization": "mode: supervisorReviewMode(options)",
+    "relies_on_default_mode": false,
+    "confirmation_required": true,
+    "backend_gate_authoritative": true
+  },
+  "tests": {
+    "frontend": "26 passed",
+    "supervisor": "118 passed",
+    "full_backend": "1183 passed",
+    "build": "passed"
+  },
+  "safety": {
+    "mock_backend_removed": false,
+    "production_live_gate_changed": false,
+    "mapping_mutation": false,
+    "confirmed_tag_id_mutation": false,
+    "automatic_action": false
+  },
+  "recommended_next_feature": "After 3-5 manual correction-quality smoke cases: #18F-G-B - Integrate conditional Supervisor-guided remapping into the production orchestration design"
+}

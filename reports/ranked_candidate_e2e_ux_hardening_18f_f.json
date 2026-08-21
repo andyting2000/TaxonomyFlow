@@ -1,0 +1,30 @@
+{
+  "feature": "18F-F",
+  "advisory_copy": [
+    "Ranked candidates are advisory only.",
+    "Dry-run preview only.",
+    "Human review required.",
+    "No auto-apply.",
+    "No confirmed_tag_id mutation.",
+    "No final mapping mutation."
+  ],
+  "loading_states": [
+    "Loading ranked candidate capabilities. No preview is available yet.",
+    "Running dry-run preview..."
+  ],
+  "fail_closed_error_states": {
+    "disabled_or_403": "Preview unavailable until an authorized test environment enables it.",
+    "unsupported_profile": "No preview was produced.",
+    "missing_local_artifacts": "No preview was produced.",
+    "network_error": "No preview was produced.",
+    "unsafe_response": "Candidate rows were blocked from rendering."
+  },
+  "empty_state": "No ranked candidates are available for this dry-run.",
+  "read_only_rendering": [
+    "candidate rank and qname",
+    "statement, section, period, and coverage context",
+    "score, confidence, risk, and source badges",
+    "evidence, ambiguity, blocking reasons, and read-only recommended action"
+  ],
+  "recommended_next_feature": "Feature #18F-G - Decide next path: persistence design vs reviewer UX workflow"
+}

@@ -1,0 +1,36 @@
+{
+  "feature": "18F-F",
+  "safety_counters_verified": {
+    "safe_for_auto_apply_count": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "persistence_writes": 0,
+    "ai_suggestion_table_writes": 0
+  },
+  "candidate_contract": {
+    "requires_human_review": true,
+    "safe_for_auto_apply": false,
+    "recommended_action": "read-only advisory label"
+  },
+  "unsafe_response_blocking": [
+    "safe_for_auto_apply_count > 0",
+    "confirmed_tag_id_mutations > 0",
+    "final_mapping_mutations > 0",
+    "persistence_writes > 0",
+    "ai_suggestion_table_writes > 0",
+    "candidate.safe_for_auto_apply=true",
+    "candidate.requires_human_review=false",
+    "candidate.recommended_action=accept/apply/confirm/auto_apply/auto_accept/set_confirmed_tag_id"
+  ],
+  "unsafe_ui_behavior": "The response safety summary and warning render, but candidate rows are blocked.",
+  "forbidden_actions_absent": [
+    "Apply",
+    "Accept",
+    "Confirm",
+    "Save Mapping",
+    "Auto-map"
+  ],
+  "mutation_calls": 0,
+  "external_calls": 0,
+  "production_enablement": false
+}

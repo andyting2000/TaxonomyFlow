@@ -1,0 +1,277 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-11T08:08:15.432189+00:00",
+    "script": "scripts/discover_benchmark_cases.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "cases_dir": "benchmark_cases",
+    "metadata_json_required": false
+  },
+  "cases_dir": "benchmark_cases",
+  "case_count": 7,
+  "ready_count": 7,
+  "status_counts": {
+    "ready": 7
+  },
+  "cases": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "case_dir": "benchmark_cases/001-bizaid-synthetic",
+      "pdf_path": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+      "reference_path": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "BizAid-2025-draft.pdf",
+          "path": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf",
+          "extension": ".pdf",
+          "size_bytes": 104844
+        },
+        {
+          "name": "BizAid-2025-draft.xml",
+          "path": "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.xml",
+          "extension": ".xml",
+          "size_bytes": 147657
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/001-bizaid-synthetic/BizAid-2025-draft.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "case_dir": "benchmark_cases/002-bezlife-marketing",
+      "pdf_path": "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.pdf",
+      "reference_path": "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "BEZLIFE MARKETING SDN BHD.pdf",
+          "path": "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1370321
+        },
+        {
+          "name": "BEZLIFE MARKETING SDN BHD.xml",
+          "path": "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.xml",
+          "extension": ".xml",
+          "size_bytes": 277034
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/002-bezlife-marketing/BEZLIFE MARKETING SDN BHD.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    },
+    {
+      "case_id": "003-fine-batik",
+      "case_dir": "benchmark_cases/003-fine-batik",
+      "pdf_path": "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.pdf",
+      "reference_path": "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "FINE BATIK SDN BHD.pdf",
+          "path": "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1213990
+        },
+        {
+          "name": "FINE BATIK SDN BHD.xml",
+          "path": "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.xml",
+          "extension": ".xml",
+          "size_bytes": 340393
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/003-fine-batik/FINE BATIK SDN BHD.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    },
+    {
+      "case_id": "004-info-house",
+      "case_dir": "benchmark_cases/004-info-house",
+      "pdf_path": "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.pdf",
+      "reference_path": "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "AGENSI PEKERJAAN INFO HOUSE.pdf",
+          "path": "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1203107
+        },
+        {
+          "name": "AGENSI PEKERJAAN INFO HOUSE.xml",
+          "path": "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.xml",
+          "extension": ".xml",
+          "size_bytes": 305000
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/004-info-house/AGENSI PEKERJAAN INFO HOUSE.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    },
+    {
+      "case_id": "005-jconnector",
+      "case_dir": "benchmark_cases/005-jconnector",
+      "pdf_path": "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.pdf",
+      "reference_path": "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "AGENSI PEKERJAAN JCONNECTOR.pdf",
+          "path": "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1143207
+        },
+        {
+          "name": "AGENSI PEKERJAAN JCONNECTOR.xml",
+          "path": "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.xml",
+          "extension": ".xml",
+          "size_bytes": 260136
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/005-jconnector/AGENSI PEKERJAAN JCONNECTOR.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "case_dir": "benchmark_cases/006-Rahsia-Herbal",
+      "pdf_path": "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.pdf",
+      "reference_path": "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "RAHSIA HERBAL SDN BHD.pdf",
+          "path": "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1256065
+        },
+        {
+          "name": "RAHSIA HERBAL SDN BHD.xml",
+          "path": "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.xml",
+          "extension": ".xml",
+          "size_bytes": 317004
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/006-Rahsia-Herbal/RAHSIA HERBAL SDN BHD.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "case_dir": "benchmark_cases/007-Shield-Plus",
+      "pdf_path": "benchmark_cases/007-Shield-Plus/Shield-Plus.pdf",
+      "reference_path": "benchmark_cases/007-Shield-Plus/Shield-Plus.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "Shield-Plus.pdf",
+          "path": "benchmark_cases/007-Shield-Plus/Shield-Plus.pdf",
+          "extension": ".pdf",
+          "size_bytes": 527045
+        },
+        {
+          "name": "Shield-Plus.xml",
+          "path": "benchmark_cases/007-Shield-Plus/Shield-Plus.xml",
+          "extension": ".xml",
+          "size_bytes": 406960
+        }
+      ],
+      "pdf_files": [
+        "benchmark_cases/007-Shield-Plus/Shield-Plus.pdf"
+      ],
+      "reference_files": [
+        "benchmark_cases/007-Shield-Plus/Shield-Plus.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": null,
+      "metadata_required": false
+    }
+  ],
+  "root_file_inventory": [
+    {
+      "name": "benchmark_manifest.example.json",
+      "path": "benchmark_cases/benchmark_manifest.example.json",
+      "extension": ".json",
+      "size_bytes": 7789
+    },
+    {
+      "name": "benchmark_manifest.local.example.json",
+      "path": "benchmark_cases/benchmark_manifest.local.example.json",
+      "extension": ".json",
+      "size_bytes": 5013
+    },
+    {
+      "name": "few_shot_examples.example.json",
+      "path": "benchmark_cases/few_shot_examples.example.json",
+      "extension": ".json",
+      "size_bytes": 3989
+    },
+    {
+      "name": "README.md",
+      "path": "benchmark_cases/README.md",
+      "extension": ".md",
+      "size_bytes": 6502
+    }
+  ],
+  "schema_note": "Each immediate subfolder is one case. Filenames are not standardized; discovery uses file extensions."
+}

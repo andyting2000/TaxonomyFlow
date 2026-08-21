@@ -1,0 +1,52 @@
+# Extraction v2 Benchmark Report
+
+## Executive Summary
+
+- Cases processed: 7
+- PDFs processed: 7
+- Candidate rows: 122
+- Numeric facts: 36
+- Comparative numeric facts: 3
+- Text blocks: 0
+- Metadata rows: 0
+- Headings: 82
+- Unknown rows: 0
+- OpenAI used: True
+- Native candidates: 122
+- OpenAI candidates: 0
+- OpenAI fallback pages attempted: 60
+- OpenAI fallback pages succeeded: 0
+- OpenAI fallback pages failed: 60
+- OpenAI fallback pages skipped by limit: 75
+- UI upload required: False
+- Database mutated: False
+
+## Cases
+
+| Case | Status | Reference | Pages | Candidates | Native | OpenAI | Numeric | Comparative | Text Blocks | Warnings |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 001-bizaid-synthetic | ok | xml | 3 | 122 | 122 | 0 | 36 | 3 | 0 | 215 |
+| 002-bezlife-marketing | ok | xml | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 39 |
+| 003-fine-batik | ok | xml | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 38 |
+| 004-info-house | ok | xml | 23 | 0 | 0 | 0 | 0 | 0 | 0 | 36 |
+| 005-jconnector | ok | xml | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 35 |
+| 006-Rahsia-Herbal | ok | xml | 24 | 0 | 0 | 0 | 0 | 0 | 0 | 37 |
+| 007-Shield-Plus | ok | xml | 15 | 0 | 0 | 0 | 0 | 0 | 0 | 28 |
+
+## Pipeline Stages
+
+- document_ingestion
+- native_text_extraction
+- layout_or_table_heuristics
+- row_type_classification
+- numeric_fact_normalization
+- text_block_grouping
+- provenance_capture
+- report_generation
+
+## Limitations
+
+- Benchmark-only v2 extraction; no production cutover.
+- Native text/table heuristics are deterministic and intentionally conservative.
+- OpenAI vision fallback is opt-in only and benchmark-scoped when enabled.
+- No DB writes, XBRL generation, Arelle validation, UI upload, or production mapping are performed.

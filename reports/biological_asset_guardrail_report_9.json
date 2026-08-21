@@ -1,0 +1,137 @@
+{
+  "feature": "11J",
+  "job_id": 9,
+  "scope": {
+    "goal": "Prevent clearly impossible biological-asset auto-matches without inventing replacement concepts.",
+    "database_modified": false,
+    "sign_normalization_changed": false,
+    "full_mbrs_validation_claimed": false
+  },
+  "guardrail": {
+    "implementation_layers": [
+      "services/xbrl_template_service.py hybrid automatic concept matching",
+      "services/smart_ai_processor.py LLM-supplied concept acceptance path",
+      "services/xbrl_generator.py template_field_id safety net for already-persisted rows"
+    ],
+    "blocked_concepts": [
+      "ssmt-mpers:CurrentBiologicalAssets",
+      "ssmt-mpers:NoncurrentBiologicalAssets",
+      "CurrentBiologicalAssets",
+      "NoncurrentBiologicalAssets"
+    ],
+    "allowed_evidence_terms": [
+      "biological asset",
+      "biological assets",
+      "livestock",
+      "cattle",
+      "crop",
+      "crops",
+      "agricultural produce",
+      "bearer plant",
+      "plantation",
+      "agriculture",
+      "agricultural",
+      "aquaculture"
+    ],
+    "blocked_label_examples": [
+      "GOOD WILL",
+      "OFFICE EQUIPMENT",
+      "COMPUTER SOFTWARE",
+      "COMPUTER HARDWARE",
+      "FURNITURE &FITTINGS",
+      "P&L 2011",
+      "SIN THYE MANAGEMENT SDN BHD",
+      "P&L 2007",
+      "YONGDA CORPORATE CONSULTANTS SDN BHD",
+      "SHARE CAPITAL",
+      "INFOHOUSE (I.T) SDN BHD"
+    ],
+    "blocked_behavior": "Return no automatic concept for new auto-matches, and skip generated facts for already-persisted template_field_id rows. No replacement concept is assigned."
+  },
+  "job_9_before_after_audit": {
+    "before_report": "reports/generated_instance_audit_report_9_before_11j.json",
+    "after_report": "reports/generated_instance_audit_report_9.json",
+    "xbrl_path": "uploads/xbrl/SSM_FS-MPERS_10E-TEST_20241231.xbrl",
+    "before": {
+      "generated_facts": 88,
+      "expected_extracted_facts": 81,
+      "expected_extracted_facts_represented": 81,
+      "expected_extracted_facts_not_represented": 0,
+      "duplicate_concept_context_unit_groups": 14,
+      "identical_concept_context_unit_value_groups": 1,
+      "current_biological_asset_facts": 29,
+      "noncurrent_biological_asset_facts": 5,
+      "biological_asset_fact_count": 34
+    },
+    "after": {
+      "generated_facts": 54,
+      "expected_extracted_facts": 81,
+      "expected_extracted_facts_represented": 47,
+      "expected_extracted_facts_not_represented": 34,
+      "duplicate_concept_context_unit_groups": 12,
+      "identical_concept_context_unit_value_groups": 0,
+      "current_biological_asset_facts": 0,
+      "noncurrent_biological_asset_facts": 0,
+      "biological_asset_fact_count": 0
+    },
+    "impact": {
+      "biological_asset_facts_removed_from_generated_xbrl": 34,
+      "biological_asset_duplicate_groups_removed": 2,
+      "identical_duplicate_fact_key_removed": true,
+      "rows_moved_to_manual_review_or_no_automatic_generated_concept": 34,
+      "rows_moved_to_manual_review_by_concept": {
+        "ssmt-mpers:CurrentBiologicalAssets": 29,
+        "ssmt-mpers:NoncurrentBiologicalAssets": 5
+      }
+    }
+  },
+  "sample_rows_moved_to_manual_review_or_no_automatic_concept": [
+    {
+      "item_id": "02d27aae-2156-417e-9c20-4fab39b6a5ff",
+      "label": "GOOD WILL",
+      "value": "2,464,003.00",
+      "blocked_concept": "ssmt-mpers:NoncurrentBiologicalAssets"
+    },
+    {
+      "item_id": "881fa959-d429-49d8-9bb1-b922d4c77709",
+      "label": "OFFICE EQUIPMENT",
+      "value": "5,246.00",
+      "blocked_concept": "ssmt-mpers:NoncurrentBiologicalAssets"
+    },
+    {
+      "item_id": "d0b658e2-308e-4d31-a5b3-4fa35797d0a9",
+      "label": "COMPUTER SOFTWARE",
+      "value": "153,802.50",
+      "blocked_concept": "ssmt-mpers:NoncurrentBiologicalAssets"
+    },
+    {
+      "item_id": "08b23772-11af-4682-9557-5f95162012a8",
+      "label": "P&L 2011",
+      "value": "60,501.00",
+      "blocked_concept": "ssmt-mpers:CurrentBiologicalAssets"
+    },
+    {
+      "item_id": "0a3f8744-a883-4cf1-a794-a207e4d57c45",
+      "label": "SIN THYE MANAGEMENT SDN BHD",
+      "value": "10,368.00",
+      "blocked_concept": "ssmt-mpers:CurrentBiologicalAssets"
+    }
+  ],
+  "arelle_instance_baseline": {
+    "report": "reports/arelle_validation_baseline_report_9.json",
+    "mode": "instance_baseline",
+    "is_valid": true,
+    "return_code": 0,
+    "taxonomy_resolution_status": "no_taxonomy_resolution_error_detected",
+    "formula_table_diagnostics_remain": false,
+    "command_source": "mode_summaries.instance_baseline.command_used in reports/arelle_validation_baseline_report_9.json",
+    "limitation": "This is structural generated-instance validation only, not full MBRS/FS-MPERS formula/table validation and not submission-ready proof."
+  },
+  "remaining_risks": [
+    "The 34 persisted job 9 rows still have biological-asset template_field_id values in the database; this feature does not mutate rows.",
+    "The generated-instance audit now reports those 34 rows as not represented in XBRL because the generator safety net leaves them for manual review/no automatic concept.",
+    "Twelve non-biological duplicate concept/context/unit groups remain, especially ifrs-smes:TradeAndOtherCurrentReceivables.",
+    "Sign normalization remains deferred; negative generated facts still need a separate sign policy slice."
+  ],
+  "recommended_feature_11k_scope": "Triage and implement the next narrow mapping guardrail for the largest remaining duplicate concept, starting with ifrs-smes:TradeAndOtherCurrentReceivables, or perform a dry-run-only persisted-row correction plan for the 34 blocked biological-asset template_field_id rows if product wants database state aligned with generator behavior."
+}

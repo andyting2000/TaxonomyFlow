@@ -1,0 +1,295 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-06-01T10:49:36.116660+00:00",
+    "script": "scripts/discover_benchmark_cases.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "cases_dir": "benchmark_mbrs_pairs",
+    "metadata_json_required": false
+  },
+  "cases_dir": "benchmark_mbrs_pairs",
+  "case_count": 6,
+  "ready_count": 6,
+  "status_counts": {
+    "ready": 6
+  },
+  "cases": [
+    {
+      "case_id": "case_001",
+      "case_dir": "benchmark_mbrs_pairs/case_001",
+      "pdf_path": "benchmark_mbrs_pairs/case_001/source.pdf",
+      "reference_path": "benchmark_mbrs_pairs/case_001/reference.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "metadata.json",
+          "path": "benchmark_mbrs_pairs/case_001/metadata.json",
+          "extension": ".json",
+          "size_bytes": 236
+        },
+        {
+          "name": "reference.xml",
+          "path": "benchmark_mbrs_pairs/case_001/reference.xml",
+          "extension": ".xml",
+          "size_bytes": 277034
+        },
+        {
+          "name": "source.pdf",
+          "path": "benchmark_mbrs_pairs/case_001/source.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1370321
+        }
+      ],
+      "pdf_files": [
+        "benchmark_mbrs_pairs/case_001/source.pdf"
+      ],
+      "reference_files": [
+        "benchmark_mbrs_pairs/case_001/reference.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": {
+        "source_case_dir": "benchmark_cases/001-bezlife-marketing",
+        "source_case_id": "001-bezlife-marketing",
+        "azure_di_normalized_extraction_status": "pending_local_capture",
+        "reference_xml_external_provider_policy": "local_only"
+      },
+      "metadata_required": false
+    },
+    {
+      "case_id": "case_002",
+      "case_dir": "benchmark_mbrs_pairs/case_002",
+      "pdf_path": "benchmark_mbrs_pairs/case_002/source.pdf",
+      "reference_path": "benchmark_mbrs_pairs/case_002/reference.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "metadata.json",
+          "path": "benchmark_mbrs_pairs/case_002/metadata.json",
+          "extension": ".json",
+          "size_bytes": 222
+        },
+        {
+          "name": "reference.xml",
+          "path": "benchmark_mbrs_pairs/case_002/reference.xml",
+          "extension": ".xml",
+          "size_bytes": 340393
+        },
+        {
+          "name": "source.pdf",
+          "path": "benchmark_mbrs_pairs/case_002/source.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1213990
+        }
+      ],
+      "pdf_files": [
+        "benchmark_mbrs_pairs/case_002/source.pdf"
+      ],
+      "reference_files": [
+        "benchmark_mbrs_pairs/case_002/reference.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": {
+        "source_case_dir": "benchmark_cases/002-fine-batik",
+        "source_case_id": "002-fine-batik",
+        "azure_di_normalized_extraction_status": "pending_local_capture",
+        "reference_xml_external_provider_policy": "local_only"
+      },
+      "metadata_required": false
+    },
+    {
+      "case_id": "case_003",
+      "case_dir": "benchmark_mbrs_pairs/case_003",
+      "pdf_path": "benchmark_mbrs_pairs/case_003/source.pdf",
+      "reference_path": "benchmark_mbrs_pairs/case_003/reference.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "metadata.json",
+          "path": "benchmark_mbrs_pairs/case_003/metadata.json",
+          "extension": ".json",
+          "size_bytes": 222
+        },
+        {
+          "name": "reference.xml",
+          "path": "benchmark_mbrs_pairs/case_003/reference.xml",
+          "extension": ".xml",
+          "size_bytes": 305000
+        },
+        {
+          "name": "source.pdf",
+          "path": "benchmark_mbrs_pairs/case_003/source.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1203107
+        }
+      ],
+      "pdf_files": [
+        "benchmark_mbrs_pairs/case_003/source.pdf"
+      ],
+      "reference_files": [
+        "benchmark_mbrs_pairs/case_003/reference.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": {
+        "source_case_dir": "benchmark_cases/003-info-house",
+        "source_case_id": "003-info-house",
+        "azure_di_normalized_extraction_status": "pending_local_capture",
+        "reference_xml_external_provider_policy": "local_only"
+      },
+      "metadata_required": false
+    },
+    {
+      "case_id": "case_004",
+      "case_dir": "benchmark_mbrs_pairs/case_004",
+      "pdf_path": "benchmark_mbrs_pairs/case_004/source.pdf",
+      "reference_path": "benchmark_mbrs_pairs/case_004/reference.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "metadata.json",
+          "path": "benchmark_mbrs_pairs/case_004/metadata.json",
+          "extension": ".json",
+          "size_bytes": 222
+        },
+        {
+          "name": "reference.xml",
+          "path": "benchmark_mbrs_pairs/case_004/reference.xml",
+          "extension": ".xml",
+          "size_bytes": 260136
+        },
+        {
+          "name": "source.pdf",
+          "path": "benchmark_mbrs_pairs/case_004/source.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1143207
+        }
+      ],
+      "pdf_files": [
+        "benchmark_mbrs_pairs/case_004/source.pdf"
+      ],
+      "reference_files": [
+        "benchmark_mbrs_pairs/case_004/reference.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": {
+        "source_case_dir": "benchmark_cases/004-jconnector",
+        "source_case_id": "004-jconnector",
+        "azure_di_normalized_extraction_status": "pending_local_capture",
+        "reference_xml_external_provider_policy": "local_only"
+      },
+      "metadata_required": false
+    },
+    {
+      "case_id": "case_005",
+      "case_dir": "benchmark_mbrs_pairs/case_005",
+      "pdf_path": "benchmark_mbrs_pairs/case_005/source.pdf",
+      "reference_path": "benchmark_mbrs_pairs/case_005/reference.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "metadata.json",
+          "path": "benchmark_mbrs_pairs/case_005/metadata.json",
+          "extension": ".json",
+          "size_bytes": 228
+        },
+        {
+          "name": "reference.xml",
+          "path": "benchmark_mbrs_pairs/case_005/reference.xml",
+          "extension": ".xml",
+          "size_bytes": 317004
+        },
+        {
+          "name": "source.pdf",
+          "path": "benchmark_mbrs_pairs/case_005/source.pdf",
+          "extension": ".pdf",
+          "size_bytes": 1256065
+        }
+      ],
+      "pdf_files": [
+        "benchmark_mbrs_pairs/case_005/source.pdf"
+      ],
+      "reference_files": [
+        "benchmark_mbrs_pairs/case_005/reference.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": {
+        "source_case_dir": "benchmark_cases/005-Rahsia-Herbal",
+        "source_case_id": "005-Rahsia-Herbal",
+        "azure_di_normalized_extraction_status": "pending_local_capture",
+        "reference_xml_external_provider_policy": "local_only"
+      },
+      "metadata_required": false
+    },
+    {
+      "case_id": "case_006",
+      "case_dir": "benchmark_mbrs_pairs/case_006",
+      "pdf_path": "benchmark_mbrs_pairs/case_006/source.pdf",
+      "reference_path": "benchmark_mbrs_pairs/case_006/reference.xml",
+      "reference_type": "xml",
+      "reference_available": true,
+      "status": "ready",
+      "warnings": [],
+      "file_inventory": [
+        {
+          "name": "metadata.json",
+          "path": "benchmark_mbrs_pairs/case_006/metadata.json",
+          "extension": ".json",
+          "size_bytes": 435
+        },
+        {
+          "name": "reference.xml",
+          "path": "benchmark_mbrs_pairs/case_006/reference.xml",
+          "extension": ".xml",
+          "size_bytes": 406960
+        },
+        {
+          "name": "source.pdf",
+          "path": "benchmark_mbrs_pairs/case_006/source.pdf",
+          "extension": ".pdf",
+          "size_bytes": 527045
+        }
+      ],
+      "pdf_files": [
+        "benchmark_mbrs_pairs/case_006/source.pdf"
+      ],
+      "reference_files": [
+        "benchmark_mbrs_pairs/case_006/reference.xml"
+      ],
+      "unexpected_files": [],
+      "metadata": {
+        "source_case_dir": "benchmark_cases/006-Shield-Plus",
+        "source_case_id": "006-Shield-Plus",
+        "azure_di_case_id": "Shield-Plus",
+        "azure_di_normalized_extraction_status": "available",
+        "azure_di_normalized_extraction_report": "reports/azure_di_normalized_extraction_v2_report_13y.json",
+        "deterministic_mapping_report": "reports/azure_di_mapping_candidates_14d.json",
+        "reference_xml_external_provider_policy": "local_only"
+      },
+      "metadata_required": false
+    }
+  ],
+  "root_file_inventory": [
+    {
+      "name": "README.md",
+      "path": "benchmark_mbrs_pairs/README.md",
+      "extension": ".md",
+      "size_bytes": 880
+    }
+  ],
+  "schema_note": "Each immediate subfolder is one case. Filenames are not standardized; discovery uses file extensions."
+}

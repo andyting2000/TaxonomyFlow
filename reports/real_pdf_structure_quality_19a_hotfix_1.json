@@ -1,0 +1,96 @@
+{
+  "report_id": "real_pdf_structure_quality_19a_hotfix_1",
+  "feature_id": "19A-hotfix-1",
+  "generated_on": "2026-08-07",
+  "status": "PASS",
+  "implementation_status": "PASS",
+  "live_job_65_smoke_status": "NOT_RERUN",
+  "artifact_contract": {
+    "structure_feature_version": "19A-v2",
+    "structure_filename": "structure_19a_v2.json",
+    "legacy_19a_v1_loaded_as_v2": false,
+    "classification_staleness_checks": [
+      "source structure version",
+      "source structure hash",
+      "canonical registry hash"
+    ],
+    "initial_mapping_staleness_checks": [
+      "source structure version",
+      "source structure hash",
+      "source classification version",
+      "source classification hash",
+      "canonical registry hash"
+    ],
+    "retry_invalidation": [
+      "#19A structure artifact",
+      "#19B classification artifact",
+      "#19C initial mapping artifact"
+    ]
+  },
+  "fixture_quality": {
+    "toc_entry_count": 9,
+    "canonical_expected_entry_count": 9,
+    "suspicious_toc_entry_count": 0,
+    "trusted_anchor_count": 9,
+    "rejected_anchor_count": 0,
+    "dominant_offsets": [1],
+    "alignment_confidence": 0.98,
+    "requires_human_review": false,
+    "assigned_evidence": 28,
+    "ambiguous_evidence": 0,
+    "unassigned_evidence": 17,
+    "dropped_evidence": 0,
+    "assignment_rate": 0.622222,
+    "ambiguity_rate": 0.0,
+    "unassigned_rate": 0.377778,
+    "dropped_rate": 0.0,
+    "notes_printed_range": [15, 22],
+    "notes_pdf_range": [16, 23],
+    "notes_evidence_count": 10,
+    "quality_warnings": []
+  },
+  "read_only_smoke_evaluator": {
+    "script": "scripts/report_toc_aware_real_pdf_smoke.py",
+    "command": ".\\.venv\\Scripts\\python.exe -B scripts\\report_toc_aware_real_pdf_smoke.py 65",
+    "writes_files": false,
+    "writes_database": false,
+    "calls_providers": false,
+    "reports": [
+      "TOC and suspicious-entry counts",
+      "trusted/rejected anchors and weighted offsets",
+      "assignment, ambiguity, unassigned, and dropped rates",
+      "Notes range and evidence count",
+      "#19B classification and Notes conservation when current",
+      "#19C section linkage, leakage, abstract selection, and mutation counters when current"
+    ],
+    "current_job_65_result": "The workspace contains only legacy Job 65 19A-v1/19B-v1/19C-v1 artifacts. The v2 loader intentionally rejects them; no live rerun was authorized or performed."
+  },
+  "verification": {
+    "changed_python_compilation": "PASS",
+    "focused_19a_tests_passed": 65,
+    "downstream_19b_19c_tests_passed": 61,
+    "affected_extraction_task_ownership_api_tests_passed": 118,
+    "full_backend_tests_passed": 1420,
+    "full_backend_elapsed_seconds": 51.574,
+    "application_import_routes": 89,
+    "canonical_registry_validation": "PASS",
+    "canonical_registry_templates": 24,
+    "canonical_registry_errors": 0,
+    "canonical_registry_semantic_sha256": "16de7eaeafcdf760c7f4869072a6b0a3925088f6bc260672389b5c502015b7d4",
+    "failures": 0
+  },
+  "scope_safety": {
+    "live_azure_di_calls": 0,
+    "live_llm_calls": 0,
+    "supervisor_calls": 0,
+    "database_mutations": 0,
+    "mapping_suggestion_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "template_field_mutations": 0,
+    "final_mapping_mutations": 0,
+    "frontend_changes": 0,
+    "xbrl_generations": 0,
+    "arelle_runs": 0
+  },
+  "recommended_next_action": "Create a fresh job from the same Job 65 PDF through the normal authenticated upload/Celery Azure-DI workflow with #19A/#19B/#19C deterministic persistence enabled and both live LLM flags disabled, then run the read-only smoke evaluator for the new job ID. This preserves the existing Job 65 rows and avoids the legacy protected reprocess route."
+}

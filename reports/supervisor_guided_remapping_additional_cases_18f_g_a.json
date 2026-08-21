@@ -1,0 +1,115 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-closeout",
+  "generated_at": "2026-07-23T08:50:21.5670815+00:00",
+  "phase": "additional_case_selection",
+  "status": "waiting_for_manual_ui_actions",
+  "selected_case_count": 3,
+  "provider_calls_by_selection": 0,
+  "cases": [
+    {
+      "case_id": "18f-g-a-additional-01",
+      "eligibility_likelihood": "high",
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_id": 59,
+      "page_number": 23,
+      "row_id": "17436c9e-aa0f-4bdb-a586-e2d8b96985ea",
+      "suggestion_id": "9f5b310d-4b6f-4b4e-82fe-2d488554f769",
+      "row_label": "Tax expenses for the year",
+      "statement_family": "Statement of Cash Flows",
+      "initial_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "initial_concept_label": "Tax expense",
+      "initial_confidence": 0.85,
+      "initial_reason": "The label directly corresponds to income tax expense and is near Profit / (Loss) before taxation.",
+      "alternatives": [
+        "ifrs-smes:ProfitLoss",
+        "ifrs-smes:OtherExpenseByFunction",
+        "ifrs-smes:OtherExpenseByNature",
+        "ifrs-smes:AdministrativeExpense"
+      ],
+      "why_likely_eligible": "This repeats the proven statement-family mismatch from the completed INFO House tax case: the row is cash flow, while every bounded candidate is profit or loss. A valid review should require human review or request a better candidate.",
+      "current_review_count": 0,
+      "current_revision_count": 0,
+      "confirmed_tag_id": null,
+      "initial_snapshot_sha256": "3f4de5add5410279cbddb214cceecad51f01ab8ccbb6c15596bebb225634b85a",
+      "manual_actions": [
+        "Run Supervisor review",
+        "If correction-eligible, click Re-run mapping with Supervisor feedback exactly once"
+      ]
+    },
+    {
+      "case_id": "18f-g-a-additional-02",
+      "eligibility_likelihood": "high",
+      "filing_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "job_id": 61,
+      "page_number": 16,
+      "row_id": "1d8fdcf9-ff8d-40cb-8d7f-5a2585fa4060",
+      "suggestion_id": "7ad8e410-6198-462b-8424-21d17d0ed4c3",
+      "row_label": "Cash flows from investing activities",
+      "statement_family": "Statement of Cash Flows (Direct Method)",
+      "initial_qname": "ifrs-smes:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities",
+      "initial_concept_label": "Other cash inflows (outflows) from investing activities",
+      "initial_confidence": 0.6,
+      "initial_reason": "The selected other-inflows/outflows concept was treated as the most specific direct-method candidate despite the broader row label.",
+      "alternatives": [
+        "ifrs-smes:CashFlowsFromUsedInInvestingActivities"
+      ],
+      "why_likely_eligible": "This repeats the proven broad-substitute pattern from Fine Batik. The row names the whole investing-activities cash-flow line, and the bounded candidates include the closer net investing concept.",
+      "current_review_count": 0,
+      "current_revision_count": 0,
+      "confirmed_tag_id": null,
+      "initial_snapshot_sha256": "a99593e9eff32f2578c1b26847b49b95f585ece7dcd6a31e3fbb5d6486bea6cf",
+      "manual_actions": [
+        "Run Supervisor review",
+        "If correction-eligible, click Re-run mapping with Supervisor feedback exactly once"
+      ]
+    },
+    {
+      "case_id": "18f-g-a-additional-03",
+      "eligibility_likelihood": "medium",
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_id": 59,
+      "page_number": 13,
+      "row_id": "c442f08d-11d1-4e91-9a98-7560bb552d7f",
+      "suggestion_id": "681f1ed0-721f-4a26-8a67-ef275cb5811a",
+      "row_label": "TOTAL EQUITY AND LIABILITIES DRAFT WIE",
+      "statement_family": "Statement of Financial Position",
+      "initial_qname": "ifrs-smes:EquityAndLiabilities",
+      "initial_concept_label": "Equity and liabilities",
+      "initial_confidence": 0.85,
+      "initial_reason": "The model treated the core label as a semantic match and ignored the trailing DRAFT WIE text.",
+      "alternatives": [
+        "ifrs-smes:EquityAttributableToOwnersOfParent",
+        "ssmt-mpers:OtherComponentsOfEquity"
+      ],
+      "why_likely_eligible": "The trailing OCR/source text and unexplained prior value create an ambiguous-label/source-conflict case. A cautious review should preserve human review even if the core total concept is retained.",
+      "current_review_count": 0,
+      "current_revision_count": 0,
+      "confirmed_tag_id": null,
+      "initial_snapshot_sha256": "d2e2d85d26d0bcbcb212dbe7b8d9f9ab433add23afab123d57c8e957d4d43d0b",
+      "manual_actions": [
+        "Run Supervisor review",
+        "If correction-eligible, click Re-run mapping with Supervisor feedback exactly once"
+      ],
+      "selection_caveat": "This case is less certain than the first two. If the Supervisor agrees and no correction action appears, another non-exact candidate will be required."
+    }
+  ],
+  "manual_sequence": [
+    "Process only the three named cards; do not use Run Supervisor reviews for all.",
+    "Click Run Supervisor review. The single-card request now starts without a confirmation dialog.",
+    "Wait for the persisted review.",
+    "When the review is correction-eligible, click Re-run mapping with Supervisor feedback exactly once.",
+    "Wait for Correction attempt 1 completed.",
+    "Do not Accept, Reject, or attempt a second correction."
+  ],
+  "safety": {
+    "automatic_supervisor_calls": 0,
+    "automatic_mapper_calls": 0,
+    "database_mutations_by_selection": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "automatic_accepts": 0,
+    "automatic_rejects": 0,
+    "xbrl_generated": false,
+    "arelle_run": false
+  }
+}

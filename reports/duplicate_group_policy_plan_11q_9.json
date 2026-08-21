@@ -1,0 +1,1123 @@
+{
+  "aggregation_implemented": false,
+  "current_job_9_state": {
+    "duplicate_concept_context_unit_groups": 12,
+    "expected_extracted_facts": 32,
+    "generated_facts": 39,
+    "identical_duplicate_fact_groups": 0,
+    "missing_context_refs": [],
+    "missing_unit_refs": [],
+    "represented_expected_extracted_facts": 32,
+    "suspicious_signed_values": 12
+  },
+  "database_modified": false,
+  "dimensions_implemented": false,
+  "duplicate_groups": [
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ifrs-smes:Assets",
+      "concept_label": "Assets",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 3,
+      "extracted_labels": [
+        "ASSETS",
+        "NET CURRENT ASSETS",
+        "Assets"
+      ],
+      "extracted_values": [
+        "46,410.85",
+        "-47,432.31",
+        "-9,149,051.14"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "46410.85",
+        "-47432.31",
+        "-9149051.14"
+      ],
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mapping_too_broad_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "f7a1c8d2-8f9a-4c40-8cf6-fc9184445de8",
+        "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+        "2f1dc68b-3c71-436d-89f3-70d40a88b5c0"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "ASSETS",
+          "extracted_value": "46,410.85",
+          "generated_value": "46410.85",
+          "item_id": "f7a1c8d2-8f9a-4c40-8cf6-fc9184445de8",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "NET CURRENT ASSETS",
+          "extracted_value": "-47,432.31",
+          "generated_value": "-47432.31",
+          "item_id": "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Assets",
+          "extracted_value": "-9,149,051.14",
+          "generated_value": "-9149051.14",
+          "item_id": "2f1dc68b-3c71-436d-89f3-70d40a88b5c0",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Assets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:Assets"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ifrs-smes:CurrentAssets",
+      "concept_label": "Current assets",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 3,
+      "extracted_labels": [
+        "CURRENT ASSETS",
+        "NET CURRENT ASSETS",
+        "Current assets"
+      ],
+      "extracted_values": [
+        "39,092.79",
+        "-47,432.31",
+        "22,866.90"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "39092.79",
+        "-47432.31",
+        "22866.90"
+      ],
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mapping_too_broad_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "094e4c2b-ad0d-4063-984e-f2380aeb5c01",
+        "e3e645b7-d58a-4143-8cff-817221091f89",
+        "7b962f88-1de3-48cd-9c6f-66e160a54cd1"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CURRENT ASSETS",
+          "extracted_value": "39,092.79",
+          "generated_value": "39092.79",
+          "item_id": "094e4c2b-ad0d-4063-984e-f2380aeb5c01",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "NET CURRENT ASSETS",
+          "extracted_value": "-47,432.31",
+          "generated_value": "-47432.31",
+          "item_id": "e3e645b7-d58a-4143-8cff-817221091f89",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Current assets",
+          "extracted_value": "22,866.90",
+          "generated_value": "22866.90",
+          "item_id": "7b962f88-1de3-48cd-9c6f-66e160a54cd1",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentAssets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:CurrentAssets"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ifrs-smes:NoncurrentAssets",
+      "concept_label": "Non-current assets",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 3,
+      "extracted_labels": [
+        "FIXED ASSETS",
+        "CURRENT LIABILITIES",
+        "Non-current assets"
+      ],
+      "extracted_values": [
+        "7,318.06",
+        "495,129.04",
+        "-9,172,918.04"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "7318.06",
+        "495129.04",
+        "-9172918.04"
+      ],
+      "page_numbers": [
+        1,
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mixed_or_unclear_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "a8859c55-5ecb-408d-a096-2295670c8ab4",
+        "82dbeb6c-0ac3-446c-b556-67373528ae9d",
+        "b263ac7f-654b-4081-8c01-d8057376f021"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "FIXED ASSETS",
+          "extracted_value": "7,318.06",
+          "generated_value": "7318.06",
+          "item_id": "a8859c55-5ecb-408d-a096-2295670c8ab4",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CURRENT LIABILITIES",
+          "extracted_value": "495,129.04",
+          "generated_value": "495129.04",
+          "item_id": "82dbeb6c-0ac3-446c-b556-67373528ae9d",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Non-current assets",
+          "extracted_value": "-9,172,918.04",
+          "generated_value": "-9172918.04",
+          "item_id": "b263ac7f-654b-4081-8c01-d8057376f021",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:NoncurrentAssets",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:NoncurrentAssets"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_detail_rows_need_aggregation_policy",
+      "classification_reason": "Rows look like receivable/debtor detail lines sharing one summary concept/context/unit.",
+      "concept": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "concept_label": "Trade and other current receivables",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 3,
+      "extracted_labels": [
+        "OTHER DEBTOR - IH(I.T)",
+        "OTHER DEBTOR - RH",
+        "OTHER DEBTOR - AS"
+      ],
+      "extracted_values": [
+        "48,552.00",
+        "2,700.00",
+        "133,279.62"
+      ],
+      "future_handling_reason": "Receivable detail rows should be summed or otherwise handled by an explicit future policy before generation.",
+      "generated_values": [
+        "133279.62",
+        "2700.00",
+        "48552.00"
+      ],
+      "page_numbers": [
+        1,
+        1,
+        1
+      ],
+      "recommended_future_handling": "aggregate_before_generation_later",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "detail_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "102e52f6-128a-4df3-a0e3-ecce84443513",
+        "84138f4e-8313-43ef-8031-dc84f5e48048",
+        "d975d208-bc7f-40d1-9701-b167147cdfa3"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "OTHER DEBTOR - IH(I.T)",
+          "extracted_value": "48,552.00",
+          "generated_value": "48552.00",
+          "item_id": "102e52f6-128a-4df3-a0e3-ecce84443513",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "OTHER DEBTOR - RH",
+          "extracted_value": "2,700.00",
+          "generated_value": "2700.00",
+          "item_id": "84138f4e-8313-43ef-8031-dc84f5e48048",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "OTHER DEBTOR - AS",
+          "extracted_value": "133,279.62",
+          "generated_value": "133279.62",
+          "item_id": "d975d208-bc7f-40d1-9701-b167147cdfa3",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:TradeAndOtherCurrentReceivables"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_summary_duplicate_needs_dedup_policy",
+      "classification_reason": "Multiple summary/subtotal-looking rows share the same concept/context/unit.",
+      "concept": "ifrs-smes:CurrentLiabilities",
+      "concept_label": "Current liabilities",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CURRENT LIABILITIES",
+        "Current liabilities"
+      ],
+      "extracted_values": [
+        "495,129.04",
+        "500.20"
+      ],
+      "future_handling_reason": "Future generation should choose one authoritative summary fact per concept/context/unit or require manual confirmation.",
+      "generated_values": [
+        "495129.04",
+        "500.20"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "deduplicate_same_context_summary_later",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "summary_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "7f31a139-3205-451f-9716-de1d06ac9c45",
+        "14a9c6f7-da65-4821-b112-eb2e0b54db92"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CURRENT LIABILITIES",
+          "extracted_value": "495,129.04",
+          "generated_value": "495129.04",
+          "item_id": "7f31a139-3205-451f-9716-de1d06ac9c45",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentLiabilities",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Current liabilities",
+          "extracted_value": "500.20",
+          "generated_value": "500.20",
+          "item_id": "14a9c6f7-da65-4821-b112-eb2e0b54db92",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:CurrentLiabilities",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:CurrentLiabilities"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ifrs-smes:Equity",
+      "concept_label": "Equity at beginning of period",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "FINANCED BY",
+        "Equity at beginning of period"
+      ],
+      "extracted_values": [
+        "-6,215,913.41",
+        "160,538.20"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "-6215913.41",
+        "160538.20"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mapping_too_broad_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1",
+        "b54ef220-9804-416d-905e-9e23b6d749bd"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "FINANCED BY",
+          "extracted_value": "-6,215,913.41",
+          "generated_value": "-6215913.41",
+          "item_id": "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Equity",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Equity at beginning of period",
+          "extracted_value": "160,538.20",
+          "generated_value": "160538.20",
+          "item_id": "b54ef220-9804-416d-905e-9e23b6d749bd",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Equity",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:Equity"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ifrs-smes:EquityAndLiabilities",
+      "concept_label": "Equity and liabilities",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "FINANCED BY",
+        "Equity and liabilities"
+      ],
+      "extracted_values": [
+        "-6,215,913.41",
+        "-9,149,051.14"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "-6215913.41",
+        "-9149051.14"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mapping_too_broad_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+        "b2b4e95e-243b-4607-90c3-1166537094cf"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "FINANCED BY",
+          "extracted_value": "-6,215,913.41",
+          "generated_value": "-6215913.41",
+          "item_id": "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Equity and liabilities",
+          "extracted_value": "-9,149,051.14",
+          "generated_value": "-9149051.14",
+          "item_id": "b2b4e95e-243b-4607-90c3-1166537094cf",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAndLiabilities",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:EquityAndLiabilities"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ifrs-smes:EquityAttributableToOwnersOfParent",
+      "concept_label": "Total equity attributable to owners",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CAPITAL",
+        "Total equity attributable to owners"
+      ],
+      "extracted_values": [
+        "3,939,661.59",
+        "160,538.20"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "3939661.59",
+        "160538.20"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mixed_or_unclear_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "ebd21df0-75d4-4615-86ca-91aa2150fc1f",
+        "23356a6e-33b5-4658-a8e7-2cf77fa0cde2"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CAPITAL",
+          "extracted_value": "3,939,661.59",
+          "generated_value": "3939661.59",
+          "item_id": "ebd21df0-75d4-4615-86ca-91aa2150fc1f",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Total equity attributable to owners",
+          "extracted_value": "160,538.20",
+          "generated_value": "160538.20",
+          "item_id": "23356a6e-33b5-4658-a8e7-2cf77fa0cde2",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:EquityAttributableToOwnersOfParent",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:EquityAttributableToOwnersOfParent"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_summary_duplicate_needs_dedup_policy",
+      "classification_reason": "Multiple summary/subtotal-looking rows share the same concept/context/unit.",
+      "concept": "ifrs-smes:Liabilities",
+      "concept_label": "Liabilities",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CURRENT LIABILITIES",
+        "Liabilities"
+      ],
+      "extracted_values": [
+        "495,129.04",
+        "-200,152.25"
+      ],
+      "future_handling_reason": "Future generation should choose one authoritative summary fact per concept/context/unit or require manual confirmation.",
+      "generated_values": [
+        "495129.04",
+        "-200152.25"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "deduplicate_same_context_summary_later",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "summary_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "4141ce81-811e-4365-95e9-c5616cc7d892",
+        "f2608d33-2490-45d4-9617-73c8dd487c54"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CURRENT LIABILITIES",
+          "extracted_value": "495,129.04",
+          "generated_value": "495129.04",
+          "item_id": "4141ce81-811e-4365-95e9-c5616cc7d892",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Liabilities",
+          "extracted_value": "-200,152.25",
+          "generated_value": "-200152.25",
+          "item_id": "f2608d33-2490-45d4-9617-73c8dd487c54",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:Liabilities",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:Liabilities"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_summary_duplicate_needs_dedup_policy",
+      "classification_reason": "Multiple summary/subtotal-looking rows share the same concept/context/unit.",
+      "concept": "ifrs-smes:RetainedEarnings",
+      "concept_label": "Retained earnings at beginning of period",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+        "Retained earnings at beginning of period"
+      ],
+      "extracted_values": [
+        "-10,155,575.00",
+        "160,538.20"
+      ],
+      "future_handling_reason": "Future generation should choose one authoritative summary fact per concept/context/unit or require manual confirmation.",
+      "generated_values": [
+        "-10155575.00",
+        "160538.20"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "deduplicate_same_context_summary_later",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "summary_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+        "39fd347d-a660-45ae-b5eb-fa9047326ec6"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "TOTAL PROFIT & LOSS (PREVIOUS YEAR)",
+          "extracted_value": "-10,155,575.00",
+          "generated_value": "-10155575.00",
+          "item_id": "adeb3b8d-2cb8-42ec-97a5-ceadf9d6fb12",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Retained earnings at beginning of period",
+          "extracted_value": "160,538.20",
+          "generated_value": "160538.20",
+          "item_id": "39fd347d-a660-45ae-b5eb-fa9047326ec6",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ifrs-smes:RetainedEarnings",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ifrs-smes:RetainedEarnings"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ssmt-mpers:OtherComponentsOfEquity",
+      "concept_label": "Total equity - other components",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CAPITAL",
+        "Total equity - other components"
+      ],
+      "extracted_values": [
+        "3,939,661.59",
+        "-40,114.25"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "3939661.59",
+        "-40114.25"
+      ],
+      "page_numbers": [
+        2,
+        3
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mixed_or_unclear_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "a1959798-861f-4962-86cd-8530e9511ff9",
+        "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CAPITAL",
+          "extracted_value": "3,939,661.59",
+          "generated_value": "3939661.59",
+          "item_id": "a1959798-861f-4962-86cd-8530e9511ff9",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:OtherComponentsOfEquity",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "Total equity - other components",
+          "extracted_value": "-40,114.25",
+          "generated_value": "-40114.25",
+          "item_id": "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2",
+          "page_id": "4061d420-696e-4a17-b58f-cae63e05209c",
+          "page_number": 3,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt-mpers:OtherComponentsOfEquity",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ssmt-mpers:OtherComponentsOfEquity"
+      ],
+      "unitRef": "MYR"
+    },
+    {
+      "any_source_row_has_null_template_field_id_after_11l_11p": false,
+      "classification": "likely_mapping_too_broad",
+      "classification_reason": "Different labels and values collapse into one broad concept/context/unit.",
+      "concept": "ssmt:CashAndBankBalances",
+      "concept_label": "Total cash and cash equivalents",
+      "confirmed_tag_ids": [],
+      "contextRef": "asof_20241231_SeparateMember",
+      "duplicate_fact_count": 2,
+      "extracted_labels": [
+        "CASH AT BANK",
+        "NET CURRENT ASSETS"
+      ],
+      "extracted_values": [
+        "33,812.79",
+        "-47,432.31"
+      ],
+      "future_handling_reason": "This concept should require stronger evidence or manual confirmation before repeated same-context facts are trusted.",
+      "generated_values": [
+        "33812.79",
+        "-47432.31"
+      ],
+      "page_numbers": [
+        1,
+        2
+      ],
+      "recommended_future_handling": "require_manual_confirmation",
+      "replacement_concept_recommended": false,
+      "row_shape_assessment": "mapping_too_broad_rows",
+      "sign_policy_deferred": true,
+      "source_item_ids": [
+        "332afce8-257e-41f8-b2b6-4e0795574546",
+        "898eb2da-6373-4ffd-b884-0b019ffd2c73"
+      ],
+      "source_rows": [
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "CASH AT BANK",
+          "extracted_value": "33,812.79",
+          "generated_value": "33812.79",
+          "item_id": "332afce8-257e-41f8-b2b6-4e0795574546",
+          "page_id": "5c9c32d7-7282-4e41-82b2-ea10cf893cea",
+          "page_number": 1,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt:CashAndBankBalances",
+          "unitRef": "MYR",
+          "value_year": 2025
+        },
+        {
+          "confirmed_tag_id": null,
+          "contextRef": "asof_20241231_SeparateMember",
+          "extracted_label": "NET CURRENT ASSETS",
+          "extracted_value": "-47,432.31",
+          "generated_value": "-47432.31",
+          "item_id": "898eb2da-6373-4ffd-b884-0b019ffd2c73",
+          "page_id": "f9e5f7e9-6837-4e0e-affb-f95dd475734a",
+          "page_number": 2,
+          "source_value_column": "extracted_value",
+          "statement_type": "Statement of Financial Position",
+          "template_field_id": "ssmt:CashAndBankBalances",
+          "unitRef": "MYR",
+          "value_year": 2025
+        }
+      ],
+      "statement_types": [
+        "Statement of Financial Position"
+      ],
+      "survived_after_biological_and_receivables_guardrails": true,
+      "template_field_ids": [
+        "ssmt:CashAndBankBalances"
+      ],
+      "unitRef": "MYR"
+    }
+  ],
+  "feature": "11Q",
+  "full_mbrs_validation_claimed": false,
+  "generated_xbrl_modified": false,
+  "job_id": 9,
+  "mapping_behavior_changed": false,
+  "mode": "read_only_planning",
+  "planning_answers": {
+    "rows_manual_review_only_until_policy": [
+      "094e4c2b-ad0d-4063-984e-f2380aeb5c01",
+      "23356a6e-33b5-4658-a8e7-2cf77fa0cde2",
+      "2f1dc68b-3c71-436d-89f3-70d40a88b5c0",
+      "332afce8-257e-41f8-b2b6-4e0795574546",
+      "7b962f88-1de3-48cd-9c6f-66e160a54cd1",
+      "82dbeb6c-0ac3-446c-b556-67373528ae9d",
+      "898eb2da-6373-4ffd-b884-0b019ffd2c73",
+      "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2",
+      "a1959798-861f-4962-86cd-8530e9511ff9",
+      "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+      "a8859c55-5ecb-408d-a096-2295670c8ab4",
+      "b263ac7f-654b-4081-8c01-d8057376f021",
+      "b2b4e95e-243b-4607-90c3-1166537094cf",
+      "b54ef220-9804-416d-905e-9e23b6d749bd",
+      "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+      "e3e645b7-d58a-4143-8cff-817221091f89",
+      "ebd21df0-75d4-4615-86ca-91aa2150fc1f",
+      "f7a1c8d2-8f9a-4c40-8cf6-fc9184445de8",
+      "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1"
+    ],
+    "sign_policy_should_remain_deferred_after_11q": true,
+    "which_concepts_are_future_guardrail_candidates": [
+      "ifrs-smes:Assets",
+      "ifrs-smes:CurrentAssets",
+      "ifrs-smes:Equity",
+      "ifrs-smes:EquityAndLiabilities",
+      "ifrs-smes:EquityAttributableToOwnersOfParent",
+      "ifrs-smes:NoncurrentAssets",
+      "ssmt-mpers:OtherComponentsOfEquity",
+      "ssmt:CashAndBankBalances"
+    ],
+    "which_duplicate_groups_are_true_mapping_quality_problems": [
+      "ifrs-smes:Assets",
+      "ifrs-smes:CurrentAssets",
+      "ifrs-smes:NoncurrentAssets",
+      "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "ifrs-smes:CurrentLiabilities",
+      "ifrs-smes:Equity",
+      "ifrs-smes:EquityAndLiabilities",
+      "ifrs-smes:EquityAttributableToOwnersOfParent",
+      "ifrs-smes:Liabilities",
+      "ifrs-smes:RetainedEarnings",
+      "ssmt-mpers:OtherComponentsOfEquity",
+      "ssmt:CashAndBankBalances"
+    ],
+    "which_duplicate_groups_may_be_acceptable_multi_fact_outputs": [],
+    "which_groups_are_detail_schedules_requiring_aggregation": [
+      "ifrs-smes:TradeAndOtherCurrentReceivables"
+    ],
+    "which_groups_may_require_dimensions": []
+  },
+  "policy_constraints": {
+    "do_not_aggregate_in_11q": true,
+    "do_not_change_generator_output": true,
+    "do_not_create_dimensions_in_11q": true,
+    "do_not_invent_replacement_concepts": true,
+    "do_not_mutate_persisted_rows": true,
+    "do_not_normalize_signs": true,
+    "future_aggregation_or_dimension_work_requires_explicit_slice": true
+  },
+  "read_only": true,
+  "replacement_concepts_assigned": false,
+  "sign_normalization_implemented": false,
+  "source_reports": {
+    "generated_instance_audit_report": "reports\\generated_instance_audit_report_9.json",
+    "generated_instance_quality_triage_report": "reports\\generated_instance_quality_triage_report_9.json",
+    "triage_report_loaded": true
+  },
+  "summary": {
+    "classification_summary": {
+      "likely_detail_rows_need_aggregation_policy": 1,
+      "likely_mapping_too_broad": 8,
+      "likely_summary_duplicate_needs_dedup_policy": 3
+    },
+    "duplicate_group_count": 12,
+    "future_concept_specific_guardrail_candidates": [
+      "ifrs-smes:Assets",
+      "ifrs-smes:CurrentAssets",
+      "ifrs-smes:Equity",
+      "ifrs-smes:EquityAndLiabilities",
+      "ifrs-smes:EquityAttributableToOwnersOfParent",
+      "ifrs-smes:NoncurrentAssets",
+      "ssmt-mpers:OtherComponentsOfEquity",
+      "ssmt:CashAndBankBalances"
+    ],
+    "immediate_code_change_justified": false,
+    "manual_review_only_source_item_ids_until_policy": [
+      "094e4c2b-ad0d-4063-984e-f2380aeb5c01",
+      "23356a6e-33b5-4658-a8e7-2cf77fa0cde2",
+      "2f1dc68b-3c71-436d-89f3-70d40a88b5c0",
+      "332afce8-257e-41f8-b2b6-4e0795574546",
+      "7b962f88-1de3-48cd-9c6f-66e160a54cd1",
+      "82dbeb6c-0ac3-446c-b556-67373528ae9d",
+      "898eb2da-6373-4ffd-b884-0b019ffd2c73",
+      "9bcaf2e9-3b9d-41b4-b67e-d4828756dff2",
+      "a1959798-861f-4962-86cd-8530e9511ff9",
+      "a7e779e0-1acb-4d8c-8c24-4c597c5edb57",
+      "a8859c55-5ecb-408d-a096-2295670c8ab4",
+      "b263ac7f-654b-4081-8c01-d8057376f021",
+      "b2b4e95e-243b-4607-90c3-1166537094cf",
+      "b54ef220-9804-416d-905e-9e23b6d749bd",
+      "e1d8d680-b73e-43b5-aca6-9b9c66dc2e57",
+      "e3e645b7-d58a-4143-8cff-817221091f89",
+      "ebd21df0-75d4-4615-86ca-91aa2150fc1f",
+      "f7a1c8d2-8f9a-4c40-8cf6-fc9184445de8",
+      "f85cb5cc-72bc-4069-b728-a0ac87bc3ff1"
+    ],
+    "possibly_acceptable_multi_fact_group_count": 0,
+    "recommended_11r_scope": "Choose one narrow next implementation slice from this report: either a summary duplicate de-duplication policy for repeated financial-position totals, or a dedicated aggregation/dimension policy design for remaining detail schedules. Do not implement sign normalization in that slice.",
+    "recommended_future_handling_summary": {
+      "aggregate_before_generation_later": 1,
+      "deduplicate_same_context_summary_later": 3,
+      "require_manual_confirmation": 8
+    },
+    "sign_policy_remains_deferred": true,
+    "true_mapping_quality_problem_count": 12
+  },
+  "xbrl_path": "uploads\\xbrl\\SSM_FS-MPERS_10E-TEST_20241231.xbrl"
+}

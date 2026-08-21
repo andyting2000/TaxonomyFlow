@@ -1,0 +1,478 @@
+{
+  "run_metadata": {
+    "feature": "17B-hotfix-1",
+    "generated_at": "2026-06-07T08:28:54Z",
+    "report_only": true,
+    "source_reports": [
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\golden_mbrs_fewshot_qwen_accuracy_17b.json",
+      "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\golden_mbrs_fewshot_vs_baseline_17b.json"
+    ],
+    "source_report_snapshot_note": "This report embeds the analyzed rows and metrics as a local snapshot; source report paths can be refreshed by later evaluator commands.",
+    "database_mutated": false,
+    "production_filing_jobs_mutated": false,
+    "production_extraction_changed": false,
+    "qwen_production_prompt_changed": false,
+    "react_ui_changed": false,
+    "admin_user_management_changed": false,
+    "auto_apply_mappings": false,
+    "confirmed_tag_id_set": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "external_llm_called": false,
+    "auditor_xml_sent_to_external_provider": false,
+    "parsed_xml_facts_sent_to_external_provider": false,
+    "target_gold_answers_sent_to_external_provider": false,
+    "target_correct_qnames_sent_to_external_provider": false,
+    "target_correct_template_fields_sent_to_external_provider": false,
+    "evaluation_labels_sent_to_external_provider": false
+  },
+  "summary": {
+    "wrong_concept_rows": 3,
+    "candidate_missing_wrong_rows": 3,
+    "broad_substitution_wrong_rows": 3,
+    "high_confidence_wrong_rows": 3,
+    "root_causes": [
+      {
+        "cause": "candidate_missing_broad_substitution",
+        "count": 3
+      }
+    ]
+  },
+  "wrong_concept_rows": [
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:65:65",
+      "extracted_label": "Other receivables",
+      "statement_type": "Notes to the Financial Statements",
+      "correct_concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+      "selected_wrong_concept": "ssmt-mpers:OtherCurrentReceivables",
+      "confidence": 0.97,
+      "confidence_tier": "high",
+      "reason": "The extracted label 'Other receivables' matches closely with the candidate concept label 'Total other current receivables' via exact alias match scoring 0.97. The statement type and context align with sub-classification of current assets.",
+      "correct_concept_in_candidates": false,
+      "selected_broad_summary_concept": true,
+      "likely_error_source": "candidate_missing_broad_substitution",
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentReceivables",
+          "label": "Trade and other current receivables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentReceivables",
+          "label": "Total other current receivables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherReceivables",
+          "label": "Total other receivables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherReceivables",
+          "label": "Trade and other receivables",
+          "deterministic_score": 0.89,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentReceivablesDueFromAssociates",
+          "label": "Other receivables due from associates",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentReceivablesDueFromSubsidiaries",
+          "label": "Other receivables due from subsidiaries",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherNoncurrentReceivablesDueFromAssociates",
+          "label": "Other receivables due from associates",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherNoncurrentReceivablesDueFromSubsidiaries",
+          "label": "Other receivables due from subsidiaries",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        }
+      ],
+      "few_shot_examples": [
+        {
+          "source_case_id": "case_003",
+          "extracted_label": "Other receivables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "retrieval_score": 0.89
+        },
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Decrease in trade and other receivables",
+          "correct_template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "retrieval_score": 0.5214
+        },
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Other payables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "retrieval_score": 0.5206
+        },
+        {
+          "source_case_id": "case_003",
+          "extracted_label": "(Decrease)/ Increase in trade and other receivables",
+          "correct_template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+          "retrieval_score": 0.4811
+        },
+        {
+          "source_case_id": "case_004",
+          "extracted_label": "TOTAL OPERATING EXPENSES",
+          "correct_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "retrieval_score": 0.3907
+        }
+      ],
+      "weak_or_misleading_examples": [
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Other payables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "retrieval_score": 0.5206,
+          "issue": "concept_family_mismatch"
+        },
+        {
+          "source_case_id": "case_004",
+          "extracted_label": "TOTAL OPERATING EXPENSES",
+          "correct_template_field_id": "ifrs-smes:OtherExpenseByFunction",
+          "retrieval_score": 0.3907,
+          "issue": "below_new_retrieval_threshold"
+        }
+      ],
+      "recommended_guardrails": [
+        "Return null when a close specific training-case concept is absent from candidate_concepts instead of selecting a broader substitute.",
+        "Return null if candidate concepts are close but not an exact semantic fit for the target label.",
+        "Do not overgeneralize from few-shot examples; they are guidance, not answer keys for the target row.",
+        "Prefer null when statement type and concept family do not align.",
+        "High confidence requires strong label meaning and statement-context evidence, not value pattern alone.",
+        "Avoid broad summary concepts when the row label is a more specific receivable/payable/accrual/nontrade item.",
+        "A close training example maps to a concept that is absent from candidate_concepts; do not select a broader substitute only by analogy.",
+        "ifrs-smes:TradeAndOtherCurrentReceivables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording)."
+      ],
+      "guardrail_context_after_hotfix": {
+        "target_label_family": "receivables",
+        "selection_guardrails": [
+          "Return null if candidate concepts are close but not an exact semantic fit for the target label.",
+          "Do not overgeneralize from few-shot examples; they are guidance, not answer keys for the target row.",
+          "Prefer null when statement type and concept family do not align.",
+          "High confidence requires strong label meaning and statement-context evidence, not value pattern alone.",
+          "Avoid broad summary concepts when the row label is a more specific receivable/payable/accrual/nontrade item."
+        ],
+        "candidate_warnings": [
+          "A close training example maps to a concept that is absent from candidate_concepts; do not select a broader substitute only by analogy.",
+          "ifrs-smes:TradeAndOtherCurrentReceivables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording).",
+          "ssmt-mpers:OtherCurrentReceivables: broad-substitution risk (target label lacks current-period classification wording; candidate is a broader total/summary concept).",
+          "ssmt-mpers:OtherReceivables: broad-substitution risk (candidate is a broader total/summary concept).",
+          "ifrs-smes:TradeAndOtherReceivables: broad-substitution risk (target label lacks trade evidence).",
+          "ssmt-mpers:OtherCurrentReceivablesDueFromAssociates: broad-substitution risk (target label lacks current-period classification wording)."
+        ],
+        "absent_similar_example_concepts": [
+          {
+            "example_label": "Other receivables",
+            "example_concept": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+            "retrieval_score": 0.89
+          }
+        ]
+      }
+    },
+    {
+      "source_case_id": "case_005",
+      "extracted_row_id": "case_005:candidate:72:72",
+      "extracted_label": "Other payables",
+      "statement_type": "Notes to the Financial Statements",
+      "correct_concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+      "selected_wrong_concept": "ssmt-mpers:OtherPayables",
+      "confidence": 0.97,
+      "confidence_tier": "high",
+      "reason": "The extracted label 'Other payables' matches exactly with the alias of the candidate concept 'Total other payables' (template_field_id: ssmt-mpers:OtherPayables) under the ssmt-mpers namespace, and the statement type aligns with sub-classification by order of liquidity.",
+      "correct_concept_in_candidates": false,
+      "selected_broad_summary_concept": true,
+      "likely_error_source": "candidate_missing_broad_substitution",
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentPayables",
+          "label": "Trade and other current payables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentPayables",
+          "label": "Total other current payables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherPayables",
+          "label": "Total other payables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherPayables",
+          "label": "Trade and other payables",
+          "deterministic_score": 0.89,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherPayablesToTradeSuppliers",
+          "label": "Total trade payables",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentPayablesDueToAssociates",
+          "label": "Other payables due to associates",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentPayablesDueToSubsidiaries",
+          "label": "Other payables due to subsidiaries",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherNoncurrentTradePayablesDueToAssociates",
+          "label": "Other payables due to associates",
+          "deterministic_score": 0.87,
+          "deterministic_method": "phrase_containment_match"
+        }
+      ],
+      "few_shot_examples": [
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Other payables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "retrieval_score": 0.89
+        },
+        {
+          "source_case_id": "case_003",
+          "extracted_label": "Other receivables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "retrieval_score": 0.5206
+        },
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Increase in other payables and accruals",
+          "correct_template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "retrieval_score": 0.4836
+        },
+        {
+          "source_case_id": "case_004",
+          "extracted_label": "Increase / (Decrease) in trade and other payables",
+          "correct_template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "retrieval_score": 0.4578
+        },
+        {
+          "source_case_id": "case_004",
+          "extracted_label": "Directors' fees",
+          "correct_template_field_id": "ssmt-mpers:DirectorsFees",
+          "retrieval_score": 0.4371
+        }
+      ],
+      "weak_or_misleading_examples": [
+        {
+          "source_case_id": "case_003",
+          "extracted_label": "Other receivables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+          "retrieval_score": 0.5206,
+          "issue": "concept_family_mismatch"
+        },
+        {
+          "source_case_id": "case_004",
+          "extracted_label": "Directors' fees",
+          "correct_template_field_id": "ssmt-mpers:DirectorsFees",
+          "retrieval_score": 0.4371,
+          "issue": "below_new_retrieval_threshold"
+        }
+      ],
+      "recommended_guardrails": [
+        "Return null when a close specific training-case concept is absent from candidate_concepts instead of selecting a broader substitute.",
+        "Return null if candidate concepts are close but not an exact semantic fit for the target label.",
+        "Do not overgeneralize from few-shot examples; they are guidance, not answer keys for the target row.",
+        "Prefer null when statement type and concept family do not align.",
+        "High confidence requires strong label meaning and statement-context evidence, not value pattern alone.",
+        "Avoid broad summary concepts when the row label is a more specific receivable/payable/accrual/nontrade item.",
+        "A close training example maps to a concept that is absent from candidate_concepts; do not select a broader substitute only by analogy.",
+        "ifrs-smes:TradeAndOtherCurrentPayables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording)."
+      ],
+      "guardrail_context_after_hotfix": {
+        "target_label_family": "payables",
+        "selection_guardrails": [
+          "Return null if candidate concepts are close but not an exact semantic fit for the target label.",
+          "Do not overgeneralize from few-shot examples; they are guidance, not answer keys for the target row.",
+          "Prefer null when statement type and concept family do not align.",
+          "High confidence requires strong label meaning and statement-context evidence, not value pattern alone.",
+          "Avoid broad summary concepts when the row label is a more specific receivable/payable/accrual/nontrade item."
+        ],
+        "candidate_warnings": [
+          "A close training example maps to a concept that is absent from candidate_concepts; do not select a broader substitute only by analogy.",
+          "ifrs-smes:TradeAndOtherCurrentPayables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording).",
+          "ssmt-mpers:OtherCurrentPayables: broad-substitution risk (target label lacks current-period classification wording; candidate is a broader total/summary concept).",
+          "ssmt-mpers:OtherPayables: broad-substitution risk (candidate is a broader total/summary concept).",
+          "ifrs-smes:TradeAndOtherPayables: broad-substitution risk (target label lacks trade evidence).",
+          "ifrs-smes:TradeAndOtherPayablesToTradeSuppliers: broad-substitution risk (target label lacks trade evidence; candidate is a broader total/summary concept)."
+        ],
+        "absent_similar_example_concepts": [
+          {
+            "example_label": "Other payables",
+            "example_concept": "ssmt-mpers:OtherCurrentNontradePayables",
+            "retrieval_score": 0.89
+          }
+        ]
+      }
+    },
+    {
+      "source_case_id": "case_006",
+      "extracted_row_id": "case_006:candidate:16:16",
+      "extracted_label": "Other payable",
+      "statement_type": "Statement of Financial Position",
+      "correct_concept_qname": "ssmt-mpers:CurrentNontradePayables",
+      "selected_wrong_concept": "ifrs-smes:TradeAndOtherCurrentPayables",
+      "confidence": 0.97,
+      "confidence_tier": "high",
+      "reason": "The extracted label 'Other payable' closely matches the concept 'Trade and other current payables' via exact alias matching logic and high deterministic score. The context is Statement of Financial Position, which aligns with ifrs-smes template.",
+      "correct_concept_in_candidates": false,
+      "selected_broad_summary_concept": true,
+      "likely_error_source": "candidate_missing_broad_substitution",
+      "candidate_concepts": [
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherCurrentPayables",
+          "label": "Trade and other current payables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentPayables",
+          "label": "Total other current payables",
+          "deterministic_score": 0.97,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ifrs-smes:NoncurrentPayables",
+          "label": "Trade and other non-current payables",
+          "deterministic_score": 0.94,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherCurrentPayablesDueToRelatedParties",
+          "label": "Total other current payables due to related parties",
+          "deterministic_score": 0.94,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherNoncurrentPayables",
+          "label": "Total other non-current payables",
+          "deterministic_score": 0.94,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherNoncurrentPayablesDueToRelatedParties",
+          "label": "Total other non-current payables due to related parties",
+          "deterministic_score": 0.94,
+          "deterministic_method": "exact_alias_match"
+        },
+        {
+          "template_field_id": "ssmt-mpers:OtherPayables",
+          "label": "Total other payables",
+          "deterministic_score": 0.6097,
+          "deterministic_method": "phrase_containment_match"
+        },
+        {
+          "template_field_id": "ifrs-smes:TradeAndOtherPayables",
+          "label": "Trade and other payables",
+          "deterministic_score": 0.5354,
+          "deterministic_method": "phrase_containment_match"
+        }
+      ],
+      "few_shot_examples": [
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Other payables",
+          "correct_template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+          "retrieval_score": 0.7147
+        },
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Increase in other payables and accruals",
+          "correct_template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "retrieval_score": 0.53
+        },
+        {
+          "source_case_id": "case_004",
+          "extracted_label": "Increase / (Decrease) in trade and other payables",
+          "correct_template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+          "retrieval_score": 0.5052
+        },
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Amount due to director a",
+          "correct_template_field_id": "ssmt-mpers:OtherNoncurrentLiabilities",
+          "retrieval_score": 0.4557
+        },
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Total Liabilities",
+          "correct_template_field_id": "ifrs-smes:Liabilities",
+          "retrieval_score": 0.404
+        }
+      ],
+      "weak_or_misleading_examples": [
+        {
+          "source_case_id": "case_002",
+          "extracted_label": "Total Liabilities",
+          "correct_template_field_id": "ifrs-smes:Liabilities",
+          "retrieval_score": 0.404,
+          "issue": "below_new_retrieval_threshold"
+        }
+      ],
+      "recommended_guardrails": [
+        "Return null when a close specific training-case concept is absent from candidate_concepts instead of selecting a broader substitute.",
+        "Return null if candidate concepts are close but not an exact semantic fit for the target label.",
+        "Do not overgeneralize from few-shot examples; they are guidance, not answer keys for the target row.",
+        "Prefer null when statement type and concept family do not align.",
+        "High confidence requires strong label meaning and statement-context evidence, not value pattern alone.",
+        "Avoid broad summary concepts when the row label is a more specific receivable/payable/accrual/nontrade item.",
+        "ifrs-smes:TradeAndOtherCurrentPayables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording).",
+        "ssmt-mpers:OtherCurrentPayables: broad-substitution risk (target label lacks current-period classification wording; candidate is a broader total/summary concept)."
+      ],
+      "guardrail_context_after_hotfix": {
+        "target_label_family": "payables",
+        "selection_guardrails": [
+          "Return null if candidate concepts are close but not an exact semantic fit for the target label.",
+          "Do not overgeneralize from few-shot examples; they are guidance, not answer keys for the target row.",
+          "Prefer null when statement type and concept family do not align.",
+          "High confidence requires strong label meaning and statement-context evidence, not value pattern alone.",
+          "Avoid broad summary concepts when the row label is a more specific receivable/payable/accrual/nontrade item."
+        ],
+        "candidate_warnings": [
+          "ifrs-smes:TradeAndOtherCurrentPayables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording).",
+          "ssmt-mpers:OtherCurrentPayables: broad-substitution risk (target label lacks current-period classification wording; candidate is a broader total/summary concept).",
+          "ifrs-smes:NoncurrentPayables: broad-substitution risk (target label lacks trade evidence; target label lacks current-period classification wording; target label lacks noncurrent classification wording).",
+          "ssmt-mpers:OtherCurrentPayablesDueToRelatedParties: broad-substitution risk (target label lacks current-period classification wording; candidate is a broader total/summary concept).",
+          "ssmt-mpers:OtherNoncurrentPayables: broad-substitution risk (target label lacks current-period classification wording; target label lacks noncurrent classification wording; candidate is a broader total/summary concept)."
+        ],
+        "absent_similar_example_concepts": []
+      }
+    }
+  ],
+  "guardrail_changes": [
+    "Raise few-shot retrieval minimum score to avoid weak analogies.",
+    "Drop generic total/broad examples unless label similarity is strong.",
+    "Add prompt guardrails that forbid broad summary substitutions when a close specific concept appears absent from candidates.",
+    "Add prompt guardrails that require label meaning and concept specificity, not value pattern or broad family alone.",
+    "Add explicit null preference for receivable/payable candidates with trade/current/noncurrent/nontrade qualifiers absent from the target label."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "feature": "18F-G-E",
+  "title": "Supervisor internal reviewer rollout runbook",
+  "generated_at": "2026-07-28",
+  "status": "ready",
+  "source_document": "docs/supervisor_internal_reviewer_rollout_18f_g_e.md",
+  "controlled_profile": {
+    "reviewers": "1-2 explicitly allowlisted internal reviewers",
+    "filings": "existing REVIEW filings",
+    "mode": "manual",
+    "auto_eligibility": true,
+    "auto_review": false,
+    "auto_remap": false,
+    "auto_apply": false,
+    "batch_maximum": 5,
+    "correction_attempt_maximum": 1,
+    "concurrent_live_calls_per_api_process": 1,
+    "mock_controls_visible": false
+  },
+  "before_enablement": [
+    "Verify runtime revision and exactly one expected backend listener.",
+    "Verify migrations through 013 and the current frontend build.",
+    "Configure one or two explicit reviewer IDs without committing them.",
+    "Verify owned-job allow and cross-owner denial.",
+    "Keep auto review and auto remap false.",
+    "Confirm batch, timeout, concurrency, and correction limits.",
+    "Configure provider credentials without logging secrets.",
+    "Verify backend kill switches and rollback owner.",
+    "Verify read-only audit export and zero safety counters."
+  ],
+  "after_enablement": [
+    "Verify capabilities as one allowlisted reviewer.",
+    "Verify a non-allowlisted owner receives 403.",
+    "Verify an allowlisted reviewer receives 404 for another user's job.",
+    "Request one read-only plan and verify zero provider calls.",
+    "Run one explicit single-row live Supervisor review.",
+    "Optionally run one naturally eligible guided remap.",
+    "Verify audit records, queue refresh, and zero mapping mutations."
+  ],
+  "failure_response": {
+    "supervisor_unavailable": "Preserve original suggestion, persist/display failure, continue manual review, retry only by later explicit action.",
+    "mapper_unavailable": "Preserve original suggestion and Supervisor review, persist/display failed revision, continue manual review.",
+    "provider_timeout": "No uncontrolled retry or automatic correction; preserve human review and allow only policy-permitted explicit retry.",
+    "invalid_structured_response": "Fail closed, produce no executable mapping, preserve human review."
+  },
+  "reviewer_guidance": [
+    "Supervisor eligible means second advisory review is justified; it does not mean the mapping is wrong.",
+    "High priority means review first; it does not mean definitely wrong.",
+    "Supervisor decisions and guided revisions are advisory.",
+    "Every revised mapping requires human review.",
+    "Never accept solely because a result looks safe or confident."
+  ],
+  "quality_gates_before_expansion": {
+    "automatic_mapping_mutations": 0,
+    "confirmed_tag_id_automation": 0,
+    "cross_user_access_incidents": 0,
+    "duplicate_revision_incidents": 0,
+    "provider_structured_response_success_minimum": 0.98,
+    "persistent_stale_state_defects": 0,
+    "unrecoverable_provider_failures": 0
+  },
+  "observation_window": "first 25-50 live reviews or 1-2 weeks",
+  "rollback": {
+    "backend_first": [
+      "SUPERVISOR_PRODUCTION_LIVE_ENABLED=false",
+      "SUPERVISOR_MAPPER_FEEDBACK_ENABLED=false",
+      "SUPERVISOR_ORCHESTRATION_ENABLED=false"
+    ],
+    "frontend_next": [
+      "VITE_SHOW_SUPERVISOR_ORCHESTRATION_QUEUE=false",
+      "VITE_SHOW_SUPERVISOR_LIVE_CONTROLS=false",
+      "VITE_SHOW_SUPERVISOR_MAPPER_FEEDBACK=false"
+    ],
+    "audit_history_deleted": false
+  },
+  "next_feature": "18F-G-F - Execute controlled internal reviewer rollout and collect first-use operational evidence"
+}

@@ -1,0 +1,1218 @@
+{
+  "run_metadata": {
+    "feature": "18D-A",
+    "generated_at": "2026-06-18T14:00:02Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "outlier_samples_excluded_from_main_metrics": [
+      "case_006"
+    ],
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "rejected_context_candidate_count": 47,
+    "top_rejected_labels": [
+      {
+        "normalized_label_pattern": "bank balances",
+        "target_qname": "ssmt:CashAndBankBalances",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "bank_balances_financial_position",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,period_type_mismatch,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "other income",
+        "target_qname": "ifrs-smes:OtherIncome",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "other_income_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "other income",
+        "target_qname": "ssmt-mpers:OtherMiscellaneousIncome",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "other_income_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+        ],
+        "replay_precision_before": 1.0
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "period_type_not_allowed_for_context_spec",
+          "prior_replay_precision_below_usable_threshold",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": 0.0
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:OtherAdjustmentsToReconcileProfitLoss",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:major_alignment_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "property plant and equipment",
+        "target_qname": "ifrs-smes:OtherPropertyPlantAndEquipment",
+        "statement_family": "financial_position",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "ppe_financial_position",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:CostOfSales",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,major_alignment_conflict,sign_mismatch_absolute_value_only,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:CostOfSales",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,major_alignment_conflict,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:Revenue",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:RevenueFromInterest",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "revenue",
+        "target_qname": "ifrs-smes:RevenueFromRenderingOfServices",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "revenue_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ComprehensiveIncome",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": "financial_position",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,period_type_mismatch,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "unresolved_conflicts:current_comparative_period_confusion,label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,period_year_mismatch,sign_mismatch_absolute_value_only"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "statement_family": null,
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:IntangibleAssetsAndGoodwill",
+        "statement_family": "financial_position",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "concept_family_incompatible_with_context_spec",
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:InvestmentsInAssociates",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "period_type_not_allowed_for_context_spec",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+          "zero_only_evidence"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLoss",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,statement_family_conflict"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLoss",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_conflict,statement_family_mismatch"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+        "statement_family": "cash_flow",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+        "statement_family": "income_statement",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+        "statement_family": "notes",
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "fatal_conflict_not_resolved_by_context",
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,same_value_repeated_across_many_facts,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+        "statement_family": null,
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      },
+      {
+        "normalized_label_pattern": "tax expense",
+        "target_qname": "ifrs-smes:ProfitLossFromContinuingOperations",
+        "statement_family": null,
+        "original_status": "excluded",
+        "upgraded_status": "still_excluded",
+        "upgrade_spec": "tax_expense_income_statement",
+        "blocking_reasons": [
+          "insufficient_repeated_or_strong_context_evidence",
+          "statement_family_not_allowed_for_context_spec",
+          "target_qname_not_allowed_for_context_spec",
+          "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns"
+        ],
+        "replay_precision_before": null
+      }
+    ],
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "rejections": [
+    {
+      "normalized_label_pattern": "bank balances",
+      "target_qname": "ssmt:CashAndBankBalances",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "bank_balances_financial_position",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "unresolved_conflicts:major_alignment_conflict,period_type_mismatch,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "other income",
+      "target_qname": "ifrs-smes:OtherIncome",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "other_income_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "other income",
+      "target_qname": "ssmt-mpers:OtherMiscellaneousIncome",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "other_income_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": 1.0
+    },
+    {
+      "normalized_label_pattern": "property plant and equipment",
+      "target_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "ppe_financial_position",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "property plant and equipment",
+      "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "ppe_financial_position",
+      "blocking_reasons": [
+        "concept_family_incompatible_with_context_spec",
+        "fatal_conflict_not_resolved_by_context",
+        "period_type_not_allowed_for_context_spec",
+        "prior_replay_precision_below_usable_threshold",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": 0.0
+    },
+    {
+      "normalized_label_pattern": "property plant and equipment",
+      "target_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "ppe_financial_position",
+      "blocking_reasons": [
+        "concept_family_incompatible_with_context_spec",
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "property plant and equipment",
+      "target_qname": "ifrs-smes:OtherAdjustmentsToReconcileProfitLoss",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "ppe_financial_position",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:major_alignment_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "property plant and equipment",
+      "target_qname": "ifrs-smes:OtherPropertyPlantAndEquipment",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "ppe_financial_position",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "revenue",
+      "target_qname": "ifrs-smes:CostOfSales",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "revenue_income_statement",
+      "blocking_reasons": [
+        "concept_family_incompatible_with_context_spec",
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,major_alignment_conflict,sign_mismatch_absolute_value_only,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "revenue",
+      "target_qname": "ifrs-smes:CostOfSales",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "revenue_income_statement",
+      "blocking_reasons": [
+        "concept_family_incompatible_with_context_spec",
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:generic_pdf_label_with_duplicate_value,major_alignment_conflict,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "revenue",
+      "target_qname": "ifrs-smes:Revenue",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "revenue_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "revenue",
+      "target_qname": "ifrs-smes:RevenueFromInterest",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "revenue_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "revenue",
+      "target_qname": "ifrs-smes:RevenueFromRenderingOfServices",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "revenue_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:generic_pdf_label_with_duplicate_value,label_statement_maps_to_multiple_qnames,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ComprehensiveIncome",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,period_type_mismatch,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "unresolved_conflicts:current_comparative_period_confusion,label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,period_year_mismatch,sign_mismatch_absolute_value_only"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "statement_family": null,
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,one_xbrl_fact_matches_multiple_pdf_rows,statement_family_conflict,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:IntangibleAssetsAndGoodwill",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "concept_family_incompatible_with_context_spec",
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:InvestmentsInAssociates",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLoss",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,statement_family_conflict"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLoss",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,same_value_repeated_across_many_facts,statement_family_conflict,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLossBeforeTax",
+      "statement_family": null,
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,statement_family_conflict,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ifrs-smes:ProfitLossFromContinuingOperations",
+      "statement_family": null,
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ssmt-mpers:AuditorsRemunerationForAuditServices",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ssmt-mpers:FeeAndCommissionIncome",
+      "statement_family": "income_statement",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ssmt-mpers:GainsOnForeignExchange",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "tax expense",
+      "target_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "tax_expense_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,same_value_repeated_across_many_facts,statement_family_mismatch,target_qname_maps_from_many_label_patterns"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "total current assets",
+      "target_qname": "ifrs-smes:Assets",
+      "statement_family": null,
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "total_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:generic_pdf_label_with_duplicate_value"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "total operating expenses",
+      "target_qname": "ifrs-smes:OtherExpenseByFunction",
+      "statement_family": "notes",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "total_operating_expenses_income_statement",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "unresolved_conflicts:statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInOtherOperatingReceivables",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,major_alignment_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+      "statement_family": "cash_flow",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "period_type_not_allowed_for_context_spec",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,same_value_repeated_across_many_facts,target_qname_maps_from_many_label_patterns,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ifrs-smes:NoncurrentReceivables",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames,statement_family_conflict,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ifrs-smes:NoncurrentReceivables",
+      "statement_family": null,
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "statement_family_not_allowed_for_context_spec",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:statement_family_conflict,zero_only_evidence",
+        "zero_only_evidence"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ifrs-smes:TradeAndOtherCurrentReceivables",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ssmt-mpers:CurrentTradeReceivables",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+      "statement_family": "notes",
+      "original_status": "review_required",
+      "upgraded_status": "still_review_required",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "fatal_conflict_not_resolved_by_context",
+        "statement_family_not_allowed_for_context_spec",
+        "unresolved_conflicts:major_alignment_conflict,statement_family_mismatch"
+      ],
+      "replay_precision_before": 1.0
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ssmt-mpers:OtherCurrentNontradeReceivables",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ssmt-mpers:OtherCurrentReceivables",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    },
+    {
+      "normalized_label_pattern": "trade and other receivables",
+      "target_qname": "ssmt-mpers:OtherCurrentReceivablesDueFromOtherRelatedParties",
+      "statement_family": "financial_position",
+      "original_status": "excluded",
+      "upgraded_status": "still_excluded",
+      "upgrade_spec": "trade_receivables_current_assets",
+      "blocking_reasons": [
+        "insufficient_repeated_or_strong_context_evidence",
+        "target_qname_not_allowed_for_context_spec",
+        "unresolved_conflicts:label_statement_maps_to_multiple_qnames"
+      ],
+      "replay_precision_before": null
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "feature": "18F-G-A-hotfix-1",
+  "title": "Supervisor correction UX cleanup",
+  "status": "completed",
+  "generated_at": "2026-07-22T23:17:28+08:00",
+  "scope": "Frontend presentation and regression coverage only",
+  "action_layout": {
+    "before": {
+      "single_row": [
+        "Accept suggestion",
+        "Reject",
+        "Run Supervisor review",
+        "Re-run mapping with Supervisor feedback"
+      ]
+    },
+    "after": {
+      "primary_row": [
+        "Accept suggestion",
+        "Reject",
+        "Run Supervisor review"
+      ],
+      "secondary_row": [
+        "Re-run mapping with Supervisor feedback"
+      ],
+      "secondary_row_alignment": "right",
+      "secondary_row_rendering": "Conditional on a completed eligible Supervisor review and effective correction feature gates; no element or vertical space is rendered when ineligible.",
+      "responsive_behavior": "Both action rows retain flex wrapping."
+    }
+  },
+  "exhausted_retry_presentation": {
+    "retry_limit_changed": false,
+    "completed_attempt_control": "Correction attempt {n} completed",
+    "presentation": "compact status badge",
+    "disabled_large_button_after_completed_attempt": false
+  },
+  "revised_suggestion_copy": {
+    "same_qname": "Outcome: Original suggestion retained after Supervisor-guided review.",
+    "changed_qname": "What changed: {original qname} \u2192 {revised qname}",
+    "same_qname_redundant_copy_removed": true,
+    "details_preserved": [
+      "revised reason",
+      "addressed Supervisor issues",
+      "remaining ambiguities",
+      "correction attempt",
+      "human review required",
+      "not applied or confirmed"
+    ]
+  },
+  "visible_controls": {
+    "normal_suggestion_primary": [
+      "Accept suggestion",
+      "Reject",
+      "Run Supervisor review"
+    ],
+    "eligible_correction_secondary": [
+      "Re-run mapping with Supervisor feedback"
+    ],
+    "mock_supervisor_controls_visible": false
+  },
+  "safety": {
+    "automatic_remapping": false,
+    "automatic_apply": false,
+    "automatic_accept": false,
+    "confirmed_tag_id_mutation": false,
+    "final_mapping_mutation": false,
+    "retry_limit_change": false,
+    "persistence_schema_change": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "external_provider_called": false
+  },
+  "verification": [
+    "frontend npm run test:auth passed 26 tests",
+    "frontend npm run build passed with 1585 modules transformed",
+    "python -B -m unittest discover -s tests -p test_supervisor*.py -v passed 118 tests",
+    "python -B -m unittest tests.test_llm_taxonomy_mapping -v passed 34 tests",
+    "python -B -m unittest tests.test_current_mapping_baseline -v passed 8 tests",
+    "python -B -m unittest discover -s tests -p test_*.py -q passed 1183 tests"
+  ],
+  "recommended_next_feature": "After 3-5 manual correction-quality smoke cases: #18F-G-B - Integrate conditional Supervisor-guided remapping into the production orchestration design"
+}

@@ -1,0 +1,61 @@
+{
+  "report_id": "page_alignment_real_pdf_19a_hotfix_1",
+  "feature_id": "19A-hotfix-1",
+  "generated_on": "2026-08-07",
+  "status": "PASS",
+  "live_job_65_smoke_status": "NOT_RERUN",
+  "basis": "Deterministic Job 65-style fixture reproducing the supplied real-PDF page labels, headings, false fragments, and Notes range.",
+  "original_defect": {
+    "reliable_signal": "Strong financial-statement headings supported Arabic offset +1.",
+    "pollution": "Weak fragment anchors contributed incompatible offsets and made the strong alignment unreliable.",
+    "notes_impact": "The printed Notes range 15-22 did not yield a populated PDF range."
+  },
+  "weighted_consensus": {
+    "method": "weighted_heading_anchor_consensus",
+    "formula": "offset = pdf_page_index - printed_page_number",
+    "trusted_anchors_only": true,
+    "dominant_offsets": [1],
+    "offset_candidates": {"1": 9},
+    "weighted_offset_support": {"1": 8.928},
+    "trusted_anchor_count": 9,
+    "rejected_anchor_count": 0,
+    "inconsistent_trusted_anchor_count": 0,
+    "alignment_confidence": 0.98,
+    "requires_human_review": false,
+    "acceptance_policy": "At least two anchors, at least 72% weighted support, and no competing offset backed by two or more tier A/B anchors.",
+    "piecewise_support": "Roman and Arabic/reset regimes remain separate and require trusted local support."
+  },
+  "range_application": {
+    "full_explicit_ranges_applied": true,
+    "same_page_geometry_preserved": true,
+    "notes_printed_range": [15, 22],
+    "notes_pdf_range": [16, 23],
+    "notes_evidence_count": 10,
+    "notes_zero_content_defect_reproduced_after_fix": false
+  },
+  "conservation": {
+    "total_evidence": 45,
+    "assigned_evidence": 28,
+    "ambiguous_evidence": 0,
+    "unassigned_evidence": 17,
+    "dropped_evidence": 0,
+    "assignment_rate": 0.622222,
+    "ambiguity_rate": 0.0,
+    "unassigned_rate": 0.377778,
+    "dropped_rate": 0.0,
+    "interpretation": "Unassigned cover/TOC evidence is conserved and reported; no evidence is silently dropped."
+  },
+  "quality_gate": {
+    "suspicious_toc_entries": 0,
+    "excessive_unassigned_content_warning": false,
+    "fixture_pass": true,
+    "real_pdf_pass_claimed": false
+  },
+  "verification": {
+    "focused_19a_tests_passed": 65,
+    "downstream_19b_19c_tests_passed": 61,
+    "full_backend_tests_passed": 1420,
+    "failures": 0
+  },
+  "decision": "Trusted weighted +1 consensus correctly projects the complete Notes range and materially reduces the reproduced unassigned rate while preserving zero dropped evidence. A new real Job 65 artifact is still required for a live-document verdict."
+}

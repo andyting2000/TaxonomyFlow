@@ -1,0 +1,222 @@
+{
+  "feature_id": "18F-G-A-quality-smoke-closeout",
+  "generated_at": "2026-07-23T08:50:21.5670815+00:00",
+  "phase": "interim_after_five_supervisor_reviews",
+  "status": "in_progress_two_of_five_revisions",
+  "summary": {
+    "selected_cases_reviewed": 5,
+    "completed_live_supervisor_reviews": 5,
+    "correction_eligible_reviews": 2,
+    "completed_revisions": 2,
+    "agree_no_revision_outcomes": 3,
+    "qnames_changed": 1,
+    "qnames_retained": 1,
+    "invalid_responses": 0,
+    "failed_revisions": 0,
+    "additional_revisions_needed": 3
+  },
+  "cases": [
+    {
+      "case_number": 1,
+      "original_selection_case_id": "18f-g-a-case-01",
+      "filing_name": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "job_id": 61,
+      "row_id": "384594c5-8f64-4ec8-b7e0-8cc3f717523f",
+      "suggestion_id": "c3d67b79-9543-4018-9dd1-85e7c60d56f2",
+      "row_label": "Tax expenses for the year",
+      "initial_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+      "initial_confidence": 0.85,
+      "review": {
+        "id": "ae2b9851-113a-4bc4-b192-8472ed3e6e2d",
+        "source": "live",
+        "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8:novita",
+        "decision": "needs_human_review",
+        "risk": "medium",
+        "recommended_action": "keep_for_human_review",
+        "safe_to_accept": false,
+        "calibrated_safe_to_accept": false,
+        "issues": [
+          {
+            "type": "statement_family_mismatch",
+            "description": "The selected concept is from a different statement family than the row context."
+          }
+        ],
+        "reason": "The selected concept is a profit-or-loss tax-expense concept while the row is in the Statement of Cash Flows."
+      },
+      "revision": {
+        "id": "3ad77b95-1de1-4166-91b4-4c94c337784c",
+        "correction_attempt": 1,
+        "original_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "revised_qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+        "qname_changed": false,
+        "revised_confidence": 0.85,
+        "status": "completed",
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "remaining_ambiguities": [],
+        "reason": "The revision retained the tax-expense concept and asserted that tax expenses routinely appear across multiple statements, including cash flows."
+      },
+      "quality_classification": "still_ambiguous",
+      "quality_assessment": {
+        "statement_family_issue_genuinely_resolved": false,
+        "unsupported_cross_statement_justification_present": true,
+        "confidence_unjustifiably_increased": false,
+        "human_review_preserved": true,
+        "finding": "The response is structurally valid and safely advisory, but its explanation does not distinguish tax expense from cash tax paid. It also records no remaining ambiguity despite leaving the identified statement-family mismatch unresolved."
+      }
+    },
+    {
+      "case_number": 2,
+      "original_selection_case_id": "18f-g-a-case-04",
+      "filing_name": "FINE BATIK SDN. BHD.",
+      "job_id": 60,
+      "row_id": "e5304cca-d3a9-4f76-acae-1a6af42e0266",
+      "suggestion_id": "38b4306a-0fae-47b6-af5a-ead713204c39",
+      "row_label": "Cash flows from investing activities",
+      "initial_qname": "ifrs-smes:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities",
+      "initial_confidence": 0.65,
+      "review": {
+        "id": "5cf1ffe3-56df-4319-a786-52b4dcb86a63",
+        "source": "live",
+        "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8:novita",
+        "decision": "needs_human_review",
+        "risk": "medium",
+        "recommended_action": "keep_for_human_review",
+        "safe_to_accept": false,
+        "calibrated_safe_to_accept": false,
+        "issues": [
+          {
+            "type": "broad_substitute",
+            "description": "The selected concept is not the most specific match for the row label."
+          }
+        ],
+        "reason": "CashFlowsFromUsedInInvestingActivities is a closer and more specific candidate."
+      },
+      "revision": {
+        "id": "de21f13b-ad19-4fbb-b680-2184cce89504",
+        "correction_attempt": 1,
+        "original_qname": "ifrs-smes:OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities",
+        "revised_qname": "ifrs-smes:CashFlowsFromUsedInInvestingActivities",
+        "qname_changed": true,
+        "revised_confidence": 0.6,
+        "status": "completed",
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "remaining_ambiguities": [
+          "The row does not say Net, so gross versus net remains uncertain.",
+          "The missing row role prevents confirming whether the row is a total or intermediate line."
+        ],
+        "reason": "The revised concept better matches the whole investing-activities cash-flow label while preserving net/gross and row-role uncertainty."
+      },
+      "quality_classification": "improved",
+      "quality_assessment": {
+        "revised_qname_better_supported": true,
+        "supervisor_issue_addressed": true,
+        "remaining_ambiguity_recorded": true,
+        "internal_wording_issue": "The final sentence says 'The alternative candidate is overly narrow' after selecting the Supervisor-preferred candidate. It is unclear whether 'alternative' refers to the original concept; the qname decision remains defensible.",
+        "human_review_preserved": true
+      }
+    },
+    {
+      "case_number": 3,
+      "original_selection_case_id": "18f-g-a-case-03",
+      "filing_name": "FINE BATIK SDN. BHD.",
+      "job_id": 60,
+      "row_id": "26a44a6f-bc75-4727-9507-0df28e9e7393",
+      "suggestion_id": "144bcaa2-a328-42f4-a133-49905aa6411d",
+      "row_label": "Trade receivables",
+      "initial_qname": "ssmt-mpers:TradeReceivables",
+      "review": {
+        "id": "130aafc6-9028-4eeb-b5b0-22cf45e432d6",
+        "decision": "agree",
+        "risk": "low",
+        "recommended_action": "accept",
+        "safe_to_accept": true,
+        "calibrated_safe_to_accept": true
+      },
+      "revision": null,
+      "correction_attempts_consumed": 0,
+      "quality_classification": "agree_no_revision_expected",
+      "quality_assessment": "The correction action was correctly withheld and no revision record was created."
+    },
+    {
+      "case_number": 4,
+      "original_selection_case_id": "18f-g-a-case-02",
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_id": 59,
+      "row_id": "9e1c42a9-db17-4130-a007-ee149543ca5d",
+      "suggestion_id": "38feda38-bec0-427e-a28d-f5d258adb081",
+      "row_label": "Cash and cash equivalents at beginning of year / period",
+      "initial_qname": "ifrs-smes:CashAndCashEquivalents",
+      "review": {
+        "id": "3787d180-9c6c-473e-8283-f1cda0648762",
+        "decision": "agree",
+        "risk": "low",
+        "recommended_action": "accept",
+        "safe_to_accept": true,
+        "calibrated_safe_to_accept": true
+      },
+      "revision": null,
+      "correction_attempts_consumed": 0,
+      "quality_classification": "agree_no_revision_expected",
+      "quality_assessment": "The correction action was correctly withheld and no revision record was created."
+    },
+    {
+      "case_number": 5,
+      "original_selection_case_id": "18f-g-a-case-05",
+      "filing_name": "BEZLIFE MARKETING SDN. BHD.",
+      "job_id": 59,
+      "row_id": "ecca68af-d1db-4784-9246-72dc2dba1dc7",
+      "suggestion_id": "790e39da-f6dc-42a7-9b2b-8d0b6a1e52fd",
+      "row_label": "Add : Other income",
+      "initial_qname": "ifrs-smes:OtherIncome",
+      "review": {
+        "id": "bd7f8286-351c-4ca4-918f-e552c9568a76",
+        "decision": "agree",
+        "risk": "low",
+        "recommended_action": "accept",
+        "safe_to_accept": false,
+        "calibrated_safe_to_accept": false,
+        "issues": [
+          {
+            "type": "other",
+            "description": "Safe flag withheld by guardrail: mapper confidence was below the safe-accept threshold."
+          }
+        ]
+      },
+      "revision": null,
+      "correction_attempts_consumed": 0,
+      "quality_classification": "agree_no_revision_expected_guardrail_withheld",
+      "quality_assessment": "The agree review did not become correction-eligible. No revision was created, and the mapper-confidence guardrail correctly kept safe-to-accept false."
+    }
+  ],
+  "persistence_and_immutability": {
+    "initial_snapshot_hashes_matching": 5,
+    "initial_suggestion_mutations": 0,
+    "separate_revision_records": 2,
+    "revision_attempts_all_equal_one": true,
+    "agree_cases_with_revision": 0,
+    "selected_rows_with_confirmed_tag_id": 0,
+    "selected_rows_with_template_field_id": 0,
+    "selected_rows_marked_reviewed": 0
+  },
+  "safety": {
+    "completed_revisions_requires_human_review_true": 2,
+    "completed_revisions_safe_for_auto_apply_false": 2,
+    "automatic_accepts": 0,
+    "automatic_rejects": 0,
+    "final_mapping_mutations": 0,
+    "recursive_supervisor_mapper_loops": 0,
+    "prohibited_payload_fields_observed": 0
+  },
+  "interim_conclusion": {
+    "quality_smoke_complete": false,
+    "reason": "Only two actual mapping revisions exist. Three additional likely correction-eligible cases must be processed before the five-revision Phase 3 assessment.",
+    "current_revision_quality": {
+      "improved": 1,
+      "still_ambiguous": 1,
+      "degraded": 0,
+      "invalid_response": 0
+    }
+  }
+}

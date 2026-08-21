@@ -1,0 +1,22 @@
+{
+  "name": "D_page_offset",
+  "pages": [
+    {"page_number": 1, "height": 1000, "lines": [{"content": "ANNUAL REPORT", "page_number": 1}]},
+    {"page_number": 2, "height": 1000, "lines": [
+      {"content": "TABLE OF CONTENTS", "page_number": 2},
+      {"content": "Directors' Report 1-2", "page_number": 2},
+      {"content": "Statement of Financial Position 3", "page_number": 2},
+      {"content": "Notes to the Financial Statements 4-5", "page_number": 2}
+    ]},
+    {"page_number": 3, "height": 1000, "lines": [{"content": "PREFACE", "page_number": 3}]},
+    {"page_number": 4, "height": 1000, "lines": [{"content": "DIRECTORS' REPORT", "page_number": 4, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 5, "height": 1000, "lines": []},
+    {"page_number": 6, "height": 1000, "lines": [{"content": "STATEMENT OF FINANCIAL POSITION", "page_number": 6, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 7, "height": 1000, "lines": [{"content": "NOTES TO THE FINANCIAL STATEMENTS", "page_number": 7, "polygon": [{"x": 1, "y": 50}]}]},
+    {"page_number": 8, "height": 1000, "lines": []}
+  ],
+  "paragraphs": [],
+  "tables": [],
+  "table_cells": [],
+  "lines": []
+}

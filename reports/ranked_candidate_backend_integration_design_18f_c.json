@@ -1,0 +1,345 @@
+{
+  "run_metadata": {
+    "feature": "18F-C",
+    "generated_at": "2026-06-25T01:18:27Z",
+    "calibration_summary_report": "reports\\hybrid_candidate_calibration_summary_18f_b.json",
+    "recommended_profile_report": "reports\\hybrid_candidate_calibration_recommended_profile_18f_b.json",
+    "offline_only": true,
+    "design_only": true,
+    "dry_run_scaffold_only": true,
+    "ui_changed": false,
+    "api_changed": false,
+    "database_mutated": false,
+    "production_persistence_enabled": false,
+    "production_mapper_integrated": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "external_llm_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "current_calibrated_mapper_summary": {
+    "recommended_profile": "balanced",
+    "candidate_coverage_rate": 0.6036,
+    "top1_precision_if_evaluable": 0.8,
+    "top3_recall_if_evaluable": 0.5825,
+    "top5_recall_if_evaluable": 0.5825,
+    "high_or_critical_candidate_ratio": 0.2574,
+    "critical_candidate_count": 0,
+    "safe_for_auto_apply_count": 0,
+    "requires_human_review_count": 983,
+    "total_candidate_count": 983,
+    "rows_with_at_least_1_candidate": 472,
+    "rows_with_at_least_3_candidates": 172,
+    "no_candidate_rows": 310,
+    "risk_distribution": {
+      "high": 253,
+      "low": 336,
+      "medium": 394
+    },
+    "candidate_quality_score": 65.4744,
+    "backend_advisory_integration_justified": true,
+    "reason": "Balanced preserves >=60% coverage, keeps top-1 precision >=0.75, and controls high/critical risk without critical candidates."
+  },
+  "recommended_profile": "balanced",
+  "recommended_profile_config": {
+    "name": "balanced",
+    "description": "Default profile that preserves useful coverage while controlling risk for backend advisory design.",
+    "minimum_candidate_score": 0.44,
+    "taxonomy_lexical_minimum_score": 0.44,
+    "non_lexical_candidate_minimum_score": 0.44,
+    "deterministic_candidate_score_floor": 0.63,
+    "candidate_high_threshold": 0.78,
+    "candidate_medium_threshold": 0.62,
+    "candidate_low_threshold": 0.45,
+    "ambiguity_threshold": 0.05,
+    "max_candidates_per_row": 5,
+    "per_source_top_n_cap": {
+      "taxonomy_lexical": 2,
+      "concept_playbook_lookup": 3,
+      "section_concept_pack": 3,
+      "statement_dictionary": 3,
+      "local_concept_family_pack": 2,
+      "taxonomy_structure_hint": 1,
+      "cash_flow_movement_pack": 3,
+      "equity_movement_pack": 2,
+      "statement_role_pack": 3,
+      "deterministic_current_mapper": 5
+    },
+    "source_weights": {
+      "deterministic_current_mapper": 1.09,
+      "statement_dictionary": 1.05,
+      "statement_role_pack": 1.08,
+      "section_concept_pack": 1.06,
+      "concept_playbook_lookup": 1.07,
+      "cash_flow_movement_pack": 1.03,
+      "equity_movement_pack": 1.02,
+      "format_memory_pack": 1.06,
+      "local_concept_family_pack": 1.01,
+      "taxonomy_structure_hint": 0.99,
+      "note_total_candidate": 0.98,
+      "taxonomy_lexical": 0.94,
+      "cached_qwen": 0.97
+    },
+    "critical_risk_candidates_filtered": true,
+    "allow_uncorroborated_high_risk_candidates": false,
+    "high_risk_minimum_score": 0.49,
+    "high_risk_minimum_sources": 2,
+    "safe_for_auto_apply": false,
+    "requires_human_review": true
+  },
+  "backend_service_boundary": {
+    "service_module": "services/ranked_candidate_advisory_service.py",
+    "router_wiring_in_this_feature": false,
+    "database_persistence_in_this_feature": false,
+    "runtime_candidate_generation_inputs": [
+      "cached extracted rows for a filing/job in a later dry-run API feature",
+      "local taxonomy metadata",
+      "local calibrated profile configuration",
+      "local non-lexical candidate source evidence"
+    ],
+    "forbidden_runtime_inputs": [
+      "auditor XML",
+      "parsed XML facts",
+      "gold answers",
+      "target correct qnames",
+      "evaluation labels",
+      "external LLM or provider responses"
+    ]
+  },
+  "feature_flags": {
+    "RANKED_CANDIDATES_ADVISORY_ENABLED": false,
+    "RANKED_CANDIDATES_ADVISORY_DEFAULT_MODE": "dry_run",
+    "RANKED_CANDIDATES_ADVISORY_ALLOW_PERSISTENCE": false,
+    "RANKED_CANDIDATES_ADVISORY_DEFAULT_PROFILE": "balanced",
+    "RANKED_CANDIDATES_ADVISORY_MAX_ROWS": 1000,
+    "RANKED_CANDIDATES_ADVISORY_MAX_CANDIDATES_PER_ROW": 5,
+    "RANKED_CANDIDATES_ADVISORY_ADMIN_ONLY": true
+  },
+  "capabilities_when_disabled": {
+    "job_id": 0,
+    "enabled": false,
+    "default_mode": "dry_run",
+    "allow_persistence": false,
+    "default_profile": "balanced",
+    "supported_profiles": [
+      "strict",
+      "balanced",
+      "recall"
+    ],
+    "supported_modes": [
+      "dry_run"
+    ],
+    "max_rows": 1000,
+    "max_candidates_per_row": 5,
+    "admin_only": true,
+    "feature_flags": {
+      "RANKED_CANDIDATES_ADVISORY_ENABLED": false,
+      "RANKED_CANDIDATES_ADVISORY_DEFAULT_MODE": "dry_run",
+      "RANKED_CANDIDATES_ADVISORY_ALLOW_PERSISTENCE": false,
+      "RANKED_CANDIDATES_ADVISORY_DEFAULT_PROFILE": "balanced",
+      "RANKED_CANDIDATES_ADVISORY_MAX_ROWS": 1000,
+      "RANKED_CANDIDATES_ADVISORY_MAX_CANDIDATES_PER_ROW": 5,
+      "RANKED_CANDIDATES_ADVISORY_ADMIN_ONLY": true
+    },
+    "endpoints": [
+      "/api/v1/filings/jobs/0/ranked-candidates/capabilities",
+      "/api/v1/filings/jobs/0/ranked-candidates/run",
+      "/api/v1/filings/jobs/0/ranked-candidates"
+    ],
+    "safety": {
+      "advisory_only": true,
+      "dry_run_only": true,
+      "persistence_enabled": false,
+      "auto_apply_enabled": false,
+      "auto_accept_enabled": false,
+      "auto_reject_enabled": false,
+      "safe_for_auto_apply_always_false": true,
+      "requires_human_review_always_true": true,
+      "confirmed_tag_id_mutation_allowed": false,
+      "final_mapping_mutation_allowed": false,
+      "ai_mapping_suggestion_mutation_allowed": false,
+      "external_llm_called": false,
+      "supervisor_called": false,
+      "qwen_called": false,
+      "azure_di_live_call_made": false,
+      "xbrl_generation_allowed": false,
+      "arelle_run_allowed": false
+    }
+  },
+  "capabilities_when_enabled_for_future_dry_run": {
+    "job_id": 0,
+    "enabled": true,
+    "default_mode": "dry_run",
+    "allow_persistence": false,
+    "default_profile": "balanced",
+    "supported_profiles": [
+      "strict",
+      "balanced",
+      "recall"
+    ],
+    "supported_modes": [
+      "dry_run"
+    ],
+    "max_rows": 1000,
+    "max_candidates_per_row": 5,
+    "admin_only": true,
+    "feature_flags": {
+      "RANKED_CANDIDATES_ADVISORY_ENABLED": true,
+      "RANKED_CANDIDATES_ADVISORY_DEFAULT_MODE": "dry_run",
+      "RANKED_CANDIDATES_ADVISORY_ALLOW_PERSISTENCE": false,
+      "RANKED_CANDIDATES_ADVISORY_DEFAULT_PROFILE": "balanced",
+      "RANKED_CANDIDATES_ADVISORY_MAX_ROWS": 1000,
+      "RANKED_CANDIDATES_ADVISORY_MAX_CANDIDATES_PER_ROW": 5,
+      "RANKED_CANDIDATES_ADVISORY_ADMIN_ONLY": true
+    },
+    "endpoints": [
+      "/api/v1/filings/jobs/0/ranked-candidates/capabilities",
+      "/api/v1/filings/jobs/0/ranked-candidates/run",
+      "/api/v1/filings/jobs/0/ranked-candidates"
+    ],
+    "safety": {
+      "advisory_only": true,
+      "dry_run_only": true,
+      "persistence_enabled": false,
+      "auto_apply_enabled": false,
+      "auto_accept_enabled": false,
+      "auto_reject_enabled": false,
+      "safe_for_auto_apply_always_false": true,
+      "requires_human_review_always_true": true,
+      "confirmed_tag_id_mutation_allowed": false,
+      "final_mapping_mutation_allowed": false,
+      "ai_mapping_suggestion_mutation_allowed": false,
+      "external_llm_called": false,
+      "supervisor_called": false,
+      "qwen_called": false,
+      "azure_di_live_call_made": false,
+      "xbrl_generation_allowed": false,
+      "arelle_run_allowed": false
+    }
+  },
+  "dry_run_behavior": {
+    "mode": "dry_run",
+    "runs_candidate_ranking": "future API should run calibrated local ranking against owned job rows only",
+    "current_scaffold": "serializes local ranked rows and applies the balanced profile without DB or router wiring",
+    "persists_candidates": false,
+    "mutates_final_mapping": false,
+    "sets_confirmed_tag_id": false
+  },
+  "later_persistence_design": {
+    "status": "deferred",
+    "allowed_future_storage": "advisory candidate snapshot table only, if separately approved",
+    "forbidden_storage": [
+      "confirmed_tag_id",
+      "final mapping mutation instructions",
+      "auto-apply decisions"
+    ]
+  },
+  "endpoint_contract": [
+    {
+      "method": "GET",
+      "path": "/api/v1/filings/jobs/{job_id}/ranked-candidates/capabilities",
+      "feature": "read capability and safety flags only",
+      "this_feature_status": "design_only"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/filings/jobs/{job_id}/ranked-candidates/run",
+      "feature": "future dry-run generation behind disabled feature flag",
+      "this_feature_status": "design_only"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/filings/jobs/{job_id}/ranked-candidates",
+      "feature": "future read of persisted advisory candidates after a separate persistence feature",
+      "this_feature_status": "design_only"
+    }
+  ],
+  "safety_constraints": {
+    "advisory_only": true,
+    "dry_run_only": true,
+    "persistence_enabled": false,
+    "auto_apply_enabled": false,
+    "auto_accept_enabled": false,
+    "auto_reject_enabled": false,
+    "safe_for_auto_apply_always_false": true,
+    "requires_human_review_always_true": true,
+    "confirmed_tag_id_mutation_allowed": false,
+    "final_mapping_mutation_allowed": false,
+    "ai_mapping_suggestion_mutation_allowed": false,
+    "external_llm_called": false,
+    "supervisor_called": false,
+    "qwen_called": false,
+    "azure_di_live_call_made": false,
+    "xbrl_generation_allowed": false,
+    "arelle_run_allowed": false
+  },
+  "failure_modes": [
+    {
+      "failure": "feature flag disabled",
+      "behavior": "capabilities show disabled; generation fails closed"
+    },
+    {
+      "failure": "invalid profile",
+      "behavior": "safe RankedCandidateAdvisoryError"
+    },
+    {
+      "failure": "missing local report/input",
+      "behavior": "safe RankedCandidateAdvisoryError"
+    },
+    {
+      "failure": "persistence flag accidentally true",
+      "behavior": "effective allow_persistence remains false"
+    },
+    {
+      "failure": "unsupported mode",
+      "behavior": "effective mode remains dry_run"
+    },
+    {
+      "failure": "candidate with unsafe flags",
+      "behavior": "schema validation rejects or serializer forces safe values"
+    }
+  ],
+  "no_auto_apply_guarantees": [
+    "requires_human_review is always true for every candidate.",
+    "safe_for_auto_apply is always false for every candidate.",
+    "recommended_action is limited to review_candidate, keep_for_human_review, no_candidate, or blocked.",
+    "No response field carries confirmed_tag_id mutation instructions.",
+    "Dry-run service returns payloads only and does not receive a database session.",
+    "Persistence and UI are deferred to later explicitly approved features."
+  ],
+  "recommended_implementation_phases": [
+    {
+      "phase": "18F-C",
+      "status": "complete_after_this_feature",
+      "scope": "design reports, advisory contract, safe config defaults, dry-run service/schema scaffold, safety tests"
+    },
+    {
+      "phase": "18F-D",
+      "status": "recommended_next",
+      "scope": "implement dry-run backend ranked-candidate advisory API behind disabled feature flag"
+    },
+    {
+      "phase": "18F-E",
+      "status": "future",
+      "scope": "optional persistence design and migration for advisory candidate snapshots only"
+    },
+    {
+      "phase": "18F-F",
+      "status": "future",
+      "scope": "review-workflow/UI consumption of advisory candidates, still no auto-apply"
+    },
+    {
+      "phase": "later_separate_approval",
+      "status": "not_approved",
+      "scope": "any final mapping mutation, confirmed_tag_id automation, auto-accept, or XBRL generation behavior"
+    }
+  ],
+  "recommended_next_feature": "Feature #18F-D - Implement dry-run backend ranked-candidate advisory API behind disabled feature flag"
+}

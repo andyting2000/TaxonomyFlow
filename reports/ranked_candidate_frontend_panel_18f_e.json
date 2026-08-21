@@ -1,0 +1,22 @@
+{
+  "feature": "18F-E",
+  "title": "Read-only ranked candidate frontend test panel",
+  "frontend_flag": {
+    "name": "VITE_SHOW_RANKED_CANDIDATE_TEST_PANEL",
+    "default": false,
+    "purpose": "Hide the internal dry-run panel unless explicitly enabled at build time."
+  },
+  "placement": "ReviewWorkspace, directly below the gated AI Mapping Suggestions and Supervisor advisory area.",
+  "api_endpoints": [
+    "GET /api/v1/filings/jobs/{job_id}/ranked-candidates/capabilities",
+    "POST /api/v1/filings/jobs/{job_id}/ranked-candidates/run"
+  ],
+  "dry_run_request": {
+    "mode": "dry_run",
+    "default_profile": "balanced",
+    "max_candidates_per_row": "Capped to the backend capability value."
+  },
+  "disabled_behavior": "The panel is absent while the frontend flag is false. When visible but backend-disabled, it displays capability metadata and a fail-closed notice without a run control.",
+  "result_behavior": "Renders capability metadata, safety counters, response summary, rows, and candidates as advisory read-only evidence.",
+  "recommended_next_feature": "Feature #18F-F - End-to-end dry-run smoke test and UX hardening"
+}

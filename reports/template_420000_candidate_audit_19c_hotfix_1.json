@@ -1,0 +1,1294 @@
+{
+  "analysis_status": "PASS",
+  "authoritative_membership": [
+    {
+      "abstract": true,
+      "balance": null,
+      "datatype": "xbrli:stringItemType",
+      "exclusion_reason": "abstract_concept_not_selectable_for_fact",
+      "label": "Disclosure on statement of comprehensive income before tax [abstract]",
+      "level": 0,
+      "parent": null,
+      "period_type": "duration",
+      "position": 0,
+      "qname": "ssmt-mpers:DisclosureOnStatementOfComprehensiveIncomeBeforeTax",
+      "selectable": false
+    },
+    {
+      "abstract": true,
+      "balance": null,
+      "datatype": "xbrli:stringItemType",
+      "exclusion_reason": "abstract_concept_not_selectable_for_fact",
+      "label": "Consolidated and separate financial statements [axis]",
+      "level": 3,
+      "parent": "ssmt-mpers:StatementOfComprehensiveIncomeBeforeTaxTable",
+      "period_type": "duration",
+      "position": 1,
+      "qname": "ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis",
+      "selectable": false
+    },
+    {
+      "abstract": true,
+      "balance": null,
+      "datatype": "dtr-types:domainItemType",
+      "exclusion_reason": "abstract_concept_not_selectable_for_fact",
+      "label": "Group [member]",
+      "level": 4,
+      "parent": "ifrs-smes:ConsolidatedAndSeparateFinancialStatementsAxis",
+      "period_type": "duration",
+      "position": 2,
+      "qname": "ifrs-smes:ConsolidatedMember",
+      "selectable": false
+    },
+    {
+      "abstract": true,
+      "balance": null,
+      "datatype": "dtr-types:domainItemType",
+      "exclusion_reason": "abstract_concept_not_selectable_for_fact",
+      "label": "Company [member]",
+      "level": 5,
+      "parent": "ifrs-smes:ConsolidatedMember",
+      "period_type": "duration",
+      "position": 3,
+      "qname": "ifrs-smes:SeparateMember",
+      "selectable": false
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Total Profit (Loss)",
+      "level": 4,
+      "parent": "ifrs-smes:StatementOfComprehensiveIncomeAbstract",
+      "period_type": "duration",
+      "position": 4,
+      "qname": "ifrs-smes:ProfitLoss",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income, before tax, exchange differences on translation",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 5,
+      "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 6,
+      "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 7,
+      "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Share of other comprehensive income of associates and joint ventures accounted for using equity method",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 8,
+      "qname": "ssmt-mpers:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Total other comprehensive income that will not be reclassified to profit or loss, before tax",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 9,
+      "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income, before tax, exchange differences on translation",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 10,
+      "qname": "ssmt-mpers:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income, before tax, change in fair value of hedging instrument",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 11,
+      "qname": "ssmt-mpers:OtherComprehensiveIncomeBeforeTaxChangesInFairValueOfHedgingInstrument",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Share of other comprehensive income of associates and joint ventures accounted for using equity method, before tax",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 12,
+      "qname": "ssmt-mpers:ShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethodThatWillBeReclassifiedToProfitOrLossBeforeTax",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+      "level": 6,
+      "parent": "ifrs-smes:ComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTaxAbstract",
+      "period_type": "duration",
+      "position": 13,
+      "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "debit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Aggregated income tax relating to components of other comprehensive income that will not be reclassified to profit or loss",
+      "level": 5,
+      "parent": "ifrs-smes:OtherComprehensiveIncomeAbstract",
+      "period_type": "duration",
+      "position": 14,
+      "qname": "ssmt-mpers:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLoss",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "debit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Aggregated income tax relating to components of other comprehensive income that will be reclassified to profit or loss",
+      "level": 5,
+      "parent": "ifrs-smes:OtherComprehensiveIncomeAbstract",
+      "period_type": "duration",
+      "position": 15,
+      "qname": "ssmt-mpers:IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLoss",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income before tax gains (losses) on other items",
+      "level": 5,
+      "parent": "ifrs-smes:OtherComprehensiveIncomeAbstract",
+      "period_type": "duration",
+      "position": 16,
+      "qname": "ssmt-mpers:OtherComprehensiveIncomeBeforeTaxGainsLossesOnOtherItems",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Other comprehensive income",
+      "level": 5,
+      "parent": "ifrs-smes:OtherComprehensiveIncomeAbstract",
+      "period_type": "duration",
+      "position": 17,
+      "qname": "ifrs-smes:OtherComprehensiveIncome",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Comprehensive income",
+      "level": 4,
+      "parent": "ifrs-smes:StatementOfComprehensiveIncomeAbstract",
+      "period_type": "duration",
+      "position": 18,
+      "qname": "ifrs-smes:ComprehensiveIncome",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Comprehensive income, attributable to owners of parent",
+      "level": 5,
+      "parent": "ifrs-smes:ComprehensiveIncomeAttributableToAbstract",
+      "period_type": "duration",
+      "position": 19,
+      "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Comprehensive income, attributable to non-controlling interests",
+      "level": 5,
+      "parent": "ifrs-smes:ComprehensiveIncomeAttributableToAbstract",
+      "period_type": "duration",
+      "position": 20,
+      "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+      "selectable": true
+    },
+    {
+      "abstract": false,
+      "balance": "credit",
+      "datatype": "xbrli:monetaryItemType",
+      "exclusion_reason": null,
+      "label": "Comprehensive income",
+      "level": 5,
+      "parent": "ifrs-smes:ComprehensiveIncomeAttributableToAbstract",
+      "period_type": "duration",
+      "position": 21,
+      "qname": "ifrs-smes:ComprehensiveIncome",
+      "selectable": true
+    }
+  ],
+  "authorities": {
+    "canonical_registry": "taxonomy/template_group_registry_mpers_2022_v1.json",
+    "concept_inventory_count": 923,
+    "concept_inventory_hash": "f6359123e226e07a87f3df326430f4d62fa98ccd58a5be93bd957cff7722d9fd",
+    "duplicate_membership_entries": {
+      "ifrs-smes:ComprehensiveIncome": 2
+    },
+    "presentation_linkbase": "taxonomy/SSMxT_2022v1.0/rep/ssm/ca-2016/fs/mpers/pre_ssmt-fs-mpers_2022-12-31_role-420000.xml",
+    "raw_membership_entries": 22,
+    "runtime_membership": "mpers_templates.json#/templates/420000/concepts",
+    "unique_concept_memberships": 21
+  },
+  "conclusion": "No 420000 membership expansion is supported by the authoritative sources. Ordinary P&L semantics remain visible limitations and safely abstain; exact comprehensive income is ranked directly.",
+  "first_answer": {
+    "A_correct_concept_below_old_top8": [
+      "Total comprehensive profit / (loss) for the year / period -> ifrs-smes:ComprehensiveIncome"
+    ],
+    "B_correct_concept_filtered_out": [],
+    "C_correct_concept_absent_420000_membership": [
+      "Turnover",
+      "Less : Cost of sales",
+      "Gross profit",
+      "Staff costs",
+      "Other operating costs",
+      "Profit / (Loss) from operating activities",
+      "Add : Other income",
+      "Profit / (Loss) before taxation",
+      "Less : Taxation"
+    ],
+    "D_correct_concept_absent_inventory": [],
+    "E_alternate_qnames_or_labels": [
+      "Staff costs -> ssmt-mpers:EmployeeBenefitsExpenseByNature (labelled Total employee benefits expense, outside 420000)"
+    ]
+  },
+  "job_id": 70,
+  "read_only": true,
+  "report_type": "template_420000_candidate_audit_19c_hotfix_1",
+  "report_version": "19C-hotfix-1-report-v1",
+  "semantic_audit": [
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "NO_CONCEPT_IN_TEMPLATE",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.19808
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.185078
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.094085
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.063665
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Revenue",
+          "qname": "ifrs-smes:Revenue",
+          "template_group_ids": [
+            "310000",
+            "310100",
+            "320000",
+            "320100"
+          ]
+        }
+      ],
+      "explanation": "The exact Revenue concept exists in inventory but has no 420000 membership.",
+      "raw_label": "Turnover",
+      "semantic_scope_limitations": [
+        "revenue"
+      ],
+      "semantic_source_label": "turnover"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "NO_CONCEPT_IN_TEMPLATE",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.244569
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.140937
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.101345
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.079314
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Total cost of sales",
+          "qname": "ifrs-smes:CostOfSales",
+          "template_group_ids": [
+            "310000",
+            "310100"
+          ]
+        }
+      ],
+      "explanation": "The exact CostOfSales concept exists in inventory but has no 420000 membership.",
+      "raw_label": "Less : Cost of sales",
+      "semantic_scope_limitations": [
+        "cost_of_sales"
+      ],
+      "semantic_source_label": "cost of sales"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "TOTAL_ONLY",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.276793
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.257152
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.080619
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.070646
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Gross profit",
+          "qname": "ifrs-smes:GrossProfit",
+          "template_group_ids": [
+            "310000"
+          ]
+        }
+      ],
+      "explanation": "GrossProfit is outside 420000; only the broader ProfitLoss total is present.",
+      "raw_label": "Gross profit",
+      "semantic_scope_limitations": [
+        "gross_profit"
+      ],
+      "semantic_source_label": "gross profit"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "TOTAL_ONLY",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.29926
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.20565
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.129619
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.073369
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Total employee benefits expense",
+          "qname": "ssmt-mpers:EmployeeBenefitsExpenseByNature",
+          "template_group_ids": [
+            "320000",
+            "320100"
+          ]
+        }
+      ],
+      "explanation": "The role has no staff/employee expense line; only the broader ProfitLoss total is present.",
+      "raw_label": "Staff costs",
+      "semantic_scope_limitations": [
+        "employee_expense"
+      ],
+      "semantic_source_label": "staff costs"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "TOTAL_ONLY",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.256512
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.255098
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.178277
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.094889
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Total other expenses",
+          "qname": "ifrs-smes:OtherExpenseByFunction",
+          "template_group_ids": [
+            "310000",
+            "310100"
+          ]
+        }
+      ],
+      "explanation": "The role has no operating-expense line; only the broader ProfitLoss total is present.",
+      "raw_label": "Other operating costs",
+      "semantic_scope_limitations": [
+        "operating_expense"
+      ],
+      "semantic_source_label": "other operating costs"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "RELATED_SUPPORTED_CONCEPT",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.341653
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.264711
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.170089
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.053264
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Profit (loss) from operating activities",
+          "qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+          "template_group_ids": [
+            "310000",
+            "320000"
+          ]
+        }
+      ],
+      "explanation": "ProfitLoss is related but broader; the exact operating-activities concept is outside 420000.",
+      "raw_label": "Profit / (Loss) from operating activities",
+      "semantic_scope_limitations": [
+        "operating_profit"
+      ],
+      "semantic_source_label": "profit loss from operating activities"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "TOTAL_ONLY",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.350548
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.263293
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.143818
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.10875
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Total other income",
+          "qname": "ifrs-smes:OtherIncome",
+          "template_group_ids": [
+            "310000",
+            "310100",
+            "320000",
+            "320100"
+          ]
+        }
+      ],
+      "explanation": "OtherIncome is outside 420000; only the broader ProfitLoss total is present.",
+      "raw_label": "Add : Other income",
+      "semantic_scope_limitations": [
+        "ordinary_income"
+      ],
+      "semantic_source_label": "other income"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "RELATED_SUPPORTED_CONCEPT",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.266732
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.178197
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.05375
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.02025
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Profit (loss) before tax, from continuing operations",
+          "qname": "ifrs-smes:ProfitLossBeforeTax",
+          "template_group_ids": [
+            "310000",
+            "320000",
+            "520000"
+          ]
+        }
+      ],
+      "explanation": "ProfitLoss is related but broader; ProfitLossBeforeTax is outside 420000.",
+      "raw_label": "Profit / (Loss) before taxation",
+      "semantic_scope_limitations": [
+        "profit_before_tax"
+      ],
+      "semantic_source_label": "profit loss before taxation"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "NO_CONCEPT_IN_TEMPLATE",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 1,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.215896
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 2,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.170207
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.08962
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.062848
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 5,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 6,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, exchange differences on translation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxExchangeDifferencesOnTranslation",
+          "rank": 7,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, gains (losses) on revaluation",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxGainsLossesOnRevaluation",
+          "rank": 8,
+          "scope_limitation_penalty": 0.3,
+          "semantic_contrast_penalty": 0.4,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": false,
+          "label": "Tax expense",
+          "qname": "ifrs-smes:IncomeTaxExpenseContinuingOperations",
+          "template_group_ids": [
+            "310000",
+            "320000"
+          ]
+        }
+      ],
+      "explanation": "420000 tax concepts apply to OCI components, not ordinary income-tax expense.",
+      "raw_label": "Less : Taxation",
+      "semantic_scope_limitations": [
+        "tax_expense"
+      ],
+      "semantic_source_label": "taxation"
+    },
+    {
+      "candidate_count_after_filter": 17,
+      "candidate_count_before_filter": 21,
+      "classification": "EXACT_SUPPORTED_CONCEPT",
+      "current_top8": [
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "rank": 1,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.786231
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total Profit (Loss)",
+          "qname": "ifrs-smes:ProfitLoss",
+          "rank": 2,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.668448
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to non-controlling interests",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToNoncontrollingInterests",
+          "rank": 3,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.46
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Comprehensive income, attributable to owners of parent",
+          "qname": "ifrs-smes:ComprehensiveIncomeAttributableToOwnersOfParent",
+          "rank": 4,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.0,
+          "total_score": 0.415
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 5,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.6000000000000001,
+          "total_score": 0.069029
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Total other comprehensive income that will not be reclassified to profit or loss, before tax",
+          "qname": "ssmt-mpers:OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossBeforeTax",
+          "rank": 6,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.6000000000000001,
+          "total_score": 0.062175
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income",
+          "qname": "ifrs-smes:OtherComprehensiveIncome",
+          "rank": 7,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.6000000000000001,
+          "total_score": 0.0
+        },
+        {
+          "exclusion_reason": null,
+          "label": "Other comprehensive income, before tax, actuarial gains (losses) on defined benefit plans",
+          "qname": "ifrs-smes:OtherComprehensiveIncomeBeforeTaxActuarialGainsLossesOnDefinedBenefitPlans",
+          "rank": 8,
+          "scope_limitation_penalty": 0.0,
+          "semantic_contrast_penalty": 0.6000000000000001,
+          "total_score": 0.0
+        }
+      ],
+      "expected_global_concepts": [
+        {
+          "in_template_420000": true,
+          "label": "Comprehensive income",
+          "qname": "ifrs-smes:ComprehensiveIncome",
+          "template_group_ids": [
+            "410000",
+            "420000",
+            "610000"
+          ]
+        }
+      ],
+      "explanation": "ComprehensiveIncome is an exact selectable 420000 member.",
+      "raw_label": "Total comprehensive profit / (loss) for the year / period",
+      "semantic_scope_limitations": [],
+      "semantic_source_label": "total comprehensive profit loss for the year period"
+    }
+  ]
+}

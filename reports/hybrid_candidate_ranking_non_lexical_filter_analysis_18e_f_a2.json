@@ -1,0 +1,2589 @@
+{
+  "run_metadata": {
+    "feature": "18E-F-A-2",
+    "generated_at": "2026-06-24T23:46:41Z",
+    "offline_only": true,
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "qwen_called": false,
+    "supervisor_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "production_mapper_integrated": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "ai_suggestion_table_written": false,
+    "auto_applied": false,
+    "auto_accept_recommended": false,
+    "auto_reject_recommended": false,
+    "confirmed_tag_id_mutated": false,
+    "confirmed_tag_id_automation_recommended": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "recovered_row_count": 35,
+    "recovered_true_positive_count": 0,
+    "new_wrong_candidate_rows": 0,
+    "rows_losing_all_candidates": 4,
+    "newly_covered_high_or_critical_risk_rows": 2,
+    "local_source_candidate_counts": {
+      "cash_flow_movement_pack": 59,
+      "concept_playbook_lookup": 549,
+      "equity_movement_pack": 14,
+      "local_concept_family_pack": 58,
+      "section_concept_pack": 131,
+      "statement_role_pack": 46,
+      "taxonomy_structure_hint": 38
+    },
+    "local_source_row_counts": {
+      "cash_flow_movement_pack": 59,
+      "concept_playbook_lookup": 249,
+      "equity_movement_pack": 14,
+      "local_concept_family_pack": 58,
+      "section_concept_pack": 131,
+      "statement_role_pack": 46,
+      "taxonomy_structure_hint": 22
+    },
+    "newly_covered_labels": [
+      {
+        "normalized_label": "operating loss before working capital changes",
+        "count": 5
+      },
+      {
+        "normalized_label": "advertisement",
+        "count": 2
+      },
+      {
+        "normalized_label": "commission paid",
+        "count": 2
+      },
+      {
+        "normalized_label": "membership fee",
+        "count": 2
+      },
+      {
+        "normalized_label": "penalties",
+        "count": 2
+      },
+      {
+        "normalized_label": "seminar fee",
+        "count": 2
+      },
+      {
+        "normalized_label": "upkeep of office equipment",
+        "count": 2
+      },
+      {
+        "normalized_label": "web hosting",
+        "count": 2
+      },
+      {
+        "normalized_label": "amount due from directors",
+        "count": 2
+      },
+      {
+        "normalized_label": "totalt telephone fax and postage",
+        "count": 2
+      },
+      {
+        "normalized_label": "electricity and water",
+        "count": 2
+      },
+      {
+        "normalized_label": "rental of photostat machine",
+        "count": 2
+      },
+      {
+        "normalized_label": "computer and software ba",
+        "count": 2
+      },
+      {
+        "normalized_label": "travelling",
+        "count": 1
+      },
+      {
+        "normalized_label": "website maintenance fee",
+        "count": 1
+      },
+      {
+        "normalized_label": "legal fee",
+        "count": 1
+      },
+      {
+        "normalized_label": "petrol",
+        "count": 1
+      },
+      {
+        "normalized_label": "computer",
+        "count": 1
+      },
+      {
+        "normalized_label": "printing and stationeries 1 242 and mur",
+        "count": 1
+      }
+    ],
+    "top_still_uncovered_labels": [
+      {
+        "normalized_label": "tax expense",
+        "count": 37
+      },
+      {
+        "normalized_label": "trade and other payables",
+        "count": 10
+      },
+      {
+        "normalized_label": "expenses not deductible for tax purposes",
+        "count": 10
+      },
+      {
+        "normalized_label": "ooi boon beng",
+        "count": 8
+      },
+      {
+        "normalized_label": "addition",
+        "count": 8
+      },
+      {
+        "normalized_label": "trade and other receivables",
+        "count": 6
+      },
+      {
+        "normalized_label": "disposal",
+        "count": 6
+      },
+      {
+        "normalized_label": "at beginning and end of the year",
+        "count": 6
+      },
+      {
+        "normalized_label": "1 1",
+        "count": 5
+      },
+      {
+        "normalized_label": "operating profit loss before working capital changes",
+        "count": 4
+      },
+      {
+        "normalized_label": "accruals",
+        "count": 4
+      },
+      {
+        "normalized_label": "audit fee",
+        "count": 4
+      },
+      {
+        "normalized_label": "accumulated losses carried forward",
+        "count": 4
+      },
+      {
+        "normalized_label": "directors remuneration",
+        "count": 4
+      },
+      {
+        "normalized_label": "term loan interests",
+        "count": 4
+      },
+      {
+        "normalized_label": "effect of unabsorbed losses",
+        "count": 4
+      },
+      {
+        "normalized_label": "ung ming xian f",
+        "count": 4
+      },
+      {
+        "normalized_label": "auditor s remuneration",
+        "count": 4
+      },
+      {
+        "normalized_label": "research and development expenditure written off",
+        "count": 4
+      },
+      {
+        "normalized_label": "accumulated losses brought forward",
+        "count": 3
+      },
+      {
+        "normalized_label": "deposits",
+        "count": 3
+      },
+      {
+        "normalized_label": "retained profits carried forward",
+        "count": 2
+      },
+      {
+        "normalized_label": "dr ooi boon beng",
+        "count": 2
+      },
+      {
+        "normalized_label": "ung ming xian",
+        "count": 2
+      },
+      {
+        "normalized_label": "cash at bank",
+        "count": 2
+      },
+      {
+        "normalized_label": "total current assets",
+        "count": 2
+      },
+      {
+        "normalized_label": "total assets discussion",
+        "count": 2
+      },
+      {
+        "normalized_label": "share capital",
+        "count": 2
+      },
+      {
+        "normalized_label": "retained profits accumulated losses",
+        "count": 2
+      },
+      {
+        "normalized_label": "total shareholders equity",
+        "count": 2
+      },
+      {
+        "normalized_label": "amount due to director",
+        "count": 2
+      },
+      {
+        "normalized_label": "total current liabilities",
+        "count": 2
+      },
+      {
+        "normalized_label": "total equity and liabilities draft wie",
+        "count": 2
+      },
+      {
+        "normalized_label": "at beginning and end of the financial year period",
+        "count": 2
+      },
+      {
+        "normalized_label": "epf contribution",
+        "count": 2
+      },
+      {
+        "normalized_label": "director s fee",
+        "count": 2
+      },
+      {
+        "normalized_label": "rental of office",
+        "count": 2
+      },
+      {
+        "normalized_label": "printing and stationeries for discussion",
+        "count": 2
+      },
+      {
+        "normalized_label": "web building fee",
+        "count": 2
+      },
+      {
+        "normalized_label": "ung ming xian f man kan 5 000 de the",
+        "count": 2
+      }
+    ],
+    "safe_for_auto_apply_count": 0,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "qwen_called": false,
+      "supervisor_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "production_mapper_integrated": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "ai_suggestion_table_written": false,
+      "auto_applied": false,
+      "auto_accept_recommended": false,
+      "auto_reject_recommended": false,
+      "confirmed_tag_id_mutated": false,
+      "confirmed_tag_id_automation_recommended": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "recovered_rows": [
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:66:66:current",
+      "normalized_label": "advertisement",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:advertisement",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:66:66:prior",
+      "normalized_label": "advertisement",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:advertisement",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:68:68:current",
+      "normalized_label": "commission paid",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:commission paid",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:68:68:prior",
+      "normalized_label": "commission paid",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:commission paid",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:73:73:current",
+      "normalized_label": "membership fee",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:membership fee",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:73:73:prior",
+      "normalized_label": "membership fee",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:membership fee",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:75:75:current",
+      "normalized_label": "penalties",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:penalties",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:75:75:prior",
+      "normalized_label": "penalties",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:penalties",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:79:79:current",
+      "normalized_label": "seminar fee",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:seminar fee",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:81:81:current",
+      "normalized_label": "travelling",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:travelling",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:82:82:current",
+      "normalized_label": "upkeep of office equipment",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:upkeep",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:82:82:prior",
+      "normalized_label": "upkeep of office equipment",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:upkeep",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:83:83:current",
+      "normalized_label": "website maintenance fee",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:maintenance",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_002",
+      "row_id": "case_002:candidate:106:106:current",
+      "normalized_label": "legal fee",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:legal fee",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_002",
+      "row_id": "case_002:candidate:109:109:current",
+      "normalized_label": "petrol",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:petrol",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_002",
+      "row_id": "case_002:candidate:116:116:current",
+      "normalized_label": "web hosting",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:web hosting",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_002",
+      "row_id": "case_002:candidate:116:116:prior",
+      "normalized_label": "web hosting",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:web hosting",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:19:19:current",
+      "normalized_label": "amount due from directors",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 2,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "concept_playbook_lookup",
+        "section_concept_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:OtherCurrentReceivablesDueFromRelatedParties",
+        "concept_label": "Other Current Receivables Due From Related Parties",
+        "candidate_source": "section_concept_pack",
+        "candidate_sources_combined": [
+          "section_concept_pack"
+        ],
+        "score": 0.6096,
+        "confidence_bucket": "candidate_low",
+        "risk_level": "high",
+        "risk_reasons": [
+          "receivable_payable_detail_ambiguity"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "section_concept_pack"
+        },
+        "match_reasons": [
+          "exact_label:amount due from directors",
+          "local_non_lexical_source",
+          "local_pack:sfp-related-receivable"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [
+          "multiple_competing_candidates_close_in_score"
+        ],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "sfp-related-receivable",
+        "concept_family": "receivables",
+        "statement_families": [
+          "financial_position"
+        ],
+        "compatible_statement_families": [
+          "financial_position"
+        ],
+        "local_candidate_source_type": "section_concept_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:19:19:prior",
+      "normalized_label": "amount due from directors",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 2,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "concept_playbook_lookup",
+        "section_concept_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:OtherCurrentReceivablesDueFromRelatedParties",
+        "concept_label": "Other Current Receivables Due From Related Parties",
+        "candidate_source": "section_concept_pack",
+        "candidate_sources_combined": [
+          "section_concept_pack"
+        ],
+        "score": 0.6096,
+        "confidence_bucket": "candidate_low",
+        "risk_level": "high",
+        "risk_reasons": [
+          "receivable_payable_detail_ambiguity"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "section_concept_pack"
+        },
+        "match_reasons": [
+          "exact_label:amount due from directors",
+          "local_non_lexical_source",
+          "local_pack:sfp-related-receivable"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [
+          "multiple_competing_candidates_close_in_score"
+        ],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "sfp-related-receivable",
+        "concept_family": "receivables",
+        "statement_families": [
+          "financial_position"
+        ],
+        "compatible_statement_families": [
+          "financial_position"
+        ],
+        "local_candidate_source_type": "section_concept_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:43:43:current",
+      "normalized_label": "operating loss before working capital changes",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "cash_flow_movement_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:CashFlowsFromUsedInOperations",
+        "concept_label": "Cash Flows From Used In Operations",
+        "candidate_source": "cash_flow_movement_pack",
+        "candidate_sources_combined": [
+          "cash_flow_movement_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "cash_flow_movement_pack"
+        },
+        "match_reasons": [
+          "exact_label:operating loss before working capital changes",
+          "local_non_lexical_source",
+          "local_pack:cf-operations"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "cf-operations",
+        "concept_family": "cash_flow",
+        "statement_families": [
+          "cash_flow"
+        ],
+        "compatible_statement_families": [
+          "cash_flow"
+        ],
+        "local_candidate_source_type": "cash_flow_movement_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:43:43:prior",
+      "normalized_label": "operating loss before working capital changes",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "ambiguous_xbrl_support",
+      "after_status": "ambiguous_xbrl_support",
+      "local_sources": [
+        "cash_flow_movement_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:CashFlowsFromUsedInOperations",
+        "concept_label": "Cash Flows From Used In Operations",
+        "candidate_source": "cash_flow_movement_pack",
+        "candidate_sources_combined": [
+          "cash_flow_movement_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "cash_flow_movement_pack"
+        },
+        "match_reasons": [
+          "exact_label:operating loss before working capital changes",
+          "local_non_lexical_source",
+          "local_pack:cf-operations"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "cf-operations",
+        "concept_family": "cash_flow",
+        "statement_families": [
+          "cash_flow"
+        ],
+        "compatible_statement_families": [
+          "cash_flow"
+        ],
+        "local_candidate_source_type": "cash_flow_movement_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:81:81:current",
+      "normalized_label": "computer",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:computer",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:87:87:current",
+      "normalized_label": "seminar fee",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "exact_label:seminar fee",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:89:89:current",
+      "normalized_label": "totalt telephone fax and postage",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:telephone",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:89:89:prior",
+      "normalized_label": "totalt telephone fax and postage",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:telephone",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_004",
+      "row_id": "case_004:candidate:39:39:current",
+      "normalized_label": "operating loss before working capital changes",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "cash_flow_movement_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:CashFlowsFromUsedInOperations",
+        "concept_label": "Cash Flows From Used In Operations",
+        "candidate_source": "cash_flow_movement_pack",
+        "candidate_sources_combined": [
+          "cash_flow_movement_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "cash_flow_movement_pack"
+        },
+        "match_reasons": [
+          "exact_label:operating loss before working capital changes",
+          "local_non_lexical_source",
+          "local_pack:cf-operations"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "cf-operations",
+        "concept_family": "cash_flow",
+        "statement_families": [
+          "cash_flow"
+        ],
+        "compatible_statement_families": [
+          "cash_flow"
+        ],
+        "local_candidate_source_type": "cash_flow_movement_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:47:47:current",
+      "normalized_label": "operating loss before working capital changes",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "cash_flow_movement_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:CashFlowsFromUsedInOperations",
+        "concept_label": "Cash Flows From Used In Operations",
+        "candidate_source": "cash_flow_movement_pack",
+        "candidate_sources_combined": [
+          "cash_flow_movement_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "cash_flow_movement_pack"
+        },
+        "match_reasons": [
+          "exact_label:operating loss before working capital changes",
+          "local_non_lexical_source",
+          "local_pack:cf-operations"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "cf-operations",
+        "concept_family": "cash_flow",
+        "statement_families": [
+          "cash_flow"
+        ],
+        "compatible_statement_families": [
+          "cash_flow"
+        ],
+        "local_candidate_source_type": "cash_flow_movement_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:47:47:prior",
+      "normalized_label": "operating loss before working capital changes",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "cash_flow_movement_pack"
+      ],
+      "top_candidate": {
+        "qname": "ssmt-mpers:CashFlowsFromUsedInOperations",
+        "concept_label": "Cash Flows From Used In Operations",
+        "candidate_source": "cash_flow_movement_pack",
+        "candidate_sources_combined": [
+          "cash_flow_movement_pack"
+        ],
+        "score": 0.7048,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 1.0,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "cash_flow_movement_pack"
+        },
+        "match_reasons": [
+          "exact_label:operating loss before working capital changes",
+          "local_non_lexical_source",
+          "local_pack:cf-operations"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "cf-operations",
+        "concept_family": "cash_flow",
+        "statement_families": [
+          "cash_flow"
+        ],
+        "compatible_statement_families": [
+          "cash_flow"
+        ],
+        "local_candidate_source_type": "cash_flow_movement_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:96:96:current",
+      "normalized_label": "electricity and water",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:electricity",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:96:96:prior",
+      "normalized_label": "electricity and water",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:electricity",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:100:100:current",
+      "normalized_label": "printing and stationeries 1 242 and mur",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:printing",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:102:102:current",
+      "normalized_label": "rental of photostat machine",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:rental",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:102:102:prior",
+      "normalized_label": "rental of photostat machine",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:rental",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:113:113:current",
+      "normalized_label": "computer and software ba",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:computer",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    },
+    {
+      "sample_id": "case_005",
+      "row_id": "case_005:candidate:113:113:prior",
+      "normalized_label": "computer and software ba",
+      "baseline_candidate_count": 0,
+      "enhanced_candidate_count": 1,
+      "before_status": "not_evaluable",
+      "after_status": "not_evaluable",
+      "local_sources": [
+        "local_concept_family_pack"
+      ],
+      "top_candidate": {
+        "qname": "ifrs-smes:OtherExpenseByFunction",
+        "concept_label": "Other Expense By Function",
+        "candidate_source": "local_concept_family_pack",
+        "candidate_sources_combined": [
+          "local_concept_family_pack"
+        ],
+        "score": 0.63,
+        "confidence_bucket": "candidate_medium",
+        "risk_level": "medium",
+        "risk_reasons": [
+          "local_structured_candidate_requires_review"
+        ],
+        "evidence": {
+          "label_similarity": 0.78,
+          "statement_family_match": true,
+          "section_context_match": true,
+          "row_role_match": true,
+          "template_match": false,
+          "note_link_match": false,
+          "format_memory_match": false,
+          "dictionary_match": false,
+          "row_order_match": false,
+          "prior_exact_match_evidence": 0,
+          "cached_qwen_match": false,
+          "local_structured_match": true,
+          "local_candidate_source_type": "local_concept_family_pack"
+        },
+        "match_reasons": [
+          "contains_label:computer",
+          "local_non_lexical_source",
+          "local_pack:pl-expense-component"
+        ],
+        "blocking_reasons": [
+          "local_candidate_requires_review"
+        ],
+        "ambiguity_reasons": [],
+        "requires_human_review": true,
+        "safe_for_auto_apply": false,
+        "source_id": "pl-expense-component",
+        "concept_family": "profit_loss",
+        "statement_families": [
+          "income_statement"
+        ],
+        "compatible_statement_families": [
+          "income_statement"
+        ],
+        "local_candidate_source_type": "local_concept_family_pack",
+        "rank": 1
+      }
+    }
+  ],
+  "recovered_true_positive_rows": [],
+  "new_wrong_candidate_rows": [],
+  "new_high_risk_rows": [
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:19:19:current",
+      "normalized_label": "amount due from directors"
+    },
+    {
+      "sample_id": "case_003",
+      "row_id": "case_003:candidate:19:19:prior",
+      "normalized_label": "amount due from directors"
+    }
+  ],
+  "rows_losing_all_candidates": [
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:39:39:current",
+      "normalized_label": "operating profit loss before working capital changes",
+      "baseline_candidate_count": 1,
+      "filtered_candidate_count": 1,
+      "filtered_candidates": [
+        {
+          "qname": "ifrs-smes:ProfitLossBeforeTax",
+          "concept_label": "Profit (loss) before tax, from continuing operations",
+          "candidate_sources_combined": [
+            "taxonomy_lexical"
+          ],
+          "score": 0.4808,
+          "risk_level": "high",
+          "filter_reasons": [
+            "high_risk_candidate_score_below_tightened_threshold"
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "case_001",
+      "row_id": "case_001:candidate:39:39:prior",
+      "normalized_label": "operating profit loss before working capital changes",
+      "baseline_candidate_count": 1,
+      "filtered_candidate_count": 1,
+      "filtered_candidates": [
+        {
+          "qname": "ifrs-smes:ProfitLossBeforeTax",
+          "concept_label": "Profit (loss) before tax, from continuing operations",
+          "candidate_sources_combined": [
+            "taxonomy_lexical"
+          ],
+          "score": 0.4808,
+          "risk_level": "high",
+          "filter_reasons": [
+            "high_risk_candidate_score_below_tightened_threshold"
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "row_id": "case_002:candidate:48:48:current",
+      "normalized_label": "operating profit loss before working capital changes",
+      "baseline_candidate_count": 1,
+      "filtered_candidate_count": 1,
+      "filtered_candidates": [
+        {
+          "qname": "ifrs-smes:ProfitLossBeforeTax",
+          "concept_label": "Profit (loss) before tax, from continuing operations",
+          "candidate_sources_combined": [
+            "taxonomy_lexical"
+          ],
+          "score": 0.4808,
+          "risk_level": "high",
+          "filter_reasons": [
+            "high_risk_candidate_score_below_tightened_threshold"
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "case_002",
+      "row_id": "case_002:candidate:48:48:prior",
+      "normalized_label": "operating profit loss before working capital changes",
+      "baseline_candidate_count": 1,
+      "filtered_candidate_count": 1,
+      "filtered_candidates": [
+        {
+          "qname": "ifrs-smes:ProfitLossBeforeTax",
+          "concept_label": "Profit (loss) before tax, from continuing operations",
+          "candidate_sources_combined": [
+            "taxonomy_lexical"
+          ],
+          "score": 0.4808,
+          "risk_level": "high",
+          "filter_reasons": [
+            "high_risk_candidate_score_below_tightened_threshold"
+          ]
+        }
+      ]
+    }
+  ]
+}

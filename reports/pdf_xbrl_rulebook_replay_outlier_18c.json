@@ -1,0 +1,2119 @@
+{
+  "run_metadata": {
+    "feature": "18C",
+    "generated_at": "2026-06-18T13:39:28Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "pdf_observations": 63,
+    "replay_predictions": 0,
+    "coverage_rate": 0.0,
+    "active_rule_predictions": 0,
+    "active_rule_coverage_rate": 0.0,
+    "active_rule_qname_value_matches": 0,
+    "active_rule_false_positive_count": 0,
+    "active_rule_precision_on_evaluable": null,
+    "exact_qname_value_period_matches": 0,
+    "qname_value_matches": 0,
+    "false_positive_count": 0,
+    "not_evaluable_count": 0,
+    "precision_on_evaluable": null,
+    "strong_rule_predictions": 0,
+    "strong_rule_qname_value_matches": 0,
+    "strong_rule_false_positive_count": 0,
+    "strong_rule_precision": null,
+    "usable_rule_predictions": 0,
+    "usable_rule_qname_value_matches": 0,
+    "usable_rule_false_positive_count": 0,
+    "usable_rule_precision": null,
+    "review_required_rule_predictions": 0,
+    "review_required_rule_qname_value_matches": 0,
+    "review_required_rule_false_positive_count": 0,
+    "review_required_rule_precision": null,
+    "no_rule_match_count": 63,
+    "evaluation_status_counts": {
+      "not_evaluable": 63
+    },
+    "replay_confidence_counts": {
+      "no_rule_match": 63
+    },
+    "sample_count": 1
+  },
+  "samples": [
+    {
+      "sample_id": "case_006",
+      "company_name": "006-Shield-Plus",
+      "pdf_observations": 63,
+      "xbrl_numeric_facts": 377,
+      "summary": {
+        "pdf_observations": 63,
+        "replay_predictions": 0,
+        "coverage_rate": 0.0,
+        "active_rule_predictions": 0,
+        "active_rule_coverage_rate": 0.0,
+        "active_rule_qname_value_matches": 0,
+        "active_rule_false_positive_count": 0,
+        "active_rule_precision_on_evaluable": null,
+        "exact_qname_value_period_matches": 0,
+        "qname_value_matches": 0,
+        "false_positive_count": 0,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": null,
+        "strong_rule_predictions": 0,
+        "strong_rule_qname_value_matches": 0,
+        "strong_rule_false_positive_count": 0,
+        "strong_rule_precision": null,
+        "usable_rule_predictions": 0,
+        "usable_rule_qname_value_matches": 0,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": null,
+        "review_required_rule_predictions": 0,
+        "review_required_rule_qname_value_matches": 0,
+        "review_required_rule_false_positive_count": 0,
+        "review_required_rule_precision": null,
+        "no_rule_match_count": 63,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "not_evaluable": 63
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 63
+        },
+        "active_rules_used": 0,
+        "unused_active_rules": [
+          "18B-R0019-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+          "18B-R0150-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+          "18B-R0195-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+          "18B-R0196-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+          "18B-R0202-total-current-assets-ifrs-smes-currentassets",
+          "18B-R0214-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+          "18B-R0217-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit",
+          "18B-R0220-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+          "18B-R0250-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits"
+        ],
+        "labels_covered_by_rules": [],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "net loss for the year",
+            "count": 4
+          },
+          {
+            "normalized_label": "siah teong ban",
+            "count": 2
+          },
+          {
+            "normalized_label": "lee ah kim",
+            "count": 2
+          },
+          {
+            "normalized_label": "other receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "total asset",
+            "count": 2
+          },
+          {
+            "normalized_label": "contributed share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated loss",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency",
+            "count": 2
+          },
+          {
+            "normalized_label": "other payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "bank overdraft unsecured",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "administration expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax",
+            "count": 2
+          },
+          {
+            "normalized_label": "tax expense",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss attributable to owners of the company",
+            "count": 2
+          },
+          {
+            "normalized_label": "other comprehensive income for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax and working capital changes",
+            "count": 2
+          },
+          {
+            "normalized_label": "decrease in receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "decrease in payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "increase in director s account",
+            "count": 2
+          },
+          {
+            "normalized_label": "net decrease increase in cash and cash equivalents",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of year",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at end of period",
+            "count": 2
+          },
+          {
+            "normalized_label": "deposit",
+            "count": 2
+          },
+          {
+            "normalized_label": "no par value 2",
+            "count": 2
+          },
+          {
+            "normalized_label": "accruals",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [],
+        "top_missed_labels": [
+          {
+            "normalized_label": "net loss for the year",
+            "count": 4
+          },
+          {
+            "normalized_label": "siah teong ban",
+            "count": 2
+          },
+          {
+            "normalized_label": "lee ah kim",
+            "count": 2
+          },
+          {
+            "normalized_label": "other receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "total asset",
+            "count": 2
+          },
+          {
+            "normalized_label": "contributed share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated loss",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency",
+            "count": 2
+          },
+          {
+            "normalized_label": "other payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "bank overdraft unsecured",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "administration expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax",
+            "count": 2
+          },
+          {
+            "normalized_label": "tax expense",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss attributable to owners of the company",
+            "count": 2
+          },
+          {
+            "normalized_label": "other comprehensive income for the year",
+            "count": 2
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:8:8:current",
+          "pdf_label": "- Owners of the Company",
+          "normalized_label": "owners of the company",
+          "pdf_value": "13171",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:9:9:current",
+          "pdf_label": "Siah Teong Ban",
+          "normalized_label": "siah teong ban",
+          "pdf_value": "1",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:9:9:prior",
+          "pdf_label": "Siah Teong Ban",
+          "normalized_label": "siah teong ban",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:10:10:current",
+          "pdf_label": "Lee Ah Kim",
+          "normalized_label": "lee ah kim",
+          "pdf_value": "1",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:10:10:prior",
+          "pdf_label": "Lee Ah Kim",
+          "normalized_label": "lee ah kim",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:11:11:current",
+          "pdf_label": "Other receivable",
+          "normalized_label": "other receivable",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "label matched rule but statement family did not match",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": [
+            {
+              "rule_id": "18B-R0240-trade-and-other-receivables-ssmt-mpers-othercurrentmiscellan",
+              "target_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+              "confidence_tier": "weak",
+              "rule_status": "review_required",
+              "statement_family": "notes"
+            }
+          ]
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:11:11:prior",
+          "pdf_label": "Other receivable",
+          "normalized_label": "other receivable",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "label matched rule but statement family did not match",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": [
+            {
+              "rule_id": "18B-R0240-trade-and-other-receivables-ssmt-mpers-othercurrentmiscellan",
+              "target_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+              "confidence_tier": "weak",
+              "rule_status": "review_required",
+              "statement_family": "notes"
+            }
+          ]
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:12:12:current",
+          "pdf_label": "Total Asset",
+          "normalized_label": "total asset",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:12:12:prior",
+          "pdf_label": "Total Asset",
+          "normalized_label": "total asset",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:13:13:current",
+          "pdf_label": "Contributed share capital",
+          "normalized_label": "contributed share capital",
+          "pdf_value": "2",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:13:13:prior",
+          "pdf_label": "Contributed share capital",
+          "normalized_label": "contributed share capital",
+          "pdf_value": "2",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:14:14:current",
+          "pdf_label": "Accumulated loss",
+          "normalized_label": "accumulated loss",
+          "pdf_value": "-194548",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:14:14:prior",
+          "pdf_label": "Accumulated loss",
+          "normalized_label": "accumulated loss",
+          "pdf_value": "-181377",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:15:15:current",
+          "pdf_label": "Capital Deficiency",
+          "normalized_label": "capital deficiency",
+          "pdf_value": "-194546",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:15:15:prior",
+          "pdf_label": "Capital Deficiency",
+          "normalized_label": "capital deficiency",
+          "pdf_value": "-181375",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:16:16:current",
+          "pdf_label": "Other payable",
+          "normalized_label": "other payable",
+          "pdf_value": "1300",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:16:16:prior",
+          "pdf_label": "Other payable",
+          "normalized_label": "other payable",
+          "pdf_value": "2244",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:17:17:current",
+          "pdf_label": "Amount due to director",
+          "normalized_label": "amount due to director",
+          "pdf_value": "192079",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:17:17:prior",
+          "pdf_label": "Amount due to director",
+          "normalized_label": "amount due to director",
+          "pdf_value": "179316",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:18:18:current",
+          "pdf_label": "Bank overdraft - unsecured",
+          "normalized_label": "bank overdraft unsecured",
+          "pdf_value": "1567",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:18:18:prior",
+          "pdf_label": "Bank overdraft - unsecured",
+          "normalized_label": "bank overdraft unsecured",
+          "pdf_value": "215",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:19:19:current",
+          "pdf_label": "Total current liabilities",
+          "normalized_label": "total current liabilities",
+          "pdf_value": "194946",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:19:19:prior",
+          "pdf_label": "Total current liabilities",
+          "normalized_label": "total current liabilities",
+          "pdf_value": "181775",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:20:20:current",
+          "pdf_label": "Capital Deficiency and Liabilities",
+          "normalized_label": "capital deficiency and liabilities",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:20:20:prior",
+          "pdf_label": "Capital Deficiency and Liabilities",
+          "normalized_label": "capital deficiency and liabilities",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "financial_position",
+          "pdf_statement_type": "Statement of Financial Position",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:21:21:current",
+          "pdf_label": "Revenue",
+          "normalized_label": "revenue",
+          "pdf_value": "25258",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:21:21:prior",
+          "pdf_label": "Revenue",
+          "normalized_label": "revenue",
+          "pdf_value": "26933",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:22:22:current",
+          "pdf_label": "Administration expenses",
+          "normalized_label": "administration expenses",
+          "pdf_value": "-38429",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:22:22:prior",
+          "pdf_label": "Administration expenses",
+          "normalized_label": "administration expenses",
+          "pdf_value": "-38447",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:23:23:current",
+          "pdf_label": "Loss before tax",
+          "normalized_label": "loss before tax",
+          "pdf_value": "-13171",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:23:23:prior",
+          "pdf_label": "Loss before tax",
+          "normalized_label": "loss before tax",
+          "pdf_value": "-11514",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:24:24:current",
+          "pdf_label": "Tax expense",
+          "normalized_label": "tax expense",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:24:24:prior",
+          "pdf_label": "Tax expense",
+          "normalized_label": "tax expense",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:25:25:current",
+          "pdf_label": "Loss after tax and representing total comprehensive loss for the year",
+          "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+          "pdf_value": "-13171",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:25:25:prior",
+          "pdf_label": "Loss after tax and representing total comprehensive loss for the year",
+          "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+          "pdf_value": "-11514",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:26:26:current",
+          "pdf_label": "Loss attributable to: Owners of the Company",
+          "normalized_label": "loss attributable to owners of the company",
+          "pdf_value": "-13171",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:26:26:prior",
+          "pdf_label": "Loss attributable to: Owners of the Company",
+          "normalized_label": "loss attributable to owners of the company",
+          "pdf_value": "-11514",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:28:28:current",
+          "pdf_label": "Net loss for the year",
+          "normalized_label": "net loss for the year",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:28:28:prior",
+          "pdf_label": "Net loss for the year",
+          "normalized_label": "net loss for the year",
+          "pdf_value": "-11514",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:29:29:current",
+          "pdf_label": "Other comprehensive income for the year",
+          "normalized_label": "other comprehensive income for the year",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:29:29:prior",
+          "pdf_label": "Other comprehensive income for the year",
+          "normalized_label": "other comprehensive income for the year",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:31:31:current",
+          "pdf_label": "Net loss for the year",
+          "normalized_label": "net loss for the year",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:31:31:prior",
+          "pdf_label": "Net loss for the year",
+          "normalized_label": "net loss for the year",
+          "pdf_value": "-13171",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "income_statement",
+          "pdf_statement_type": "Statement of Comprehensive Income",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:34:34:current",
+          "pdf_label": "Loss before tax and working capital changes",
+          "normalized_label": "loss before tax and working capital changes",
+          "pdf_value": "-13171",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:34:34:prior",
+          "pdf_label": "Loss before tax and working capital changes",
+          "normalized_label": "loss before tax and working capital changes",
+          "pdf_value": "-11514",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:35:35:current",
+          "pdf_label": "Decrease in receivable",
+          "normalized_label": "decrease in receivable",
+          "pdf_value": "0",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:35:35:prior",
+          "pdf_label": "Decrease in receivable",
+          "normalized_label": "decrease in receivable",
+          "pdf_value": "2292",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:36:36:current",
+          "pdf_label": "Decrease in payable",
+          "normalized_label": "decrease in payable",
+          "pdf_value": "-944",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:36:36:prior",
+          "pdf_label": "Decrease in payable",
+          "normalized_label": "decrease in payable",
+          "pdf_value": "-247",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:37:37:current",
+          "pdf_label": "Increase in director's account",
+          "normalized_label": "increase in director s account",
+          "pdf_value": "12763",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:37:37:prior",
+          "pdf_label": "Increase in director's account",
+          "normalized_label": "increase in director s account",
+          "pdf_value": "14352",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:38:38:current",
+          "pdf_label": "NET (DECREASE) INCREASE IN CASH AND CASH EQUIVALENTS",
+          "normalized_label": "net decrease increase in cash and cash equivalents",
+          "pdf_value": "-1352",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:38:38:prior",
+          "pdf_label": "NET (DECREASE) INCREASE IN CASH AND CASH EQUIVALENTS",
+          "normalized_label": "net decrease increase in cash and cash equivalents",
+          "pdf_value": "4883",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:39:39:current",
+          "pdf_label": "CASH AND CASH EQUIVALENTS AT BEGINNING OF YEAR",
+          "normalized_label": "cash and cash equivalents at beginning of year",
+          "pdf_value": "-215",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:39:39:prior",
+          "pdf_label": "CASH AND CASH EQUIVALENTS AT BEGINNING OF YEAR",
+          "normalized_label": "cash and cash equivalents at beginning of year",
+          "pdf_value": "-5098",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:40:40:current",
+          "pdf_label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "normalized_label": "cash and cash equivalents at end of period",
+          "pdf_value": "-1567",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:40:40:prior",
+          "pdf_label": "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)",
+          "normalized_label": "cash and cash equivalents at end of period",
+          "pdf_value": "-215",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "cash_flow",
+          "pdf_statement_type": "Statement of Cash Flows",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:41:41:current",
+          "pdf_label": "Deposit",
+          "normalized_label": "deposit",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:41:41:prior",
+          "pdf_label": "Deposit",
+          "normalized_label": "deposit",
+          "pdf_value": "400",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:42:42:current",
+          "pdf_label": "no par value 2",
+          "normalized_label": "no par value 2",
+          "pdf_value": "2",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:42:42:prior",
+          "pdf_label": "no par value 2",
+          "normalized_label": "no par value 2",
+          "pdf_value": "22",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:43:43:current",
+          "pdf_label": "Accruals",
+          "normalized_label": "accruals",
+          "pdf_value": "1300",
+          "pdf_period": {
+            "value_role": "current",
+            "expected_year": 2024
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        },
+        {
+          "sample_id": "case_006",
+          "company_name": "006-Shield-Plus",
+          "pdf_row_id": "case_006:candidate:43:43:prior",
+          "pdf_label": "Accruals",
+          "normalized_label": "accruals",
+          "pdf_value": "1600",
+          "pdf_period": {
+            "value_role": "prior",
+            "expected_year": 2023
+          },
+          "pdf_statement_family": "notes",
+          "pdf_statement_type": "Notes to the Financial Statements",
+          "matched_rule_id": null,
+          "rule_confidence_tier": null,
+          "predicted_qname": null,
+          "predicted_concept_label": null,
+          "replay_confidence": "no_rule_match",
+          "replay_reason": "no matching active or review-required rule",
+          "evaluation_status": "not_evaluable",
+          "xbrl_support_status": "no_prediction",
+          "matched_xbrl_fact_id": null,
+          "matched_xbrl_value": null,
+          "matched_xbrl_context": null,
+          "error_reason": null,
+          "competing_rules": []
+        }
+      ],
+      "format_mismatch_diagnostics": {
+        "coverage_rate": 0.0,
+        "no_rule_match_count": 63,
+        "top_missed_labels": [
+          {
+            "normalized_label": "net loss for the year",
+            "count": 4
+          },
+          {
+            "normalized_label": "siah teong ban",
+            "count": 2
+          },
+          {
+            "normalized_label": "lee ah kim",
+            "count": 2
+          },
+          {
+            "normalized_label": "other receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "total asset",
+            "count": 2
+          },
+          {
+            "normalized_label": "contributed share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated loss",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency",
+            "count": 2
+          },
+          {
+            "normalized_label": "other payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "bank overdraft unsecured",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "administration expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax",
+            "count": 2
+          },
+          {
+            "normalized_label": "tax expense",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss attributable to owners of the company",
+            "count": 2
+          },
+          {
+            "normalized_label": "other comprehensive income for the year",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ]
+}

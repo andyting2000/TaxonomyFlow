@@ -1,0 +1,22 @@
+{
+  "batch_size": 20,
+  "dimension_discovery": null,
+  "errors": [],
+  "existing_embeddings": 0,
+  "feature": "13D",
+  "force": false,
+  "generated": 0,
+  "inserted": 0,
+  "legacy_columns_written": false,
+  "limit": 5,
+  "mode": "apply",
+  "model": "text-embedding-3-large",
+  "mutates_database": true,
+  "production_matcher_changed": false,
+  "provider": "openai",
+  "skipped_existing": 0,
+  "source": "all",
+  "source_records": 0,
+  "updated": 0,
+  "would_generate": 0
+}

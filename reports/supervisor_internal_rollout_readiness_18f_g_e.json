@@ -1,0 +1,114 @@
+{
+  "feature": "18F-G-E",
+  "title": "Supervisor internal reviewer rollout readiness",
+  "generated_at": "2026-07-28",
+  "status": "pass",
+  "scope": "controlled_internal_reviewer_only",
+  "broad_production_rollout_complete": false,
+  "controlled_internal_rollout_approved": true,
+  "baseline": {
+    "dependencies_complete": [
+      "18F-G-D",
+      "18F-G-D-resume"
+    ],
+    "runtime_revision_verified_by_prior_smoke": "18F-G-D-hotfix-1+",
+    "live_smoke_jobs": [
+      59,
+      60,
+      61
+    ],
+    "live_smoke_passed": true
+  },
+  "readiness_controls": {
+    "explicit_internal_reviewer_boundary": true,
+    "ownership_remains_authoritative": true,
+    "production_defaults_disabled": true,
+    "manual_live_review_only": true,
+    "manual_guided_remap_only": true,
+    "automatic_review": false,
+    "automatic_remap": false,
+    "auto_apply": false,
+    "confirmed_tag_id_automation": false,
+    "final_mapping_automation": false,
+    "batch_limit_documented": true,
+    "retry_limit": 1,
+    "kill_switch_documented_and_tested": true,
+    "read_only_audit_export_available": true,
+    "provider_failure_runbook_available": true,
+    "rollback_available_without_code_change": true
+  },
+  "implementation": {
+    "access_model": "admin_or_explicit_environment_allowlist",
+    "allowlist_setting": "SUPERVISOR_ORCHESTRATION_ALLOWED_USER_IDS",
+    "allowlist_default": "",
+    "invalid_allowlist_behavior": "fail_closed",
+    "capability_allowlist_identity_disclosure": false,
+    "new_database_table": false,
+    "new_database_migration": false,
+    "frontend_source_changed": false,
+    "live_provider_called": false,
+    "production_database_mutated": false
+  },
+  "operational_helper": {
+    "path": "scripts/report_supervisor_internal_rollout_status.py",
+    "mode": "read_only",
+    "provider_calls": 0,
+    "database_mutations": 0,
+    "example": "python -B scripts\\report_supervisor_internal_rollout_status.py --job-ids 59,60,61"
+  },
+  "recommended_cohort": {
+    "reviewers": "1-2 explicit internal reviewers",
+    "filings": "existing REVIEW filings only",
+    "initial_action_mode": "single-row explicit actions",
+    "observation_window": "first 25-50 live reviews or 1-2 weeks",
+    "large_batch_execution_initially": false
+  },
+  "verification": {
+    "supervisor_focused_tests": {
+      "passed": 170,
+      "failed": 0
+    },
+    "new_authorization_tests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "new_safety_tests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "ownership_tests": {
+      "passed": 18,
+      "failed": 0
+    },
+    "auth_tests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "admin_tests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "mapping_tests": {
+      "passed": 34,
+      "failed": 0
+    },
+    "frontend_auth_queue_tests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "frontend_build_modules": 1586,
+    "full_backend_tests": {
+      "passed": 1266,
+      "failed": 0,
+      "elapsed_seconds": 35.893
+    },
+    "operational_helper_help": "pass"
+  },
+  "residual_limits": [
+    "The live-call concurrency bound is per API process, not distributed.",
+    "Revision actor identity is resolved through the linked review or owned job because no duplicate provenance table was added.",
+    "Frontend visibility flags require a rebuild/deployment; backend flags are the immediate kill switch."
+  ],
+  "recommendation": "Proceed only with the documented controlled internal reviewer cohort. Do not enable general-user access or automatic mapping behavior.",
+  "recommended_next_feature": "18F-G-F - Execute controlled internal reviewer rollout and collect first-use operational evidence"
+}

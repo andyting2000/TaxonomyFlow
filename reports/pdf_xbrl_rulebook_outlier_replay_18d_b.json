@@ -1,0 +1,417 @@
+{
+  "run_metadata": {
+    "feature": "18D-B",
+    "generated_at": "2026-06-21T09:04:51Z",
+    "read_only": true,
+    "offline_only": true,
+    "dataset_dir": "benchmark_mbrs_pairs",
+    "external_llm_called": false,
+    "external_provider_called": false,
+    "azure_di_live_call_made": false,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "api_changed": false,
+    "ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "pdf_observations": 63,
+    "replay_predictions": 0,
+    "coverage_rate": 0.0,
+    "active_rule_predictions": 0,
+    "active_rule_coverage_rate": 0.0,
+    "active_rule_qname_value_matches": 0,
+    "active_rule_false_positive_count": 0,
+    "active_rule_precision_on_evaluable": null,
+    "exact_qname_value_period_matches": 0,
+    "qname_value_matches": 0,
+    "false_positive_count": 0,
+    "not_evaluable_count": 0,
+    "precision_on_evaluable": null,
+    "strong_rule_predictions": 0,
+    "strong_rule_qname_value_matches": 0,
+    "strong_rule_false_positive_count": 0,
+    "strong_rule_precision": null,
+    "usable_rule_predictions": 0,
+    "usable_rule_qname_value_matches": 0,
+    "usable_rule_false_positive_count": 0,
+    "usable_rule_precision": null,
+    "review_required_rule_predictions": 0,
+    "review_required_rule_qname_value_matches": 0,
+    "review_required_rule_false_positive_count": 0,
+    "review_required_rule_precision": null,
+    "no_rule_match_count": 63,
+    "evaluation_status_counts": {
+      "not_evaluable": 63
+    },
+    "replay_confidence_counts": {
+      "no_rule_match": 63
+    },
+    "sample_count": 1,
+    "rules_remain_safe_on_outlier": true,
+    "should_remain_excluded_from_rulebook_training": true,
+    "training_exclusion_reason": "outlier remains separate diagnostic evidence and is not mixed into main metrics",
+    "outlier_metrics_mixed_into_main_precision": false,
+    "safety": {
+      "external_llm_called": false,
+      "external_provider_called": false,
+      "azure_di_live_call_made": false,
+      "database_mutated": false,
+      "production_behavior_changed": false,
+      "api_changed": false,
+      "ui_changed": false,
+      "xbrl_generated": false,
+      "arelle_run": false
+    }
+  },
+  "samples": [
+    {
+      "sample_id": "case_006",
+      "company_name": "006-Shield-Plus",
+      "pdf_observations": 63,
+      "xbrl_numeric_facts": 377,
+      "summary": {
+        "pdf_observations": 63,
+        "replay_predictions": 0,
+        "coverage_rate": 0.0,
+        "active_rule_predictions": 0,
+        "active_rule_coverage_rate": 0.0,
+        "active_rule_qname_value_matches": 0,
+        "active_rule_false_positive_count": 0,
+        "active_rule_precision_on_evaluable": null,
+        "exact_qname_value_period_matches": 0,
+        "qname_value_matches": 0,
+        "false_positive_count": 0,
+        "not_evaluable_count": 0,
+        "precision_on_evaluable": null,
+        "strong_rule_predictions": 0,
+        "strong_rule_qname_value_matches": 0,
+        "strong_rule_false_positive_count": 0,
+        "strong_rule_precision": null,
+        "usable_rule_predictions": 0,
+        "usable_rule_qname_value_matches": 0,
+        "usable_rule_false_positive_count": 0,
+        "usable_rule_precision": null,
+        "review_required_rule_predictions": 0,
+        "review_required_rule_qname_value_matches": 0,
+        "review_required_rule_false_positive_count": 0,
+        "review_required_rule_precision": null,
+        "no_rule_match_count": 63,
+        "conflicting_rule_match_count": 0,
+        "evaluation_status_counts": {
+          "not_evaluable": 63
+        },
+        "replay_confidence_counts": {
+          "no_rule_match": 63
+        },
+        "active_rules_used": 0,
+        "unused_active_rules": [
+          "18B-R0011-add-other-income-ifrs-smes-otherincome",
+          "18B-R0019-amount-due-to-director-a-ssmt-mpers-othernoncurrentliabiliti",
+          "18B-R0038-bank-balances-ssmt-cashandbankbalances",
+          "18B-R0144-property-plant-and-equipment-ifrs-smes-propertyplantandequip",
+          "18B-R0150-rental-received-ssmt-mpers-otherrentalincomeonlandandbuildin",
+          "18B-R0195-term-loan-r-discussione-ssmt-mpers-noncurrentportionofnoncur",
+          "18B-R0196-term-loans-repayments-ifrs-smes-cashflowsfromusedinfinancing",
+          "18B-R0202-total-current-assets-ifrs-smes-currentassets",
+          "18B-R0214-total-liabilities-d-por-current-fral-to-ifrs-smes-liabilitie",
+          "18B-R0217-total-non-current-liabilities-w-ifrs-smes-noncurrentliabilit",
+          "18B-R0218-total-operating-expenses-ifrs-smes-otherexpensebyfunction",
+          "18B-R0220-total-operating-expenses-folaviceral-ifrs-smes-otherexpenseb",
+          "18B-R0250-utilities-deposits-ssmt-mpers-othercurrentnontradedeposits"
+        ],
+        "labels_covered_by_rules": [],
+        "labels_not_covered_by_rules": [
+          {
+            "normalized_label": "net loss for the year",
+            "count": 4
+          },
+          {
+            "normalized_label": "siah teong ban",
+            "count": 2
+          },
+          {
+            "normalized_label": "lee ah kim",
+            "count": 2
+          },
+          {
+            "normalized_label": "other receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "total asset",
+            "count": 2
+          },
+          {
+            "normalized_label": "contributed share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated loss",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency",
+            "count": 2
+          },
+          {
+            "normalized_label": "other payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "bank overdraft unsecured",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "administration expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax",
+            "count": 2
+          },
+          {
+            "normalized_label": "tax expense",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss attributable to owners of the company",
+            "count": 2
+          },
+          {
+            "normalized_label": "other comprehensive income for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax and working capital changes",
+            "count": 2
+          },
+          {
+            "normalized_label": "decrease in receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "decrease in payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "increase in director s account",
+            "count": 2
+          },
+          {
+            "normalized_label": "net decrease increase in cash and cash equivalents",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at beginning of year",
+            "count": 2
+          },
+          {
+            "normalized_label": "cash and cash equivalents at end of period",
+            "count": 2
+          },
+          {
+            "normalized_label": "deposit",
+            "count": 2
+          },
+          {
+            "normalized_label": "no par value 2",
+            "count": 2
+          },
+          {
+            "normalized_label": "accruals",
+            "count": 2
+          }
+        ],
+        "top_false_positives": [],
+        "top_missed_labels": [
+          {
+            "normalized_label": "net loss for the year",
+            "count": 4
+          },
+          {
+            "normalized_label": "siah teong ban",
+            "count": 2
+          },
+          {
+            "normalized_label": "lee ah kim",
+            "count": 2
+          },
+          {
+            "normalized_label": "other receivable",
+            "count": 2
+          },
+          {
+            "normalized_label": "total asset",
+            "count": 2
+          },
+          {
+            "normalized_label": "contributed share capital",
+            "count": 2
+          },
+          {
+            "normalized_label": "accumulated loss",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency",
+            "count": 2
+          },
+          {
+            "normalized_label": "other payable",
+            "count": 2
+          },
+          {
+            "normalized_label": "amount due to director",
+            "count": 2
+          },
+          {
+            "normalized_label": "bank overdraft unsecured",
+            "count": 2
+          },
+          {
+            "normalized_label": "total current liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "capital deficiency and liabilities",
+            "count": 2
+          },
+          {
+            "normalized_label": "revenue",
+            "count": 2
+          },
+          {
+            "normalized_label": "administration expenses",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss before tax",
+            "count": 2
+          },
+          {
+            "normalized_label": "tax expense",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+            "count": 2
+          },
+          {
+            "normalized_label": "loss attributable to owners of the company",
+            "count": 2
+          },
+          {
+            "normalized_label": "other comprehensive income for the year",
+            "count": 2
+          }
+        ]
+      },
+      "matched_labels": [],
+      "missed_labels": [
+        {
+          "normalized_label": "net loss for the year",
+          "count": 4
+        },
+        {
+          "normalized_label": "siah teong ban",
+          "count": 2
+        },
+        {
+          "normalized_label": "lee ah kim",
+          "count": 2
+        },
+        {
+          "normalized_label": "other receivable",
+          "count": 2
+        },
+        {
+          "normalized_label": "total asset",
+          "count": 2
+        },
+        {
+          "normalized_label": "contributed share capital",
+          "count": 2
+        },
+        {
+          "normalized_label": "accumulated loss",
+          "count": 2
+        },
+        {
+          "normalized_label": "capital deficiency",
+          "count": 2
+        },
+        {
+          "normalized_label": "other payable",
+          "count": 2
+        },
+        {
+          "normalized_label": "amount due to director",
+          "count": 2
+        },
+        {
+          "normalized_label": "bank overdraft unsecured",
+          "count": 2
+        },
+        {
+          "normalized_label": "total current liabilities",
+          "count": 2
+        },
+        {
+          "normalized_label": "capital deficiency and liabilities",
+          "count": 2
+        },
+        {
+          "normalized_label": "revenue",
+          "count": 2
+        },
+        {
+          "normalized_label": "administration expenses",
+          "count": 2
+        },
+        {
+          "normalized_label": "loss before tax",
+          "count": 2
+        },
+        {
+          "normalized_label": "tax expense",
+          "count": 2
+        },
+        {
+          "normalized_label": "loss after tax and representing total comprehensive loss for the year",
+          "count": 2
+        },
+        {
+          "normalized_label": "loss attributable to owners of the company",
+          "count": 2
+        },
+        {
+          "normalized_label": "other comprehensive income for the year",
+          "count": 2
+        }
+      ],
+      "false_positives": []
+    }
+  ]
+}

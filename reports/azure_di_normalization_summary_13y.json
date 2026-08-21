@@ -1,0 +1,196 @@
+{
+  "run_metadata": {
+    "feature": "13Y",
+    "read_only": true,
+    "database_mutated": false,
+    "db_schema_changed": false,
+    "migration_created": false,
+    "api_routes_implemented": false,
+    "frontend_code_modified": false,
+    "production_behavior_changed": false,
+    "production_extraction_behavior_changed": false,
+    "production_mapping_behavior_changed": false,
+    "taxonomy_mapping_performed": false,
+    "semantic_matcher_called": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_huggingface_calls_made": false,
+    "live_openai_calls_made": false,
+    "reference_xml_sent_to_provider": false,
+    "reference_xml_sent_to_model": false,
+    "generated_at": "2026-05-19T06:46:48Z",
+    "script": "scripts/normalize_azure_di_extraction_v2_candidates.py",
+    "report_type": "azure_di_normalization_summary",
+    "input_report": "reports\\azure_di_sandbox_extraction_v2_report_13x.json",
+    "output_path": "reports\\azure_di_normalization_summary_13y.json",
+    "live_external_provider_call": false,
+    "azure_di_live_call_made": false
+  },
+  "input_reports": {
+    "azure_di_report": "reports\\azure_di_sandbox_extraction_v2_report_13x.json"
+  },
+  "output_reports": {
+    "normalized_extraction_json": "reports\\azure_di_normalized_extraction_v2_report_13y.json",
+    "normalized_extraction_md": "reports\\azure_di_normalized_extraction_v2_report_13y.md",
+    "candidate_quality_json": "reports\\azure_di_normalized_candidate_quality_13y.json",
+    "candidate_quality_md": "reports\\azure_di_normalized_candidate_quality_13y.md",
+    "duplicate_conflict_json": "reports\\azure_di_normalized_duplicate_conflict_13y.json",
+    "duplicate_conflict_md": "reports\\azure_di_normalized_duplicate_conflict_13y.md",
+    "manual_review_queue_json": "reports\\azure_di_normalized_manual_review_queue_13y.json",
+    "manual_review_queue_md": "reports\\azure_di_normalized_manual_review_queue_13y.md",
+    "mapping_handoff_json": "reports\\azure_di_normalized_mapping_handoff_13y.json",
+    "mapping_handoff_md": "reports\\azure_di_normalized_mapping_handoff_13y.md",
+    "summary_json": "reports\\azure_di_normalization_summary_13y.json",
+    "summary_md": "reports\\azure_di_normalization_summary_13y.md"
+  },
+  "before_after": {
+    "total_candidates": {
+      "before": 317,
+      "after": 92,
+      "delta": -225
+    },
+    "numeric_fact": {
+      "before": 1,
+      "after": 1,
+      "delta": 0
+    },
+    "comparative_numeric_fact": {
+      "before": 26,
+      "after": 22,
+      "delta": -4
+    },
+    "subtotal_or_total": {
+      "before": 5,
+      "after": 9,
+      "delta": 4
+    },
+    "text_block": {
+      "before": 46,
+      "after": 36,
+      "delta": -10
+    },
+    "heading": {
+      "before": 201,
+      "after": 24,
+      "delta": -177
+    },
+    "metadata": {
+      "before": 38,
+      "after": 0,
+      "delta": -38
+    },
+    "unknown": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "mapping_handoff_candidates": {
+      "before": 63,
+      "after": 53,
+      "delta": -10
+    },
+    "auto_mappable": {
+      "before": 49,
+      "after": 42,
+      "delta": -7
+    },
+    "suggest_mapping_only": {
+      "before": 14,
+      "after": 11,
+      "delta": -3
+    },
+    "manual_review_required": {
+      "before": 15,
+      "after": 15,
+      "delta": 0
+    },
+    "blocked": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "reference_context_only": {
+      "before": 239,
+      "after": 24,
+      "delta": -215
+    },
+    "duplicate_label_value_same_case": {
+      "before": 135,
+      "after": 2,
+      "delta": -133
+    },
+    "exact_duplicate_same_page": {
+      "before": 44,
+      "after": 0,
+      "delta": -44
+    },
+    "too_short_label": {
+      "before": 20,
+      "after": 0,
+      "delta": -20
+    },
+    "heading_like_numeric_fact": {
+      "before": 9,
+      "after": 9,
+      "delta": 0
+    },
+    "year_only_label": {
+      "before": 8,
+      "after": 0,
+      "delta": -8
+    },
+    "conflicting_duplicate_groups": {
+      "before": 1,
+      "after": 1,
+      "delta": 0
+    },
+    "manual_review_queue_count": {
+      "before": 268,
+      "after": 50,
+      "delta": -218
+    }
+  },
+  "normalization_actions": {
+    "downgrade_to_metadata": 73,
+    "keep": 92,
+    "keep_for_context_only": 124,
+    "merge_text_block_fragment": 10,
+    "suppress_index_or_toc_row": 18
+  },
+  "normalization_effects": {
+    "index_toc_rows_suppressed": 18,
+    "page_header_footer_rows_downgraded": 197,
+    "merged_text_block_fragments": 10,
+    "downgraded_candidates": 73,
+    "suppressed_candidates": 225,
+    "manual_review_required_actions": 0
+  },
+  "gate_outputs": {
+    "quality_report_status": "ok",
+    "duplicate_report_status": "ok",
+    "manual_review_queue_count": 50,
+    "mapping_handoff_candidates": 53,
+    "auto_mappable": 42,
+    "suggest_mapping_only": 11,
+    "excluded": 39,
+    "aggregate_gate_counts": {
+      "auto_mappable_candidate": 42,
+      "suggest_mapping_only": 11,
+      "manual_review_required": 15,
+      "blocked_from_mapping": 0,
+      "reference_only_or_context": 24
+    }
+  },
+  "assessment": {
+    "heading_context_index_noise_reduced_or_categorized": true,
+    "text_blocks_preserved": true,
+    "financial_table_candidates_preserved": true,
+    "ready_for_mapping_candidate_generation": true,
+    "recommended_next_feature": "Feature #13Z - Azure DI normalized mapping handoff to mapping candidate generation."
+  },
+  "limitations": [
+    "Normalization is heuristic and report-only.",
+    "No live provider call, DB mutation, production behavior change, taxonomy mapping, XBRL generation, or Arelle validation occurred.",
+    "Reference XML is not sent to any provider or model."
+  ]
+}

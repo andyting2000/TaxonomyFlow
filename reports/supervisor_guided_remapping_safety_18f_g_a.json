@@ -1,0 +1,42 @@
+{
+  "feature": "18F-G-A",
+  "generated_at": "2026-07-21T15:05:26.692845+00:00",
+  "feature_flags": {
+    "SUPERVISOR_MAPPER_FEEDBACK_ENABLED": false,
+    "SUPERVISOR_MAPPER_FEEDBACK_AUTO_RUN": false,
+    "SUPERVISOR_MAPPER_FEEDBACK_MAX_RETRIES": 1,
+    "SUPERVISOR_MAPPER_FEEDBACK_ADMIN_ONLY": true,
+    "VITE_SHOW_SUPERVISOR_MAPPER_FEEDBACK": false
+  },
+  "schema_guards": {
+    "requires_human_review": true,
+    "safe_for_auto_apply": false,
+    "unique_attempt_per_parent": true
+  },
+  "runtime_guards": {
+    "original_suggestion_mutations": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "auto_apply_count": 0,
+    "auto_accept_count": 0,
+    "automatic_correction_count": 0,
+    "recursive_supervisor_calls": 0
+  },
+  "external_calls_during_implementation_or_tests": 0,
+  "auditor_xml_sent_externally": false,
+  "parsed_xml_facts_sent_externally": false,
+  "gold_answers_sent_externally": false,
+  "evaluation_labels_sent_externally": false,
+  "xbrl_generated": false,
+  "arelle_run": false,
+  "verification": {
+    "focused_correction_tests": 14,
+    "supervisor_pattern_tests": 117,
+    "llm_mapper_tests": 34,
+    "user_isolation_tests": 18,
+    "admin_tests": 9,
+    "frontend_tests": 26,
+    "frontend_build": "passed",
+    "full_backend_tests": 1182
+  }
+}

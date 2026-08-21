@@ -1,0 +1,57 @@
+{
+  "feature": "18F-G-E",
+  "title": "Supervisor internal rollout authorization",
+  "generated_at": "2026-07-28",
+  "status": "pass",
+  "architecture_audit": {
+    "existing_admin_role": true,
+    "existing_internal_reviewer_role": false,
+    "existing_staff_or_analyst_role": false,
+    "existing_user_allowlist": false,
+    "selected_model": "environment_configured_user_id_allowlist",
+    "reason": "The allowlist adds the minimum explicit reviewer boundary without granting full admin privileges or adding an auth migration."
+  },
+  "authorization_predicate": [
+    "relevant feature is enabled",
+    "ordinary filing ownership check passes",
+    "user is admin or user ID is explicitly allowlisted"
+  ],
+  "configuration": {
+    "allowlist_setting": "SUPERVISOR_ORCHESTRATION_ALLOWED_USER_IDS",
+    "format": "comma-separated positive integer user IDs",
+    "safe_default": "",
+    "real_user_ids_committed": false,
+    "invalid_entries": "deny all Supervisor rollout access",
+    "legacy_admin_only_false_broad_access": false
+  },
+  "protected_paths": [
+    "Supervisor orchestration capabilities and plan",
+    "explicit live Supervisor single and batch review",
+    "explicit Supervisor-guided mapper correction"
+  ],
+  "ownership_behavior": {
+    "allowlisted_reviewer_owned_job": "allowed when feature is enabled",
+    "allowlisted_reviewer_other_user_job": "404",
+    "normal_owner_not_allowlisted": "403",
+    "normal_user_other_user_job": "404",
+    "admin_owned_job": "allowed under existing ownership policy",
+    "admin_cross_user_bypass": false,
+    "disabled_feature": "403"
+  },
+  "capability_disclosure": {
+    "authorization_policy": true,
+    "authorization_source": true,
+    "internal_reviewer_boolean": true,
+    "allowlist_configured_boolean": true,
+    "allowlist_user_count": true,
+    "allowlist_user_ids": false
+  },
+  "test_evidence": {
+    "tests.test_supervisor_rollout_authorization": "7 passed",
+    "tests.test_user_isolation_filings": "18 passed",
+    "tests.test_auth_backend_foundation": "30 passed",
+    "tests.test_admin_user_management": "9 passed",
+    "full_backend_discovery": "1266 passed"
+  },
+  "result": "authorization_boundary_sufficient"
+}

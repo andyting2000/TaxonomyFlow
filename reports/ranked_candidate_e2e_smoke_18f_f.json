@@ -1,0 +1,42 @@
+{
+  "feature": "18F-F",
+  "title": "Ranked candidate dry-run end-to-end smoke",
+  "frontend_flag": {
+    "name": "VITE_SHOW_RANKED_CANDIDATE_TEST_PANEL",
+    "default": false,
+    "false_behavior": "Panel is not rendered.",
+    "true_behavior": "Internal test panel renders and loads capability metadata."
+  },
+  "backend_disabled_smoke": {
+    "capabilities_status": 200,
+    "enabled": false,
+    "run_status": 403,
+    "ui_behavior": "No run control is rendered; disabled notice is fail-closed."
+  },
+  "backend_enabled_test_smoke": {
+    "configuration": "Temporary unittest patches only; production defaults remain disabled.",
+    "sequence": [
+      "GET capabilities",
+      "POST run with mode=dry_run, profile=balanced, max_candidates_per_row=1",
+      "render advisory response read-only"
+    ],
+    "verified": {
+      "mode": "dry_run",
+      "profile": "balanced",
+      "candidate_cap": 5,
+      "candidate_generation_status": "completed",
+      "persistence": false
+    }
+  },
+  "api_calls": [
+    "GET /api/v1/filings/jobs/{job_id}/ranked-candidates/capabilities",
+    "POST /api/v1/filings/jobs/{job_id}/ranked-candidates/run"
+  ],
+  "tests_added": [
+    "test_enabled_capabilities_to_dry_run_smoke_flow_is_read_only",
+    "ranked candidate dry-run helper defaults to balanced dry-run mode",
+    "ranked candidate UI safety guard blocks every unsafe response shape",
+    "ranked candidate UI error copy fails closed for expected smoke failures"
+  ],
+  "recommended_next_feature": "Feature #18F-G - Decide next path: persistence design vs reviewer UX workflow"
+}

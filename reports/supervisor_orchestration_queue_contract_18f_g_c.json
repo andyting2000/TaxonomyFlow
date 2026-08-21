@@ -1,0 +1,53 @@
+{
+  "feature_id": "18F-G-C",
+  "generated_at": "2026-07-23T14:35:12.926815+00:00",
+  "status": "complete",
+  "calibration_sample": {
+    "total_suggestions": 150,
+    "eligible": 47,
+    "eligibility_rate": 0.3133,
+    "high_priority": 13,
+    "medium_priority": 34
+  },
+  "capabilities_contract": {
+    "plan_only": true,
+    "mode": "manual",
+    "auto_review": false,
+    "auto_remap": false,
+    "max_batch_size_exposed": true
+  },
+  "plan_contract": {
+    "priority_counts_added": [
+      "high_priority_count",
+      "medium_priority_count"
+    ],
+    "item_provenance_preserved": true,
+    "requires_human_review": true,
+    "safe_for_auto_apply": false
+  },
+  "batch_contract": {
+    "optional_field": "suggestion_ids",
+    "legacy_omitted_behavior_preserved": true,
+    "queue_behavior": "eligible, unreviewed, nonterminal IDs only",
+    "duplicates_removed": true,
+    "owned_job_filtering": true,
+    "backend_live_batch_limit_preserved": true
+  },
+  "refresh_after": [
+    "single Supervisor review",
+    "bounded batch review",
+    "guided remapping",
+    "suggestion acceptance",
+    "suggestion rejection",
+    "manual refresh"
+  ],
+  "verification": {
+    "frontend_tests": "npm run test:auth passed 30 tests",
+    "frontend_build": "npm run build passed; 1,586 modules transformed",
+    "focused_backend": "orchestration policy/orchestrator/review API passed 46 tests",
+    "supervisor_discovery": "152 tests passed",
+    "mapping_ownership_admin": "69 tests passed",
+    "full_backend": "1,243 tests passed in 32.062 seconds",
+    "app_import": "app_import_ok 81"
+  }
+}

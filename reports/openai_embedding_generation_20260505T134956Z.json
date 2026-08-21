@@ -1,0 +1,34 @@
+{
+  "batch_size": 50,
+  "completed_batches": 27,
+  "dimension_discovery": null,
+  "dimension_values": [
+    3072
+  ],
+  "errors": [],
+  "existing_embeddings": 10,
+  "failed": 0,
+  "failed_batches": 0,
+  "failed_source_ids": [],
+  "feature": "13F",
+  "force": false,
+  "generated": 1303,
+  "inserted": 1296,
+  "legacy_columns_written": false,
+  "limit": null,
+  "max_retries": 2,
+  "mode": "apply",
+  "model": "text-embedding-3-large",
+  "mutates_database": true,
+  "production_matcher_changed": false,
+  "provider": "openai",
+  "skipped_existing": 17,
+  "sleep_between_batches": 0.0,
+  "source": "template-service-concepts",
+  "source_records": 1313,
+  "source_records_by_type": {
+    "template_service_concept": 1313
+  },
+  "updated": 0,
+  "would_generate": 1303
+}

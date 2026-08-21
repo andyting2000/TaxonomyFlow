@@ -1,0 +1,47 @@
+{
+  "feature": "11O",
+  "job_id": 9,
+  "mode": "dry_run_only",
+  "read_only": true,
+  "database_modified": false,
+  "apply_supported": false,
+  "generated_xbrl_modified": false,
+  "mapping_behavior_changed": false,
+  "candidate_count": 0,
+  "expected_count_from_11n_guardrail_report": 15,
+  "candidate_count_matches_11n_skipped_rows": false,
+  "summary_by_label_pattern": {},
+  "summary_by_current_template_field_id": {},
+  "summary_by_statement_type": {},
+  "selection_criteria": [
+    "row belongs to selected job_id",
+    "template_field_id resolves to ifrs-smes:TradeAndOtherCurrentReceivables, including equivalent unprefixed local name",
+    "extracted_label is blocked by the #11N receivables guardrail because it lacks explicit receivable/debtor/due-from evidence"
+  ],
+  "proposed_future_correction": {
+    "clear_template_field_id": true,
+    "assign_replacement_concept": false,
+    "infer_aggregation": false,
+    "infer_dimensions": false,
+    "preserve_extracted_label_value": true,
+    "preserve_statement_type": true,
+    "preserve_confirmed_tag_id": true,
+    "requires_exact_id_guarded_apply_script": true,
+    "apply_in_this_feature": false
+  },
+  "candidates": [],
+  "limitations": [
+    "No database mutation is performed.",
+    "No --apply option exists in this feature.",
+    "No aggregation, dimensions, or sign normalization are implemented.",
+    "No replacement concepts are inferred.",
+    "This does not claim full MBRS/FS-MPERS validation."
+  ],
+  "next_step_options": [
+    "Approve an exact-ID guarded apply script for these candidate rows.",
+    "Defer database correction and design aggregation/dimension policy.",
+    "Move to the next mapping-quality issue.",
+    "Return to sign policy later."
+  ],
+  "exact_id_guarded_apply_script_justified_next": false
+}

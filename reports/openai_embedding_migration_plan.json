@@ -1,0 +1,209 @@
+{
+  "current_state": {
+    "database_access": {
+      "error": null,
+      "ok": true
+    },
+    "detected_vector_dimensions": [
+      1752
+    ],
+    "embedding_code_findings": {
+      "hugging_face_embedding_touchpoints": [
+        {
+          "file": "services/semantic_matcher.py",
+          "reference": "AsyncInferenceClient.feature_extraction",
+          "status_in_openai_mode": "disabled because SemanticMatcher.client is None when MODEL_PROVIDER=openai"
+        },
+        {
+          "file": "services/xbrl_template_service.py",
+          "reference": "find_matching_concept_hybrid imports semantic_matcher and queries mbrs_taxonomy_tags.embedding",
+          "status_in_openai_mode": "falls back to string scores because semantic_matcher.is_available() is false"
+        },
+        {
+          "file": "services/smart_ai_processor.py",
+          "reference": "_semantic_match_to_template_field delegates to xbrl_template_service.find_matching_concept_hybrid",
+          "status_in_openai_mode": "no direct embedding API call; inherits xbrl_template_service fallback behavior"
+        },
+        {
+          "file": "services/mpers_template_service.py",
+          "reference": "legacy hybrid matching path imports semantic_matcher and checks 1752-dimensional embeddings",
+          "status_in_openai_mode": "falls back when semantic_matcher.is_available() is false if this legacy service path is used"
+        }
+      ],
+      "semantic_matcher_dimension_constant": 1752,
+      "semantic_matcher_openai_mode_disables_live_hf_client": true,
+      "semantic_search_tables": [
+        "mbrs_taxonomy_tags"
+      ],
+      "template_embedding_table_present_in_schema": "xml_template_fields"
+    },
+    "embedding_columns": [
+      {
+        "column_name": "embedding",
+        "data_type": "vector(1752)",
+        "table_name": "mbrs_taxonomy_tags",
+        "type_modifier": 1752,
+        "vector_dimension": 1752
+      },
+      {
+        "column_name": "embedding",
+        "data_type": "vector(1752)",
+        "table_name": "xml_template_fields",
+        "type_modifier": 1752,
+        "vector_dimension": 1752
+      }
+    ],
+    "embedding_counts": [
+      {
+        "rows_missing_embedding": 0,
+        "rows_with_embedding": 0,
+        "table_name": "xml_template_fields",
+        "total_rows": 0
+      },
+      {
+        "rows_missing_embedding": 0,
+        "rows_with_embedding": 0,
+        "table_name": "mbrs_taxonomy_tags",
+        "total_rows": 0
+      }
+    ],
+    "embedding_tables": [
+      "xml_template_fields",
+      "mbrs_taxonomy_tags"
+    ],
+    "legacy_hugging_face_embedding_dimension": 1752,
+    "legacy_hugging_face_embedding_model": "Qwen/Qwen3-Embedding-8B",
+    "model_provider": "openai",
+    "openai_embedding_model_configured": "text-embedding-3-large",
+    "openai_mode_live_hf_embeddings_enabled": false
+  },
+  "data_migration_steps": [
+    "Create a future migration for provider-versioned embedding storage; do not change schema in #13C.",
+    "Backfill OpenAI embeddings for mbrs_taxonomy_tags labels/xbrl_tag text into the new table.",
+    "Optionally backfill xml_template_fields labels/xbrl_tag text if that table remains in active matching.",
+    "Record provider='openai', model, dimension, source_table, source_id or source_key, source_text_hash, generated_at.",
+    "Build a pgvector index appropriate to the detected OpenAI dimension after dimension is verified.",
+    "Run side-by-side matching quality reports before enabling OpenAI embedding search in production matching."
+  ],
+  "existing_column_dimension_compatibility": "unknown",
+  "feature": "13C",
+  "hf_legacy_embedding_dimension": 1752,
+  "implementation_slices": [
+    {
+      "feature": "13D",
+      "name": "OpenAI embedding store implementation",
+      "scope": "schema migration plus read/write OpenAI embedding backfill path, still shadow-only"
+    },
+    {
+      "feature": "13E",
+      "name": "OpenAI semantic matcher shadow comparison",
+      "scope": "side-by-side current vs OpenAI embedding matching reports across multiple PDFs"
+    },
+    {
+      "feature": "13F",
+      "name": "OpenAI semantic matcher guarded cutover",
+      "scope": "production matching switch only after regression evidence and rollback control"
+    }
+  ],
+  "mode": "planning_only",
+  "mutates_database": false,
+  "non_goals_confirmed": [
+    "No database schema change in #13C.",
+    "No embedding regeneration in #13C.",
+    "No production semantic matcher behavior change in #13C.",
+    "No extraction, mapping, generated XBRL, Arelle, React, auth, or backend route changes in #13C."
+  ],
+  "openai_embedding_model_configured": "text-embedding-3-large",
+  "quality_comparison_plan": {
+    "acceptance_gate": "Do not cut over to OpenAI semantic matching unless it improves or preserves mapping correctness across multiple PDFs without increasing broad/unsafe mappings.",
+    "baseline_modes": [
+      "current_openai_mode_string_template_matching",
+      "legacy_hf_embedding_matching_if_available_as_read_only_baseline",
+      "future_openai_embedding_matching_shadow_mode"
+    ],
+    "metrics": [
+      "rows_with_template_field_id",
+      "rows_without_template_field_id",
+      "blank_statement_type_count",
+      "duplicate_concept_groups",
+      "suspicious_broad_mappings",
+      "manual_review_count",
+      "generated_xbrl_audit_findings",
+      "guardrail_block_count"
+    ],
+    "representative_jobs_or_pdfs": [
+      "Use at least 3-5 processed jobs/PDFs; include job 11 because OpenAI extraction is known to reach REVIEW.",
+      "Include at least one statement-of-financial-position-heavy PDF.",
+      "Include at least one notes-heavy PDF.",
+      "Include at least one PDF with detail rows that previously triggered guardrails."
+    ]
+  },
+  "recommended_strategy": {
+    "name": "provider_versioned_embedding_table",
+    "reason": "The current schema hardcodes vector(1752) for legacy Hugging Face embeddings. OpenAI target dimension is not proven locally in this planning feature, and even if compatible, provider-versioned storage gives safer rollback and comparison.",
+    "schema_change_required": true,
+    "summary": "Add a new provider-versioned embedding table in a future feature, keyed by source concept/template identifier plus provider, model, dimension, and generated_at. Keep existing mbrs_taxonomy_tags.embedding and xml_template_fields.embedding unchanged until multi-PDF regression evidence supports cutover."
+  },
+  "rollback_strategy": [
+    "Do not drop or overwrite existing 1752-dimensional embedding columns.",
+    "Keep OpenAI embedding query path behind MODEL_PROVIDER/openai embedding feature flags until validated.",
+    "Retain current string/template matching fallback as the safe OpenAI-mode rollback path.",
+    "If OpenAI semantic matching regresses quality, disable the new provider-versioned query path without data loss."
+  ],
+  "schema_change_reason": "The recommended provider-versioned embedding table requires a future schema migration. In-place use of existing vector columns remains dimension-compatibility unknown until OpenAI embedding dimension is verified locally.",
+  "schema_change_required": true,
+  "strategy_evaluation": [
+    {
+      "assessment": "possible_but_less_flexible",
+      "cons": [
+        "Ties the table schema to one OpenAI model dimension.",
+        "Repeats schema work if the model or dimension changes."
+      ],
+      "pros": [
+        "Keeps rollback simple by preserving the legacy column.",
+        "Can be queried with a dedicated OpenAI vector index."
+      ],
+      "strategy": "add_openai_embedding_column_alongside_legacy_column"
+    },
+    {
+      "assessment": "recommended",
+      "cons": [
+        "Requires a new table, query path, and indexes in a future implementation feature.",
+        "Requires explicit cutover logic after regression evidence."
+      ],
+      "pros": [
+        "Preserves legacy 1752-dimensional vectors unchanged.",
+        "Supports provider, model, dimension, and generated_at metadata.",
+        "Allows side-by-side quality comparison and rollback.",
+        "Avoids destructive in-place replacement."
+      ],
+      "strategy": "add_provider_versioned_embedding_table"
+    },
+    {
+      "assessment": "not_recommended",
+      "cons": [
+        "Destructive unless a full backup/restore path is proven.",
+        "Breaks rollback and historical comparison.",
+        "Likely requires changing vector dimensions if OpenAI dimension differs."
+      ],
+      "pros": [
+        "Smallest apparent runtime query change after migration."
+      ],
+      "strategy": "rebuild_existing_vector_column_in_place"
+    },
+    {
+      "assessment": "safe_baseline",
+      "cons": [
+        "Does not regain semantic similarity benefits.",
+        "May leave coverage lower for labels that need semantic matching."
+      ],
+      "pros": [
+        "Matches current OpenAI mode behavior.",
+        "Avoids introducing vector migration risk before quality evidence."
+      ],
+      "strategy": "keep_string_template_matching_until_regression_confirms_benefit"
+    }
+  ],
+  "target_dimension": null,
+  "target_dimension_basis": "unknown_without_live_adapter_metadata_or_explicit_local_config"
+}

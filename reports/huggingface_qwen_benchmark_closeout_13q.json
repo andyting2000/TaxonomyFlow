@@ -1,0 +1,188 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-12T14:54:50.516397+00:00",
+    "script": "scripts/compare_v2_to_reference.py",
+    "feature": "13Q",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "live_model_calls_made_by_closeout": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\huggingface_qwen_benchmark_closeout_13q.json"
+  },
+  "inputs": {
+    "extraction_report_path": "reports\\extraction_v2_report_20260512T144014Z.json",
+    "comparison_report_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\v2_reference_comparison_20260512T145407Z.json",
+    "reference_report_path": "reports\\reference_xbrl_report_20260511T082343Z.json",
+    "checkpoint_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\checkpoints\\extraction_v2_checkpoint_hf_qwen_full_after_resume_hotfix.json"
+  },
+  "runtime": {
+    "provider": "huggingface",
+    "vision_model_id": "Qwen/Qwen2.5-VL-72B-Instruct:fastest",
+    "text_model_id": "Qwen/Qwen3-30B-A3B-Instruct-2507:featherless-ai",
+    "embedding_model_id": "Qwen/Qwen3-Embedding-8B",
+    "openai_used": false,
+    "huggingface_used": true,
+    "vision_max_pages": 140,
+    "total_vision_pages_attempted": 135,
+    "empty_candidate_pages_are_processed_pages": true
+  },
+  "final_aggregate_result": {
+    "cases_processed": 7,
+    "total_candidates": 940,
+    "huggingface_candidates": 818,
+    "native_only_candidates": 122,
+    "openai_candidates": 0,
+    "numeric_candidates": 655,
+    "text_block_candidates": 146,
+    "reference_facts": 3101,
+    "reference_numeric_facts": 2590,
+    "reference_text_blocks": 304,
+    "missing_numeric_extraction_signal": false,
+    "missing_text_block_extraction_signal": false,
+    "cases_where_reference_exists_but_v2_has_no_numeric_or_text": []
+  },
+  "huggingface_fallback_metrics": {
+    "fallback_pages_attempted_in_final_resume": 55,
+    "fallback_pages_succeeded_in_final_resume": 28,
+    "fallback_pages_failed_in_final_resume": 27,
+    "fallback_pages_skipped_resume": 80,
+    "total_vision_pages_attempted": 135,
+    "empty_candidate_pages": 27,
+    "parser_recovered_candidates": 351,
+    "parser_failed_pages": 0,
+    "raw_response_preview_count": 55
+  },
+  "improvement_summary": {
+    "no_live_native_baseline_candidates": 122,
+    "no_live_native_baseline_huggingface_candidates": 0,
+    "full_hf_total_candidates": 940,
+    "full_hf_huggingface_candidates": 818,
+    "text_block_signal": "improved from missing to present",
+    "numeric_signal": "present and much stronger"
+  },
+  "benchmark_completion_assessment": {
+    "benchmark_complete": true,
+    "cases_with_numeric_signal": 7,
+    "cases_with_text_block_signal": 6,
+    "cases_missing_numeric_signal": [],
+    "cases_missing_text_block_signal": [
+      "001-bizaid-synthetic"
+    ],
+    "cases_where_reference_exists_but_v2_has_no_numeric_or_text": [],
+    "full_hf_benchmark_successful": true,
+    "assessment": "Feature #13Q full Hugging Face Qwen benchmark completed successfully. Extraction v2 now emits numeric and text-block candidates for the OCR-heavy benchmark set. Remaining work is candidate quality, duplicate control, concept mapping readiness, and production cutover planning."
+  },
+  "per_case_summary": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "total_candidates": 122,
+      "native_only_candidates": 122,
+      "huggingface_candidates": 0,
+      "openai_candidates": 0,
+      "numeric_candidates": 40,
+      "text_block_candidates": 0,
+      "reference_facts": 552,
+      "reference_numeric_facts": 487,
+      "reference_text_blocks": 37,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": true
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "total_candidates": 115,
+      "native_only_candidates": 0,
+      "huggingface_candidates": 115,
+      "openai_candidates": 0,
+      "numeric_candidates": 89,
+      "text_block_candidates": 24,
+      "reference_facts": 413,
+      "reference_numeric_facts": 339,
+      "reference_text_blocks": 43,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": false
+    },
+    {
+      "case_id": "003-fine-batik",
+      "total_candidates": 189,
+      "native_only_candidates": 0,
+      "huggingface_candidates": 189,
+      "openai_candidates": 0,
+      "numeric_candidates": 158,
+      "text_block_candidates": 28,
+      "reference_facts": 427,
+      "reference_numeric_facts": 352,
+      "reference_text_blocks": 44,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": false
+    },
+    {
+      "case_id": "004-info-house",
+      "total_candidates": 150,
+      "native_only_candidates": 0,
+      "huggingface_candidates": 150,
+      "openai_candidates": 0,
+      "numeric_candidates": 99,
+      "text_block_candidates": 34,
+      "reference_facts": 414,
+      "reference_numeric_facts": 338,
+      "reference_text_blocks": 45,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": false
+    },
+    {
+      "case_id": "005-jconnector",
+      "total_candidates": 134,
+      "native_only_candidates": 0,
+      "huggingface_candidates": 134,
+      "openai_candidates": 0,
+      "numeric_candidates": 90,
+      "text_block_candidates": 29,
+      "reference_facts": 400,
+      "reference_numeric_facts": 323,
+      "reference_text_blocks": 46,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": false
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "total_candidates": 146,
+      "native_only_candidates": 0,
+      "huggingface_candidates": 146,
+      "openai_candidates": 0,
+      "numeric_candidates": 126,
+      "text_block_candidates": 14,
+      "reference_facts": 421,
+      "reference_numeric_facts": 345,
+      "reference_text_blocks": 46,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": false
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "total_candidates": 84,
+      "native_only_candidates": 0,
+      "huggingface_candidates": 84,
+      "openai_candidates": 0,
+      "numeric_candidates": 53,
+      "text_block_candidates": 17,
+      "reference_facts": 474,
+      "reference_numeric_facts": 406,
+      "reference_text_blocks": 43,
+      "missing_numeric_signal": false,
+      "missing_text_block_signal": false
+    }
+  ],
+  "remaining_limitations": [
+    "Comparison is rough label/concept overlap only.",
+    "This is not final taxonomy mapping.",
+    "No XBRL generation was performed.",
+    "No Arelle validation was performed.",
+    "No production cutover was performed.",
+    "Candidate quality still needs review.",
+    "Duplicates, labels like 'As at 31/12/2023', headings, totals, and sign/year classification may require cleanup."
+  ],
+  "recommended_next_feature": "Feature #13R - Candidate quality and mapping readiness analysis before production cutover"
+}

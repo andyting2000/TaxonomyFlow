@@ -1,0 +1,1051 @@
+{
+  "run_metadata": {
+    "feature": "17D-pre",
+    "generated_at": "2026-06-08T02:16:43Z",
+    "golden_dir": "benchmark_mbrs_pairs",
+    "alignment_report_path": "reports/golden_mbrs_mapping_alignment_17a.json",
+    "local_only": true,
+    "external_llm_called": false,
+    "auditor_xml_sent_externally": false,
+    "parsed_xml_facts_included": false,
+    "target_gold_answers_included": false,
+    "evaluation_labels_included": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "azure_di_extraction_changed": false,
+    "react_ui_changed": false,
+    "xbrl_generated": false,
+    "arelle_run": false
+  },
+  "summary": {
+    "strong_gold_examples_used": 110,
+    "ambiguous_alignments_used_for_diagnostics": 221,
+    "concept_cards_built": 39,
+    "concepts_covered": 39,
+    "quality_counts": {
+      "moderate": 17,
+      "strong": 9,
+      "weak": 13
+    },
+    "weak_concept_cards": 13
+  },
+  "support_count_by_concept": [
+    {
+      "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+      "template_field_id": "ifrs-smes:CashAndCashEquivalents",
+      "canonical_label": "Cash and cash equivalents at end of period",
+      "support_count": 10,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005",
+        "case_006"
+      ]
+    },
+    {
+      "concept_qname": "ssmt:CashAndBankBalances",
+      "template_field_id": "ssmt:CashAndBankBalances",
+      "canonical_label": "Total cash and cash equivalents",
+      "support_count": 8,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "template_field_id": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "canonical_label": "Net increase (decrease) in cash and cash equivalents",
+      "support_count": 6,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005",
+        "case_006"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:OtherExpenseByFunction",
+      "template_field_id": "ifrs-smes:OtherExpenseByFunction",
+      "canonical_label": "Total other expenses",
+      "support_count": 6,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "template_field_id": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "canonical_label": "Net cash flows from (used in) operating activities",
+      "support_count": 5,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CurrentAssets",
+      "template_field_id": "ifrs-smes:CurrentAssets",
+      "canonical_label": "Current assets",
+      "support_count": 5,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:EquityAndLiabilities",
+      "template_field_id": "ifrs-smes:EquityAndLiabilities",
+      "canonical_label": "Equity and liabilities",
+      "support_count": 5,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:GrossProfit",
+      "template_field_id": "ifrs-smes:GrossProfit",
+      "canonical_label": "Gross profit",
+      "support_count": 5,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:OtherIncome",
+      "template_field_id": "ifrs-smes:OtherIncome",
+      "canonical_label": "Total other income",
+      "support_count": 5,
+      "quality": "strong",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Assets",
+      "template_field_id": "ifrs-smes:Assets",
+      "canonical_label": "Assets",
+      "support_count": 4,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CurrentLiabilities",
+      "template_field_id": "ifrs-smes:CurrentLiabilities",
+      "canonical_label": "Current liabilities",
+      "support_count": 4,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_001",
+        "case_002",
+        "case_004",
+        "case_006"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Equity",
+      "template_field_id": "ifrs-smes:Equity",
+      "canonical_label": "Equity at beginning of period",
+      "support_count": 4,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+      "template_field_id": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+      "canonical_label": "Adjustments for decrease (increase) in trade accounts receivable",
+      "support_count": 3,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_003",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Liabilities",
+      "template_field_id": "ifrs-smes:Liabilities",
+      "canonical_label": "Liabilities",
+      "support_count": 3,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_004",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "canonical_label": "Adjustments for increase (decrease) in other operating payables",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_004"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:NoncurrentAssets",
+      "template_field_id": "ifrs-smes:NoncurrentAssets",
+      "canonical_label": "Non-current assets",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:OtherRevenue",
+      "template_field_id": "ifrs-smes:OtherRevenue",
+      "canonical_label": "Other revenue",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_003"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:ProfitLossBeforeTax",
+      "template_field_id": "ifrs-smes:ProfitLossBeforeTax",
+      "canonical_label": "Profit (loss) before tax, from continuing operations",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_001"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:PropertyPlantAndEquipment",
+      "template_field_id": "ifrs-smes:PropertyPlantAndEquipment",
+      "canonical_label": "Property, plant and equipment at beginning of period",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_002",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Revenue",
+      "template_field_id": "ifrs-smes:Revenue",
+      "canonical_label": "Revenue",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_003",
+        "case_006"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:AuditorsRemuneration",
+      "template_field_id": "ssmt-mpers:AuditorsRemuneration",
+      "canonical_label": "Total auditor's remuneration",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_001"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:CurrentNontradeAccruals",
+      "template_field_id": "ssmt-mpers:CurrentNontradeAccruals",
+      "canonical_label": "Accruals",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_001",
+        "case_006"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:DirectorsFees",
+      "template_field_id": "ssmt-mpers:DirectorsFees",
+      "canonical_label": "Fees",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_004"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:DirectorsRemuneration",
+      "template_field_id": "ssmt-mpers:DirectorsRemuneration",
+      "canonical_label": "Total Director's remuneration",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_001",
+        "case_003"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+      "template_field_id": "ssmt-mpers:OtherCurrentMiscellaneousNontradeReceivables",
+      "canonical_label": "Other current non-trade receivables",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_003",
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "template_field_id": "ssmt-mpers:ProfitLossFromOperatingActivities",
+      "canonical_label": "Profit (loss) from operating activities",
+      "support_count": 2,
+      "quality": "moderate",
+      "source_case_ids": [
+        "case_001",
+        "case_004"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+      "template_field_id": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+      "canonical_label": "Adjustments for increase (decrease) in trade accounts payable",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_004"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+      "template_field_id": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+      "canonical_label": "Net cash flows from (used in) financing activities",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_002"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "template_field_id": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "canonical_label": "Depreciation of property, plant and equipment",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+      "template_field_id": "ifrs-smes:EmployeeBenefitsExpense",
+      "canonical_label": "Employee benefits expense",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_003"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:NoncurrentLiabilities",
+      "template_field_id": "ifrs-smes:NoncurrentLiabilities",
+      "canonical_label": "Non-current liabilities",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_002"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:WagesAndSalaries",
+      "template_field_id": "ifrs-smes:WagesAndSalaries",
+      "canonical_label": "Wages, salaries and others",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_001"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+      "template_field_id": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+      "canonical_label": "Adjustment for depreciation",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+      "template_field_id": "ssmt-mpers:CurrentNontradePayables",
+      "canonical_label": "Total current non-trade payables",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_006"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+      "template_field_id": "ssmt-mpers:OtherCurrentNontradePayables",
+      "canonical_label": "Other current non-trade payables",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_002"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherMiscellaneousIncome",
+      "template_field_id": "ssmt-mpers:OtherMiscellaneousIncome",
+      "canonical_label": "Miscellaneous other operating income",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_002"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+      "template_field_id": "ssmt-mpers:OtherNoncurrentLiabilities",
+      "canonical_label": "Other non-current liabilities",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_002"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+      "template_field_id": "ssmt-mpers:OtherNoncurrentNontradePayables",
+      "canonical_label": "Other non-current non-trade payables",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_005"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherRentalIncomeOnLandAndBuildings",
+      "template_field_id": "ssmt-mpers:OtherRentalIncomeOnLandAndBuildings",
+      "canonical_label": "Rental income on land and buildings",
+      "support_count": 1,
+      "quality": "weak",
+      "source_case_ids": [
+        "case_002"
+      ]
+    }
+  ],
+  "weak_concept_cards": [
+    {
+      "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInTradeAccountPayable",
+      "canonical_label": "Adjustments for increase (decrease) in trade accounts payable",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_004"
+      ],
+      "common_extracted_labels": [
+        "Increase in amount due to director"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+      "canonical_label": "Net cash flows from (used in) financing activities",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_002"
+      ],
+      "common_extracted_labels": [
+        "Net cash to investing activities"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:DepreciationPropertyPlantAndEquipment",
+      "canonical_label": "Depreciation of property, plant and equipment",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_005"
+      ],
+      "common_extracted_labels": [
+        "Depreciation of property, plant and equipment"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:EmployeeBenefitsExpense",
+      "canonical_label": "Employee benefits expense",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_003"
+      ],
+      "common_extracted_labels": [
+        "Equipment expenses"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:NoncurrentLiabilities",
+      "canonical_label": "Non-current liabilities",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_002"
+      ],
+      "common_extracted_labels": [
+        "Total non - current liabilities w"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:WagesAndSalaries",
+      "canonical_label": "Wages, salaries and others",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_001"
+      ],
+      "common_extracted_labels": [
+        "Salaries"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:AdjustmentsForDepreciationExpense",
+      "canonical_label": "Adjustment for depreciation",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_005"
+      ],
+      "common_extracted_labels": [
+        "Depreciation"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:CurrentNontradePayables",
+      "canonical_label": "Total current non-trade payables",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_006"
+      ],
+      "common_extracted_labels": [
+        "Other payable"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherCurrentNontradePayables",
+      "canonical_label": "Other current non-trade payables",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_002"
+      ],
+      "common_extracted_labels": [
+        "Other payables"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherMiscellaneousIncome",
+      "canonical_label": "Miscellaneous other operating income",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_002"
+      ],
+      "common_extracted_labels": [
+        "Other income"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherNoncurrentLiabilities",
+      "canonical_label": "Other non-current liabilities",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_002"
+      ],
+      "common_extracted_labels": [
+        "Amount due to director a"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherNoncurrentNontradePayables",
+      "canonical_label": "Other non-current non-trade payables",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_005"
+      ],
+      "common_extracted_labels": [
+        "Other payables"
+      ]
+    },
+    {
+      "concept_qname": "ssmt-mpers:OtherRentalIncomeOnLandAndBuildings",
+      "canonical_label": "Rental income on land and buildings",
+      "support_count": 1,
+      "source_case_ids": [
+        "case_002"
+      ],
+      "common_extracted_labels": [
+        "Rental received"
+      ]
+    }
+  ],
+  "common_extracted_labels": [
+    {
+      "concept_qname": "ifrs-smes:CashAndCashEquivalents",
+      "labels": [
+        "Cash and cash equivalents at beginning of year",
+        "Cash and cash equivalents at the end of year",
+        "Cash and cash equivalent at beginning of the year",
+        "Cash and cash equivalent at the end of the year",
+        "Cash and cash equivalents at beginning of the year",
+        "Cash and cash equivalents at end of the year",
+        "CASH AND CASH EQUIVALENTS AT BEGINNING OF YEAR",
+        "CASH AND CASH EQUIVALENTS AT END OF YEAR (NOTE 9)"
+      ]
+    },
+    {
+      "concept_qname": "ssmt:CashAndBankBalances",
+      "labels": [
+        "Bank balances"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:IncreaseDecreaseInCashAndCashEquivalents",
+      "labels": [
+        "Net (decrease) / increase in cash and cash equivalents",
+        "Net increase in cash and cash equivalents",
+        "Net increase in cash and cash equivalent",
+        "Net increase / (decrease) in cash and cash equivalents",
+        "NET (DECREASE) INCREASE IN CASH AND CASH EQUIVALENTS"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:OtherExpenseByFunction",
+      "labels": [
+        "TOTAL OPERATING EXPENSES",
+        "Other operating costs",
+        "TOTAL OPERATING EXPENSES FOLAViceRal"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CashFlowsFromUsedInOperatingActivities",
+      "labels": [
+        "Net cash from operating activities",
+        "Net cash from / (to) operating activities",
+        "Cash from operating activities"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CurrentAssets",
+      "labels": [
+        "Total current assets"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:EquityAndLiabilities",
+      "labels": [
+        "TOTAL EQUITY AND LIABILITIES",
+        "TOTAL EQUITY AND LIABILITIES DRAFT WIE"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:GrossProfit",
+      "labels": [
+        "Gross profit",
+        "Gross profit PL%",
+        "GROSS PROFIT CLEISION",
+        "GROSS PROFIT"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:OtherIncome",
+      "labels": [
+        "Add : Other income",
+        "Add : Other income :- .FROS",
+        "Other income"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Assets",
+      "labels": [
+        "TOTAL ASSETS",
+        "TOTAL ASSETS DISCUSSION)"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:CurrentLiabilities",
+      "labels": [
+        "Total current liabilities"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Equity",
+      "labels": [
+        "Total equity"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:AdjustmentsForDecreaseIncreaseInTradeAccountReceivable",
+      "labels": [
+        "Decrease in trade and other receivables",
+        "(Decrease)/ Increase in trade and other receivables",
+        "Decrease / (Increase) in trade and other receivables"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Liabilities",
+      "labels": [
+        "Total Liabilities",
+        "Total liabilities",
+        "Total liabilities D Por current Fral to"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:AdjustmentsForIncreaseDecreaseInOtherOperatingPayables",
+      "labels": [
+        "Increase in other payables and accruals",
+        "Increase / (Decrease) in trade and other payables"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:NoncurrentAssets",
+      "labels": [
+        "Total non-current assets"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:OtherRevenue",
+      "labels": [
+        "Interests income"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:ProfitLossBeforeTax",
+      "labels": [
+        "Profit / (Loss) before taxation"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:PropertyPlantAndEquipment",
+      "labels": [
+        "Property, plant and equipment"
+      ]
+    },
+    {
+      "concept_qname": "ifrs-smes:Revenue",
+      "labels": [
+        "Turnover",
+        "Revenue"
+      ]
+    }
+  ],
+  "top_do_not_confuse_pairs": [
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossBeforeTax",
+        "ssmt-mpers:AggregateProfitLossBeforeTax"
+      ],
+      "ambiguous_count": 19,
+      "example_labels": [
+        "Accumulated losses brought forward",
+        "Cash flows from operating activities Loss before taxation",
+        "Cash flows from operating activities Profit / (Loss) before taxation",
+        "LOSS FOR THE YEAR",
+        "Loss after taxation"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossBeforeTax",
+        "ssmt-mpers:ProfitLossFromOperatingActivities"
+      ],
+      "ambiguous_count": 15,
+      "example_labels": [
+        "Cash flows from operating activities Loss before taxation",
+        "Cash flows from operating activities Profit / (Loss) before taxation",
+        "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+        "LOSS FOR THE YEAR",
+        "Loss after taxation"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossBeforeTax",
+        "ifrs-smes:ProfitLossFromContinuingOperations"
+      ],
+      "ambiguous_count": 13,
+      "example_labels": [
+        "Accumulated losses brought forward",
+        "Cash flows from operating activities Loss before taxation",
+        "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+        "Loss after taxation",
+        "Loss before tax and working capital changes"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:Equity",
+        "ssmt-mpers:EquityBalanceRestated"
+      ],
+      "ambiguous_count": 12,
+      "example_labels": [
+        "Accumulated Losses",
+        "Accumulated loss",
+        "Accumulated losses",
+        "Accumulated losses brought forward",
+        "Accumulated losses carried forward"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ssmt-mpers:AggregateProfitLossBeforeTax",
+        "ssmt-mpers:ProfitLossFromOperatingActivities"
+      ],
+      "ambiguous_count": 12,
+      "example_labels": [
+        "Cash flows from operating activities Loss before taxation",
+        "Cash flows from operating activities Profit / (Loss) before taxation",
+        "LOSS FOR THE YEAR",
+        "Loss after taxation",
+        "Loss before taxation"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "ifrs-smes:ProfitLossFromContinuingOperations"
+      ],
+      "ambiguous_count": 10,
+      "example_labels": [
+        "Accumulated losses brought forward",
+        "Cash flows from operating activities Loss before taxation",
+        "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+        "Loss after taxation",
+        "Loss attributable to: Owners of the Company"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossFromContinuingOperations",
+        "ssmt-mpers:AggregateProfitLossBeforeTax"
+      ],
+      "ambiguous_count": 10,
+      "example_labels": [
+        "Accumulated losses brought forward",
+        "Cash flows from operating activities Loss before taxation",
+        "Loss after taxation",
+        "Loss before taxation",
+        "Operating profit / ( loss) before working capital changes"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ssmt-mpers:AuditorsRemuneration",
+        "ssmt-mpers:AuditorsRemunerationForAuditServices"
+      ],
+      "ambiguous_count": 10,
+      "example_labels": [
+        "Accounting fee",
+        "Audit fee",
+        "Audit fees",
+        "Auditor's remuneration",
+        "Auditors' remuneration"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "ifrs-smes:ProfitLossBeforeTax"
+      ],
+      "ambiguous_count": 9,
+      "example_labels": [
+        "Accumulated losses brought forward",
+        "Cash flows from operating activities Loss before taxation",
+        "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+        "Loss after taxation",
+        "Loss before tax"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:CashEquivalents",
+        "ifrs-smes:CashFlowsFromUsedInInvestingActivities"
+      ],
+      "ambiguous_count": 9,
+      "example_labels": [
+        "Cash flows from financing activities",
+        "Cash flows from investing activities",
+        "Decrease in property, plant and equipment",
+        "Decrease in receivable"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "ssmt-mpers:AggregateProfitLossBeforeTax"
+      ],
+      "ambiguous_count": 8,
+      "example_labels": [
+        "Accumulated losses brought forward",
+        "Cash flows from operating activities Loss before taxation",
+        "Loss after taxation",
+        "Loss before tax",
+        "Loss before taxation"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:Equity",
+        "ifrs-smes:RetainedEarnings"
+      ],
+      "ambiguous_count": 8,
+      "example_labels": [
+        "Accumulated Losses",
+        "Accumulated loss",
+        "Accumulated losses",
+        "Accumulated losses brought forward",
+        "Accumulated losses carried forward"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:RetainedEarnings",
+        "ssmt-mpers:EquityBalanceRestated"
+      ],
+      "ambiguous_count": 8,
+      "example_labels": [
+        "Accumulated Losses",
+        "Accumulated loss",
+        "Accumulated losses",
+        "Accumulated losses brought forward",
+        "Accumulated losses carried forward"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossAttributableToOwnersOfParent",
+        "ssmt-mpers:ProfitLossFromOperatingActivities"
+      ],
+      "ambiguous_count": 8,
+      "example_labels": [
+        "Cash flows from operating activities Loss before taxation",
+        "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+        "Loss after taxation",
+        "Loss before taxation",
+        "Loss for the financial year DRAFT FOR DISCUSSION"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:ProfitLossFromContinuingOperations",
+        "ssmt-mpers:ProfitLossFromOperatingActivities"
+      ],
+      "ambiguous_count": 8,
+      "example_labels": [
+        "Cash flows from operating activities Loss before taxation",
+        "LOSS FOR THE FINANCIAL YEAR DRAFT REFINAR",
+        "Loss after taxation",
+        "Loss before tax and working capital changes",
+        "Loss before taxation"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ssmt-mpers:CurrentNontradeAccruals",
+        "ssmt-mpers:CurrentNontradePayables"
+      ],
+      "ambiguous_count": 6,
+      "example_labels": [
+        "Audit fees",
+        "Deposits",
+        "Increase in other payables and accruals",
+        "Other payables and accruals",
+        "Total current liabilities"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ssmt-mpers:OtherCurrentPayablesDueToOtherRelatedParties",
+        "ssmt-mpers:OtherCurrentPayablesDueToRelatedParties"
+      ],
+      "ambiguous_count": 6,
+      "example_labels": [
+        "Amount due to director",
+        "Amount due to directors",
+        "Increase in amount due to director",
+        "Other payables and accruals",
+        "Total non current liabilities"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:CurrentProvisionsForEmployeeBenefits",
+        "ifrs-smes:NoncurrentProvisionsForEmployeeBenefits"
+      ],
+      "ambiguous_count": 6,
+      "example_labels": [
+        "Over provision for taxation prior year",
+        "Over provision in prior year",
+        "Provision based on these financial statements",
+        "Provision for taxation",
+        "Ung Ming Xian (f) MAN kan 5,000 DE THE"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:CashEquivalents",
+        "ifrs-smes:CashFlowsFromUsedInFinancingActivities"
+      ],
+      "ambiguous_count": 6,
+      "example_labels": [
+        "Cash flows from financing activities",
+        "Cash flows from investing activities",
+        "Decrease in property, plant and equipment"
+      ]
+    },
+    {
+      "concept_qnames": [
+        "ifrs-smes:CashFlowsFromUsedInFinancingActivities",
+        "ifrs-smes:CashFlowsFromUsedInInvestingActivities"
+      ],
+      "ambiguous_count": 6,
+      "example_labels": [
+        "Cash flows from financing activities",
+        "Cash flows from investing activities",
+        "Decrease in property, plant and equipment"
+      ]
+    }
+  ]
+}

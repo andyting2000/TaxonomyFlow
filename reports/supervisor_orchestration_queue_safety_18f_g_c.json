@@ -1,0 +1,44 @@
+{
+  "feature_id": "18F-G-C",
+  "generated_at": "2026-07-23T14:35:12.926815+00:00",
+  "status": "complete",
+  "calibration_sample": {
+    "total_suggestions": 150,
+    "eligible": 47,
+    "eligibility_rate": 0.3133,
+    "high_priority": 13,
+    "medium_priority": 34
+  },
+  "plan_safety": {
+    "planning_live_calls": 0,
+    "auto_review_calls": 0,
+    "auto_remap_calls": 0,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "safe_for_auto_apply_count": 0,
+    "human_review_required": true
+  },
+  "fail_closed_checks": [
+    "non-manual or non-plan-only capabilities",
+    "unsafe backend configuration reasons",
+    "nonzero automatic call or mutation counts",
+    "item without human review requirement",
+    "item marked safe for auto apply"
+  ],
+  "runtime_behavior": {
+    "plan_load_calls_supervisor": false,
+    "plan_load_calls_mapper": false,
+    "plan_load_accepts_or_rejects": false,
+    "automatic_background_orchestration": false,
+    "auditor_xml_or_gold_in_runtime_payload": false
+  },
+  "verification": {
+    "frontend_tests": "npm run test:auth passed 30 tests",
+    "frontend_build": "npm run build passed; 1,586 modules transformed",
+    "focused_backend": "orchestration policy/orchestrator/review API passed 46 tests",
+    "supervisor_discovery": "152 tests passed",
+    "mapping_ownership_admin": "69 tests passed",
+    "full_backend": "1,243 tests passed in 32.062 seconds",
+    "app_import": "app_import_ok 81"
+  }
+}

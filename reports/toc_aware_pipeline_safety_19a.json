@@ -1,0 +1,105 @@
+{
+  "report_id": "toc_aware_pipeline_safety_19a",
+  "feature_id": "19A",
+  "generated_on": "2026-07-30",
+  "status": "PASS",
+  "default_state": {
+    "pipeline_enabled": false,
+    "persistence_enabled": false,
+    "llm_fallback_enabled": false
+  },
+  "compatibility": {
+    "existing_azure_provider_calls_added": 0,
+    "existing_mapping_fields_changed": false,
+    "statement_assignments_mutated": false,
+    "template_field_ids_mutated": false,
+    "mapping_suggestions_mutated": false,
+    "supervisor_records_mutated": false,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "frontend_changed": false
+  },
+  "external_calls_during_implementation_and_tests": {
+    "live_azure_di": 0,
+    "live_llm": 0,
+    "live_supervisor": 0
+  },
+  "failure_isolation": {
+    "no_toc": "warning-only structured result; usable filing reaches REVIEW",
+    "analysis_exception": "toc_aware_structure_analysis_failed; existing extraction/mapping continues",
+    "persistence_exception": "toc_aware_structure_persistence_failed; stale artifact removed; existing workflow continues",
+    "underlying_unusable_extraction": "existing ERROR behavior remains authoritative"
+  },
+  "retry_safety": {
+    "artifact_invalidated_at_every_processing_start": true,
+    "disabled_retry_stale_artifact_tested": true,
+    "persistence_disabled_retry_stale_artifact_tested": true,
+    "fixed_versioned_upsert_path": true,
+    "duplicate_artifacts_after_retry": 0
+  },
+  "access_and_cleanup": {
+    "owned_job_isolation": true,
+    "cross_owner_404": true,
+    "processing_or_error_artifact_hidden": true,
+    "normal_job_delete_cleanup": true,
+    "account_delete_cleanup": true,
+    "artifact_directory_gitignored": true
+  },
+  "resource_and_validation_limits": {
+    "toc_pages": 1000,
+    "toc_lines": 50000,
+    "toc_parser_lines": 5000,
+    "toc_entries": 500,
+    "heading_candidates": 25000,
+    "heading_comparisons": 2000000,
+    "content_inventory_items": 125000,
+    "grouping_comparisons": 5000000,
+    "artifact_bytes": 26214400,
+    "schema_and_identity_validation": true
+  },
+  "mapping_parity_evidence": {
+    "enabled_and_disabled_snapshots_equal": true,
+    "fields_compared": [
+      "extracted_label",
+      "extracted_value",
+      "financial_year",
+      "value_previous_year",
+      "financial_year_previous",
+      "statement_type",
+      "template_field_id",
+      "template_position",
+      "is_required_field",
+      "is_reviewed",
+      "confirmed_tag_id",
+      "validation_warnings",
+      "has_calculation_warning"
+    ],
+    "persisted_row_ids_resolved_in_artifact": true,
+    "reserved_llm_flag_no_call_guard": true,
+    "one_fake_provider_call_only": true
+  },
+  "verification": {
+    "focused_19a_tests": {
+      "passed": 51,
+      "failed": 0
+    },
+    "full_backend_tests": {
+      "passed": 1317,
+      "failed": 0
+    },
+    "changed_file_compilation": "PASS",
+    "app_import": "PASS (83 routes)",
+    "feature_list_json": "PASS",
+    "required_report_json": "PASS"
+  },
+  "residual_risks_and_deferrals": [
+    "Deterministic heuristics may abstain or require human review on unusual layouts; they do not silently force ambiguous ranges.",
+    "Heading-only fallback is deferred; no reliable TOC creates no section boundaries.",
+    "The versioned artifact is the #19A persistence contract; normalized relational tables are deferred.",
+    "TOC-aware LLM fallback is reserved and unimplemented.",
+    "24-template classification, taxonomy mapping, template population, review/remap UX, XBRL generation, and Arelle are out of scope."
+  ],
+  "recommended_next_feature": "19B - Classify primary sections and note subsections into the 24 internal template groups"
+}

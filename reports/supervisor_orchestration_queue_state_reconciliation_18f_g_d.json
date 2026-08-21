@@ -1,0 +1,136 @@
+{
+  "feature": "18F-G-D",
+  "resume_feature": "18F-G-D-resume",
+  "generated_at": "2026-07-28T10:54:40+08:00",
+  "result": "passed",
+  "canonical_semantics": {
+    "suggested": "mapper produced a concrete suggestion",
+    "rejected": "mapper abstained and is not human-terminal",
+    "accepted": "human accepted and is terminal",
+    "ignored": "human rejected or ignored and is terminal",
+    "human_terminal_statuses": [
+      "accepted",
+      "ignored"
+    ],
+    "remapping_contract": "Option A requires status suggested and a concrete original qname"
+  },
+  "history": {
+    "original_failure": "Backend/frontend eligibility and remapping counts diverged.",
+    "hotfix": "18F-G-D-hotfix-1 reconciled canonical state and item predicates locally.",
+    "runtime_blocker": "An old loopback process served the stale contract.",
+    "runtime_preflight": "The current runtime and normal-owner authorization passed before resumed actions."
+  },
+  "pre_action_reconciliation": {
+    "backend": {
+      "total": 150,
+      "policy_eligible": 46,
+      "review_executable": 46,
+      "high": 13,
+      "medium": 33,
+      "not_eligible": 81,
+      "already_reviewed": 23,
+      "remapping_executable": 1,
+      "revision_completed": 5
+    },
+    "frontend": {
+      "total": 150,
+      "policy_eligible": 46,
+      "review_executable": 46,
+      "high": 13,
+      "medium": 33,
+      "not_eligible": 81,
+      "already_reviewed": 23,
+      "remapping_executable": 1,
+      "revision_completed": 5
+    },
+    "difference_count": 0,
+    "filter_comparisons": 24,
+    "filter_difference_count": 0
+  },
+  "status_semantics": {
+    "total_items_checked": 150,
+    "rejected_count": 115,
+    "suggested_count": 35,
+    "accepted_count": 0,
+    "ignored_count": 0,
+    "rejected_terminal_violations": 0,
+    "rejected_concrete_qname_violations": 0,
+    "rejected_remapping_executable_violations": 0,
+    "rejected_block_reason_violations": 0,
+    "option_a_violations": 0,
+    "accepted_ignored_runtime_evidence": "not_applicable_no_current_rows",
+    "accepted_ignored_regression_evidence": "targeted terminal-state tests passed"
+  },
+  "supervisor_transition": {
+    "job_id": 60,
+    "suggestion_id": "5c5b73fe-a099-41a6-b48b-125cf5e72512",
+    "before_state": "supervisor_eligible",
+    "after_state": "remapping_available",
+    "review_executable": [true, false],
+    "already_reviewed_count": [3, 4],
+    "remapping_executable": [false, true],
+    "review_persisted": true,
+    "automatic_remap": false
+  },
+  "guided_remap_transition": {
+    "job_id": 60,
+    "suggestion_id": "5c5b73fe-a099-41a6-b48b-125cf5e72512",
+    "before_state": "remapping_available",
+    "after_state": "revision_created",
+    "remapping_executable": [true, false],
+    "revision_completed_count": [1, 2],
+    "correction_attempts_used": [0, 1],
+    "after_block_reason": "correction_retry_limit_reached",
+    "initial_suggestion_immutable": true
+  },
+  "post_action_reconciliation": {
+    "backend": {
+      "total": 150,
+      "policy_eligible": 45,
+      "review_executable": 45,
+      "high": 13,
+      "medium": 32,
+      "not_eligible": 81,
+      "already_reviewed": 24,
+      "remapping_executable": 1,
+      "revision_completed": 6
+    },
+    "frontend_job_60": {
+      "total": 50,
+      "policy_eligible": 14,
+      "review_executable": 14,
+      "high": 5,
+      "medium": 9,
+      "not_eligible": 32,
+      "already_reviewed": 4,
+      "remapping_executable": 0,
+      "revision_completed": 2
+    },
+    "job_60_filter_difference_count": 0,
+    "refresh_get_only": true
+  },
+  "per_job_final": {
+    "59": {
+      "total": 50,
+      "review_executable": 16,
+      "already_reviewed": 10,
+      "remapping_executable": 0,
+      "revision_completed": 3
+    },
+    "60": {
+      "total": 50,
+      "review_executable": 14,
+      "already_reviewed": 4,
+      "remapping_executable": 0,
+      "revision_completed": 2
+    },
+    "61": {
+      "total": 50,
+      "review_executable": 15,
+      "already_reviewed": 10,
+      "remapping_executable": 1,
+      "revision_completed": 1
+    }
+  },
+  "decision": "Canonical backend/frontend state, explicit transitions, and refresh reconciliation passed. Continue to 18F-G-E."
+}

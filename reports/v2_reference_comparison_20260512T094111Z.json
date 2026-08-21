@@ -1,0 +1,378 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-05-12T09:41:17.940381+00:00",
+    "script": "scripts/compare_v2_to_reference.py",
+    "read_only": true,
+    "database_mutated": false,
+    "production_behavior_changed": false,
+    "ui_upload_required": false,
+    "xbrl_generated": false,
+    "arelle_validation_run": false,
+    "openai_used": false,
+    "output_path": "C:\\Users\\andyt\\Documents\\Workspace\\taxonomy-flow\\reports\\v2_reference_comparison_20260512T094111Z.json"
+  },
+  "aggregate_metrics": {
+    "cases_compared": 7,
+    "reference_total_facts": 3101,
+    "v2_total_candidates": 122,
+    "v2_native_candidates": 122,
+    "v2_openai_candidates": 0,
+    "v2_openai_fallback_pages_attempted": 0,
+    "v2_openai_fallback_pages_succeeded": 0,
+    "v2_openai_fallback_pages_failed": 0,
+    "reference_numeric_facts": 2590,
+    "v2_numeric_fact_candidates": 40,
+    "reference_text_blocks": 304,
+    "v2_text_block_candidates": 0,
+    "reference_concepts_count": 293,
+    "v2_labels_count": 75,
+    "rough_label_concept_overlap_count": 22,
+    "missing_numeric_extraction_signal": false,
+    "missing_text_block_extraction_signal": true,
+    "numeric_extraction_signal_improved": true,
+    "text_block_extraction_signal_improved": false,
+    "numeric_candidate_to_reference_ratio": 0.015444015444015444,
+    "text_block_candidate_to_reference_ratio": 0.0,
+    "remaining_numeric_gap": 2550,
+    "remaining_text_block_gap": 304,
+    "cases_where_reference_exists_but_v2_has_no_numeric_or_text": [
+      "002-bezlife-marketing",
+      "003-fine-batik",
+      "004-info-house",
+      "005-jconnector",
+      "006-Rahsia-Herbal",
+      "007-Shield-Plus"
+    ],
+    "missing_numeric_cases": [
+      "002-bezlife-marketing",
+      "003-fine-batik",
+      "004-info-house",
+      "005-jconnector",
+      "006-Rahsia-Herbal",
+      "007-Shield-Plus"
+    ],
+    "missing_text_block_cases": [
+      "001-bizaid-synthetic",
+      "002-bezlife-marketing",
+      "003-fine-batik",
+      "004-info-house",
+      "005-jconnector",
+      "006-Rahsia-Herbal",
+      "007-Shield-Plus"
+    ]
+  },
+  "per_case": [
+    {
+      "case_id": "001-bizaid-synthetic",
+      "reference_total_facts": 552,
+      "v2_total_candidates": 122,
+      "reference_numeric_facts": 487,
+      "v2_numeric_candidates": 40,
+      "reference_text_blocks": 37,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 216,
+      "v2_labels_count": 75,
+      "rough_represented_reference_concepts": 20,
+      "missing_numeric_extraction_signal": false,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "002-bezlife-marketing",
+      "reference_total_facts": 413,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 339,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 43,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 222,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "003-fine-batik",
+      "reference_total_facts": 427,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 352,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 44,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 232,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "004-info-house",
+      "reference_total_facts": 414,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 338,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 45,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 227,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "005-jconnector",
+      "reference_total_facts": 400,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 323,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 46,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 219,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "006-Rahsia-Herbal",
+      "reference_total_facts": 421,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 345,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 46,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 230,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    },
+    {
+      "case_id": "007-Shield-Plus",
+      "reference_total_facts": 474,
+      "v2_total_candidates": 0,
+      "reference_numeric_facts": 406,
+      "v2_numeric_candidates": 0,
+      "reference_text_blocks": 43,
+      "v2_text_block_candidates": 0,
+      "reference_concepts_count": 216,
+      "v2_labels_count": 0,
+      "rough_represented_reference_concepts": 0,
+      "missing_numeric_extraction_signal": true,
+      "missing_text_block_extraction_signal": true
+    }
+  ],
+  "top_reference_concepts_not_represented_in_v2": [
+    {
+      "concept": "ifrs-smes:Equity",
+      "count": 134
+    },
+    {
+      "concept": "ssmt-mpers:EquityBalanceRestated",
+      "count": 96
+    },
+    {
+      "concept": "ifrs-smes:ComprehensiveIncome",
+      "count": 96
+    },
+    {
+      "concept": "ifrs-smes:ChangesInEquity",
+      "count": 96
+    },
+    {
+      "concept": "ssmt-mpers:ImpactOfChangeInAccountingStandards",
+      "count": 73
+    },
+    {
+      "concept": "ifrs-smes:OtherComprehensiveIncome",
+      "count": 70
+    },
+    {
+      "concept": "ifrs-smes:NumberOfSharesOutstanding",
+      "count": 32
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesOutstanding",
+      "count": 32
+    },
+    {
+      "concept": "ifrs-smes:CashAndCashEquivalents",
+      "count": 21
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesIssuedAndFullyPaidOutstanding",
+      "count": 20
+    },
+    {
+      "concept": "ifrs-smes:NumberOfSharesIssuedAndFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesIssuedAndFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ifrs-smes:NumberOfSharesIssuedButNotFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesIssuedAndNotFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfSharesIssuedButNotFullyPaidDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfOtherChangesInSharesIssuedButNotFullyPaid",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:NumberOfSharesIssued",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInNumberOfSharesOutstandingDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:AmountOfOutstandingSharesIssuedDuringPeriod",
+      "count": 16
+    },
+    {
+      "concept": "ssmt-mpers:OtherChangesInAmountOfSharesOutstanding",
+      "count": 16
+    },
+    {
+      "concept": "ifrs-smes:AmountsPayableRelatedPartyTransactions",
+      "count": 15
+    },
+    {
+      "concept": "ifrs-smes:PropertyPlantAndEquipment",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:InvestmentProperty",
+      "count": 14
+    },
+    {
+      "concept": "ifrs-smes:IntangibleAssetsAndGoodwill",
+      "count": 14
+    },
+    {
+      "concept": "ssmt-mpers:InvestmentInSubisidiaries",
+      "count": 14
+    }
+  ],
+  "top_v2_candidates_not_found_in_reference": [
+    {
+      "candidate_label": "This Year",
+      "count": 4
+    },
+    {
+      "candidate_label": "BIZAID FY2025",
+      "count": 3
+    },
+    {
+      "candidate_label": "FURNITURE &FITTINGS",
+      "count": 2
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. FURNITURE &FITTINGS",
+      "count": 2
+    },
+    {
+      "candidate_label": "GOOD WILL",
+      "count": 2
+    },
+    {
+      "candidate_label": "ACCUM. AMORTIZATION. GOOD WILL",
+      "count": 2
+    },
+    {
+      "candidate_label": "COMPUTER HARDWARE",
+      "count": 2
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. COMPUTER HARDWARE",
+      "count": 2
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. OFFICE EQUIPMENT",
+      "count": 2
+    },
+    {
+      "candidate_label": "COMPUTER SOFTWARE",
+      "count": 2
+    },
+    {
+      "candidate_label": "ACCUM. DEPRN. COMPUTER SOFTWARE",
+      "count": 2
+    },
+    {
+      "candidate_label": "CIMB",
+      "count": 2
+    },
+    {
+      "candidate_label": "CAR PARK- TWIN PAVILLION",
+      "count": 2
+    },
+    {
+      "candidate_label": "PASS CARD- TWIN PAVILION",
+      "count": 2
+    },
+    {
+      "candidate_label": "ADISS CONSULTANTS SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "AMK CORPORATION SERVICES SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "ACE MANAGEMENT CONSULTING SERVICES SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "ASIAN SECRETS SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "BIZMARC MANAGEMENT SOLUTIONS SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "BEZLIFE MARKETING SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "BBS TRUST INT'L LIMITED",
+      "count": 2
+    },
+    {
+      "candidate_label": "CORPSEC SERVICES SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "GEMCO MANAGEMENT SERVICES SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "INFO HOUSE (M) SDN BHD",
+      "count": 2
+    },
+    {
+      "candidate_label": "KINGDOM ADVISORY SDN BHD",
+      "count": 2
+    }
+  ],
+  "recommended_next_extraction_v2_focus": [
+    "Expand native/OCR numeric table coverage; v2 now emits numeric candidates but still covers only a small share of reference numeric facts.",
+    "Prioritize v2 text-block/disclosure extraction; reference XML contains text blocks but v2 emitted none."
+  ],
+  "assessment": "Extraction v2 numeric extraction improved from zero, but text-block extraction remains missing against the reference layer.",
+  "limitations": [
+    "Comparison uses rough label/concept overlap only; it is not final taxonomy mapping.",
+    "OpenAI fallback metrics are reported when the v2 input report used the opt-in benchmark fallback.",
+    "No DB mutation, XBRL generation, Arelle validation, UI upload, or production cutover is performed."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "feature_id": "18F-G-A-hotfix-2b",
+  "generated_at": "2026-07-23T17:15:35.0228288+08:00",
+  "status": "passed",
+  "root_cause": "The conditional secondary action container was a sibling after the summary/primary-action header row, so it occupied the full card width instead of the right-side action area.",
+  "before": {
+    "header_layout": "Nested flex row for summary and primary actions inside a full-width suggestion-action-stack.",
+    "secondary_action_location": "Full-width sibling below the complete summary/primary-action row.",
+    "effect": "The rerun button or completed badge appeared too low and beneath the entire header."
+  },
+  "after": {
+    "header_layout": "Responsive grid with minmax(0, 1fr) summary column and auto-sized action column from the sm breakpoint.",
+    "summary_column": "suggestion-card-summary contains badges, extracted label, page, and value metadata.",
+    "action_column": "suggestion-action-column contains suggestion-primary-actions followed immediately by the conditional suggestion-secondary-actions.",
+    "secondary_action_location": "Directly beneath primary actions in the same right-side action column.",
+    "completed_status_location": "Uses the same conditional secondary action container as the rerun button.",
+    "empty_row_behavior": "No secondary container is rendered unless the correction action is eligible or a completed revision exists."
+  },
+  "layout_rules": {
+    "header": "grid min-w-0 gap-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start",
+    "action_column": "flex min-w-0 max-w-full flex-col items-end gap-2",
+    "primary_actions": "flex max-w-full flex-wrap items-center justify-end gap-2",
+    "secondary_actions": "flex min-h-0 max-w-full flex-wrap items-center justify-end gap-2",
+    "secondary_width_100": false,
+    "full_row_grid_placement": false,
+    "large_vertical_spacing_added": false
+  },
+  "responsive_behavior": {
+    "small_screens": "The grid defaults to one column, so the action column can stack below the summary.",
+    "alignment": "Primary and secondary controls remain end-aligned and wrap within max-width constraints.",
+    "overflow_controls": [
+      "min-w-0",
+      "max-w-full",
+      "flex-wrap"
+    ]
+  },
+  "preserved_behavior": {
+    "single_action_confirmations_absent": true,
+    "batch_confirmation_present": true,
+    "loading_labels_unchanged": true,
+    "duplicate_guards_unchanged": true,
+    "eligibility_unchanged": true,
+    "retry_limit_unchanged": true,
+    "persistence_unchanged": true,
+    "requires_human_review": true,
+    "safe_for_auto_apply": false,
+    "confirmed_tag_id_mutations": 0,
+    "final_mapping_mutations": 0
+  },
+  "verification": [
+    {
+      "command": "cd frontend; npm run test:auth",
+      "result": "passed",
+      "details": "26 tests passed."
+    },
+    {
+      "command": "cd frontend; npm run build",
+      "result": "passed",
+      "details": "Vite 5.4.21 transformed 1,585 modules. The sandboxed attempt was blocked from reading the Vite config; the approved unsandboxed rerun passed."
+    }
+  ],
+  "changed_files": [
+    "frontend/src/review-workspace.jsx",
+    "frontend/tests/auth_helpers.test.mjs"
+  ]
+}

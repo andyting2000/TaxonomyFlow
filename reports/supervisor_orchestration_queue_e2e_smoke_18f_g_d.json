@@ -1,0 +1,291 @@
+{
+  "feature": "18F-G-D",
+  "resume_feature": "18F-G-D-resume",
+  "generated_at": "2026-07-28T10:54:40+08:00",
+  "overall_result": "passed",
+  "rollout_ready": true,
+  "evidence_layers": {
+    "original_failed_smoke": {
+      "result": "failed",
+      "reason": "Pre-hotfix backend/frontend eligibility and remapping semantics diverged."
+    },
+    "state_semantics_hotfix": {
+      "result": "passed",
+      "feature": "18F-G-D-hotfix-1",
+      "per_suggestion_invariants_passed": 150
+    },
+    "runtime_startup_blocker": {
+      "result": "resolved",
+      "feature": "18F-G-D-runtime-blocker-1",
+      "runtime_revision": "18F-G-D-hotfix-1+"
+    },
+    "runtime_preflight": {
+      "result": "passed",
+      "feature": "18F-G-D-runtime-preflight",
+      "canonical_openapi": true,
+      "normal_owner_authorized": true
+    },
+    "resumed_live_smoke": {
+      "result": "passed",
+      "browser_tested": true,
+      "manual_supervisor_review": "passed",
+      "manual_guided_remap": "passed"
+    }
+  },
+  "runtime": {
+    "health_http_status": 200,
+    "status": "healthy",
+    "database": "connected",
+    "runtime_revision": "18F-G-D-hotfix-1+",
+    "frontend_url": "http://127.0.0.1:8001/app",
+    "served_bundle": "/app/assets/app.js",
+    "canonical_bundle_contract_present": true,
+    "stale_contract_warning_visible": false
+  },
+  "authenticated_user": {
+    "user_id": 26,
+    "email": "user@test.my",
+    "is_admin": false
+  },
+  "jobs": [
+    {
+      "job_id": 59,
+      "company": "BEZLIFE MARKETING SDN. BHD.",
+      "owner_user_id": 26,
+      "status": "REVIEW"
+    },
+    {
+      "job_id": 60,
+      "company": "FINE BATIK SDN. BHD.",
+      "owner_user_id": 26,
+      "status": "REVIEW"
+    },
+    {
+      "job_id": 61,
+      "company": "AGENSI PEKERJAAN INFO-HOUSE (M) SDN. BHD.",
+      "owner_user_id": 26,
+      "status": "REVIEW"
+    }
+  ],
+  "capabilities": {
+    "enabled": true,
+    "available": true,
+    "authorized": true,
+    "admin_only": false,
+    "mode": "manual",
+    "auto_review": false,
+    "auto_remap": false,
+    "max_batch_size": 10
+  },
+  "pre_action_backend_aggregate": {
+    "total": 150,
+    "policy_eligible": 46,
+    "review_executable": 46,
+    "batch_review_executable": 46,
+    "high": 13,
+    "medium": 33,
+    "not_eligible": 81,
+    "already_reviewed": 23,
+    "blocked": 0,
+    "remapping_eligible": 1,
+    "remapping_executable": 1,
+    "revision_completed": 5
+  },
+  "frontend_reconciliation": {
+    "summary_difference_count": 0,
+    "filter_difference_count": 0,
+    "duplicate_suggestion_id_count": 0,
+    "per_job": {
+      "59": {
+        "all": [50, 50],
+        "eligible": [16, 16],
+        "high": [4, 4],
+        "medium": [12, 12],
+        "reviewed": [10, 10],
+        "remapping": [0, 0],
+        "revised": [3, 3],
+        "not_eligible": [24, 24]
+      },
+      "60": {
+        "all": [50, 50],
+        "eligible": [15, 15],
+        "high": [5, 5],
+        "medium": [10, 10],
+        "reviewed": [3, 3],
+        "remapping": [0, 0],
+        "revised": [1, 1],
+        "not_eligible": [32, 32]
+      },
+      "61": {
+        "all": [50, 50],
+        "eligible": [15, 15],
+        "high": [4, 4],
+        "medium": [11, 11],
+        "reviewed": [10, 10],
+        "remapping": [1, 1],
+        "revised": [1, 1],
+        "not_eligible": [25, 25]
+      }
+    },
+    "pair_format": [
+      "backend",
+      "frontend"
+    ]
+  },
+  "representative_cases": {
+    "mapper_abstention": {
+      "job_id": 59,
+      "row_label": "Accruals",
+      "mapper_status": "rejected",
+      "is_human_terminal": false,
+      "supervisor_review_executable": true,
+      "remapping_executable": false,
+      "remapping_action_block_reason": "concrete_suggestion_required",
+      "review_button_visible": true,
+      "remap_button_visible": false
+    },
+    "eligible_concrete_suggestion": {
+      "job_id": 60,
+      "row_label": "Loss before taxation",
+      "mapper_status": "suggested",
+      "supervisor_review_executable": true,
+      "review_button_visible": true
+    },
+    "accepted": {
+      "runtime_sample": "not_applicable_no_current_rows",
+      "regression_contract": "accepted_is_human_terminal"
+    },
+    "ignored": {
+      "runtime_sample": "not_applicable_no_current_rows",
+      "regression_contract": "ignored_is_human_terminal"
+    },
+    "revision_completed": {
+      "job_id": 60,
+      "row_label": "Cash flows from investing activities",
+      "correction_attempt_completed_visible": true,
+      "remap_button_visible": false,
+      "block_reason": "correction_retry_limit_reached"
+    },
+    "remapping_executable": {
+      "job_id": 61,
+      "row_label": "Add : Other income",
+      "mapper_status": "suggested",
+      "remapping_executable": true,
+      "remap_button_visible": true
+    }
+  },
+  "manual_supervisor_review": {
+    "job_id": 60,
+    "suggestion_id": "5c5b73fe-a099-41a6-b48b-125cf5e72512",
+    "row_id": "f973114d-2faa-4478-bd49-f59b97544485",
+    "row_label": "Loss before taxation",
+    "initial_qname": "ifrs-smes:ProfitLossBeforeTax",
+    "priority": "medium",
+    "eligibility_reasons": [
+      "statement_family_mismatch",
+      "requires_confirmation"
+    ],
+    "request_count": 1,
+    "request_mode": "live",
+    "http_status": 200,
+    "loading_visible": true,
+    "duplicate_click_disabled": true,
+    "confirmation_dialog_count": 0,
+    "review_id": "8ae6346b-cac7-461d-aa37-488f2b992ae9",
+    "review_status": "completed",
+    "decision": "needs_human_review",
+    "source": "live",
+    "before": {
+      "review_executable": 15,
+      "already_reviewed": 3,
+      "remapping_executable": 0,
+      "revision_completed": 1
+    },
+    "after": {
+      "review_executable": 14,
+      "already_reviewed": 4,
+      "remapping_executable": 1,
+      "revision_completed": 1
+    },
+    "no_automatic_remap": true,
+    "no_human_decision_mutation": true,
+    "no_confirmed_tag_mutation": true,
+    "no_final_mapping_mutation": true
+  },
+  "manual_guided_remap": {
+    "job_id": 60,
+    "suggestion_id": "5c5b73fe-a099-41a6-b48b-125cf5e72512",
+    "row_label": "Loss before taxation",
+    "request_count": 1,
+    "http_status": 200,
+    "loading_visible": true,
+    "duplicate_click_disabled": true,
+    "revision_id": "7ff47465-09df-422c-8a1d-fae7de36ecbd",
+    "revision_status": "completed",
+    "correction_attempt": 1,
+    "original_qname": "ifrs-smes:ProfitLossBeforeTax",
+    "revised_qname": "ifrs-smes:ProfitLossBeforeTax",
+    "requires_human_review": true,
+    "safe_for_auto_apply": false,
+    "initial_suggestion_immutable": true,
+    "before_revision_completed": 1,
+    "after_revision_completed": 2,
+    "after_remapping_executable": false,
+    "after_block_reason": "correction_retry_limit_reached",
+    "no_recursive_supervisor_call": true,
+    "no_human_decision_mutation": true,
+    "no_confirmed_tag_mutation": true,
+    "no_final_mapping_mutation": true
+  },
+  "post_action_backend_aggregate": {
+    "total": 150,
+    "policy_eligible": 45,
+    "review_executable": 45,
+    "batch_review_executable": 45,
+    "high": 13,
+    "medium": 32,
+    "not_eligible": 81,
+    "already_reviewed": 24,
+    "blocked": 0,
+    "remapping_eligible": 1,
+    "remapping_executable": 1,
+    "revision_completed": 6
+  },
+  "batch_validation": {
+    "executed": false,
+    "per_job_bounded_count": {
+      "59": 10,
+      "60_before_action": 10,
+      "60_after_action": 10,
+      "61": 10
+    },
+    "confirmation_count_matched": true,
+    "confirmation_dialogs_dismissed": 3,
+    "batch_post_count": 0
+  },
+  "refresh_validation": {
+    "passed": true,
+    "request_methods": [
+      "GET"
+    ],
+    "request_paths": [
+      "/api/v1/filings/jobs/60/supervisor-orchestration/capabilities",
+      "/api/v1/filings/jobs/60/supervisor-orchestration/plan"
+    ],
+    "post_action_filter_difference_count": 0,
+    "duplicate_cards": 0,
+    "correction_state_visible": true,
+    "stale_warning_visible": false
+  },
+  "tests": {
+    "targeted_backend": {
+      "passed": 109
+    },
+    "frontend_test_auth": {
+      "passed": 30
+    },
+    "frontend_build": "not_run_no_frontend_change",
+    "full_backend": "not_run_no_implementation_change"
+  },
+  "recommended_next_feature": "18F-G-E - Internal reviewer rollout readiness and controlled feature enablement"
+}

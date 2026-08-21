@@ -1,0 +1,83 @@
+{
+  "run_metadata": {
+    "feature": "17D-B",
+    "golden_dir": "benchmark_mbrs_pairs",
+    "source_reports": {
+      "predictions": "reports/golden_mbrs_fewshot_qwen_predictions_17b.json",
+      "concept_playbook": "reports/fs_mpers_concept_playbook_17d_pre.json"
+    },
+    "mode": "live",
+    "live_status": "completed",
+    "partial": false,
+    "supervisor_config_summary": {
+      "enabled": true,
+      "provider": "hf",
+      "model_id": "meta-llama...novita",
+      "base_url": "https://router.huggingface.co/v1",
+      "response_format": "json_schema",
+      "api_token_configured": true,
+      "timeout_seconds": 120.0,
+      "max_retries": 2,
+      "retry_base_seconds": 3.0,
+      "retry_max_seconds": 30.0,
+      "repair_enabled": true,
+      "max_repair_retries": 1,
+      "supervisor_independence": "limited_same_model_or_token"
+    },
+    "supervisor_independence": "limited_same_model_or_token",
+    "external_supervisor_llm_called": true,
+    "auditor_xml_sent_externally": false,
+    "parsed_xml_facts_sent_externally": false,
+    "target_gold_answers_sent_externally": false,
+    "evaluation_labels_sent_externally": false,
+    "database_mutated": false,
+    "production_job_mutated": false,
+    "confirmed_tag_id_automated": false,
+    "xbrl_generated": false,
+    "arelle_run": false,
+    "azure_di_extraction_changed": false,
+    "react_ui_changed": false,
+    "production_workflow_changed": false,
+    "response_format_guidance": "",
+    "rate_limit_summary": {},
+    "provider_error_summary": {},
+    "preflight_result": {}
+  },
+  "metrics": {
+    "total_reviewed": 29,
+    "agree": 19,
+    "disagree": 2,
+    "needs_human_review": 8,
+    "risk_level_counts": {
+      "high": 3,
+      "low": 19,
+      "medium": 7
+    },
+    "issue_type_counts": {
+      "ambiguous_label": 6,
+      "candidate_not_supported": 1,
+      "no_supporting_evidence": 2,
+      "weak_label_match": 1
+    },
+    "safe_to_accept": 15,
+    "safe_to_accept_accuracy": 1.0,
+    "agree_accuracy": 1.0,
+    "false_agree_count": 0,
+    "false_safe_accept_count": 0,
+    "false_disagree_count": 0,
+    "wrong_mapper_mappings": 0,
+    "wrong_mapper_mappings_caught": 0,
+    "wrong_mapper_mappings_missed": 0,
+    "blocked_correct_mapping_count": 4,
+    "correct_mappings_unnecessarily_blocked": 4,
+    "unsafe_agree_count": 4,
+    "unsafe_agree_downgraded_count": 4,
+    "safe_to_accept_forced_false_count": 4,
+    "invalid_response_count": 0,
+    "repaired_response_count": 0,
+    "unrepaired_invalid_response_count": 0,
+    "no_supporting_evidence_count": 2,
+    "missing_concept_card_count": 0
+  },
+  "scoring_policy": "Gold answers are used only locally after Supervisor responses return."
+}

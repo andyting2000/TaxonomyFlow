@@ -1,0 +1,127 @@
+{
+  "feature_id": "18F-G-B-hotfix-1",
+  "generated_at": "2026-07-23T14:10:17.880899+00:00",
+  "status": "pass",
+  "objective": "Reduce confidence/confirmation-driven Supervisor queue volume while preserving structural-risk recall.",
+  "root_causes": [
+    {
+      "cause": "mapping_no_safe_candidate_was_standalone_high_priority",
+      "before_count": 112,
+      "resolution": "Generic mapper abstention is evidence-only; only a separate structural signal can enqueue a no-candidate row."
+    },
+    {
+      "cause": "low_confidence_was_standalone_medium_priority",
+      "before_count": 114,
+      "resolution": "Confidence is weak evidence and cannot enqueue alone."
+    },
+    {
+      "cause": "close_candidate_gap_was_standalone_medium_priority",
+      "before_count": 37,
+      "resolution": "A close gap is weak evidence and cannot enqueue alone."
+    },
+    {
+      "cause": "unbounded_evidence_flattening",
+      "resolution": "Selected mappings now inspect top-level and selected-candidate rationale, avoiding mismatch language from irrelevant alternatives."
+    }
+  ],
+  "calibrated_policy": {
+    "strong_signal_weights": {
+      "statement_family_mismatch": 4,
+      "concept_family_mismatch": 4,
+      "broad_substitute_with_concrete_alternative": 4,
+      "severe_period_context_conflict": 3,
+      "ranked_candidate_source_conflict": 3,
+      "previous_supervisor_disagreement": 5,
+      "no_safe_revised_mapping": 5,
+      "explicit_human_request": 5
+    },
+    "weak_signal_weights": {
+      "requires_confirmation": 1,
+      "mapper_confidence_below_threshold": 1,
+      "generic_label": 1,
+      "close_competing_candidates": 1,
+      "incomplete_context": 1,
+      "safe_flag_withheld_due_confidence": 0
+    },
+    "strong_signal_threshold": 3,
+    "weak_signal_rule": "At least two positive weak signals and a selected candidate.",
+    "high_priority_rule": "Strong-signal score at least 5; weak evidence cannot promote priority to high.",
+    "generic_no_safe_candidate_rule": "Not independently eligible; recommend local/manual inspection.",
+    "explicit_human_request": "Force eligible for safe nonterminal rows."
+  },
+  "before": {
+    "total": 150,
+    "eligible": 114,
+    "eligible_rate": 0.76,
+    "priority_distribution": {
+      "high": 112,
+      "medium": 2
+    },
+    "not_eligible": 18,
+    "blocked": 0,
+    "already_reviewed": 18
+  },
+  "after": {
+    "total": 150,
+    "eligible": 47,
+    "eligible_rate": 0.3133,
+    "priority_distribution": {
+      "high": 13,
+      "medium": 34
+    },
+    "not_eligible": 85,
+    "blocked": 0,
+    "already_reviewed": 18,
+    "per_job": {
+      "59": {
+        "total_suggestions": 50,
+        "eligible_count": 16,
+        "not_eligible_count": 24,
+        "blocked_count": 0,
+        "already_reviewed_count": 10,
+        "remapping_available_count": 1,
+        "revision_created_count": 3
+      },
+      "60": {
+        "total_suggestions": 50,
+        "eligible_count": 15,
+        "not_eligible_count": 33,
+        "blocked_count": 0,
+        "already_reviewed_count": 2,
+        "remapping_available_count": 0,
+        "revision_created_count": 1
+      },
+      "61": {
+        "total_suggestions": 50,
+        "eligible_count": 16,
+        "not_eligible_count": 28,
+        "blocked_count": 0,
+        "already_reviewed_count": 6,
+        "remapping_available_count": 2,
+        "revision_created_count": 1
+      }
+    }
+  },
+  "positive_anchor_recall": {
+    "recalled": 5,
+    "total": 5,
+    "rate": 1.0
+  },
+  "low_risk_agree_exclusion": {
+    "excluded": 10,
+    "total": 10,
+    "rate": 1.0
+  },
+  "decision_checks": {
+    "eligibility_rate_between_0_25_and_0_40": true,
+    "five_revision_anchor_recall_is_100_percent": true,
+    "all_no_safe_revision_anchors_risk_qualified": true,
+    "low_risk_agree_exclusion_at_least_80_percent": true,
+    "requires_confirmation_alone_never_eligible": true,
+    "confidence_alone_never_eligible": true,
+    "planning_external_calls_zero": true,
+    "safety_boundaries_unchanged": true
+  },
+  "decision": "pass",
+  "recommended_next_feature": "18F-G-C - Implement the disabled-by-default Supervisor orchestration queue in the application workflow"
+}

@@ -1,0 +1,83 @@
+{
+  "job_id": 67,
+  "source_artifact_version": "19A-v3",
+  "toc_page_indexes": [1],
+  "azure_page_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+  "old_conflicts": [
+    {
+      "section_id": "section-1",
+      "raw_title": "Directors' Report",
+      "canonical_title": "directors report",
+      "printed_range": [1, 4],
+      "mapped_pdf_range": [2, 5],
+      "stored_pdf_range": [null, null],
+      "selected_anchor_page": 2,
+      "conflict_reason": "section_range_conflicts_with_page_mapping",
+      "reconciled": false
+    },
+    {
+      "section_id": "section-4",
+      "raw_title": "Independent Auditors' Report",
+      "canonical_title": "independent auditors report",
+      "printed_range": [7, 10],
+      "mapped_pdf_range": [8, 11],
+      "stored_pdf_range": [null, null],
+      "selected_anchor_page": 8,
+      "conflict_reason": "section_range_conflicts_with_page_mapping",
+      "reconciled": false
+    },
+    {
+      "section_id": "section-9",
+      "raw_title": "Notes to the Financial Statements",
+      "canonical_title": "notes to the financial statements",
+      "printed_range": [15, 22],
+      "mapped_pdf_range": [16, 23],
+      "stored_pdf_range": [null, null],
+      "selected_anchor_page": 16,
+      "conflict_reason": "section_range_conflicts_with_page_mapping",
+      "reconciled": false
+    }
+  ],
+  "toc_entries": [
+    {"entry_id":"toc-entry-1","raw_title":"Directors' Report","normalized_title":"directors report","canonical_section_hint":"directors_report","printed_page_start":1,"printed_page_end":4,"source_pdf_page_index":1,"source_text":"Directors' Report 1 - 4","confidence":0.9,"range_method":"explicit_range"},
+    {"entry_id":"toc-entry-2","raw_title":"Statement by Directors","normalized_title":"statement by directors","canonical_section_hint":"statement_by_directors","printed_page_start":5,"printed_page_end":5,"source_pdf_page_index":1,"source_text":"Statement by Directors 5","confidence":0.9,"range_method":"inferred_from_next_start"},
+    {"entry_id":"toc-entry-3","raw_title":"Statutory Declaration","normalized_title":"statutory declaration","canonical_section_hint":"statutory_declaration","printed_page_start":6,"printed_page_end":6,"source_pdf_page_index":1,"source_text":"Statutory Declaration :unselected: 6","confidence":0.9,"range_method":"inferred_from_next_start","parse_warnings":["selection_state_marker_removed"]},
+    {"entry_id":"toc-entry-4","raw_title":"Independent Auditors' Report","normalized_title":"independent auditors report","canonical_section_hint":"independent_auditors_report","printed_page_start":7,"printed_page_end":10,"source_pdf_page_index":1,"source_text":"Independent Auditors' Report 7-10","confidence":0.9,"range_method":"explicit_range"},
+    {"entry_id":"toc-entry-5","raw_title":"Statement of Financial Position","normalized_title":"statement of financial position","canonical_section_hint":"statement_of_financial_position","printed_page_start":11,"printed_page_end":11,"source_pdf_page_index":1,"source_text":"Statement of Financial Position 11","confidence":0.9,"range_method":"inferred_from_next_start"},
+    {"entry_id":"toc-entry-6","raw_title":"Statement of Comprehensive Income","normalized_title":"statement of comprehensive income","canonical_section_hint":"statement_of_comprehensive_income","printed_page_start":12,"printed_page_end":12,"source_pdf_page_index":1,"source_text":"Statement of Comprehensive Income 12","confidence":0.9,"range_method":"inferred_from_next_start"},
+    {"entry_id":"toc-entry-7","raw_title":"Statement of Changes in Equity","normalized_title":"statement of changes in equity","canonical_section_hint":"statement_of_changes_in_equity","printed_page_start":13,"printed_page_end":13,"source_pdf_page_index":1,"source_text":"Statement of Changes in Equity 13","confidence":0.9,"range_method":"inferred_from_next_start"},
+    {"entry_id":"toc-entry-8","raw_title":"Statement of Cash Flows","normalized_title":"statement of cash flows","canonical_section_hint":"statement_of_cash_flows","printed_page_start":14,"printed_page_end":14,"source_pdf_page_index":1,"source_text":"Statement of Cash Flows 14","confidence":0.9,"range_method":"inferred_from_next_start"},
+    {"entry_id":"toc-entry-9","raw_title":"Notes to the Financial Statements","normalized_title":"notes to the financial statements","canonical_section_hint":"notes_to_financial_statements","printed_page_start":15,"printed_page_end":22,"source_pdf_page_index":1,"source_text":"Notes to the Financial Statements 15-22","confidence":0.9,"range_method":"explicit_range"}
+  ],
+  "heading_anchors": [
+    {"anchor_id":"heading-anchor-1","toc_entry_id":"toc-entry-1","source_content_id":"paragraph:42","toc_title":"Directors' Report","matched_heading":"DIRECTORS' REPORT","pdf_page_index":2,"azure_page_number":3,"match_score":1.0,"match_method":"exact_normalized_title","match_tier":"A","lexical_score":1.0,"trusted":true,"confidence":1.0,"text_evidence":"DIRECTORS' REPORT","bounding_evidence":[{"page_number":3,"polygon":[1.1712,2.2573,2.9106,2.2569,2.9107,2.4216,1.1713,2.4221]}]},
+    {"anchor_id":"heading-anchor-2","toc_entry_id":"toc-entry-2","source_content_id":"paragraph:120","toc_title":"Statement by Directors","matched_heading":"STATEMENT BY DIRECTOR PURSUANT TO","pdf_page_index":6,"azure_page_number":7,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","lexical_score":0.8,"trusted":true,"confidence":1.0,"text_evidence":"STATEMENT BY DIRECTOR PURSUANT TO","bounding_evidence":[{"page_number":7,"polygon":[1.2,2.27,4.57,2.26,4.57,2.43,1.2,2.45]}],"warnings":["heading_anchor_same_page_near_tie"]},
+    {"anchor_id":"heading-anchor-3","toc_entry_id":"toc-entry-3","source_content_id":"paragraph:135","toc_title":"Statutory Declaration","matched_heading":"STATUTORY DECLARATION PURSUANT TO","pdf_page_index":7,"azure_page_number":8,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","lexical_score":0.7778,"trusted":true,"confidence":1.0,"text_evidence":"STATUTORY DECLARATION PURSUANT TO","bounding_evidence":[{"page_number":8,"polygon":[1.19,2.08,4.63,2.07,4.63,2.23,1.19,2.24]}],"warnings":["heading_anchor_same_page_near_tie"]},
+    {"anchor_id":"heading-anchor-4","toc_entry_id":"toc-entry-4","source_content_id":"paragraph:148","toc_title":"Independent Auditors' Report","matched_heading":"INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE","pdf_page_index":8,"azure_page_number":9,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","lexical_score":0.675,"trusted":true,"confidence":1.0,"text_evidence":"INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE","bounding_evidence":[{"page_number":9,"polygon":[1.1801,3.1712,7.2834,3.1395,7.2843,3.3169,1.181,3.3479]}],"warnings":["heading_anchor_near_tie","heading_anchor_same_page_near_tie"],"alternative_candidates":[{"source_content_id":"page:10:line:3","matched_heading":"INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE","pdf_page_index":9,"azure_page_number":10,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","trusted":true},{"source_content_id":"page:11:line:3","matched_heading":"INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE","pdf_page_index":10,"azure_page_number":11,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","trusted":true},{"source_content_id":"page:12:line:3","matched_heading":"INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF BEZLIFE","pdf_page_index":11,"azure_page_number":12,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","trusted":true}]},
+    {"anchor_id":"heading-anchor-5","toc_entry_id":"toc-entry-5","source_content_id":"paragraph:220","toc_title":"Statement of Financial Position","matched_heading":"STATEMENT OF FINANCIAL POSITION","pdf_page_index":12,"azure_page_number":13,"match_score":1.0,"match_method":"exact_normalized_title","match_tier":"A","lexical_score":1.0,"trusted":true,"confidence":1.0,"text_evidence":"STATEMENT OF FINANCIAL POSITION","bounding_evidence":[{"page_number":13,"polygon":[1.22,2.27,4.29,2.26,4.29,2.42,1.22,2.43]}]},
+    {"anchor_id":"heading-anchor-6","toc_entry_id":"toc-entry-6","source_content_id":"paragraph:240","toc_title":"Statement of Comprehensive Income","matched_heading":"STATEMENT OF COMPREHENSIVE INCOME","pdf_page_index":13,"azure_page_number":14,"match_score":1.0,"match_method":"exact_normalized_title","match_tier":"A","lexical_score":1.0,"trusted":true,"confidence":1.0,"text_evidence":"STATEMENT OF COMPREHENSIVE INCOME","bounding_evidence":[{"page_number":14,"polygon":[1.19,2.27,4.68,2.26,4.68,2.42,1.19,2.43]}]},
+    {"anchor_id":"heading-anchor-7","toc_entry_id":"toc-entry-7","source_content_id":"paragraph:260","toc_title":"Statement of Changes in Equity","matched_heading":"STATEMENT OF CHANGES IN EQUITY","pdf_page_index":14,"azure_page_number":15,"match_score":1.0,"match_method":"exact_normalized_title","match_tier":"A","lexical_score":1.0,"trusted":true,"confidence":1.0,"text_evidence":"STATEMENT OF CHANGES IN EQUITY","bounding_evidence":[{"page_number":15,"polygon":[1.19,2.27,4.2,2.26,4.2,2.43,1.19,2.44]}]},
+    {"anchor_id":"heading-anchor-8","toc_entry_id":"toc-entry-8","source_content_id":"paragraph:280","toc_title":"Statement of Cash Flows","matched_heading":"STATEMENT OF CASH FLOWS","pdf_page_index":15,"azure_page_number":16,"match_score":1.0,"match_method":"exact_normalized_title","match_tier":"A","lexical_score":1.0,"trusted":true,"confidence":1.0,"text_evidence":"STATEMENT OF CASH FLOWS","bounding_evidence":[{"page_number":16,"polygon":[1.19,2.26,3.59,2.26,3.59,2.42,1.19,2.43]}]},
+    {"anchor_id":"heading-anchor-9","toc_entry_id":"toc-entry-9","source_content_id":"paragraph:300","toc_title":"Notes to the Financial Statements","matched_heading":"NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024","pdf_page_index":16,"azure_page_number":17,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","lexical_score":0.7952,"trusted":true,"confidence":1.0,"text_evidence":"NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024","bounding_evidence":[{"page_number":17,"polygon":[1.1682,2.0656,6.1375,2.0492,6.1381,2.2278,1.1688,2.2442]}],"warnings":["heading_anchor_near_tie"],"alternative_candidates":[{"source_content_id":"paragraph:350","matched_heading":"NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024 (Continued)","pdf_page_index":17,"azure_page_number":18,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","trusted":true},{"source_content_id":"paragraph:395","matched_heading":"NOTES TO THE FINANCIAL STATEMENTS - 31 DECEMBER 2024 (Continued)","pdf_page_index":18,"azure_page_number":19,"match_score":1.0,"match_method":"canonical_title_prefix","match_tier":"B","trusted":true}]}
+  ],
+  "content_inventory": [
+    {"content_id":"cover","content_type":"heading","text":"REPORT COVER","pdf_page_indexes":[0],"azure_page_numbers":[1],"top":1.0,"provenance":{"source":"fixture"}},
+    {"content_id":"toc","content_type":"text_block","text":"INDEX","pdf_page_indexes":[1],"azure_page_numbers":[2],"top":1.0,"provenance":{"source":"fixture"}},
+    {"content_id":"directors-1","content_type":"heading","text":"DIRECTORS' REPORT","pdf_page_indexes":[2],"azure_page_numbers":[3],"top":2.25,"provenance":{"source":"fixture"}},
+    {"content_id":"directors-2","content_type":"paragraph","text":"Directors report continuation","pdf_page_indexes":[3],"azure_page_numbers":[4],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"directors-3","content_type":"paragraph","text":"Directors report continuation","pdf_page_indexes":[4],"azure_page_numbers":[5],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"directors-4","content_type":"paragraph","text":"Directors report conclusion","pdf_page_indexes":[5],"azure_page_numbers":[6],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"auditor-1","content_type":"heading","text":"INDEPENDENT AUDITORS' REPORT","pdf_page_indexes":[8],"azure_page_numbers":[9],"top":3.17,"provenance":{"source":"fixture"}},
+    {"content_id":"auditor-2","content_type":"paragraph","text":"Auditors report continuation","pdf_page_indexes":[9],"azure_page_numbers":[10],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"auditor-3","content_type":"paragraph","text":"Auditors report continuation","pdf_page_indexes":[10],"azure_page_numbers":[11],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"auditor-4","content_type":"paragraph","text":"Auditors report conclusion","pdf_page_indexes":[11],"azure_page_numbers":[12],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-1","content_type":"heading","text":"1. GENERAL INFORMATION","pdf_page_indexes":[16],"azure_page_numbers":[17],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-2","content_type":"paragraph","text":"Notes continuation","pdf_page_indexes":[17],"azure_page_numbers":[18],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-3","content_type":"heading","text":"2. PROPERTY, PLANT AND EQUIPMENT","pdf_page_indexes":[18],"azure_page_numbers":[19],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-4","content_type":"paragraph","text":"Notes continuation","pdf_page_indexes":[19],"azure_page_numbers":[20],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-5","content_type":"paragraph","text":"Notes continuation","pdf_page_indexes":[20],"azure_page_numbers":[21],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-6","content_type":"paragraph","text":"Notes continuation","pdf_page_indexes":[21],"azure_page_numbers":[22],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-7","content_type":"paragraph","text":"Notes continuation","pdf_page_indexes":[22],"azure_page_numbers":[23],"top":3.0,"provenance":{"source":"fixture"}},
+    {"content_id":"notes-8","content_type":"paragraph","text":"Notes conclusion","pdf_page_indexes":[23],"azure_page_numbers":[24],"top":3.0,"provenance":{"source":"fixture"}}
+  ]
+}
